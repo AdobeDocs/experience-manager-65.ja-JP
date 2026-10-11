@@ -1,6 +1,6 @@
 ---
 title: ノードの作成
-description: /libs から必要な最小限のファイル数をコピーして/apps で編集することで、コメントシステムをカスタムバージョンでオーバーレイする方法を説明します。
+description: /libsから必要な最小限のファイルをコピーし、/appsで編集することで、コメントシステムをカスタムバージョンでオーバーレイする方法について説明します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,87 +9,94 @@ exl-id: 3d72cbdf-5eb4-477d-aa61-035a846f7dcb
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 6%
-
+source-wordcount: '301'
+ht-degree: 7%
 ---
-
 # ノードの作成 {#create-nodes}
 
-`/libs` から `/apps` に必要な最小限のファイルをコピーし、`/apps` で変更することで、コメントシステムにカスタムバージョンをオーバーレイします。
+`/libs`から`/apps`に必要な最小限のファイル数をコピーし、`/apps`で変更することで、コメントシステムをカスタムバージョンでオーバーレイします。
 
 >[!CAUTION]
 >
->/libs フォルダーの内容は編集されません。/apps フォルダーの内容はそのままの状態で、再インストールやアップグレードをおこなうと、/libs フォルダーが削除または置き換えられる可能性があるからです。
+>/libs フォルダーの内容は変更されません。これは、/apps フォルダーの内容が変更されないまま、再インストールまたはアップグレードで/libs フォルダーが削除または置き換えられる可能性があるためです。
 
-オーサーインスタンスで [&#128279;](../../help/sites-developing/developing-with-crxde-lite.md)0&rbrace;CRXDE Lite&rbrace; を使用する場合は、まず/apps フォルダーに、/libs フォルダーのオーバーレイされたコンポーネントへのパスと同じパスを作成します。
+オーサーインスタンスで[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)を使用するには、まず、/apps フォルダーに、/libs フォルダー内のオーバーレイされたコンポーネントのパスと同じパスを作成します。
 
 複製されるパスは次のとおりです。
 
 * `/libs/social/commons/components/hbs/comments/comment`
 
-パスのノードには、フォルダーやコンポーネントなどがあります。
+パス内の一部のノードはフォルダーであり、一部のノードはコンポーネントです。
 
-1. [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp) を参照します
-1. `/apps/social` を作成（まだ存在しない場合）
-   * ノード `/apps` 選択
-   * **[!UICONTROL 作成/フォルダー]**
-      * 名前を入力：`social`
-1. ノード `social` 選択
-   * **[!UICONTROL 作成]**/**[!UICONTROL フォルダー]**
-      * 名前を入力：`commons`
-1. ノード `commons` 選択
-   * **[!UICONTROL 作成/フォルダー]**
-      * 名前を入力：`components`
-1. ノード `components` 選択
-   * **[!UICONTROL 作成/フォルダー]** を選択します。
-      * 名前を入力：`hbs`
-1. ノード `hbs` 選択
-   * **[!UICONTROL 作成]**/**[!UICONTROL コンポーネントを作成]**
-      * ラベルを入力：`comments`
-      * タイトルを入力：`Comments`
-      * 説明を入力：`List of comments without showing avatars`
-      * スーパータイプ：`social/commons/components/comments`
-      * グループを入力：`Communities`
-      * **[!UICONTROL OK]** まで **[!UICONTROL 次へ]** をクリックします
-1. ノード `comments` 選択
+1. [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)を参照
+1. `/apps/social`を作成します（まだ存在しない場合）
+   * `/apps` ノードを選択
+   * **[!UICONTROL 作成> フォルダー]**
+     * 名前を入力：`social`
+1. `social` ノードを選択
+   * **[!UICONTROL 作成]** > **[!UICONTROL フォルダー]**
+     * 名前を入力：`commons`
+1. `commons` ノードを選択
+   * **[!UICONTROL 作成> フォルダー]**
+     * 名前を入力：`components`
+1. `components` ノードを選択
+   * **[!UICONTROL 作成> フォルダー]**。
+     * 名前を入力：`hbs`
+1. `hbs` ノードを選択
+   * **[!UICONTROL 作成]** / **[!UICONTROL コンポーネントを作成]**
+     * ラベルを入力：`comments`
+     * タイトルを入力：`Comments`
+     * 説明を入力：`List of comments without showing avatars`
+     * スーパータイプ：`social/commons/components/comments`
+     * グループを入力：`Communities`
+     * **[!UICONTROL 次へ]**&#x200B;をクリックして&#x200B;**[!UICONTROL OK]**&#x200B;まで進みます
+1. `comments` ノードを選択
 
-   * **[!UICONTROL 作成]**/**[!UICONTROL コンポーネントを作成]**
+   * **[!UICONTROL 作成]** / **[!UICONTROL コンポーネントを作成]**
 
-      * ラベルを入力：`comment`
-      * タイトルを入力：`Comment`
-      * 説明を入力：`A comment instance without avatars`
-      * スーパータイプ：`social/commons/components/comments/comment`
-      * グループを入力：`.hidden`
-      * **[!UICONTROL OK]** まで **[!UICONTROL 次へ]** をクリックします
-   * 「**[!UICONTROL すべて保存]**」を選択します。
-1. デフォルトの `comments.jsp` を削除
-   * ノード `/apps/social/commons/components/hbs/comments/comments.jsp` を選択
+     * ラベルを入力：`comment`
+     * タイトルを入力：`Comment`
+     * 説明を入力：`A comment instance without avatars`
+     * スーパータイプ：`social/commons/components/comments/comment`
+     * グループを入力：`.hidden`
+     * **[!UICONTROL 次へ]**&#x200B;をクリックして&#x200B;**[!UICONTROL OK]**&#x200B;まで進みます
+   * **[!UICONTROL すべて保存]**&#x200B;を選択
+1. 既定の`comments.jsp`を削除します
+   * ノード `/apps/social/commons/components/hbs/comments/comments.jsp`を選択
    * 「**[!UICONTROL 削除]**」を選択します。
-1. デフォルトの comment.jsp を削除します
-   * ノード `/apps/social/commons/components/hbs/comments/comment/comment.jsp` を選択
+1. デフォルトのcomment.jspを削除します
+   * ノード `/apps/social/commons/components/hbs/comments/comment/comment.jsp`を選択
    * 「**[!UICONTROL 削除]**」を選択します。
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+   * **[!UICONTROL すべて保存]**&#x200B;を選択
 
 >[!NOTE]
 >
->継承チェーンを維持するために、オーバーレイコンポーネントの `Super Type` （プロパティ `sling:resourceSuperType`）は、オーバーレイされるコンポーネントの `Super Type` と同じ値に設定されます。この場合は、次のようになります。
+>継承チェーンを保持するために、オーバーレイコンポーネントの`Super Type` （プロパティ `sling:resourceSuperType`）は、オーバーレイされるコンポーネントの`Super Type`と同じ値に設定されます。この場合は、次のようになります。
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
 
-オーバーレイ自体の `Type` （プロパティ `sling:resourceType`）は、/apps に見つからないコンテンツが/libs で検索されるように、相対自己参照である必要があります。
+オーバーレイの独自の`Type` （プロパティ `sling:resourceType`）は相対的な自己参照である必要があります。これにより、/appsに見つからないコンテンツは/libsで検索されます。
 * 名前：`sling:resourceType`
 * タイプ：`String`
 * 値：`social/commons/components/hbs/comments`
 
-1. 緑の `[+] Add` を選択します
+1. 緑の`[+] Add`を選択します
    * 名前：`sling:resourceType`
    * タイプ：`String`
    * 値：`social/commons/components/hbs/comments/comment`
-1. 緑の `[+] Add` を選択します
-   * 「**[!UICONTROL すべて保存]**」を選択します。
+1. 緑の`[+] Add`を選択します
+   * **[!UICONTROL すべて保存]**&#x200B;を選択
 
 ![create-nodes](assets/create-nodes.png)

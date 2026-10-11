@@ -11,13 +11,27 @@ feature: Viewer Presets
 role: User, Admin
 exl-id: 0899e497-88e9-4fc3-a6be-b3a149fb5b32
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: d8e79b3c-92b5-4c4d-a46c-5f16d63a14dc
+    internal-label: Viewer presets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4530'
-ht-degree: 94%
-
+source-wordcount: '4651'
+ht-degree: 96%
 ---
-
 # ビューアプリセットの管理{#managing-viewer-presets}
 
 ビューアプリセットは、ユーザーがコンピューターの画面とモバイルデバイスでリッチメディアアセットをどのように表示するかを決定する設定のコレクションです。 管理者の場合は、ビューアプリセットを作成できます。 ビューア設定オプションの配列に対して設定を使用できます。 例えば、ビューアの表示サイズやズーム動作を変更できます。
@@ -59,8 +73,8 @@ Web ページによってニーズは異なります。 例えば、HTML5 ビュ
 
 >[!NOTE]
 >
->最初に使用する前に、すべての標準ビューアを公開します。
-> ビューアプリセットの公開[を参照]。（#publishing-viewer-presets）
+>既製のすべてのビューアを、初めて使用する前にすべて公開します。
+>[ ビューアプリセットの公開]を参照してください。（#publishing-viewer-presets）
 
 ### ビューアプリセットのシステム互換性 {#viewer-preset-system-compatibility}
 
@@ -162,11 +176,11 @@ Dynamic Media に付属するすべての標準提供のビューアのプリセ
 
 >[!NOTE]
 >
->Dynamic Mediaのすべての標準ビューアプリセットは既に有効（オン）になっていますが、公開する必要があります。
-> ビューアプリセットの公開[を参照](#publishing-viewer-presets)。
+>Dynamic Media の標準提供のビューアプリセットはすべてアクティベート済み（オン）になっていますが、それらを公開する必要があります。
+>[ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 >
->作成および追加する新しいビューアプリセットは、アクティブ化された*および*公開された両方にする必要があります。
-> ビューアプリセットのアクティブ化または非アクティブ化[&#128279;](#activating-or-deactivating-viewer-presets)および[&#x200B; ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
+>作成および追加した新しいすべてのビューアプリセットは、アクティベートされ公開されている必要があります。
+>[ビューアプリセットのアクティベートとアクティベート解除](#activating-or-deactivating-viewer-presets)と[ビューアプリセットの公開](#publishing-viewer-presets)を参照してください。
 
 <table>
  <tbody>
@@ -349,8 +363,8 @@ iOS、Android™ 2.x および Android™ 3.x デバイスでサポートされ�
   <tr>
    <td><p><strong>選択</strong></p> </td>
    <td><p>フライアウトウィンドウを表示</p> </td>
-   <td><p>ユーザインターフェイスを表示または非表示</p> </td>
-   <td><p>ユーザインターフェイスを表示または非表示</p> </td>
+   <td><p>ユーザーインターフェイスを表示または非表示</p> </td>
+   <td><p>ユーザーインターフェイスを表示または非表示</p> </td>
   </tr>
   <tr>
    <td><p><strong>ダブルクリック</strong></p> </td>
@@ -446,7 +460,7 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
      CSS ファイルを読み込むと、Visual Editor は、その CSS に正しいビューアマーカーが使用されているかを確認します。 例えば、ズームビューアを作成している場合、読み込むすべての CSS ルールが、親のビューア要素に定義されているズームビューアのクラス名 `.s7mixedmediaviewer` を使用して定義されている必要があります。
 
-     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます （CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。 例えば、Zoom ViewerのCSS マーカーについて読む場合は、[Zoom Viewerのカスタマイズ &#x200B;](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください。） ただし、ビジュアルエディターが一部のCSS値を理解できない場合があります。 そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
+     指定ビューアの CSS マーカーが正しく定義された CSS であれば、自作した任意の CSS を読み込むことができます （CSS マーカーについては、『[ビューアリファレンスガイド](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html?lang=ja)』の「*&lt;viewer name>* ビューアのカスタマイズ」のヘルプトピックを参照してください。 例えば、Zoom ViewerのCSS マーカーについて読む場合は、[Zoom Viewerのカスタマイズ ](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/zoom/customizing-zoom/c-html5-20-zoom-viewer-customizingviewer.html?lang=ja)を参照してください。） ただし、ビジュアルエディターが一部のCSS値を理解できない場合があります。 そのような場合、Visual Editor は、CSS が正常に機能するように、エラーを上書きしようとします。
 
    >[!NOTE]
    >
@@ -458,15 +472,15 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
    >ボタンのアートワークの場合は、2 倍画像を選択し、高解像度のアートワークをアップロードします。 インタラクティブ画像やショッパブルバナーを操作する場合は、すぐに使える様々なホットスポットボタンから選択することもできます。
 
 1. （オプション）ビューアプリセットを編集ページの最上部の近くにある「**[!UICONTROL デスクトップ]**」、「**[!UICONTROL タブレット]**」または「**[!UICONTROL 電話]**」を選択して、異なる種類のデバイスや画面のビジュアルスタイルを個別に定義します。
-1. ビューアプリセットエディターページで、「**[!UICONTROL ビヘイビアー]**」タブを選択します。または、ビューアで任意のビジュアル要素を選択して、設定のために選択することもできます。
-例えば、**[!UICONTROL 修飾子]**/**[!UICONTROL 再生]**&#x200B;の下にある&#x200B;*VideoPlayer* タイプの場合、3つのアダプティブビットレートストリーミングオプションのいずれかを選択できます。
+1. ビューアプリセットエディターページで、「**[!UICONTROL ビヘイビアー]**」タブを選択します。 または、任意のビジュアル要素をビューアで選択して設定することもできます。
+例えば、 *VideoPlayer* タイプの場合、**[!UICONTROL 修飾子]**／**[!UICONTROL 再生]**&#x200B;で、アダプティブビットレートストリーミングの 3 つのオプションの中から 1 つを選択できます。
 
    * **[!UICONTROL dash]** - ビデオは DASH としてのみストリーミングされます。 ただし、Safari または iOS デバイスでは、代わりに **[!UICONTROL hls]** タイプを選択する必要があります。
    * **[!UICONTROL hls]** - ビデオは HLS としてのみストリーミングされます。
    * **[!UICONTROL auto]** - ベストプラクティスです。 DASH ストリームおよび HLS ストリームの作成では、ストレージの最適化が図られています。 そのため、再生タイプには常に **[!UICONTROL auto]** を選択することを推奨します。 ビデオは DASH、HLSまたはプログレッシブで、次の再生順でストリーミングされます。
-      * ブラウザーが DASH をサポートしている場合は、最初に DASH ストリーミングが使用されます。
-      * ブラウザーが DASH をサポートしていない場合は、次に HLS ストリーミングが使用されます。
-      * ブラウザーが DASH も HLS もサポートしていない場合は、最後にプログレッシブ再生が使用されます。
+     * ブラウザーが DASH をサポートしている場合は、最初に DASH ストリーミングが使用されます。
+     * ブラウザーが DASH をサポートしていない場合は、次に HLS ストリーミングが使用されます。
+     * ブラウザーが DASH も HLS もサポートしていない場合は、最後にプログレッシブ再生が使用されます。
 
 1. 「**[!UICONTROL 選択したタイプ]**」プルダウンメニューで、動作を変更するコンポーネントを選択します。
 
@@ -535,14 +549,14 @@ Experience Manager では、**[!UICONTROL 詳細ビュー]**／**[!UICONTROL ビ
 
 ビューアが、表示できる位置の数に基づいて、パネルに表示するサムネイルの数を決定するロジックは次のとおりです。
 
-* サブセグメントの数=次のサブセグメントに切り上げます（サムネールの数/ブラウザーのウィンドウサイズに基づいてサムネールパネルに表示されるスロットの数）。
-上記の表の例を使用すると、9 サムネール / 4 スロット = 2.25；ビューアロジックにより、最大3つのサブセグメントが丸められます。
+* サブセグメントの数 = 次のサブセグメントに切り上げ（サムネールの数／サムネールパネル内に表示されるスロットの数（ブラウザー画面のサイズに基づく））
+前述の表の例では、「9 サムネール / 4 スロット = 2.25」になります（ビューアのロジックにより 2.25 が 3 サブセグメントに切り上げられます）。
 
-* サムネールの数=次のサムネールに切り上げる（サムネールの数/ビデオサブセグメントの数）。
-上記の表の例を使用すると、9つのサムネール / 3つのビデオサブセグメント = 3つのサムネールになります。
+* サムネールの数 = 次のサムネールに切り上げ（サムネールの数／ビデオサブセグメントの数）
+前述の表の例では、「9 サムネール / 3 ビデオサブセグメント = 3 サムネール」になります。
 
-* サブセグメントのデュレーション = ビデオの合計デュレーション / ビデオサブセグメントの数。
-上記の表の例を使用すると、30秒 / 3個のビデオサブセグメント =各ビデオサブセグメントの10秒表示になります。
+* サブセグメントの表示時間 = ビデオの合計再生時間 / ビデオサブセグメントの数
+前述の表の例では、「30 秒 / 3 ビデオサブセグメント = 各ビデオサブセグメントで 10 秒」の表示時間になります。
 
 #### カルーセルバナーのビューアプリセットの作成に関する特別な考慮事項 {#special-considerations-for-creating-a-carousel-banner-viewer-preset}
 

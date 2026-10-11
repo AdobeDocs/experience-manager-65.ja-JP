@@ -1,6 +1,6 @@
 ---
 title: SRP と UGC の基本事項
-description: ストレージリソースプロバイダーとユーザー作成コンテンツの概要
+description: ストレージリソースプロバイダーとユーザー生成コンテンツの概要
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,46 +9,53 @@ exl-id: 8279684f-23dd-4234-bf01-fd2ce74bcb4e
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '693'
 ht-degree: 1%
-
 ---
-
 # SRP と UGC の基本事項 {#srp-and-ugc-essentials}
 
 ## はじめに {#introduction}
 
-ストレージリソースプロバイダー（SRP）とそのユーザー作成コンテンツ（UGC）との関係に詳しくない場合は、[&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md) および [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) を参照してください。
+ストレージリソースプロバイダー（SRP）と、ユーザー生成コンテンツ（UGC）との関係についてご存じない場合は、[ コミュニティコンテンツストレージ ](working-with-srp.md)および[ ストレージリソースプロバイダーの概要](srp.md)にアクセスしてください。
 
-ドキュメントのこの節では、SRP と UGC に関する重要な情報を提供します。
+このセクションでは、SRPとUGCに関する重要な情報を提供します。
 
 ## StorageResourceProvider API {#storageresourceprovider-api}
 
-SocialResourceProvider API （SRP API）は、様々な Sling リソースプロバイダー API の拡張機能です。 ページネーションとアトミックインクリメントのサポートが含まれます（集計とスコアリングに役立ちます）。
+SocialResourceProvider API （SRP API）は、様々なSling リソースプロバイダーAPIの拡張機能です。 ページネーションとアトミックインクリメントのサポートが含まれています（集計とスコアリングに役立ちます）。
 
-日付、有用性、投票数などで並べ替える必要があるので、SCF コンポーネントではクエリが必要です。 すべての SRP オプションには、バケット化に依存しない柔軟なクエリメカニズムがあります。
+SCF コンポーネントには、日付、有用性、投票数などで並べ替える必要があるため、クエリが必要です。 すべてのSRP オプションには、バケットに依存しない柔軟なクエリメカニズムがあります。
 
-SRP ストレージの場所には、コンポーネントパスが組み込まれています。 ルートパスは選択した SRP オプション（ASRP、MSRP、JSRP など）に依存するので、SRP API は常に UGC にアクセスするために使用する必要があります。
+SRP ストレージの場所には、コンポーネントパスが組み込まれています。 ルートパスは、ASRP、MSRP、JSRPなど、選択したSRP オプションに依存するため、SRP APIを常に使用してUGCにアクセスする必要があります。
 
-SRP API は抽象クラスではなく、インターフェイスです。 カスタム実装は慎重に行うべきではありません。新しいリリースにアップグレードすると、内部実装に対する将来の改善のメリットが逃されるからです。
+SRP APIは抽象クラスではなく、インターフェイスです。 カスタム実装は、新しいリリースにアップグレードする際に内部実装を改善するメリットを逃すため、軽く実行すべきではありません。
 
-SRP API を使用する手段は、SocialResourceUtilities パッケージにあるような提供されているユーティリティを通じておこなわれます。
+SRP APIを使用する手段は、SocialResourceUtilities パッケージに含まれている提供されたユーティリティを使用します。
 
-AEM 6.0 以前からアップグレードする場合は、すべての SRP について UGC を移行する必要があります。ここでも、Open Source ツールを使用できます。 [AEM Communities 6.3 へのアップグレード &#x200B;](upgrade.md) を参照してください。
+AEM 6.0以前からアップグレードする場合は、Open Source ツールを使用できるすべてのSRPにUGCを移行する必要があります。 [AEM Communities 6.3](upgrade.md)へのアップグレードを参照してください。
 
 >[!NOTE]
 >
->これまで、UGC にアクセスするためのユーティリティは、既に存在しない SocialUtils パッケージに含まれていました。
+>従来、UGCにアクセスするためのユーティリティは、SocialUtils パッケージに含まれていましたが、このパッケージは既に存在しません。
 >
->置き換えるユーティリティについては、[SocialUtils リファクタリング &#x200B;](socialutils.md) を参照してください。
+>代替ユーティリティについては、[SocialUtils リファクタリング ](socialutils.md)を参照してください。
 
-## UGC にアクセスするためのユーティリティメソッド {#utility-method-to-access-ugc}
+## UGCへのアクセス方法 {#utility-method-to-access-ugc}
 
-UGC にアクセスするには、SRP から UGC へのアクセスに適したパスを返す SocialResourceUtilities パッケージのメソッドを使用します。このメソッドは、SocialUtils パッケージにある非推奨メソッドを置き換えるものです。
+UGCにアクセスするには、SocialResourceUtilities パッケージのメソッドを使用します。このメソッドは、SRPからUGCにアクセスするのに適したパスを返し、SocialUtils パッケージにある非推奨のメソッドを置き換えます。
 
-次に、サーブレットで resourceToUGCStoragePath （） メソッドを使用する最小限の例を示します。
+次に、サーブレットでresourceToUGCStoragePath （） メソッドを使用する簡単な例を示します。
 
 ```java
 import com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities;
@@ -63,23 +70,23 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-その他の SocialUtils の置き換えについては、[SocialUtils のリファクタリング &#x200B;](socialutils.md) を参照してください。
+その他のSocialUtilsの置換については、[SocialUtils リファクタリング ](socialutils.md)を参照してください。
 
-コーディングのガイドラインについては、[SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) を参照してください。
+コーディングガイドラインについては、[SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md)を参照してください。
 
 >[!CAUTION]
 >
->resourceToUGCStoragePath （）が返すパスは *ACL チェックに適していません*[&#128279;](srp.md#for-access-control-acls)。
+>resourceToUGCStoragePath （）が返すパスは&#x200B;*not*&#x200B;です。[ACLの確認](srp.md#for-access-control-acls)に適しています。
 
-## ACL にアクセスするためのユーティリティメソッド {#utility-method-to-access-acls}
+## ACLにアクセスするためのユーティリティメソッド {#utility-method-to-access-acls}
 
-ASRP や MSRP など、一部の SRP 実装では、ACL 検証を提供しないデータベースにコミュニティコンテンツを保存します。 シャドウノードは、ACL を適用できるローカルリポジトリ内の場所を提供します。
+ASRPやMSRPなどの一部のSRP実装では、ACL検証を提供しないデータベースにコミュニティ コンテンツを保存します。 シャドウノードは、ACLを適用できるローカルリポジトリ内の場所を提供します。
 
-SRP API を使用すると、すべての SRP オプションは、すべての CRUD 操作に先立ってシャドウの場所に対して同じチェックを実行します。
+SRP APIを使用すると、すべてのSRP オプションは、すべてのCRUD操作の前にシャドウの場所を同じようにチェックします。
 
-ACL をチェックするには、メソッドを使用して、リソースの UGC に適用される権限をチェックするのに適したパスを返します。
+ACLをチェックするには、リソースのUGCに適用される権限のチェックに適したパスを返すメソッドを使用します。
 
-次に、サーブレットで resourceToACLPath （） メソッドを使用する簡単な例を示します。
+次に、サーブレットでresourceToACLPath （） メソッドを使用する簡単な例を示します。
 
 ```java
 import com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities;
@@ -96,38 +103,38 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->resourceToACLPath （）が返すパスは *UGC へのアクセス [&#x200B; に適していません*](#utility-method-to-access-acls)。
+>resourceToACLPath （）によって返されるパスは、*not*&#x200B;です。これは、[UGC](#utility-method-to-access-acls)自体へのアクセスに適しています。
 
-## UGC 関連の保存場所 {#ugc-related-storage-locations}
+## UGC関連の保存場所 {#ugc-related-storage-locations}
 
-JSRP または MSRP を使用して開発する場合は、次に示すストレージの場所の説明が役立つ場合があります。 JSRP （[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)）および MSRP （MongoDB ツール）用があるので、現在、ASRP に保存されている UGC にアクセスする UI はありません。
+ストレージの場所に関する以下の説明は、JSRPまたは場合によってはMSRPを使用して開発する際に役立つ可能性があります。 JSRP （[CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)）およびMSRP （MongoDB ツール）に対して、ASRPに格納されているUGCにアクセスするためのUIは現在存在しません。
 
 **コンポーネントの場所**
 
-パブリッシュ環境でメンバーが UGC にエントリすると、AEM サイトの一部としてコンポーネントとやり取りされます。
+メンバーがパブリッシュ環境でUGCを開始すると、AEM サイトの一部としてコンポーネントと対話します。
 
-このようなコンポーネントの例として、[&#x200B; コミュニティコンポーネントガイド &#x200B;](http://localhost:4502/content/community-components/en/comments.html) サイトに存在する [&#x200B; コメントコンポーネント &#x200B;](components-guide.md) があります。 ローカルリポジトリのコメントノードへのパスは次のとおりです。
+このようなコンポーネントの例として、[ コミュニティコンポーネントガイド ](components-guide.md) サイトに存在する[ コメント コンポーネント ](http://localhost:4502/content/community-components/en/comments.html)があります。 ローカルリポジトリ内のコメントノードへのパスは次のとおりです。
 
-* コンポーネントのパス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
+* コンポーネント パス = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-**シャドウノードの場所**
+**シャドウ ノードの場所**
 
-UGC の作成により、必要な ACL が適用される [&#x200B; シャドウノード &#x200B;](srp.md#about-shadow-nodes-in-jcr) も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスのシャドウノードのルートパスを先頭に追加した結果です。
+UGCを作成すると、必要なACLが適用される[ シャドウ ノード ](srp.md#about-shadow-nodes-in-jcr)も作成されます。 ローカルリポジトリ内の対応するシャドウノードへのパスは、コンポーネントパスにシャドウノードルートパスを追加した結果です。
 
-* ルートパス = `/content/usergenerated`
+* ルート パス = `/content/usergenerated`
 * コメント シャドウ ノード = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-**UGC の場所**
+**UGCの場所**
 
-UGC は、これらの場所のいずれでも作成されず、SRP API を呼び出す [&#x200B; ユーティリティメソッド &#x200B;](#utility-method-to-access-ugc) を使用してのみアクセスする必要があります。
+UGCは、どちらの場所にも作成されず、SRP APIを呼び出す[ ユーティリティメソッド ](#utility-method-to-access-ugc)を使用してのみアクセスする必要があります。
 
-* ルートパス = `/content/usergenerated/asi/srp-choice`
-* JSRP の UGC ノード = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
+* ルート パス = `/content/usergenerated/asi/srp-choice`
+* JSRPのUGC ノード = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*注意*、JSRP の場合、UGC ノードは、入力されたAEM インスタンス *オーサーまたはパブリッシュ）に存在します* のみ）。 パブリッシュインスタンスで入力した場合、オーサー環境のモデレートコンソールからモデレートすることはできません。
+*注意*&#x200B;してください。JSRPの場合、UGC ノードは&#x200B;*のみ*&#x200B;が入力されたAEM インスタンス（オーサーまたはパブリッシュのいずれか）に存在します。 パブリッシュインスタンスに入力した場合、オーサーのモデレーションコンソールからモデレーションを実行できません。
 
-## 関連情報 {#related-information}
+## 関連する情報 {#related-information}
 
-* [&#x200B; ストレージリソースプロバイダーの概要 &#x200B;](srp.md) – 概要とリポジトリの使用状況の概要。
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディングガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在の SRP ユーティリティメソッドにマッピングする
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

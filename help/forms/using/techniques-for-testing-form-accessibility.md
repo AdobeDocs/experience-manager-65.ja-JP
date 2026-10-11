@@ -6,13 +6,29 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 exl-id: 77fd3bc5-9a05-4442-af2b-238169d8061a
-source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 1af3c3d4-88d7-5e0f-813c-eb70824bfcdd
+    internal-label: Forms Designer
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '350'
 ht-degree: 100%
-
 ---
-
 # フォームのアクセシビリティをテストするテクニック
 
 幅広いユーザーに対するフォームのアクセシビリティを確認するには、様々な支援テクノロジーを使用してフォームをテストします。 この節で説明するテクニックで、簡単かつ低コストにフォームをテストできます。
@@ -23,7 +39,7 @@ ht-degree: 100%
 * キーボードの操作手順は明文化されているか。
 * ボタンなどのコントロールやメニュー項目にはすべて、下線付きのアクセスキーが付いているか。
 
-スクリーンリーダーソフトウェアの評価版はインターネットを通じて無料でダウンロードできます。 スクリーンリーダー実行の結果をテストするには、モニターの電源を切り、スクリーンリーダーだけを使用してフォーム内を移動し、入力を行います。 フォームの作成者はそのフォームに慣れ過ぎていて、スクリーンリーダーが読み上げる情報が十分で、意味が正しいかどうかを正当に判断できない可能性があります。 可能であれば、この方法で第三者にテストを依頼します。
+スクリーンリーダーソフトウェアの評価版はインターネットを通じて無料でダウンロードできます。 スクリーンリーダーの読み上げ結果をテストするには、モニターの電源を切り、スクリーンリーダーだけを使用してフォーム内を移動し、入力を行います。 フォームの作成者はそのフォームに慣れ過ぎていて、スクリーンリーダーが読み上げる情報が十分で、意味が正しいかどうかを正当に判断できない可能性があります。 可能であれば、この方法で別の人にフォームをテストしてもらいます。
 
 表示拡大ソフトウェアの評価版もインターネットを通じて無料で入手できます。
 

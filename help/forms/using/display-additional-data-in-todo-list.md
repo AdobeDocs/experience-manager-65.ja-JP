@@ -9,24 +9,38 @@ exl-id: f8b84f13-02d3-4787-95e1-25fd684e6d3b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '288'
 ht-degree: 100%
-
 ---
-
 # TODO リストでの追加データの表示{#displaying-additional-data-in-todo-list}
 
-デフォルトで、AEM Forms Workspace TODO リストにタスクの表示名および説明が表示されます。しかしながら、作成日や締切日などのその他の情報を追加することができます。また、アイコンを追加したり、表示のスタイルを変更することもできます。
+デフォルトで、AEM Forms Workspace TODO リストにタスクの表示名および説明が表示されます。 しかしながら、作成日や締切日などのその他の情報を追加することができます。 また、アイコンを追加したり、表示のスタイルを変更することもできます。
 
 ![デフォルト設定を表示する HTML Workspace の「TODO」タブ](assets/html-todo-list.png)
 
-この記事では、TODO リストの各タスクに情報を追加する手順について説明します。
+この記事では、TODO リストの各タスクに情報を追加して表示する手順について説明します。
 
 ## 追加できる情報 {#what-can-be-added}
 
-サーバーによって送信された `task.json` にある情報を追加することができます。情報は、平文テキストとして追加することも、スタイルを使用して情報をフォーマットすることもできます。
+サーバーによって送信された `task.json` にある情報を追加することができます。 情報は、平文テキストとして追加することも、スタイルを使用して情報をフォーマットすることもできます。
 
 JSON オブジェクトの説明についての詳細は、[この](/help/forms/using/html-workspace-json-object-description.md)記事を参照してください。
 
@@ -122,7 +136,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 
 ## 新規プロパティでの CSS の定義 {#defining-css-for-the-new-property}
 
-1. タスクに追加された情報（プロパティ）にスタイルを適用できます。これを行うには、`/apps/ws/css/newStyle.css` に追加された新規プロパティにスタイル情報を追加する必要があります。
+1. タスクに追加された情報（プロパティ）にスタイルを適用できます。 これを行うには、`/apps/ws/css/newStyle.css` に追加された新規プロパティにスタイル情報を追加する必要があります。
 
    例えば、以下を追加します。
 
@@ -136,7 +150,7 @@ JSON オブジェクトの説明についての詳細は、[この](/help/forms/
 
 ## HTML テンプレートへのエントリの追加 {#adding-entry-in-the-html-template}
 
-最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。作成する方法については、「AEM Forms Workspace コードの構築」を参照してください。
+最後に、タスクに追加する各プロパティの開発パッケージにエントリを含める必要があります。 作成する方法については、「AEM Forms Workspace コードの構築」を参照してください。
 
 1. `task.html` をコピーします：
 

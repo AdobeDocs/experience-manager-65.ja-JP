@@ -9,13 +9,29 @@ role: User, Admin
 exl-id: 9eb9f309-33e5-4694-84d2-fb2cd3de50a6
 feature: Publishing,Configuration
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+  - id: f59890ff-de81-47d5-9ef8-7ab2dd10c6c3
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f901afa4-5613-4581-add5-219fa5f03fb5
+    internal-label: Publishing
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 97%
-
 ---
-
 # コンテンツの HTTP/2 配信 {#http-delivery-of-content}
 
 アドビは、パフォーマンスの向上という全体的な利点をもたらすコンテンツの HTTP/2 配信に対応しました。
@@ -34,7 +50,7 @@ HTTP/2 とその利点については、次の web サイトで簡潔に説明�
 
 ## コンテンツ配信を HTTP/2 に移行する主なメリット {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
-パフォーマンスの向上は、大きく変化する可能性があります。 web サイトのコード、Dynamic Media の使用方法、消費者のデバイス、画面、場所など、様々な要因があります。
+パフォーマンスの向上の度合いは大きく異なる場合があります。 これは、web サイトのコード、Dynamic Media の使用方法、消費者のデバイス、画面、場所など、多くの要因に基づきます。
 
 アドビ独自のテストでは、以下の結果が出ています。
 
@@ -53,7 +69,7 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 * リッチメディアリクエストにセキュア HTTPS を使用している。
 * アドビ製品にバンドルされたコンテンツ配信ネットワーク（CDN）を Dynamic Media ライセンスの一部として使用します。
-* 専用ドメイン（company-h.assetsadobe#.com 以外）を使用している。
+* 専用ドメイン（company-h.assetsadobe#.com 以外）を使用します。
 
   既に専用ドメインがある場合、アドビのカスタマーサポート経由でオプトインできます。
 
@@ -63,19 +79,19 @@ HTTP/2 を使用するには、以下の要件を満たしている必要があ�
 
 HTTP/2 への切り替えは、お客様からのリクエストが必要となり、自動的には行われません。
 
-1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。 詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)を参照してください。
+1. HTTP/2 に切り替えるには、アドビのカスタマーサポートにリクエストしてください。 詳しくは、[サポートチケットを開く](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)を参照してください。
 
    1. サポートリクエストには、以下の情報を記入してください。
 
       1. 主要連絡先の氏名、メールアドレス、電話番号。
       1. HTTP/2 への切り替えが必要なすべてのドメイン。
       1. リッチメディアリクエストについて、セキュリティで保護された HTTPS を使用していることを確認します。
-      1. アドビ経由で CDN を利用し、直接の関係で管理していないことを確認します。
+      1. アドビ経由で CDN を利用し、直接契約で管理されていないことを確認します。
       1. 専用ドメインを使用していることを確認します。 Dynamic Media を使用している場合は、専用ドメインを使用します。
 
    1. カスタマーサポートでは、リクエストの送信順に基づいて HTTP/2 の顧客待機リストに追加します。
    1. アドビでリクエストを処理する準備が整うと、移行についての調整や完了予定日の設定のため、カスタマーサポートから連絡が入ります。
-   1. 完了すると通知されるので、正常に HTTP2 へ移行されたことを確認できます。
+   1. 完了すると通知されるので、正常に HTTP/2 へ移行されたことを確認できます。
 
       ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
@@ -99,4 +115,4 @@ HTTP/2 への切り替えには、新しい CDN 設定への移行が伴うの�
 
 ブラウザーにはこのことが表示されないので、拡張機能をダウンロードする必要があります。
 
-Firefox および Chrome では、「HTTP/2 および SPDY インディケーター」という拡張機能があります。 ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。 HTTP/2 がサポートされている場合は、拡張機能でそれが示されます。 拡張機能は、青色の稲妻シンボルおよび `X-Firefox-Spdy` : `h2` というヘッダーの形式です。
+Firefox および Chrome では、「HTTP/2 および SPDY インディケーター」という拡張機能があります。 ブラウザーは HTTP/2 をセキュア接続でのみサポートするので、確認するには https の付いた URL を呼び出す必要があります。 HTTP/2 がサポートされている場合は、拡張機能にそのことが示されます。 拡張機能は、青色の稲妻シンボルおよび `X-Firefox-Spdy` : `h2` というヘッダーの形式です。

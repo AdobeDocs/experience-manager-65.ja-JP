@@ -7,20 +7,38 @@ role: Admin, User, Developer
 exl-id: 4b24a38a-c1f0-4c81-bb3a-39ce2c4892b1
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,AEM Forms on OSGi
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1712'
 ht-degree: 97%
-
 ---
-
 # OSGi 上での Forms ベースのワークフローのインストールと設定{#installing-and-configuring-forms-centric-workflow-on-osgi}
 
 ## はじめに {#introduction}
 
 企業は、複数のフォーム、バックエンドシステム、その他のデータソースからデータを収集して処理します。 データの処理には、レビューと承認の手順、繰り返しのタスク、データのアーカイブが含まれます。 例えば、フォームをレビューし、PDF ドキュメントに変換する場合などです。 手動で行うと、繰り返しタスクに多くの時間と多数のリソースが必要になる場合があります。
 
-[OSGi 上の Forms ベースのワークフロー](../../forms/using/aem-forms-workflow.md) を使用して、アダプティブフォームベースのワークフローを迅速に構築することができます。 これらのワークフローは、レビューと承認のワークフロー、ビジネスプロセスのワークフロー、その他の繰り返しタスクの自動化に役立ちます。 これらのワークフローは、ドキュメントの処理 (PDF ドキュメントの作成、アセンブリ、配布、アーカイブ、ドキュメントへのアクセスを制限するための電子署名の追加、バーコードフォームのデコードなど ) や、フォームとドキュメントと併せた Adobe Sign 署名ワークフローの使用にも役立ちます。
+[OSGi 上の Forms ベースのワークフロー](../../forms/using/aem-forms-workflow.md) を使用して、アダプティブフォームベースのワークフローを迅速に構築することができます。 これらのワークフローは、レビューと承認のワークフロー、ビジネスプロセスのワークフロー、その他の繰り返しタスクの自動化に役立ちます。 これらのワークフローは、ドキュメントの処理 (PDF ドキュメントの作成、アセンブリ、配布、アーカイブ、ドキュメントへのアクセスを制限するための電子署名の追加、Barcoded Forms のデコードなど ) や、フォームとドキュメントと併せた Adobe Sign 署名ワークフローの使用にも役立ちます。
 
 これらのワークフローを一度設定すると、手動でトリガーして定義済みプロセスを完了することができ、また、ユーザーによるフォームの送信やインタラクティブなコミュニケーションの際に、ワークフローをプログラムで実行することもできます。 これは、AEM Forms のアドオンパッケージに含まれる機能で、
 
@@ -55,17 +73,17 @@ Forms ベースのワークフローを OSGi 上でのインストールと設�
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
 * AEM インスタンスが稼働していること。 AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。 OSGi 上で Forms ベースのワークフローを実行するには、少なくとも 1 つの AEM インスタンス（オーサーまたは処理）が必要です。
 
-   * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。 オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。
+  * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+  * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。 オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。
 
-   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
+  * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
 * メモリ要件が満たされていること。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
-   * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
+  * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+  * UNIX ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
-* Unix ベースのシステムの追加必要システム構成：Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
+* UNIX ベースのシステムの追加要件：UNIX ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
 
 <table>
  <tbody>
@@ -111,7 +129,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動します。 **サーバーをすぐに再起動しないでください。** AEM Forms サーバーを停止する前に、[AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルにServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが表示されなくなり、ログが安定するまで待ちます。
+1. パッケージのインストール後、AEM インスタンスを再起動するよう求められます。 **サーバーをすぐに再起動しないでください。** AEM Forms サーバーを停止する前に、[AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルにServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが表示されなくなり、ログが安定するまで待ちます。
 
    >[!NOTE]
    >
@@ -121,7 +139,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ## インストール後の設定 {#post-installation-configurations}
 
-AEM Forms には、必須の設定とオプションの設定がいくつかあります。 必須の設定には、BouncyCastle ライブラリおよびシリアル化エージェントの設定が含まれます。 オプションの設定には、ディスパッチャーおよび Adobe Target の設定が含まれます。
+AEM Forms には、必須の設定とオプションの設定がいくつかあります。 必須の設定には、BouncyCastle ライブラリおよびシリアル化エージェントの設定が含まれます。 オプションの設定には、Dispatcher および Adobe Target の設定が含まれます。
 
 ### インストール後の必須の設定 {#mandatory-post-installation-configurations}
 
@@ -156,11 +174,11 @@ AEM Forms には、必須の設定とオプションの設定がいくつかあ�
 
 #### Dispatcher の設定 {#configure-dispatcher}
 
-Dispatcher は、キャッシングとロードバランシングを行うための AEM ツールです。 AEM Dispatcher を使用すると、AEM サーバーを攻撃から保護するのにも役立ちます。 エンタープライズクラスの Web サーバーと共に Dispatcher を使用すると、AEM インスタンスのセキュリティを高められます。 [ディスパッチャー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を使用する場合は、AEM Forms の次の設定を実行してください。
+Dispatcher は、キャッシングとロードバランシングを行うための AEM ツールです。 AEM Dispatcher は、AEM サーバーを攻撃から保護するのにも役立ちます。 エンタープライズクラスの Web サーバーと共に Dispatcher を使用すると、AEM インスタンスのセキュリティを高められます。 [ディスパッチャー](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を使用する場合は、AEM Forms の次の設定を実行してください。
 
 1. AEM Forms のアクセスの設定：
 
-   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、次のフィルターをフィルターセクションに追加します。
+   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、そこに次のフィルターを追加します。
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
@@ -190,7 +208,7 @@ Dispatcher は、キャッシングとロードバランシングを行うため
 
 Adobe Sign では、アダプティブフォームの電子サインワークフローを有効にすることができます。 電子サインを使用すると、法務、販売、給与、人事管理など、様々な分野におけるドキュメント処理ワークフローが改善されます。
 
-OSGi シナリオ上の Adobe Sign とフォームベースの一般的なワークフローでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームに、ユーザーが入力します。 例えば、クレジットカードの申込フォームや住民サービスフォームなどです。 ユーザーが申し込みフォームに入力、送信、署名すると、承認または却下のワークフローが開始されます。 サービスプロバイダーは、AEM インボックスでアプリケーションを確認し、Adobe Sign を使用してアプリケーションに電子署名します。 これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合します。
+OSGi シナリオ上の Adobe Sign とフォームベースの一般的なワークフローでは、**サービスを申し込む**&#x200B;ためのアダプティブフォームに、ユーザーが入力します。 例えば、クレジットカードの申込フォームや住民給付フォームなどです。 ユーザーが申し込みフォームに入力、送信、署名すると、承認または却下のワークフローが開始されます。 サービスプロバイダーは、AEM インボックスでアプリケーションを確認し、Adobe Sign を使用してアプリケーションに電子署名します。 これに類似した電子署名ワークフローを有効にするには、Adobe Sign を AEM Forms に統合できます。
 
 AEM Forms で Adobe Sign を使用するには、[Adobe Sign を AEM Forms に統合](../../forms/using/adobe-sign-integration-adaptive-forms.md)を参照してください。
 

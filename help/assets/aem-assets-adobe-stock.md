@@ -7,7 +7,25 @@ role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+    internal-label: Integrations
+subfeature_v2:
+  - id: b946c10d-6d59-4459-94a6-e1a584a89c5f
+    internal-label: Adobe Stock integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 99%
@@ -105,8 +123,8 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 開発者は、次の手順を実行して、[!DNL Adobe Experience Manager] と [!DNL Adobe Stock] を統合します。
 
-1. [&#x200B; [!DNL Developer Console] でプログラムを設定します。](#set-up-a-program-in-developer-console)
-1. [&#x200B; [!DNL AEM]  オーサーインスタンスに設定を追加します。](#add-configuration-in-the-aem-author-instance)
+1. [ [!DNL Developer Console] でプログラムを設定します。](#set-up-a-program-in-developer-console)
+1. [ [!DNL AEM]  オーサーインスタンスに設定を追加します。](#add-configuration-in-the-aem-author-instance)
 
 ### [!DNL Developer Console] でのプログラムの設定 {#set-up-a-program-in-developer-console}
 
@@ -117,7 +135,7 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 1. 「**[!UICONTROL プロジェクトに追加]**」をクリックして、「**[!UICONTROL API]**」を選択します。
 1. 「**[!UICONTROL Adobe Stock]**」を選択して、「**[!UICONTROL 次へ]**」をクリックします。
 1. **[!UICONTROL 資格情報名]**&#x200B;を指定し、**[!UICONTROL OAuth サーバー間]**&#x200B;が選択されていることを確認して、「**[!UICONTROL 次へ]**」をクリックします。
-1. **[!UICONTROL AEM Assets]** **[!UICONTROL 製品プロファイル]**&#x200B;を選択して、「**[!UICONTROL 設定済み API を保存]**」をクリックします。 [!DNL Developer Console] でプロジェクトを作成したことを確認する成功メッセージが表示されます。 プロジェクトのダッシュボードが開き、上部にプロジェクト名、**[!UICONTROL APIS]** の下に **[!UICONTROL Adobe Stock]**、**[!UICONTROL 製品プロファイル]**&#x200B;の下に **[!UICONTROL AEM Assets]**、**[!UICONTROL 接続された資格情報]**&#x200B;の下に **[!UICONTROL OAuth サーバー間]**&#x200B;資格情報カードが表示されます。
+1. **[!UICONTROL AEM Assets]** **[!UICONTROL 製品プロファイル]**&#x200B;を選択して、「**[!UICONTROL 設定済み API を保存]**」をクリックします。 [!DNL Developer Console] でプロジェクトを作成したことを確認する成功メッセージが表示されます。 プロジェクトのダッシュボードが開き、上部にプロジェクト名、**[!UICONTROL APIS]** の下に **[!UICONTROL Adobe Stock]**、**[!UICONTROL 製品プロファイル]**&#x200B;の下に **[!UICONTROL AEM Assets]**、**[!UICONTROL 接続された資格情報]**&#x200B;の下に **[!UICONTROL OAuth サーバー間]**資格情報カードが表示されます。
    ![AEM Assets と Adobe Stock の統合](/help/assets/assets/adc-project-name.png)
 1. **[!UICONTROL OAuth サーバー間]**&#x200B;資格情報カードを選択すると、**[!UICONTROL 資格情報の詳細]**&#x200B;が表示されます。 **[!UICONTROL クライアント ID]**、**[!UICONTROL クライアント秘密鍵]**、**[!UICONTROL 範囲]**、**[!UICONTROL 資格情報名]**、**[!UICONTROL テクニカルアカウント ID]**、**[!UICONTROL 組織 ID]** など、プロジェクトの [!DNL OAuth Server-to-Server] 資格情報の詳細を使用して、[AEM オーサーインスタンスに設定を追加](#add-configuration-in-the-aem-author-instance)します。
    ![AEM Assets と Adobe Stock](/help/assets/assets/oauth-server-server-credentials-details-page.png)
@@ -126,8 +144,8 @@ To allow communication between [!DNL Experience Manager] and [!DNL Adobe Stock],
 
 [!DNL AEM] オーサーインスタンスに設定を追加するには、次の手順を実行します。
 
-1. [&#x200B; [!DNL AEM]  オーサーインスタンスで新しい  [!DNL Adobe Stock IMS configuration]  を設定します。](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)
-1. [&#x200B; [!DNL Adobe Stock] に接続するクラウド設定を追加します。](#add-cloud-configuration-to-connect-adobe-stock)
+1. [ [!DNL AEM]  オーサーインスタンスで新しい  [!DNL Adobe Stock IMS configuration]  を設定します。](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)
+1. [ [!DNL Adobe Stock] に接続するクラウド設定を追加します。](#add-cloud-configuration-to-connect-adobe-stock)
 
 #### [!DNL AEM author] インスタンスでの新しい [!DNL Adobe Stock IMS configuration] の設定 {#set-up-adobe-stock-ims-configuration-in-aem-author-instance}
 
@@ -472,7 +490,7 @@ To configure the [!DNL Adobe Stock] cloud service:
 
 >[!MORELIKETHIS]
 >
->* [&#x200B; [!DNL Experience Manager Assets] での  [!DNL Adobe Stock]  アセットの使用について説明するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
+>* [ [!DNL Experience Manager Assets] での  [!DNL Adobe Stock]  アセットの使用について説明するビデオチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=ja)
 >* [[!DNL Adobe Stock] エンタープライズプランのヘルプ](https://helpx.adobe.com/jp/enterprise/using/adobe-stock-enterprise.html)
 >* [[!DNL Adobe Stock] FAQ](https://helpx.adobe.com/jp/stock/faq.html)
 

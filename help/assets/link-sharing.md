@@ -7,13 +7,27 @@ feature: Link Sharing,Asset Management
 exl-id: 20370b00-862e-4d04-af2f-7d1c74a842dd
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: cda65036-5305-4f01-89da-9b3506ae8c50
+    internal-label: Administration
+subfeature_v2:
+  - id: b03f468b-ba84-4dc3-a306-cb2c69e43324
+    internal-label: Link sharing
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 100%
-
 ---
-
 # リンクとしてのアセットの共有 {#asset-link-sharing}
 
 | バージョン | 記事リンク |
@@ -59,7 +73,7 @@ ht-degree: 100%
 
 1. ユーザーが元のアセットをダウンロードできるようにするには、「**[!UICONTROL 元のファイルのダウンロードを許可]**」を選択します。 ユーザーが共有アセットのレンディションのみをダウンロードできるようにするには、「**[!UICONTROL ファイルのレンディションのダウンロードを許可]**」を選択します。
 
-1. 「**[!UICONTROL 共有]**」をクリックします。 メールでリンクをユーザーと共有することを確認するメッセージが表示されます。
+1. 「**[!UICONTROL 共有]**」をクリックします。 リンクがメールによってユーザーと共有されたことを確認するメッセージが表示されます。
 
 1. 共有アセットを表示するには、ユーザーが受け取ったメールのリンクをクリックまたはタップします。 アセットのプレビューを生成するには、共有アセットをクリックまたはタップします。 プレビューを閉じるには、「**[!UICONTROL 戻る]**」をクリックします。 フォルダーを共有したら、「**[!UICONTROL 親フォルダー]**」をクリックして親フォルダーに戻ります。
 
@@ -75,7 +89,7 @@ ht-degree: 100%
 
 1. リンクとして共有したアセットを表示するには、 [!DNL Assets] ユーザーインターフェイスで [!DNL Experience Manager] ロゴに移動します。 「**[!UICONTROL ナビゲーション]**」を選択します。 ナビゲーションウィンドウで、「**[!UICONTROL 共有リンク]**」を選択して共有アセットのリストを表示します。
 
-1. アセットの共有を解除するには、対象のアセットを選択し、ツールバーの「**[!UICONTROL 共有しない]**」をクリックします。 確認メッセージが表示されます。 また、このアセットの項目がリストから削除されます。
+1. アセットの共有を解除するには、対象のアセットを選択し、ツールバーの「**[!UICONTROL 共有しない]**」をクリックします。 確認メッセージが表示されます。 このアセットの項目がリストから削除されます。
 
 ## Day CQ Mail Service の設定 {#configure-day-cq-mail-service}
 
@@ -114,8 +128,8 @@ ht-degree: 100%
 
 * [!DNL Experience Manager] オーサーデプロイメントのリンクを外部エンティティに共有する場合は、次の URL（リンク共有で使用される URL）を `GET` リクエストのみに対して公開してください。 セキュリティ上の理由から、他の URL をブロックします。
 
-   * `http://[aem_server]:[port]/linkshare.html`
-   * `http://[aem_server]:[port]/linksharepreview.html`
-   * `http://[aem_server]:[port]/linkexpired.html`
+  * `http://[aem_server]:[port]/linkshare.html`
+  * `http://[aem_server]:[port]/linksharepreview.html`
+  * `http://[aem_server]:[port]/linkexpired.html`
 
   [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL 操作]**／**[!UICONTROL Web コンソール]**&#x200B;にアクセスします。 Web コンソールで **[!UICONTROL Day CQ Link Externalizer]** 設定を開き、`local`、`author` および `publish` に対して、記載された値を持つ&#x200B;**[!UICONTROL ドメイン]**&#x200B;フィールドで、次のプロパティを変更します。 `local` プロパティと `author` プロパティには、それぞれローカルインスタンスとオーサーインスタンスの URL を指定します。 1 つの [!DNL Experience Manager] オーサーインスタンスを実行している場合、同じ値を `local` および `author` プロパティに使用します。 パブリッシュインスタンスには、[!DNL Experience Manager] パブリッシュインスタンスの URL を指定します。

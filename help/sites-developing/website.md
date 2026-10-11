@@ -10,7 +10,18 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '5032'
 ht-degree: 89%
@@ -57,7 +68,7 @@ Web サイトコンテンツパッケージ
 
 ## Adobe Experience Manager のインストール {#installing-adobe-experience-manager}
 
-Web サイトを開発するためのAEM インスタンスをインストールするには、オーサーインスタンスとパブリッシュインスタンス [&#128279;](/help/sites-deploying/deploy.md#author-and-publish-installs)を使用して デプロイメント環境を設定する手順に従うか、[汎用インストール &#x200B;](/help/sites-deploying/deploy.md#default-local-install)を実行します。 汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルをJAR ファイルと同じディレクトリに配置し、JAR ファイルをダブルクリックします。
+Web サイトを開発するためのAEM インスタンスをインストールするには、オーサーインスタンスとパブリッシュインスタンス ](/help/sites-deploying/deploy.md#author-and-publish-installs)を使用して[ デプロイメント環境を設定する手順に従うか、[汎用インストール ](/help/sites-deploying/deploy.md#default-local-install)を実行します。 汎用インストールでは、AEM クイックスタート JAR ファイルをダウンロードし、license.properties ファイルをJAR ファイルと同じディレクトリに配置し、JAR ファイルをダブルクリックします。
 
 AEM をインストールしたら、ようこそページで CRXDE Lite のリンクをクリックして CRXDE Lite 開発環境にアクセスします。
 
@@ -1287,7 +1298,7 @@ parsys コンポーネント（基盤コンポーネントの 1 つ）を conten
 1. 次のノードをコピーし、apps/mywebsite/components/search ノードに貼り付けます。
 
    * `/libs/foundation/components/search/dialog`
-   * &grave;&grave; `/libs/foundation/components/search/i18n`
+   * `` `/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 
@@ -1528,6 +1539,6 @@ contentpage ページの左側のセクションに検索入力ボックスを�
    ```
 
 1. 変更を保存します。
-1. ブラウザーで、**&#x200B; Products** ページをリロードします。 ページ全体は次のようになります。
+1. ブラウザーで、** Products** ページをリロードします。 ページ全体は次のようになります。
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

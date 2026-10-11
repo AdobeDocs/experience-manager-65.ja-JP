@@ -9,13 +9,27 @@ feature: Interactive Communication
 exl-id: 0f877a15-a17f-427f-8d89-62ada4d20918
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2678'
 ht-degree: 96%
-
 ---
-
 # インタラクティブなコミュニケーション内でグラフを使用する{#using-charts-in-interactive-communications}
 
 表やグラフはデータを視覚的に示す表示域です。 大量の情報をわかりやすい視覚的な形式にまとめることにより、インタラクティブなコミュニケーションの受信者が複雑なデータを視覚的に理解して分析することができます。
@@ -81,7 +95,7 @@ ht-degree: 96%
   </tr>
   <tr>
    <td>シリーズ／データモデルオブジェクト</td>
-   <td>複数の系列をグラフに追加するフォームデータモデル収集項目の名前。<br /> X軸とY軸にプロットされたプロパティの親フォームデータモデルオブジェクトプロパティを選択して、意味のある系列を形成します。 連結するデータモデルオブジェクトは、数値タイプ、文字列タイプまたは日付タイプである必要があります。</td>
+   <td>複数の系列をグラフに追加するフォームデータモデル収集項目の名前。<br /> X軸とY軸にプロットされたプロパティの親フォームデータモデルオブジェクトプロパティを選択して、意味のある系列を形成します。 連結するデータモデルオブジェクトは、数値タイプ、文字列タイプ、または日付タイプである必要があります。</td>
    <td>印刷出力と Web 出力</td>
   </tr>
   <tr>

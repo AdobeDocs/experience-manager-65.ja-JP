@@ -9,26 +9,42 @@ role: Developer
 exl-id: 744df8b2-0c61-410f-89e9-20b8adddbf45
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1323'
 ht-degree: 98%
-
 ---
-
 # Postscript から PDF ドキュメントへの変換 {#converting-postscript-to-pdf-documents}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
 ## Distiller サービスについて {#about-the-distiller-service}
 
-Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）および PRN ファイルを、ネットワーク上でコンパクトで信頼の高い、より安全な PDF ファイルに変換します。 Distiller サービスは、請求書や明細書など、容量の大きい印刷ドキュメントを電子ドキュメントに変換する際によく使用されます。 ドキュメントを PDF に変換して、顧客にドキュメントの印刷バージョンと電子バージョンを送付できます。
+Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）および PRN ファイルを、ネットワーク上でコンパクトで信頼の高い、より安全な PDF ファイルに変換します。 Distiller サービスは、請求書や明細書など、大量の印刷ドキュメントを電子ドキュメントに変換する際によく使用されます。 ドキュメントを PDF に変換して、顧客にドキュメントの印刷バージョンと電子バージョンを送付できます。
 
 >[!NOTE]
 >
 >Distiller サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
-## PostScript を PDF ドキュメントに変換する {#converting-postscript-to-pdf-documents-inner}
+## PostScript の PDF ドキュメントへの変換 {#converting-postscript-to-pdf-documents-inner}
 
 このトピックでは、Distiller Service API（Java および web サービス）を使用して、PostScript（PS）、Encapsulated PostScript（EPS）および PRN ファイルをプログラムで PDF ドキュメントに変換する方法について説明します。
 
@@ -38,7 +54,7 @@ Distiller® サービスは、PostScript®、Encapsulated PostScript（EPS）お
 
 >[!NOTE]
 >
->PostScript ファイルを PDF ドキュメントに変換するには、AEM Forms をホストするサーバーに Acrobat 9 または Microsoft Visual C++ 2005 の再頒布可能パッケージ次のいずれかをインストールする必要があります。
+>PostScript ファイルを PDF ドキュメントに変換するには、AEM Forms をホストするサーバーに、Acrobat 9 または Microsoft Visual C++ 2005 再頒布可能パッケージのいずれかをインストールする必要があります。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -100,7 +116,7 @@ Distiller Service API（Java）を使用して、PostScript ファイルを PDF 
    * コンストラクターを使用してファイルの場所を指定する文字列値を渡すことで、変換するファイルを表す `java.io.FileInputStream` オブジェクトを作成します
    * コンストラクタを使用して `com.adobe.idp.Document` オブジェクトを渡すことによって、`java.io.FileInputStream` オブジェクトを作成します。
 
-1. PDF 作成の操作を呼び出します。
+1. PDF 作成オペレーションを呼び出します。
 
    `DistillerServiceClient` オブジェクトの `createPDF` メソッドをを呼び出して、以下の値を渡します。
 
@@ -149,16 +165,16 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
 
 1. Distiller サービスクライアントを作成します。
 
-   * デフォルトのコンストラクターを使用して `DistillerServiceClient` オブジェクトを作成します。
+   * デフォルトのコンストラクタを使用して `DistillerServiceClient` オブジェクトを作成します。
    * `System.ServiceModel.EndpointAddress` コンストラクタを使用して `DistillerServiceClient.Endpoint.Address` オブジェクトを作成します。 WSDLを指定する文字列値をAEM Forms サービスに渡します（例：`http://localhost:8080/soap/services/DistillerService?blob=mtom`）。 `lc_version` 属性を使用する必要はありません。 この属性は、サービス参照を作成する際に使用されます。 ただし、 `?blob=mtom` を指定して MTOM を使用します。
    * `DistillerServiceClient.Endpoint.Binding` フィールドの値を取得して `System.ServiceModel.BasicHttpBinding` オブジェクトを作成します。 戻り値を `BasicHttpBinding` にキャストします。
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `DistillerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `DistillerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `DistillerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `DistillerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換するファイルを取得します。
 
@@ -188,7 +204,7 @@ Distiller Service API（Web サービス）を使用して、PostScript ファ�
    * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
    * バイト配列のコンテンツを PDF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡してください。
 
-**関連トピック**
+**関連情報**
 
 [手順の概要](converting-postscript-pdf-documents.md#summary-of-steps)
 

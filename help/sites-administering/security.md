@@ -10,13 +10,25 @@ exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 2cc34ce568fc533d41f53d8007825264ca9baad3
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '5471'
 ht-degree: 89%
-
 ---
-
 # ユーザー管理とセキュリティ{#user-administration-and-security}
 
 ここでは、ユーザー認証を設定および維持管理する方法について説明し、AEM における認証機能と承認機能の背景にある理論についても説明します。
@@ -145,7 +157,7 @@ AEM では、ACL を使用して、ユーザーまたはグループが実行で
 
 権限では、リソースに対してどのユーザーがどのようなアクションを実行できるかを定義します。 権限は、[アクセス制御](#access-control-lists-and-how-they-are-evaluated)の評価の結果です。
 
-個々のAEM [&#x200B; アクション &#x200B;](security.md#actions)のチェックボックスをオンまたはオフにすることで、特定のユーザーに対して付与/拒否された権限を変更できます。 チェックマークは、アクションが許可されていることを示します。 アクションが拒否されたことを示すチェックマークはありません。
+個々のAEM [ アクション ](security.md#actions)のチェックボックスをオンまたはオフにすることで、特定のユーザーに対して付与/拒否された権限を変更できます。 チェックマークは、アクションが許可されていることを示します。 アクションが拒否されたことを示すチェックマークはありません。
 
 また、グリッド内のチェックマークは、AEM 内のどの場所（パス）でどのような権限がユーザーに付与されているかを示します。
 
@@ -291,7 +303,7 @@ AEM WCM は、アクセス制御リスト（ACL）を使用して、様々なペ
 
   拒否を使用すると、想定した順序とは異なる順序で権限が適用された場合に、予想外の影響が及ぶ可能性があります。 ユーザーが複数のグループのメンバーである場合、あるグループからの拒否ステートメントによって、別のグループからの許可ステートメントが取り消されたり、その逆の事象が発生したりする可能性があります。 このような問題が発生した場合、概要を把握するのは難しく、予想外の結果になりかねません。しかし、許可を割り当てることで、このような矛盾は回避できます。
 
-  Adobeでは、拒否ではなく許可を使用することをお勧めします。[&#x200B; ベストプラクティス &#x200B;](#best-practices)を参照してください。
+  Adobeでは、拒否ではなく許可を使用することをお勧めします。[ ベストプラクティス ](#best-practices)を参照してください。
 
 いずれの権限を変更する場合でも、事前にその権限の仕組みと相互関係を理解しておく必要があります。 AEM WCM における[アクセス権限の評価](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)方法とアクセス制御リストの設定例については、CRX のドキュメントを参照してください。
 

@@ -10,18 +10,25 @@ exl-id: d121dc05-7d15-44ba-8d2d-b59d6c6480c8
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 2%
-
 ---
-
 # メッセージング機能 {#messaging-feature}
 
 AEM Communitiesのメッセージング機能を使用すると、フォーラムやコメントで発生する一般的に見えるインタラクションに加えて、コミュニティメンバー同士がよりプライベートにインタラクションできるようになります。
 
-この機能は、[&#x200B; コミュニティサイト &#x200B;](/help/communities/overview.md#communitiessites)を作成するときに含めることができます。
+この機能は、[ コミュニティサイト ](/help/communities/overview.md#communitiessites)を作成するときに含めることができます。
 
 メッセージング機能を使用すると、次のことが可能になります。
 
@@ -39,13 +46,13 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 **G** – 削除されたメッセージの復元
 
-![&#x200B; メッセージングセクション &#x200B;](assets/messaging-section.png)
+![ メッセージングセクション ](assets/messaging-section.png)
 
 ![restore-message](assets/restore-message.png)
 
 メッセージ機能を有効にして変更するには、次を参照してください。
 
-* [管理者向けメッセージ &#x200B;](/help/communities/messaging.md)の設定
+* [管理者向けメッセージ ](/help/communities/messaging.md)の設定
 * 開発者向け[Messaging Essentials](/help/communities/essentials-messaging.md)
 
 >[!NOTE]
@@ -58,12 +65,13 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 ### メッセージリストの設定（メッセージボックス） {#configure-message-list-message-box}
 
-メッセージ機能の&#x200B;**受信トレイ**、**送信済みアイテム**&#x200B;および&#x200B;**ゴミ箱** ページのメッセージのリストの設定を変更するには、[作成者の編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
+メッセージ機能の&#x200B;**受信トレイ**、**送信済みアイテム**&#x200B;および&#x200B;**ゴミ箱** ページのメッセージのリストの設定を変更するには、[作成者の編集モード ](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
 1. `Preview` モードで、**メッセージ** リンクを選択して、メイン メッセージ ページを開きます。 次に、**受信トレイ**、**送信済みアイテム**&#x200B;または&#x200B;**ごみ箱**&#x200B;のいずれかを選択して、そのメッセージリストのコンポーネントを設定します。
 
 1. `Edit` モードで、ページ上のコンポーネントを選択します。
-1. 設定ダイアログにアクセスするには、`link` アイコンを選択して継承をキャンセルします。継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
+1. 設定ダイアログにアクセスするには、`link` アイコンを選択して継承をキャンセルします。
+継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
 
 1. 設定が完了したら、`broken link` アイコンを選択して継承を復元する必要があります。
 
@@ -131,12 +139,13 @@ AEM Communitiesのメッセージング機能を使用すると、フォーラ�
 
 ### メッセージ作成の設定 {#configure-compose-message}
 
-メッセージ作成ページの設定を変更するには、[作成者編集モード &#x200B;](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
+メッセージ作成ページの設定を変更するには、[作成者編集モード ](/help/communities/sites-console.md#authoring-site-content)でサイトを開きます。
 
 * `Preview` モードで、**メッセージ** リンクを選択して、メイン メッセージ ページを開きます。 次に、「新規メッセージ」ボタンを選択して、`Compose Message` ページを開きます。
 
 * `Edit` モードで、メッセージ本文を含むページ上のメインコンポーネントを選択します。
-* 設定ダイアログにアクセスするには、`link` アイコンを選択して継承をキャンセルします。継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
+* 設定ダイアログにアクセスするには、`link` アイコンを選択して継承をキャンセルします。
+継承がキャンセルされると、設定アイコンを選択して設定ダイアログを開くことができます。
 
 * 設定が完了したら、`broken link` アイコンを選択して継承を復元する必要があります。
 

@@ -6,7 +6,17 @@ exl-id: 290b2af6-257f-42f2-b809-1248227a4795
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4567'
 ht-degree: 98%
@@ -536,7 +546,7 @@ AEM で以下を行います。
 
 プロモーションは、商品情報マネージャーではなくマーケティングマネージャーが保守します。
 
-* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。 &grave;&grave;
+* プロモーションは、Web サイトコンソールを使用して作成／編集されるページベースのコンポーネントです。 ``
 * プロモーションは、以下の項目を提供します。
 
   * 優先度

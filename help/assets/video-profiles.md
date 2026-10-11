@@ -15,25 +15,35 @@ autotag-review: '2026-05-18T18:37:44.170Z'
 TQID: 'https://experienceleague.adobe.com/ePAqMpipETShCgP-zIuOJjvkopRXp77eHxrGlgBC1SQ'
 product_v2:
   - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: d8ea7e82-d45e-442f-bb04-b3788a7abcb0
+    internal-label: Video profiles
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Artificial intelligence
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: 3779
+source-wordcount: '3782'
 ht-degree: 92%
-
 ---
-
 # ビデオプロファイル {#video-profiles}
 
 Dynamic Mediaには、事前定義されたアダプティブビデオエンコーディングプロファイルが既に付属しています。 この標準プロファイルの設定は、顧客に最適な視聴エクスペリエンスを提供するために最適化されています。 アダプティブビデオエンコーディングプロファイルを使用してプライマリソースビデオをエンコーディングすると、再生中、ビデオプレーヤーは顧客のインターネット接続速度に応じて、ビデオストリームの品質を自動的に調整します。 これがアダプティブビットレートストリーミングと呼ばれる機能です。
@@ -237,13 +247,13 @@ Dynamic Mediaには、事前に定義されたアダプティブビデオエン�
 1. 以下の操作を実行してください。
    * 「**[!UICONTROL 幅]**」フィールドに「**[!UICONTROL auto]**」と入力します。
    * 「**[!UICONTROL 高さ]**」フィールドに値をピクセル単位で入力します。
-ビデオのサイズを目で確認できるようにするには、「高さ」の情報アイコンを選択して、**[!UICONTROL サイズ計算ツール]**&#x200B;ページを開きます。 **[!UICONTROL サイズ計算ツール]**&#x200B;ページを使用して、必要なビデオのサイズ（青いボックス）を設定します。 完了したら、ダイアログボックスの右上隅にある「**[!UICONTROL X]**」を選択します。
+     ビデオのサイズを目で確認できるようにするには、「高さ」の情報アイコンを選択して、**[!UICONTROL サイズ計算ツール]**&#x200B;ページを開きます。 **[!UICONTROL サイズ計算ツール]**&#x200B;ページを使用して、必要なビデオのサイズ（青いボックス）を設定します。 完了したら、ダイアログボックスの右上隅にある「**[!UICONTROL X]**」を選択します。
 1. （オプション）次のいずれかの操作を行います。
 
    * 「**[!UICONTROL 詳細]**」タブを選択し、「**[!UICONTROL デフォルト値を使用]**」チェックボックスがオンになっている（推奨）ことを確認します。
 
    * 「**[!UICONTROL デフォルト値を使用]**」チェックボックスをオフにして、必要なビデオ設定とオーディオ設定を指定します。
-各オプションの横にある情報アイコンを選択すると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
+     各オプションの横にある情報アイコンを選択すると、追加の説明や、選択したビデオ形式のコーデックに応じた推奨設定が表示されます。
 
 1. ページの右上隅の「**[!UICONTROL 保存]**」を選択して、プリセットを保存します。
 1. 次のいずれかの操作を行います。
@@ -404,7 +414,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
 
 1. Experience Manager ロゴを選択し、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL ビデオプロファイル]**&#x200B;に移動します。
 1. 1 つまたは複数のフォルダーに適用するビデオプロファイルを選択します。
-1. 「**[!UICONTROL プロファイルをフォルダーに適用]**」を選択し、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用]**」を選択します。 **[!UICONTROL カード表示]**&#x200B;の場合、既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
+1. 「**[!UICONTROL プロファイルをフォルダーに適用]**」を選択し、新たにアップロードされたアセットを受け取る 1 つまたは複数のフォルダーを選択して、「**[!UICONTROL 適用]**」を選択します。 **[!UICONTROL カード表示]**の場合、既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 [ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
 
 #### 「プロパティ」を介したフォルダーへのビデオプロファイルの適用 {#applying-video-profiles-to-folders-from-properties}
@@ -414,7 +424,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
 1. 「**[!UICONTROL ビデオプロファイル]**」タブを選択し、ドロップダウンメニューからプロファイルを選択して、「**[!UICONTROL 保存して閉じる]**」を選択します。 既にプロファイルが割り当てられているフォルダーには、フォルダー名のすぐ下にプロファイルの名前が表示されます。
 
    ![chlimage_1-518](assets/chlimage_1-518.png)
-ビデオプロファイル処理ジョブの進行状況を[監視できます](#monitoring-the-progress-of-an-encoding-job)。
+   ビデオプロファイル処理ジョブの進行状況を[監視できます](#monitoring-the-progress-of-an-encoding-job)。
 
 ### ビデオプロファイルのグローバルな適用 {#applying-a-video-profile-globally}
 
@@ -429,7 +439,7 @@ Experience Manager でビデオプロファイルを作成または編集する�
   ![chlimage_1-519](assets/chlimage_1-519.png)
 * [ビデオプロファイル処理ジョブの進行状況を監視](#monitoring-the-progress-of-an-encoding-job)できます。
 
-## ビデオプロファイルを処理するジョブの進捗をモニタリング {#monitoring-the-progress-of-an-encoding-job}
+## ビデオプロファイルを処理するジョブの進捗をモニター {#monitoring-the-progress-of-an-encoding-job}
 
 ビデオプロファイル処理ジョブの進行状況を目視で監視できるように、処理インジケーター（進行状況バー）が表示されます。
 

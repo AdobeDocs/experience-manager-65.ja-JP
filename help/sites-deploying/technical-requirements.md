@@ -6,13 +6,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 06cdf1211a48838d1e578d1d804aad00cd01eb79
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3853'
 ht-degree: 91%
-
 ---
-
 # 技術要件{#technical-requirements}
 
 アドビは、このドキュメントの以下の情報に記載されているプラットフォームで、Adobe Experience Manager（AEM）をサポートしています。
@@ -101,7 +113,8 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` | |
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
-1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。 Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。 本番環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。 LTS リリースのすべてのメンテナンスアップデートを含むOracle Java™ SE JDKのサポートと配布は、Adobe Java™ SE テクノロジを使用するすべてのAEMのお客様に対して、Oracleで直接サポートされます。 詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。   **重要：Oracle Java™ 17および21は[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)でサポートされています。**
+1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。 Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。 本番環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。 LTS リリースのすべてのメンテナンスアップデートを含むOracle Java™ SE JDKのサポートと配布は、Adobe Java™ SE テクノロジを使用するすべてのAEMのお客様に対して、Oracleで直接サポートされます。 詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
+   **重要：Oracle Java™ 17および21は[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)でサポートされています。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
 
@@ -198,7 +211,7 @@ Adobe Experience Manager は、スタンドアロンサーバー（Quickstart JA
 2. アプリケーションサーバーで AEM 6.5 デプロイメントを開始すると、制限付きサポートに移行します。 既存のお客様は AEM 6.5 にアップグレードして、引き続きアプリケーションサーバーを使用することができます。 新規のお客様には、前述のレベル R の説明にあるサポート基準とサポートプログラムが適用されます。
 3. 適用可能 AEM Forms のみ：
    * JBoss® EAP 7.1.4 のサポートを削除し、JBoss® EAP 7.4.10 のサポートを追加しました。
-   * AEM Forms サービスパック 6.5.25.0以降では、JBoss® EAP 7.4.23のサポートが追加されています。 この[&#x200B; リンク &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
+   * AEM Forms サービスパック 6.5.25.0以降では、JBoss® EAP 7.4.23のサポートが追加されています。 この[ リンク ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/jboss-eap-7.4.23-1.0.16.zip)を使用すると、ソフトウェア配布ポータルからJBoss® EAP 7.4.23をダウンロードできます。
 
 ### サーバーオペレーティングシステム {#server-operating-systems}
 
@@ -253,7 +266,7 @@ Adobe Experience Manager は、クラウドコンピューティング環境上�
 
 クラウドネイティブな環境の場合は、AEM 製品ラインの最新オファー、Adobe Experience Manager as a Cloud Service をご確認ください。 詳しくは、[Adobe Experience Manager as a Cloud Service ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=ja)を参照してください。
 
-アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。 Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。 [Adobe Managed Services に関するドキュメント](https://business.adobe.com/jp/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
+アドビは、AEM を Azure または AWS にデプロイするための Adobe Managed Services も提供しています。 Adobe Managed Services を使用することで、これらのクラウドコンピューティング環境での AEM のデプロイと運用の経験とスキルを持つエキスパートのサポートを活用できます。 [Adobe Managed Services に関するドキュメント](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t)を参照してください。
 
 AEM を Azure や AWS にデプロイするその他のあらゆる場合、またはその他のクラウドコンピューティング環境にデプロイする場合、アドビによるサポートは、仮想コンピューティング環境に対して提供されます。 この仮想環境は、このページに記載されている技術仕様に従って動作する必要があります。 これらのクラウド環境のいずれかで動作している AEM に関して報告された問題は、クラウドコンピューティング環境に固有のクラウドサービスとは無関係に再現できる必要があります。 つまり、Azure Blob Storage や AWS S3 などのクラウドサービスが、このページに記載されている技術要件の一部としてサポートされている場合を除きます。
 
@@ -525,10 +538,10 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **オペレーティングシステム：**
 
-   * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
+  * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
 
-   * Windows Server
-   * macOS X（64 ビット）
+  * Windows Server
+  * macOS X（64 ビット）
 
 * **ファイル形式**：JPEG、PNG、TIFF、PDF、INDD、AI、EPS
 
@@ -536,4 +549,4 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 XMPFilesProcessor プロセスを実行するには、ライブラリ GLIBC_2.14 が必要です。 GLIBC_2.14を含むLinux® カーネル（Linux® カーネルバージョン 3.1.xなど）を使用します。 PSD ファイルなど、大量のメタデータを含むアセットを処理する際のパフォーマンスが向上します。 以前のバージョンの GLIBC を使用するとエラーが発生し、`com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP` で始まるメッセージがログに記録されます。
 
-サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート &#x200B;](https://business.adobe.com/in/support/main.html)にお問い合わせください
+サポートされている形式またはプラットフォームバージョンに関連する質問については、[AEM Forms サポート ](https://business.adobe.com/in/support/main.html)にお問い合わせください

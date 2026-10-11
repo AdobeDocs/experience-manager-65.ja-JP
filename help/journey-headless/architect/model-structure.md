@@ -5,13 +5,29 @@ exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '692'
 ht-degree: 100%
-
 ---
-
 # AEM でのコンテンツフラグメントモデルの作成について {#architect-headless-content-fragment-models}
 
 ## これまでの説明内容 {#story-so-far}
@@ -42,13 +58,13 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## コンテンツフラグメントモデルの作成 {#creating-content-fragment-models}
 
-コンテンツフラグメントモデルを作成し、構造を定義します。これは、ツール／アセット／コンテンツフラグメントモデルで実行できます。
+コンテンツフラグメントモデルを作成し、構造を定義します。 これは、ツール／アセット／コンテンツフラグメントモデルで実行できます。
 
 ![ツールのコンテンツフラグメントモデル](assets/cfm-tools.png)
 
-これを選択した後、モデルの場所に移動し、「**作成**」を選択します。ここでは、様々な主要情報を入力できます。
+これを選択した後、モデルの場所に移動し、「**作成**」を選択します。 ここでは、様々な主要情報を入力できます。
 
-「**モデルを有効化**」オプションはデフォルトで有効になっています。つまり、モデルは、保存するとすぐに（コンテンツフラグメントの作成で）使用できます。必要に応じて、この機能を無効にすることができます。後で既存のモデルを有効（または無効）にすることができます。
+「**モデルを有効化**」オプションはデフォルトで有効になっています。 つまり、モデルは、保存するとすぐに（コンテンツフラグメントの作成で）使用できます。 必要に応じて、この機能を無効にすることができます。後で既存のモデルを有効（または無効）にすることができます。
 
 ![コンテンツフラグメントモデルの作成](/help/assets/content-fragments/assets/cfm-models-02.png)
 
@@ -66,17 +82,17 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ![フィールドの定義](/help/assets/content-fragments/assets/cfm-models-04.png)
 
-データタイプを追加したら、そのフィールドの「**プロパティ**」を定義する必要があります。プロパティは、使用するタイプによって異なります。次に例を示します。
+データタイプを追加したら、そのフィールドの「**プロパティ**」を定義する必要があります。 プロパティは、使用するタイプによって異なります。 次に例を示します。
 
 ![データプロパティ](/help/assets/content-fragments/assets/cfm-models-05.png)
 
-フィールドは必要なだけ追加できます。次に例を示します。
+フィールドは必要なだけ追加できます。 次に例を示します。
 
 ![コンテンツフラグメントモデル](/help/assets/content-fragments/assets/cfm-models-07.png)
 
 ### コンテンツ作成者 {#your-content-authors}
 
-コンテンツ作成者には、モデルの作成に使用された実際のデータタイプとプロパティは表示されません。つまり、場合によっては、特定のフィールドへの入力方法に関するヘルプと情報をコンテンツ作成者に提供する必要があります。基本的な情報については「フィールドラベル」と「デフォルト値」を使用できますが、より複雑なケースでは、プロジェクト固有のドキュメントを準備する必要があるかもしれません。
+コンテンツ作成者には、モデルの作成に使用された実際のデータタイプとプロパティは表示されません。 つまり、場合によっては、特定のフィールドへの入力方法に関するヘルプと情報をコンテンツ作成者に提供する必要があります。 基本的な情報については「フィールドラベル」と「デフォルト値」を使用できますが、より複雑なケースでは、プロジェクト固有のドキュメントを準備する必要があるかもしれません。
 
 >[!NOTE]
 >
@@ -101,7 +117,7 @@ At the very start you need to enable Content Fragment Models for your site, this
 >
 >まだ公開されていないモデルに基づくコンテンツフラグメントを作成者が公開しようとすると、選択リストにそのことが示され、モデルがフラグメントと共に公開されます。
 
-モデルは、公開され次第、オーサー環境では読み取り専用モードに&#x200B;*ロック*&#x200B;されます。これは、変更によって、特にパブリッシュ環境で既存の GraphQL スキーマおよびクエリにエラーが発生するのを防ぐためです。コンソールには&#x200B;**ロック済み**&#x200B;と表示されます。
+モデルは、公開され次第、オーサー環境では読み取り専用モードに&#x200B;*ロック*&#x200B;されます。 これは、変更によって、特にパブリッシュ環境で既存の GraphQL スキーマおよびクエリにエラーが発生するのを防ぐためです。 コンソールには&#x200B;**ロック済み**&#x200B;と表示されます。
 
 モデルが&#x200B;**ロック済み**（読み取り専用モード）の場合、モデルの内容と構造は表示できますが、モデルを直接編集することはできません。ただし、コンソールまたはモデルエディターを使用すれば&#x200B;**ロック済み**&#x200B;モデルを管理できます。
 
@@ -117,22 +133,22 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 * [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
 
-   * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
+  * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [コンテンツフラグメントモデルの定義](/help/assets/content-fragments/content-fragments-models.md#defining-your-content-fragment-model)
+    * [コンテンツフラグメントモデルの定義](/help/assets/content-fragments/content-fragments-models.md#defining-your-content-fragment-model)
 
-      * [コンテンツフラグメントモデルの有効化または無効化](/help/assets/content-fragments/content-fragments-models.md#enabling-disabling-a-content-fragment-model)
+    * [コンテンツフラグメントモデルの有効化または無効化](/help/assets/content-fragments/content-fragments-models.md#enabling-disabling-a-content-fragment-model)
 
-      * [アセットフォルダーでのコンテンツフラグメントモデルの許可](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+    * [アセットフォルダーでのコンテンツフラグメントモデルの許可](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
 
-      * [コンテンツフラグメントモデルの削除](/help/assets/content-fragments/content-fragments-models.md#deleting-a-content-fragment-model)
+    * [コンテンツフラグメントモデルの削除](/help/assets/content-fragments/content-fragments-models.md#deleting-a-content-fragment-model)
 
-      * [コンテンツフラグメントモデルの公開](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)
+    * [コンテンツフラグメントモデルの公開](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)
 
-      * [コンテンツフラグメントモデルを非公開にする](/help/assets/content-fragments/content-fragments-models.md#unpublishing-a-content-fragment-model)
+    * [コンテンツフラグメントモデルを非公開にする](/help/assets/content-fragments/content-fragments-models.md#unpublishing-a-content-fragment-model)
 
-      * [ロック済み（公開済み）コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md#locked-published-content-fragment-models)
+    * [ロック済み（公開済み）コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md#locked-published-content-fragment-models)
 
 * はじめる前に
 
-   * [コンテンツフラグメントモデルのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-content-model.md)
+  * [コンテンツフラグメントモデルのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-content-model.md)

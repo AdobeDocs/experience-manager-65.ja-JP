@@ -8,13 +8,22 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3615'
+source-wordcount: '3617'
 ht-degree: 95%
-
 ---
-
 # AEM 6 でのノードストアとデータストアの設定{#configuring-node-stores-and-data-stores-in-aem}
 
 ## はじめに {#introduction}
@@ -398,7 +407,7 @@ S3 でバイナリレスレプリケーションを設定するには、次の�
    >
    >
 
-1. 最後に、設定を検証します。 検証するには、共有している各リポジトリによってデータストアに追加された一意のファイルを探します。 ファイルの形式は `repository-[UUID]` です。UUID は、個々のリポジトリーの一意の識別子です。
+1. 最後に、設定を検証します。 検証するには、共有している各リポジトリによってデータストアに追加された一意のファイルを探します。 ファイルの形式は `repository-[UUID]` です。UUID は、個々のリポジトリの一意の識別子です。
 
    したがって、適切な設定には、データストアを共有するリポジトリと同じ数の一意のファイルを含める必要があります。
 
@@ -442,7 +451,7 @@ java -jar <aem-jar-file>.jar -r crx3tar-nofds
 
 設定ファイルは、次のオプションと共に使用できます。
 
-* azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。 **設定ファイルにSASとストレージの両方の資格情報が存在する場合、SASには優先度があります。** SASについて詳しくは、[公式ドキュメント &#x200B;](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)を参照してください。 「=」文字は必ず、「\=」のようにエスケープしてください。
+* azureSas=&quot;&quot;：コネクタのバージョン 1.6.3 で、Azure Shared Access Signature（SAS）のサポートが追加されました。 **設定ファイルにSASとストレージの両方の資格情報が存在する場合、SASには優先度があります。** SASについて詳しくは、[公式ドキュメント ](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-sas-overview)を参照してください。 「=」文字は必ず、「\=」のようにエスケープしてください。
 
 * azureBlobEndpoint=&quot;&quot;：Azure Blob エンドポイントです。 例えば、https://&lt;storage-account>.blob.core.windows.net などです。
 * accessKey=&quot;&quot;：ストレージアカウント名です。 Microsoft® Azure の認証資格情報について詳しくは、[公式ドキュメント](https://learn.microsoft.com/ja-jp/azure/storage/common/storage-account-create?tabs=azure-portal)を参照してください。
@@ -508,7 +517,7 @@ secretKey="28932hfjlkwdo8fufsdfas\=\="
 新しいバージョンの AEM では、複数のリポジトリによって共有されるデータストアでもガベージコレクションを実行できます。 共有データストアでデータストアガベージコレクションを実行できるようにするには、次の手順に従います。
 
 1. データストアのガベージコレクション用に設定されたメンテナンスタスクが、データストアを共有するすべてのリポジトリインスタンスで無効になっていることを確認します。
-1. データストアを共有する&#x200B;**すべての**&#x200B;リポジトリーインスタンスについて、[バイナリガベージコレクション](/help/sites-deploying/data-store-config.md#data-store-garbage-collection)で指示されたステップを実行します。 ただし、呼び出しボタンをクリックする前に必ず `markOnly` パラメーターに対して `true` を入力してください。
+1. データストアを共有する&#x200B;**すべての**&#x200B;リポジトリインスタンスについて、[バイナリガベージコレクション](/help/sites-deploying/data-store-config.md#data-store-garbage-collection)で指示されたステップを個別に実行します。 ただし、呼び出しボタンをクリックする前に必ず `markOnly` パラメーターに対して `true` を入力してください。
 
    ![chlimage_1-10](assets/chlimage_1-10.png)
 

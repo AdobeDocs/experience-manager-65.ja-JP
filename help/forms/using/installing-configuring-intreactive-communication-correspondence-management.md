@@ -7,13 +7,31 @@ role: Admin, User, Developer
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Correspondence Management
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 97%
-
 ---
-
 # インタラクティブなコミュニケーションをインストールして設定する{#install-and-configure-interactive-communications}
 
 ## はじめに {#introduction}
@@ -43,17 +61,17 @@ AEM Forms のインタラクティブなコミュニケーションおよび通�
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
 * AEM インスタンスが稼働していること。 AEM の用語では、「インスタンス」とは、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。 AEM Forms のインタラクティブなコミュニケーションおよび通信管理機能を実行するには、少なくとも 1 つの AEM インスタンス（作成者または処理）を必要とします。
 
-   * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。 オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。
+  * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+  * **処理：**&#x200B;処理インスタンスは、[強化された AEM オーサー](/help/forms/using/hardening-securing-aem-forms-environment.md)インスタンスです。 オーサーインスタンスを設定し、インストールを実行した後でこれを強化することができます。
 
-   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
+  * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
 * メモリ要件が満たされていること。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft® Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
-   * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
+  * Microsoft® Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+  * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
-* Unix ベースのシステムの追加必要システム構成：Unix ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
+* UNIX ベースのシステムの追加要件：UNIX ベースのオペレーティングシステムを使用する場合は、それぞれのオペレーティングシステムのインストールメディアから、次のパッケージをインストールしてください。
 
 <table>
  <tbody>
@@ -99,7 +117,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
    [AEM Forms リリース](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
 
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動します。 **サーバーをすぐに再起動しないでください。** AEM Forms Serverを停止する前に、[AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルにServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが表示されなくなり、ログが安定するまで待ちます。
+1. パッケージのインストール後、AEM インスタンスを再起動するよう求められます。 **サーバーをすぐに再起動しないでください。** AEM Forms Serverを停止する前に、[AEM-Installation-Directory]/crx-quickstart/logs/error.log ファイルにServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが表示されなくなり、ログが安定するまで待ちます。
 
    >[!NOTE]
    >
@@ -159,7 +177,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 1. AEM Forms のアクセスの設定：
 
-   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、次のフィルターをフィルターセクションに追加します。
+   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、そこに次のフィルターを追加します。
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 

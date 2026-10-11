@@ -7,26 +7,42 @@ role: Admin,User
 exl-id: a0c6a02c-47a3-4e70-a14c-953ee016b8e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Form Data Model
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 100%
-
 ---
-
 # Correspondence Management | ユーザーデータの処理 {#correspondence-management-handling-user-data}
 
-AEM Forms Correspondence Management を使用すると、安全でパーソナライズされた顧客対応を作成、管理、合理化できます。ビジネスユーザー向けに直感的なユーザーインターフェイスを提供し、事前に承認されたコンテンツブロックとメディア要素を使用して通信を作成できるようにします。通信の作成について詳しくは、[通信の作成](/help/forms/using/create-correspondence.md)を参照してください。
+AEM Forms Correspondence Management を使用すると、安全でパーソナライズされた顧客対応を作成、管理、合理化できます。 ビジネスユーザー向けに直感的なユーザーインターフェイスを提供し、事前に承認されたコンテンツブロックとメディア要素を使用して通信を作成できるようにします。 通信の作成について詳しくは、[通信の作成](/help/forms/using/create-correspondence.md)を参照してください。
 
-ビジネスユーザーまたはエージェントが通信をドラフトとして格納したり送信したりする場合、レターインスタンスが AEM リポジトリに格納されます。レターインスタンスには、通信データとメタデータが含まれます。
+ビジネスユーザーまたはエージェントが通信をドラフトとして格納したり送信したりする場合、レターインスタンスが AEM リポジトリに格納されます。 レターインスタンスには、通信データとメタデータが含まれます。
 
 >[!NOTE]
 >
->AEM 6.5 Forms では、通信の管理は初期状態では使用できません。以前のバージョンの AEM Forms からアップグレードする場合は、互換性パッケージをインストールして Correspondence Management のアセットを移行し、AEM 6.5 Forms で引き続き使用できるようにします。詳しくは、[互換パッケージ](/help/forms/using/compatibility-package.md)を参照してください。
+>AEM 6.5 Forms では、通信の管理は初期状態では使用できません。 以前のバージョンの AEM Forms からアップグレードする場合は、互換性パッケージをインストールして Correspondence Management のアセットを移行し、AEM 6.5 Forms で引き続き使用できるようにします。 詳しくは、[互換パッケージ](/help/forms/using/compatibility-package.md)を参照してください。
 
 ## ユーザーデータとデータストア {#data}
 
-Correspondence Management では、パブリッシュインスタンスがレターインスタンスを管理するように設定されている場合にのみ、ドラフトおよび送信済みレターのデータが AEM リポジトリに格納されます。この設定について詳しくは、[Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md)を参照してください。
+Correspondence Management では、パブリッシュインスタンスがレターインスタンスを管理するように設定されている場合にのみ、ドラフトおよび送信済みレターのデータが AEM リポジトリに格納されます。 この設定について詳しくは、[Correspondence Management 設定プロパティ](/help/forms/using/cm-configuration-properties.md)を参照してください。
 
 AEM デプロイメント用に設定されたデータストアの永続性に応じて、ドラフトおよび送信済み通信データは次の場所に格納されます。
 
@@ -62,8 +78,8 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 |---|---|
 | `extendedProperties` | レターインスタンスのメタデータのプロパティを格納します。 |
 | `dataXML` | 通信データを含むダウンロード可能な dataXML ファイルをバイナリ形式で格納します。 |
-| `processedXDP` | 送信済みレターを作成するために使用される XDP テンプレートの詳細が含まれています。このノードは、送信された通信に対してのみ作成されます。 |
-| `submittedLetter` | 送信済みレターデータをダウンロード可能なバイナリ形式で格納します。このノードは、送信された通信に対してのみ作成されます。 |
+| `processedXDP` | 送信済みレターを作成するために使用される XDP テンプレートの詳細が含まれています。 このノードは、送信された通信に対してのみ作成されます。 |
+| `submittedLetter` | 送信済みレターデータをダウンロード可能なバイナリ形式で格納します。 このノードは、送信された通信に対してのみ作成されます。 |
 
 ## ユーザーデータへのアクセスと削除 {#access-and-delete-user-data}
 
@@ -71,9 +87,9 @@ AEM デプロイメント用に設定されたデータストアの永続性に�
 
 ### ユーザーデータにアクセス {#access-user-data}
 
-Correspondence Management には、ドラフトおよび送信済みレターインスタンスを検索してアクセスするために使用できる API が用意されています。API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索して開くことができます。詳しくは、[レターインスタンスにアクセスするための API](/help/forms/using/cm-apis-to-access-letter-instances.md) を参照してください。
+Correspondence Management には、ドラフトおよび送信済みレターインスタンスを検索してアクセスするために使用できる API が用意されています。 API を使用すると、レターインスタンス ID または通信を保存または送信したユーザーを使用して、レターインスタンスを検索して開くことができます。 詳しくは、[レターインスタンスにアクセスするための API](/help/forms/using/cm-apis-to-access-letter-instances.md) を参照してください。
 
-または、CRXDE Lite を使用して AEM リポジトリのレターインスタンスに移動することもできます。格納されたデータおよびリポジトリの場所について詳しくは、[ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data)を参照してください。
+または、CRXDE Lite を使用して AEM リポジトリのレターインスタンスに移動することもできます。 格納されたデータおよびリポジトリの場所について詳しくは、[ユーザーデータとデータストア](/help/forms/using/correspondence-management-handling-user-data.md#data)を参照してください。
 
 ### ユーザーデータの削除 {#delete-user-data}
 

@@ -10,13 +10,22 @@ exl-id: c4fb1b5e-e15e-450e-b882-fe27b165ff9f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1824'
 ht-degree: 99%
-
 ---
-
 # エクスペリエンスフラグメント {#experience-fragments}
 
 ## 基本知識 {#the-basics}
@@ -61,14 +70,14 @@ URL で `.plain.` セレクターを使用すると、プレーン HTML レン�
 
 ### HTML レンディション生成の設定 {#configuring-html-rendition-generation}
 
-HTML レンディションは、Sling Rewriter パイプラインを使用して生成されます。 パイプラインは、`/libs/experience-fragments/config/rewriter/experiencefragments` で定義されます。 HTML 変換サービスでは、次のオプションをサポートしています。
+HTML レンディションは、Sling Rewriter パイプラインを使用して生成されます。 パイプラインは、`/libs/experience-fragments/config/rewriter/experiencefragments` で定義されます。 HTML Transformer では、次のオプションをサポートしています。
 
 * `allowedCssClasses`
-   * 最終レンディションに残す CSS クラスに一致する正規表現。
-   * これは、顧客が特定の CSS クラスを取り除きたい場合に便利です。
+  * 最終レンディションに残す CSS クラスに一致する正規表現。
+  * これは、顧客が特定の CSS クラスを取り除きたい場合に便利です。
 * `allowedTags`
-   * 最終的なレンディションで許可される HTML タグのリスト。
-   * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
+  * 最終的なレンディションで許可される HTML タグのリスト。
+  * デフォルトでは、次のタグが許可されています（設定は不要）：html、head、title、body、img、p、span、ul、li、a、b、i、em、strong、h1、h2、h3、h4、h5、h6、br、noscript、div、link、script
 
 オーバーレイを使用してリライターを設定することをお勧めします。 [オーバーレイ](/help/sites-developing/overlays.md)を参照してください
 
@@ -80,18 +89,18 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 
 また、ソーシャルバリエーションを使用すると、（パブリッシュ環境で）ソーシャルアクションを行う際に構築ブロックを考慮に入れることもできます。
 
-的確なテキストと画像をソーシャルメディアネットワークに投稿するには、カスタマイズした独自のコンポーネントを開発する場合、いくつかの規則に従う必要があります。
+適切なテキストと画像をソーシャルメディアネットワークに投稿するには、カスタマイズした独自のコンポーネントを開発する場合、いくつかの規則に従う必要があります。
 
 それには、次のプロパティを使用する必要があります。
 
 * 画像を抽出する場合
 
-   * `fileReference`
-   * `fileName`
+  * `fileReference`
+  * `fileName`
 
 * テキストを抽出する場合
 
-   * `text`
+  * `text`
 
 この規則を使用しないコンポーネントは考慮されません。
 
@@ -114,7 +123,7 @@ HTML レンディションは、Sling Rewriter パイプラインを使用して
 
    1. テンプレートの名前は次の文字列で始まる必要があります。
       `experience-fragments`
-これにより、ユーザーは /content/experience-fragments にエクスペリエンスフラグメントを作成できます。このフォルダーの `cq:allowedTemplates` プロパティには、`experience-fragment` で始まる名前の付いたすべてのテンプレートが含まれています。 ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
+      これにより、ユーザーは /content/experience-fragments にエクスペリエンスフラグメントを作成できます。このフォルダーの `cq:allowedTemplates` プロパティには、`experience-fragment` で始まる名前の付いたすべてのテンプレートが含まれています。 ユーザーは、このプロパティを更新して、独自の命名方式やテンプレート場所を取り入れることができます。
 
 1. [使用可能なテンプレート](/help/sites-authoring/experience-fragments.md#configure-allowed-templates-folder)はエクスペリエンスフラグメントコンソールで設定できます。
 <!--
@@ -164,7 +173,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
 1. AEM では、HTML に存在するすべての内部リンクを変更して、公開されたリソースを指すようにします。
 
-   変更するリンクを決定するために、AEM では HTML 要素の次の属性パターンに従います。
+   変更するリンクを決定するために、AEM では HTML 要素の属性について次のパターンに従います。
 
    1. `src` 属性
    1. `href` 属性
@@ -173,7 +182,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
    >[!NOTE]
    >
-   >通常、HTML 内の内部リンクは相対リンクですが、カスタムコンポーネントの HTML で完全な URL が指定されている場合もあります。 デフォルトでは、AEM はこれらの完全な URL を無視し、変更しません。
+   >通常、HTML 内の内部リンクは相対リンクですが、カスタムコンポーネントの HTML で完全な URL が指定されている場合もあります。 デフォルトでは、AEM はこれらの絶対 URL を無視し、変更しません。
 
    これらの属性のリンクは AEM Link Externalizer `publishLink()` を通じて実行され、あたかもパブリッシュインスタンス上にあるかのように URL が再作成され、一般に公開されます。
 
@@ -188,7 +197,7 @@ HTML ページを生成すると、Sling Rewriter パイプラインは出力に
 
 >[!NOTE]
 >
->このインターフェイスは、[AEM 6.5 SP1 （6.5.1.0） &#x200B;](/help/release-notes/previous/6-5-1.md)で導入されました。
+>このインターフェイスは、[AEM 6.5 SP1 （6.5.1.0） ](/help/release-notes/previous/6-5-1.md)で導入されました。
 
 （[デフォルトのリンク書き換え](#default-link-rewriting)では対応していない）より複雑な場合のために、AEM では Link Rewriter Provider インターフェイスを提供しています。 これは、バンドルにサービスとして実装できる `ConsumerType` インターフェイスです。 このインターフェイスは、エクスペリエンスフラグメントからレンダリングされる HTML オファーの内部リンクに対して AEM で実行される変更をバイパスします。 このインターフェイスを使用すると、内部 HTML リンクの書き換えプロセスをビジネスニーズに合わせてカスタマイズできます。
 
@@ -220,7 +229,7 @@ public interface ExperienceFragmentLinkRewriterProvider {
 
 このインターフェイスを使用するには、まず、Link Rewriter Provider インターフェイスを実装する新しいサービスコンポーネントを含んだバンドルを作成する必要があります。
 
-このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Target に書き出し」機能でのリンク書き換えにプラグインするために使用します。
+このサービスは、様々なリンクにアクセスできるように、エクスペリエンスフラグメントの「Target に書き出し」機能でのリンク書き換えに組み込むために使用します。
 
 例えば、`ComponentService` の場合は次のようになります。
 
@@ -257,7 +266,7 @@ public class GeneralLinkRewriter implements ExperienceFragmentLinkRewriterProvid
 * ` [shouldRewrite](#shouldrewrite)`
 * ` [rewriteLink](#rewritelink)`
 
-   * `rewriteLinkExample2`
+  * `rewriteLinkExample2`
 
 * ` [getPriority](#priorities-getpriority)`
 
@@ -353,7 +362,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->上記のメソッドが `null` を返した場合、Target システムに書き出しは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
+>上記のメソッドが `null` を返した場合、「Target に書き出し」システムは、リンクをそのままの状態（リソースへの相対リンク）にしておきます。
 
 #### 優先度 - getPriority {#priorities-getpriority}
 

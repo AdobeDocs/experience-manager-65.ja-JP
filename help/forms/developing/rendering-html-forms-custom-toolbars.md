@@ -10,13 +10,29 @@ role: Developer
 exl-id: 0b992b1c-3878-447a-bccc-7034aa3e98bc
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 98%
-
 ---
-
 # CustomToolbars を使用した HTML フォームのレンダリング {#rendering-html-forms-with-customtoolbars}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -40,15 +56,15 @@ fscmenu.xml ファイルに加えて、次のファイルも取得する必要�
 * fscmenu-ie.css
 * fscdialog.css
 
-fscJS は、各ノードに関連付けられる Java スクリプトです。 `div#fscmenu` ノード用とオプションで `ul#fscmenuItem` ノード用を提供する必要があります。 JS ファイルはツールバーのコア機能を実装し、デフォルトファイルが機能します。
+fscJS は、各ノードに関連付けられる JavaScript です。 `div#fscmenu` ノード用とオプションで `ul#fscmenuItem` ノード用を提供する必要があります。 JS ファイルはツールバーのコア機能を実装し、デフォルトファイルが機能します。
 
 fscCSS は、特定のノードに関連付けられているスタイルシートです。 CSS ファイルのスタイルによって、ツールバーの外観が指定されます。 *fscVCSS* は、レンダリングされた HTML フォームの左側に表示される、縦向きのツールバーのスタイルシートです。 *fscIECSS* は、Internet Explorer でレンダリングされる HTML フォームに使用されるスタイルシートです。
 
-上記のすべてのファイルが fscmenu.xml ファイルで参照されていることを確認します。 つまり、fscmenu.xml ファイルで、これらのファイルを指す URI の場所を指定し、Forms サービスでそれらのファイルを検索できるようにします。 デフォルトでは、これらのファイルは、内部キーワード `FSWebRoot` または `ApplicationWebRoot` で始まる URI の場所で利用できます。
+上記のすべてのファイルが fscmenu.xml ファイルで参照されていることを確認します。 つまり、fscmenu.xml ファイルで、これらのファイルを指す URI の場所を指定し、Forms サービスがそれらのファイルを見つけられるようにします。 デフォルトでは、これらのファイルは、内部キーワード `FSWebRoot` または `ApplicationWebRoot` で始まる URI の場所で利用できます。
 
 ツールバーをカスタマイズするには、これらのキーワードを外部キーワード `FSToolBarURI` で置き換えます。 このキーワードは、実行時に Forms サービスに渡される URI を表します（この方法については、この節で後述します）。
 
-また、これらの JS ファイルと CSS ファイルの絶対的な場所（例：https://www.mycompany.com/scripts/misc/fscmenu.js）を指定することもできます。 その場合、`FSToolBarURI` キーワードを使用する必要はありません。
+また、これらの JS ファイルと CSS ファイルの絶対位置（例：https://www.mycompany.com/scripts/misc/fscmenu.js）を指定することもできます。 その場合、`FSToolBarURI` キーワードを使用する必要はありません。
 
 >[!NOTE]
 >
@@ -193,7 +209,7 @@ Forms サービスが HTML フォームをレンダリングすると、フォ�
 
 [Java API を使用してカスタムツールバーを含む HTML フォームをレンダリングする](#render-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[Web サービス API を使用してカスタムツールバーを含む HTML フォームをレンダリングする](#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api)
+[Web サービス API を使用したカスタムツールバーを含む HTML フォームのレンダリング](#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -207,7 +223,7 @@ Forms サービスが HTML フォームをレンダリングすると、フォ�
 
 [Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-### Java API を使用してカスタムツールバーを含む HTML フォームをレンダリングする {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
+### Java API を使用したカスタムツールバーを含む HTML フォームのレンダリング {#render-an-html-form-with-a-custom-toolbar-using-the-java-api}
 
 Forms Service API（Java）を使用して、カスタムツールバーを含む HTML フォームをレンダリングします。
 
@@ -263,7 +279,7 @@ Forms Service API（Java）を使用して、カスタムツールバーを含�
 
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-### Web サービス API を使用してカスタムツールバーを含む HTML フォームをレンダリングする {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
+### Web サービス API を使用したカスタムツールバーを含む HTML フォームのレンダリング {#rendering-an-html-form-with-a-custom-toolbar-using-the-web-service-api}
 
 Forms サービス API（web サービス）を使用して、カスタムツールバーを含んだ HTML フォームをレンダリングします。
 

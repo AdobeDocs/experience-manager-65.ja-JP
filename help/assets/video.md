@@ -11,13 +11,24 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0c3d9e95f2b1942392cd269891360dd8552e2715
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '10724'
+source-wordcount: '10732'
 ht-degree: 97%
-
 ---
-
 # Dynamic Media のビデオ {#video}
 
 この節では、Dynamic Media でのビデオの操作について説明します。
@@ -43,23 +54,23 @@ ht-degree: 97%
 
    * 独自のビデオエンコーディングプロファイルを作成します。 または、ダイナミックメディアに付属する、事前定義済みの「_アダプティブビデオエンコーディング_」プロファイルを使用します。
 
-      * [ビデオエンコーディングプロファイルを作成します](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
-      * 出力ビデオエンコーディングの最大解像度は、8,192 × 4,320 または 4,320 × 8,192.md です。
-      * 詳しくは、[ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)を参照してください。
+     * [ビデオエンコーディングプロファイルを作成します](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)。
+     * 出力ビデオエンコーディングの最大解像度は、8,192 × 4,320 または 4,320 × 8,192.md です。
+     * 詳しくは、[ビデオエンコーディングのベストプラクティス](#best-practices-for-encoding-videos)を参照してください。
 
    * ビデオ処理プロファイルを、プライマリソースビデオのアップロード先となる 1 つ以上のフォルダーに関連付けます。
 
-      * [ビデオプロファイルをフォルダーに適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
-      * 詳しくは、[処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](/help/assets/organize-assets.md)を参照してください。
-      * 詳しくは、[デジタルアセットの整理](/help/assets/organize-assets.md)を参照してください。
+     * [ビデオプロファイルをフォルダーに適用します](/help/assets/video-profiles.md#applying-a-video-profile-to-folders)。
+     * 詳しくは、[処理プロファイルを使用するためのデジタルアセットの整理におけるベストプラクティス](/help/assets/organize-assets.md)を参照してください。
+     * 詳しくは、[デジタルアセットの整理](/help/assets/organize-assets.md)を参照してください。
 
    * フォルダーにプライマリソースビデオをアップロードします。 フォルダーにビデオを追加すると、そのフォルダーに割り当てたビデオ処理プロファイルに従ってビデオがエンコードされます。
 
-      * Dynamic Media は主に、最大 30 分、最小解像度が 25 x 25 を超える短時間のビデオをサポートします。
-      * サポートされる入力ビデオの最大解像度は 16,384 × 16,384 です。
-      * 15 GB までのビデオファイルをアップロードできます。
-      * [ビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
-      * 詳しくは、[サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)を参照してください。
+     * Dynamic Media は主に、最大 30 分、最小解像度が 25 x 25 を超える短時間のビデオをサポートします。
+     * サポートされる入力ビデオの最大解像度は 16,384 × 16,384 です。
+     * 15 GB までのビデオファイルをアップロードできます。
+     * [ビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
+     * 詳しくは、[サポートされる入力ファイル形式](/help/assets/assets-formats.md#supported-multimedia-formats)を参照してください。
 
    * アセットまたはワークフロー表示から、[ビデオエンコードの進行状況](#monitoring-video-encoding-and-youtube-publishing-progress)を監視します。
 
@@ -67,55 +78,55 @@ ht-degree: 97%
 
    * ビデオアセットの整理、参照、検索
 
-      * [&#x200B; デジタルアセットの整理](/help/assets/organize-assets.md)
-[処理プロファイルを使用するためのデジタルアセットの整理に関するベストプラクティス &#x200B;](organize-assets.md)について詳しく見る
+     * [ デジタルアセットの整理](/help/assets/organize-assets.md)
+       [処理プロファイルを使用するためのデジタルアセットの整理に関するベストプラクティス ](organize-assets.md)について詳しく見る
 
-      * [ビデオアセットを検索](search-assets.md#custompredicates)するか[アセットを検索](/help/assets/search-assets.md)します。
+     * [ビデオアセットを検索](search-assets.md#custompredicates)するか[アセットを検索](/help/assets/search-assets.md)します。
 
    * ビデオアセットをプレビューして公開します。
 
-      * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
-        [&#x200B; ビデオのプレビュー](managing-video-assets.md#upload-and-preview-video-assets)または[&#x200B; アセットのプレビュー](previewing-assets.md)
-        [&#x200B; ビデオのレンディションを表示](video-renditions.md)
-        [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
+     * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
+       [ ビデオのプレビュー](managing-video-assets.md#upload-and-preview-video-assets)または[ アセットのプレビュー](previewing-assets.md)
+       [ ビデオのレンディションを表示](video-renditions.md)
+       [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
 
-      * [ビューアプリセットの管理](managing-viewer-presets.md)
-      * [アセットを公開します。](publishing-dynamicmedia-assets.md)
+     * [ビューアプリセットの管理](managing-viewer-presets.md)
+     * [アセットを公開します。](publishing-dynamicmedia-assets.md)
 
    * ビデオのメタデータを操作します。
 
-      * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
-        [ビデオレンディションのプロパティを表示](video-renditions.md)
+     * フレームレート、オーディオおよびビデオのビットレート、コーデックなど、エンコードされたビデオレンディションのプロパティを表示します。
+       [ビデオレンディションのプロパティを表示](video-renditions.md)
 
-      * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
-        [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
+     * タイトル、説明、タグ、カスタムメタデータフィールドなど、ビデオのプロパティを編集します。
+       [ビデオのプロパティを編集します](manage-assets.md#editing-properties)。
 
-      * [デジタルアセットのメタデータの管理](metadata.md)
-      * [メタデータスキーマ](metadata-schemas.md)
+     * [デジタルアセットのメタデータの管理](metadata.md)
+     * [メタデータスキーマ](metadata-schemas.md)
 
    * ビデオをレビューおよび承認し、注釈を付け、完全なバージョン管理を維持します。
 
-      * [ビデオの注釈](managing-video-assets.md#annotate-video-assets)または[アセットの注釈](manage-assets.md#annotating)
+     * [ビデオの注釈](managing-video-assets.md#annotate-video-assets)または[アセットの注釈](manage-assets.md#annotating)
 
-      * [バージョンを作成します。](manage-assets.md#asset-versioning)
-      * [アセットにワークフローを適用](assets-workflow.md)または[アセットでワークフローを開始](manage-assets.md#starting-a-workflow-on-an-asset)を参照
+     * [バージョンを作成します。](manage-assets.md#asset-versioning)
+     * [アセットにワークフローを適用](assets-workflow.md)または[アセットでワークフローを開始](manage-assets.md#starting-a-workflow-on-an-asset)を参照
 
-      * [フォルダーのアセットのレビュー](bulk-approval.md)
-      * [プロジェクト](../sites-authoring/projects.md)
+     * [フォルダーのアセットのレビュー](bulk-approval.md)
+     * [プロジェクト](../sites-authoring/projects.md)
 
 1. 次のいずれかの操作を行って、**Dynamic Media ビデオを公開します**。
 
    * Adobe Experience Manager を web コンテンツ管理システムとして使用する場合、web ページにビデオを直接追加できます。
 
-      * [Web ページにビデオを追加します](adding-dynamic-media-assets-to-pages.md)。
+     * [Web ページにビデオを追加します](adding-dynamic-media-assets-to-pages.md)。
 
    * サードパーティの web コンテンツ管理システムを使用している場合、web ページにビデオをリンクするか、ビデオを埋め込むことができます。
 
-      * URL を使用したビデオの統合：
-        [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
+     * URL を使用したビデオの統合：
+       [Web アプリケーションに URL をリンクします](linking-urls-to-yourwebapplication.md)。
 
-      * Web ページの埋め込みコードを使用したビデオの統合：
-        [Web ページにビデオビューアを埋め込みます](embed-code.md)。
+     * Web ページの埋め込みコードを使用したビデオの統合：
+       [Web ページにビデオビューアを埋め込みます](embed-code.md)。
 
    * [ビデオレポートを生成します](#viewing-video-reports)。
 
@@ -143,8 +154,8 @@ Dynamic Media のビデオは、高品質のアダプティブビデオを簡単
 
 * サポートされている様々な形式でビデオをアップロードし、複数の画面で再生できるように MP4 H.264 にエンコードします。 事前定義済みのアダプティブビデオセット、1 つのビデオのエンコーディングプリセットを使用するか、独自のエンコーディングをカスタマイズしてビデオの品質とサイズを制御できます。
 
-   * 生成されるアダプティブビデオセットには、MP4 ビデオが含まれます。
-   * **注意**：プライマリ／ソースビデオはアダプティブビデオセットには追加されません。
+  * 生成されるアダプティブビデオセットには、MP4 ビデオが含まれます。
+  * **注意**：プライマリ／ソースビデオはアダプティブビデオセットには追加されません。
 
 * すべての HTML5 ビデオビューアでのビデオキャプション。
 * ビデオアセットを効率的に管理するための完全なメタデータサポートを使用して、ビデオを整理、参照および検索します。
@@ -158,8 +169,8 @@ Dynamic Media では、MP4 H.264 ビデオのモバイルビデオ再生がサ�
 
 * Dynamic Media ビデオビューアプリセットを使用してビデオを再生します。このビューアプリセットには、次のビューアが含まれます。
 
-   * 単一のビデオビューア。
-   * ビデオコンテンツと画像コンテンツの両方を組み合わせた混在メディアビューア。
+  * 単一のビデオビューア。
+  * ビデオコンテンツと画像コンテンツの両方を組み合わせた混在メディアビューア。
 
 * 自社ブランドのニーズに合わせてビデオプレーヤーを設定します。
 * 単純な URL か埋め込みコードを使用して、ビデオを web サイト、モバイルサイトまたはモバイルアプリケーションに統合します。
@@ -290,9 +301,9 @@ Dynamic Media を有効にし、ビデオクラウドサービスを設定済み
 <!--
 DEAD The following are best-practice tips for encoding source video files.
 
-For advice about video encoding, see [Video Encoding Basics](https://www.adobe.com/go/learn_s7_encoding_jp).
+For advice about video encoding, see [Video Encoding Basics](https://www.adobe.com/go/learn_s7_encoding_en).
 
-* [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_jp).
+* [Streaming 101: The Basics — Codecs, Bandwidth, Data Rate, and Resolution](https://www.adobe.com/go/learn_s7_streaming101_en).
 -->
 
 ### ソースビデオファイル {#source-video-files}
@@ -462,11 +473,11 @@ Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセッ�
 1. Experience Manager の左上隅にある Experience Manager ロゴを選択し、左側のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビデオレポート]**&#x200B;をクリックします。
 1. ビデオレポートページで、次のいずれかの操作を行います。
 
-   * 右上隅付近にある&#x200B;**ビデオレポートを更新**&#x200B;アイコンを選択します。
-「更新」を使用するのは、レポートの終了日が今日の日付である場合のみです。 これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
+   * 右上隅付近にある&#x200B;**ビデオレポートを更新**アイコンを選択します。
+     「更新」を使用するのは、レポートの終了日が今日の日付である場合のみです。 これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
 
-   * 右上隅付近にある&#x200B;**日付選択**&#x200B;アイコンを選択します。
-ビデオデータを表示する開始日と終了日の範囲を指定し、「**[!UICONTROL レポートを実行]**」を選択します。
+   * 右上隅付近にある&#x200B;**日付選択**アイコンを選択します。
+     ビデオデータを表示する開始日と終了日の範囲を指定し、「**[!UICONTROL レポートを実行]**」を選択します。
 
    「トップの指標」グループボックスに、サイト全体にわたるすべての公開済みビデオに関する様々な集計値が表示されます&#x200B;*。*
 
@@ -534,7 +545,7 @@ Dynamic Media で標準提供されているビデオビューアを使用して
 
    appMeasurementBridge オブジェクトにはビルトインのトラッキング関数があります。 ただし、複数のトラッキングシステムやその他の機能をサポートするために、独自のトラッキング関数を作成することもできます。
 
-<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!--    For more information, see *Using the TrackingManager Component* in the *Scene7 HTML5 Viewer SDK User Guide* available for download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 
 
@@ -597,7 +608,7 @@ Dynamic Media で複数のキャプションおよびオーディオトラック
      |--- |--- |
      | ファイル名 | デフォルトのファイル名は、元のファイル名から派生します。 ファイル名はアップロード時にのみ変更でき、後で変更することはできません。 ファイル名の要件は、AEM Assetsと同じです。<br>同じファイル名を他のキャプションファイルやオーディオトラックファイルに使用することはできません。 |
      | 言語 | キャプションの言語を選択します。 |
-     | タイプ | 使用するキャプションのタイプを選択します。<br>**サブタイトル** - ダイアログを翻訳または文字起こししたビデオと共に表示されるキャプションテキスト。<br>**キャプション** - キャプションテキストには、背景雑音、話者の識別、その他の関連情報が含まれます。 また、会話の翻訳または文字起こしも含まれます。 これらすべての側面により、聴覚障害のある人にとってコンテンツのアクセシビリティが向上します。 |
+     | タイプ | 使用するキャプションのタイプを選択します。<br>**サブタイトル** - ダイアログを翻訳または文字起こししたビデオと共に表示されるキャプションテキスト。<br>**キャプション** - キャプションテキストには、背景雑音、話者の識別、その他の関連情報が含まれます。 また、会話の翻訳または文字起こしも含まれます。 これらすべての側面により、聴覚障害のある個人にとってコンテンツのアクセシビリティが向上します。 |
      | ラベル | メディアプレーヤーの&#x200B;**[!UICONTROL オーディオまたはサブタイトルを選択]**&#x200B;ポップアップリストのキャプションの名前に表示されるテキスト。 ラベルは、サブタイトルまたはキャプショントラックに対応するユーザーに表示される内容です。 例えば、`English (CC)` のように指定します。 |
 
      必要に応じて、後でキャプションメタデータを変更または編集できます。 ビデオが公開されると、これらの詳細は、公開中のビデオの公開 URL に反映されます。
@@ -611,7 +622,7 @@ Dynamic Media で複数のキャプションおよびオーディオトラック
      |--- |--- |
      | ファイル名 | デフォルトのファイル名は、元のファイル名から派生します。 ファイル名はアップロード時にのみ変更でき、後で変更することはできません。 ファイル名の要件は、AEM Assetsと同じです。<br>同じファイル名を他のオーディオトラックファイルやキャプションファイルに使用することはできません。 |
      | 言語 | オーディオトラックの言語を選択します。 |
-     | タイプ | 使用するオーディオトラックのタイプを選択します。<br>**オリジナル** – 元々ビデオに添付されていたオーディオトラックで、ラベルには `[Original]` と表され、デフォルトで `English` 言語が選択されています。 **[!UICONTROL オーディオトラックを編集]**&#x200B;ダイアログボックスで&#x200B;**[!UICONTROL ラベル]**&#x200B;と&#x200B;**[!UICONTROL 言語]**&#x200B;は変更できますが、プライマリビデオが再処理されていると、デフォルトは元の値になります。<br>**標準** – 元の言語以外の言語のアドオンオーディオトラック。<br>**オーディオの説明** – ビデオ内の非言語的な動作やジェスチャーの記述的ナレーションも含めたオーディオトラックで、視覚障害のあるユーザー向けのコンテンツアクセシビリティを高めます。 |
+     | タイプ | 使用するオーディオトラックのタイプを選択します。<br>**オリジナル** – 元々ビデオに添付されていたオーディオトラックで、ラベルには `[Original]` と表され、デフォルトで `English` 言語が選択されています。 **[!UICONTROL オーディオトラックを編集]**&#x200B;ダイアログボックスで&#x200B;**[!UICONTROL ラベル]**&#x200B;と&#x200B;**[!UICONTROL 言語]**&#x200B;は変更できますが、プライマリビデオが再処理されていると、デフォルトは元の値になります。<br>**標準** – 元の言語以外の言語のアドオンオーディオトラック。<br>**オーディオの説明** – ビデオ内の非言語的な動作やジェスチャーの記述的ナレーションも含めたオーディオトラックで、視覚障害のある個人向けのコンテンツアクセシビリティを高めます。 |
      | ラベル | オーディオトラックの名前として、メディアプレーヤーの&#x200B;**[!UICONTROL オーディオまたはサブタイトルを選択]**&#x200B;ポップアップリストに表示されるテキスト。 ラベルは、オーディオトラックに対応する顧客に表示される内容です。 例えば、`English [Original]` などです。 ビデオに添付されるオーディオのラベルは、デフォルトでは `[Original]` に設定されます。 |
 
      必要に応じて、後でこのオーディオトラックメタデータを変更または編集できます。 ビデオが公開されると、これらの詳細は、公開中のビデオの公開 URL に反映されます。
@@ -680,7 +691,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
 デフォルトでは、ビデオの元々のオーディオが、再生されるオーディオとしてデフォルトで設定されます。
 
-ただし、アップロードしたオーディオトラックファイルは、ビデオをビューアーに読み込んだ後に再生されるデフォルトのオーディオとして設定できます。 プロパティのユーザインターフェイスの「**キャプションとオーディオトラック**」タブでは、`Default` ラベルは、ビデオ再生用のオーディオトラックファイルの右側に適用されます。
+ただし、アップロードしたオーディオトラックファイルは、ビデオをビューアーに読み込んだ後に再生されるデフォルトのオーディオとして設定できます。 プロパティのユーザーインターフェイスの「**キャプションとオーディオトラック**」タブでは、`Default` ラベルは、ビデオ再生用のオーディオトラックファイルの右側に適用されます。
 
 >[!NOTE]
 >
@@ -734,7 +745,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
    ![ビデオビューアーのオーディオとキャプションのポップアップリスト。](assets-dm/msma-selectaudiosubtitle.png)*ビデオ再生用のオーディオとキャプションを選択するユーザーのシミュレーション。*
 
-1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンを選択します。
+1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**ボタンを選択します。
 左下隅には「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL 埋め込み]**」ボタンがあります。 これらのボタンはそれぞれ、[web アプリケーションにビデオの URL をリンクする](/help/assets/linking-urls-to-yourwebapplication.md)ため、[web ページにビデオを埋め込む](/help/assets/embed-code.md)ために使用します。
 1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
 
@@ -865,7 +876,7 @@ URL での JSON 機能の使用について詳しくは、[静的コンテンツ
 
 必要であれば、ビデオビューアプリセットを使用するのではなく、チャプター機能を備えた独自のカスタムビデオビューアを作成して、ブランディングできます。 チャプターナビゲーション機能を備えた独自の HTML5 ビューアを作成する方法については、Adobe HTML5 Viewer SDK API ドキュメントで `s7sdk.video.VideoPlayer` クラスと `s7sdk.video.VideoScrubber` クラスの説明の「Customizing Behavior Using Modifiers」節を参照してください。 [HTML5 Viewer SDK API](https://s7d1.scene7.com/s7sdk/3.10/docs/jsdoc/index.html) ドキュメントを参照してください。
 
-<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/ja_JP/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
+<!-- If desired, you can create and brand your own custom video viewer with chapters instead of using a video viewer preset. For instructions on creating your own HTML5 viewer with chapter navigation, in the Adobe Scene7 Viewer SDK for HTML5 guide, reference the heading "Customizing Behavior Using Modifiers" under the classes `s7sdk.video.VideoPlayer` and `s7sdk.video.VideoScrubber`. The Adobe Scene7 Viewer SDK is available as a download from [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8d5860223939e2-43dedf7012b792fc1d5-8000.html). -->
 
 ビデオのチャプターリストを作成する方法は、キャプションを作成する方法とほとんど同じです。 つまり、WebVTT ファイルを作成します。 ただし、WebVTT キャプションファイルも使用する場合は、このファイルを WebVTT ファイルと分けておく必要があります。キャプションとチャプターを 1 つの WebVTT ファイルにまとめることはできません。
 
@@ -970,15 +981,15 @@ Experience Manager 内のすべてのビデオには、サムネールを関連�
 
    * ビデオのフレームを新しいサムネイルとして使用するには：
 
-      * ツールバーで [**[!UICONTROL ビデオからフレームを選択]**] をタップします。
-      * [再生] ボタンを選択し、ビデオの新しいサムネールとしてキャプチャするフレームの [一時停止] ボタンを選択します。
+     * ツールバーで [**[!UICONTROL ビデオからフレームを選択]**] をタップします。
+     * [再生] ボタンを選択し、ビデオの新しいサムネールとしてキャプチャするフレームの [一時停止] ボタンを選択します。
 
    * 画像アセットを新しいサムネールとして使用するには、次の手順を行います。
 
-      * ツールバーで [**[!UICONTROL アセットからサムネイルを選択]**] を選択します。
-      * [**[!UICONTROL サムネールを選択]**] を選択します。
-      * 使用を希望する、以前にアップロードおよび公開された画像アセットに移動します。 アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
-      * 画像アセットを選択し、[**[!UICONTROL 選択]**] を選択します。
+     * ツールバーで [**[!UICONTROL アセットからサムネイルを選択]**] を選択します。
+     * [**[!UICONTROL サムネールを選択]**] を選択します。
+     * 使用を希望する、以前にアップロードおよび公開された画像アセットに移動します。 アセットは、ビデオのサムネール画像として機能するように自動的にサイズ変更されます。
+     * 画像アセットを選択し、[**[!UICONTROL 選択]**] を選択します。
 
 1. [サムネイルを変更]ページで [**[!UICONTROL 変更を保存]**] を選択します。
 1. ビデオの [プロパティ] ページで、右上にある [**[!UICONTROL 保存して閉じる]**] を選択します。
@@ -1113,11 +1124,11 @@ String getVideoManifestURI(Resource resource, ManifestType manifestType, boolean
 
 * `IllegalArgumentException` は、次のいずれかに関してログに記録されます。
 
-   * 渡された `resource` パラメーターが null である。
-   * 渡された `resource` パラメーターがビデオではない。
-   * 渡された `manifestType` パラメーターが null である。
-   * `onlyIfPublished` パラメーターは true として渡されたものの、ビデオが公開されていない。
-   * Dynamic Media のアダプティブビデオセットを使用してビデオが取り込まれていない。
+  * 渡された `resource` パラメーターが null である。
+  * 渡された `resource` パラメーターがビデオではない。
+  * 渡された `manifestType` パラメーターが null である。
+  * `onlyIfPublished` パラメーターは true として渡されたものの、ビデオが公開されていない。
+  * Dynamic Media のアダプティブビデオセットを使用してビデオが取り込まれていない。
 
 * `IOException` は、Dynamic Media への接続で問題が発生した場合にログに記録されます。
 * 渡された `manifestType` パラメーターが `ManifestType.DASH` であるにもかかわらず、ビデオが DASH 形式で処理されていない場合、`UnsupportedOperationException` はログに記録されます。
@@ -1451,7 +1462,7 @@ When you create an Adobe Support case to enable DASH on your account, multiple c
 
 1. Select **[!UICONTROL Save]**.
 
-1. Now, use the Admin Console to start the [creation of a new support case](https://helpx.adobe.com/jp/enterprise/using/support-for-experience-cloud.html).
+1. Now, use the Admin Console to start the [creation of a new support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. To create a support case, follow the instructions while ensuring you provide the following information:
 
     * Primary contact name, email, phone.

@@ -9,18 +9,34 @@ exl-id: 544b06f9-2456-4c05-88c2-b5349947742d
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components
-source-git-commit: 8a77756e8ba771c8de9950c2323bef8f23cc59b4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '276'
 ht-degree: 100%
-
 ---
-
 # アダプティブフォームのカスタムレイアウトコンポーネントの作成{#creating-custom-layout-components-for-adaptive-forms}
 
 ## 前提条件 {#prerequisite}
 
-カスタムレイアウトの作成および使用を可能にするレイアウトについての知識が必要です。[パネルレイアウトの変更](../../forms/using/layout-capabilities-adaptive-forms.md)を参照してください。
+カスタムレイアウトの作成および使用を可能にするレイアウトについての知識が必要です。 [パネルレイアウトの変更](../../forms/using/layout-capabilities-adaptive-forms.md)を参照してください。
 
 ## アダプティブフォームのパネルレイアウトのコンポーネント {#adaptive-form-panel-layout-component}
 
@@ -30,7 +46,7 @@ ht-degree: 100%
 
 1. 場所 `/crx/de` に移動します。
 1. パネルレイアウトを場所 `/libs/fd/af/layouts/panel` （例えば、`tabbedPanelLayout` ）から `/apps` （例えば、`/apps/af-custom-layout`）にコピーします。
-1. コピーしたレイアウトの名前を `customPanelLayout` に変更します。ノード `qtip` および `jcr:description` のプロパティを変更します。例えば、それらを `Custom layout - Toggle tabs` に変更します。
+1. コピーしたレイアウトの名前を `customPanelLayout` に変更します。 ノード `qtip` および `jcr:description` のプロパティを変更します。 例えば、それらを `Custom layout - Toggle tabs` に変更します。
 
 qtip
 
@@ -41,7 +57,7 @@ qtip
 >プロパティ `guideComponentType` の値を `fd/af/layouts/panel` に設定すると、レイアウトがパネルレイアウトになります。
 
 1. 新しいレイアウトにあるファイル `tabbedPanelLayout.jsp` の名前を customPanelLayout.jsp に変更します。
-1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。例えば、/etc/af-custom-layout-clientlib でノードクライアントライブラリを作成します。このノードにカテゴリのプロパティ af.panel.custom を設定します。このプロパティには次の .css ファイルと .js ファイルがあります。
+1. 新しいスタイルおよび動作を追加するには、`etc` ノードでクライアントライブラリを作成します。 例えば、/etc/af-custom-layout-clientlib でノードクライアントライブラリを作成します。 このノードにカテゴリのプロパティ af.panel.custom を設定します。 このプロパティには次の .css ファイルと .js ファイルがあります。
 
    ```css
    /** CSS defining new styles used by custom layout **/
@@ -115,7 +131,7 @@ qtip
 
 1. アピアランスと動作を強化するには、`client library` を追加します。
 
-   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。例えば、`customPanelLayout.jsp` ファイルを次のように更新します。
+   さらに、.jps ファイルに含まれるスクリプトのパスを更新します。 例えば、`customPanelLayout.jsp` ファイルを次のように更新します。
 
    ```html
    <%-- jsp encapsulating navigator container and panel container divs --%>
@@ -200,7 +216,7 @@ qtip
    </div>
    ```
 
-1. オーサリングモードでアダプティブフォームを開きます。定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
+1. オーサリングモードでアダプティブフォームを開きます。 定義したパネルレイアウトがパネルレイアウト設定用のリストに追加されます。
 
    ![パネルレイアウトリストに表示されたカスタムパネルレイアウト](assets/auth-layt.png) ![カスタムパネルレイアウトを使用したアダプティブフォームのスクリーンショット](assets/s1.png) ![カスタムレイアウトの切り替え機能を示したスクリーンショット](assets/s2.png)
 

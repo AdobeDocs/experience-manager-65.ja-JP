@@ -1,20 +1,34 @@
 ---
 title: スマートコンテンツサービスを使用したアセットのタグ付けの設定
-description: スマートコンテンツサービスを使用して、 [!DNL Adobe Experience Manager] でスマートタグと拡張スマートタグを設定する方法について説明します。
+description: スマートコンテンツサービスを使用して、[!DNL Adobe Experience Manager]でスマートタグと強化されたスマートタグを設定する方法を説明します。
 role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 752f9248-f39f-5793-a7dd-5ddafcd403c7
+    internal-label: Tagging
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: f0e3b2ca-813f-4b7a-81df-52339e17ddcf
+    internal-label: Smart Tags
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2325'
 ht-degree: 98%
-
 ---
-
 # スマートタグ付けのために [!DNL Assets] を準備 {#configure-asset-tagging-using-the-smart-content-service}
 
-スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe AI] のスマートサービスを使用します。 設定が完了したら、いくつかの画像とタグを使用してサービスのトレーニングを行います。
+スマートコンテンツサービスを使用してアセットのタグ付けを開始する前に、[!DNL Experience Manager Assets] と Adobe Developer Console を統合して、[!DNL Adobe AI] のスマートサービスを使用します。 設定が完了したら、いくつかの画像と 1 つのタグを使用してサービスのトレーニングを行います。
 
 <!--
 >[!NOTE]
@@ -46,7 +60,7 @@ ht-degree: 98%
 
 サービスパック 21 にアップグレードした場合は、OAuth 統合をサポートする[サービスパック 21 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)をインストールします。 既存の設定はすべて自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。 サービスパック 22 にアップグレードする場合は、この[サービスパック 22 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)をインストールする必要があります。
 
-サービスパック 20 以前の場合、SCS が OAuth 統合に対応する回避策を実行する必要があります。 詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
+サービスパック 20 以前の場合、SCS で OAuth 統合をサポートするための回避策の手順を実行する必要があります。 詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
 
 ## オンプレミスユーザーの OAuth をサポートする SCS アップグレード {#scs-upgrade-oauth-on-premise}
 
@@ -60,7 +74,7 @@ ht-degree: 98%
 
 サービスパック 21 にアップグレードした場合は、OAuth 統合をサポートする[サービスパック 21 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip)をインストールします。 既存の設定はすべて自動的に削除されます。 この記事に記載されている手順に従って、スマートコンテンツサービスを設定します。 サービスパック 22 にアップグレードする場合は、この[サービスパック 22 のホットフィックス](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip)をインストールする必要があります。
 
-サービスパック 20 以前の場合、SCS が OAuth 統合に対応する回避策を実行する必要があります。 詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
+サービスパック 20 以前の場合、SCS で OAuth 統合をサポートするための回避策の手順を実行する必要があります。 詳しくは、[OAuth 資格情報のスマートタグのトラブルシューティング](config-oauth.md)を参照してください。
 
 
 ## と Adobe 開発者コンソールの統合 {#integrate-adobe-io}
@@ -96,7 +110,7 @@ To configure the Smart Content Service, follow these top-level steps:
 
 スマートコンテンツサービス API を使用するには、Adobe Developer Consoleで統合を作成して、以下を取得します。
 
-* [!UICONTROL API キー &#x200B;]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
+* [!UICONTROL API キー ]（Adobe Developer Consoleの [!UICONTROL CLIENT ID] フィールドで生成）、
 * [!UICONTROL ORGANIZATION ID]、
 * そして、[!UICONTROL CLIENT SECRET]、（[!DNL Experience Manager]のクラウド設定の[!UICONTROL アセットスマートタグ付けサービス設定]用）。
 
@@ -106,8 +120,8 @@ To configure the Smart Content Service, follow these top-level steps:
 
 1. **[!UICONTROL API を追加]**&#x200B;ページで、「**[!UICONTROL Experience Cloud]**」を選択し、「**[!UICONTROL スマートコンテンツ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-1. 「**[!UICONTROL OAuth Server-to-Server]**」を選択します。「**[!UICONTROL 次へ]**」をクリックします。
-この設定の方法について詳しくは、要件に応じてDeveloper Consoleのドキュメントを参照してください。
+1. 「**[!UICONTROL OAuth サーバー間]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
+この設定を行う方法について詳しくは、要件に応じて、Developer Console のドキュメントを参照してください。
 
    * 概要については、developer.adobe.comの「*サーバー間認証（Server to Server authentication）*」を参照してください。
    * 新しい OAuth 資格情報を作成するには、developer.adobe.com 「*OAuth サーバー間資格情報実装ガイド（OAuth Server-to-Server credential implementation guide）*」を参照してください。
@@ -152,7 +166,7 @@ To configure the Smart Content Service, follow these top-level steps:
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 -->
@@ -226,7 +240,7 @@ A public certificate lets you authenticate your profile on Adobe Developer Conso
 
    >[!NOTE]
    >
-   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com/ja-jp](https://status.adobe.com/ja-jp).
+   >The URL provided as [!UICONTROL Service URL] is not accessible via browser and generates a 404 error. The configuration works OK with the same value of the [!UICONTROL Service URL] parameter. For the overall service status and maintenance schedule, see [https://status.adobe.com](https://status.adobe.com).
 
 1. Click **[!UICONTROL Download Public Certificate for OAuth Integration]**, and download the public certificate file `AEM-SmartTags.crt`.
 
@@ -286,7 +300,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 
@@ -429,7 +443,7 @@ The validation results are displayed in the same dialog.
 
 ![enable_smart_tags](assets/enable_smart_tags.png)
 
-フォルダーに対してこのオプションを選択すると、[!DNL Experience Manager] によりレーニングワークフローが自動的に実行され、フォルダーのアセットおよびそのタグに関するスマートコンテンツサービスのトレーニングが実施されます。 デフォルトでは、トレーニングワークフローは毎週土曜日の午前12:30時に実行されます。
+フォルダーに対してこのオプションを選択すると、[!DNL Experience Manager] によりレーニングワークフローが自動的に実行され、フォルダーのアセットおよびそのタグに関するスマートコンテンツサービスのトレーニングが実施されます。 デフォルトでは、トレーニングワークフローは毎週土曜日の午前12:30に実行されます。
 
 ### オンデマンドトレーニング {#on-demand-training}
 
@@ -457,7 +471,7 @@ The validation results are displayed in the same dialog.
 1. **[!UICONTROL アセットレポート]**&#x200B;ページで、生成したレポートを選択します。 レポートを表示するには、ツールバーの「**[!UICONTROL 表示]**」アイコンをクリックします。
 1. レポートの詳細をレビューします。
 
-   レポートには、トレーニングしたタグのトレーニングステータスが表示されます。 「**[!UICONTROL トレーニングステータス]**」列の緑色は、そのタグについて、スマートコンテンツサービスのトレーニングが実施されたことを示します。 黄色は、特定のタグに関するサービスのトレーニングが完全には実施されていないことを示します。 この場合、特定のタグを含む画像をさらに追加し、トレーニングワークフローを実行して、そのタグに関するサービスのトレーニングを完全に実施します。
+   レポートには、トレーニングしたタグのトレーニングステータスが表示されます。 「**[!UICONTROL トレーニングステータス]**」列の緑色は、そのタグについて、スマートコンテンツサービスのトレーニングが実施されたことを示します。 黄色は、特定のタグについてサービスのトレーニングが完全ではないことを示します。 この場合、特定のタグを含む画像をさらに追加し、トレーニングワークフローを実行して、そのタグに関するサービスのトレーニングを完全に実施します。
 
    このレポートにタグが表示されない場合は、それらのタグに関するトレーニングワークフローを再度実行してください。
 
@@ -467,9 +481,9 @@ The validation results are displayed in the same dialog.
 
 * 拡張スマートタグは、画像とそのタグの学習モデルにもとづいています。 これらのモデルは、タグを識別するうえで常に完璧であるわけではありません。 スマートコンテンツサービスの現行バージョンには次の制限事項があります。
 
-   * 画像内の細かい違いを認識することはできません。 例えば、シャツのサイズが細身か標準かなどの違いは認識できません。
-   * 画像の細かい模様や部分に基づいてタグを識別することはできません。 例えば、T シャツのロゴなどです。
-   * タグ付けは、[!DNL Experience Manager] がサポートされているロケールでサポートされています。
+  * 画像内の細かい違いを認識することはできません。 例えば、シャツがスリムフィットかレギュラーフィットかといった違いです。
+  * 画像の細かい模様や部分に基づいてタグを識別することはできません。 例えば、T シャツのロゴなどです。
+  * タグ付けは、[!DNL Experience Manager] がサポートされているロケールでサポートされています。
 
 * スマートタグ（通常または拡張）付きのアセットを検索するには、[!DNL Assets] のオムニサーチ（全文検索）を使用します。 スマートタグには個別の検索用述語はありません。
 

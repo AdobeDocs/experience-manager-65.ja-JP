@@ -9,13 +9,27 @@ role: Developer
 exl-id: c5e712e0-5c3f-48cd-91cf-fd347222a6b2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1779'
 ht-degree: 100%
-
 ---
-
 # プログラムによる PDF ドキュメントの分割 {#programmatically-disassembling-pdf-documents}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -79,7 +93,7 @@ PDF ドキュメントを分割するには、以下のタスクを実行しま�
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
+AEM Forms が、JBoss 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
 
 **Assembler クライアントの PDF を作成**
 
@@ -119,7 +133,7 @@ Assembler Service API（Java）を使用して PDF ドキュメントを分割�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -138,8 +152,8 @@ Assembler Service API（Java）を使用して PDF ドキュメントを分割�
    * `com.adobe.idp.Document` オブジェクトを作成し、分割する PDF ドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。
    * `put` メソッドを呼び出して次の引数を渡すことにより、`java.util.Map` オブジェクトにエントリを追加してください。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
-      * 分割する PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
+     * 分割する PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
 1. 実行時オプションを設定します。
 
@@ -194,10 +208,10 @@ Assembler Service API（web サービス）を使用して PDF ドキュメン�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 

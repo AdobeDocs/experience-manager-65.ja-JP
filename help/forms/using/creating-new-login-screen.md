@@ -9,16 +9,30 @@ exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '459'
 ht-degree: 98%
-
 ---
-
 # ログイン画面の作成{#creating-a-new-login-screen}
 
-AEM Forms ログイン画面を使用するすべての AEM Forms モジュールのログイン画面を変更できます。例えば、変更は、Forms Manager および AEM Forms Workspace の両方のログイン画面に影響します。
+AEM Forms ログイン画面を使用するすべての AEM Forms モジュールのログイン画面を変更できます。 例えば、変更は、Forms Manager および AEM Forms Workspace の両方のログイン画面に影響します。
 
 ## 前提条件 {#prerequisite}
 
@@ -39,7 +53,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. 次の操作を実行します。
 
-   1. `/apps/livecycle/core/components/login` にある `/libs/livecycle/core/components/login` の階層構造をレプリケートします。同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
+   1. `/apps/livecycle/core/components/login` にある `/libs/livecycle/core/components/login` の階層構造をレプリケートします。 同じ（ノード/フォルダー）プロパティおよびアクセス制御を保持します。
 
    1. コンポーネントフォルダーを `/libs/livecycle/core` から `/apps/livecycle/core` にコピーします。
 
@@ -56,7 +70,7 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 
 1. フォルダー `en` で、以下のアクションを実行します。
 
-   1. フォルダーの名前をサポートするロケール名に変更します。（例：`ar`）。
+   1. フォルダーの名前をサポートするロケール名に変更します。 （例：`ar`）。
 
    1. プロパティ `jcr:language` の値を `ar` に変更します（`ar` フォルダーの場合）。
 
@@ -202,9 +216,9 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
    * コピー元：`/libs/livecycle/core/components/login`
    * コピー先：`/apps/livecycle/core/components/login`
 
-1. ここで、テキストを変更するノード（該当するロケールコードフォルダの下）のプロパティ `sling:message` の値を変更します。翻訳は、ノードのプロパティ `sling:key` の値に示されているキーを介して行われます。
+1. ここで、テキストを変更するノード（該当するロケールコードフォルダの下）のプロパティ `sling:message` の値を変更します。 翻訳は、ノードのプロパティ `sling:key` の値に示されているキーを介して行われます。
 
-1. 新しいキーと値のペアを追加する場合は、次の操作を実行します。次のスクリーンショットの例を確認します。
+1. 新しいキーと値のペアを追加する場合は、次の操作を実行します。 次のスクリーンショットの例を確認します。
 
    1. `sling:MessageEntry` タイプのノードを作成するか、またはすべてのロケールフォルダーの下で既存のノードをコピーして名前を変更します。
    1. コピー `login.jsp` :
@@ -290,10 +304,10 @@ AEM Forms ログイン画面を使用するすべての AEM Forms モジュー�
 ### 新しい画像の追加 {#add-new-images}
 
 1. 上記の「新しいスタイルの追加、または既存のスタイルの変更」の手順に従います。
-1. `/apps/livecycle/core/content/login` に新しい画像を追加します。画像を追加するには、次の手順に従います。
+1. `/apps/livecycle/core/content/login` に新しい画像を追加します。 画像を追加するには、次の手順に従います。
 
    1. WebDAV クライアントをインストールします。
-   1. webDAV クライアントを使用して、`/apps/livecycle/core/content/login` フォルダーに移動します。詳しくは、[WebDAV アクセス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=ja)を参照してください。
+   1. webDAV クライアントを使用して、`/apps/livecycle/core/content/login` フォルダーに移動します。 詳しくは、[WebDAV アクセス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=ja)を参照してください。
 
    1. 新しい画像を追加します。
 

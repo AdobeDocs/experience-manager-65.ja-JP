@@ -9,7 +9,16 @@ exl-id: 622cf6ca-f119-4310-ad14-537576bd6f6d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 3%
@@ -61,12 +70,12 @@ ht-degree: 3%
 
 ### フォーラム機能 {#forum-function}
 
-[&#x200B; フォーラム関数](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum` コンポーネントと、モデレーション、タグ付け、翻訳に影響を与える設定が含まれています。
+[ フォーラム関数](functions.md#forum-function)を含むコミュニティサイト構造には、設定済みの`forum` コンポーネントと、モデレーション、タグ付け、翻訳に影響を与える設定が含まれています。
 
 ### フォーラム投稿へのアクセス（UGC） {#accessing-forum-posts-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 Adobe Experience Manager 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -74,7 +83,7 @@ Adobe Experience Manager 6.1 Communitiesでは、UGC用の[common store](working
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

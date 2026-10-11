@@ -8,13 +8,31 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 00ee7929-649f-4cbb-be79-ba13ac73a16d
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 97%
-
 ---
-
 # AEM Sites ページへのアダプティブフォームまたはインタラクティブなコミュニケーションの埋め込み {#embed-an-adaptive-form-or-interactive-communication-in-aem-sites-page}
 
 <span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
@@ -65,9 +83,9 @@ AEM Forms コンテナコンポーネントを使用してアダプティブフ�
    * **アセットパス**：埋め込むアダプティブフォームまたはインタラクティブなコミュニケーションを参照して選択します。 また、アセットブラウザーからドロップすると、自動的に入力されます。
    * （アダプティブフォームのみ）**送信後処理**：フォームの送信時にトリガーするアクションを選択します。 お礼のメッセージを表示するため、「ありがとうございます」ページを設けることができます。
 
-      * **「ありがとうございます」メッセージ**：フォーム送信時に表示するメッセージをリッチテキストエディターで書き込みます。 このオプションは、「ありがとうございます」メッセージの表示が有効な場合にのみ選択できます。
-      * **「ありがとうございます」ページ**： フォームの送信時に表示するページを参照して選択します。 このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
-      * **送信時にページを更新**：有効にすると、アダプティブフォームが埋め込まれたページを更新して「ありがとうございます」ページが表示されます。 この機能が無効な場合は、AEM Forms コンテナ内のアダプティブフォームの代わりに「ありがとうございます」ページが（ページの更新を待たずに）表示されます。 このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
+     * **「ありがとうございます」メッセージ**：フォーム送信時に表示するメッセージをリッチテキストエディターで書き込みます。 このオプションは、「ありがとうございます」メッセージの表示が有効な場合にのみ選択できます。
+     * **「ありがとうございます」ページ**： フォームの送信時に表示するページを参照して選択します。 このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
+     * **送信時にページを更新**：有効にすると、アダプティブフォームが埋め込まれたページを更新して「ありがとうございます」ページが表示されます。 この機能が無効な場合は、AEM Forms コンテナ内のアダプティブフォームの代わりに「ありがとうございます」ページが（ページの更新を待たずに）表示されます。 このオプションは、「ありがとうございます」ページの表示が有効な場合にのみ選択できます。
 
    * **テーマ**：アダプティブフォームまたはインタラクティブなコミュニケーションのコンポーネントのスタイルを定義するテーマを選択します。 スタイル設定には、フォントスタイル、背景色、サイズ、配置など、外観のプロパティが含まれます。
    * **高さ**：コンテナの高さを指定します。 コンテナのサイズを自動的に変更するには、空白のままにします。

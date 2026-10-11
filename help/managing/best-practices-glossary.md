@@ -10,13 +10,29 @@ exl-id: 9672f7a4-82b7-4175-874d-181846115442
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7022'
 ht-degree: 99%
-
 ---
-
 # 用語集{#glossary}
 
 この用語集には、[プロジェクトチェックリスト](/help/managing/best-practices-checklist.md)のすべての成果物ドキュメントの詳細が（アルファベット順に）記載されています。
@@ -315,9 +331,9 @@ ht-degree: 99%
 
 多くの場合、タイムライン、スケジュール、承認の要件が含まれます。
 
-### 顧客の監視ポリシーまたは要件 {#customer-monitoring-policies-or-requirements}
+### 顧客のモニタリングポリシーまたは要件 {#customer-monitoring-policies-or-requirements}
 
-監視対象に関する顧客のポリシーおよび要件です。 監視の概念で指定されている推奨事項に追加して指定されます。
+監視対象に関する顧客のポリシーおよび要件です。 モニタリングの概念で指定されている推奨事項に追加して指定されます。
 
 ### 顧客の実稼動リリーススケジュール {#customer-production-release-schedule}
 
@@ -716,23 +732,23 @@ URL 処理の概念を実装します。
 
 また、移行から新しいシステムの実際の運用開始までの間、コンテンツを最新の状態（または可能な限り最新の状態）に保つ方法を記載することも推奨します。 つまり、コンテンツのフリーズ、二重公開、アルファシステムのメンテナンスなどが必要な場合があります。
 
-### 監視 - CPU {#monitoring-cpu}
+### モニタリング - CPU {#monitoring-cpu}
 
-ソリューションのシステム CPU 使用率を監視します。
-
-* 平均
-* ピーク
-
-### 監視 - ディスク I/O {#monitoring-disk-i-o}
-
-ソリューションのディスク入出力率を監視します。
+ソリューションのシステム CPU 使用率をモニタリングします。
 
 * 平均
 * ピーク
 
-### 監視 - ディスク容量 {#monitoring-disk-space}
+### モニタリング - ディスク I/O {#monitoring-disk-i-o}
 
-ソリューションのディスク容量の使用状況を監視します。
+ソリューションのディスク入出力率をモニタリングします。
+
+* 平均
+* ピーク
+
+### モニタリング - ディスク容量 {#monitoring-disk-space}
+
+ソリューションのディスク容量の使用状況をモニタリングします。
 
 * 平均
 * 時間の経過に伴う増加
@@ -742,7 +758,7 @@ URL 処理の概念を実装します。
 * リポジトリ
 * ログファイル
 
-### 監視 - 外部システム {#monitoring-external-system-s}
+### モニタリング - 外部システム {#monitoring-external-system-s}
 
 ソリューションと外部システム間の接続を監視します。
 
@@ -750,7 +766,7 @@ URL 処理の概念を実装します。
 * ピーク
 * 安定性
 
-### 監視 - ネットワーク帯域幅 {#monitoring-network-bandwidth}
+### モニタリング - ネットワーク帯域幅 {#monitoring-network-bandwidth}
 
 ネットワーク帯域幅のソリューションの使用状況を監視します。
 
@@ -758,15 +774,15 @@ URL 処理の概念を実装します。
 * ピーク
 * 安定性
 
-### 監視 - リクエスト {#monitoring-requests}
+### モニタリング - リクエスト {#monitoring-requests}
 
 ソリューションに対するリクエストを監視します。
 
-### 監視 - セキュリティポイント {#monitoring-security-points}
+### モニタリング - セキュリティポイント {#monitoring-security-points}
 
 定義されたセキュリティポイントで監視します。
 
-### 監視 - システム {#monitoring-system}
+### モニタリング - システム {#monitoring-system}
 
 システム全体を監視します。以下に例を示します。
 
@@ -775,21 +791,21 @@ URL 処理の概念を実装します。
 * パフォーマンスのピーク
 * アラート
 
-### 監視 - しきい値と介入 {#monitoring-threshold-and-intervention}
+### モニタリング - しきい値と介入 {#monitoring-threshold-and-intervention}
 
-ソリューションで定義されているしきい値と、負荷を削減するための介入手順の実装を監視します。
+ソリューションで定義されているしきい値と、負荷を削減するための介入手順の実装をモニタリングします。
 
-### 監視の概念 {#monitoring-concept}
+### モニタリングの概念 {#monitoring-concept}
 
-ソリューションに適用する監視概念です。以下のものが組み込まれます。
+ソリューションに適用するモニタリング概念です。以下のものが組み込まれます。
 
-* AEM 標準監視
-* システム監視
-* 顧客に固有の監視要件
+* AEM 標準モニタリング
+* システムモニタリング
+* 顧客に固有のモニタリング要件
 
-### 潜在的な弱点の監視 {#monitoring-potential-weak-points}
+### 潜在的な弱点のモニタリング {#monitoring-potential-weak-points}
 
-障害が発生しやすい点を特定し、定義する必要があります。 これらに関連する監視タスクも定義する必要があります。
+障害が発生しやすい点を特定し、定義する必要があります。 これらに関連するモニタリングタスクも定義する必要があります。
 
 以下に例を示します。
 
@@ -797,15 +813,15 @@ URL 処理の概念を実装します。
 * トランザクション処理
 * 統合ポイント
 
-### 監視ポリシーをシステムエンジニアに伝達 {#monitoring-policy-communicated-to-system-engineer}
+### モニタリングポリシーをシステムエンジニアに伝達 {#monitoring-policy-communicated-to-system-engineer}
 
-システムエンジニアおよび運用スタッフが監視ポリシーを熟知し、理解していることを確認します。
+システムエンジニアおよび運用スタッフがモニタリングポリシーを熟知し、理解していることを確認します。
 
-### 監視レポート - 構造の準備 {#monitoring-reports-structure-in-place}
+### モニタリングレポート - 構造の準備 {#monitoring-reports-structure-in-place}
 
 以下の事項を定義します。
 
-* 監視レポートをいつ生成するか
+* モニタリングレポートをいつ生成するか
 * 監視レポートを誰に提供するか
 
 ### 運用タスクのドキュメント {#operational-tasks-documentation}
@@ -849,7 +865,7 @@ URL 処理の概念を実装します。
 
 ### パフォーマンスベンチマーク {#performance-benchmark}
 
-パフォーマンスベンチマークは、パフォーマンステスト、耐久性テストおよび監視を定義する際に使用します。 ソリューションやシステムハードウェアのパフォーマンス特性を評価することによって定義します。
+パフォーマンスベンチマークは、パフォーマンステスト、耐久性テストおよびモニタリングを定義する際に使用します。 ソリューションやシステムハードウェアのパフォーマンス特性を評価することによって定義します。
 
 ### パフォーマンス KPI {#performance-kpis}
 
@@ -1326,7 +1342,7 @@ AEM プラットフォーム上での通常の開発範囲外と見なされる�
 
 ### しきい値の定義 {#threshold-definition}
 
-システム内の監視ポイントの基準値を定義します。
+システム内のモニタリングポイントの基準値を定義します。
 
 次は例です。
 

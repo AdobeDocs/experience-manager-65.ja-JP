@@ -9,7 +9,18 @@ exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2080'
 ht-degree: 90%
@@ -157,7 +168,7 @@ OR 分岐は、ワークフロー内に分割を作成し、以降は 1 つの�
 
 変数を使用して、式エディターを使用したルーティング式を定義できます。 OR‧分岐ステップでルーティング式を使用する方法について詳しくは、「[OR‧分岐ステップ](/help/sites-developing/workflows-step-ref.md#or-split)」を参照してください。
 
-この例では、ルーティング式を定義する前に、[例 2 &#x200B;](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
+この例では、ルーティング式を定義する前に、[例 2 ](/help/sites-developing/using-variables-in-aem-workflows.md#example2)を使用して **totalvalue** 変数の値を設定します。 **totalvalue** 変数の値が 50000 より大きい場合、分岐 1 はアクティブになります。 同様に、**totalvalue** 変数の値が 50000 未満の場合に、Branch 2 をアクティブにするルールを定義できます。
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 

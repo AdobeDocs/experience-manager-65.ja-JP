@@ -10,7 +10,16 @@ exl-id: b941b5e0-f768-4393-9a9d-ded2cd7d10c4
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 5%
@@ -85,13 +94,13 @@ ht-degree: 5%
  </tbody>
 </table>
 
-[&#x200B; クライアントサイドのカスタマイズ &#x200B;](/help/communities/client-customize.md)も参照してください
+[ クライアントサイドのカスタマイズ ](/help/communities/client-customize.md)も参照してください
 
 ## サーバーサイドの基本 {#essentials-for-server-side}
 
 * [メッセージングの設定](/help/communities/configure-messaging.md)
-* SCF コンポーネント用の[&#x200B; メッセージング クライアント API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
-* サービスの[&#x200B; メッセージング API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)
+* SCF コンポーネント用の[ メッセージング クライアント API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/messaging/client/api/package-summary.html)
+* サービスの[ メッセージング API](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/messaging/api/package-summary.html)
 * [メッセージングエンドポイント](https://experienceleague.adobe.com/en/tools/aem-api-documentation/6-5/javadoc/com/adobe/cq/social/messaging/client/endpoints/package-summary.html)
 * [サーバーサイドのカスタマイズ](/help/communities/server-customize.md)
 
@@ -111,7 +120,7 @@ ht-degree: 5%
 
 ### コミュニティサイト {#community-site}
 
-ウィザードを使用して作成されたコミュニティサイト構造には、選択時にメッセージ機能が含まれます。 [&#x200B; コミュニティサイトコンソール &#x200B;](/help/communities/sites-console.md#user-management)の`User Management`設定を参照してください。
+ウィザードを使用して作成されたコミュニティサイト構造には、選択時にメッセージ機能が含まれます。 [ コミュニティサイトコンソール ](/help/communities/sites-console.md#user-management)の`User Management`設定を参照してください。
 
 ### サンプルコード：メッセージ受信通知 {#sample-code-message-received-notification}
 

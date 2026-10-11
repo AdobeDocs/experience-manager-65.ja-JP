@@ -9,18 +9,27 @@ exl-id: 21041b55-240c-487d-9d79-c54c877f4e1e
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '358'
 ht-degree: 100%
-
 ---
-
 # コマンドラインによる起動と停止{#command-line-start-and-stop}
 
 ## コマンドラインからの Adobe Experience Manager の起動 {#starting-adobe-experience-manager-from-the-command-line}
 
-`start` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。UNIX® 版と Windows 版の両方が用意されています。スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされているインスタンスを開始します。
+`start` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。 UNIX® 版と Windows 版の両方が用意されています。 スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされているインスタンスを開始します。
 
 これら 2 つのバージョンは、Adobe Experience Manager（AEM）インスタンスの開始や調整に使用できる、環境変数のリストをサポートしています。
 
@@ -67,7 +76,7 @@ ht-degree: 100%
 
 >[!CAUTION]
 >
->オーサーやパブリッシュなどの一部の実行モードは、最初に AEM を起動する前に設定する必要があり、後で変更することはできません。実稼動環境で使用する AEM インスタンスを設定する前に、[実行モードのドキュメント](/help/sites-deploying/configure-runmodes.md)を参照してください。
+>オーサーやパブリッシュなどの一部の実行モードは、最初に AEM を起動する前に設定する必要があり、後で変更することはできません。 実稼動環境で使用する AEM インスタンスを設定する前に、[実行モードのドキュメント](/help/sites-deploying/configure-runmodes.md)を参照してください。
 
 ### Windows プラットフォームの start.bat スクリプトの例 {#windows-platform-start-bat-script-example}
 
@@ -91,8 +100,8 @@ AEM を停止するには、次のいずれかを実行します。
 
 * 使用するプラットフォームに応じて：
 
-   * スクリプトまたはコマンドラインから AEM を起動した場合は、**Ctrl+C**&#x200B;キーを押してサーバーをシャットダウンします。
-   * UNIX® で start スクリプトを使用した場合は、stop スクリプトを使用して AEM を停止する必要があります。
+  * スクリプトまたはコマンドラインから AEM を起動した場合は、**Ctrl+C**&#x200B;キーを押してサーバーをシャットダウンします。
+  * UNIX® で start スクリプトを使用した場合は、stop スクリプトを使用して AEM を停止する必要があります。
 
 * jar ファイルをダブルクリックして AEM を起動した場合は、起動ウィンドウで「**オン**」ボタンをクリックして（ボタンが「**オフ**」に変化します）サーバーをシャットダウンします。
 
@@ -100,7 +109,7 @@ AEM を停止するには、次のいずれかを実行します。
 
 ## コマンドラインからの Adobe Experience Manager の停止 {#stopping-adobe-experience-manager-from-the-command-line}
 
-`stop` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。UNIX® 版と Windows 版の両方が用意されています。スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされている実行中のインスタンスを停止します。
+`stop` スクリプトは、*&lt;cq-installation>/bin* ディレクトリの下で使用できます。 UNIX® 版と Windows 版の両方が用意されています。 スクリプトは、*&lt;cq-installation>* ディレクトリにインストールされている実行中のインスタンスを停止します。
 
 ### UNIX® プラットフォームの stop スクリプトの例 {#unix-platform-stop-script-example}
 

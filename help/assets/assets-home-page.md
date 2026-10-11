@@ -1,18 +1,29 @@
 ---
 title: '[!DNL Assets] のホームページエクスペリエンス'
-description: ' [!DNL Experience Manager Assets]  のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。'
+description: アセットに関する最近のアクティビティのスナップショットを含む、リッチなウェルカム画面エクスペリエンス用に[!DNL Experience Manager Assets] ホームページをパーソナライズします。
 contentOwner: AG
 feature: Asset Management
 role: Admin, User
 exl-id: 042bd959-256a-4794-a34d-0848a6b8840d
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
-
+source-wordcount: '568'
+ht-degree: 96%
 ---
-
 # [!DNL Adobe Experience Manager Assets] のホームページエクスペリエンス {#aem-assets-home-page-experience}
 
 [!DNL Adobe Experience Manager Assets] のホームページをカスタマイズして、アセットに関する最近のアクティビティのスナップショットを始め、有益なスタートアップスクリーンエクスペリエンスを実現できます。
@@ -38,7 +49,7 @@ ht-degree: 100%
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. **[!UICONTROL User Preferences]** ダイアログを開き、「**[!UICONTROL Enable Assets Home Page]**」を選択します。 変更内容を保存します。
+1. **[!UICONTROL ユーザー環境設定]**&#x200B;ダイアログを開き、「**[!UICONTROL Assets ホームページを有効にする]**」を選択します。 変更内容を保存します。
 
    ![ユーザーの環境設定ダイアログでアセットのホームページを有効にする](assets/Annotation-color.png)
 

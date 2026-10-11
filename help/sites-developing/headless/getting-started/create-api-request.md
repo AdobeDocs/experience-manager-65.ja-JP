@@ -5,13 +5,39 @@ exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '552'
 ht-degree: 100%
-
 ---
-
 # コンテンツフラグメントとヘッドレスクイック開始ガイドへのアクセスと配信 {#accessing-delivering-content-fragments}
 
 AEM Assets REST API を使用して、コンテンツフラグメントと、コンテンツフラグメントコンテンツのヘッドレス配信用の GraphQL API を管理する方法について説明します。
@@ -21,19 +47,19 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 [コンテンツフラグメントはいくつか作成したので、AEM API](create-content-fragment.md) を使用してそれらをヘッドレスで配信できます。
 
 * [GraphQL](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) API を使用すると、コンテンツフラグメントにアクセスして配信するリクエストを作成できます。
-   * これを使用するには、[AEM で エンドポイントを定義して有効にする必要があり](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)、必要に応じて [GraphiQL インターフェイスをインストールする必要があります](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
+  * これを使用するには、[AEM で エンドポイントを定義して有効にする必要があり](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)、必要に応じて [GraphiQL インターフェイスをインストールする必要があります](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface)。
 * [アセット REST API](/help/assets/assets-api-content-fragments.md) を使用すると、コンテンツフラグメント（およびその他のアセット）を作成および変更できます。
 
 このガイドの残りの部分では、GraphQL へのアクセスとコンテンツフラグメントの配信について説明します。
 
 ## GraphQL を使用したコンテンツフラグメントの配信方法 {#how-to-deliver-a-content-fragment}
 
-情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。これらのクエリは、エンドポイントごと、モデルごとに 1 回だけ考慮してください。この入門ガイドでは、1 つだけ作成します。
+情報アーキテクトは、チャネルエンドポイントがコンテンツを配信するためのクエリを設計します。 これらのクエリは、エンドポイントごと、モデルごとに 1 回だけ考慮してください。 この入門ガイドでは、1 つだけ作成します。
 
 1. AEM にログインし、[GraphiQL インターフェイス](/help/sites-developing/headless/graphql-api/graphiql-ide.md)にアクセスします。
    * 例：`http://<host>:<port>/aem/graphiql.html`
 
-1. GraphiQL は、GraphQL のブラウザー内のクエリエディターです。クエリーを作成して、コンテンツフラグメントを取得し、それらを JSON としてヘッドレスに配信できます。
+1. GraphiQL は、GraphQL のブラウザー内のクエリエディターです。 クエリーを作成して、コンテンツフラグメントを取得し、それらを JSON としてヘッドレスに配信できます。
    * 左パネルで、クエリを作成できます。
    * 右側のパネルに結果が表示されます。
    * クエリエディターは、コード補完機能とホットキーを備えており、クエリを簡単に実行できます。
@@ -71,11 +97,11 @@ AEM Assets REST API を使用して、コンテンツフラグメントと、コ
 
 GraphQL を使用すると、特定のデータセットや個々のデータオブジェクトをターゲットにするだけでなく、オブジェクトの特定の要素、ネストされた結果を配信したり、クエリ変数のサポートを提供したりできる構造化クエリが可能になります。
 
-GraphQLは、繰り返しの API リクエストや過剰な配信を避けることができます。代わりに、単一の API クエリへの応答としてレンダリングに必要なものを正確に一括配信できます。結果の JSON を使用して、他のサイトやアプリにデータを配信できます。
+GraphQLは、繰り返しの API リクエストや過剰な配信を避けることができます。 代わりに、単一の API クエリへの応答としてレンダリングに必要なものを正確に一括配信できます。 結果の JSON を使用して、他のサイトやアプリにデータを配信できます。
 
 ## 次の手順 {#next-steps}
 
-これで作業は完了です。AEM のヘッドレスコンテンツ管理に関する基本的な内容を説明しました。利用可能な機能の包括的な理解を深めるためのリソースは他にもたくさんあります。
+これで作業は完了です。 AEM のヘッドレスコンテンツ管理に関する基本的な内容を説明しました。 利用可能な機能の包括的な理解を深めるためのリソースは他にもたくさんあります。
 
 * **[設定ブラウザー](create-configuration.md)** - AEM 設定ブラウザーの詳細
 * **[コンテンツフラグメント](/help/assets/content-fragments/content-fragments.md)** - コンテンツフラグメントの作成と管理に関する詳細

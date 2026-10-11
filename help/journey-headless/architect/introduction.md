@@ -5,18 +5,34 @@ exl-id: 49ba0d6d-dde4-42e2-92fd-c7655c0eebc0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 100%
-
+source-wordcount: '746'
+ht-degree: 96%
 ---
-
 # AEM でのヘッドレス向けコンテンツモデリング - 概要 {#architect-headless-introduction}
 
 [AEM ヘッドレスコンテンツアーキテクトジャーニー](overview.md)のこのステップでは、Adobe Experience Manager（AEM）でのヘッドレスコンテンツ配信向けコンテンツモデリングを理解するために必要な（基本）概念と用語について説明します。
 
-このドキュメントを通じて、ヘッドレスコンテンツ配信、AEM によるヘッドレスのサポートおよびコンテンツがヘッドレス向けにどのようにモデル化されるかを理解できるようになります。読み終えると、次のことが習得できます。
+このドキュメントを通じて、ヘッドレスコンテンツ配信、AEM によるヘッドレスのサポートおよびコンテンツがヘッドレス向けにどのようにモデル化されるかを理解できるようになります。 読み終えると、次のことが習得できます。
 
 * ヘッドレスコンテンツ配信の基本概念を理解する。
 * AEM でのヘッドレスとコンテンツモデリングのサポート方法に詳しくなる
@@ -28,11 +44,11 @@ ht-degree: 100%
 
 ## フルスタックコンテンツ配信 {#full-stack}
 
-使いやすい大規模なコンテンツ管理システム（CMS）が登場して以来、多くの組織はメッセージング、ブランディング、コミュニケーションを管理する一元的な場所としてコンテンツ管理システムを活用してきました。CMS をエクスペリエンス管理の中心として使用することで、異なるシステムでタスクを重複させる必要がなくなり、効率が向上しました。
+使いやすい大規模なコンテンツ管理システム（CMS）が登場して以来、多くの組織はメッセージング、ブランディング、コミュニケーションを管理する一元的な場所としてコンテンツ管理システムを活用してきました。 CMS をエクスペリエンス管理の中心として使用することで、異なるシステムでタスクを重複させる必要がなくなり、効率が向上しました。
 
 ![従来のフルスタック CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。システムの機能は、CMS スタックの異なるコンポーネントを構成します。フルスタックソリューションには多くの利点があります。
+フルスタック CMS では、コンテンツを操作する機能はすべて CMS 内にあります。 システムの機能は、CMS スタックの異なるコンポーネントを構成します。 フルスタックソリューションには多くの利点があります。
 
 * 維持管理するシステムは 1 つである。
 * コンテンツを一元的に管理できる。
@@ -49,21 +65,21 @@ ht-degree: 100%
 
 システムのヘッドは、通常、そのシステムの出力レンダラーです。一般的には、GUI やその他のグラフィカル出力の形式です。
 
-ヘッドレス CMS では、CMS がコンテンツを管理し、コンシューマーに配信します。ただし、ヘッドレス CMS では、標準化された方法で&#x200B;**コンテンツ**&#x200B;を配信だけで、最終的な出力のレンダリングは省略され、コンテンツの&#x200B;**プレゼンテーション**&#x200B;は消費サービスに委ねられます。
+ヘッドレス CMS では、CMS がコンテンツを管理し、コンシューマーに配信します。 ただし、ヘッドレス CMS では、標準化された方法で&#x200B;**コンテンツ**&#x200B;を配信だけで、最終的な出力のレンダリングは省略され、コンテンツの&#x200B;**プレゼンテーション**&#x200B;は消費サービスに委ねられます。
 
 ![ヘッドレス CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-消費サービス（AR エクスペリエンス、web ショップ、モバイルエクスペリエンス、プログレッシブ web アプリ（PWA）など）では、ヘッドレス CMS からコンテンツを取り込み、独自にレンダリングを提供します。ヘッドレス CMS は、コンテンツに合わせて独自のヘッドを提供します。
+消費サービス（AR エクスペリエンス、web ショップ、モバイルエクスペリエンス、プログレッシブ web アプリ（PWA）など）では、ヘッドレス CMS からコンテンツを取り込み、独自にレンダリングを提供します。 ヘッドレス CMS は、コンテンツに合わせて独自のヘッドを提供します。
 
-ヘッドを省略することで、複雑さが減り、CMS をシンプルになります。また、コンテンツのレンダリングの責任は、実際にコンテンツを必要とするサービスに移ります。多くの場合、サービスのほうがレンダリングに適しています。
+ヘッドを省略することで、複雑さが減り、CMS をシンプルになります。 また、コンテンツのレンダリングの責任は、実際にコンテンツを必要とするサービスに移ります。多くの場合、サービスのほうがレンダリングに適しています。
 
 ## コンテンツモデリング {#content-modeling}
 
 コンテンツモデリング（データモデリングとも呼ばれます）はアーキテクトの専門分野です。ヘッドレス向けモデリングの際には、何を考慮すべきでしょうか。
 
-ヘッドレスアプリケーションがコンテンツにアクセスして何らかの処理を行えるようにするには、実のところ、コンテンツには事前に定義された構造が必要です。コンテンツを自由形式にすることも可能ですが、その場合は、アプリケーション側の処理が&#x200B;*非常に*&#x200B;複雑になります。
+ヘッドレスアプリケーションがコンテンツにアクセスして何らかの処理を行えるようにするには、実のところ、コンテンツには事前に定義された構造が必要です。 コンテンツを自由形式にすることも可能ですが、その場合は、アプリケーション側の処理が&#x200B;*非常に*&#x200B;複雑になります。
 
-AEM の場合は、コンテンツアーキテクトがコンテンツモデリングを実行して、様々な&#x200B;**コンテンツフラグメントモデル**&#x200B;を設計します。これらのモデルは、コンテンツを保持する&#x200B;**コンテンツフラグメント**&#x200B;をコンテンツ作成者が作成する際に使用される構造を定義します。
+AEM の場合は、コンテンツアーキテクトがコンテンツモデリングを実行して、様々な&#x200B;**コンテンツフラグメントモデル**&#x200B;を設計します。 これらのモデルは、コンテンツを保持する&#x200B;**コンテンツフラグメント**&#x200B;をコンテンツ作成者が作成する際に使用される構造を定義します。
 
 ### コンテンツへのアクセス {#access-content}
 
@@ -71,19 +87,19 @@ AEM の場合は、コンテンツアーキテクトがコンテンツモデリ�
 
 コンテンツフラグメントモデルを作成し、作成者がそれらを使用してコンテンツを生成したら、ヘッドレスアプリケーションは、このコンテンツにアクセスする必要があります。
 
-Adobe Experience Manager（AEM）では、AEM GraphQL API を使用して、コンテンツフラグメントに選択的にアクセスし、必要なコンテンツのみを返すことができます。開発者は、API を使用して、特定のコンテンツを選択するクエリを作成できます。この選択プロセスは、*使用する*&#x200B;コンテンツフラグメントモデルに基づいています。
+Adobe Experience Manager（AEM）では、AEM GraphQL API を使用して、コンテンツフラグメントに選択的にアクセスし、必要なコンテンツのみを返すことができます。 開発者はAPIを使用して、特定のコンテンツを選択するクエリを作成できます。この選択プロセスは、*your*&#x200B;個のコンテンツフラグメントモデルに基づいています。
 
 つまり、アプリケーションで使用する構造化コンテンツのヘッドレス配信をプロジェクトで実現できることになります。
 
 ## 次の手順 {#whats-next}
 
-これで、概念と用語を説明したので、次のステップは [AEM でのヘッドレス向けコンテンツモデリングの基本について](basics.md)です。
+これで、概念と用語を説明したので、次のステップは [AEM でのヘッドレス向けコンテンツフラグメントモデルの基本について](basics.md)です。
 
 ## その他のリソース {#additional-resources}
 
 * AEM ヘッドレスデベロッパージャーニー
-   * [CMS ヘッドレス開発について](/help/journey-headless/developer/learn-about.md)
-   * [コンテンツをモデル化する方法](/help/journey-headless/developer/model-your-content.md)
+  * [CMS ヘッドレス開発について](/help/journey-headless/developer/learn-about.md)
+  * [コンテンツをモデル化する方法](/help/journey-headless/developer/model-your-content.md)
 * [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
-* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

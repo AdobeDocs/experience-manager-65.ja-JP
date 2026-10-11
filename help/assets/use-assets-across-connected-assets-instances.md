@@ -8,7 +8,27 @@ feature: Connected Assets,User and Groups
 exl-id: 4ceb49d8-b619-42b1-81e7-c3e83d4e6e62
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 3aa2a621-ec4f-5c9b-bbb0-bd5a3b1279a6
+    internal-label: User and Groups
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: f498a57f-d890-4726-b1d0-8f291d1e6206
+    internal-label: Connected assets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '4025'
 ht-degree: 98%
@@ -40,7 +60,7 @@ Connected Assets 機能では、[!DNL Experience Manager Sites] と [!DNL Experi
 この機能を使用または設定する前に、以下を確認してください。
 
 * ユーザーがそれぞれのデプロイメント上で適切なユーザーグループに属している。
-* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[&#x200B; Experience Manager as a Cloud Service における Connected Assets &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
+* [!DNL Adobe Experience Manager]個のデプロイメントタイプの場合、サポートされている条件のいずれかが満たされます。[!DNL Experience Manager] 6.5 [!DNL Assets]は[!DNL Experience Manager] as a Cloud Serviceで動作します。 [!DNL Experience Manager] as a [!DNL Cloud Service] におけるこの機能の動作について詳しくは、[ Experience Manager as a Cloud Service における Connected Assets ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/use-assets-across-connected-assets-instances.html?lang=ja)を参照してください。
 
   | | [!DNL Sites] as a [!DNL Cloud Service] | AMS 上の [!DNL Experience Manager] 6.5 [!DNL Sites] | [!DNL Experience Manager] 6.5 [!DNL Sites] On-Premise |
   |---|---|---|---|

@@ -9,13 +9,22 @@ exl-id: e1de20b0-6d7a-4bda-b62f-c2808fd0af28
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 100%
-
 ---
-
 # We.Retail のグローバル化されたサイト構造の使用{#trying-out-the-globalized-site-structure-in-we-retail}
 
 We.Retail は、グローバル化されたサイト構造を使用して構築され、国固有の web サイトにライブコピーできる言語メインを提供します。 すべての設定がすぐに使用でき、この構造とビルトインの翻訳機能を試すことができます。

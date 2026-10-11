@@ -7,18 +7,27 @@ exl-id: fe727406-09cb-4516-8278-806fd78cfc12
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1675'
 ht-degree: 98%
-
 ---
-
 # JMX コンソールを使用したサービスの統合{#integrating-services-with-the-jmx-console}
 
 JMX コンソールを使用してサービスを管理する MBean を作成し、デプロイします。 管理タスクを実行できるよう、サービス属性および操作を公開します。
 
-JMX コンソールの使用について詳しくは、[JMX コンソールを使用したサーバーリソースの監視](/help/sites-administering/jmx-console.md)を参照してください。
+JMX コンソールの使用について詳しくは、[JMX コンソールを使用したサーバーリソースのモニタリング](/help/sites-administering/jmx-console.md)を参照してください。
 
 ## Felix および CQ5 の JMX フレームワーク {#the-jmx-framework-in-felix-and-cq}
 
@@ -205,7 +214,7 @@ ServiceRegistration serviceregistration =
 
 MBean サービスマネージャーは、サービス設定がリポジトリに保存されている場合に役立ちます。 このマネージャーは、サービス情報を取得し、対応する MBean の設定と作成に使用できます。 マネージャークラスは、リポジトリ変更イベントをリッスンし、それに応じて MBean サービスを更新することもできます。
 
-## 例：JMX を使用したワークフローモデルの監視 {#example-monitoring-workflow-models-using-jmx}
+## 例：JMX を使用したワークフローモデルのモニタリング {#example-monitoring-workflow-models-using-jmx}
 
 このサンプルの MBean は、リポジトリに保存されている CQ5 ワークフローモデルに関する情報を提供します。 MBean マネージャークラスは、リポジトリに保存されているワークフローモデルに基づいて MBean を作成し、その OSGi サービスを実行時に登録します。 このサンプルは、以下のメンバーを含む単一のバンドルで構成されています。
 

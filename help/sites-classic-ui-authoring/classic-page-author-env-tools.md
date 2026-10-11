@@ -1,18 +1,27 @@
 ---
 title: オーサリング - 環境とツール
 description: Web サイトコンソールを使用すると、web サイトを管理したり、web サイト内を移動したりできます。 2 つのパネルを使用して、web サイトの構造を展開し、必要な要素に対してアクションを実行できます。
-
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-
 docset: aem65
 exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 92%
@@ -200,10 +209,10 @@ Web サイトコンソールには、[ページの現在のステータスに関
 * [編集](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 これはデフォルトのモードで、ページの編集、コンポーネントの追加または削除、その他の変更を行うことができます。
 
-* [&#x200B; プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
+* [ プレビュー](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#previewing-pages)
 このモードでは、最終形式でweb サイトに表示されているかのように、ページをプレビューできます。
 
-* [&#x200B; デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
+* [ デザイン](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#main-pars-procedure-0)
 このモードでは、アクセス可能なコンポーネントを設定することで、ページのデザインを編集できます。
 
 >[!NOTE]

@@ -5,13 +5,39 @@ exl-id: a94794a4-bf8b-4f3b-a761-3f02feedd5c0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3072'
 ht-degree: 99%
-
 ---
-
 # AEM ヘッドレスの概要 {#getting-started}
 
 [AEM ヘッドレスデベロッパージャーニー](overview.md)のこの部分では、独自のプロジェクトを AEM ヘッドレスで開始するために必要な操作について説明します。
@@ -191,7 +217,7 @@ SPA エディターを使用すると、SPA で AEM のコンテンツを使用�
 * [翻訳](#translation) - AEM は、ロケール固有のフォルダー内にコンテンツのコピーを保持することで、コンテンツの翻訳を管理します。
 * 組織 - フォルダーは、翻訳のニーズをサポートするために必要なコンテンツ階層を定義し、コンテンツフラグメントを論理的に管理するために使用されます。
 
-AEM では、柔軟なコンテンツ構造を実現でき、階層は任意に拡大できます。 ただし、フォルダー構造の変更は、[&#x200B; コンテンツパスに依存している既存のクエリに意図しない結果をもたらす可能性があることを認識することが重要です。](#developer) したがって、事前に明確に設定された階層は、コンテンツ作成者にとって役立ちます。
+AEM では、柔軟なコンテンツ構造を実現でき、階層は任意に拡大できます。 ただし、フォルダー構造の変更は、[ コンテンツパスに依存している既存のクエリに意図しない結果をもたらす可能性があることを認識することが重要です。](#developer) したがって、事前に明確に設定された階層は、コンテンツ作成者にとって役立ちます。
 
 フォルダーは、（コンテンツフラグメントモデルに基づいて）特定のタイプのコンテンツのみを許可するように制限することもできます。 階層内のすべてのフォルダーに対して、どのモデルを許可するか明示的に指定することをお勧めします。 許可するコンテンツをフォルダーに指定することで、次のことができます。
 
@@ -285,7 +311,7 @@ AEM を使用した[一般的なヘッドレス実装](#level-1)の場合、デ�
 * [AEM ヘッドレス翻訳ジャーニー](/help/journey-headless/translation/overview.md) - このドキュメントジャーニーでは、ヘッドレステクノロジー、AEM によるヘッドレスコンテンツの提供方法、ヘッドレスコンテンツの翻訳方法について幅広く理解できます。
 
 * [AEM ヘッドレスチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja) - これらの実践チュートリアルでは、AEM を使用してヘッドレスエンドポイントにコンテンツを配信するための様々なオプションの使用方法と、適切なオプションを選択する方法を調べます。
-* [GraphQL API を使用したヘッドレスコンテンツ管理](https://experienceleague.adobe.com/ja?Solution=Experience+Manager&Solution=Experience+Manager+Sites&Solution=Experience+Manager+Forms&Solution=Experience+Manager+Screens&launch=ExperienceManager-D-1-2020.1.headless#courses) - AEM に実装されている GraphQL API の概要についてのコースです。 Adobe ID を使用した認証が必要です。
+* [GraphQL API を使用したヘッドレスコンテンツ管理](https://experienceleague.adobe.com/?Solution=Experience+Manager&Solution=Experience+Manager+Sites&Solution=Experience+Manager+Forms&Solution=Experience+Manager+Screens&launch=ExperienceManager-D-1-2020.1.headless#courses) - AEM に実装されている GraphQL API の概要についてのコースです。 Adobe ID を使用した認証が必要です。
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql)（英語のみ）- この GitHub プロジェクトには、AEM の GraphQL API を紹介するためのサンプルアプリケーションが含まれています。
 * [オーサリングの概念](/help/sites-authoring/author.md) - オーサーとパブリッシュの設定の詳細など、AEM のオーサリング環境に関する技術ドキュメント
 * [ページの公開](/help/sites-authoring/publishing-pages.md) - AEM でのコンテンツの公開に関する技術ドキュメント

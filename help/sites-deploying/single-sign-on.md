@@ -9,16 +9,28 @@ feature: Security
 exl-id: 7d2e4620-c3a5-4f5a-9eb6-42a706479d41
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 99%
-
+source-wordcount: '752'
+ht-degree: 97%
 ---
-
 # シングルサインオン {#single-sign-on}
 
-シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。 別個のシステム（信頼された認証と呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。 Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
+シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。 別個のシステム（信頼された認証システムと呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。 Experience Manager は、ユーザーのアクセス権限を確認および適用します（つまり、ユーザーがアクセスできるリソースを決定します）。
 
 SSO 認証ハンドラーサービス（`com.adobe.granite.auth.sso.impl.SsoAuthenticationHandler`）は、信頼された認証が提供する認証結果を処理します。 SSO 認証ハンドラーは、次の順序で特別な属性の値として SSO 識別子（SSID）を検索します。
 
@@ -85,7 +97,8 @@ AEM インスタンスの SSO を設定するには、[SSO 認証ハンドラー
 >* `disp_iis.ini`
 >* IIS
 >
->`disp_iis.ini` セット：> （詳細については、[Microsoft® Internet Information ServerでのDispatcherのインストール &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja#microsoft-internet-information-server)を参照）
+>`disp_iis.ini` で次のように設定します。
+>（詳しくは、[Dispatcher を Microsoft® Internet Information Server と共にインストールする方法に関するページ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja#microsoft-internet-information-server)を参照してください）
 >
 >* `servervariables=1`（IIS サーバー変数をリクエストヘッダーとしてリモートインスタンスに転送します）
 >* `replaceauthorization=1`（「Basic」を除く、「Authorization」という名前のすべてのヘッダーを「Basic」と同等のものに置き換えます）
@@ -145,10 +158,10 @@ Transfer-Encoding: chunked
 ....
 ```
 
-これは、次をリクエストした場合にも機能します。
+これは、次のリクエストを行った場合にも機能します。
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-または、次の curl コマンドを使用して、`TestHeader` ヘッダーを `admin:` に送信します
+または、次のcurl コマンドを使用して、`TestHeader` ヘッダーをに送信できます `admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]

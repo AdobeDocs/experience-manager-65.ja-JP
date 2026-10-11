@@ -9,7 +9,18 @@ exl-id: 3891150e-9972-4bbc-ad61-7f46a1f9bbb4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '5299'
 ht-degree: 94%
@@ -359,7 +370,7 @@ N:charting
 
       * `totals`（`Boolean`）
 
-        **合計**&#x200B;を示す線を追加表示する場合は、true を指定します。
+        **合計**を示す線を追加表示する場合は、true を指定します。
         デフォルト：`false`
 
       * `series`（`Long`）
@@ -746,7 +757,7 @@ N:data
 
 以下のいずれかを指定して、前処理中に使用できます。
 
-* [&#x200B; パターンの検索と置換](#preprocessing-find-and-replace-patterns)
+* [ パターンの検索と置換](#preprocessing-find-and-replace-patterns)
 見つかった場合、指定されたパターン（正規表現として定義されている）は別のパターンに置き換えられます。例えば、これは元の部分文字列を抽出するために使用できます。
 
 * [データタイプフォーマッター](#preprocessing-data-type-formatters)

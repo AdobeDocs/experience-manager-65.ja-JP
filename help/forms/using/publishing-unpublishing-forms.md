@@ -10,13 +10,26 @@ exl-id: f26c4268-7885-4e61-a258-219d98288548
 solution: Experience Manager, Experience Manager Forms
 feature: Correspondence Management
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 3f00fc92-85ee-583e-abd1-3bc3d96de3a0
+    internal-label: Correspondence Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 100%
-
 ---
-
 # フォームとドキュメントの公開と非公開{#publishing-and-unpublishing-forms-and-documents}
 
 AEM Forms では、フォームを簡単に作成し、公開したり非公開にしたりできます。 AEM Forms について詳しくは、[フォーム管理の概要](../../forms/using/introduction-managing-forms.md)を参照してください。
@@ -51,7 +64,7 @@ AEM Forms では、次のアセットタイプをサポートしています。
   * カスタムレイアウト
   * カスタム外観
   * CSS ファイル - アダプティブフォームのコンテナプロパティダイアログで入力値として使用
-  * クライアントライブラリカテゴリ - アダプティブフォームのコンテナプロパティダイアログで入力値として使用
+  * クライアントライブラリカテゴリ - アダプティブフォームのコンテナプロパティダイアログで入力として使用
   * アダプティブフォームテンプレートの一部として含まれる可能性のあるその他のクライアントライブラリ
   * デザインパス
 
@@ -80,7 +93,7 @@ AEM Forms では、次のアセットタイプをサポートしています。
       >
       >複数のアセットを選択しないでください。 複数のアセットを一度に公開することはサポートされていません。
 
-1. 公開プロセスが始まるときに、確認ダイアログが表示され、関連するすべてのアセットとリソースが表示されます。 関連アセットを含むダイアログボックスで、「**[!UICONTROL 公開]**」を選択します。 アセットが公開され、「アセット公開成功」ダイアログが表示されます。
+1. 公開プロセスが開始されると、関連するすべてのアセットとリソースを一覧表示する確認ダイアログが表示されます。 関連アセットを含むダイアログボックスで、「**[!UICONTROL 公開]**」を選択します。 アセットが公開され、「アセット公開成功」ダイアログが表示されます。
 
    >[!NOTE]
    >
@@ -157,7 +170,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 
 ## アセットまたはレターを以前の公開済みバージョンに戻す {#revert-an-asset-or-letter-to-the-previously-published-version}
 
-アセットまたはレターを編集して公開するたびに、アセットまたはレターのバージョンが作成されます。 アセットまたはレターを、以前に公開したバージョンに戻すことができます。 アセットまたはドキュメントの現在のバージョンに対して誰かが誤った操作をした場合、バージョンの巻き戻しが必要になることがあります。
+アセットまたはレターを編集して公開するたびに、アセットまたはレターのバージョンが作成されます。 アセットまたはレターを、以前に公開したバージョンに戻すことができます。 アセットまたはドキュメントの現在のバージョンで問題が発生した場合は、そのようにする必要が生じることがあります。
 
 >[!NOTE]
 >
@@ -184,7 +197,7 @@ AEM Forms では、フォームとドキュメントでアセットの公開と�
 
    >[!NOTE]
    >
-   >選択されているアセットだけが削除され、従属アセットは削除されません。 アセットの参照を確認するには、![参照](assets/references.png) を選択してからアセットを選択します。
+   >選択されているアセットだけが削除され、依存アセットは削除されません。 アセットの参照を確認するには、![参照](assets/references.png) を選択してからアセットを選択します。
    >
    >
    >削除しようとしているアセットが別のアセットの子アセットである場合、削除されません。 そのようなアセットを削除するには、別のアセットからのそのアセットへの参照を削除してから再度実行します。

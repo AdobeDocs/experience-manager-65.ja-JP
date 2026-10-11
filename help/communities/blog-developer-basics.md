@@ -10,7 +10,16 @@ exl-id: 51f616e8-4aba-47f6-b948-d5147d84bbb6
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 4%
@@ -29,7 +38,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 
 ## クライアントサイドの基本 {#essentials-for-client-side}
 
-ブログ機能は、[&#x200B; ブログ関数](/help/communities/functions.md#blog-function)を追加するか、作成者編集モードでページにコンポーネントを追加することで使用できる2つの主要コンポーネントで構成されています。
+ブログ機能は、[ ブログ関数](/help/communities/functions.md#blog-function)を追加するか、作成者編集モードでページにコンポーネントを追加することで使用できる2つの主要コンポーネントで構成されています。
 
 ### ブログ {#blog}
 
@@ -70,7 +79,7 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 | [**clientllibs**](/help/communities/clientlibs.md) | cq.social.hbs.journal_sidebar |
 | **テンプレート** | /libs/social/journal/components/hbs/sidebar/sidebar.hbs |
 | **css** | /libs/social/journal/components/hbs/sidebar/clientlibs/sidebar.css |
-| **プロパティ** | [&#x200B; ブログ機能](/help/communities/blog-feature.md)を参照 |
+| **プロパティ** | [ ブログ機能](/help/communities/blog-feature.md)を参照 |
 
 * [クライアントサイドのカスタマイズ](/help/communities/client-customize.md)
 
@@ -84,12 +93,12 @@ AEM 6.1 Communitiesでは、ブログはコミュニティアクティビティ�
 
 ### ブログ機能 {#blog-function}
 
-[&#x200B; ブログ関数](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造には、`Blog`および`Blog Sidebar`個のコンポーネントが設定されています。 ブログ関数は、[特権メンバーユーザーグループ &#x200B;](/help/communities/users.md#privileged-members-group)の識別をサポートしています。
+[ ブログ関数](/help/communities/functions.md#blog-function)を含むコミュニティサイト構造には、`Blog`および`Blog Sidebar`個のコンポーネントが設定されています。 ブログ関数は、[特権メンバーユーザーグループ ](/help/communities/users.md#privileged-members-group)の識別をサポートしています。
 
 ### ブログエントリ（UGC）へのアクセス {#accessing-blog-entries-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](/help/communities/moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](/help/communities/working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -97,10 +106,10 @@ AEM 6.1 Communitiesでは、UGC用の[common store](/help/communities/working-wi
 
 を参照：
 
-* [&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](/help/communities/srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP](/help/communities/accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
 
 ## プライマリ発行者 {#primary-publisher}
 
@@ -118,4 +127,4 @@ AEM 6.2以降、以前は手動で行う必要があった変更は、デフォ�
 
 リッチメディアは、`Embed Media from External Sites` アイコンを選択してブログ記事に埋め込まれます。
 
-![&#x200B; メディア &#x200B;](assets/media-icon.png)
+![ メディア ](assets/media-icon.png)

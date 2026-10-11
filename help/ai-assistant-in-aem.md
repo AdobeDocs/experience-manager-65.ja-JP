@@ -15,9 +15,16 @@ product_v2:
 feature_v2:
   - id: ac5ecfc1-cc78-4ecc-a90a-0362685062ce
     internal-label: AI Tools
+subfeature_v2:
+  - id: bf7fca06-df97-4229-884f-76afcfade5ad
+    internal-label: AI Assistant
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
     internal-label: Intermediate
@@ -34,7 +41,7 @@ topic_v2:
     internal-label: Insights
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
-source-git-commit: a6f7741fe575a194732abee7dfc9c531d1c58cc2
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 79%
@@ -62,7 +69,7 @@ AEM に直接埋め込まれ、AEM Experience Hub、Cloud Manager、オーサー
 
 次の 3 分 25 秒のビデオでは、AEM の AI アシスタントの使い方を順を追って紹介しています。
 
->[!VIDEO](https://video.tv.adobe.com/v/3475359/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 ## AEM の AI アシスタントにアクセスする{#get-access}
 
@@ -77,7 +84,7 @@ AEM の AI アシスタントにアクセスするには、次の要件を満た
 
 **AEM の AI アシスタントにアクセスするには：**
 
-1. Adobe Experience Manager の AI を活用した機能とエージェント型機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、アドビ担当者にお問い合わせください。 生成AIの有効化の仕組みについては、[CX Enterprise アプリケーションの生成AI](https://experienceleague.adobe.com/ja/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)を参照してください。
+1. Adobe Experience Manager の AI を活用した機能とエージェント型機能のほとんどにアクセスするには、お客様は追加契約を締結する必要があります。 詳しくは、アドビ担当者にお問い合わせください。 生成AIの有効化の仕組みについては、[CX Enterprise アプリケーションの生成AI](https://experienceleague.adobe.com/en/docs/cx-enterprise-ai/experience-cloud-ai/overview/generative-ai)を参照してください。
 
 1. 組織がこの契約書を取得すると、すべてのユーザーがデフォルトで製品知識にAI アシスタントを使用できるようになります。 ユーザーごとの権限やグループごとの権限は必要ありません。
 

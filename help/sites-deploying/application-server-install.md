@@ -9,13 +9,25 @@ exl-id: 3a90f1d2-e53f-4cc4-8122-024ad6500de0
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1186'
 ht-degree: 99%
-
 ---
-
 # アプリケーションサーバーのインストール{#application-server-install}
 
 >[!NOTE]
@@ -42,7 +54,7 @@ Web アプリケーションのインストール、サーバーの設定、サ�
 
 ### アプリケーションサーバーに AEM をインストールするときのデフォルトの動作 {#default-behaviour-when-installing-aem-in-an-application-server}
 
-AEM は、単一の war ファイルとしてデプロイされます。
+AEM は、デプロイ用の単一の war ファイルとして提供されます。
 
 デプロイすると、デフォルトで次のようになります。
 
@@ -103,7 +115,7 @@ AEM は、単一の war ファイルとしてデプロイされます。
 
 * Basic 認証ヘッダーを無効にします。
 
-   * AEM にユーザーを認証させる方法の 1 つは、WebSphere® サーバーのグローバル管理セキュリティを無効にすることです。無効にするには、セキュリティ／グローバル セキュリティに移動し、「Enable administrative security」チェックボックスをオフにして、保存し、サーバーを再起動します。
+  * AEM にユーザーを認証させる方法の 1 つは、WebSphere® サーバーのグローバル管理セキュリティを無効にすることです。無効にするには、セキュリティ／グローバル セキュリティに移動し、「Enable administrative security」チェックボックスをオフにして、保存し、サーバーを再起動します。
 
 * `"JAVA_OPTS= -Xmx2048m"` の設定
 * コンテキストルート = / を使用して AEM をインストールする場合は、既存のデフォルト web アプリケーションのコンテキストルートを変更します。
@@ -113,14 +125,14 @@ AEM は、単一の war ファイルとしてデプロイされます。
 * AEM war ファイルをダウンロードします。
 * 必要に応じて、web.xml で設定します（上記の概要を参照）。
 
-   * WEB-INF/web.xml ファイルを解凍
-   * sling.run.modes パラメーターを publish に変更
-   * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
-   * web.xml ファイルを再圧縮
+  * WEB-INF/web.xml ファイルを解凍
+  * sling.run.modes パラメーターを publish に変更
+  * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定
+  * web.xml ファイルを再圧縮
 
 * AEM war ファイルをデプロイします。
 
-   * コンテキストルートを選択します（Sling 実行モードを設定する場合は、デプロイウィザードの詳細な手順を選択し、ウィザードの手順 6 で指定する必要があります）。
+  * コンテキストルートを選択します（Sling 実行モードを設定する場合は、デプロイウィザードの詳細な手順を選択し、ウィザードの手順 6 で指定する必要があります）。
 
 * AEM web アプリケーションの起動
 
@@ -158,12 +170,12 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 
 * `${myDomain}/config/config.xml` で、security-configuration セクションに以下を追加します。
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>`正確な位置については、[https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) を参照してください（デフォルトではセクションの最後に追加すれば問題ありません）。
+  * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>`正確な位置については、[https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) を参照してください（デフォルトではセクションの最後に追加すれば問題ありません）。
 
 * VM メモリ設定の値を増やします。
 
-   * `${myDomain}/bin/setDomainEnv.cmd`（resp .sh）を開いて WLS_MEM_ARGS を検索し、設定します（例：`WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m` を設定）
-   * WebLogic Server を再起動します。
+  * `${myDomain}/bin/setDomainEnv.cmd`（resp .sh）を開いて WLS_MEM_ARGS を検索し、設定します（例：`WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m` を設定）
+  * WebLogic Server を再起動します。
 
 * `${myDomain}` に packages フォルダーを作成し、その中に cq フォルダー、その中に Plan フォルダーを作成します。
 
@@ -173,10 +185,10 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 * AEM war ファイルを${myDomain}/packages/cq フォルダーに配置します
 * 必要に応じて、`WEB-INF/web.xml` で設定します（上記の「概要」を参照）。
 
-   * `WEB-INF/web.xml`ファイルを解凍します
-   * sling.run.modes パラメーターを publish に変更
-   * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
-   * web.xml ファイルを再圧縮
+  * `WEB-INF/web.xml`ファイルを解凍します
+  * sling.run.modes パラメーターを publish に変更
+  * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します（「概要」を参照）。
+  * web.xml ファイルを再圧縮
 
 * AEM war ファイルをアプリケーションとしてデプロイします（他の設定にはデフォルト設定を使用します）。
 * インストールには時間がかかる場合があります。
@@ -189,64 +201,64 @@ deployment-scanner を使用して AEM web アプリケーションをインス�
 
 * **Tomcat サーバーの準備**
 
-   * VM メモリ設定の値を増やします。
+  * VM メモリ設定を増やします：
 
-      * `bin/catalina.bat`（UNIX® の場合は `catalina.sh`）に、次の設定を追加します。
-      * `set "JAVA_OPTS= -Xmx2048m`
+    * `bin/catalina.bat`（UNIX® の場合は `catalina.sh`）に、次の設定を追加します。
+    * `set "JAVA_OPTS= -Xmx2048m`
 
-   * Tomcat では、インストール時に管理者もマネージャーもアクセスできません。 そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
+  * Tomcat では、インストール時に管理者もマネージャーもアクセスできません。 そのため、次のアカウントへのアクセスを許可するには `tomcat-users.xml` を手動で編集する必要があります。
 
-      * `tomcat-users.xml` を編集して、管理者およびマネージャーのアクセスを含めます。 設定は次の例のようになります。
+    * `tomcat-users.xml` を編集して、管理者およびマネージャーのアクセスを含めます。 設定は次の例のようになります。
 
-        ```xml
-        <?xml version='1.0' encoding='utf-8'?>
-        <tomcat-users>
-        role rolename="manager"/>
-        role rolename="tomcat"/>
-        <role rolename="admin"/>
-        <role rolename="role1"/>
-        <role rolename="manager-gui"/>
-        <user username="both" password="tomcat" roles="tomcat,role1"/>
-        <user username="tomcat" password="tomcat" roles="tomcat"/>
-        <user username="admin" password="admin" roles="admin,manager-gui"/>
-        <user username="role1" password="tomcat" roles="role1"/>
-        </tomcat-users>
-        ```
+      ```xml
+      <?xml version='1.0' encoding='utf-8'?>
+      <tomcat-users>
+      role rolename="manager"/>
+      role rolename="tomcat"/>
+      <role rolename="admin"/>
+      <role rolename="role1"/>
+      <role rolename="manager-gui"/>
+      <user username="both" password="tomcat" roles="tomcat,role1"/>
+      <user username="tomcat" password="tomcat" roles="tomcat"/>
+      <user username="admin" password="admin" roles="admin,manager-gui"/>
+      <user username="role1" password="tomcat" roles="role1"/>
+      </tomcat-users>
+      ```
 
-   * コンテキストルート「/」を使用して AEM をデプロイする場合は、既存の ROOT web アプリケーションのコンテキストルートを変更する必要があります。
+  * コンテキストルート「/」を使用して AEM をデプロイする場合は、既存の ROOT web アプリケーションのコンテキストルートを変更する必要があります。
 
-      * ROOT web アプリケーションを停止してデプロイ解除します。
-      * Tomcat の web アプリケーションフォルダーで ROOT.war フォルダーの名前を変更します。
-      * Web アプリケーションを再起動します。
+    * ROOT web アプリケーションを停止してデプロイ解除します。
+    * Tomcat の web アプリケーションフォルダーで ROOT.war フォルダーの名前を変更します。
+    * Web アプリケーションを再起動します。
 
-   * manager-gui を使用して AEM web アプリケーションをインストールする場合は、アップロードファイルの最大サイズを増やす必要があります。デフォルトで許可されているアップロードサイズは 50 MB のみです。 これに対して、マネージャー web アプリケーションの web.xml を開き、
+  * manager-gui を使用して AEM web アプリケーションをインストールする場合は、アップロードファイルの最大サイズを増やす必要があります。デフォルトで許可されているアップロードサイズは 50 MB のみです。 これに対して、マネージャー web アプリケーションの web.xml を開き、
 
-     `webapps/manager/WEB-INF/web.xml`
+    `webapps/manager/WEB-INF/web.xml`
 
-     max-file-size と max-request-size を 500 MB 以上に増やします。そのような `web.xml` ファイルの例として、次の `multipart-config` の例を参照してください。
+    max-file-size と max-request-size を 500 MB 以上に増やします。そのような `web.xml` ファイルの例として、次の `multipart-config` の例を参照してください。
 
-     ```xml
-     <multipart-config>
-     <!-- 500MB max -->
-     <max-file-size>524288000</max-file-size>
-     <max-request-size>524288000</max-request-size>
-     <file-size-threshold>0</file-size-threshold>
-     </multipart-config>
-     ```
+    ```xml
+    <multipart-config>
+    <!-- 500MB max -->
+    <max-file-size>524288000</max-file-size>
+    <max-request-size>524288000</max-request-size>
+    <file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+    ```
 
 * **AEM web アプリケーションのデプロイ**
 
-   * AEM war ファイルをダウンロードします。
-   * 必要に応じて、web.xml で設定を行います（上記の概要を参照）。
+  * AEM war ファイルをダウンロードします。
+  * 必要に応じて、web.xml で設定を行います（上記の概要を参照）。
 
-      * WEB-INF/web.xml ファイルを展開します。
-      * sling.run.modes パラメーターを publish に変更します。
-      * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します。
-      * web.xml ファイルを再圧縮します。
+    * WEB-INF/web.xml ファイルを展開します。
+    * sling.run.modes パラメーターを publish に変更します。
+    * sling.home 初期パラメーターをコメント解除し、必要に応じてこのパスを設定します。
+    * web.xml ファイルを再圧縮します。
 
-   * AEM war ファイルをルート web アプリケーションとしてデプロイする場合は、名前を ROOT.war に変更します。 aemauthor をコンテキストルートとして使用する場合は、名前を aemauthor.war に変更します。
-   * ファイルを Tomcat の webapps フォルダーにコピーします。
-   * AEM がインストールされるまで待ちます。
+  * AEM war ファイルをルート web アプリケーションとしてデプロイする場合は、名前を ROOT.war に変更します。 aemauthor をコンテキストルートとして使用する場合は、名前を aemauthor.war に変更します。
+  * ファイルを Tomcat の webapps フォルダーにコピーします。
+  * AEM がインストールされるまで待ちます。
 
 ## トラブルシューティング {#troubleshooting}
 

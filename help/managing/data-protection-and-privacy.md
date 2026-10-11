@@ -10,13 +10,29 @@ exl-id: 46c1ca14-78f6-4b33-9fdf-1b90a9875f66
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer, Leader, User
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 99%
-
 ---
-
 # データ保護およびデータプライバシーに関する規制に対する Adobe Experience Manager の対応 {#aem-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
@@ -65,19 +81,19 @@ Adobe Experience Manager の場合：
 
 * インスタンスと、それらに対して実行されるアプリケーションは、顧客が所有および運用します。
 
-   * 顧客が、事業体やサービスプロバイダー、データ管理者、データ処理者などの規制上の役割を効果的に管理します。
+  * 顧客が、事業体やサービスプロバイダー、データ管理者、データ処理者などの規制上の役割を効果的に管理します。
 
-   * 次の図に示すように、Adobe Experience Platform Privacy Service は AEM のワークフローの一部ではありません。
+  * 次の図に示すように、Adobe Experience Platform Privacy Service は AEM のワークフローの一部ではありません。
 
 * AEM には、顧客のプライバシー管理者や AEM 管理者が、手動または API を使用して（使用可能な場合）、プライバシー規制のリクエストを実行するためのドキュメントと手順が含まれています。
 
 * 新しいサービスや UI は追加されていません。
 
-   * 代わりに、プライバシー規制のリクエストを処理する顧客 UI／ポータルで使用する手順と API が文書化されています。
+  * 代わりに、プライバシー規制のリクエストを処理する顧客 UI／ポータルで使用する手順と API が文書化されています。
 
 * AEM には、プライバシーリクエストワークフローをサポートする標準のツールは含まれません。
 
-   * アドビは、顧客のプライバシー管理者や AEM 管理者向けのドキュメントやプロシージャを提供し、プライバシー規制に関連するリクエストを手動で実行できるようにします。
+  * アドビは、顧客のプライバシー管理者や AEM 管理者向けのドキュメントやプロシージャを提供し、プライバシー規制に関連するリクエストを手動で実行できるようにします。
 
 アドビは、Adobe Experience Manager のアクセス、削除、オプトアウトに関するプライバシーリクエストを処理するプロシージャを提供しています。 場合によっては、自動化に役立つように、顧客が開発したポータルまたはスクリプトから呼び出すことができる API を使用できます。
 

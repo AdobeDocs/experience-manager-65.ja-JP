@@ -9,18 +9,34 @@ role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 100%
-
 ---
-
 # Task Manager サービス Java API クイックスタート（SOAP） {#task-manager-service-java-api-quickstart-soap}
 
 Task Manager サービスでは、以下のクイックスタートが使用できます。
 
-[クイックスタート（SOAP モード）：Java API を使用して、タスクを割り当てる](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したタスクの割り当て](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java API を使用して、タスクをロック](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
@@ -268,7 +284,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用して、ユーザーに割り当てられたタスクを取得 {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-次の Java コードの例では、*Tony Blue* という名前のユーザーに割り当てられているすべてのタスクを取得します。 このユーザーは、接続プロパティで指定されていることにご注意ください。 識別情報の値や説明など、返されるタスクに関する情報が表示されます。
+次の Java コードの例では、*Tony Blue* という名前のユーザーに割り当てられているすべてのタスクを取得します。 このユーザーは、接続プロパティで指定されていることにご注意ください。 識別子の値や説明など、返されるタスクに関する情報が表示されます。
 
 ```java
  /*

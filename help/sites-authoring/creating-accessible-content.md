@@ -5,7 +5,22 @@ exl-id: 2145d761-f51d-482b-a0e7-ef7500c4872f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '14509'
 ht-degree: 91%
@@ -233,7 +248,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 * [達成基準1.2.3を満たす方法](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded)
 
 <!--
-* [Adobe Encore](https://www.adobe.com/jp/products/encore.html) - a DVD authoring software tool
+* [Adobe Encore](https://www.adobe.com/products/encore.html) - a DVD authoring software tool
 -->
 
 ### キャプション（ライブ）（1.2.4）  {#captions-live}
@@ -248,7 +263,7 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 #### 達成方法 - キャプション（ライブ）（1.2.4） {#how-to-meet-captions-live}
 
-上記の[&#x200B; キャプション（収録済み） &#x200B;](#captions-prerecorded)のガイダンスに従います。 しかし、メディアのライブの性質により、キャプションの提供は可能な限り迅速に、何が起こっているかに応じて作成する必要があります。 そのため、リアルタイムキャプションツールまたは音声テキスト変換ツールの使用を検討する必要があります。
+上記の[ キャプション（収録済み） ](#captions-prerecorded)のガイダンスに従います。 しかし、メディアのライブの性質により、キャプションの提供は可能な限り迅速に、何が起こっているかに応じて作成する必要があります。 そのため、リアルタイムキャプションツールまたは音声テキスト変換ツールの使用を検討する必要があります。
 
 詳細な手順説明はこのドキュメントの範囲外ですが、次のリソースで役に立つ情報が提供されています。
 
@@ -936,7 +951,7 @@ John Smith's publications
 
 * 達成基準 2.4.7
 * レベル AA
-* フォーカスの可視化：キーボード操作可能なユーザインターフェイスは、キーボードフォーカスインジケータを表示する操作モードがある。
+* フォーカスの可視化：キーボード操作可能なユーザーインターフェイスは、キーボードフォーカスインジケータを表示する操作モードがある。
 
 #### 目的 - フォーカスの可視化（2.4.7） {#purpose-focus-visible}
 
@@ -1052,7 +1067,7 @@ span 要素を適切な言語で追加するには、RTE のソース編集モ�
 
 * 達成基準 3.2.1
 * レベル A
-* フォーカス時：どのユーザインターフェイスコンポーネントもフォーカスを受け取ったときに、コンテキストの変化を引き起こさない。
+* フォーカス時：どのユーザーインターフェイスコンポーネントもフォーカスを受け取ったときに、コンテキストの変化を引き起こさない。
 
 #### 目的 - フォーカス時（3.2.1） {#purpose-on-focus}
 

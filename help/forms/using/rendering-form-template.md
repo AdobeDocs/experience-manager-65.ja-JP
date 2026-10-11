@@ -1,6 +1,6 @@
 ---
 title: HTML5 forms 用のフォームテンプレートのレンダリング
-description: HTML5 フォームのプロファイルは、プロファイルレンダーに関連付けられています。プロファイルレンダーは、Forms OSGi サービスを呼び出してフォームの HTML 表現を生成する役割を持つ JSP ページです。
+description: HTML5 フォームのプロファイルは、プロファイルレンダーに関連付けられています。 プロファイルレンダーは、Forms OSGi サービスを呼び出してフォームの HTML 表現を生成する役割を持つ JSP ページです。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
@@ -9,24 +9,39 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 022b9953-2d64-473f-87b7-aac1602f6a7e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '543'
 ht-degree: 100%
-
 ---
-
 # HTML5 forms 用のフォームテンプレートのレンダリング {#rendering-form-template-for-html-forms}
 
 ## レンダーエンドポイント {#render-endpoint}
 
-HTML5 forms には、フォームテンプレートのモバイルレンダリングを可能にするため、REST エンドポイントとして公開される&#x200B;**プロファイル**&#x200B;の概念があります。これらのプロファイルには関連する&#x200B;**プロファイルレンダラー**&#x200B;があります。それらは Forms OSGi サービスを呼び出すことでフォームの HTML 表現を生成する役割を持つ JSP ページです。プロファイルノードの JCR パスによって、レンダーエンドポイントの URL が決定されます。「default」プロファイルを指すフォームのデフォルトのレンダーエンドポイントは、次のようになります。
+HTML5 forms には、フォームテンプレートのモバイルレンダリングを可能にするため、REST エンドポイントとして公開される&#x200B;**プロファイル**&#x200B;の概念があります。 これらのプロファイルには関連する&#x200B;**プロファイルレンダラー**&#x200B;があります。 それらは Forms OSGi サービスを呼び出すことでフォームの HTML 表現を生成する役割を持つ JSP ページです。 プロファイルノードの JCR パスによって、レンダーエンドポイントの URL が決定されます。 「default」プロファイルを指すフォームのデフォルトのレンダーエンドポイントは、次のようになります。
 
-https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*path of the folder containg form xdp*>&amp;template=&lt;*name of the xdp*>
+https://<*host*>:<*port*>/content/xfaforms/profiles/default.html?contentRoot=<*path of the folder containg form xdp*>&template=<*name of the xdp*>
 
 例：`http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
-カスタムプロファイルでは、それに応じてエンドポイントが変わります。例えば、hrforms という名前を持つカスタムプロファイルのエンドポイントは次のようになります。
+カスタムプロファイルでは、それに応じてエンドポイントが変わります。 例えば、hrforms という名前を持つカスタムプロファイルのエンドポイントは次のようになります。
 
 `http://localhost:4502/content/xfaforms/profiles/hrforms.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 
@@ -54,7 +69,7 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
   </tr>
   <tr>
    <td>contentRoot<br /> </td>
-   <td>このパラメーターは、テンプレートとそれに関連するリソースが存在するパスを指定します。このパスには、サーバーのファイルシステムパス、リポジトリパス、http または ftp パスを使用できます。<br /> </td>
+   <td>このパラメーターは、テンプレートとそれに関連するリソースが存在するパスを指定します。 このパスには、サーバーのファイルシステムパス、リポジトリパス、http または ftp パスを使用できます。<br /> </td>
   </tr>
   <tr>
    <td>submitUrl<br /> </td>
@@ -67,19 +82,19 @@ http://localhost:4502/content/xfaforms/profiles/default.html?
 
 | パラメーター | 説明 |
 |---|---|
-| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。このパラメーターには XML 形式データを返す REST サービスへの URL を使用できます。 |
-| data | このパラメーターは、テンプレートと結合される UTF-8 エンコードされたデータバイトを指定します。このパラメーターが指定されている場合、HTML5 フォームは dataRef パラメーターを無視します。 |
+| dataRef | このパラメーターはテンプレートと結合されるデータファイルの&#x200B;**絶対パス**&#x200B;を指定します。 このパラメーターには XML 形式データを返す REST サービスへの URL を使用できます。 |
+| data | このパラメーターは、テンプレートと結合される UTF-8 エンコードされたデータバイトを指定します。 このパラメーターが指定されている場合、HTML5 フォームは dataRef パラメーターを無視します。 |
 
 ### レンダーパラメーターの送信 {#passing-the-render-parameter}
 
-HTML5 フォームは、3 つの方法によるレンダーパラメーターの送信をサポートしています。URL、キーと値のペアおよびプロファイルノードを使用してパラメーターを送信することができます。レンダーパラメーターでは、キーと値のペアの優先度が最も高く、次に優先度が高いのがプロファイルノードです。URL リクエストパラメーターは最低の優先度を持ちます。
+HTML5 フォームは、3 つの方法によるレンダーパラメーターの送信をサポートしています。 URL、キーと値のペアおよびプロファイルノードを使用してパラメーターを送信することができます。 レンダーパラメーターでは、キーと値のペアの優先度が最も高く、次に優先度が高いのがプロファイルノードです。 URL リクエストパラメーターは最低の優先度を持ちます。
 
-* **URL リクエストパラメーター**: レンダリングパラメーターを URL で指定できます。URL リクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されます。例えば送信 URL `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp` には、その中にテンプレートパラメーターが含まれます。
+* **URL リクエストパラメーター**: レンダリングパラメーターを URL で指定できます。 URL リクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されます。 例えば送信 URL `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=/Applications/FormSubmission/1.0&template=sampleForm.xdp` には、その中にテンプレートパラメーターが含まれます。
 
-* **SetAttribute リクエストパラメーター**: レンダリングパラメーターをキー値ペアとして指定できます。SetAttribute リクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されません。リクエストを他の JSP から HTML5 フォームのプロファイルレンダ― JSP に転送し、リクエストオブジェクトで *setAttribute* を使用してすべてのレンダーパラメーターを渡すことができます。この方法が最も優先されます。
+* **SetAttribute リクエストパラメーター**: レンダリングパラメーターをキー値ペアとして指定できます。 SetAttribute リクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されません。 リクエストを他の JSP から HTML5 フォームのプロファイルレンダ― JSP に転送し、リクエストオブジェクトで *setAttribute* を使用してすべてのレンダーパラメーターを渡すことができます。 この方法が最も優先されます。
 
-* **プロファイルノードリクエストパラメーター：**&#x200B;レンダリングパラメーターをプロファイルノードのノードプロパティとして指定できます。プロファイルノードリクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されません。プロファイルノードは、リクエストが送信されるノードです。パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
+* **プロファイルノードリクエストパラメーター：**&#x200B;レンダリングパラメーターをプロファイルノードのノードプロパティとして指定できます。 プロファイルノードリクエストパラメーターでは、パラメーターがエンドユーザーに対して表示されません。 プロファイルノードは、リクエストが送信されるノードです。 パラメーターをノードプロパティとして指定するには、CRXDE lite を使用します。
 
 ### 送信パラメーター {#submit-parameters}
 
-HTML5 フォームはデータを送信し、サーバーサイドのスクリプトおよび web サービスを AEM サーバーで実行します。サーバーサイドのスクリプトと web サービスを AEM サーバーで実行するために使用するパラメーターについて詳しくは、[HTML5 フォームサービスプロキシ](/help/forms/using/service-proxy.md)を参照してください。
+HTML5 フォームはデータを送信し、サーバーサイドのスクリプトおよび web サービスを AEM サーバーで実行します。 サーバーサイドのスクリプトと web サービスを AEM サーバーで実行するために使用するパラメーターについて詳しくは、[HTML5 フォームサービスプロキシ](/help/forms/using/service-proxy.md)を参照してください。

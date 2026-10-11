@@ -8,7 +8,25 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 048bd9e8-ef34-40fb-9f46-73743d7b47c8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2871'
 ht-degree: 95%
@@ -75,7 +93,7 @@ ht-degree: 95%
 
 **戻り値のタイプ**：式は、式の結果が表示されるフィールドに対応する値を返します（例えば、小数値）。
 
-**例**: **field1**&#x200B;の2つのフィールドの合計を表示する計算式は次のとおりです。
+**例**: **field1**の2つのフィールドの合計を表示する計算式は次のとおりです。
 `field2.value + field3.value`
 
 ### クリック式 {#click-expression}
@@ -280,7 +298,7 @@ guideBridge.on("elementValueChanged", function (event, data)  {
 1. 作成したノードの「プロパティ」タブを開きます。 例えば、`textboxpatterns` の「プロパティ」タブを開きます。 このノードに `guideComponentType` プロパティを追加して、その値を *fd/af/components/formatter/guideTextBox* に設定します。
 
 1. このプロパティの値は、パターンを定義するフィールドに応じて変わります。 数値フィールドの場合、`guideComponentType` プロパティの値は、*fd/af/components/formatter/guideNumericBox* です。 Datepicker フィールドの値は&#x200B;*fd/af/components/formatter/guideDatepicker*です。
-&grave;&grave;
+``
 1. `textboxpatterns` ノードにプロパティを割り当てることで、カスタムパターンを追加できます。 名前の付いたプロパティ（例えば、`pattern1`）を追加して、追加するパターンにその値を設定します。 例えば、値が Fax=text{99-999-9999999} のプロパティ `pattern1` を追加します。 パターンは、アダプティブフォームで使用するすべてのテキストボックスで使用できます。
 
    ![CrxDe でのフィールドのカスタムパターンの作成](assets/creating-custom-patterns.png)

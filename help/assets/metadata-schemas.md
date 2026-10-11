@@ -8,13 +8,27 @@ feature: Metadata
 exl-id: 0dd322cd-ce97-4335-825d-71f72a5e438c
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3637'
 ht-degree: 98%
-
 ---
-
 # メタデータスキーマ {#metadata-schemas}
 
 | バージョン | 記事リンク |
@@ -201,7 +215,7 @@ ht-degree: 98%
 
    ![add_tab](assets/add_tab.png)
 
-1. アセットタイプのドロップダウンフィールドを追加します。 「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。 オプションの説明を追加します。
+1. アセットタイプのドロップダウンフィールドを追加します。 「**[!UICONTROL 設定]**」タブで、名前およびプロパティのパスを指定します。 任意の説明を追加します。
 
    ![asset_type_field](assets/asset_type_field.png)
 

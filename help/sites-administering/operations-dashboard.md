@@ -10,18 +10,27 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6016'
+source-wordcount: '6022'
 ht-degree: 95%
-
 ---
-
 # 操作ダッシュボード {#operations-dashboard}
 
 ## はじめに {#introduction}
 
-AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。 また、AEM が関連する側面に関して自動生成された診断情報も提供され、自己完結型のメンテナンス自動化を設定および実行して、プロジェクト運営とサポートケースを大幅に削減できます。 操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。 さらに、外部監視ツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
+AEM 6 の操作ダッシュボードは、システムオペレーターが AEM のシステムヘルスを一目で監視するために役立ちます。 また、AEM が関連する側面に関して自動生成された診断情報も提供され、自己完結型のメンテナンス自動化を設定および実行して、プロジェクト運営とサポートケースを大幅に削減できます。 操作ダッシュボードは、カスタムのヘルスチェックおよびメンテナンスタスクによって拡張できます。 さらに、外部モニタリングツールから JMX を使用して操作ダッシュボードのデータにアクセスできます。
 
 **操作ダッシュボードの特徴は次のとおりです。**
 
@@ -107,13 +116,13 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前：** `sling:resourceType`
 
-      * **タイプ：** `String`
-      * **値：** `granite/operations/components/mbean`
+     * **タイプ：** `String`
+     * **値：** `granite/operations/components/mbean`
 
    * **名前：** `resource`
 
-      * **タイプ：** `String`
-      * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
+     * **タイプ：** `String`
+     * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/exampleHealthCheck`
 
    >[!NOTE]
    >
@@ -164,19 +173,19 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
    * **名前：** `Composite Health Check`
 
-      * **タイプ：** `nt:unstructured`
+     * **タイプ：** `nt:unstructured`
 
    次のプロパティを使用します。
 
    * **名前：** `sling:resourceType`
 
-      * **タイプ：** `String`
-      * **値：** `granite/operations/components/mbean`
+     * **タイプ：** `String`
+     * **値：** `granite/operations/components/mbean`
 
    * **名前：** `resource`
 
-      * **タイプ：** `String`
-      * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
+     * **タイプ：** `String`
+     * **値：** `/system/sling/monitoring/mbeans/org/apache/sling/healthcheck/HealthCheck/diskusage`
 
    >[!NOTE]
    >
@@ -262,7 +271,8 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
    <td>Sling ジョブ</td>
    <td>
     <div>
-      Sling ジョブは、JobManager でのキューに登録されたジョブ数をチェックし、<code>maxNumQueueJobs</code> しきい値と比較します。
+      Sling Jobsは、JobManagerでキューに入れられたジョブの数を確認し、それを
+     <code>maxNumQueueJobs</code>しきい値、および：
     </div>
     <ul>
      <li>キューに <code>maxNumQueueJobs</code> より多くある場合、重大ステータスを返します</li>
@@ -330,7 +340,7 @@ AEM 6 には次の 2 種類のヘルスチェックがあります。
 
 [OSGi 設定](/help/sites-deploying/configuring-osgi.md)の&#x200B;**クエリヘルスチェック設定**（com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics）で&#x200B;**期間**&#x200B;を設定できます。
 
-## 外部サービスを使用した監視 {#monitoring-with-external-services}
+## 外部サービスを使用したモニタリング {#monitoring-with-external-services}
 
 外部のテクノロジーやベンダーとの統合が可能です。 関連する詳細については、ドキュメントを参照してください。
 
@@ -494,7 +504,7 @@ DATE+TIME [MaintanceLogger] Name=<MT_NAME>, Status=<MT_STATUS>, Time=<MT_TIME>, 
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**プロジェクトのパージ**&#x200B;のメンテナンスタスク。「**追加**」オプションを使用します。
 1. **週別メンテナンスウィンドウ**&#x200B;メニューの下の&#x200B;**アドホックタスクのパージ**&#x200B;のメンテナンスタスク。「**追加**」オプションを使用します。
 
-毎日のメンテナンスウィンドウのデフォルトのタイミングは、午前2:00時から午前5:00時です。週次メンテナンスウィンドウで実行するように設定されたタスクは、土曜日の午前1:00～午前2:00に実行されます。
+毎日のメンテナンスウィンドウのデフォルトのタイミングは、午前2時から午前5時までです。毎週のメンテナンスウィンドウで実行するように設定されたタスクは、土曜日の午前1時から午前2時の間に実行されます。
 
 また、2 つのメンテナンスカードのいずれかの歯車アイコンをクリックして、タイミングを設定することもできます。
 
@@ -659,7 +669,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 >[!NOTE]
 >
->システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/40394?captions=jpn)してください。
+>システム概要ダッシュボードの概要については、[このビデオを参照](https://video.tv.adobe.com/v/21340)してください。
 
 ### アクセス方法 {#how-to-access}
 
@@ -671,7 +681,7 @@ src/main/java/com/adobe/granite/samples/maintenance/impl/DeleteTempFilesTask.jav
 
 次の表では、システム概要ダッシュボードに表示されるすべての情報について説明します。 表示する関連情報がない場合（バックアップが進行中ではない、重要なヘルスチェックはないなど）は、それぞれのセクションに「エントリがありません」というメッセージが表示されます。
 
-また、ダッシュボードの右上隅の「**ダウンロード**」ボタンをクリックして、ダッシュボード情報を要約した `JSON` ファイルをダウンロードすることもできます。 `JSON` のエンドポイントは `/libs/granite/operations/content/systemoverview/export.json` です。これを `curl` スクリプトで使用して、外部監視を行うことができます。
+また、ダッシュボードの右上隅の「**ダウンロード**」ボタンをクリックして、ダッシュボード情報を要約した `JSON` ファイルをダウンロードすることもできます。 `JSON` のエンドポイントは `/libs/granite/operations/content/systemoverview/export.json` です。これを `curl` スクリプトで使用して、外部モニタリングを行うことができます。
 
 <table>
  <tbody>

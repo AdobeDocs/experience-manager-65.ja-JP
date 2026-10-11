@@ -9,20 +9,34 @@ role: User,Admin
 mini-toc-levels: 4
 exl-id: 2ca7b8b2-573c-40e9-b8c3-f38736e819ef
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: afe09f80-87de-4606-96de-7aecd50f1a65
+    internal-label: Image profiles
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 100%
-
 ---
-
 <!--
 hide: true
 -->
 
 # Dynamic Media の会社エイリアスアカウントの設定について {#about-dm-alias-acct}
 
-Dynamic Media の URL とビューアの埋め込みコードには、会社のアカウント名が含まれます。 このアカウント名は、Dynamic Media のプロビジョニング時に作成されました。 ビジネスが買収やブランド変更を受けた、あるいは単にもっと記憶に残る名前を使用したいというシナリオがあるかもしれません。 このようなシナリオでは、すべての URL とビューアの埋め込みコード（標準搭載）で会社のアカウント名を手動で更新するのは簡単ではありません。 さらに、既存の Dynamic Media リポジトリに影響を与えたり、ライブコンテンツに影響を与えたりする可能性があります。 この問題を解決するには、Dynamic Media の会社エイリアスアカウントを設定します。
+Dynamic Media の URL とビューアの埋め込みコードには、会社のアカウント名が含まれます。 このアカウント名は、Dynamic Media のプロビジョニング時に作成されました。 ビジネスが買収やブランド変更を受けた、あるいは単にもっと記憶に残る名前を使用したいというシナリオがあるかもしれません。 このようなシナリオでは、すべての URL とビューアーの埋め込みコード（標準搭載）で会社のアカウント名を手動で更新するのは簡単ではありません。 さらに、既存の Dynamic Media リポジトリに影響を与えたり、ライブコンテンツに影響を与えたりする可能性があります。 この問題を解決するには、Dynamic Media の会社エイリアスアカウントを設定します。
 
 Dynamic Media の会社エイリアスアカウントを使用すると、ユーザーインターフェイスに組み込まれているすべての Dynamic Media の URL とビューアの埋め込みコード（標準搭載）が、ブランド変更など、ビジネスコンテキストに対する更新を反映します。 また、Dynamic Media の URL とビューアの埋め込みコードは新しい会社のアカウント名を反映しているので、エイリアスアカウントは SEO（検索エンジン最適化）にも良い影響を与えます。
 

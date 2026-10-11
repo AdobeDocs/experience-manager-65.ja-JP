@@ -10,13 +10,25 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6582'
+source-wordcount: '6584'
 ht-degree: 99%
-
 ---
-
 # Adobe Experience Manager と MongoDB{#aem-with-mongodb}
 
 この記事では、MongoDB を備えた AEM（Adobe Experience Manager）を正常にデプロイするために必要なタスクと考慮事項に関する知識を深めることを目的としています。
@@ -48,7 +60,7 @@ AEM 向けの MongoDB の最小デプロイメントを以下に示します。 
 
 最小デプロイメントには、レプリカセットとして設定された 3 つの `mongod` インスタンスが必要です。 1 つのインスタンスはプライマリとして選択され、その他のインスタンスはセカンダリとして選択されます。この選択は、`mongod` によって管理されます。 各インスタンスにローカルディスクが接続されています。 クラスターで負荷に対応できるように、1 秒あたりの I/O 操作回数（IOPS）が 3,000 を超える毎秒 12 MB 以上のスループットが推奨されます。
 
-AEM オーサーは `mongod` インスタンスに接続されます。各 AEM オーサーは 3 つの `mongod` インスタンスすべてに接続します。 書き込みはプライマリに送信され、読み取りはどのインスタンスからも行うことができます。 トラフィックは、Dispatcher によって、負荷に基づいてアクティブな AEM オーサーインスタンスのいずれかに分散されます。 OAK データストアは `FileDataStore` であり、MongoDB の監視は、デプロイメントの場所に応じて、MMS または MongoDB Ops Manager によって提供されます。 オペレーティングシステムレベルの監視とログの監視は、Splunk や Ganglia などのサードパーティソリューションによって提供されます。
+AEM オーサーは `mongod` インスタンスに接続されます。各 AEM オーサーは 3 つの `mongod` インスタンスすべてに接続します。 書き込みはプライマリに送信され、読み取りはどのインスタンスからも行うことができます。 トラフィックは、Dispatcher によって、負荷に基づいてアクティブな AEM オーサーインスタンスのいずれかに分散されます。 OAK データストアは `FileDataStore` であり、MongoDB のモニタリングは、デプロイメントの場所に応じて、MMS または MongoDB Ops Manager によって提供されます。 オペレーティングシステムレベルのモニタリングとログのモニタリングは、Splunk や Ganglia などのサードパーティソリューションによって提供されます。
 
 このデプロイメントでは、実装が正常に機能するには、すべてのコンポーネントが必要です。 コンポーネントが不足していると、実装は機能しません。
 
@@ -78,8 +90,8 @@ MMAP ストレージエンジンを使用する MongoDB バージョン 2.6 お�
 
 負荷テストを実施する場合は、テストプロセスを支援するために、データベースの合計サイズに対する作業セットの比率を次のように想定することができます。
 
-* SSD ストレージ用に1:10
-* ハード ディスク ストレージ用の1:3
+* SSD ストレージ用の1:10
+* ハードディスクストレージ用の1:3
 
 つまり、SSD デプロイメントの場合は、2 TB のデータベースに 200 GB の RAM が必要になります。
 
@@ -95,35 +107,35 @@ MongoDB の作業セットの制限により、データストアを MongoDB と
 
 ## モニタリング {#monitoring}
 
-プロジェクトを正常に実装するには、監視が不可欠です。 十分な知識があれば、監視を行わずに AEM を MongoDB 上で実行することも可能です。 しかし、その知識は、通常、デプロイメントの各セクションを専門とするエンジニアが持っているものです。
+プロジェクトを正常に実装するには、モニタリングが不可欠です。 十分な知識があれば、モニタリングを行わずに AEM を MongoDB 上で実行することも可能です。 しかし、その知識は、通常、デプロイメントの各セクションを専門とするエンジニアが持っているものです。
 
 この専門知識には、通常、Apache Oak Core に取り組んでいる研究開発エンジニアや MongoDB スペシャリストが関与します。
 
-すべてのレベルで監視を行わない場合、問題の診断には、コードベースの詳細な知識が必要になります。 監視が実施され、主要な統計情報に関する適切なガイダンスが提供されれば、実装チームは異常値に的確に対応できます。
+すべてのレベルでモニタリングを行わない場合、問題の診断には、コードベースの詳細な知識が必要になります。 モニタリングが実施され、主要な統計情報に関する適切なガイダンスが提供されれば、実装チームは異常値に的確に対応できます。
 
 コマンドラインツールを使用してクラスターの動作のスナップショットを即座に取得することもできますが、多数のホストに対してこれをリアルタイムで行うのはほぼ不可能です。 数分を超える履歴情報がコマンドラインツールで提供されることはほとんどなく、様々なタイプの指標を相互に関連付けることもできません。 `mongod` のバックグラウンド同期が短期間遅くなると、見かけ上は接続されていない仮想マシンからの共有ストレージリソースに対する I/O の待機や過剰な書き込みレベルの相関関係を見つけるために手動による多大な労力が必要になります。
 
 ### MongoDB Cloud Manager {#mongodb-cloud-manager}
 
-MongoDB Cloud Manager は、MongoDB インスタンスの監視と管理を可能にする MongoDB 提供の無料サービスです。 これを使用することで、MongoDB クラスターのパフォーマンスとヘルスをリアルタイムで把握できます。 また、インスタンスが Cloud Manager 監視サーバーにアクセスできる場合は、クラウドでホストされているインスタンスとプライベートにホストされているインスタンスの両方を管理できます。
+MongoDB Cloud Manager は、MongoDB インスタンスのモニタリングと管理を可能にする MongoDB 提供の無料サービスです。 これを使用することで、MongoDB クラスターのパフォーマンスとヘルスをリアルタイムで把握できます。 また、インスタンスが Cloud Manager モニタリングサーバーにアクセスできる場合は、クラウドでホストされているインスタンスとプライベートにホストされているインスタンスの両方を管理できます。
 
-このサービスを使用するには、監視サーバーに接続する MongoDB インスタンスにエージェントがインストールされている必要があります。 エージェントには次の 3 つのレベルがあります。
+このサービスを使用するには、モニタリングサーバーに接続する MongoDB インスタンスにエージェントがインストールされている必要があります。 エージェントには次の 3 つのレベルがあります。
 
 * MongoDB サーバー上のすべての処理を完全に自動化できる自動化エージェント
-* `mongod` インスタンスを監視できる監視エージェント
+* `mongod` インスタンスをモニタリングできるモニタリングエージェント
 * スケジュールされたデータバックアップを実行できるバックアップエージェント
 
-Cloud Manager を使用して MongoDB クラスターのメンテナンスを自動化すると、日常的なタスクの多くが容易になりますが、それは必須ではありません。また、バックアップに Cloud Manager を使用することも必須ではありません。 ただし、監視を行うために Cloud Manager を選択した場合、監視は必須です。
+Cloud Manager を使用して MongoDB クラスターのメンテナンスを自動化すると、日常的なタスクの多くが容易になりますが、それは必須ではありません。また、バックアップに Cloud Manager を使用することも必須ではありません。 ただし、モニタリングを行うために Cloud Manager を選択した場合、モニタリングは必須です。
 
 MongoDB Cloud Manager について詳しくは、[MongoDB のドキュメント](https://docs.cloud.mongodb.com/)を参照してください。
 
 ### MongoDB Ops Manager {#mongodb-ops-manager}
 
-MongoDB Ops Manager は、MongoDB Cloud Manager と同じソフトウェアです。 登録すると、Ops Manager をダウンロードして、プライベートデータセンターまたは他のノート PC やデスクトップ PC にローカルにインストールできます。 このソフトウェアは、ローカルの MongoDB データベースを使用してデータを保存し、Cloud Manager と同様に管理対象サーバーと通信します。 セキュリティポリシーで監視エージェントを禁止している場合は、MongoDB Ops Manager を使用してください。
+MongoDB Ops Manager は、MongoDB Cloud Manager と同じソフトウェアです。 登録すると、Ops Manager をダウンロードして、プライベートデータセンターまたは他のノート PC やデスクトップ PC にローカルにインストールできます。 このソフトウェアは、ローカルの MongoDB データベースを使用してデータを保存し、Cloud Manager と同様に管理対象サーバーと通信します。 セキュリティポリシーでモニタリングエージェントを禁止している場合は、MongoDB Ops Manager を使用してください。
 
-### オペレーティングシステムの監視 {#operating-system-monitoring}
+### オペレーティングシステムのモニタリング {#operating-system-monitoring}
 
-AEM MongoDB クラスターを実行するには、オペレーティングシステムレベルの監視が必要です。
+AEM MongoDB クラスターを実行するには、オペレーティングシステムレベルのモニタリングが必要です。
 
 そのようなシステムの良い例として Ganglia があります。Ganglia は、対象範囲の状況を報告し、CPU、負荷平均、空きディスク領域などの基本的なヘルス指標にとどまらず、必要な情報の詳細を表示します。 問題を診断するには、エントロピープールレベル、CPU I/O 待機、FIN_WAIT2 状態のソケットなど、下位レベルの情報が必要です。
 
@@ -140,7 +152,7 @@ AEM MongoDB クラスターを実行するには、オペレーティングシ�
 1. まず、すべてのホストに DNS エントリがあることを確認します。
 1. ルーティング可能な他のすべてのホストから、すべてのホストがそれぞれの DNS エントリによって解決できる必要があります。
 1. すべての MongoDB ホストは、同じクラスター内の他のすべての MongoDB ホストからルーティング可能です。
-1. MongoDB ホストは、MongoDB Cloud Manager およびその他の監視サーバーにパケットをルーティングできます。
+1. MongoDB ホストは、MongoDB Cloud Manager およびその他のモニタリングサーバーにパケットをルーティングできます。
 1. AEM サーバーは、すべての MongoDB サーバーにパケットをルーティングできます。
 1. 任意の AEM サーバーと MongoDB サーバーの間のパケット遅延は 2 ミリ秒未満であり、パケット損失がなく、標準的な配信は 1 ミリ秒以下です。
 1. AEM サーバーと MongoDB サーバーの間のホップは 2 つまでです。
@@ -243,8 +255,8 @@ MongoDB は、Linux® の様々なフレーバー、Windows、Mac OS を含む�
 * Transparent Huge Page（THP）および defrag を無効にします。 詳しくは、[Transparent Huge Page（THP）の設定についての説明](https://docs.mongodb.com/manual/tutorial/transparent-huge-pages/)を参照してください。
 * 使用状況に合わせて、データベースファイルを格納するデバイスの [readahead 設定を調整](https://docs.mongodb.com/manual/administration/production-notes/#readahead)します。
 
-   * MMAPv1 ストレージエンジンでは、作業セットが利用可能な RAM よりも大きく、ドキュメントのアクセスパターンがランダムな場合、readahead を 32 または 16 に下げることを検討します。 様々な設定を評価して、常駐メモリを最大化しページフォールト回数を低減できる最適な値を見つけます。
-   * WiredTiger ストレージエンジンでは、ストレージメディアタイプ（回転式のディスク、SSD など）にかかわらず、readahead を 0 に設定します。 一般に、readahead の値を大きくすることで測定可能、再現可能かつ信頼性の高いメリットがあることがテストの結果わかる場合を除き、readahead の推奨設定を使用します。 [MongoDB のプロフェッショナルサポート](https://docs.mongodb.com/manual/administration/production-notes/#readahead)で、0 以外の readahead 設定を使用する場合のアドバイスとガイダンスを受けることができます。
+  * MMAPv1 ストレージエンジンでは、作業セットが利用可能な RAM よりも大きく、ドキュメントのアクセスパターンがランダムな場合、readahead を 32 または 16 に下げることを検討します。 様々な設定を評価して、常駐メモリを最大化しページフォールト回数を低減できる最適な値を見つけます。
+  * WiredTiger ストレージエンジンでは、ストレージメディアタイプ（回転式のディスク、SSD など）にかかわらず、readahead を 0 に設定します。 一般に、readahead の値を大きくすることで測定可能、再現可能かつ信頼性の高いメリットがあることがテストの結果わかる場合を除き、readahead の推奨設定を使用します。 [MongoDB のプロフェッショナルサポート](https://docs.mongodb.com/manual/administration/production-notes/#readahead)で、0 以外の readahead 設定を使用する場合のアドバイスとガイダンスを受けることができます。
 
 * 仮想環境で RHEL 7／CentOS 7 を実行している場合は、Tuned ツールを無効にします。
 * 仮想環境で RHEL 7／CentOS 7 を実行すると、パフォーマンスのスループットから得られたパフォーマンスプロファイルが Tuned ツールによって自動的に呼び出され、その結果、readahead 設定が自動的に 4 MB に設定されます。 この設定は、パフォーマンスに悪影響を及ぼす可能性があります。
@@ -257,9 +269,9 @@ MongoDB は、Linux® の様々なフレーバー、Windows、Mac OS を含む�
 * [dbPath](https://docs.mongodb.com/manual/reference/configuration-options/#storage.dbPath) マウントポイントに noatime を使用します。
 * デプロイメントにとって十分なファイルハンドル数（fs.file-max）、カーネルの pid の制限（kernel.pid_max）およびプロセスごとの最大スレッド数（kernel.threads-max）を設定します。 大規模なシステムでは、まず以下の設定から試すことをお勧めします。
 
-   * fs.file-max の値：98000
-   * kernel.pid_max の値：64000
-   * andkernel.threads-max の値：64000
+  * fs.file-max の値：98000
+  * kernel.pid_max の値：64000
+  * andkernel.threads-max の値：64000
 
 * システムに、スワップ領域が設定されていることを確認します。 適切なサイジングについて詳しくは、オペレーティングシステムのドキュメントを参照してください。
 * システムのデフォルト TCP キープアライブが正しく設定されていることを確認します。 レプリカセットおよびシャードクラスターでは、300 の値を設定すると、多くの場合、パフォーマンスが向上します。 関連項目：[TCP キープアライブ時間はMongoDB デプロイメントに影響しますか？](https://docs.mongodb.com/manual/faq/diagnostics/#faq-keepalive) Adobe Experience Platformに関する詳細は、よくある質問を参照してください。

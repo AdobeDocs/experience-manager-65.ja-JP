@@ -10,20 +10,24 @@ exl-id: 2cadd9c5-4335-48d0-8d1c-941fca717409
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2955'
 ht-degree: 0%
-
 ---
-
 # モバイルとコンテンツ同期{#mobile-with-content-sync}
 
 {{ue-over-mobile}}
 
 >[!NOTE]
 >
->このドキュメントは、[Adobe Experience Manager（AEM）モバイル入門ガイド &#x200B;](/help/mobile/getting-started-aem-mobile.md) ガイドの一部です。このガイドは、AEM Mobile リファレンスの出発点として推奨されます。
+>このドキュメントは、[Adobe Experience Manager（AEM）モバイル入門ガイド ](/help/mobile/getting-started-aem-mobile.md) ガイドの一部です。このガイドは、AEM Mobile リファレンスの出発点として推奨されます。
 
 Content Syncを使用してコンテンツをパッケージ化し、ネイティブモバイルアプリケーションで使用できるようにします。 AEMで作成されたページは、デバイスがオフラインの場合でも、アプリコンテンツとして使用できます。 さらに、AEM ページはweb標準に基づいているため、クロスプラットフォームで動作するため、任意のネイティブラッパーに埋め込むことができます。 これにより、開発の手間を軽減し、アプリのコンテンツを簡単に更新できます。
 
@@ -44,7 +48,7 @@ Content Syncを使用してコンテンツをパッケージ化し、ネイテ�
 
 >[!NOTE]
 >
->コンテンツ同期ハンドラーの開発に関するガイドラインについて詳しくは、標準搭載のアプリハンドラーを参照してください。[&#x200B; コンテンツ同期ハンドラーの開発](/help/mobile/contentsync-app-handlers.md)を参照してください。
+>コンテンツ同期ハンドラーの開発に関するガイドラインについて詳しくは、標準搭載のアプリハンドラーを参照してください。[ コンテンツ同期ハンドラーの開発](/help/mobile/contentsync-app-handlers.md)を参照してください。
 
 ## コンテンツ同期コンテンツの設定 {#configuring-the-content-sync-content}
 
@@ -75,9 +79,9 @@ AEMがインストールされている場合、管理者グループのメン�
 
 Day CQ Content Sync Manager サービスは、Content Syncへのアクセスを制御します。 このサービスを設定して、デフォルトでコンテンツ同期からダウンロードできるユーザーまたはグループを指定します。
 
-Web コンソール [&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用してサービスを設定する場合は、ユーザーまたはグループの名前をフォールバックキャッシュ承認可能プロパティの値として入力します。
+Web コンソール ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console)を使用してサービスを設定する[場合は、ユーザーまたはグループの名前をフォールバックキャッシュ承認可能プロパティの値として入力します。
 
-リポジトリ [&#128279;](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)で構成している場合は、サービスに関する次の情報を使用します。
+リポジトリ ](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository)で[構成している場合は、サービスに関する次の情報を使用します。
 
 * PID: com.day.cq.contentsync.impl.ContentSyncManagerImpl
 * プロパティ名：contentsync.fallback.authorizable
@@ -157,7 +161,7 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 * **deep** – 子ページを含めるかどうかを決定するオプションのブール値プロパティです。 デフォルト値は&#x200B;*trueです。*
 
 * **includeImages** – 画像を含めるかどうかを決定するオプションのブール型プロパティ。 デフォルト値は&#x200B;*true*です。
-デフォルトでは、リソースタイプがfoundation/components/imageの画像コンポーネントのみが含まれると見なされます。 Web コンソールで&#x200B;**Day CQ WCM Pages Update Handler**&#x200B;を設定することで、さらにリソースタイプを追加できます。
+デフォルトでは、リソースタイプがfoundation/components/imageの画像コンポーネントのみが含まれると見なされます。 Web コンソールで**Day CQ WCM Pages Update Handler**&#x200B;を設定することで、さらにリソースタイプを追加できます。
 
 **rewrite** – 書き換えノードは、書き出されたページでのリンクの書き換え方法を定義します。 書き換えられたリンクは、zip ファイルに含まれるファイルまたはサーバー上のリソースを指すことができます。
 
@@ -174,7 +178,7 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 
 * `REWRITE_RELATIVE`: ファイル システム上のページ .html ファイルへの相対位置を持つパスを書き換えます。
 
-* `REWRITE_EXTERNAL`: AEM [Externalizer サービス &#x200B;](/help/sites-developing/externalizer.md)を使用して、サーバー上のリソースを指すことでパスを書き換えます。
+* `REWRITE_EXTERNAL`: AEM [Externalizer サービス ](/help/sites-developing/externalizer.md)を使用して、サーバー上のリソースを指すことでパスを書き換えます。
 
 **PathRewriterTransformerFactory**&#x200B;というAEM サービスを使用すると、書き換える特定のhtml属性を設定できます。 サービスはWeb コンソールで設定でき、`rewrite` ノードの各プロパティの設定があります：`clientlibs`、`images`、および`links`。
 
@@ -260,7 +264,7 @@ cq:ContentSyncConfig ノードに`updateuser` プロパティがない場合、�
 * `com.day.cq.contentsync.handler.ContentUpdateHandler` – すべての更新ハンドラーが実装する必要があるインターフェイス
 * `com.day.cq.contentsync.handler.AbstractSlingResourceUpdateHandler` - Slingを使用したリソースのレンダリングを簡略化する抽象クラス
 
-クラスをOSGi コンポーネントファクトリとして登録し、バンドルのOSGi コンテナにデプロイします。 これは、[Maven SCR プラグイン &#x200B;](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)を使用して、JavaDoc タグまたは注釈を使用して行うことができます。 次の例は、JavaDoc バージョンを示しています。
+クラスをOSGi コンポーネントファクトリとして登録し、バンドルのOSGi コンテナにデプロイします。 これは、[Maven SCR プラグイン ](https://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/apache-felix-maven-scr-plugin-use.html)を使用して、JavaDoc タグまたは注釈を使用して行うことができます。 次の例は、JavaDoc バージョンを示しています。
 
 ```java
 /*

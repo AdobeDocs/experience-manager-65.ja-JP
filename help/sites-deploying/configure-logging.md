@@ -9,13 +9,22 @@ feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
-workflow-type: ht
-source-wordcount: '636'
-ht-degree: 100%
-
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 99%
 ---
-
 # ログ{#logging}
 
 AEM では、以下の設定が可能です。
@@ -28,11 +37,11 @@ AEM では、以下の設定が可能です。
 
 >[!NOTE]
 >
->AEM でのログ作成は、Sling の原則に基づいています。詳しくは [Sling でのログ作成](https://sling.apache.org/site/logging.html)を参照してください。
+>AEM でのログ作成は、Sling の原則に基づいています。 詳しくは [Sling でのログ作成](https://sling.apache.org/site/logging.html)を参照してください。
 
 ## グローバルログ {#global-logging}
 
-[Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md) を使用してルートロガーを設定します。AEM にログインする際の次のようなグローバル設定を定義します。
+[Apache Sling Logging Configuration](/help/sites-deploying/osgi-configuration-settings.md) を使用してルートロガーを設定します。 AEM にログインする際の次のようなグローバル設定を定義します。
 
 * ログレベル
 * 主要なログファイルの場所
@@ -51,7 +60,7 @@ AEM では、以下の設定が可能です。
 * ログメッセージを書き込むときに使用する形式
 * ロガー（ログメッセージを提供する OSGi サービス）
 
-これにより、単一のサービスに関するログメッセージを個別のファイルに送ることができます。これは、開発やテストの際、例えば特定のサービスのログレベルを上げる必要がある場合などに特に便利です。
+これにより、単一のサービスに関するログメッセージを個別のファイルに送ることができます。 これは、開発やテストの際、例えば特定のサービスのログレベルを上げる必要がある場合などに特に便利です。
 
 AEM では、以下の手順でログメッセージをファイルに書き込みます。
 
@@ -69,13 +78,13 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
   ログメッセージを保存する物理ファイルを定義します。
 
-  これは、Logging Logger を Logging Writer とリンクするために使用します。接続を確立するには、Logging Writer 設定の同じパラメーターと値が同じである必要があります。
+  これは、Logging Logger を Logging Writer とリンクするために使用します。 接続を確立するには、Logging Writer 設定の同じパラメーターと値が同じである必要があります。
 
 * **Log File（Logging Writer）**
 
   ログメッセージの書き込み先の物理ファイルを定義します。
 
-  これは Logging Writer 設定の同じパラメーターと同一でなければなりません。そうでない場合、照合は行われません。一致がない場合は、暗黙のライターがデフォルトの設定で作成されます（毎日のログローテーション）。
+  これは Logging Writer 設定の同じパラメーターと同一でなければなりません。そうでない場合、照合は行われません。 一致がない場合は、暗黙のライターがデフォルトの設定で作成されます（毎日のログローテーション）。
 
 ### 標準のロガーおよびライター {#standard-loggers-and-writers}
 
@@ -85,19 +94,19 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
 * ロガー：
 
-   * Apache Sling Customizable Request Data Logger
+  * Apache Sling Customizable Request Data Logger
 
-     (org.apache.sling.engine.impl.log.RequestLoggerService)
+    (org.apache.sling.engine.impl.log.RequestLoggerService)
 
-   * 要求コンテンツに関するメッセージを `request.log` に書き込みます。
+  * 要求コンテンツに関するメッセージを `request.log` に書き込みます。
 
 * リンク先：
 
-   * Apache Sling Request Logger
+  * Apache Sling Request Logger
 
-     (org.apache.sling.engine.impl.log.RequestLogger)
+    (org.apache.sling.engine.impl.log.RequestLogger)
 
-   * メッセージを `request.log` または `access.log` に書き込みます。
+  * メッセージを `request.log` または `access.log` に書き込みます。
 
 これらは必要に応じてカスタマイズできますが、ほとんどのインストールには標準設定が適しています。
 
@@ -105,23 +114,24 @@ AEM では、以下の手順でログメッセージをファイルに書き込�
 
 * ロガー：
 
-   * Apache Sling Logging Logger Configuration
+  * Apache Sling Logging Logger Configuration
 
-     (org.apache.sling.commons.log.LogManager.factory.config)
+    (org.apache.sling.commons.log.LogManager.factory.config)
 
-   * `logs/error.log` にメッセージ `Information` を書き込みます。
+  * `logs/error.log` にメッセージ `Information` を書き込みます。
 
 * リンク先のライター：
 
-   * Apache Sling Logging Writer Configuration
+  * Apache Sling Logging Writer Configuration
 
-     (org.apache.sling.commons.log.LogManager.factory.writer)
+    (org.apache.sling.commons.log.LogManager.factory.writer)
 
 * ロガー：
 
-   * Apache Sling Logging Logger Configuration（org.apache.sling.commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7）
+  * Apache Sling Logging Logger Configuration
+    （org.apache.sling.commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7）
 
-   * サービス `org.apache.pdfbox` のメッセージ `Warning` を `../logs/error.log` に書き込みます。
+  * サービス `org.apache.pdfbox` のメッセージ `Warning` を `../logs/error.log` に書き込みます。
 
 * 特定のライターにリンクしないので、デフォルト設定で暗黙のライターを作成して使用します（毎日のログローテーション）。
 

@@ -9,13 +9,20 @@ role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1534'
 ht-degree: 3%
-
 ---
-
 # SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM Platform用Solr {#solr-for-aem-platform}
@@ -24,7 +31,7 @@ ht-degree: 3%
 
 Oak コレクションとSRP コレクションの両方を集中的に使用する場合は、パフォーマンス上の理由から2番目のSolrをインストールできます。
 
-実稼動環境の場合、[SolrCloud モード &#x200B;](#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
+実稼動環境の場合、[SolrCloud モード ](#solrcloud-mode)では、スタンドアロンモード（単一のローカル Solr セットアップ）よりもパフォーマンスが向上します。
 
 ### 要件 {#requirements}
 
@@ -36,13 +43,13 @@ Apache Solrをダウンロードしてインストールします。
 * サービスは必要ありません
 * 実行モードの選択：
 
-   * スタンドアロンモード
-   * [SolrCloud モード &#x200B;](#solrcloud-mode) （実稼動環境に推奨）
+  * スタンドアロンモード
+  * [SolrCloud モード ](#solrcloud-mode) （実稼動環境に推奨）
 
 * 多言語検索（MLS）の選択
 
-   * [標準MLSのインストール](#installing-standard-mls)
-   * [高度なMLSのインストール](#installing-advanced-mls)
+  * [標準MLSのインストール](#installing-standard-mls)
+  * [高度なMLSのインストール](#installing-advanced-mls)
 
 ## SolrCloud モード {#solrcloud-mode}
 
@@ -191,10 +198,10 @@ Solr 5.xの標準MLS ファイル（schema.xml、solrconfig.xml）。
    1. ダウンロードした&#x200B;**schema.xml**&#x200B;および&#x200B;**solrconfig.xml**&#x200B;を&#x200B;*new-config-dir*&#x200B;にコピーして、既存のファイルを上書きします。
 
 1. [新しい設定](#upload-a-configuration-to-zookeeper)をZooKeeperにアップロードします。
-1. [&#x200B; シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション &#x200B;](#create-a-collection)を作成します。
-1. コレクションの作成中に構成名が*提供されなかった場合、[この新しく作成されたコレクション &#x200B;](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
+1. [ シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション ](#create-a-collection)を作成します。
+1. コレクションの作成中に構成名が*提供されなかった場合、[この新しく作成されたコレクション ](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
 
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](msrp.md#msrp-reindex-tool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](msrp.md#msrp-reindex-tool)を実行します。
 
 #### スタンドアロンモード – 標準MLS {#standalone-mode-standard-mls}
 
@@ -212,7 +219,7 @@ Solr 5.xの標準MLS ファイル（schema.xml、solrconfig.xml）。
 1. ダウンロードした&#x200B;**schema.xml**&#x200B;と&#x200B;**solrconfig.xml**&#x200B;を同じディレクトリにコピーします。
 
 1. Solrを再起動します。
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](#msrpreindextool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](#msrpreindextool)を実行します。
 
 ### 高度なMLSのインストール {#installing-advanced-mls}
 
@@ -274,10 +281,10 @@ SolrCloudまたはスタンドアロンモードのインストールを開始�
    * *solr-install-dir/contrib/analysis-extras/lib/*.jar
    * *solr-install-dir/contrib/analysis-extras/lucene-libs/*.jar
 
-1. [&#x200B; シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション &#x200B;](#create-a-collection)を作成します。
-1. コレクションの作成中に構成名が&#x200B;*not*&#x200B;だった場合、[この新しく作成されたコレクション &#x200B;](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
+1. [ シャード数、レプリカ数、設定名など、必要なパラメーターを指定してコレクション ](#create-a-collection)を作成します。
+1. コレクションの作成中に構成名が&#x200B;*not*&#x200B;だった場合、[この新しく作成されたコレクション ](#link-a-collection-to-a-configuration-set)をZooKeeperにアップロードされた設定にリンクします。
 
-1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール &#x200B;](#msrpreindextool)を実行します。
+1. MSRPの場合は、このインストールが新しいものでない限り、[MSRP インデックス再作成ツール ](#msrpreindextool)を実行します。
 
 #### スタンドアロンモード – 高度なMLS {#standalone-mode-advanced-mls}
 
@@ -288,35 +295,35 @@ SolrCloudまたはスタンドアロンモードのインストールを開始�
 * スタンドアロンモードでSolrをインストールします。
 * Solr5を実行している場合は、collection1 （Solr4と同様）を作成します。
 
-   * `./bin/solr start`
-   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
+  * `./bin/solr start`
+  * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * インストールスクリプトを実行します：Install [-v 4|5] [-d solrhome] [-c collectionpath]
 どこで：
 
-   * -d solrhome
+  * -d solrhome
 
-     Solr インストールディレクトリ
+    Solr インストールディレクトリ
 
-   * -c collectionpath
+  * -c collectionpath
 
-     Solrのコレクションパス
+    Solrのコレクションパス
 
-   * --help
+  * --help
 
-     コマンドラインオプションの印刷
+    コマンドラインオプションの印刷
 
-   * -v [4|5]
+  * -v [4|5]
 
-     Solrのバージョンを設定
+    Solrのバージョンを設定
 
 * Solr 4.10.4の例：
 
-   * Install.bat -v 4 -d c:/solr-4.10.4 -c c:/solr-4.10.4/example/solr/collection1
+  * Install.bat -v 4 -d c:/solr-4.10.4 -c c:/solr-4.10.4/example/solr/collection1
 
 * Solr 5.4.0の例：
 
-   * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
+  * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
 
 **メモ**：
 

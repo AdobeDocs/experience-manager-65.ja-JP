@@ -10,20 +10,32 @@ feature: Brand Portal
 role: User
 exl-id: 92a156f0-ce2a-4c83-bd57-0c29efbf784f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: e00c7c12-7035-41fe-ad76-1ec82c8c3f01
+    internal-label: Brand Portal
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '568'
 ht-degree: 100%
-
 ---
-
 # Brand Portal へのフォルダーの公開{#publish-folders-to-brand-portal}
 
-Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。ただし、最初に AEM Assets を Brand Portal と統合する必要があります。詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。 ただし、最初に AEM Assets を Brand Portal と統合する必要があります。 詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
 
 アセットまたはフォルダーを公開すると、Brand Portal のユーザーが使用できるようになります。
 
-その後、AEM Assets でオリジナルのアセットまたはフォルダーに変更を加えても、そのアセットまたはフォルダーを再び公開しない限り変更内容は Brand Portal に反映されません。このため、作業中の変更が Brand Portal に提供されることがありません。管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
+その後、AEM Assets でオリジナルのアセットまたはフォルダーに変更を加えても、そのアセットまたはフォルダーを再び公開しない限り変更内容は Brand Portal に反映されません。 このため、作業中の変更が Brand Portal に提供されることがありません。 管理者が公開した承認済みの変更のみが Brand Portal で提供されます。
 
 ## Brand Portal へのフォルダーの公開 {#publish-folders-to-brand-portal-1}
 
@@ -37,14 +49,14 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
    選択したフォルダーを Brand Portal に公開するには、次のいずれかを実行します。
 
-   * ツールバーで「**クイック公開**」を選択します。次に、メニューで「**Brand Portal に公開**」を選択します。
+   * ツールバーで「**クイック公開**」を選択します。 次に、メニューで「**Brand Portal に公開**」を選択します。
 
    * ツールバーで「**公開を管理**」を選択します。
 
    1. **アクション**&#x200B;から「**Brand Portalに公開**」を選択し、**スケジュール**&#x200B;から「**今すぐ**」を選択し、「**次へ**」をクリックします。
    1. 「**範囲**」の選択を確認し、「**Brand Portal に公開**」をクリックします。
 
-   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
+   フォルダーが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。 Brand Portal のインターフェイスにログインして、公開されたフォルダーを確認します。
 
    **フォルダーを後で公開**
 
@@ -55,17 +67,17 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
       ![publishlaterbp](assets/publishlaterbp.png)
 
-   1. 「**アクティベート日**」を選択して時刻を指定します。「**次へ**」をクリックします。
-   1. 「**範囲**」で選択内容を確認します。「**次へ**」をクリックします。
-   1. 「**ワークフロー**」でワークフロータイトルを指定します。「**後で公開する**」をクリックします。
+   1. 「**アクティベート日**」を選択して時刻を指定します。 「**次へ**」をクリックします。
+   1. 「**範囲**」で選択内容を確認します。 「**次へ**」をクリックします。
+   1. 「**ワークフロー**」でワークフロータイトルを指定します。 「**後で公開する**」をクリックします。
 
       ![manageschedulepub](assets/manageschedulepub.png)
 
 ## Brand Portal へのフォルダーの非公開 {#unpublish-folders-from-brand-portal}
 
-AEM オーサーインスタンスから公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
+AEM オーサーインスタンスから公開を取り消すことで、Brand Portal に公開されているアセットフォルダーを削除できます。 元のフォルダーを非公開にすると、Brand Portal ユーザーはそのコピーを使用できなくなります。
 
-Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
+Brand Portal へのフォルダーの公開をすぐに取り消すことも、取り消しのスケジュールを未来の日時で設定することもできます。 Brand Portal へのアセットフォルダーを非公開にするには、次の手順を実行します。
 
 1. AEM オーサーインスタンス内の AEM Assets インターフェイスで、公開を取り消すフォルダーを選択します。
 
@@ -89,9 +101,9 @@ Brand Portal へのフォルダーの公開をすぐに取り消すことも、�
 
    1. ツールバーで「**公開を管理**」を選択します。
    1. **アクション**&#x200B;から「**Brand Portal への公開を取り消し**」を選択し、**スケジュール**&#x200B;から「**後で**」を選択します。
-   1. 「**アクティベート日**」を選択して時刻を指定します。「**次へ**」をクリックします。
+   1. 「**アクティベート日**」を選択して時刻を指定します。 「**次へ**」をクリックします。
    1. 「**範囲**」で選択内容を確認し、「**次へ**」をクリックします。
-   1. 「**ワークフロー**」で&#x200B;**ワークフロータイトル**&#x200B;を指定します。「**後で非公開にする**」をクリックします。
+   1. 「**ワークフロー**」で&#x200B;**ワークフロータイトル**&#x200B;を指定します。 「**後で非公開にする**」をクリックします。
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 

@@ -7,13 +7,31 @@ exl-id: 1fee474e-7da5-4ab2-881a-34b8e055aa29
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4819'
 ht-degree: 97%
-
 ---
-
 # We.Gov および We.Finance リファレンスサイトのセットアップと設定 {#set-up-and-configure-we-gov-reference-site}
 
 ## デモパッケージの詳細 {#demo-package-details}
@@ -47,21 +65,21 @@ ht-degree: 97%
 
 * **we-gov-forms.pkg.all-&lt;version>.zip** - *完全なデモパッケージ*
 
-   * **we-gov-forms.ui.apps-&lt;version>.zip** *- すべてのコンポーネント、クライアントライブラリ、サンプルユーザー、ワークフローモデルなどが含まれます。*
+  * **we-gov-forms.ui.apps-&lt;version>.zip** *- すべてのコンポーネント、クライアントライブラリ、サンプルユーザー、ワークフローモデルなどが含まれます。*
 
-      * **we-gov-forms.core-&lt;version>.jar** - *すべての OSGi サービス、カスタムワークフローステップ実装などが含まれます。*
+    * **we-gov-forms.core-&lt;version>.jar** - *すべての OSGi サービス、カスタムワークフローステップ実装などが含まれます。*
 
-      * **we-gov-forms.derby&lt;version>.jar** - *すべての OSGi サービス、データベーススキーマなどが含まれます。*
+    * **we-gov-forms.derby&lt;version>.jar** - *すべての OSGi サービス、データベーススキーマなどが含まれます。*
 
-      * **core.wcm.components.all-2.0.4.zip** - *サンプル WCM コンポーネントのコレクション*
+    * **core.wcm.components.all-2.0.4.zip** - *サンプル WCM コンポーネントのコレクション*
 
-      * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *Sites ページ列コントロール用の AEM Sites グリッドレイアウトパッケージ*
+    * **grid-aem.ui.apps-1.0-SNAPSHOT.zip** - *Sites ページ列コントロール用の AEM Sites グリッドレイアウトパッケージ*
 
-   * **we-gov-forms.ui.content-&lt;version>.zip** - *すべてのコンテンツ、ページ、画像、フォーム、インタラクティブなコミュニケーションアセットなどが含まれます。*
+  * **we-gov-forms.ui.content-&lt;version>.zip** - *すべてのコンテンツ、ページ、画像、フォーム、インタラクティブなコミュニケーションアセットなどが含まれます。*
 
-   * **we-gov-forms.ui.analytics-&lt;version>.zip** - *リポジトリ内に保存するすべての We.Gov Forms Analytics データが含まれます。*
+  * **we-gov-forms.ui.analytics-&lt;version>.zip** - *リポジトリ内に保存するすべての We.Gov Forms Analytics データが含まれます。*
 
-   * **we-gov-forms.config.public-&lt;version>.zip** - *フォームのデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
+  * **we-gov-forms.config.public-&lt;version>.zip** - *フォームのデータモデルやサービスの連結の問題を回避するために役立つ、プレースホルダークラウド設定を含むすべてのデフォルト設定ノードが含まれます。*
 
 このパッケージのアセットには、次のものが含まれます。
 
@@ -178,7 +196,7 @@ ht-degree: 97%
 
 **メモ：**
 
-1. https://&lt;aemserver>:&lt;port>/aem/inbox に移動すると、上記の参照ドキュメントリンクで説明されているプロセスを完了できます。
+1. https://<aemserver>:<port>/aem/inbox に移動すると、上記の参照ドキュメントリンクで説明されているプロセスを完了できます。
 1. `we-gov-forms.pkg.all-[version].zip` パッケージには、パッケージの一部である `we-gov-forms.pkg.all-[version].zip/ssl` フォルダーを抽出することでアクセスできるサンプル SS キーと証明書が含まれています。
 
 1. SSL 証明書およびキーの詳細：
@@ -232,7 +250,7 @@ ht-degree: 97%
 
 1. 次の URL に移動します。
 
-   https://&lt;aemserver>:&lt;port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
+   https://<aemserver>:<port>/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html/conf/we-gov
 
    1. MS Dynamics アプリケーションの登録で設定したリダイレクト URL と同じ URL を使用してサーバーにアクセスしていることを確認してください。
 
@@ -384,10 +402,10 @@ Adobe Analytics アカウントのユーザー資格情報を検索するには�
    * 管理者の資格情報を使用してログインします。
 1. メインダッシュボードで「Adobe Analytics」アイコンを選択します。
    ![迅速なアクセス](assets/aftia-quick-access.jpg)
-1. 「管理者」タブに移動し、「User Management」の既存項目を選択します。
+1. 「管理者」タブに移動し、「ユーザー管理（レガシー）」の既存項目を選択します。
    ![レポート](assets/aftia-reports.jpg)
 1. 「**ユーザー**」タブを選択します。
-   ![User Management](assets/aftia-user-management.jpg)
+   ![ユーザー管理](assets/aftia-user-management.jpg)
 1. ユーザーのリストから目的のユーザーを選択します。
 1. ページの下部までスクロールすると、ページの下部にユーザー認証情報が表示されます。
    ![アクセスを管理](assets/aftia-admin-user-access.jpg)
@@ -486,7 +504,7 @@ AEM Forms を Adobe Forms と共にインストールして設定するには、
 
 Forms 変換ツールと正しく通信するようにサービスを設定するには、ユーザーは Adobe I/O に登録できるように Identity Management System（IMS）サービスを設定する必要があります。
 
-1. https://&lt;aemserver>:&lt;port>に移動し、「Adobe Experience」をクリックします。
+1. https://<aemserver>:<port>に移動し、「Adobe Experience」をクリックします。
 左上のManager/Tools/Security/Adobe IMS設定。
 
 1. 「作成」をクリックします。

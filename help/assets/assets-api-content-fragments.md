@@ -6,13 +6,29 @@ role: Developer
 exl-id: 0f9efb47-a8d1-46d9-b3ff-a6c0741ca138
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+  - id: c7140a77-10cf-4213-a7e9-f0d69c9fb56c
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+  - id: e5184d7e-fd36-480c-b5e5-d8161f2210ca
+    internal-label: Assets HTTP API
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 98%
-
 ---
-
 # AEM Assets HTTP API でのコンテンツフラグメントのサポート {#content-fragments-support-in-aem-assets-http-api}
 
 | バージョン | 記事リンク |
@@ -67,9 +83,9 @@ Assets REST API を使用すると、AEM インスタンス内に格納された
 `/api/assets` エンドポイントを使用しており、アクセスするにはアセットのパス（先頭の `/content/dam` を除く）が必要です。
 
 * つまり、次の場所のアセットにアクセスするには
-   * `/content/dam/path/to/asset`
-* 次のリクエストが必要です。
-   * `/api/assets/path/to/asset`
+  * `/content/dam/path/to/asset`
+* 次をリクエストする必要があります。
+  * `/api/assets/path/to/asset`
 
 例えば、`/content/dam/wknd/en/adventures/cycling-tuscany` にアクセスするには、`/api/assets/wknd/en/adventures/cycling-tuscany.json` をリクエストします。
 
@@ -205,11 +221,11 @@ Assets REST API では、URL パラメーターを介して（GET リクエス�
 
 フォルダーは、アセットや他のフォルダーのコンテナとして機能します。 AEM コンテンツリポジトリーの構造を反映しています。
 
-Assets REST API は、フォルダーのプロパティ（名前、タイトルなど）へのアクセスを公開します。 アセットは、フォルダーの子エンティティ、およびサブフォルダーとして公開されます。
+Assets REST API は、フォルダーのプロパティ（名前、タイトルなど）へのアクセスを提供します。 アセットは、フォルダーおよびサブフォルダーの子エンティティとして公開されます。
 
 >[!NOTE]
 >
->子アセットとフォルダーのアセットタイプによっては、それぞれの子エンティティを定義するすべてのプロパティが、子エンティティのリストに既に含まれている場合があります。 または、この子エンティティリストのエンティティに対して、一部のプロパティのみを公開することもできます。
+>子アセットやフォルダーのアセットタイプによっては、それぞれの子エンティティを定義するすべてのプロパティが、子エンティティのリストに既に含まれている場合があります。 または、この子エンティティリストのエンティティに対して、一部のプロパティのみを公開することもできます。
 
 ### Assets {#assets}
 
@@ -246,14 +262,14 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 ## 使用 {#using}
 
-使用方法は、特定の使用例以外にも、AEM オーサー環境を使用するかパブリッシュ環境を使用するかで異なることがあります。
+使用方法は、特定のユースケースに加えて、AEM オーサー環境を使用するかパブリッシュ環境を使用するかによって異なることがあります。
 
 * 作成をオーサーインスタンスに結び付けることを強くお勧めします（[現在は、この API を使用して公開するフラグメントをレプリケートする手段はありません](/help/assets/assets-api-content-fragments.md#limitations)）。
 * AEM は要求されたコンテンツを JSON 形式でのみ提供するので、どちらからも配信できます。
 
-   * ファイアウォールの背後で動作するメディアライブラリアプリケーションには、AEM オーサーインスタンスからのストレージと配信で十分です。
+  * ファイアウォールの背後で動作するメディアライブラリアプリケーションには、AEM オーサーインスタンスからのストレージと配信で十分です。
 
-   * ライブ web 配信の場合は、AEM パブリッシュインスタンスをお勧めします。
+  * ライブ web 配信の場合は、AEM パブリッシュインスタンスをお勧めします。
 
 >[!CAUTION]
 >
@@ -273,7 +289,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
 `http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
-応答は、コンテンツがコンテンツフラグメントに構造化されたシリアル化 JSON です。 参照は参照 URL として配信されます。
+応答はシリアル化された JSON で、コンテンツはコンテンツフラグメントと同じ構造になっています。 参照は参照 URL として配信されます。
 
 次の 2 通りの読み取り操作が可能です。
 
@@ -319,18 +335,18 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 * **200**（OK）
 次の場合に返されます。
 
-   * `GET` でコンテンツフラグメントを要求する
-   * `PUT` でコンテンツフラグメントを正常に更新する
+  * `GET` でコンテンツフラグメントを要求する
+  * `PUT` でコンテンツフラグメントを正常に更新する
 
 * **201**（Created）
 次の場合に返されます。
 
-   * `POST` でコンテンツフラグメントを正常に作成する
+  * `POST` でコンテンツフラグメントを正常に作成する
 
 * **404**（Not Found）
 次の場合に返されます。
 
-   * 要求されたコンテンツフラグメントが存在しない
+  * 要求されたコンテンツフラグメントが存在しない
 
 * **500**（内部サーバーエラー）
 
@@ -343,28 +359,28 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 
   以下に、このエラーステータスが返される場合の一般的なシナリオと、生成されるエラーメッセージ（等幅）を示します。
 
-   * 親フォルダーが存在しない（`POST` でコンテンツフラグメントを作成する場合）
-   * コンテンツフラグメントモデルが指定されていないか（cq:modelが見つかりません）、（無効なパスまたは権限の問題により）読み取ることができないか、有効なフラグメントモデルがありません：
+  * 親フォルダーが存在しない（`POST` でコンテンツフラグメントを作成する場合）
+  * コンテンツフラグメントモデルが指定されていないか（cq:modelが見つかりません）、（無効なパスまたは権限の問題により）読み取ることができないか、有効なフラグメントモデルがありません：
 
-      * `No content fragment model specified`
-      * `Cannot create a resource of given model '/foo/bar/qux'`
+    * `No content fragment model specified`
+    * `Cannot create a resource of given model '/foo/bar/qux'`
 
-   * コンテンツフラグメントを作成できなかった（アクセス権限の問題が発生している可能性がある）。
+  * コンテンツフラグメントを作成できなかった（権限の問題が発生している可能性がある）：
 
-      * `Could not create content fragment`
+    * `Could not create content fragment`
 
-   * タイトルや説明を更新できなかった。
+  * タイトルまたは説明を更新できなかった：
 
-      * `Could not set value on content fragment`
+    * `Could not set value on content fragment`
 
-   * メタデータを設定できなかった。
+  * メタデータを設定できなかった。
 
-      * `Could not set metadata on content fragment`
+    * `Could not set metadata on content fragment`
 
-   * コンテンツ要素が見つからなかったか更新できなかった
+  * コンテンツ要素が見つからなかったか更新できなかった
 
-      * `Could not update content element`
-      * `Could not update fragment data of element`
+    * `Could not update content element`
+    * `Could not update fragment data of element`
 
   通常、詳細なエラーメッセージは次のように返されます。
 
@@ -388,7 +404,7 @@ Assets REST API は、フォルダーのプロパティ（名前、タイトル�
 * [Adobe Experience Manager Assets API - コンテンツフラグメント](https://helpx.adobe.com/jp/experience-manager/6-5/sites/developing/using/reference-materials/assets-api-content-fragments/index.html)
 * [Assets HTTP API](/help/assets/mac-api-assets.md)
 
-   * [使用可能な機能](/help/assets/mac-api-assets.md#assets)
+  * [使用可能な機能](/help/assets/mac-api-assets.md#assets)
 
 ## その他のリソース {#additional-resources}
 

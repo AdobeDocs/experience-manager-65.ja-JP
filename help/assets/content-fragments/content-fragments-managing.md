@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1741'
 ht-degree: 98%
-
 ---
-
 # コンテンツフラグメントの管理 {#managing-content-fragments}
 
 ヘッドレスコンテンツの基礎となる AEM コンテンツフラグメントを Assets コンソールを使用して管理する方法について説明します。
@@ -37,7 +49,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->コンテンツフラグメントモデルとコンテンツフラグメントを操作する場合は、[&#x200B; ベストプラクティス &#x200B;](/help/assets/content-fragments/content-fragments.md#best-practices)に注意してください。
+>コンテンツフラグメントモデルとコンテンツフラグメントを操作する場合は、[ ベストプラクティス ](/help/assets/content-fragments/content-fragments.md#best-practices)に注意してください。
 
 >[!NOTE]
 >
@@ -59,7 +71,7 @@ ht-degree: 98%
 
    * [モデル](/help/assets/content-fragments/content-fragments-models.md) - **アドベンチャー**&#x200B;モデルなど、構造化コンテンツを必要とするフラグメントの作成に使用されます
 
-      * 使用可能なすべてのモデルが表示されます。
+     * 使用可能なすべてのモデルが表示されます。
 
    選択した後、「**次へ**」を使用して続けます。
 
@@ -69,23 +81,23 @@ ht-degree: 98%
 
    * **基本**
 
-      * **タイトル**
+     * **タイトル**
 
-        フラグメントタイトル。
+       フラグメントタイトル。
 
-        必須です。
+       必須です。
 
-      * **説明**
+     * **説明**
 
-      * **タグ**
+     * **タグ**
 
    * **詳細**
 
-      * **名前**
+     * **名前**
 
-        URL の作成に使用される名前です。
+       URL の作成に使用される名前です。
 
-        必須。タイトルから自動的に派生しますが、更新が可能です。
+       必須。タイトルから自動的に派生しますが、更新が可能です。
 
 1. 「**作成**」を選択して操作を完了してから、編集するためにフラグメントを&#x200B;**開く**&#x200B;か、「**完了**」でコンソールに戻ります。
 
@@ -105,17 +117,17 @@ ht-degree: 98%
 
 * **ダウンロード**
 
-   * フラグメントを ZIP ファイルとして保存します。要素、バリエーション、メタデータを含めるかどうかを定義できます。
+  * フラグメントを ZIP ファイルとして保存します。要素、バリエーション、メタデータを含めるかどうかを定義できます。
 
 * **作成**
 * **チェックアウト**
 * **プロパティ**
 
-   * フラグメントのメタデータを表示または編集できます。
+  * フラグメントのメタデータを表示または編集できます。
 
 * **編集**
 
-   * フラグメントの要素、バリエーション、および関連付けられているコンテンツやメタデータと共に[コンテンツを編集するためにフラグメントを開く](/help/assets/content-fragments/content-fragments-variations.md)ことができます。
+  * フラグメントの要素、バリエーション、および関連付けられているコンテンツやメタデータと共に[コンテンツを編集するためにフラグメントを開く](/help/assets/content-fragments/content-fragments-variations.md)ことができます。
 
 * **タグを管理**
 * **コレクションに追加**
@@ -191,17 +203,17 @@ ht-degree: 98%
 
 * フラグメント名の下に、現在のフラグメントの作成に使用された[コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)の名前が表示されます。
 
-   * この名前は、モデルエディターを開くリンクでもあります。
+  * この名前は、モデルエディターを開くリンクでもあります。
 
 * フラグメントのステータス、例えば、作成日、変更日、公開日などの情報を確認します。
 
 * 「**保存**」から、「**保存して閉じる**」オプションにアクセスできます。
 
 * 3つのドット （**...**） ドロップダウンから追加のアクションにアクセスできます。
-   * **ページ参照を更新**
-      * すべてのページ参照が更新されます。
-   * **[クイック公開](#publishing-and-referencing-a-fragment)**
-   * **[公開を管理](#publishing-and-referencing-a-fragment)**
+  * **ページ参照を更新**
+    * すべてのページ参照が更新されます。
+  * **[クイック公開](#publishing-and-referencing-a-fragment)**
+  * **[公開を管理](#publishing-and-referencing-a-fragment)**
 
 <!--
 * See the status of the fragment; for example, information about when it was created, modified or published. The status is also color-coded:
@@ -227,8 +239,8 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 * 「**保存**」と「**保存して閉じる**」
 
-   * 「**保存**」を選択すると、最新の変更が保存され、その後もエディターは開いたままです。
-   * 「**保存して閉じる**」を選択すると、最新の変更が保存された後、エディターが終了します。
+  * 「**保存**」を選択すると、最新の変更が保存され、その後もエディターは開いたままです。
+  * 「**保存して閉じる**」を選択すると、最新の変更が保存された後、エディターが終了します。
 
   >[!CAUTION]
   >
@@ -290,17 +302,17 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 * バージョン、コメント、注釈に関する情報の表示
 * バージョンに対するアクション
 
-   * **[このバージョンに戻る](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
+  * **[このバージョンに戻る](#reverting-to-a-version)**（既存のフラグメントを選択してから特定のバージョンを選択）
 
-   * **[現在のバージョンと比較](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
+  * **[現在のバージョンと比較](#comparing-fragment-versions)**（既存のフラグメントを選択してから特定のバージョンを選択）
 
-   * **ラベル**&#x200B;や&#x200B;**コメント**&#x200B;の追加（既存のフラグメントを選択してから特定のバージョンを選択）
+  * **ラベル**&#x200B;や&#x200B;**コメント**&#x200B;の追加（既存のフラグメントを選択してから特定のバージョンを選択）
 
-   * **バージョンとして保存**（既存のフラグメントを選択してから、タイムラインの下部にある上向き矢印を選択）
+  * **バージョンとして保存**（既存のフラグメントを選択してから、タイムラインの下部にある上向き矢印を選択）
 
 * 注釈に関するアクション
 
-   * **削除**
+  * **削除**
 
 >[!NOTE]
 >
@@ -334,9 +346,9 @@ This updates any page references and ensures that the Dispatcher is flushed as r
 
 * すべての相違点がハイライト表示されます
 
-   * 削除されたテキスト - 赤
-   * 挿入されたテキスト - 緑
-   * 置き換えられたテキスト - 青
+  * 削除されたテキスト - 赤
+  * 挿入されたテキスト - 緑
+  * 置き換えられたテキスト - 青
 
 * 全画面表示アイコンを使用すると、いずれかのバージョンで開いた後で、並列表示に切り替えることができます
 * 特定のバージョンに&#x200B;**戻す**&#x200B;ことができます

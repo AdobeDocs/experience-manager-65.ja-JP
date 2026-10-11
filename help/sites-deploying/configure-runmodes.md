@@ -9,13 +9,22 @@ feature: Administering
 exl-id: 6d03cb1d-500e-4a23-80e5-347a43dff30e
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '759'
 ht-degree: 97%
-
 ---
-
 # 実行モード{#run-modes}
 
 実行モードを使用すると、オーサーまたはパブリッシュ、テスト、開発、イントラネットなど、特定の目的に合わせて AEM インスタンスを調整できます。
@@ -141,7 +150,7 @@ nosamplecontent 実行モードは、実稼動インストール用に設計さ�
 
 ### -r オプションの使用 {#using-the-r-option}
 
-カスタム実行モードは、クイックスタート起動時に`-r`オプションを使用することで起動することができます。 例えば、次のコマンドを使用して、実行モードがdevに設定されたAEM インスタンスを起動します。 &grave;&grave;
+カスタム実行モードは、クイックスタート起動時に`-r`オプションを使用することで起動することができます。 例えば、次のコマンドを使用して、実行モードがdevに設定されたAEM インスタンスを起動します。 ``
 
 ```shell
 java -jar cq-56-p4545.jar -r dev

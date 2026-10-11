@@ -8,20 +8,24 @@ exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2693'
 ht-degree: 0%
-
 ---
-
 # アプリの詳細な構造{#the-anatomy-of-an-app}
 
 {{ue-over-mobile}}
 
 ## モバイルアプリのページテンプレート {#page-templates-for-mobile-apps}
 
-アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/angular/ng-page コンポーネント（[&#x200B; ローカルサーバー上のCRXDE Liteで開く](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次のJSP スクリプトが含まれています。
+アプリ用に作成するページコンポーネントは、/libs/mobileapps/components/angular/ng-page コンポーネント（[ ローカルサーバー上のCRXDE Liteで開く](http://localhost:4502/crx/de/index.jsp#/libs/mobileapps/components/angular/ng-page)）に基づいています。 このコンポーネントには、コンポーネントが継承またはオーバーライドする次のJSP スクリプトが含まれています。
 
 * ng-page.jsp
 * head.jsp
@@ -191,7 +195,7 @@ PhoneGap アプリケーション内の任意のアセットのURIは、プラ�
 
 PhoneGap デベロッパーとして、関係するコンテンツはwww ディレクトリの下にあります。 アプリアセットにアクセスするには、相対パスを使用します。
 
-この問題を複合するために、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用して、ベース URI （ハッシュを除く）が変更されないようにします。 そのため、参照するすべてのアセット、テンプレートまたはスクリプトは、トップレベルのページを基準とす&#x200B;**必要があります。 &#x200B;** 最上位ページでは、`*<name>*.angular-app-module.js`および`*<name>*.angular-app-controllers.js`によってAngular ルーティングとコントローラが初期化されます。 このページは、*sling:redirectを*拡張しないリポジトリのルートに最も近いページである必要があります。
+この問題を複合するために、PhoneGap アプリケーションではシングルページアプリ（SPA）パターンを使用して、ベース URI （ハッシュを除く）が変更されないようにします。 そのため、参照するすべてのアセット、テンプレートまたはスクリプトは、トップレベルのページを基準とす**必要があります。 ** 最上位ページでは、`*<name>*.angular-app-module.js`および`*<name>*.angular-app-controllers.js`によってAngular ルーティングとコントローラが初期化されます。 このページは、*sling:redirectを*拡張しないリポジトリのルートに最も近いページである必要があります。
 
 相対パスを扱うために、いくつかのヘルパーメソッドを使用できます。
 
@@ -306,7 +310,7 @@ www/
 
 #### .cordova/hooks/ {#cordova-hooks}
 
-このディレクトリには、[CLI フック &#x200B;](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/)が含まれています。 hook ディレクトリのフォルダーには、ビルド中に正確なポイントで実行されるnode.js スクリプトが含まれています。
+このディレクトリには、[CLI フック ](https://cordova.apache.org/docs/en/10.x/guide/appdev/hooks/)が含まれています。 hook ディレクトリのフォルダーには、ビルド中に正確なポイントで実行されるnode.js スクリプトが含まれています。
 
 #### .cordova/hooks/after-platform_add/ {#cordova-hooks-after-platform-add}
 
@@ -416,4 +420,4 @@ package.json ファイルは、**full** コンテンツ同期のダウンロー�
 
 ### 次の手順 {#the-next-steps}
 
-アプリの解剖学について学習したら、[&#x200B; シングルページアプリケーション &#x200B;](/help/mobile/phonegap-single-page-applications.md)を参照してください。
+アプリの解剖学について学習したら、[ シングルページアプリケーション ](/help/mobile/phonegap-single-page-applications.md)を参照してください。

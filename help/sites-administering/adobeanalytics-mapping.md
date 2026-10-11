@@ -10,13 +10,22 @@ exl-id: c7c0c705-ec16-40f5-ad08-193f82d01263
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 99%
-
+source-wordcount: '1461'
+ht-degree: 100%
 ---
-
 # コンポーネントデータと Adobe Analytics プロパティとのマッピング{#mapping-component-data-with-adobe-analytics-properties}
 
 Adobe Analytics に送信するデータを収集するフレームワークにコンポーネントを追加します。 分析データを収集するために設計されたコンポーネントは、適切な **CQ 変数**&#x200B;にデータを保存します。 そのようなコンポーネントをフレームワークに追加する場合、フレームワークは CQ 変数のリストを表示して、適切な **Analytics** 変数にマッピングできるようにします。
@@ -180,25 +189,26 @@ Analytics 変数を別のトラッキングコンポーネントにある CQ 変
 
    * **トラフィック**：
 
-      * CQ 変数（`eventdata.downloadLink`）にマッピングされたトラフィック変数（`prop1`）
+     * CQ 変数（`eventdata.downloadLink`）にマッピングされたトラフィック変数（`prop1`）
 
-      * コンポーネントの隣に鍵アイコンがある場合、これは、親フレームワークからの継承であり、そのため編集できないことを意味します。
+     * コンポーネントの隣に鍵アイコンがある場合、これは、親フレームワークからの継承であり、そのため編集できないことを意味します。
 
    * **コンバージョン**：
 
-      * CQ 変数（`pagedata.title`）にマッピングされたコンバージョン変数（`eVar1`）
+     * CQ 変数（`pagedata.title`）にマッピングされたコンバージョン変数（`eVar1`）
 
-      * CQ 変数フィールドをダブルクリックしてコードを手動で入力することによりインラインで追加された JavaScript 式にマッピングされたコンバージョン変数（`eVar3`）
+     * CQ 変数フィールドをダブルクリックしてコードを手動で入力することによりインラインで追加された JavaScript 式にマッピングされたコンバージョン変数（`eVar3`）
 
    * **イベント**：
 
-      * CQ イベント（`eventdata.events.pageView`）にマッピングされたイベント変数（`event1`）
+     * CQ イベント（`eventdata.events.pageView`）にマッピングされたイベント変数（`event1`）
 
 >[!NOTE]
 >
 >すべての表の CQ 変数列は、フィールドをダブルクリックしてテキストを追加することで、インラインで入力することもできます。 これらのフィールドは、JavaScript を入力として受け取ります。
 >
->例えば、`prop3`の横に> `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`を追加できます\
+>例えば、`prop3` の隣に 以下を追加できます。
+>     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
 >これで、*:*（コロン）を使用し、`prop3` として *Adobe* を接頭辞として使用して、*サイトセクション*&#x200B;と連結されたページの&#x200B;*タイトル*&#x200B;を送信します
 >
 

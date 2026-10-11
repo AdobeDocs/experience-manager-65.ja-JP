@@ -10,13 +10,29 @@ feature: Spin Sets,Asset Management
 role: User, Admin
 exl-id: 758ad754-15de-4e72-9b7d-ab49c51d7d4f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: cb008a68-9156-4b10-9c66-391409a53067
+    internal-label: Spin Sets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2001'
-ht-degree: 92%
-
+source-wordcount: '2038'
+ht-degree: 93%
 ---
-
 # スピンセット{#spin-sets}
 
 スピンセットは、物体を回転させて調べるという実際の操作をシミュレートするものです。 スピンセットを使用すると、あらゆる角度からアイテムを表示し、あらゆる角度から主要な視覚的詳細を確認することができます。
@@ -170,7 +186,7 @@ ht-degree: 92%
 
    * 画像を削除するには、画像を選択し、「**[!UICONTROL アセットを削除]**」を選択します。
 
-   * ページの右上隅付近にプリセットを適用するには、「**プリセット**」を選択した後、すべてのアセットに一度に適用するプリセットを選択します。
+   * ページの右上隅付近にプリセットを適用するには、「]**プリセット**[!UICONTROL 」を選択した後、すべてのアセットに一度に適用するプリセットを選択します。
 
 1. 「**[!UICONTROL 保存]**」を選択します。 新しく作成したスピンセットが、作成先のフォルダーに表示されます。
 
@@ -221,8 +237,8 @@ ht-degree: 92%
 
    * 画像を並べ替えるには、画像を新しい場所までドラッグします（並べ替えアイコンを選択してアイテムを移動します）。
    * 項目を昇順または降順に並べ替えるには、列の見出しを選択します。
-   * アセットを追加したり、既存のアセットを更新したりするには、**[!UICONTROL アセットを追加]**&#x200B;を選択します。アセットに移動して選択し、右上隅付近の&#x200B;**[!UICONTROL 選択]**&#x200B;を選択します。
-Experience Managerがサムネールに使用する画像を別の画像に置き換えて削除すると、元のアセットが引き続き表示されます。
+   * アセットを追加するか既存のアセットを更新するには、「**[!UICONTROL アセットを追加]**」を選択します。 アセットに移動して選択し、右上隅の「**[!UICONTROL 選択]**」を選択します。
+     Experience Manager でサムネール用に使用されている画像を別の画像に置き換えて削除しても、元のアセットは表示されたままになります。
    * アセットを削除するには、アセットを選択して、「**[!UICONTROL アセットを削除]**」を選択します。
    * プリセットを適用するには、「プリセット」アイコンを選択し、プリセットを選択します。
    * スピンセット全体を削除するには、スピンセットに移動して選択し、「**[!UICONTROL 削除]**」を選択します

@@ -1,16 +1,28 @@
 ---
 title: Document Security サーバーのインストールと設定
-
 description: Document Security を使用すると、サポートされる形式で保存した情報を安全に配布できます。 許可されたユーザーのみが保護されたドキュメントにアクセスできます。
-
-
 contentOwner: khsingh
-
 role: Admin
 exl-id: 4a4bad4a-3e68-43cb-b55c-03b509a5d304
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication,Document Security
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 89%

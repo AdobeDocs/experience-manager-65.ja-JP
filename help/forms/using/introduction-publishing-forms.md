@@ -9,13 +9,26 @@ exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
 solution: Experience Manager, Experience Manager Forms
 feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 97%
-
 ---
-
 # ポータル上のフォーム公開の概要{#introduction-to-publishing-forms-on-a-portal}
 
 | バージョン | 記事リンク |
@@ -76,11 +89,11 @@ AEM Forms は以下の標準ポータルコンポーネントを、**ドキュ�
 
 1. **フォームポータルページ上のドラフトフォームと送信済みフォームを一覧表示**：ドラフトと送信コンポーネントをフォームポータルページに追加して設定します。 このコンポーネントは、ドラフト状態のすべてのフォームと、既に送信済みのフォームを一覧表示します。
 
-   送信されたアダプティブフォームを「送信」タブに表示できるようにするには、**送信アクション**&#x200B;を&#x200B;**[Forms ポータル送信アクション &#x200B;](configuring-submit-actions.md)に設定します。** または、Forms ポータルの送信オプションを有効にします。 ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
+   送信されたアダプティブフォームを「送信」タブに表示できるようにするには、**送信アクション**&#x200B;を&#x200B;**[Forms ポータル送信アクション ](configuring-submit-actions.md)に設定します。** または、Forms ポータルの送信オプションを有効にします。 ユーザーがフォームを送信するたびに、フォームが「送信」タブに追加されます。
 
 1. **ドラフトおよび送信済みのフォームデータのストレージを設定：**&#x200B;デフォルトでは、ドラフトと送信データは AEM リポジトリに保存されます。 本番環境では、ドラフトまたは送信済みのフォームデータを AEM リポジトリに格納しないことをお勧めします。 [安全な場所にデータを保存するためのフォームポータルコンポーネントを設定します](../../forms/using/draft-submission-component.md#customizing-the-storage)。
-1. **（オプション）フォームポータルコンポーネントのカスタマイズ：**&#x200B;[フォームポータルのページテンプレートをカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)して、コンポーネントに独特の外観を提供します。
-1. **（オプション）フォームにカスタムメタデータを追加：**&#x200B;[フォームにカスタムメタデータを追加](../../forms/using/customizing-templates-forms-portal-components.md)して、リストと検索のエクスペリエンスを向上させます。
+1. **（オプション）フォームポータルコンポーネントのカスタマイズ：**[フォームポータルのページテンプレートをカスタマイズ](../../forms/using/customizing-templates-forms-portal-components.md)して、コンポーネントに独特の外観を提供します。
+1. **（オプション）フォームにカスタムメタデータを追加：**[フォームにカスタムメタデータを追加](../../forms/using/customizing-templates-forms-portal-components.md)して、リストと検索のエクスペリエンスを向上させます。
 1. **フォームポータルページを公開：**&#x200B;これで、フォームポータルページの準備が整いました。 ページを公開します。
 
 ## 関連記事 {#related-articles}

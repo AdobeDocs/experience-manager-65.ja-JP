@@ -9,16 +9,30 @@ exl-id: 9e648bab-9284-4fda-abb4-8bd7cd085981
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 100%
-
+source-wordcount: '1174'
+ht-degree: 97%
 ---
-
 # AEM Forms データの回復 {#recovering-the-aem-forms-data}
 
-ここでは、AEM Forms データの回復に必要な手順について説明します。[バックアップと回復に関する考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)も参照してください。
+ここでは、AEM Forms データの回復に必要な手順について説明します。 [バックアップと回復に関する考慮事項](/help/forms/using/admin-help/backup-recovery-strategy-aem-forms.md#special-considerations-for-backup-and-recovery)も参照してください。
 
 >[!NOTE]
 >
@@ -30,13 +44,13 @@ AEM Forms は、以下の障害から確実に回復します。
 
 **データの破損：**&#x200B;ファイルシステムは過去のトランザクションを記録せず、システムは誤って必要なプロセスデータを上書きする場合があります。
 
-**ユーザーエラー：**&#x200B;回復は、対象のデータベースで使用可能にされたデータに制限されます。データが保存されていて、使用可能な場合、回復は簡単に実行できます。
+**ユーザーエラー：**&#x200B;回復は、対象のデータベースで使用可能にされたデータに制限されます。 データが保存されていて、使用可能な場合、回復は簡単に実行できます。
 
-**停電、システムクラッシュ：**&#x200B;ファイルシステム API には多くの場合、システムの予期しない障害に対する堅牢な設計方法や使用方法がありません。停電またはシステムクラッシュが発生した場合、ファイルシステムに格納されているドキュメントコンテンツよりも、データベースに格納されているドキュメントコンテンツの方が最新の状態である可能性が高くなります。
+**停電、システムクラッシュ：**&#x200B;ファイルシステム API には多くの場合、システムの予期しない障害に対する堅牢な設計方法や使用方法がありません。 停電またはシステムクラッシュが発生した場合、ファイルシステムに格納されているドキュメントコンテンツよりも、データベースに格納されているドキュメントコンテンツの方が最新の状態である可能性が高くなります。
 
-ローリングバックアップモードを使用している場合、回復後もバックアップモードのままとなります。スナップショットバックアップモードを使用している場合、回復後はバックアップモードになりません。
+ローリングバックアップモードを使用している場合、回復後もバックアップモードのままとなります。 スナップショットバックアップモードを使用している場合、回復後はバックアップモードになりません。
 
-バックアップから新しいシステムに復元すると、次の設定が異なる場合があります。この違いは、AEM Forms アプリケーションの正常な回復には影響しません。
+バックアップから新しいシステムに復元すると、次の設定が異なる場合があります。 この違いは、AEM Forms アプリケーションの正常な回復には影響しません。
 
 * IP アドレス
 * 物理的なシステム構成（CPU、ディスク、メモリ）
@@ -51,17 +65,17 @@ AEM Forms は、以下の障害から確実に回復します。
 ## AEM Forms データの回復 {#recover-the-aem-forms-data}
 
 1. AEM Forms サービスおよびアプリケーションサーバーが実行中の場合は、停止します。
-1. 必要に応じて、システムイメージから物理システムを再作成します。例えば、回復の理由がデータベースサーバーの不具合である場合、この手順は必要ない可能性があります。
-1. イメージの作成後に適用されたパッチまたはアップデートを AEM forms に適用します。この情報は、バックアップ手順で記録されたものです。システムのバックアップ時と同じパッチレベルまで、AEM Forms にパッチを適用する必要があります。
+1. 必要に応じて、システムイメージから物理システムを再作成します。 例えば、回復の理由がデータベースサーバーの不具合である場合、この手順は必要ない可能性があります。
+1. イメージの作成後に適用されたパッチまたはアップデートを AEM forms に適用します。 この情報は、バックアップ手順で記録されたものです。 システムのバックアップ時と同じパッチレベルまで、AEM Forms にパッチを適用する必要があります。
 1. （WebSphere® Application Server）WebSphere® Application Server の新規インスタンスに回復する場合は、restoreConfig.bat／sh コマンドを実行します。
-1. AEM Forms データベースを回復します。それには、まず、データベースのバックアップファイルを使用してデータベースの復元操作を実行し、次に、回復したデータベースにトランザクションのやり直しログを適用します（「[AEM Forms データベース](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)」を参照）。詳しくは、次のナレッジベース記事を参照してください。
+1. AEM Forms データベースを回復します。それには、まず、データベースのバックアップファイルを使用してデータベースの復元操作を実行し、次に、回復したデータベースにトランザクションのやり直しログを適用します （[AEM forms database](/help/forms/using/admin-help/files-back-recover.md#aem-forms-database)を参照）。 詳しくは、次のいずれかのナレッジベース記事を参照してください。
 
-   * [DB2](/help/forms/using/admin-help/files-back-recover.md#db2)
+   * [DB2® AEM Formsのバックアップと復元](/help/forms/using/admin-help/files-back-recover.md#db2)
    * [AEM Forms の Oracle バックアップと回復](/help/forms/using/admin-help/files-back-recover.md#oracle)
-   * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
+   * [Microsoft® SQL Server Backup and Recovery for AEM forms](/help/forms/using/admin-help/files-back-recover.md#sql-server)
    * [AEM Forms の MySQL バックアップと回復](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
-1. GDS ディレクトリを回復します。それには、まず、AEM Forms の既存のインストール環境で GDS ディレクトリの内容を削除し、次に、バックアップされた GDS から GDS ディレクトリの内容をコピーします。GDS ディレクトリの場所を変更した場合は、[回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照してください。
+1. GDS ディレクトリを回復します。それには、まず、AEM Forms の既存のインストール環境で GDS ディレクトリの内容を削除し、次に、バックアップされた GDS から GDS ディレクトリの内容をコピーします。 GDS ディレクトリの場所を変更した場合は、[回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照してください。
 1. 次の例に示すように、復元する GDS バックアップディレクトリの名前を変更します。
 
    >[!NOTE]
@@ -70,15 +84,15 @@ AEM Forms は、以下の障害から確実に回復します。
 
    * （JBoss®）`[appserver root]/server/'server'/svcnative/DocumentStorage/backup` を次に変更：
 
-     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`。
+     `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`
 
    * （WebLogic）`[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` を次に変更：
 
-     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`。
+     `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`
 
    * （WebSphere®）次のように `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` の名前を変更します。
 
-     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`。
+     `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`
 
 1. コンテンツ保存場所のルートディレクトリを復元するには、まずAEM Forms の既存のインストールにあるコンテンツ保存場所のルートディレクトリの内容を削除し、次に、スタンドアロン環境またはクラスター環境のタスクに従って内容を復元します。
 
@@ -86,9 +100,9 @@ AEM Forms は、以下の障害から確実に回復します。
    >
    >コンテンツ保存場所のルートディレクトリのバックアップは、コンテンツサービス（非推奨）の設定時に指定されたコンテンツ保存場所のルートディレクトリの場所に復元する必要があります。
 
-   **スタンドアロン：**&#x200B;回復プロセス中に、バックアップされたすべてのディレクトリを復元します。これらのディレクトリが復元され、/backup-lucene-indexes ディレクトリが存在する場合は、名前を /lucene-indexes に変更します。そうでない場合は、lucene-indexes ディレクトリが既に存在するはずなので、アクションは必要ありません。
+   **スタンドアロン：**&#x200B;回復プロセス中に、バックアップされたすべてのディレクトリを復元します。 これらのディレクトリが復元され、/backup-lucene-indexes ディレクトリが存在する場合は、名前を /lucene-indexes に変更します。 そうでない場合は、lucene-indexes ディレクトリが既に存在するはずなので、アクションは必要ありません。
 
-   **クラスター：**&#x200B;回復プロセス中に、バックアップされたすべてのディレクトリを復元します。インデックスルートディレクトリを復元するには、クラスターの各ノードで次の手順を実行します。
+   **クラスター：**&#x200B;回復プロセス中に、バックアップされたすべてのディレクトリを復元します。 インデックスルートディレクトリを復元するには、クラスターの各ノードで次の手順を実行します。
 
    * インデックスルートディレクトリ内のコンテンツをすべて削除します。
    * /backup-lucene-indexes ディレクトリが存在する場合は、*コンテンツ保存場所のルートディレクトリ* /backup-lucene-indexes ディレクトリからインデックスルートディレクトリの内容をコピーし、*コンテンツ保存場所のルートディレクトリ* /backup-lucene-indexes ディレクトリを削除します。
@@ -111,7 +125,7 @@ AEM Forms は、以下の障害から確実に回復します。
 
 ## 回復中の GDS の場所の変更 {#changing-the-gds-location-during-recovery}
 
-GDS が元の場所以外の場所に復元された場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。スクリプトは `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` フォルダーにあります。このスクリプトでは `defaultGDS` と `newGDS` の 2 つのパラメーターを使用します。スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
+GDS が元の場所以外の場所に復元された場合は、LCSetGDS スクリプトを実行して GDS を新しい場所に設定します。 スクリプトは `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` フォルダーにあります。 このスクリプトでは `defaultGDS` と `newGDS` の 2 つのパラメーターを使用します。 スクリプトの実行方法については、同フォルダー内の `ReadMe.txt` ファイルを参照してください。
 
 >[!NOTE]
 >
@@ -119,15 +133,15 @@ GDS が元の場所以外の場所に復元された場合は、LCSetGDS スク�
 
 >[!NOTE]
 >
->この状況は、このスクリプトを使用して GDS の場所を変更する必要がある唯一の状況です。AEM Forms の実行中に GDS の場所を変更するには、管理コンソールを使用します。（[一般的な AEM Forms の設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)を参照してください。）
+>この状況は、このスクリプトを使用して GDS の場所を変更する必要がある唯一の状況です。 AEM Forms の実行中に GDS の場所を変更するには、管理コンソールを使用します。 （[一般的な AEM Forms の設定](/help/forms/using/admin-help/configure-general-aem-forms-settings.md#configure-general-aem-forms-settings)を参照してください。）
 
 >[!NOTE]
 >
->GDS ディレクトリがドライブルート（D:¥ など）にある場合、Windows でのコンポーネントのデプロイメントは失敗します。GDS の場合、ディレクトリがドライブのルートではなく、サブディレクトリに配置されていることを確認する必要があります。例えば、ディレクトリは単に D:¥ ではなく D:¥GDS にする必要があります。
+>GDS ディレクトリがドライブルート（D:¥ など）にある場合、Windows でのコンポーネントのデプロイメントは失敗します。 GDS の場合、ディレクトリがドライブのルートではなく、サブディレクトリに配置されていることを確認する必要があります。 例えば、ディレクトリは単に D:¥ ではなく D:¥GDS にする必要があります。
 
 ## クラスター環境への GDS の復元 {#recovering-the-gds-to-a-clustered-environment}
 
-クラスター環境で GDS の場所を変更するには、クラスター全体をシャットダウンし、クラスターの 1 つのノードで LCSetGDS スクリプトを実行します。（[回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照。）そのノードのみを起動します。そのノードが完全に起動されると、クラスター内の他のノードが安全に起動され、新しい GDS を正しく指し示します。
+クラスター環境で GDS の場所を変更するには、クラスター全体をシャットダウンし、クラスターの 1 つのノードで LCSetGDS スクリプトを実行します。 （[回復中の GDS の場所の変更](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery)を参照）。 そのノードのみを開始します。 そのノードが完全に起動されると、クラスター内の他のノードが安全に起動され、新しい GDS を正しく指し示します。
 
 >[!NOTE]
 >

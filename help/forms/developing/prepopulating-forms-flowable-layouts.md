@@ -9,13 +9,29 @@ role: Developer
 exl-id: ff087084-fb1c-43a4-ae54-cc77eb862493
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3513'
 ht-degree: 97%
-
 ---
-
 # 編集可能なレイアウトを使用した Forms の事前入力 {#prepopulating-forms-with-flowable-layouts1}
 
 ## 編集可能なレイアウトを使用した Forms の事前入力 {#prepopulating-forms-with-flowable-layouts2}
@@ -28,9 +44,9 @@ ht-degree: 97%
 * ユーザーがフォームに入力する作業を削減できる。
 * データを配置する場所を制御できるため、データの整合性を確保できる。
 
-次の 2 つの XML データソースから、 フォームの自動埋め込み行うことができます。
+次の 2 つの XML データソースでフォームを事前入力できます。
 
-* XDP データソース。XFA 構文に準拠する XML です ( または、Acrobat を使用して作成されたフォームに事前入力する XFDF データ )。
+* XDP データソース。XFA 構文に準拠する XML です（または、Acrobat を使用して作成したフォームを事前入力するための XFDF データ）。
 * フォームのフィールド名に一致する名前と値のペアを含む任意の XML データソース（このセクションの例では、任意の XML データソースを使用します）。
 
 事前入力するフォームフィールドごとに、XML 要素が存在する必要があります。 XML 要素名は、フィールド名と一致する必要があります。 XML 要素がフォームフィールドに対応していない場合や、XML 要素名がフィールド名と一致しない場合、XML 要素は無視されます。 すべての XML 要素が指定されている場合、XML 要素の表示順序を一致させる必要はありません。
@@ -49,13 +65,13 @@ ht-degree: 97%
      </Untitled>
 ```
 
-次の図に示すように、この XML データソースを確認フォームに事前入力し、フォームをレンダリングすると、XML 要素に割り当てたデータ値が表示されます。
+次の図に示すように、この XML データソースを使用して確認フォームに事前入力し、その後フォームをレンダリングすると、XML 要素に割り当てたデータ値が表示されます。
 
 ![pf_pf_confirmxml3](assets/pf_pf_confirmxml3.png)
 
 ### 編集可能なレイアウトを使用したフォームの事前入力 {#prepopulating_forms_with_flowable_layouts-1}
 
-レイアウトが編集可能な Forms は、未定量のデータをユーザーに表示する場合に役立ちます。 フォームのレイアウトは結合されるデータ量に合わせて自動的に調整されるので、固定レイアウトのフォームの場合とは異なり、フォームの固定レイアウトやページ数を事前に決定する必要はありません。
+フロアブルレイアウトの Forms は、未定量のデータをユーザーに表示する場合に役立ちます。 フォームのレイアウトは結合されるデータ量に合わせて自動的に調整されるので、固定レイアウトのフォームの場合とは異なり、フォームの固定レイアウトやページ数を事前に決定する必要はありません。
 
 通常、フォームには、実行時に取得されるデータが入力されます。 その結果、メモリ内 XML データソースを作成し、そのデータをメモリ内 XML データソースに直接配置することで、フォームに事前入力することができます。
 
@@ -83,7 +99,7 @@ Web ベースのアプリケーション（オンラインストアなど）を�
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>XML データソースが、注文書フォームの事前入力に使用されます（このフォームの例を次の表に示します）。 </p></td>
+   <td><p>XML データソースが、注文書フォームの事前入力に使用されます（このフォームの例をこの表の後に示します）。 </p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
@@ -102,11 +118,11 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 
 ### フォームデザインの考慮事項 {#form-design-considerations}
 
-編集可能なレイアウトの Forms は、Designer で作成されたフォームデザインに基づいています。 フォームデザインでは、ユーザー入力に基づく値の計算を含む、レイアウト、プレゼンテーション、データ取得のルールのセットを指定してください。 ルールは、データがフォームに入力される際に適用されます。 フォームに追加されるフィールドは、フォームデザイン内のサブフォームです。 例えば、前の図で示した注文書フォームでは、各行がサブフォームになっています。 サブフォームを含むフォームデザインの作成について詳しくは、[編集可能なレイアウトを含む注文書フォームの作成](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9_jp)を参照してください。
+フロアブルレイアウトのフォームは、Designer で作成されたフォームデザインに基づいています。 フォームデザインでは、ユーザー入力に基づく値の計算を含む、レイアウト、プレゼンテーション、データ取得のルールのセットを指定してください。 ルールは、データがフォームに入力される際に適用されます。 フォームに追加されるフィールドは、フォームデザイン内のサブフォームです。 例えば、前の図で示した注文書フォームでは、各行がサブフォームになっています。 サブフォームを含むフォームデザインの作成について詳しくは、[編集可能なレイアウトを含む注文書フォームの作成](https://www.adobe.com/go/learn_aemforms_qs_poformflowable_9_jp)を参照してください。
 
 ### データのサブグループについて {#understanding-data-subgroups}
 
-固定レイアウトと編集可能なレイアウトを使用したフォームの事前入力には、XML データソースが使用されます。 ただし、編集可能なレイアウトのフォームの事前入力に使用される XML データソースには、フォーム内で繰り返されるサブフォームの事前入力に使用される「繰り返し XML 要素」が含まれているという相違点があります。 これらの繰り返し XML 要素は、データサブグループと呼ばれます。
+固定レイアウトとフロアブルレイアウトのフォームの事前入力には、XML データソースが使用されます。 ただし、編集可能なレイアウトのフォームの事前入力に使用される XML データソースには、フォーム内で繰り返されるサブフォームの事前入力に使用される「繰り返し XML 要素」が含まれているという相違点があります。 これらの繰り返し XML 要素は、データサブグループと呼ばれます。
 
 前の図に示す注文書フォームの事前入力に使用する XML データソースには、4 つの繰り返しデータのサブグループが含まれています。 各データサブグループは、購入した品目に対応します。 購入した品目は、モニター、デスクランプ、電話、アドレス帳です。
 
@@ -174,7 +190,7 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 * 品目の数量
 * 単価
 
-データサブグループの親 XML 要素の名前は、フォームデザイン内のサブフォームの名前と一致する必要があります。 例えば、前の図では、データサブグループの親 XML 要素の名前が `detail` になっています。 これは、注文書フォームの基になるフォームデザインにあるサブフォームの名前に対応します。 データサブグループの親 XML 要素の名前とサブフォームが一致しない場合、サーバー側のフォームは事前入力されません。
+データサブグループの親 XML 要素の名前は、フォームデザイン内のサブフォームの名前と一致する必要があります。 例えば、前の図では、データサブグループの親 XML 要素の名前が `detail` になっています。 これは、注文書フォームの基になるフォームデザインにあるサブフォームの名前に対応します。 データサブグループの親 XML 要素の名前とサブフォームが一致しない場合、サーバーサイドのフォームは事前入力されません。
 
 各データサブグループには、サブフォーム内のフィールド名に一致する XML 要素が含まれている必要があります。 フォームデザインにある `detail` サブフォームには、次のフィールドが含まれます。
 
@@ -238,7 +254,7 @@ Web ベースのアプリケーション（オンラインストアなど）を�
 
 ### Java API を使用したフォームの事前入力 {#prepopulating-forms-using-the-java-api}
 
-Forms API（Java）を使用して、編集可能なレイアウトでフォームに事前入力するには、次の手順を実行します。
+Forms API（Java）を使用して、フロアブルレイアウトでフォームに事前入力するには、次の手順を実行します。
 
 1. プロジェクトファイルを含める
 
@@ -249,7 +265,7 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
    * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
    * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
    * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
-   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのルート要素を作成します。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`Document` オブジェクトの `appendChild` メソッドを呼び出してルート要素をドキュメントに追加し、ルート要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースのルート要素を作成します。 これにより、ルート要素を表す `Element` オブジェクトが作成されます。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`Document` オブジェクトの `appendChild` メソッドを呼び出してルート要素をドキュメントに追加し、ルート要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
 
@@ -262,7 +278,7 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[&#x200B; データサブグループについて](#understanding-data-subgroups)を参照）。
+   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[ データサブグループについて](#understanding-data-subgroups)を参照）。
    * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
@@ -306,7 +322,7 @@ Forms API（Java）を使用して、編集可能なレイアウトでフォー�
 
 **関連トピック**
 
-[クイックスタート（SOAP モード）：Java API を使用した、編集可能なレイアウトを含む Forms の事前入力](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した、フロアブルレイアウトを含む Forms の事前入力](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -334,16 +350,16 @@ Forms API（web サービス）を使用してフォームに編集可能なレ�
 
      ` Element header = (Element)document.createElement("header");  root.appendChild(header);`
 
-   * `Document` オブジェクトの `createElement` メソッドを呼び出して要素名を表す文字列値を渡し、ヘッダー要素に属する子要素を作成します。 戻り値を `Element` にキャストします。 次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。 子要素の値として表示される文字列値を指定します。 最後に、ヘッダー要素の `appendChild` メソッドを呼び出して子要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して要素名を表す文字列値を渡し、ヘッダー要素に属する子要素を作成します。 戻り値を `Element` にキャストします。 次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。 子要素の値として表示される文字列値を指定します。 最後に、ヘッダー要素の `appendChild` メソッドを呼び出して子要素をヘッダー要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[&#x200B; データサブグループについて](#understanding-data-subgroups)を参照）。
-   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。 次のコード行に、このアプリケーションロジックを示します。
+   * フォームの静的部分に表示されるフィールドごとに最後のサブステップを繰り返して、残りのすべての要素をヘッダー要素に追加します（XML データソース図では、これらのフィールドはセクション Aに表示されます）。 （[ データサブグループについて](#understanding-data-subgroups)を参照）。
+   * `Document` オブジェクトの `createElement` メソッドを呼び出して、XML データソースの詳細要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`root` オブジェクトの `appendChild` メソッドを呼び出して詳細要素をルート要素に追加し、詳細要素オブジェクトを引数として渡します。 詳細要素に追加される XML 要素は、フォームの動的な部分に対応します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
 
-   * `Document` オブジェクトの `createElement` メソッドを使用して詳細要素に属する子要素を作成し、要素の名前を表す文字列値を渡します。 戻り値を `Element` にキャストします。 次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。 子要素の値として表示される文字列値を指定します。 最後に、詳細要素の `appendChild` メソッドを呼び出して子要素を詳細要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行に、このアプリケーションロジックを示します。
+   * `Document` オブジェクトの `createElement` メソッドを使用して詳細要素に属する子要素を作成し、要素の名前を表す文字列値を渡します。 戻り値を `Element` にキャストします。 次に、`appendChild` メソッドを呼び出して `Document` オブジェクトの `createTextNode` メソッドを引数として渡し、子要素の値を設定します。 子要素の値として表示される文字列値を指定します。 最後に、詳細要素の `appendChild` メソッドを呼び出して子要素を詳細要素に追加し、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
 
      ` Element txtPartNum = (Element)document.createElement("txtPartNum");  txtPartNum.appendChild(document.createTextNode("00010-100"));  detail.appendChild(txtPartNum);`
 

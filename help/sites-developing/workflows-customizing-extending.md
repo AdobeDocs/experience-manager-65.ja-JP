@@ -9,13 +9,22 @@ exl-id: 9e205912-50a6-414a-b8d4-a0865269d0e0
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3628'
 ht-degree: 98%
-
 ---
-
 # ワークフロー機能の拡張{#extending-workflow-functionality}
 
 このトピックでは、ワークフロー用のカスタムステップコンポーネントを作成する方法や、プログラムによってワークフローを操作する方法について説明します。
@@ -63,8 +72,8 @@ ht-degree: 98%
 
   ダイアログには以下のタブがあります。
 
-   * **共通**：タイトルと説明の編集用。
-   * **詳細**：メール通知プロパティの編集用。
+  * **共通**：タイトルと説明の編集用。
+  * **詳細**：メール通知プロパティの編集用。
 
   ![wf-44](assets/wf-44.png) ![wf-45](assets/wf-45.png)
 
@@ -104,9 +113,9 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 * 型：`String`
 * 値：ベースコンポーネントに解決される次のパスのいずれか
 
-   * `cq/workflow/components/model/process`
-   * `cq/workflow/components/model/participant`
-   * `cq/workflow/components/model/dynamic_participant`
+  * `cq/workflow/components/model/process`
+  * `cq/workflow/components/model/participant`
+  * `cq/workflow/components/model/dynamic_participant`
 
 ### ステップインスタンスのデフォルトのタイトルおよび説明の指定 {#specifying-the-default-title-and-description-for-step-instances}
 
@@ -131,7 +140,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 
    >[!NOTE]
    >
-   >cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
+   >cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
 
 1. `cq:EditConfig` ノードの下に、次のノードを追加します。
 
@@ -180,7 +189,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
-   cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
+   cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/developing-components.md#configuring-the-edit-behavior)を参照してください。
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
@@ -215,7 +224,7 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
    * 名前：`cq:editConfig`
    * 型：`cq:EditConfig`
 
-   cq:editConfig ノードについて詳しくは、[&#x200B; コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior)を参照してください。
+   cq:editConfig ノードについて詳しくは、[ コンポーネントの編集動作の設定](/help/sites-developing/components-basics.md#edit-behavior)を参照してください。
 
 1. cq:EditConfig ノードの下に、次のノードを追加します。
 
@@ -240,16 +249,16 @@ WorkItem には、作業項目（ステップなど）の実行中にのみ使�
 
 * 名前：`PROCESS_AUTO_ADVANCE`
 
-   * 型：`Boolean`
-   * 値：
+  * 型：`Boolean`
+  * 値：
 
-      * `true` に設定した場合、ワークフローはそのステップを実行して続行します。これはデフォルト値であり、推奨もされています。
-      * `false` に設定した場合、ワークフローはそのステップを実行して停止します。これには追加の処理が必要なので、`true` に設定することをお勧めします。
+    * `true` に設定した場合、ワークフローはそのステップを実行して続行します。これはデフォルト値であり、推奨もされています。
+    * `false` に設定した場合、ワークフローはそのステップを実行して停止します。これには追加の処理が必要なので、`true` に設定することをお勧めします。
 
 * 名前：`DO_NOTIFY`
 
-   * 型：`Boolean`
-   * 値：ユーザー参加ステップについて、メール通知を送信する必要があるかどうかを示します（メールサーバーが正しく設定されていると想定しています）。
+  * 型：`Boolean`
+  * 値：ユーザー参加ステップについて、メール通知を送信する必要があるかどうかを示します（メールサーバーが正しく設定されていると想定しています）。
 
 ## データの保持とアクセス {#persisting-and-accessing-data}
 
@@ -838,12 +847,12 @@ private List<String> getPaths(String path, ResourceCollection rcCollection) {
 
      次のいずれかを指定する必要があります。
 
-      * コラボレーションワークフロー
-      * DAM ワークフロー
-      * Forms のワークフロー
-      * プロジェクト
-      * WCM ワークフロー
-      * ワークフロー
+     * コラボレーションワークフロー
+     * DAM ワークフロー
+     * Forms のワークフロー
+     * プロジェクト
+     * WCM ワークフロー
+     * ワークフロー
 
    ![wf-35](assets/wf-35.png)
 

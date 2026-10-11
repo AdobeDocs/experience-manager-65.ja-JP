@@ -10,7 +10,18 @@ exl-id: 6790202f-0542-4779-b3ce-d394cdba77b4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2503'
 ht-degree: 99%
@@ -29,9 +40,9 @@ ht-degree: 99%
 
 新しいワークフローモデルを初めて作成する場合、次のものが含まれます。
 
-* **フロー開始**&#x200B;ステップと&#x200B;**フロー終了**&#x200B;ステップ。
+* **フロー開始**&#x200B;ステップと&#x200B;**フロー終了**ステップ。
 これらのステップは、ワークフローの始まりと終わりを表します。 これらのステップは必須で、編集または削除できません。
-* 「**手順 1**」という名前のサンプルの&#x200B;**参加者**&#x200B;ステップ。
+* 「**手順 1**」という名前のサンプルの&#x200B;**参加者**ステップ。
 このステップは、作業項目をワークフロー開始者に割り当てるように設定されています。 このステップを編集または削除し、必要に応じてステップを追加します。
 
 エディターを使用してワークフローを作成するには：
@@ -188,7 +199,7 @@ ht-degree: 99%
 
 1. **[!UICONTROL ツール／一般／タグ付け]**&#x200B;と移動します。 **[!UICONTROL ワークフロー]**&#x200B;を選択します。
 
-1. 「**[!UICONTROL 作成／タグを作成]**」を選択します。 **[!UICONTROL タイトル]**&#x200B;を `DAM` に、**[!UICONTROL 名前]**&#x200B;を `dam` に、それぞれ設定します。 **[!UICONTROL 送信]**&#x200B;を選択します。
+1. 「**[!UICONTROL 作成／タグを作成]**」を選択します。 **[!UICONTROL タイトル]**&#x200B;を `DAM` に、**[!UICONTROL 名前]**&#x200B;を `dam` に、それぞれ設定します。 **[!UICONTROL 送信]**を選択します。
    ![ワークフローモデルでタグを作成する](assets/workflow_create_tag.png)
 
 1. **[!UICONTROL ツール／ワークフロー／モデル]**&#x200B;に移動します。 **[!UICONTROL アクティベーションのリクエスト]**&#x200B;を選択し、次に&#x200B;**[!UICONTROL 編集]**&#x200B;を選択してください。
@@ -197,7 +208,7 @@ ht-degree: 99%
 
 1. `Workflow : DAM` を&#x200B;**[!UICONTROL タグ]**&#x200B;フィールドに追加します。 チェック（チェックマーク）で選択を確認します。
 
-1. **[!UICONTROL 保存して閉じる]**&#x200B;でタグの追加を確認します。
+1. **[!UICONTROL 保存して閉じる]**でタグの追加を確認します。
    ![モデルのページプロパティの編集](assets/workflow_model_edit_activation1.png)
 
 1. **[!UICONTROL 同期]**&#x200B;でプロセスを完了します。 タッチ操作対応 UI でワークフローを使用できるようになりました。

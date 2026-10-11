@@ -1,6 +1,6 @@
 ---
 title: AEM Forms ワークスペースで使用する API
-description: カスタマイズと自動化のために開示された、公開 Java&trade; API、JavaScript API、および LiveCycle AEM Forms ワークスペースのメソッド。
+description: パブリック Java&trade；およびJavaScript APIとLiveCycle AEM Forms Workspaceのメソッド（カスタマイズと自動化のために公開）。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -8,13 +8,33 @@ exl-id: 9034f73a-83f3-498e-b6a6-ad6577aa1a3a
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 100%
-
+source-wordcount: '1063'
+ht-degree: 98%
 ---
-
 # AEM Forms ワークスペースで使用する API {#apis-used-in-aem-forms-workspace}
 
 AEM Forms ワークスペースでは次の API が使用されています。
@@ -31,19 +51,19 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getGroups</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getGroups</td>
-   <td>グループを検索します。何も指定しない場合はすべてのグループのリストを返します。名前を指定した場合はそれらのグループを返します。</td>
+   <td>グループを検索します。 何も指定しない場合はすべてのグループのリストを返します。名前を指定した場合はそれらのグループを返します。</td>
   </tr>
   <tr>
    <td>getUsersAndGroups</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsersAndGroups</td>
-   <td>ユーザーおよびグループを検索します。何も指定しない場合はすべてのユーザーとグループのリストを返します。名前を指定した場合はそれらのユーザーとグループを返します。</td>
+   <td>ユーザーおよびグループを検索します。 何も指定しない場合はすべてのユーザーとグループのリストを返します。名前を指定した場合はそれらのユーザーとグループを返します。</td>
   </tr>
   <tr>
    <td>prepareForSubmit</td>
    <td>ProcessManagementDocumentHandlingService</td>
    <td>prepareForSubmit</td>
-   <td>フォームを DocumentSubmitServlet で送信する前に呼び出されます。実際の送信中に取得されるタスク ID をセッション変数（有効期限と共に）に設定します。</td>
+   <td>フォームを DocumentSubmitServlet で送信する前に呼び出されます。 実際の送信中に取得されるタスク ID をセッション変数（有効期限と共に）に設定します。</td>
   </tr>
   <tr>
    <td>submitTask</td>
@@ -103,7 +123,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>submitWithData</td>
    <td>ProcessManagementTaskService</td>
    <td>submitWithData</td>
-   <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。TaskManager の送信 API を呼び出さない Flex フォームに使用されます。</td>
+   <td>TaskManager の送信 API を使用してタスクに関連付けられたフォームデータ（文字列として渡された）を送信します。 TaskManager の送信 API を呼び出さない Flex フォームに使用されます。</td>
   </tr>
   <tr>
    <td>save</td>
@@ -133,7 +153,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>share</td>
    <td>ProcessManagementTaskService</td>
    <td>share</td>
-   <td>別のユーザーとタスクを共有します。別のユーザーはタスクを要求してタスクの所有者になることができます。</td>
+   <td>別のユーザーとタスクを共有します。 別のユーザーはタスクを要求してタスクの所有者になることができます。</td>
   </tr>
   <tr>
    <td>forward</td>
@@ -181,13 +201,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>setVisibility</td>
    <td>ProcessManagementTaskService</td>
    <td>setVisibility</td>
-   <td>タスクの表示を設定します。表示が false に設定された場合は、それ以降ユーザーに表示されなくなります。</td>
+   <td>タスクの表示を設定します。 表示が false に設定された場合は、それ以降ユーザーに表示されなくなります。</td>
   </tr>
   <tr>
    <td>getUsers</td>
    <td>ProcessManagementUserProxyService</td>
    <td>getUsers</td>
-   <td>ユーザーの検索に使用します。名前が指定されていない場合はすべてのユーザーを返しますが、そうでない場合は指定された名前のユーザーを返します。</td>
+   <td>ユーザーの検索に使用します。 名前が指定されていない場合はすべてのユーザーを返しますが、そうでない場合は指定された名前のユーザーを返します。</td>
   </tr>
   <tr>
    <td>getUsersInGroup</td>
@@ -199,13 +219,13 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>grantQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>grantQueueAccess</td>
-   <td>ログインユーザーのキューへのアクセス権を、指定したユーザーに付与します。基本的に固有のキューを別のユーザーと共有することになります。</td>
+   <td>ログインユーザーのキューへのアクセス権を、指定したユーザーに付与します。 基本的に固有のキューを別のユーザーと共有することになります。</td>
   </tr>
   <tr>
    <td>requestQueueAccess</td>
    <td>ProcessManagementQueueService</td>
    <td>requestQueueAccess</td>
-   <td>ログインしたユーザーに対して指定したユーザーのキューへのアクセスをリクエストします。ユーザーがリクエストを承認した場合、ユーザーのキューはログインユーザーと共有されます。</td>
+   <td>ログインしたユーザーに対して指定したユーザーのキューへのアクセスをリクエストします。 ユーザーがリクエストを承認した場合、ユーザーのキューはログインユーザーと共有されます。</td>
   </tr>
   <tr>
    <td>getGrantedUsers</td>
@@ -307,7 +327,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>getAssignmentsForTask</td>
    <td>ProcessManagementTaskService</td>
    <td>getAssignmentsForTask</td>
-   <td>タスクのすべての割り当てを取得します。例えば、ユーザーがタスクを別のユーザーに転送または問い合わせする場合、それがタスクの割り当てになります。</td>
+   <td>タスクのすべての割り当てを取得します。 例えば、ユーザーがタスクを別のユーザーに転送または問い合わせする場合、それがタスクの割り当てになります。</td>
   </tr>
   <tr>
    <td>deleteAttachment </td>
@@ -319,7 +339,7 @@ AEM Forms ワークスペースでは次の API が使用されています。
    <td>initialize</td>
    <td>ProcessManagementClientSessionService</td>
    <td>initialize</td>
-   <td>必要に応じてアサーションを更新します。ユーザーを認証します。サーバー／クライアント情報のセッションパラメーターを設定します。ユーザー情報およびポーリング間隔を返します。</td>
+   <td>必要に応じてアサーションを更新します。 ユーザーを認証します。 サーバー／クライアント情報のセッションパラメーターを設定します。 ユーザー情報およびポーリング間隔を返します。</td>
   </tr>
   <tr>
    <td>getTasksForDirectReports</td>

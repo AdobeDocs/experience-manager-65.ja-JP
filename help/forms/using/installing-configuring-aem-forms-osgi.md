@@ -8,13 +8,31 @@ role: Admin, User, Developer
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on OSGi
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 8c4fb903-572c-5473-ad45-8ebb0d5d8134
+    internal-label: AEM Forms on OSGi
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 98%
-
 ---
-
 # データ取得機能をインストールして設定する{#install-and-configure-data-capture-capabilities}
 
 ## はじめに {#introduction}
@@ -44,18 +62,18 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 * AEM インスタンスのインストールパスに空白が含まれていないこと。
 * AEM インスタンスが稼働していること。 Windows ユーザーの場合は、昇格されたモードで AEM インスタンスをインストールします。 AEM の用語では、「インスタンス」は、サーバー上でオーサーモードまたはパブリッシュモードで実行されている AEM のコピーのことです。 AEM Forms のデータキャプチャ機能を実行するには、少なくとも 2 つの [AEM インスタンス（1 つはオーサー、もう 1 つはパブリッシュ）](/help/sites-deploying/deploy.md)を必要とします。
 
-   * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
-   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
+  * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
+  * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
 * メモリ要件が満たされていること。 AEM Forms アドオンパッケージでは、次が必要です。
 
-   * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
-   * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
+  * Microsoft Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
+  * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
 
 * オーサーインスタンスとパブリッシュインスタンスに対してレプリケーションとリバースレプリケーションが設定されていること。 詳しくは、[レプリケーション](/help/sites-deploying/replication.md)を参照してください。
 * UNIX ベースのシステムの場合：
 
-   * インストールメディアから次の 32 ビット版パッケージをインストールします。
+  * インストールメディアから次の 32 ビット版パッケージをインストールします。
 
 <table>
  <tbody>
@@ -100,7 +118,7 @@ AEM Forms のデータ取得機能をインストールして設定する前に�
 
 * インストールメディアから、次の 64 ビット版パッケージをインストールします。
 
-   * llibicu
+  * llibicu
 
 * [32 ビット版の Microsoft Visual Studio 2019 再頒布可能パッケージ](https://learn.microsoft.com/ja-jp/cpp/windows/latest-supported-vc-redist?view=msvc-170)をインストールします。
 
@@ -119,7 +137,7 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 1. パッケージを選択して、「**[!UICONTROL インストール]**」をクリックします。
 
    [AEM Forms リリース](https://helpx.adobe.com/jp/aem-forms/kb/aem-forms-releases.html)の記事に記載されている直接リンクからパッケージをダウンロードすることもできます。
-1. パッケージのインストールが完了したら、AEM インスタンスを再起動します。 **サーバーをすぐに再起動しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが`[AEM-Installation-Directory]/crx-quickstart/logs/error.log` ファイルに表示されなくなり、ログが安定するまで待ちます。
+1. パッケージのインストール後、AEM インスタンスを再起動するよう求められます。 **サーバーをすぐに再起動しないでください。** AEM Forms サーバーを停止する前に、ServiceEvent REGISTERED メッセージとServiceEvent UNREGISTERED メッセージが`[AEM-Installation-Directory]/crx-quickstart/logs/error.log` ファイルに表示されなくなり、ログが安定するまで待ちます。
 
    >[!NOTE]
    >
@@ -186,7 +204,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 1. AEM Forms のアクセスの設定：
 
-   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、次のフィルターをフィルターセクションに追加します。
+   dispatcher.any ファイルを開いて編集します。 フィルターセクションに移動し、そこに次のフィルターを追加します。
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
@@ -214,7 +232,7 @@ Dispatcher は、Adobe Experience Manager のキャッシュやロードバラ�
 
 #### フォームデータモデルに SSL 通信を設定 {#configure-ssl-communcation-for-form-data-model}
 
-フォームデータモデルの SSL 通信を有効にすることができます。 フォームデータモデルの SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。 次のコマンドを実行して証明書を追加することができます。 &grave;&grave;
+フォームデータモデルの SSL 通信を有効にすることができます。 フォームデータモデルの SSL 通信を有効にするには、任意の AEM Forms インスタンスを起動する前に、すべてのインスタンスの Java Trust Store に証明書を追加します。 次のコマンドを実行して証明書を追加することができます。 ``
 
 `keytool -import -alias <alias-name> -file <pathTo .cer certificate file> -keystore <<pathToJRE>\lib\security\cacerts>`
 

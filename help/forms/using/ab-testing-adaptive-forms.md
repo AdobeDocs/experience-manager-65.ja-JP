@@ -9,13 +9,29 @@ exl-id: be2444df-c772-4a8e-83f9-0f565c15a44e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 98%
-
 ---
-
 # アダプティブフォームの A/B テストの作成と管理{#create-and-manage-a-b-test-for-adaptive-forms}
 
 [!BADGE 廃止]{type=negative tooltip="この機能は提供終了となりました"}
@@ -109,7 +125,7 @@ AEM では、オーディエンスを作成し、A/B テストに使用できま
 1. ツールバーの&#x200B;**選択**&#x200B;ツールをクリックして、アダプティブフォームを選択します。
 1. ツールバーの&#x200B;**詳細**&#x200B;をクリックして、「**A/B テストを設定**」を選択します。 「A/B テストを設定」ページが開きます。
 
-[アダプティブフォームの![A/B テスト設定ページ &#x200B;](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
+[アダプティブフォームの![A/B テスト設定ページ ](assets/ab-test-configure.png)](assets/ab-test-configure-1.png)
 
 1. A/B テストの「**アクティビティ名**」を指定します。
 
@@ -153,7 +169,7 @@ A/B テストレポートを表示し分析するには：
 
 1. アダプティブフォームを選択し、「**詳細**」、「**A/B テストレポート**」の順にクリックします。 レポートが表示されます。
 
-[![A/B テスト レポート &#x200B;](assets/ab-test-report-2.png)](assets/ab-test-report-3.png)
+[![A/B テスト レポート ](assets/ab-test-report-2.png)](assets/ab-test-report-3.png)
 
 1. レポートを分析して、結果が良い方のエクスペリエンスを推奨結果として宣言するのに十分なデータポイントが得られていることを確認します。 同じ A/B テストをさらに時間をかけて継続する、または推奨結果を宣言する、あるいは A/B テストを終了するかを選択できます。
 1. 推奨結果を宣言して A/B テストを終了するには、レポートダッシュボードで「**A/B テストを終了**」ボタンをクリックします。 2 つのエクスペリエンスのいずれかを推奨結果として宣言するように求めるダイアログが表示されます。 推奨結果を選択し、A/B テストの終了を確認します。

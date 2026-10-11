@@ -8,30 +8,48 @@ feature: Document Services,APIs & Integrations
 exl-id: 585d4053-1056-4d2b-a9df-9516775afe50
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '362'
 ht-degree: 100%
-
 ---
-
 # sendToPrinter API の使用 {#using-the-sendtoprinter-api}
 
 ## 概要 {#overview}
 
-AEM Forms では、SendToPrinter サービスを使用することで、プリンターにドキュメントを送信できます。SendToPrinter サービスは、次の印刷アクセスメカニズムをサポートしています。
+AEM Forms では、SendToPrinter サービスを使用することで、プリンターにドキュメントを送信できます。 SendToPrinter サービスは、次の印刷アクセスメカニズムをサポートしています。
 
 * **直接アクセス型プリンター** `: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.`
 
 * **間接アクセス型プリンター** `: The printer that is installed on a print server is accessed from other computers. Technologies such as the common UNIX® printing system (CUPS) and the Line Printer Daemon (LPD) protocol are available to connect to a network printer. To access an indirect accessible printer, specify the print server’s IP or host name. Using this mechanism, you can send a document to an LPD URI when the network has an LPD running. The mechanism lets you route the document to any printer that is connected to the network that has an LPD running.`
 
-  ドキュメントをプリンターに送信する場合は、次のいずれかの印刷プロトコルを指定します。 
+  ドキュメントをプリンターに送信する場合は、次のいずれかの印刷プロトコルを指定します。
 
-   * **CUPS** `: A printing protocol named common UNIX printing system. This protocol is used for UNIX operating systems and enables a computer to function as a print server. The print server accepts print requests from client applications, processes them, and sends them to configured printers. On the IBM AIX® operating system, usage of CUPS is not recommended.`
-   * ``**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
-   * ``**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
-   * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
-   * **CIFS**：Output サービスは、Common Internet File System（CIFS）印刷プロトコルをサポートしています。
+  * **CUPS** `: A printing protocol named common UNIX printing system. This protocol is used for UNIX operating systems and enables a computer to function as a print server. The print server accepts print requests from client applications, processes them, and sends them to configured printers. On the IBM AIX® operating system, usage of CUPS is not recommended.`
+  * ``**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
+  * ``**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
+  * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
+  * **CIFS**：Output サービスは、Common Internet File System（CIFS）印刷プロトコルをサポートしています。
 
 ## SendToPrinter サービスの使用 {#using-sendtoprinter-service}
 
@@ -62,9 +80,9 @@ AEM Forms では、SendToPrinter サービスを使用することで、プリ�
 
 ## 認証サポート {#authentication-support}
 
-認証は、CIFS 印刷に対してのみサポートされます。認証するには、PrinterSpec にユーザー名、パスワード、ドメインを入力します。次の手順を実行することで、AEM Granite CyprtoSupport Service を使用してパスワードを暗号化することができます。
+認証は、CIFS 印刷に対してのみサポートされます。 認証するには、PrinterSpec にユーザー名、パスワード、ドメインを入力します。 次の手順を実行することで、AEM Granite CyprtoSupport Service を使用してパスワードを暗号化することができます。
 
-1. https://&lt;server>:&lt;port>/system/console へ移動します。
+1. https://<server>:<port>/system/console へ移動します。
 
 1. **[!UICONTROL メイン]**／**[!UICONTROL 暗号サポート]**&#x200B;に移動します。
 

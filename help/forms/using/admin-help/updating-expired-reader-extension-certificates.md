@@ -5,19 +5,33 @@ exl-id: 4e14e0dc-f248-4f6e-a075-6012b6792d9d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 100%
-
 ---
-
 
 # Reader 拡張証明書の有効期限とその影響 {#expiration-of-reader-extensions-certificates-and-its-impact}
 
 Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe Managed Services またはオンプレミスの Enterprise Base ライセンスをお持ちの場合、Acrobat Reader DC Extensions サービスを使用する資格があります。 サービスを使用すると、追加の使用権限を付与して Acrobat Reader の機能を拡張することで、組織内でインタラクティブ PDF ドキュメントを簡単に共有できます。 このサービスは、PDF ドキュメントに使用権限を追加し、ドキュメントへのコメントの追加、フォームへの入力、ドキュメントの保存など、Adobe Acrobat Reader を使用して PDF ドキュメントを開いた場合には使用できない機能をアクティブにします。 サードパーティユーザーは、使用権限を付与されたドキュメントを扱うためにソフトウェアまたはプラグインを追加する必要はありません。 使用権限が追加された PDF ドキュメントは、「使用権限を付与されたドキュメント」と呼ばれます。 使用権限を付与された PDF ドキュメントを Acrobat Reader で開いたユーザーは、そのドキュメントで有効になっている操作を実行できます。
 
-アドビは公開鍵インフラストラクチャ（PKI）を使用して、ライセンスやイネーブルメント機能に使用する電子証明書を発行します。 アドビは、認証局 **Adobe ルート CA** によって証明書を発行していますが、この証明書は 2023年1月7日（PT）に期限が切れる予定です。 証明書の有効期限が切れても、**Adobe ルート CA** ベースの証明書（古い証明書）から発行された実稼働用の証明書を使用して拡張された PDF ドキュメントには影響しません。 すべての PDF ドキュメント（2023年1月7日（PT）より前の古い証明書を使用して拡張された Reader）は、顧客がダウンロードしたものも含め、適用されているすべての使用権限で引き続き機能し、更新する必要はありません。
+アドビは公開鍵インフラストラクチャ（PKI）を使用して、ライセンスや機能の有効化に使用する電子証明書を発行します。 アドビは、認証局 **Adobe ルート CA** によって証明書を発行していますが、この証明書は 2023年1月7日（PT）に期限が切れる予定です。 証明書の有効期限が切れても、**Adobe ルート CA** ベースの証明書（古い証明書）から発行された実稼働用の証明書を使用して拡張された PDF ドキュメントには影響しません。 すべての PDF ドキュメント（2023年1月7日（PT）より前の古い証明書を使用して拡張された Reader）は、顧客がダウンロードしたものも含め、適用されているすべての使用権限で引き続き機能し、更新する必要はありません。
 
 新しい認証局 **Adobe ルート CA G2**&#x200B;と、新しい認証局に基づく証明書が使用できるようになりました。 2023年1月7日（PT）までに、Reader で **Adobe ルート CA G2** に基づく新しい証明書の使用を開始して、新しい PDF ドキュメントを拡張してください。  [新しい証明書の取得は、アドビのライセンス web サイトから](https://licensing.adobe.com/)、またはアドビのサポートから可能です。
 
@@ -25,15 +39,15 @@ Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe
 
 **質問：Adobe ルート証明書と Acrobat Reader Extensions 証明書の違いは何ですか？ Adobe ルート証明書は Acrobat Reader Extensions 証明書に依存していますか。 両方の証明書の有効期限は 2023年1月ですか。**
 
-回答：Adobe ルート CA は、Acrobat Reader Extensions 証明書の発行元の認証局です。 2023年1月7日（PT）に「Adobeルート CA」と、そこから発行されたすべての証明書の有効期限が切れます。
+回答：Adobe ルート CA は、Acrobat Reader Extensions 証明書の発行元の認証局です。 2023年1月7日（PT）に「Adobe　ルート CA」と、そこから発行されたすべての証明書の有効期限が切れます。
 
 **質問：証明書の期限切れや、PDF ドキュメントの使用や開封に対する影響に関して、アドビから以前連絡がありました。 その通信は無視すべきですか。**
 
-回答：状況の再評価に基づき、2023年1月7日（PT）以前に「Adobeルート CA」から発行された実稼働環境用の証明書を用いて延長されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。 既に PDF ドキュメントを更新している場合、エクスペリエンスに変更はありません。
+回答：状況の再評価に基づき、2023年1月7日（PT）以前に「Adobe ルート CA」から発行された本番環境用の証明書を用いて延長されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。 既に PDF ドキュメントを更新している場合、エクスペリエンスに変更はありません。
 
 **質問：他に質問がある場合、誰に問い合わせればよいですか？**
 
-回答：[アドビサポート](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
+回答：[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)に連絡するか、またはサポートチケットを発行してください。
 
 **質問：2023年1月7日（PT）より前に証明書をアップデートしない場合はどうなりますか？**
 
@@ -45,11 +59,11 @@ Adobe Experience Manager Forms（AEM Forms）をご利用のお客様で、Adobe
 
 **質問：最新の証明書を取得するにはどうすればよいですか？**
 
-回答：資格のある（有効なライセンスを持つ）Forms 顧客は、新しい証明書（「Adobe Root CA G2」に基づく証明書）を[アドビライセンス web サイト](https://licensing.adobe.com/)からダウンロードできます。 アドビライセンス web サイトで証明書が見つからない場合は、[アドビサポート](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja&s#support)に連絡するか、またはサポートチケットを発行します。
+回答：資格のある（有効なライセンスを持つ）Forms 顧客は、新しい証明書（「Adobe Root CA G2」に基づく証明書）を[アドビライセンス web サイト](https://licensing.adobe.com/)からダウンロードできます。 アドビライセンス web サイトで証明書が見つからない場合は、[アドビサポート](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja&s#support)に連絡するか、またはサポートチケットを発行します。
 
 **質問：「Adobeルート CA」（古い認証局）から発行された証明書を使用して拡張された PDF ドキュメントは、2023年1月7日（PT）以降も引き続き機能しますか？**
 
-回答：はい。2023年1月7日（PT）より前に「Adobeルート CA」（旧証明機関）から発行された実稼働環境用の証明書を使用して拡張されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。 評価用証明書を使用して拡張された PDF ドキュメントは、有効期限を過ぎると機能しなくなります。
+回答：はい。2023年1月7日（PT）より前に「Adobeルート CA」（旧証明機関）から発行された本番環境用の証明書を使用して拡張されたすべての PDF ドキュメントは、2023年1月7日（PT）以降も変更なしで引き続き機能します。 評価用証明書を使用して拡張された PDF ドキュメントは、有効期限を過ぎると機能しなくなります。
 
 **質問：「Adobeルート CA」（古い認証局）から発行された証明書で拡張された PDF ドキュメントを引き続き使用するには、どのバージョンの Adobe Acrobat Reader が必要ですか？**
 
@@ -97,7 +111,7 @@ You can choose one of the following paths to apply latest certificates:
 Updating the certificates requires using actions available on AEM Forms administrator console and Reader Extension APIs provided by AEM Forms. The document is intended for users and administrators with knowledge of using Adobe Experience Manger Forms APIs. Before you start, ensure that: 
 
 * the user has administrator rights on underlying AEM Forms environment. 
-* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html?lang=ja) and has access to it.
+* the user has setup the [development environment](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/howto-projects-eclipse.html) and has access to it.
 * [obtain the certificates](#obtain-the-certificates).
 
 
@@ -150,7 +164,7 @@ You can also import and delete credentials programmatically. (See [Programming w
 
 Remove usage rights from existing rights-enabled PDF documents before applying usage rights with latest credentials. AEM Forms on JEE provides APIs to remove usage rights. For detailed instructions, see [Removing Usage Rights from PDF Documents](../../developing/assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
 
-To remove usage rights for AEM Forms on JEE processes developed in Workbench, see [Workbench Help](https://helpx.adobe.com/content/dam/help/ja/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf). 
+To remove usage rights for AEM Forms on JEE processes developed in Workbench, see [Workbench Help](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf). 
 
 #### Apply the usage rights to PDF documents 
 
@@ -189,5 +203,5 @@ Remove usage rights from existing rights-enabled PDF documents before applying u
 
 #### Apply the usage rights to PDF documents 
 
-To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html?lang=ja).
+To apply usage rights in an AEM Forms on OSGi environment, Create custom OSGi service to usage rights to the documents. You can also create a servlet with a POST method to return the reader extended PDF to the user. For detailed instructions, see [Applying Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/apply-reader-extension-rights-to-pdf.html).
 -->

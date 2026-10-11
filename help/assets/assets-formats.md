@@ -1,6 +1,6 @@
 ---
 title: サポートしているファイル形式と MIME タイプ
-description: ' [!DNL Assets]  および  [!DNL Dynamic Media]  でサポートしているファイル形式と MIME タイプおよび各形式でサポートされる機能。'
+description: '[!DNL Assets]および[!DNL Dynamic Media]でサポートされているファイル形式とMIME タイプ、および各形式でサポートされている機能。'
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
@@ -8,13 +8,29 @@ feature: Asset Management,Renditions
 exl-id: a4bcf67b-54f4-4681-9e42-fd4753acde1a
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 98%
-
+source-wordcount: '2047'
+ht-degree: 97%
 ---
-
 # [!DNL Adobe Experience Manager Assets] でサポートされる形式 {#assets-supported-formats}
 
 [!DNL Experience Manager Assets] は幅広いファイル形式をサポートしており、各機能は異なる MIME タイプに様々なサポートを提供しています。 [!DNL Assets] を他の標準準拠のデジタルアセット管理（DAM）ソリューションおよびデスクトップソフトウェアと統合するには、アドビの [!DNL Extensible Metadata Platform]（XMP）を使用します。
@@ -51,7 +67,7 @@ ht-degree: 98%
 
 上記の情報に加えて、次の点を考慮する必要があります。
 
-* EPS ファイルのサポートは、画像のラスタライズにのみ適用されます。 例えば、EPS のベクトル画像のサムネール生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。 サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
+* EPS ファイルのサポートは、ラスター画像にのみ適用されます。 例えば、EPS のベクトル画像のサムネイル生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。 サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
 
 * PSB ファイル形式でのメタデータの書き戻しは、`NComm` ハンドラーに追加すると機能するようになります。
 
@@ -74,17 +90,17 @@ ht-degree: 98%
 
 ## サポートしている PDF Rasterizer ライブラリ {#supported-pdf-rasterizer-library}
 
-Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い [!DNL Adobe Illustrator] ファイルや PDF ファイルに対して、高品質のサムネールとプレビューを生成します。 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
+Adobe PDF Rasterizer ライブラリは、サイズが大きくコンテンツが多い [!DNL Adobe Illustrator] ファイルや PDF ファイルに対して、高品質のサムネールとプレビューを生成します。 Adobe では、次の場合に PDF Rasterizer ライブラリを使用することをお勧めします。
 
 * 処理でリソースに負担がかかる、コンテンツ集約型の AI ファイルや PDF ファイル。
-* AI ファイルと PDF ファイルは、デフォルトではサムネールは生成されません。
-* Pantone Matching System（PMS）カラーを使用した AI ファイル.
+* デフォルトではサムネールが生成されない AI/PDF ファイル。
+* Pantone Matching System（PMS）カラーを使用した AI ファイル。
 
 [PDF ラスタライザーの使用](aem-pdf-rasterizer.md)を参照してください。
 
 ## サポートしている画像トランスコーディングライブラリ {#supported-image-transcoding-library}
 
-Adobe Imaging Transcoding ライブラリは、エンコーディング、トランスコーディング、サンプリング変更、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
+Adobe Imaging Transcoding ライブラリは、エンコーディング、トランスコーディング、リサンプリング、サイズ変更などの中心的な画像処理機能を実行する画像処理ソリューションです。
 
 Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび 16 ビット）、GIF、BMP、TIFF／圧縮 TIFF（32 ビット TIFF ファイルおよび PTIFF ファイルを除く）、ICO、および ICN MIME タイプをサポートしています。
 
@@ -292,13 +308,13 @@ Imaging Transcoding ライブラリは、JPG／JPEG、PNG（8 ビットおよび
 
 ‡ 結合された画像は PSD ファイルから抽出されます。 この画像は Adobe Photoshop によって生成され、PSD ファイルに含まれます。 設定によって、結合された画像は実際の画像とは異なる場合があります。
 
-* EPS ファイルのサポートは、画像のラスタライズにのみ適用されます。 例えば、EPS のベクトル画像のサムネール生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。 サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
+* EPS ファイルのサポートは、画像のラスタライズにのみ適用されます。 例えば、EPS のベクトル画像のサムネイル生成は、デフォルトではサポートされていません。 サポートを追加するには、[ImageMagick を設定](best-practices-for-imagemagick.md)してください。 サードパーティ製のツールを統合して追加機能を有効にするには、[コマンドラインベースのメディアハンドラー](media-handlers.md#command-line-based-media-handler)を参照してください。
 
 * [!DNL Dynamic Media] を使用して EPS ファイルのプレビューと動的レンダリングを生成するには、[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式を参照してください。](managing-image-presets.md#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)
 
 * EPS ファイルの場合、メタデータの書き戻しは、PostScript Document Structuring Convention（PS-Adobe）バージョン 3.0 以降でサポートされています。
 
-## Dynamic Media — サポートされていないラスタライズ画像形式 {#unsupported-image-formats-dynamic-media}
+## Dynamic Media — サポートされていないラスター画像形式 {#unsupported-image-formats-dynamic-media}
 
 以下のリストは、Dynamic Media でサポートされて&#x200B;*いない*&#x200B;ラスタライズ画像ファイル形式のサブタイプに関する説明です。
 
@@ -330,7 +346,7 @@ The following table describes the sub-types of raster image formats that are *no
 
 ## Dynamic Media — サポートされる 3D 形式 {#supported-three-d-file-formats-in-dm}
 
-Dynamic Media は、次の 3D ファイル形式をサポートしています。
+Dynamic Media は、次の 3D 形式をサポートしています。
 
 [Dynamic Media での 3D アセット操作](/help/assets/assets-3d.md) も参照してください。
 

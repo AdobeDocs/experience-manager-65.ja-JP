@@ -9,13 +9,27 @@ exl-id: cdb7ff54-7891-45b1-a921-10b01ef5188d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: b631b5d4308a2ad1e2397c60c4ee78ec097beaa9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 94%
-
 ---
-
 # グローバル設定の読み込みと書き出し {#importing-and-exporting-global-settings}
 
 >[!NOTE]
@@ -78,12 +92,12 @@ Workspace グローバル設定ファイルには、次の設定が含まれま�
 
 *specialRoutes* 設定では、Workspace での特別なルート、承認および拒否のプロパティを指定します。 場合によっては、Workspace のタスクカードにこれらのルートのボタンが表示され、ユーザーがフォームを開かずにルートを選択できます。 グローバル設定ファイルで specialRoutes 設定を変更して、承認または拒否の対象となるカスタマイズされた名前を追加したり、追加ルートを作成したりすることができます。
 
-**client_specialRoutes_routes_approve_style：**&#x200B;Workspace テーマにあるスタイルの名前。これによって、承認ボタンアイコンを識別します。 スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
+**client_specialRoutes_routes_approve_style：**Workspace テーマにあるスタイルの名前。これによって、承認ボタンアイコンを識別します。 スタイルには、有効時のアイコンと無効時のアイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
 ` .buttonApprove {  icon: Embed('images/LC_DirectApprove_Sm_N.png');  disabledIcon: Embed('images/LC_DirectApprove_Sm_D.png');  paddingLeft: 5;  }` Workspace CSS ファイルは、workspace-theme.swf ファイルに埋め込まれています。このファイルは、adobe-workspace-client.ear / adobe-workspace-client.war ファイルにあります。 Workspace の外観を変更するには、workspace-theme.swf ファイルを再コンパイルする必要があります。
 
 **client_specialRoutes_routes_deny_names：**&#x200B;ワークベンチユーザーが「拒否」と解釈するために使用できる様々な文字列です。 これらの文字列では、大文字と小文字が区別されます。 例えば、デフォルト値は「deny」です。 ワークベンチユーザーのプロセスで「Deny」という単語が使用された場合、この単語は認識されません。 ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Deny」という単語をこの設定に追加する必要があります。
 
-**client_specialRoutes_routes_deny_style：**&#x200B;ワークスペーステーマファイルにあるスタイルの名前。これによって、「拒否ボタン」アイコンを識別します。 スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
+**client_specialRoutes_routes_deny_style：**ワークスペーステーマファイルにあるスタイルの名前。これによって、「拒否ボタン」アイコンを識別します。 スタイルには、有効になっているアイコンと無効になっているアイコンの値を含める必要があります。 カスタムボタンのスタイルを定義するには、次のテンプレートを使用する必要があります。
 `  .buttonDeny {   icon: Embed('images/LC_DirectDeny_Sm_N.png');   disabledIcon: Embed('images/LC_DirectDeny_Sm_D.png');   paddingLeft: 0;   }` **client_specialRoutes_routes_approve_names:** Workbench ユーザーが「承認」として解釈するために使用できる様々な文字列。 これらの文字列では、大文字と小文字が区別されます。 例えば、デフォルト値は、「approve」です。 ワークベンチユーザーのプロセスで「Approve」という単語が使用された場合、この単語は認識されません。 ルートボタンをカスタマイズしたり、ルートボタンにスタイルを適用したりするには、「Approve」という単語をこの設定に追加する必要があります。
 
 **client_specialRoutes_names：**&#x200B;カスタマイズされた文字列値をリソースファイルから検索するために使用されるキー。 この設定の各エントリには、名前およびスタイルの値を含める必要があります。
@@ -116,7 +130,7 @@ For additional information on JGroups and Workspace, see [JGroups and AEM forms 
 
 ### formView 設定 {#formview-settings}
 
-**client_formView_openFormInFullScreen：** Workspace のすべてのフォームをフルスクリーンモードで表示するには、このオプションを true に設定します。 このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。 User サービスには、タスクに関連付けられたドキュメントをフルスクリーンモードで開くオプションが含まれています。 これにより、プロセスごとに表示を制御できます。
+**client_formView_openFormInFullScreen：** Workspace のすべてのフォームをフルスクリーンモードで表示するには、このオプションを true に設定します。 このオプションのデフォルトは false に設定されており、フォームはフルスクリーンモードで表示されません。 ユーザーサービスには、タスクに関連付けられたドキュメントをフルスクリーンモードで開くオプションが含まれています。 これにより、プロセスごとに表示を制御できます。
 
 **client_routes_formViewOnly：** True に設定すると、ルートは Workspace でカード表示にもリスト表示にも表示されません。 デフォルト値は False で、ルートはカード表示およびリスト表示に表示されます。
 

@@ -1,19 +1,29 @@
 ---
 title: Granite の操作 - ユーザー管理とグループ管理
-
 description: Granite のユーザーおよびグループ管理について説明します。
-
-
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-
 exl-id: f3477d21-7e9a-4588-94e8-496bc42434a8
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 98%
@@ -94,7 +104,7 @@ Granite ユーザー管理コンソールとグループ管理コンソールは
    * **アカウント設定**
 
      * **ステータス**
-       アカウントに&#x200B;**アクティブ**&#x200B;または&#x200B;**非アクティブ**&#x200B;のフラグを付けることができます。
+       アカウントに**アクティブ**&#x200B;または&#x200B;**非アクティブ**&#x200B;のフラグを付けることができます。
 
    * **写真**
 

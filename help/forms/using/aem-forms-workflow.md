@@ -8,13 +8,29 @@ exl-id: c3e5f8fc-d2b9-4f76-9a3d-4bc5733f5a5c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: User, Developer
-source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3622'
-ht-degree: 99%
-
+source-wordcount: '3734'
+ht-degree: 100%
 ---
-
 # OSGi 上の Forms 中心のワークフロー{#forms-centric-workflow-on-osgi}
 
 ![hero-image](do-not-localize/header.png)
@@ -278,8 +294,8 @@ AEM ワークフローの「タスクの割り当て」ステップと「メー�
 
 アダプティブフォームから [!DNL Experience Manager] ワークフローに送信されたデータに、エンドユーザーの PII（個人を特定できる情報）または SPD（機密の個人データ）を含めることができます。 ただし、[!DNL Adobe Experience Manager] [JCR リポジトリ](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-jcr.html?lang=ja)にデータを保存する必要はありません。 情報を[ワークフロー変数](/help/forms/using/variable-in-aem-workflows.md)にパラメーター化することで、エンドユーザーデータの管理対象データストレージ（Azure Blob Storage など）への外部化が可能です。
 
-[!DNL Adobe Experience Manager] Forms ワークフローでは、データは処理され、ワークフロー変数を介して一連のワークフローステップを通過します。これらの変数は、ワークフローインスタンスのメタデータノード（例：`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`）に保存される名前付きプロパティまたはキーと値のペアです。これらのワークフロー変数は、JCR以外の別のリポジトリに外部化して、[!DNL Adobe Experience Manager]個のワークフローで処理できます。[!DNL Adobe Experience Manager]は、管理対象の外部ストレージにワークフロー変数を保存するためのAPI `[!UICONTROL UserMetaDataPersistenceProvider]`を提供します。[!DNL Adobe Experience Manager]の顧客所有のデータストアにワークフロー変数を使用する方法について詳しくは、[外部データストアのワークフロー変数の管理](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
-[!DNL Adobe]は、API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md)を使用して、ワークフローメタデータマップからAzure BLOB ストレージに変数を保存するための次の[&#x200B; サンプル &#x200B;](https://github.com/adobe/workflow-variable-externalizer)を提供します。同様の行では、サンプルをガイドとして使用して、[UserMetaDataPersistenceProvider] APIを使用して、[!DNL Adobe Experience Manager]外部の他のデータストレージのワークフロー変数を外部化し、同じものを管理できます。
+[!DNL Adobe Experience Manager] Forms Workflow では、データが処理され、ワークフロー変数を介して一連のワークフローステップを通過します。 これらの変数は、名前の付いたプロパティまたはキーと値のペアで、ワークフローインスタンスのメタデータノード（例：`/var/workflow/instances/<serverid>/<datebucket>/<uniquenameof model>_<id>/data/metaData`）に保存されます。 これらのワークフロー変数は、JCR 以外の別のリポジトリに外部化し、[!DNL Adobe Experience Manager] ワークフローで処理できます。 [!DNL Adobe Experience Manager] は `[!UICONTROL UserMetaDataPersistenceProvider]` API を提供して、管理対象の外部ストレージにワークフロー変数を保存します。 顧客が所有する [!DNL Adobe Experience Manager] のデータストアに対するワークフロー変数の使用について詳しくは、[外部データストアのワークフロー変数の管理](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
+[!DNL Adobe] は、API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer/blob/master/README.md) を使用して、ワークフローメタデータマップから Azure blob ストレージに変数を保存するために、以下の[サンプル](https://github.com/adobe/workflow-variable-externalizer)を提供しています。 同様に、サンプルを参考にして、[UserMetaDataPersistenceProvider] API を使用して、[!DNL Adobe Experience Manager] の外部の他のデータストレージにワークフロー変数を外部化し、同じものを管理することができます。
 
 >[!NOTE]
 >
@@ -344,4 +360,4 @@ AEM ワークフローの「タスクの割り当て」ステップと「メー�
 
 * ワークフローモデルでカスタム [!DNL Adobe Experience Manager] ワークフローステップを使用して [!UICONTROL CRX DE] リポジトリにデータを保存しないでください。
 
-* [外部データストレージ用に  [!DNL Adobe Experience Manager]  ワークフローモデルを設定](#configure-aem-wf-model)する場合、[!DNL Adobe Experience Manager] [!UICONTROL &#x200B; インボックス]内の作業項目が外部ストレージとしてマークされたワークフローに属しているとカスタム列の値は取得されないので、[!DNL Adobe Experience Manager] [!UICONTROL &#x200B; インボックス]用にカスタム列を作成しないでください。
+* [外部データストレージ用に  [!DNL Adobe Experience Manager]  ワークフローモデルを設定](#configure-aem-wf-model)する場合、[!DNL Adobe Experience Manager] [!UICONTROL  インボックス]内の作業項目が外部ストレージとしてマークされたワークフローに属しているとカスタム列の値は取得されないので、[!DNL Adobe Experience Manager] [!UICONTROL  インボックス]用にカスタム列を作成しないでください。

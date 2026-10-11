@@ -8,18 +8,32 @@ role: Admin,User
 exl-id: 791524a4-a8bb-4632-a68d-e96864e139a9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '878'
 ht-degree: 100%
-
 ---
-
 # フォームポータル | ユーザーデータの処理 {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] ポータルには、アダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが、[!DNL AEM Sites] ページに用意されています。さらに、ログインしたユーザーのためにドラフトや送信済みのアダプティブフォームおよび HTML5 フォームを表示するように構成することもできます。Forms ポータルについて詳しくは、「[ポータルでのフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)」を参照してください。
+[!DNL AEM Forms] ポータルには、アダプティブフォーム、HTML5 フォームおよびその他のフォームアセットを一覧表示するために使用できるコンポーネントが、[!DNL AEM Sites] ページに用意されています。 さらに、ログインしたユーザーのためにドラフトや送信済みのアダプティブフォームおよび HTML5 フォームを表示するように構成することもできます。 Forms ポータルについて詳しくは、「[ポータルでのフォーム発行の概要](/help/forms/using/introduction-publishing-forms.md)」を参照してください。
 
-ログインしたユーザーがアダプティブフォームをドラフトとして保存したり送信したりすると、それらは Forms ポータルの「ドラフト」タブと「送信」タブに表示されます。ドラフトおよび送信済みフォームのデータは、AEM デプロイメント用に設定されたデータストアに格納されます。匿名ユーザーのドラフトと送信は、Forms ポータルページに表示されませんが、データは設定済みのデータストアに格納されます。[ドラフトと送信に使用するストレージサービスの設定](/help/forms/using/configuring-draft-submission-storage.md)を参照してください。
+ログインしたユーザーがアダプティブフォームをドラフトとして保存したり送信したりすると、それらは Forms ポータルの「ドラフト」タブと「送信」タブに表示されます。 ドラフトおよび送信済みフォームのデータは、AEM デプロイメント用に設定されたデータストアに格納されます。 匿名ユーザーのドラフトと送信は、Forms ポータルページに表示されませんが、データは設定済みのデータストアに格納されます。 [ドラフトと送信に使用するストレージサービスの設定](/help/forms/using/configuring-draft-submission-storage.md)を参照してください。
 
 ## ユーザーデータとデータストア {#user-data-and-data-stores}
 
@@ -67,11 +81,11 @@ Forms ポータルは、次のシナリオでドラフトフォームと送信�
 
 ### AEM インスタンス {#aem-instances}
 
-ログインしたユーザーおよび匿名ユーザーの AEM インスタンス（作成者、発行またはリモート）のすべてのドラフトと送信済みフォームのデータは、該当する AEM リポジトリの `/content/forms/fp/` ノードに格納されます。ログインしたユーザーまたは匿名ユーザーがドラフトを保存するかフォームを送信するたびに、`draft ID` または `submission ID`、`user data ID`、および各添付ファイルのランダム `ID`（該当する場合）が生成され、それぞれのドラフトまたは送信に関連付けられます。
+ログインしたユーザーおよび匿名ユーザーの AEM インスタンス（作成者、発行またはリモート）のすべてのドラフトと送信済みフォームのデータは、該当する AEM リポジトリの `/content/forms/fp/` ノードに格納されます。 ログインしたユーザーまたは匿名ユーザーがドラフトを保存するかフォームを送信するたびに、`draft ID` または `submission ID`、`user data ID`、および各添付ファイルのランダム `ID`（該当する場合）が生成され、 それぞれのドラフトまたは送信に関連付けられます。
 
 #### ユーザーデータにアクセス {#access-user-data}
 
-ログインしたユーザーがドラフトを保存したり、フォームを送信したりすると、そのユーザー ID を使用して子ノードが作成されます。例えば、ユーザー ID が `srose` である Sarah Rose のドラフトデータと送信データが AEM リポジトリの `/content/forms/fp/srose/` ノードに格納されるとします。このユーザー ID ノード内では、データが階層構造で整理されます。
+ログインしたユーザーがドラフトを保存したり、フォームを送信したりすると、そのユーザー ID を使用して子ノードが作成されます。 例えば、ユーザー ID が `srose` である Sarah Rose のドラフトデータと送信データが AEM リポジトリの `/content/forms/fp/srose/` ノードに格納されるとします。 このユーザー ID ノード内では、データが階層構造で整理されます。
 
 以下の表は、`srose` を使用して作成されたすべてのドラフトのデータが、どのように AEM リポジトリに格納されるのかを説明しています。
 
@@ -93,9 +107,9 @@ Forms ポータルは、次のシナリオでドラフトフォームと送信�
 
 #### ユーザーデータの削除 {#delete-user-data}
 
-AEM システムで、ログインしたユーザーのドラフトおよび送信済みフォームに含まれるユーザーデータを完全に削除するには、特定ユーザーの `user ID` ノードを作成者ノードから削除する必要があります。該当するすべての AEM インスタンスから手動でデータを削除する必要があります。
+AEM システムで、ログインしたユーザーのドラフトおよび送信済みフォームに含まれるユーザーデータを完全に削除するには、特定ユーザーの `user ID` ノードを作成者ノードから削除する必要があります。 該当するすべての AEM インスタンスから手動でデータを削除する必要があります。
 
-すべての匿名ユーザーのドラフトデータと送信データは、共通の `drafts` ノードと `submit` ノード内に格納されます。これらのノードは、`/content/forms/fp/anonymous` にあります。識別可能な情報がない限り、特定の匿名ユーザーのデータを検索する方法はありません。その場合、AEM リポジトリで匿名ユーザーを識別する情報を検索し、該当するすべての AEM インスタンスからその情報を含むノードを手動で削除して、AEM システムからデータを削除できます。ただし、すべての匿名ユーザーのデータを削除する場合は、`anonymous` ノードを削除することで、すべての匿名ユーザーのドラフトデータと送信データを削除できます。
+すべての匿名ユーザーのドラフトデータと送信データは、共通の `drafts` ノードと `submit` ノード内に格納されます。これらのノードは、`/content/forms/fp/anonymous` にあります。 識別可能な情報がない限り、特定の匿名ユーザーのデータを検索する方法はありません。 その場合、AEM リポジトリで匿名ユーザーを識別する情報を検索し、該当するすべての AEM インスタンスからその情報を含むノードを手動で削除して、AEM システムからデータを削除できます。 ただし、すべての匿名ユーザーのデータを削除する場合は、`anonymous` ノードを削除することで、すべての匿名ユーザーのドラフトデータと送信データを削除できます。
 
 ### データベース {#database}
 
@@ -107,7 +121,7 @@ AEM がデータベースにデータを格納するように構成されてい�
 
 #### ユーザーデータにアクセス {#access-user-data-1}
 
-ログインしたユーザーおよび匿名ユーザーのドラフトおよび送信データにデータベーステーブルからアクセスするには、次のデータベースコマンドを実行します。クエリで、`logged-in user` を、アクセスするデータのユーザー ID または匿名ユーザーの `anonymous` と置き換えます。
+ログインしたユーザーおよび匿名ユーザーのドラフトおよび送信データにデータベーステーブルからアクセスするには、次のデータベースコマンドを実行します。 クエリで、`logged-in user` を、アクセスするデータのユーザー ID または匿名ユーザーの `anonymous` と置き換えます。
 
 ```sql
 select * from metadata, data, additionalmetadatatable where metadata.owner = 'logged-in user' and metadata.id = additionalmetadatatable.id and metadata.userdataID = data.id
@@ -115,7 +129,7 @@ select * from metadata, data, additionalmetadatatable where metadata.owner = 'lo
 
 #### ユーザーデータの削除 {#delete-user-data-1}
 
-ログインしたユーザーのドラフトおよび送信データをデータベーステーブルから削除するには、次のデータベースコマンドを実行します。クエリで、`logged-in user` を、削除するデータのユーザー ID または匿名ユーザーの `anonymous` と置き換えます。匿名ユーザーのデータをデータベースから削除するには、識別可能な情報を使用してデータを検索し、その情報が含まれるデータベーステーブルからデータを削除する必要があります。
+ログインしたユーザーのドラフトおよび送信データをデータベーステーブルから削除するには、次のデータベースコマンドを実行します。 クエリで、`logged-in user` を、削除するデータのユーザー ID または匿名ユーザーの `anonymous` と置き換えます。 匿名ユーザーのデータをデータベースから削除するには、識別可能な情報を使用してデータを検索し、その情報が含まれるデータベーステーブルからデータを削除する必要があります。
 
 ```sql
 DELETE FROM metadata, data, additionalmetadatatable USING metadata INNER JOIN data ON metadata.userdataID = data.id INNER JOIN additionalmetadatatable ON metadata.id = additionalmetadatatable.id WHERE metadata.owner = 'logged-in user'

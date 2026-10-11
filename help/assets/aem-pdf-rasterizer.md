@@ -6,16 +6,32 @@ role: Developer, Admin
 feature: Developer Tools,Renditions
 exl-id: 6f365d6b-3972-4885-8766-5889e24289f1
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 100%
-
+source-wordcount: '731'
+ht-degree: 98%
 ---
-
 # PDF Rasterizer の使用 {#using-pdf-rasterizer}
 
-サイズが大きくコンテンツが多い PDF や AI ファイルを [!DNL Adobe Experience Manager Assets] にアップロードすると、デフォルトのライブラリで正確な出力が生成されない場合があります。Adobe PDF Rasterizer ライブラリでは、デフォルトライブラリの出力よりも信頼性が高く正確な出力を生成できます。次のようなシナリオで PDF Rasterizer ライブラリを使用することをお勧めします。
+サイズが大きくコンテンツが多い PDF や AI ファイルを [!DNL Adobe Experience Manager Assets] にアップロードすると、デフォルトのライブラリで正確な出力が生成されない場合があります。 Adobe PDF Rasterizer ライブラリでは、デフォルトライブラリの出力よりも信頼性が高く正確な出力を生成できます。 次のようなシナリオで PDF Rasterizer ライブラリを使用することをお勧めします。
 
 次のようなファイルで PDF Rasterizer ライブラリを使用することをお勧めします。
 
@@ -23,7 +39,7 @@ ht-degree: 100%
 * デフォルトで生成されないサムネールを含む AI ファイルおよび PDFファイル。
 * Pantone Matching System（PMS）カラーを使用した AI ファイル.
 
-PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、標準の出力に比べて高品質です。そのため、デバイス全体で一貫した視聴エクスペリエンスを実現します。Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。ソースファイルのカラースペースに関わらず、RGB として出力されます。
+PDF Rasterizer を使用して生成されたサムネールおよびプレビューは、標準の出力に比べて高品質です。そのため、デバイス全体で一貫した視聴エクスペリエンスを実現します。 Adobe PDF Rasterizer ライブラリはカラースペース変換をサポートしません。 ソースファイルのカラースペースに関わらず、RGB として出力されます。
 
 1. [ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-pdf-rasterizer-pkg-4.6.zip) から PDF Rasterizer パッケージを [!DNL Adobe Experience Manager] のデプロイメントにインストールします。
 
@@ -31,7 +47,7 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    >
    >PDF Rasterizer ライブラリは、Windows と Linux® のみで使用できます。
 
-1. [!DNL Assets] ワークフローコンソール（`https://[aem_server]:[port]/workflow`）にアクセスします。[!UICONTROL DAM アセットの更新]ワークフローを開きます。
+1. [!DNL Assets] ワークフローコンソール（`https://[aem_server]:[port]/workflow`）にアクセスします。 [!UICONTROL DAM アセットの更新]ワークフローを開きます。
 
 1. デフォルトの方法を使用して PDF ファイルと AI ファイルのサムネールおよび web レンディションが生成されないようにするには、次の手順に従います。
 
@@ -43,7 +59,7 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
    ![画像形式のサムネール処理をスキップする設定](assets/web_enabled_imageskiplist.png)
 
-1. 「**[!UICONTROL PDF／ AI 画像プレビューレンディションをラスタライズ]**」手順を開き、デフォルトの画像プレビューレンディションの生成をスキップする MIME タイプを除外します。例えば、**[!UICONTROL MIME タイプ]**&#x200B;のリストから、`application/pdf`、 `application/postscript` または `application/illustrator` という MIME タイプを除外します。
+1. 「**[!UICONTROL PDF／ AI 画像プレビューレンディションをラスタライズ]**」手順を開き、デフォルトの画像プレビューレンディションの生成をスキップする MIME タイプを除外します。 例えば、**[!UICONTROL MIME タイプ]**&#x200B;のリストから、`application/pdf`、 `application/postscript` または `application/illustrator` という MIME タイプを除外します。
 
    ![process_arguments](assets/process_arguments.png)
 
@@ -52,17 +68,17 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
    * MIME タイプ： `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 追加するサムネールのサイズ：319:319、140:100、48:48。必要に応じて、サムネールのカスタム設定を追加します。
+   * サムネールサイズを追加：319:319、140:100、48:48。 必要に応じて、サムネールのカスタム設定を追加します。
 
    `PDFRasterizer` コマンドのコマンドライン引数には、次を含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像を作成します。ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ 高い画質の画像を作成します。 ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅） これは各ページで DPI に変換されます。 異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。 デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ 有効なタイプは JPEG、PNG、GIF および BMP です。 デフォルト値は JPEG です。
 
-   * `-i`：入力 PDF のパス必須パラメーターです。
+   * `-i`：入力 PDF のパス 必須パラメーターです。
 
    * `-h`: ヘルプ
 
@@ -82,17 +98,17 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
 
    * MIME タイプ： `application/pdf` または `application/postscript`
    * コマンド: `PDFRasterizer -d -s 1280 -t PNG -i ${file}`
-   * 追加するサムネールのサイズ：`319:319`、`140:100`、`48:48`必要に応じて、サムネールのカスタム設定を追加します。
+   * 追加するサムネールのサイズ：`319:319`、`140:100`、`48:48` 必要に応じて、サムネールのカスタム設定を追加します。
 
    `PDFRasterizer` コマンドのコマンドライン引数には、次を含めることができます。
 
-   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ高い画質の画像を作成します。ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
+   * `-d`：テキスト、ベクターアートワークおよび画像のスムーズなレンダリングを有効にするためのフラグ 高い画質の画像を作成します。 ただし、このパラメーターを含めると、コマンドの実行速度が遅くなり、画像サイズも増大します。
 
-   * `-s`：画像の最大サイズ（高さまたは幅）これは各ページで DPI に変換されます。異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。デフォルトは実際のページサイズです。
+   * `-s`：画像の最大サイズ（高さまたは幅） これは各ページで DPI に変換されます。 異なるサイズのページが混在している場合、ページごとに異なる比率で拡大縮小される場合があります。 デフォルトは実際のページサイズです。
 
-   * `-t`：出力画像のタイプ有効なタイプは JPEG、PNG、GIF および BMP です。デフォルト値は JPEG です。
+   * `-t`：出力画像のタイプ 有効なタイプは JPEG、PNG、GIF および BMP です。 デフォルト値は JPEG です。
 
-   * `-i`：入力 PDF のパス必須パラメーターです。
+   * `-i`：入力 PDF のパス 必須パラメーターです。
 
    * `-h`: ヘルプ
 
@@ -106,4 +122,4 @@ PDF Rasterizer を使用して生成されたサムネールおよびプレビ�
    ![web_enabled_image-1](assets/web_enabled_image-1.png)
 
 1. ワークフローを保存します。
-1. [!DNL Experience Manager Assets] に PDF ファイルまたは AI ファイルをアップロードします。PDF Rasterizer により、ファイルのサムネールと Web レンディションが生成されます。
+1. [!DNL Experience Manager Assets] に PDF ファイルまたは AI ファイルをアップロードします。 PDF Rasterizer により、ファイルのサムネールと Web レンディションが生成されます。

@@ -4,13 +4,21 @@ description: Turnstile サービスでフォームのセキュリティを容易
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 8025412849a1f324537019247a5e37b7931df7e7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 95%
-
+source-wordcount: '862'
+ht-degree: 97%
 ---
-
 # AEM Forms 環境と Turnstile の接続 {#connect-your-forms-environment-with-turnstile-service}
 
 <span class="preview">この機能は、機能切り替えID `FT_FORMS-12407`に基づいています。 この機能を有効にするには、[機能の切り替えを有効にする](/help/forms/using/enable-feature-toggle.md)の記事に記載されている手順に従います。</span>
@@ -30,7 +38,7 @@ AEM Forms 6.5 は、次の CAPTCHA ソリューションをサポートしてい
 
 Cloudflare の Turnstile Captcha は、自動ボット、悪意のある攻撃、スパム、不要な自動トラフィックからフォームとサイトを保護することを目的としたセキュリティ対策です。 フォームの送信を許可する前に、フォームの送信時にユーザーが人間であることを確認するチェックボックスが表示されます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3440941?captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/3440940/)
 
 ### AEM Forms 環境と Turnstile Captcha を統合するための前提条件 {#prerequisite}
 
@@ -56,7 +64,7 @@ AEM Forms を Turnstile サービスと統合するには、次の手順を実�
 1. クラウドサービスを設定します。
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)／**[!UICONTROL クラウドサービス]**&#x200B;に移動し、 「**[!UICONTROL Turnstile]**」をクリックします。
       ![クラウドサービスの Turnstile](assets/turnstile-in-ui.png)
-   1. 前の節で説明したように、作成または更新された設定コンテナを選択します。「**[!UICONTROL 作成]**」をクリックします。
+   1. 前の節で説明したように、作成または更新した設定コンテナを選択します。 「**[!UICONTROL 作成]**」をクリックします。
       ![設定 Turnstile](assets/config-hcaptcha.png)
    1. **[!UICONTROL ウィジェットタイプ]**&#x200B;を管理対象、非インタラクティブまたは非表示として指定します。
    1. **[!UICONTROL タイトル]**、**[!UICONTROL 名前]**&#x200B;など、その他の詳細を入力します。

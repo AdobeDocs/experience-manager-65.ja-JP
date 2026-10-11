@@ -6,7 +6,18 @@ exl-id: d2451710-5abf-4816-8052-57d8f04a228e
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 89%
@@ -60,7 +71,7 @@ CRXDE Lite の適切な `rtePlugins` サブブランチ内でプラグインを�
 
 ## ソース編集機能の使用 {#use-of-the-source-edit-feature}
 
-場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。 例えば、RTE内で作成されたコンテンツは、WCAG 2.0への準拠を確保するために、追加のマークアップが必要になる場合があります。 これは、RTEの[&#x200B; ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins) オプションを使用して実行できます。 [`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
+場合によっては、コンテンツ作成者は RTE を使用して作成された HTML ソースコードを調べ、調整する必要があります。 例えば、RTE内で作成されたコンテンツは、WCAG 2.0への準拠を確保するために、追加のマークアップが必要になる場合があります。 これは、RTEの[ ソース編集](/help/sites-administering/rich-text-editor.md#aboutplugins) オプションを使用して実行できます。 [`sourceedit` 機能は `misctools` プラグイン](/help/sites-administering/rich-text-editor.md#aboutplugins)で指定できます。
 
 >[!CAUTION]
 >

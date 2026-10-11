@@ -9,18 +9,27 @@ feature: Configuring
 exl-id: 429c96ff-4185-4215-97e8-9bd2c130a9b1
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2379'
+source-wordcount: '2386'
 ht-degree: 91%
-
 ---
-
 # ジョブのオフロード{#offloading-jobs}
 
 ## はじめに {#introduction}
 
-オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。 オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。 特殊化した処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
+オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。 オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。 特殊化した処理により、使用可能なサーバーリソースを最大限に活用できます。
 
 オフロードは、[Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html)およびSling JobManager機能に基づいています。 オフロードを使用するには、Experience Manager クラスターをトポロジに追加し、クラスタープロセスのジョブトピックを特定します。 クラスターは、1つ以上のExperience Manager インスタンスで構成されているため、1つのインスタンスはクラスターと見なされます。
 
@@ -208,7 +217,7 @@ Web コンソールまたはsling:OsgiConfig ノードを使用して、org.apac
 | ジョブトピック | サービス PID | 説明 |
 |---|---|---|
 | ／ | org.apache.sling.event.impl.jobs.deprecated.EventAdminBridge | Apache Sling と共にインストールされます。 後方互換性のために、OSGi イベント管理によって生成されたジョブを処理します。 |
-| com/day/cq/replication/job/&ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
+| com/day/cq/replication/job/&amp;ast; | com.day.cq.replication.impl.AgentManagerImpl | ジョブペイロードをレプリケートするレプリケーションエージェント。 |
 
 <!--
 | com/adobe/granite/workflow/offloading |com.adobe.granite.workflow.core.offloading.WorkflowOffloadingJobConsumer |Processes jobs that the DAM Update Asset Offloader workflow generates. |
@@ -289,7 +298,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### リバースエージェントの作成 {#creating-the-reverse-agent}
 
-1. 作成者に&#x200B;**リバースレプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント [&#128279;](/help/sites-deploying/replication.md)の ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は命名規則に従う必要があります。
+1. 作成者に&#x200B;**リバースレプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント ](/help/sites-deploying/replication.md)の[ ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は命名規則に従う必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -302,7 +311,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 ### アウトボックスエージェントの作成 {#creating-the-outbox-agent}
 
-1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント [&#128279;](/help/sites-deploying/replication.md)の ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は `offloading_outbox` にする必要があります。
+1. ワーカーインスタンス上に&#x200B;**レプリケーションエージェント**&#x200B;を作成します。 （レプリケーションエージェント ](/help/sites-deploying/replication.md)の[ ドキュメントを参照してください）。 任意の&#x200B;**タイトル**&#x200B;を指定します。 **名前**&#x200B;は `offloading_outbox` にする必要があります。
 1. 以下のプロパティを使用してエージェントを作成します。
 
    | プロパティ | 値 |
@@ -315,7 +324,7 @@ Web コンソールまたは `sling:OsgiConfig` ノードを使用して、以�
 
 以下のいずれかの方法を使用して、Experience Manager インスタンスの Sling ID を取得します。
 
-* Web コンソールを開き、Sling設定でSling ID プロパティの値を見つけます（[http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)）。 この方法は、インスタンスがまだトポロジの一部ではない場合に役立ちます。
+* Web コンソールを開き、Sling設定でSling ID プロパティの値（[http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)）を見つけます。 この方法は、インスタンスがまだトポロジの一部ではない場合に役立ちます。
 * インスタンスが既にトポロジの一部である場合は、トポロジブラウザーを使用します。
 
 <!--

@@ -5,20 +5,30 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 hide: true
 exl-id: 1b327871-c861-48c8-aac6-cff864398bee
-source-git-commit: a2a6296acd79fa53bd7ef1622898babf56aaadd7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2960'
 ht-degree: 94%
-
 ---
-
 # AEM Forms 用語集
 
 ## アダプティブフォーム
 
 [アダプティブフォーム](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form)
 
-ユーザーのデバイスと入力に基づいてレイアウトと表示を調整する動的でレスポンシブなフォーム。様々なプラットフォームでユーザーエクスペリエンスが向上します。 条件付きロジック、動的データ連結、ルールベースの動作が含まれます。
+ユーザーのデバイスと入力に基づいてレイアウトと表示を調整する動的でレスポンシブなフォーム。様々なプラットフォームでユーザーエクスペリエンスが向上します。 条件付きロジック、動的データバインディング、ルールベースの動作が含まれます。
 
 ## アダプティブフォームのバージョン管理
 
@@ -54,7 +64,7 @@ AEM Forms on the OSGi 環境は、AEM Forms パッケージがデプロイされ
 
 [AEM FormsでのAdobe Sign](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms)
 
-安全でシームレスなデジタル署名ワークフローを実現する RESTful サービス。 OAuth ベースの認証を使用して AEM Forms と統合し、自動署名コレクションとリアルタイムトラッキングを可能にします。
+安全でシームレスなデジタル署名ワークフローを実現する RESTful サービス。 OAuth ベースの認証を使用して AEM Forms と統合し、署名の自動収集とリアルタイムトラッキングを可能にします。
 
 ## AEM Forms Document Services 6.5
 
@@ -83,8 +93,8 @@ AEM Forms as a Cloud Service は、フォームとコミュニケーションワ
 | **ドキュメントの生成** | テンプレート（XFA または PDF）を XML データと組み合わせて、PDF 形式や PS、PCL、DPL、IPL、ZPL 形式などの印刷形式でドキュメントを生成します。 | [ドキュメント生成のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html?lang=ja#document-generation) |
 | **ドキュメント操作** | PDF ドキュメントの組み合わせ、並べ替えを行います。 | [ドキュメント操作のドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction#document-manipulation) |
 | **ドキュメントのコンバージョン** | PDF を PDF/A に変換し、PDF/A コンプライアンスを確認します。 | [ドキュメントのコンバージョンのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction#document-conversion) |
-| **ドキュメント保証** | 署名フィールドを追加または削除し、PDF ドキュメントに署名、認証、暗号化、復号化、使用権限を適用します。 | [ドキュメント保証のドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction#doc-assurance) |
-| **デジタル署名** | フォームやドキュメントの安全な電子サイン用に Adobe Sign を統合します。 | [デジタル署名のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html?lang=ja#digital-signatures) |
+| **ドキュメント保証** | 署名フィールドを追加または削除し、PDF ドキュメントに署名、認証、暗号化、復号、使用権限を適用します。 | [ドキュメント保証のドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction#doc-assurance) |
+| **デジタル署名** | フォームやドキュメントに安全に電子サインできるように Adobe Sign を統合します。 | [デジタル署名のドキュメント](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html?lang=ja#digital-signatures) |
 
 
 ## AEM Forms ワークベンチ
@@ -97,7 +107,7 @@ AEM Forms as a Cloud Service は、フォームとコミュニケーションワ
 
 [アーキタイプ](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/developing/archetype/overview)
 
-事前定義済みの構造を持つ新しいプロジェクトを生成するために使用される AEM のテンプレートまたはパターン。標準化、迅速な設定、AEM 開発のベストプラクティスの準拠を促進します。
+事前定義済みの構造を持つ新しいプロジェクトを生成するために使用される AEM のテンプレートまたはパターン。標準化、迅速な設定、AEM 開発のベストプラクティスへの準拠を促進します。
 
 ## オーサーインスタンス
 
@@ -127,7 +137,7 @@ AEM Forms 内でフォームを作成および管理するためのユーザー�
 
 [Correspondence Management](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/letters-correspondences/cm-overview)
 
-企業が事前定義済みのテンプレート、ルール、データソースを使用して、パーソナライズされた通信を作成、管理、配信できるようにするモジュール。 レターテンプレート、顧客とのコミュニケーション、バッチ生成が含まれます。
+企業が事前定義済みのテンプレート、ルール、データソースを使用して、パーソナライズされた通信を作成、管理、配信できるようにするモジュール。 レターテンプレート、顧客向けコミュニケーション、バッチ生成が含まれます。
 
 ## CRX（Content repository extreme）
 
@@ -139,7 +149,7 @@ AEM Forms 内でフォームを作成および管理するためのユーザー�
 
 [カスタムコンポーネント](https://experienceleague.adobe.com/ja/docs/experience-manager-core-components/using/adaptive-forms/customize-adaptive-forms-core-components)
 
-Sling モデル、Sightly（HTL）および Java を使用して開発された、AEM Forms 機能を拡張するビスポークコンポーネント。 通常、一意のビジネスロジックまたは高度なクライアントサイドのインタラクティブ機能に使用されます。
+Sling モデル、Sightly（HTL）および Java を使用して開発された、AEM Forms 機能を拡張するカスタムコンポーネント。 通常、独自のビジネスロジックまたは高度なクライアントサイドのインタラクティブ機能に使用されます。
 
 ## カスタム XCI （XML設定情報）
 
@@ -193,7 +203,7 @@ OSGi バンドルとコネクタを使用した AEM Forms とエンタープラ�
 
 [フォームデータモデル（FDM）](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/using-form-data-model)
 
-アダプティブフォームをバックエンドデータソースに接続し、RESTful web サービス、SOAP サービス および OData との統合を可能にする表現レイヤー。 FDM を使用すると、フォーム作成者はフォームフィールドをバックエンドデータ構造に直接マッピングできるので、ユーザー入力と外部システムとのシームレスな同期が確保されます。
+アダプティブフォームをバックエンドデータソースに接続し、RESTful web サービス、SOAP サービス および OData との統合を可能にする表示レイヤー。 FDM を使用すると、フォーム作成者はフォームフィールドをバックエンドデータ構造に直接マッピングできるので、ユーザー入力と外部システムとのシームレスな同期が確保されます。
 
 ## フォームのローカライズ
 
@@ -247,7 +257,7 @@ XDP フォームでフォームテンプレートをデザインし、AEM Forms 
 
 [レター](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/letters-correspondences/create-letter#create-a-letter-template)
 
-AEM Forms ドキュメントサービスを活用して生成された顧客とのコミュニケーション。 レターは、XDP テンプレート、データモデル、再利用可能なフラグメントの組み合わせを使用して作成され、大量のシナリオでのスケーラビリティが確保されます。
+AEM Forms ドキュメントサービスを活用して生成された顧客とのコミュニケーション。 レターは、XDP テンプレート、データモデル、再利用可能なフラグメントの組み合わせを使用して作成され、大量処理のシナリオでもスケーラビリティが確保されます。
 
 ## AEM Forms におけるメタデータ
 
@@ -289,7 +299,7 @@ AEM Forms ドキュメントサービスを活用して生成された顧客と�
 
 [テーマ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components)
 
-プリプロセッサーに LESS/SASS を利用して、アダプティブフォームに適用される、CSS 駆動型のスタイルフレームワーク。 テーマにより、ブランディングガイドラインとアクセシビリティ標準へのコンプライアンスが確保され、テーマをカスタマイズしたり、デザイン要素、レイアウト、色、テキスト編集、場合によっては基になるコードを変更したりできます。
+プリプロセッサーに LESS/SASS を利用して、アダプティブフォームに適用される、CSS 駆動型のスタイルフレームワーク。 テーマにより、ブランディングガイドラインとアクセシビリティ標準へのコンプライアンスが確保され、テーマをカスタマイズしたり、デザイン要素、レイアウト、色、タイポグラフィ、場合によっては基になるコードを変更したりできます。
 
 ## テンプレート
 
@@ -313,7 +323,7 @@ AEM Forms ドキュメントサービスを活用して生成された顧客と�
 
 [XFA（XML Forms Architecture）](https://experienceleague.adobe.com/ja/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/creating-adaptive-form#create-an-adaptive-form-based-on-an-xfa-form-template)
 
-インタラクティブで動的な PDF フォームを作成するためのレガシーテクノロジー。 XFA フォームでは、動的なレイアウト調整、スクリプト、バックエンドシステムとのシームレスな統合など、高度な機能を使用できます。
+インタラクティブで動的な PDF forms を作成するためのレガシーテクノロジー。 XFA フォームでは、動的なレイアウト調整、スクリプト、バックエンドシステムとのシームレスな統合など、高度な機能を使用できます。
 
 ## XMLまたはJSON スキーマ
 

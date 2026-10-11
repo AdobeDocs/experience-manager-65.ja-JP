@@ -9,13 +9,25 @@ exl-id: 55576729-be9c-412e-92ac-4be90650c6fa
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1220'
 ht-degree: 92%
-
 ---
-
 # AEM のインストールに関する問題のトラブルシューティング{#troubleshooting}
 
 このセクションでは、トラブルシューティングに利用できるログに関する詳細情報と、AEM で発生する可能性のあるいくつかの問題について説明します。
@@ -72,7 +84,7 @@ jar ファイルは汎用の ZIP 形式を使用しているので、一部の�
 
 CRX 自体は、少ないメモリ使用量で動作します。 CRX 内で実行するアプリケーションが大きなメモリを必要とする場合や、メモリ負荷の高い操作（大規模なトランザクションなど）を要求する場合、CRX が稼動する JVM インスタンスを適切なメモリ設定で起動する必要があります。
 
-Java™ コマンドオプションを使用して、JVMのメモリ設定を定義します（例えば、java -Xmx512m -jar crx&ast;.jarは、ヒープサイズを512 MBに設定します）。
+Java™ コマンドオプションを使用して、JVMのメモリ設定を定義します（例えば、java -Xmx512m -jar crx&amp;ast;.jarは、ヒープサイズを512 MBに設定します）。
 
 コマンドラインから AEM WCM を起動する際に、メモリ設定オプションを指定します。 AEM WCM 起動／停止スクリプトまたは AEM WCM スタートアップの管理用カスタムスクリプトを修正して、必要なメモリ設定を定義することもできます。
 
@@ -80,7 +92,7 @@ Java™ コマンドオプションを使用して、JVMのメモリ設定を定
 
 メモリ不足の際にヒープダンプを自動的に作成するには、次のコマンドを使用します。
 
-java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &ast;.jar
+java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
 
 このメソッドによって、プロセスがメモリ不足になったときは常にヒープダンプファイル（**java_...hprof**）が生成されます。 ヒープダンプが生成された後も、プロセスが引き続き実行される場合があります。
 
@@ -101,7 +113,7 @@ java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &ast;.jar
 
 特定の状況で、リポジトリ自体が正常に実行されているにもかかわらず、AEM WCM のようこそ画面が自動的に表示されない場合があります。 この問題は、オペレーティングシステムの設定、ブラウザーの設定などの要因が考えられます。
 
-通常の症状は、AEM WCM Quickstart ウィンドウに「AEM WCM を起動中、サーバーの起動を待機中」と表示されます。 このメッセージが比較的長い間表示される場合は、デフォルトの4502 ポートまたはインスタンスが実行されているポート http://localhost:4502/を使用して、AEM WCM URLをブラウザーウィンドウに手動で入力します。
+通常の症状は、AEM WCM Quickstart ウィンドウに「AEM WCM を起動中、サーバーの起動を待機中」と表示されます。 このメッセージが比較的長い間表示される場合は、デフォルトの4502 ポートまたはインスタンスが実行されているポート（http://localhost:4502/）を使用して、AEM WCM URLをブラウザーウィンドウに手動で入力します。
 
 また、ブラウザーが起動しない原因がログによってわかることがあります。
 

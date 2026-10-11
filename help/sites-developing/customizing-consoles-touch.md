@@ -10,13 +10,22 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '690'
 ht-degree: 96%
-
 ---
-
 # コンソールのカスタマイズ {#customizing-the-consoles}
 
 >[!CAUTION]
@@ -29,7 +38,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 クライアントライブラリを使用すると、デフォルトの実装を拡張して新しい機能を実現しながら、標準の関数、オブジェクト、メソッドを再利用できます。 カスタマイズするときに、独自の clientlib を `/apps.` に作成して、カスタムコンポーネントに必要なコードを保持することなどができます。
 
 * オーバーレイ
-オーバーレイはノード定義に基づいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。 オーバーレイを作成する場合、Sling リソースの結合によって継承が可能になるので、元の1:1 コピーは必要ありません。
+オーバーレイはノード定義に基づいており、標準の機能（`/libs`）にカスタマイズした独自機能（`/apps`）をオーバーレイすることができます。 オーバーレイを作成する場合、sling リソースの結合によって継承が可能になるため、元のコピーを1:1で作成する必要はありません。
 
 これらをさまざまな方法で使用して、AEM コンソールを拡張できます。 一部については、以降で（大まかに）説明します。
 
@@ -60,7 +69,7 @@ AEM には、オーサーインスタンスのコンソール（および[ペー
 
 * コンソール（Granite UI ページに基づくすべてのコンソール）。次に例を示します。
 
-   * `/libs/wcm/core/content`
+  * `/libs/wcm/core/content`
 
 >[!NOTE]
 >

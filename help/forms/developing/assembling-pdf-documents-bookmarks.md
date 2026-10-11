@@ -10,18 +10,32 @@ role: Developer
 exl-id: 2b938410-f51b-420b-b5d4-2ed13ec29c5a
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2561'
 ht-degree: 100%
-
 ---
-
 # ブックマークを含む PDF ドキュメントのアセンブリ {#assembling-pdf-documents-with-bookmarks}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-ブックマークを含む PDF ドキュメントをアセンブリできます。 例えば、ブックマークが含まれていない PDF ドキュメントにブックマークを追加したいとします。 アセンブラーサービスを使用すると、ブックマークを含まない PDF ドキュメントを渡し、ブックマークを含む PDF ドキュメントを受け取ることができます。
+ブックマークを含む PDF ドキュメントを組み立てることができます。 例えば、ブックマークが含まれていない PDF ドキュメントにブックマークを追加したいとします。 アセンブラーサービスを使用すると、ブックマークを含まない PDF ドキュメントを渡し、ブックマークを含む PDF ドキュメントを受け取ることができます。
 
 ブックマークには、次のプロパティが含まれます。
 
@@ -41,11 +55,11 @@ ht-degree: 100%
  </DDX>
 ```
 
-この DDX ドキュメント内では、source 属性に値 `Loan.pdf` が割り当てられていることに着目してください。 この DDX ドキュメントは、1 つの PDF ドキュメントをアセンブラーサービスに渡すように指定します。 ブックマークを含む PDF ドキュメントをアセンブリする場合は、結果ドキュメント内のブックマークを説明するブックマーク XML ドキュメントを指定する必要があります。 ブックマーク XML ドキュメントを指定するには、`Bookmarks` 要素を DDX ドキュメント内で指定してください。
+この DDX ドキュメント内では、source 属性に値 `Loan.pdf` が割り当てられていることに着目してください。 この DDX ドキュメントは、1 つの PDF ドキュメントをアセンブラーサービスに渡すように指定します。 ブックマークを含む PDF ドキュメントを組み立てる場合は、結果ドキュメント内のブックマークを説明するブックマーク XML ドキュメントを指定する必要があります。 ブックマーク XML ドキュメントを指定するには、`Bookmarks` 要素を DDX ドキュメント内で指定してください。
 
 この DDX ドキュメントの例では、 `Bookmarks` 要素が値として `doc2` を指定しています。 この値は、アセンブラーサービスに渡される入力マップに `doc2` という名前のキーが含まれていることを示します。 `doc2` キーの値はブックマーク XML ドキュメントを表す `com.adobe.idp.Document` 値です （詳しくは、[アセンブラーサービスと DDX リファレンス](https://www.adobe.com/go/learn_aemforms_ddx_63)の「ブックマーク言語」を参照）。
 
-このトピックでは、次の XML ブックマーク言語を使用して、ブックマークを含む PDF ドキュメントをアセンブリします。
+このトピックでは、次の XML ブックマーク言語を使用して、ブックマークを含む PDF ドキュメントを組み立てます。
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -69,7 +83,7 @@ ht-degree: 100%
  </Bookmarks>
 ```
 
-このブックマーク XML ドキュメント内には、ユーザーがブックマークをクリックしたときに実行されるアクションを定義する Action 要素があります。 Action 要素の下には、NotePad などのアプリケーションを起動し、アプリケーションファイルなどのファイルを開く Launch 要素があります。 PDF ファイルを開くには、開くファイルを指定する File 要素を使用する必要があります。 例えば、このセクションで指定したブックマーク XML ファイルでは、開くファイルの名前は LoanDetails.pdf です。
+このブックマーク XML ドキュメント内には、ユーザーがブックマークをクリックしたときに実行されるアクションを定義する Action 要素があります。 Action 要素の下には、メモ帳などのアプリケーションを起動し、PDF ファイルなどのファイルを開く Launch 要素があります。 PDF ファイルを開くには、開くファイルを指定する File 要素を使用する必要があります。 例えば、このセクションで指定したブックマーク XML ファイルでは、開くファイルの名前は LoanDetails.pdf です。
 
 >[!NOTE]
 >
@@ -95,7 +109,7 @@ ht-degree: 100%
 
 ## 手順の概要 {#summary-of-steps}
 
-ブックマークを含む PDF ドキュメントをアセンブリするには、次のタスクを実行します。
+ブックマークを含む PDF ドキュメントをアセンブルするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDF Assembler クライアントを作成します。
@@ -131,7 +145,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **ブックマークを追加する PDF ドキュメントの参照**
 
-ブックマークを追加する PDF ドキュメントを参照します。 参照先のブックマークドキュメントに既に PDF が含まれているかどうかは関係ありません。 `Bookmarks` 要素が PDF ソース要素の子である場合、ブックマークは PDF ソースに既に存在する要素を置き換えます。 ただし、既存のブックマークを保持する場合は、 `Bookmarks` を PDF ソース要素の兄弟にしてください。 例えば、次のようなシナリオを考えます。
+ブックマークを追加する PDF ドキュメントを参照します。 参照先の PDF ドキュメントに既にブックマークが含まれているかどうかは関係ありません。 `Bookmarks` 要素が PDF ソース要素の子である場合、ブックマークは PDF ソースに既に存在する要素を置き換えます。 ただし、既存のブックマークを保持する場合は、 `Bookmarks` を PDF ソース要素の兄弟にしてください。 例えば、次のようなシナリオを考えます。
 
 ```xml
  <PDF result="foo">
@@ -142,7 +156,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **ブックマーク XML ドキュメントの参照**
 
-新しいブックマークを含む PDF をアセンブリするには、ブックマーク XML ドキュメントを参照する必要があります。 ブックマーク XML ドキュメントは、Map コレクションオブジェクト内のアセンブラーサービスに渡されます。 （このセクションで前述したブックマーク XML ドキュメントを参照してください）。
+新しいブックマークを含む PDF をアセンブリするには、ブックマーク XML ドキュメントを参照する必要があります。 ブックマーク XML ドキュメントは、Map コレクションオブジェクト内のアセンブラーサービスに渡されます。 （例については、このセクションで前述したブックマーク XML ドキュメントを参照してください。）
 
 >[!NOTE]
 >
@@ -150,7 +164,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **PDF ドキュメントとブックマーク XML ドキュメントを Map コレクションに追加する**
 
-ブックマークを追加する PDF ドキュメントと、ブックマーク XML ドキュメントの両方を Map コレクションに追加すします。 したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
+ブックマークを追加する PDF ドキュメントと、ブックマーク XML ドキュメントの両方を Map コレクションに追加します。 したがって、Map コレクションオブジェクトには、PDF ドキュメントとブックマーク XML ドキュメントという 2 つの要素が含まれます。
 
 **実行時オプションを設定**
 
@@ -172,13 +186,13 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 [PDF ドキュメントをプログラムで組み立てる](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java API を使用してブックマークとともに PDF ドキュメントをアセンブリする {#assemble-pdf-documents-with-bookmarks-using-the-java-api}
+## Java API を使用したブックマーク付き PDF ドキュメントのアセンブリ {#assemble-pdf-documents-with-bookmarks-using-the-java-api}
 
 Assembler Service API（Java）を使用して、ブックマークとともに PDF ドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -205,13 +219,13 @@ Assembler Service API（Java）を使用して、ブックマークとともに 
    * 入力 PDF ドキュメントとブックマーク XML ドキュメントの両方を格納するのに使用する `java.util.Map` オブジェクトを作成します。
    * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、以下の引数を渡すことによって、入力 PDF ドキュメントを追加します。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
-      * 入力 PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
+     * 入力 PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
    * `java.util.Map` オブジェクトの `put` メソッドを呼び出し、以下の引数を渡すことによって、ブックマーク XML ドキュメントを追加します。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定されているブックマークソース要素の値と一致する必要があります。
-      * ブックマーク XML ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定されているブックマークソース要素の値と一致する必要があります。
+     * ブックマーク XML ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
 1. 実行時オプションを設定します。
 
@@ -264,10 +278,10 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 
@@ -277,7 +291,7 @@ Assembler Service API（web サービス）を使用して、ブックマーク�
    * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
    * `MTOM` フィールドを割り当てて、`BLOB` オブジェクトにバイト配列の内容を入力します。
 
-1. ブックマークを追加する PDF ドキュメントを参照します。
+1. ブックマークが追加される PDF ドキュメントを参照します。
 
    * コンストラクターを使用して `BLOB` オブジェクトを作成します。 `BLOB` オブジェクトは、入力 PDF を格納するために使用されます。
    * コンストラクターを呼び出し、入力 PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡すことにより、`System.IO.FileStream` オブジェクトを作成します。

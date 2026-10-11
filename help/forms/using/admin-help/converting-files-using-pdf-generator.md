@@ -9,18 +9,29 @@ feature: PDF Generator
 exl-id: 0e2c12b5-24c8-4aca-8826-cb661051ce4f
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b26425d0-6fde-5e02-bfd6-e560e2fa86c9
+    internal-label: PDF Generator
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 100%
-
 ---
-
 # PDF Generator を使用したファイルの変換{#converting-files-using-pdf-generator}
 
 >[!NOTE]
 > 
-> ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
+> ユーザーが管理コンソールにアクセスする管理者権限を持っていることを確認します。
 
 PDF Generator web ページを使用してファイルを変換できます。
 
@@ -33,7 +44,7 @@ PDF Generator web ページを使用してファイルを変換できます。
    >
    >PDF Generator は、ファイル名にファイルの拡張子がない場合でも、自動的に .doc、.xls、.ppt および .rtf ファイルのファイルタイプを検出できます。 この機能は .docx、.xlsx および .pptx ファイルでは動作しません。
 
-1. 「環境設定」で、「カスタム設定を使用」または「設定ファイルをアップロード」を選択します。
+1. 「設定」で、「カスタム設定を使用」または「設定ファイルをアップロード」を選択します。
 
    * カスタム設定を使用している場合は、Adobe PDF 設定、セキュリティ設定およびファイルタイプ設定を選択し、タイムアウトを指定します。
 
@@ -110,9 +121,9 @@ ZIP ファイルで、フォルダー階層の最下位レベルに複数の HTM
 [サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)の「Generate PDF サービス」の章で説明したように、PDF ファイルは様々なファイル形式に書き出すことができます。
 
 1. 管理コンソールで、サービス／PDF Generator／PDF の書き出しをクリックします。
-1. 「参照」をクリックして、書き出す PDF ファイルを参照します。
+1. 「参照」をクリックして、書き出す PDF ファイルを見つけて選択します。
 1. 「PDF ファイルの書き出し先」リストで、PDF ファイルの書き出し先の形式を選択します。
-1. 「タイムアウト時間の指定」ボックスに、アプリケーションがタイムアウトになるまでの待機時間を入力します。 デフォルト値は 270 秒です。
+1. 「タイムアウト時間の指定」ボックスに、アプリケーションがタイムアウトするまでの待機時間を入力します。 デフォルト値は 270 秒です。
 
    ファイル変換時に「変換時間」に表示される値は、ここで指定する値よりも長くなる場合があります。 「変換時間」の値には、スレッドまたはプロセスの待機時間、ファイルの変換時間、およびフォールバックコンバーターにかかる時間（該当する場合）なども含まれています。 時刻。 「タイムアウトを指定」の値は、ファイルの変換にかかる時間です。
 

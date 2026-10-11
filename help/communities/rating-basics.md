@@ -9,7 +9,16 @@ exl-id: 49456944-ff0d-4507-b3b8-143c90067573
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 2%
@@ -66,7 +75,7 @@ ht-degree: 2%
 ### UGC （Posted Ratings）へのアクセス {#accessing-posted-ratings-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -74,7 +83,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

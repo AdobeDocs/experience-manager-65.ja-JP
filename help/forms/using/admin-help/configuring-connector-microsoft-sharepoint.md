@@ -9,13 +9,27 @@ exl-id: a8be58f1-1961-4bf5-aaad-feb4489fb389
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 98cbaaf64c0268be1afe7196a7bbbf5c93f02148
-workflow-type: ht
-source-wordcount: '214'
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '223'
 ht-degree: 100%
-
 ---
-
 
 # Connector for Microsoft SharePoint の設定
 
@@ -23,7 +37,7 @@ ht-degree: 100%
 > 
 > ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
-Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間の通信を実現します。その他の背景情報について詳しくは、[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)にある「ECM 用コネクター」を参照してください。
+Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間の通信を実現します。 その他の背景情報について詳しくは、[サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)にある「ECM 用コネクター」を参照してください。
 
 1. 管理コンソールで、サービス／Connector for Microsoft SharePoint をクリックします。
 2. SharePoint Server の次の設定を指定します。
@@ -40,7 +54,7 @@ Connector for Microsoft SharePoint は、AEM Forms と Microsoft SharePoint 間�
 
 ## Microsoft SharePoint Configuration サービス {#microsoft-sharepoint-configuration-service}
 
-Microsoft SharePoint Configuration サービス（`(MSSharePointConfigService)`）を使用して、他のユーザーとしての権限（仮想権限）を持つ AEM Forms ユーザー用に秘密鍵証明書を指定できます。他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。`MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
+Microsoft SharePoint Configuration サービス（`(MSSharePointConfigService)`）を使用して、他のユーザーとしての権限（仮想権限）を持つ AEM Forms ユーザー用に秘密鍵証明書を指定できます。 他のユーザーとしての権限については、「[Connector for Microsoft SharePoint の設定](https://help.adobe.com/ja_JP/AEMForms/6.1/SharePointConfig/index.html)」を参照してください。 `MSSharePointConfigService` の設定を指定するには、次の手順を実行します。
 
 1. 管理コンソールで、サービス／アプリケーションおよびサービス／サービスの管理をクリックします。
 1. サービスのリストに移動して、`MSSharePointConfigService` をクリックします。

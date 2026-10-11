@@ -9,13 +9,27 @@ exl-id: a096eea0-b2fb-4d86-b729-ca47611135b2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 100%
-
 ---
-
 # プロセスレポートのアドホッククエリ{#ad-hoc-queries-in-process-reporting}
 
 ## プロセスレポートのアドホッククエリ {#ad-hoc-queries-in-process-reporting-1}
@@ -112,7 +126,7 @@ ht-degree: 100%
 
    ![process_search_result](assets/process_search_result.png)
 
-   レポートの下部に表示されるページネーションパネルを使用して、検索結果にページ番号を付けることができます。
+   レポートの下部に表示されるページネーションパネルを使用して、検索結果をページ分割できます。
 
    ![process_result_pgn](assets/process_result_pgn.png)
 
@@ -167,7 +181,7 @@ ht-degree: 100%
 
 ### プロセス／タスクの詳細の表示 {#to-view-process-task-details}
 
-特定の AEM Forms プロセス／タスクの詳細を表示できます。
+特定の AEM Forms プロセス／タスクの詳細を表示できます：
 
 * **プロセス／タスク検索結果から**
 * **プロセス／タスクの詳細パネルでプロセス／タスク ID を入力する**
@@ -255,7 +269,7 @@ ht-degree: 100%
 
    ただし、特定のプロセス／タスク ID を入力してプロセス／タスクの詳細が見つかった場合に、「プロセス／タスクの検索に戻る」をクリックすると、「**プロセス／タスクの検索**」に戻り、検索結果は表示されません。
 
-#### プロセス／タスクの詳細パネルでプロセス／タスク ID を入力する {#by-entering-the-process-task-id-in-the-process-task-details-panel-br}
+#### プロセス／タスクの詳細パネルでのプロセス／タスク ID の入力 {#by-entering-the-process-task-id-in-the-process-task-details-panel-br}
 
 1. **プロセス／タスクの詳細**&#x200B;パネルに移動します。
 

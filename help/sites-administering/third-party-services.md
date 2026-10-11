@@ -9,13 +9,22 @@ exl-id: 50b70e47-a801-4f0a-be92-4427c4b2cad1
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 100%
-
 ---
-
 # サードパーティのサービスとの統合{#integrating-with-third-party-services}
 
 AEM は標準で、アドビ製品以外の次の製品と統合できます。
@@ -25,7 +34,7 @@ AEM は標準で、アドビ製品以外の次の製品と統合できます。
 * ExactTarget - メールマーケティング
 * Facebook Connect - ソーシャルネットワーキング
 * 一般的な分析スニペット - 分析
-* Microsoft® Translator、その他の機械翻訳プロバイダー
+* Microsoft® Translator またはその他の機械翻訳プロバイダー
 * Pushwoosh 接続 - アプリ - プッシュ通知
 * Salesforce - 販売および CRM ソフトウェア
 * Twitter - ソーシャルネットワーキング

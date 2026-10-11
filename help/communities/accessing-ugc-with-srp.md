@@ -10,20 +10,27 @@ exl-id: 1157366f-2cc5-46e4-8ec6-e66fe5d0a0f6
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 3%
-
 ---
-
 # SRP による UGC へのアクセス {#accessing-ugc-with-srp}
 
 ## SRPについて {#about-srp}
 
-すべてのAEM Communities コンポーネントと機能は、[&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](/help/communities/scf.md)上に構築されており、SocialResourceProvider APIを呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
+すべてのAEM Communities コンポーネントと機能は、[ ソーシャルコンポーネントフレームワーク（SCF） ](/help/communities/scf.md)上に構築されており、SocialResourceProvider APIを呼び出して、すべてのユーザー生成コンテンツ（UGC）にアクセスします。
 
-コミュニティサイトを作成する前に、[&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](/help/communities/working-with-srp.md)を設定して、基になる[&#x200B; トポロジ &#x200B;](/help/communities/topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
+コミュニティサイトを作成する前に、[ ストレージリソースプロバイダー（SRP） ](/help/communities/working-with-srp.md)を設定して、基になる[ トポロジ ](/help/communities/topologies.md)と一致する実装を選択する必要があります。 SRPの実装は、次の3つのストレージオプションに基づいています。
 
 1. [ASRP](/help/communities/asrp.md) - Adobe オンデマンドストレージ
 1. [MSRP](/help/communities/msrp.md) - MongoDB
@@ -35,7 +42,7 @@ UGCの保存について知っておくべき重要なことは、サイトがAS
 
 JCRには、UGCをシャドウして有用なメタデータを提供するノードがありますが、これらのノードは実際のUGCと混同しないでください。
 
-[&#x200B; ストレージリソースプロバイダーの概要を参照してください。](/help/communities/srp.md)
+[ ストレージリソースプロバイダーの概要を参照してください。](/help/communities/srp.md)
 
 ## ベストプラクティス {#best-practice}
 
@@ -49,11 +56,11 @@ JCRに固有の方法は避けるべきです。
 
 * Sling API （Sling リソース）
 
-   * jcr ノードがあると仮定しないでください
+  * jcr ノードがあると仮定しないでください
 
 * OSGi イベント
 
-   * jcr イベントが存在すると仮定しないでください
+  * jcr イベントが存在すると仮定しないでください
 
 * [SocialResourceUtilities](/help/communities/socialutils.md#socialresourceutilities-package)
 * [SCFUtilities](/help/communities/socialutils.md#scfutilities-package)
@@ -68,12 +75,12 @@ JCRに固有の方法は避けるべきです。
 
 SRPごとに、ネイティブクエリ言語を指定できます。 [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) パッケージのメソッドを使用して、適切なクエリ言語を実行します。
 
-詳しくは、[検索エッセンシャル &#x200B;](/help/communities/search-implementation.md)を参照してください。
+詳しくは、[検索エッセンシャル ](/help/communities/search-implementation.md)を参照してください。
 
 ## リソース {#resources}
 
-* [&#x200B; コミュニティコンテンツストレージ &#x200B;](/help/communities/working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します
-* [&#x200B; ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
+* [ コミュニティコンテンツストレージ ](/help/communities/working-with-srp.md) - UGC共通ストアで利用可能なSRPの選択肢について説明します
+* [ ストレージリソースプロバイダーの概要](/help/communities/srp.md) – 概要とリポジトリの使用状況の概要
 * [SRPおよびUGC Essentials](/help/communities/srp-and-ugc.md) - SRP ユーティリティのメソッドと例
 * [Search Essentials](/help/communities/search-implementation.md) - UGCを検索するための必須情報
-* [SocialUtils リファクタリング &#x200B;](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング
+* [SocialUtils リファクタリング ](/help/communities/socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング

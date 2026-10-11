@@ -10,13 +10,22 @@ exl-id: 6c4b8aaa-bda0-4066-a3fc-d91a5ab1621c
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 97%
-
 ---
-
 # Silverpop Engage との統合{#integrating-with-silverpop-engage}
 
 <!--
@@ -31,9 +40,9 @@ AEM を Silverpop Engage と統合すると、AEM で作成したメールを Si
 この統合によって次の機能を使用できるようになります。
 
 * AEM でメールを作成し、Silverpop に公開して配信する機能。
-* AEM フォームのアクションを設定して、Silverpop サブスクライバーを作成する機能。
+* AEM フォームのアクションを設定して、Silverpop 購読者を作成する機能。
 
-Silverpop Engage が設定されると、Silverpop Engage にニュースレターまたはメールを発行できます。
+Silverpop Engage が設定されると、Silverpop Engage にニュースレターまたはメールを公開できます。
 
 ## Silverpop 設定の作成 {#creating-a-silverpop-configuration}
 
@@ -41,7 +50,7 @@ Silverpop 設定は、**クラウドサービス**、**ツール**、**API エ�
 
 ### Cloud Services を使用した Silverpop の設定 {#configuring-silverpop-via-cloudservices}
 
-Cloud Services で Silverpop 設定の作成するには：
+Cloud Services で Silverpop 設定を作成するには：
 
 1. AEM で、**ツール**／**デプロイメント**／**クラウドサービス**&#x200B;をクリックします （または `https://<hostname>:<port>/etc/cloudservices.html` に直接アクセスします。）
 1. サードパーティのサービスで、「**Silverpop Engage**」、「**設定**」の順にクリックします。 Silverpop 設定ウィンドウが開きます。
@@ -69,14 +78,14 @@ Cloud Services で Silverpop 設定の作成するには：
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
 1. **ページの作成**&#x200B;ウィンドウで、**タイトル**&#x200B;と必要に応じて&#x200B;**名前**&#x200B;を入力し、「**作成**」をクリックします。
-1. 前の手順 4 で説明した設定情報を入力します。 Silverpop の設定を完了するには、次の手順に従います。
+1. 前の手順 4 で説明した設定情報を入力します。 Silverpop の設定を完了するには、その手順に従います。
 
 ### 複数の設定の追加 {#adding-multiple-configurations}
 
 複数の設定を追加するには：
 
 1. ようこそページで「**クラウドサービス**」をクリックし、「**Silverpop Engage**」をクリックします。 「**設定を表示**」ボタンをクリックします。このボタンは、利用可能な Silverpop 設定がある場合に表示されます。 利用可能なすべての設定が一覧表示されます。
-1. 「利用可能な設定」の横にある「**+**」記号をクリックします。 **設定を作成**&#x200B;ウィンドウが開きます。 前述の設定手順に従って新しい設定を作成します。
+1. 「利用可能な設定」の横にある「**+**」記号をクリックします。 **設定を作成**&#x200B;ウィンドウが開きます。 前述の設定手順に従って設定を作成します。
 
 ### Silverpop に接続するための API エンドポイントの設定 {#configuring-api-end-points-for-connecting-to-silverpop}
 

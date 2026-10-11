@@ -10,13 +10,29 @@ feature: Image Sets,Asset Management
 role: User, Admin
 exl-id: 2a536745-fa13-4158-8761-2ac5b6e1893e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: e2dc1259-9034-40fc-a518-b92a34fe6642
+    internal-label: Image sets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2274'
-ht-degree: 99%
-
+source-wordcount: '2299'
+ht-degree: 100%
 ---
-
 # 画像セット {#image-sets}
 
 画像セットは、ユーザーに対して統一された閲覧エクスペリエンスを提供します。ユーザーはこのエクスペリエンスで、サムネール画像をクリックしてアイテムの様々なビューを表示できます。 画像セットによって、アイテムの代替的なビューを表示でき、ビューアでは画像をより近くで確認するためのズームツールを利用できます。
@@ -131,8 +147,8 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->[&#x200B; バッチセットプリセット &#x200B;](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して、画像セットを自動的に作成することもできます。
->**重要：** バッチセットは、IPS （Image Production System）によってアセット取り込みの一部として作成され、Dynamic Media - Scene7 モードでのみ使用できます。
+>[バッチセットプリセット](/help/assets/config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を使用して画像セットを自動的に作成することもできます。
+>**重要：**&#x200B;バッチセットは IPS（Image Production System）によってアセット取り込みの一環として作成され、Dynamic Media - Scene7 モードでのみ使用できます。
 
 画像セットに追加したアセットは、自動的に英数字順で追加されます。 追加後に、手動でアセットの順番を変更したり、並べ替えたりすることができます。
 
@@ -189,7 +205,7 @@ ht-degree: 99%
 
    * 画像を削除するには、画像を選択し、「**[!UICONTROL アセットを削除]**」を選択します。
 
-   * ページの右上隅付近にプリセットを適用するには、「**プリセット**」を選択した後、すべてのアセットに一度に適用するプリセットを選択します。
+   * ページの右上隅付近にプリセットを適用するには、「]**プリセット**[!UICONTROL 」を選択した後、すべてのアセットに一度に適用するプリセットを選択します。
 
    >[!NOTE]
    >
@@ -247,7 +263,7 @@ ht-degree: 99%
 
    * アセットを並べ替えるには、画像を新しい位置までドラッグします（並べ替えアイコンを選択して項目を移動します）。
    * 項目を昇順または降順に並べ替えるには、列の見出しを選択します。
-   * アセットを追加するか既存のアセットを更新するには、「**[!UICONTROL アセットを追加]**」を選択します。 アセットに移動して選択し、ページの右上隅付近にある「**選択**」を選択します。
+   * アセットを追加するか既存のアセットを更新するには、「**[!UICONTROL アセットを追加]**」を選択します。 アセットに移動して選択し、ページの右上隅付近にある「]**選択**[!UICONTROL 」を選択します。
      >[!NOTE]
      >
      >Experience Manager でサムネール用に使用されている画像を別の画像に置き換えて削除しても、元のアセットは表示されたままになります。

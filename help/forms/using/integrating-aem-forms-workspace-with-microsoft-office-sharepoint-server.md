@@ -9,28 +9,42 @@ exl-id: d080932f-d5fb-482d-9329-62da5df10362
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 100%
-
+source-wordcount: '554'
+ht-degree: 93%
 ---
-
 # AEM Forms Workspace に Microsoft Office SharePoint Server を統合する{#integrating-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
 **- 要件**
 
-**必要な知識**
-AEM Forms Workspace を SharePoint Server に追加するに当たり、SharePoint Server への適切なアクセス権を持っている必要があります。また、Workspace にアクセスするための URL を把握している必要もあります。以下の手順では、SharePoint Server に精通していることを前提としています。SharePoint Server 内の web パーツについて詳しくは、「Windows SharePoint Services 内の web パーツ」を参照してください。
+**必須知識**
+AEM Forms WorkspaceをSharePoint Serverに追加する前に、適切な権限を持つSharePoint Serverへのアクセス権があり、WorkspaceにアクセスするためのURLを知っている必要があります。 以下の手順では、SharePoint Server に精通していることを前提としています。 SharePoint Server 内の web パーツについて詳しくは、「Windows SharePoint Services 内の web パーツ」を参照してください。
 
-**ユーザレベル**
-初心者
+**ユーザーレベル**
+Beginning
 
-AEM Forms Workspace は、Microsoft Office SharePoint Server（例えば、Microsoft Office SharePoint Server 2007）で web パーツとして使用することができます。ユーザーは、web ブラウザーから SharePoint Server に接続することで、AEM Forms Workspace にアクセスすることができます。これにより、統一されたエクスペリエンスを用意することができます。この記事では、AEM Forms Workspace を Microsoft Office SharePoint Server 内で web パーツとして表示するための、基本的な手順を説明します。この記事で説明される手順を実行することで、統一されたエクスペリエンスを用意することができます。これにより、SharePoint Server に接続する各ユーザーに対して、同じポートから AEM Forms Workspace にアクセス可能な環境を提供できます。
+AEM Forms Workspace は、Microsoft Office SharePoint Server（例えば、Microsoft Office SharePoint Server 2007）で web パーツとして使用することができます。 ユーザーは、web ブラウザーから SharePoint Server に接続することで、AEM Forms Workspace にアクセスすることができます。これにより、統一されたエクスペリエンスを用意することができます。 この記事では、AEM Forms Workspace を Microsoft Office SharePoint Server 内で web パーツとして表示するための、基本的な手順を説明します。 この記事で説明される手順を実行することで、統一されたエクスペリエンスを用意することができます。これにより、SharePoint Server に接続する各ユーザーに対して、同じポートから AEM Forms Workspace にアクセス可能な環境を提供できます。
 
 >[!NOTE]
 >
->この資料に記載されている手順は、Microsoft SharePoint Server 2007 に特有のものです。また、他のサポート対象バージョンの Microsoft SharePoint も、HTML Workspace と統合することができます。
+>この資料に記載されている手順は、Microsoft SharePoint Server 2007 に特有のものです。 また、他のサポート対象バージョンの Microsoft SharePoint も、HTML Workspace と統合することができます。
 
 ## AEM Forms Workspace に Microsoft Office SharePoint Server 2007 を統合する {#integrate-aem-forms-workspace-with-microsoft-office-sharepoint-server}
 
@@ -40,7 +54,7 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（例えば、Micro
 
    >[!NOTE]
    >
-   >SharePoint サーバーにおけるデフォルトのポート番号は 44299 です。ポート番号は、SharePoint Server のインストール構成によって異なります。
+   >SharePoint サーバーにおけるデフォルトのポート番号は 44299 です。 ポート番号は、SharePoint Server のインストール構成によって異なります。
 
 1. Web ページの右上で「**サイトの操作**」をクリックし、「**ページの編集**」を選択します。
 1. 「**Web パーツの追加**」ボタンをクリックします。
@@ -53,13 +67,13 @@ AEM Forms Workspace は、Microsoft Office SharePoint Server（例えば、Micro
 
    ![Microsoft Office SharePoint Server の「ページビューアの web パーツ」ボックス。](assets/page-viewer-web-part-box-in-microsoft-office-sharepoint-server.png)
 
-   図 1：- Microsoft Office SharePoint サーバーの「ページビューアの web パーツ」ボックス。
+   図 1： - Microsoft Office SharePoint サーバーの「ページビューアの web パーツ」ボックス。
 
 1. 「ページビューア」ページで、次のタスクを実行します。
 
    1. 「リンク」ボックスで、AEM Forms Workspace の URL（例：`https://[AEM_forms_Server]:8080/lc/ws`）を入力します。`[AEM_forms_Server]` は、AEM Forms サーバーの IP または名前を表します。
-   1. 「**表示方法**」をクリックします。高さ、幅、およびタイトルを変更し、ワークスペースのユーザーインターフェイス全体が表示されるようにします。例えば、高さと幅をそれぞれ 6 インチと 11 インチに設定することができます。
-   1. 「**リンクのテスト**」をクリックします。新しい web ブラウザーのウィンドウが起動し、Workspace が表示されます。
+   1. 「**表示方法**」をクリックします。高さ、幅、およびタイトルを変更し、ワークスペースのユーザーインターフェイス全体が表示されるようにします。 例えば、高さと幅をそれぞれ 6 インチと 11 インチに設定することができます。
+   1. 「**リンクのテスト**」をクリックします。 新しい web ブラウザーのウィンドウが起動し、Workspace が表示されます。
    1. （オプション）「**Layout**」をクリックして、web パーツ内のワークスペースレイアウトを変更します。
    1. （オプション）「**詳細設定**」をクリックして、他の設定を変更します。例えば、説明の追加や、web パーツ内で Workspace を最小化したり閉じたりできる機能のオン／オフを切り替える、などの設定が可能です。
 

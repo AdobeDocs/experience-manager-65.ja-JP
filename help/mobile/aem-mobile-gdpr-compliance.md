@@ -1,87 +1,91 @@
 ---
-title: Adobe Experience Manager Mobile - GDPR 対応
-description: Adobe Experience Managerが GDPR コンプライアンス義務を支援する準備ができている方法について説明します。
+title: Adobe Experience Manager Mobile - GDPR対応
+description: Adobe Experience Managerが、GDPRへの準拠をどのように支援するのかをご確認ください。
 contentOwner: trushton
 exl-id: d06e675f-fb61-47da-85de-e0b50dd44153
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 1%
-
+source-wordcount: '707'
+ht-degree: 2%
 ---
-
 # AEM Mobile - GDPR 対応 {#aem-mobile-gdpr-readiness}
 
 >[!IMPORTANT]
 >
->以下の節では GDPR を例として使用していますが、詳細はすべてのデータ保護およびプライバシー規制（GDPR、CCPA など）に適用できます。
+>GDPRは、以下のセクションの例として使用されますが、説明されている詳細は、すべてのデータ保護およびプライバシー規制（GDPR、CCPAなど）に適用されます。
 
 {{ue-over-mobile}}
 
-## AEM Mobile GDPR のサポート {#aem-mobile-gdpr-support}
+## AEM Mobile GDPR サポート {#aem-mobile-gdpr-support}
 
-AEM Mobileは、お客様の GDPR コンプライアンス義務を支援する準備が整っています。 AEM Mobileには個人データは保存されません。 プロビジョニングされている場合は、Adobe IDを使用して Experience Mobile のAdobeにログオンできます。
+AEM Mobileには、GDPRへの準拠に関するお客様のサポートを行う準備が整っています。 AEM Mobileには個人情報は保存されません。 プロビジョニングを行っている場合は、Adobe IDを使用してAdobe Experience Mobileにログオンできます。
 
 <!-- [https://aemmobile.adobe.com/signin/index.html](https://aemmobile.adobe.com/signin/index.html) -->
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobeのデジタルパブリッシング製品（AEM Mobileに先行）は、Adobeの GDPR 対応イニシアチブをサポートします。 [https://business.adobe.com/jp/privacy/general-data-protection-regulation.html](https://business.adobe.com/jp/privacy/general-data-protection-regulation.html?lang=ja) を参照してください。 以下では、Adobeと連携して GDPR リクエストを開始する方法など、Digital Publishing Suite製品での GDPR 関連機能のサポートについて詳しく説明します。
+Adobeのデジタルパブリッシング製品（AEM Mobileより前）は、AdobeのGDPR対応イニシアチブをサポートしています。 [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html?lang=ja)を参照してください。 以下では、Adobeと連携してGDPR リクエストを開始する方法など、Digital Publishing Suite製品のGDPR関連機能のサポートに関する詳細を説明します。
 
-AEM Mobileを古いDigital Publishing Suiteと混同しないために、次の場所からDigital Publishing Suite製品にログインできます。
+AEM Mobileと古いDigital Publishing Suite製品を混同しないようにするには、こちらからDigital Publishing Suite製品にログインします。
 
 [https://acrobat.adobe.com/us/en/](https://acrobat.adobe.com/us/en/)
 
-### GDPR リクエストの開始 {#initiating-a-gdpr-request}
+### GDPR要求の開始 {#initiating-a-gdpr-request}
 
-Digital Publishing Suiteに対する GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
+Adobe カスタマーケアに連絡して、Digital Publishing SuiteのGDPR リクエストを開始できるようにしてください。
 
-顧客データを見つけるには、次の ID が必要です。 受信したサブセットは、他の ID がこのユーザーに適用されなかったことを意味します。
+顧客データを検索するには、次のIDが必要です。 受け取ったサブセットは、他のIDがこのユーザーに適用されなかったことを意味します。
 
 必須：
 
-* 顧客の契約 ID:*dpsc-contractId*
+* お客様の契約ID: *dpsc-contractId*
 
-次のうち少なくとも 1 つを指定します。
+次のうち少なくとも1つを指定してください。
 
-* エンドユーザーの顧客が指定した OAuth ID （顧客の直接使用権限システムで使用される ID）:*dpsc-directEntitlementId*
-* Windows アプリユーザーの場合、エンドユーザーのApp Store ID:*dpsc-windowsAppStoreId*
-* DPS アプリとやり取りするためにエンドユーザーが使用するメールアドレス：*email*
+* エンドユーザーのお客様が提供したOAuth ID （お客様のダイレクトエンタイトルメントシステムで使用されるID）: *dpsc-directEntitlementId*
+* Windows アプリユーザーの場合、エンドユーザーのApp Store ID: *dpsc-windowsAppStoreId*
+* エンドユーザーがDPS アプリとのやり取りに使用した電子メールアドレス：*email*
 
 ### よくある質問（FAQ） {#frequently-asked-questions-faq}
 
-**Adobeは、DELETEリクエストの開始時にApp Storeの購入を削除しますか？**
+**DELETE リクエストを開始する際、AdobeはApp Storeの購入を削除しますか？**
 
-Adobeは、アプリストアでの購入（サブスクリプションなど）に関する情報を削除しますが、購入はアプリストアに記録されたままになります。 アプリ（エンドユーザー）がアプリストアにログインすると、それらのレシートは再び取得され、Adobeに送信されます。 その後、それらは新しい購入と見なされ、再びアクセスでアプリによって復元されます。
+Adobeは、App Storeで購入した情報（サブスクリプションなど）を削除しますが、App Storeで購入した情報は引き続き記録されます。 アプリ（エンドユーザー）がアプリストアにログインしている場合、その領収書は再度受け取られ、Adobeに送信されます。 その後、これらは新しい購入と見なされ、アプリによって復元され、再度アクセスできます。
 
-**Adobeは、DELETEリクエストを行う際に、お客様が指定した使用権限を削除していますか？**
+**DELETE リクエストを開始する際、Adobeはお客様が提供した使用権限を削除していますか？**
 
-Adobeは、顧客の追加の直接使用権の許容量に関する情報を削除します。 アプリ（エンドユーザー）が、お客様が使用した OAuth メカニズムにログインすると、Adobeに情報が送信され、サービスは追加の使用権限を再度取得します。
+Adobeは、顧客の追加の直接使用権限に関する情報を削除します。 アプリ（エンドユーザー）がお客様が使用したOAuth メカニズムにログインすると、情報がAdobeに送信され、サービスは追加の使用権限を再度取得します。
 
-**エンドユーザーに期待される機能**
+**エンドユーザーに期待される機能は何ですか？**
 
-アプリに使用権限を割り当てるキーはビューアソフトウェアの一部としてデバイスに存在するので、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールする場合でも、既存の購入（アプリストアユーザーに関連付けられる）および直接の使用権限の許可（顧客の OAuth ユーザーに関連付けられる）は引き続き復元されることに注意する必要があります。
+アプリに使用権限を割り当てるキーは、ビューアソフトウェアの一部としてデバイス上に存在するため、エンドユーザーはアプリをアンインストールする必要があります。 エンドユーザーは、アプリを再インストールした場合、既存の購入（アプリストアユーザーに関連付けられている）および直接使用権限（顧客のOAuth ユーザーに関連付けられている）がまだ復元されていることを認識する必要があります。
 
-**デバイス上のユーザー間でアプリが共有されるとどうなりますか？**
+**アプリがデバイス上のユーザー間で共有されるとどうなりますか？**
 
-Adobeには、特定のユーザーに直接関連付けられる最小限の情報があります。 アプリのデータに保持され、アプリが開始するすべてのリクエストで渡される、ランダムに作成された UUID を使用してデータを関連付けます。 つまり、同じデバイスでアプリを共有するエンドユーザーが同じ UUID を使用し、すべてのデータが GDPR リクエストを行ったユーザーによって所有されていると見なされます。 DPSC では、アクセスリクエストと削除リクエストの両方に対して、アプリを共有するユーザーが 1 人のユーザーと見なされます。
+Adobeには、特定のユーザーに直接関連付けられる情報が最小限に抑えられています。 ランダムに作成されたUUIDを使用してデータを関連付けます。このUUIDは、アプリのデータに保持され、アプリが開始するすべてのリクエストに渡されます。 つまり、同じデバイスでアプリを共有するエンドユーザーは同じUUIDを使用し、すべてのデータはGDPR要求を行う人が所有していると見なされます。 アクセス要求と削除要求の両方で、DPSCはアプリを共有するユーザーを1人と見なします。
 
-**Analytics ではどのような個人データが追跡されますか？**
+**Analyticsでどのような個人データが追跡されますか？**
 
-なし. 追跡中のデータがありますが、それはアプリレベル（個人ではない）にあります。 これには、ローンチ、クラッシュ、クローズ、アクティビティ、購入、フォリオのオーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID または IP アドレスは追跡されません。
+なし. 追跡されるデータがありますが、アプリレベルで（個人レベルではありません）。 これには、ローンチ、クラッシュ、クローズ、アクティビティ、購入、フォリオオーバーレイなどのイベントが含まれます。 地理的な場所、名前、デバイス ID、またはIP アドレスは追跡されません。
 
-**エンドユーザーが情報を提供しましたが、何も見つかりませんでした。 なぜいけないの？**
+**エンドユーザーが情報を提供しましたが、何も見つかりませんでした。 なぜですか？**
 
-Digital Publishing Suite製品の進化に伴い、サービスの実装が変わり、より多くのデータが不明化されました。 ユーザーから提供されたデータを使用してデータが見つからない場合、ユーザーのデータをそのユーザーに遡って追跡することはできません。
+Digital Publishing Suite製品の進化に伴い、サービスの実装も変更され、より多くのデータが不明化されました。 ユーザーが提供したデータを使用してデータが見つからない場合は、ユーザーのデータをその人に追跡できないことを意味します。
 
 ### 例 {#example}
 
-GDPR リクエストを開始するには、Adobeカスタマーケアにお問い合わせください。
+Adobeカスタマーケアに連絡して、GDPR要求を開始できるようにしてください。
 
-Digital Publishing Suiteの GDPR リクエストの入力と結果の出力の例を次に示します。
+Digital Publishing Suite GDPR リクエストの入力と出力の例を次に示します。
 
 #### 入力： {#inputs}
 

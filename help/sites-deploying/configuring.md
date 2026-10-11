@@ -9,22 +9,31 @@ feature: Configuring
 exl-id: 3777a1ba-cc4e-41b9-9098-236f8141925f
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 98%
-
 ---
-
 # 設定の基本概念{#basic-configuration-concepts}
 
-Adobe Experience Manager（AEM）は、すべてのパラメーターがデフォルトで設定されてインストールされるので、「すぐに」で実行できます。 ただし、独自の要件に合わせて AEM を設定することもできます。
+Adobe Experience Manager（AEM）は、すべてのパラメーターがデフォルトで設定された状態でインストールされるため、そのまますぐに実行できます。 ただし、独自の要件に合わせて AEM を設定することもできます。
 
 AEM では様々な設定を行えます。
 
 * 一部は[すべてのプロジェクトのインストールに対して共通に設定されており](#primary-configuration-considerations)、プロジェクトに適用できるかどうかの確認が必要なものがあります。
 * 機能やシステムのパフォーマンスおよび安定性に関しては、[さらなる設定](#further-configuration-considerations)を行うのが一般的ですが、必須ではありません。
-* その他は、AEM の一定のオプション機能用にのみ必要です（これらについては該当する機能と合わせて説明します）。
+* その他は、AEM の特定のオプション機能にのみ必要です（これらについては該当する機能と合わせて記載されています）。
 
 具体的な設定に応じて、これらの変更には次のいずれかを使用できます。
 
@@ -107,9 +116,9 @@ AEM のすべての要素（例：リポジトリ、Dispatcher）は、IPv4 と 
 
 ### バージョンのパージ {#version-purging}
 
-標準インストールでは、AEM はコンテンツを更新後、ページを有効にする時にページまたはノードのバージョンを作成します。 サイドキックの「**バージョン管理**」タブを使用すると、リクエスト時に追加のバージョンを作成することもできます。 これらのバージョンはすべてリポジトリーに保存され、必要に応じて復元できます。
+標準インストールでは、AEM はコンテンツを更新後、ページを有効にする時にページまたはノードのバージョンを作成します。 サイドキックの「**バージョン管理**」タブを使用すると、リクエスト時に追加のバージョンを作成することもできます。 これらのバージョンはすべてリポジトリに保存され、必要に応じて復元できます。
 
-これらのバージョンはパージされることがなく、時間の経過と共にリポジトリーのサイズが大きくなるので、管理が必要です。
+これらのバージョンはパージされることがなく、時間の経過と共にリポジトリのサイズが大きくなるので、管理が必要です。
 
 詳しくは、[バージョンのパージ](/help/sites-deploying/version-purging.md)を参照してください。特に、新しいバージョンが作成されたときに古いバージョンをパージするように AEM を設定する方法については、[バージョンマネージャー](/help/sites-deploying/version-purging.md#version-manager)を参照してください。
 
@@ -135,13 +144,13 @@ AEM では、以下の設定が可能です。
 
 ### シングルサインオン {#single-sign-on}
 
-シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。 別個のシステム（信頼された認証と呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。 Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
+シングルサインオン（SSO）では、ユーザーが認証の資格情報（ユーザー名、パスワードなど）を一度入力すると、複数のシステムにアクセスできるようになります。 別個のシステム（信頼された認証システムと呼ばれます）が認証を実行し、Experience Manager にユーザーの資格情報を提供します。 Experience Manager は、ユーザーのアクセス権限を確認および強制します（つまり、ユーザーがアクセスできるリソースを決定します）。
 
 詳しくは、[シングルサインオン](/help/sites-deploying/single-sign-on.md)を参照してください。
 
 ### リソースマッピング {#resource-mapping}
 
-リソースマッピングは、AEM のリダイレクト、バニティ URL および仮想ホストを定義するために使用します。
+リソースマッピングは、AEM のリダイレクト、バニティ URL、および仮想ホストを定義するために使用されます。
 
 例えば、これらのマッピングを使用すると次のことが可能です。
 
@@ -180,7 +189,7 @@ AEM 内のユーザー管理（アクセス権の割り当てを含む）につ�
 
 Dispatcher は、Adobe Experience Manager のキャッシュ、ロードバランシングまたはその両方を行うツールです。 エンタープライズクラスの web サーバーで使用できます。
 
-詳しくは、[Dispatcher &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
+詳しくは、[Dispatcher ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)を参照してください。特に、設定の詳細については、[Dispatcher の設定](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
 
 ### AEM LiveCycle Connector の設定 {#configuring-aem-livecycle-connector}
 
@@ -188,9 +197,9 @@ AEM ドキュメントサービスおよび AEM ドキュメントセキュリ�
 
 ### ジョブのオフロードとトポロジの管理 {#job-offloading-and-topology-administration}
 
-[オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。](/help/sites-deploying/offloading.md) オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。 特殊化した処理により、使用可能なサーバーリソースの使用を最大限に活用できます。
+[オフロードによって、トポロジ内の Experience Manager インスタンス間で処理タスクが配布されます。](/help/sites-deploying/offloading.md) オフロードを使用すると、特定の Experience Manager インスタンスを使用して特定のタイプの処理を実行できます。 特殊化した処理により、使用可能なサーバーリソースを最大限に活用できます。
 
-トポロジは、オフロードに使用される疎結合の Experience Manager クラスターです。 クラスターは 1 つ以上の Experience Manager サーバーインスタンスで構成されます（単一のインスタンスがクラスターと見なされます）。
+トポロジは、オフロードに参加する疎結合の Experience Manager クラスターです。 クラスターは 1 つ以上の Experience Manager サーバーインスタンスで構成されます（単一のインスタンスがクラスターと見なされます）。
 
 トポロジのメンバーシップを表示または変更する方法について詳しくは、「[トポロジの管理](/help/sites-deploying/offloading.md#administering-topologies)」セクションを参照してください。
 
@@ -232,7 +241,7 @@ HTTP over SSL を有効にして、サーバーへの接続のセキュリティ
 
 ### AEM ポータルとポートレット {#aem-portals-and-portlets}
 
-ポータルとは、パーソナライズ機能、シングルサインオン、様々なソースからのコンテンツ統合を提供し、情報システムのプレゼンテーションレイヤーをホストする web アプリケーションです。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。 CQ5 WCM が提供するコンテンツにアクセスするには、ポータルサーバーに CQ5 Portal Director ポートレットを取り付けます。 これを行うには、ポータルページにポートレットをインストール、設定、追加します。
+ポータルとは、パーソナライズ機能、シングルサインオン、様々なソースからのコンテンツ統合を提供し、情報システムのプレゼンテーションレイヤーをホストする web アプリケーションです。 ポートレットコンポーネントによって、ページにポートレットを埋め込むことができます。 CQ5 WCM が提供するコンテンツにアクセスするには、ポータルサーバーに CQ5 Portal Director ポートレットを取り付けることができます。 これを行うには、ポータルページにポートレットをインストール、設定、追加します。
 
 詳しくは、[ポータルとポートレット](/help/sites-administering/aem-as-portal.md)を参照してください。
 
@@ -303,11 +312,11 @@ CQ は、次のようなユーザーにメール通知を送信します。
 
 * パブリッシュインスタンス上：
 
-   * [Day CQ WCM Page Statistics](/help/sites-deploying/osgi-configuration-settings.md)
+  * [Day CQ WCM Page Statistics](/help/sites-deploying/osgi-configuration-settings.md)
 
 * オーサーインスタンス上：
 
-   * [Adobe Page Impressions Tracker](/help/sites-deploying/osgi-configuration-settings.md)
+  * [Adobe Page Impressions Tracker](/help/sites-deploying/osgi-configuration-settings.md)
 
 >[!CAUTION]
 >

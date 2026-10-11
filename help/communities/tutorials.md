@@ -1,6 +1,6 @@
 ---
 title: チュートリアル
-description: Adobe Experience Manager（AEM） Communities ソーシャルコンポーネントフレームワーク（SCF）の学習と使用に役立つ例
+description: Adobe Experience Manager（AEM） Communitiesのソーシャルコンポーネントフレームワーク（SCF）の学習と操作に役立つ例
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,16 +9,23 @@ exl-id: 061d3b1b-7ceb-4e57-8183-2062a76173f1
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 10%
-
+source-wordcount: '296'
+ht-degree: 14%
 ---
-
 # チュートリアル {#tutorials}
 
-これらは、Adobe Experience Manager（AEM） 6.1 Communities[&#x200B; ソーシャルコンポーネントフレームワーク（SCF） &#x200B;](scf.md) の学習や使用に役立つ例です。
+以下は、Adobe Experience Manager（AEM） 6.1 Communities [ ソーシャルコンポーネントフレームワーク（SCF） ](scf.md)の学習と操作に役立つ例です。
 
 ## クライアントサイドのカスタマイズ {#client-side-customization}
 
@@ -34,25 +41,25 @@ ht-degree: 10%
 
 ## サーバーサイドのカスタマイズ {#server-side-customization}
 
-[SCF サーバーサイドのカスタマイズ &#x200B;](server-customize.md) も参照してください。
+[SCF サーバーサイドのカスタマイズ ](server-customize.md)も参照してください。
 
-サンプルコードは [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで入手できます。
+サンプルコードは、[Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) リポジトリで利用できます。
 
-* [SCF コンポーネントサンプルのカスタマイズ &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
+* [SCF コンポーネントサンプルのカスタマイズ](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
-* [&#x200B; オーバーレイ SCF コンポーネントのサンプル &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
+* [オーバーレイ SCF コンポーネントのサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
 
-* [SCF コンポーネントの拡張のサンプル &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
+* [拡張SCF コンポーネントサンプル](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
-## ハウツーの手順 {#how-to-instructions}
+## チュートリアルガイド {#how-to-instructions}
 
-* [AEM Communities Todo MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
+* [AEM Communities・トド・MVC](https://github.com/Adobe-Marketing-Cloud/aem-communities-todomvc-sample)
 
-  ToDo MVC では、SCF+SRP コンポーネントを最初から開発する方法をデモします。
+  ToDo MVCは、SCF+SRP コンポーネントをゼロから開発する方法を示します。
 
 * [AEM Communities 使用の手引き](getting-started.md)
 
-* [MongoDB をデモ用に設定する方法](demo-mongo.md)
+* [MongoDBをデモ用に設定する方法](demo-mongo.md)
 
 * [SCF サンドボックスの作成](an-scf-sandbox.md)
 
@@ -60,16 +67,16 @@ ht-degree: 10%
 
 ## デモユーザー {#demo-users}
 
-Geometrixxサンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログインしている）はエクスペリエンスが異なります。 また、Geometrixxサンプルパッケージがインストールされている限り、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) を使用して調査する際に、これらのユーザーを使用してログイン状態をシミュレーションできます。
+Geometrixx サンプルパッケージには、デモユーザーが含まれています。 多くの場合、訪問者（ログインしていない）とメンバー（ログイン）の間にエクスペリエンスの違いがあります。 また、Geometrixx サンプルパッケージがインストールされたままである限り、[ コミュニティコンポーネントガイド ](components-guide.md)を使用して探索する際に、これらのユーザーを使用してログイン状態をシミュレートできます。
 
-デモユーザーの完全なリストについては、パネルを使用して **[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL セキュリティ/ユーザー]** に移動してください。 または、クラシック UI[&#x200B; セキュリティコンソール &#x200B;](http://localhost:4502/useradmin) を使用して、ユーザーとグループを管理します。
+デモユーザーの完全なリストについては、Railを使用して&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ > ユーザー]**&#x200B;に移動します。 または、クラシック UI [ セキュリティコンソール ](http://localhost:4502/useradmin)を使用して、ユーザーとグループを管理します。
 
-[&#x200B; コミュニティサイトが作成されている &#x200B;](getting-started.md) 場合は、デモユーザーをその [&#x200B; コミュニティユーザーグループ &#x200B;](users.md) に割り当てることができます。
+[ コミュニティサイトが作成された場合](getting-started.md)は、その[ コミュニティユーザーグループ ](users.md)にデモユーザーを割り当てることができます。
 
-***ユーザー id* / *パスワード***:
+***ユーザーid* / *パスワード***:
 
-* aaron.mcdonald@mailinator.com / パスワード
-* emily.andrews@mailinator.com / パスワード
-* weston.mccall@dodgit.com / パスワード
-* andrew.schaeffer@trashymail.com / パスワード
-* rebekah.larsen@trashymail.com / パスワード
+* aaron.mcdonald@mailinator.com / password
+* emily.andrews@mailinator.com / password
+* weston.mccall@dodgit.com / password
+* andrew.schaeffer@trashymail.com / password
+* rebekah.larsen@trashymail.com / password

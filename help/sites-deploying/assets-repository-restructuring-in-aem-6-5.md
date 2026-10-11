@@ -8,13 +8,22 @@ feature: Upgrading
 exl-id: 28ddd23c-5907-4356-af56-ebc7589a2b5d
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 100%
-
+ht-degree: 92%
 ---
-
 # AEM 6.5 における Assets リポジトリの再構築 {#assets-repository-restructuring-in-aem}
 
 [Adobe Experience Manager（AEM）6.5 におけるリポジトリの再構築](/help/sites-deploying/repository-restructuring.md)ページで説明しているように、AEM 6.5 にアップグレードする場合は、AEM Assets ソリューションに影響を与えるリポジトリ変更に伴う作業量を考慮する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
@@ -77,11 +86,11 @@ ht-degree: 100%
    <td><strong>再構築の手引き</strong></td>
    <td><p>メールテンプレートが顧客によって変更されている場合は、新しいリポジトリ構造に合わせるために次の操作を実行します。</p>
     <ol>
-     <li><code>/libs/settings/dam/notification</code> メールテンプレートを <strong><code>/etc/notification/email/default</code></strong> から <strong><code>/apps/settings/notification/email/default</code></strong> にコピーする必要があります。
+     <li><code>/libs/settings/dam/notification</code>電子メールテンプレートは<strong><code>/etc/notification/email/default</code></strong>からにコピーする必要があります <strong><code>/apps/settings/notification/email/default</code></strong>
       <ol>
        <li>コピー先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
-     <li><strong><code>/etc/dam/notification/email/default</code></strong> フォルダー内のメールテンプレートを移動したら、このフォルダーを削除します。<br />
+     <li>フォルダー内の電子メールテンプレートを移動した後、フォルダー<strong><code>/etc/dam/notification/email/default</code></strong>を削除します。<br />
       <ol>
        <li><strong> <code>/etc/notification/email/default</code></strong> 内のメールテンプレートが更新されていない場合は、このフォルダーを削除してかまいません。インストールされた AEM 4 の一部として元のメールテンプレートが <strong><code>/libs/settings/notification/email/default</code></strong> に存在するからです。</li>
       </ol> </li>
@@ -140,11 +149,11 @@ ht-degree: 100%
    <td><strong>再構築の手引き</strong></td>
    <td><p>メールテンプレート（<strong>downloadasset</strong> または <strong>transientworkflowcompleted</strong>）が変更されている場合は、以下の手順に従って新しい構造に合わせます。</p>
     <ol>
-     <li>更新されたメールテンプレートを <strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong> から <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong> にコピーします。
+     <li>更新された電子メールテンプレートは、<strong><code>/etc/dam/workflow/notification/email/downloadasset</code></strong>からにコピーする必要があります <strong><code>/apps/settings/dam/workflow/notification/email/downloadasset</code></strong>
       <ol>
        <li>コピー先が <strong> <code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
-     <li>フォルダー内のメールテンプレートを移動したら、このフォルダー <code>/etc/dam/workflow/notification/email/downloadasset </code> を削除します。<br />
+     <li>フォルダー内の電子メールテンプレートを移動した後、フォルダーを削除します：<code>/etc/dam/workflow/notification/email/downloadasset </code>。<br />
       <ol>
        <li><strong> <code>/etc</code></strong> 内のメールテンプレートが更新されていない場合は、このフォルダーを削除してかまいません。インストールされた AEM 6.4 の一部として元のメールテンプレートが <strong><code>/libs/settings/dam/workflownotification/email/downloadasset</code></strong> に存在するからです。</li>
       </ol> </li>
@@ -181,11 +190,11 @@ ht-degree: 100%
    <td><strong>再構築の手引き</strong></td>
    <td><p>メールテンプレートが顧客によって変更されている場合は、新しいリポジトリ構造に合わせるために以下を実行します。</p>
     <ol>
-     <li>更新されたメールテンプレートを <strong><code>/etc/dam/adhocassetshare</code></strong> から <strong><code>/apps/settings/dam/adhocassetshare</code></strong> にコピーします。
+     <li>更新された電子メールテンプレートは、<strong><code>/etc/dam/adhocassetshare</code></strong>からにコピーする必要があります <strong><code>/apps/settings/dam/adhocassetshare</code></strong>
       <ol>
        <li>コピー先が <strong><code>/apps</code></strong> にあるので、この変更は SCM に保存されます。</li>
       </ol> </li>
-     <li><strong><code>/etc/dam/adhocassetshare</code></strong> フォルダー内のメールテンプレートを移動したら、このフォルダーを削除します。<br />
+     <li>フォルダー内の電子メールテンプレートを移動した後、フォルダー<strong><code>/etc/dam/adhocassetshare</code></strong>を削除します。<br />
       <ol>
        <li><strong> <code>/etc</code></strong> 内のメールテンプレートが更新されていない場合は、このフォルダーを削除してかまいません。インストールされた AEM 6.4 の一部として元のメールテンプレートが <strong><code>/libs/settings/dam/adhocassetshare</code></strong> に存在するからです。</li>
       </ol> </li>
@@ -214,7 +223,7 @@ ht-degree: 100%
    <td><strong>再構築の手引き</strong></td>
    <td><p>新しいリポジトリ構造に合わせるには：</p>
     <ol>
-     <li>すべてのカスタムスクリプトまたは変更済みスクリプトを <strong><code>/etc/dam/indesign/scripts</code></strong> から <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br /> にコピーします。
+     <li><strong><code>/etc/dam/indesign/scripts</code></strong>からのすべてのカスタムスクリプトまたは変更されたスクリプトをにコピー <strong><code>/apps/settings/dam/indesign/scripts</code></strong><br />
       <ol>
        <li>AEM に用意されている未変更のスクリプトは、AEM 6.5 では <strong><code>/libs/settings</code></strong> から利用できるので、新規または変更済みのスクリプトのみコピーします。</li>
       </ol> </li>

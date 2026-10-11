@@ -1,6 +1,6 @@
 ---
 title: SQL データベースへの接続
-description: 外部 SQL データベースにアクセスして、AEM アプリケーションがデータを操作できるようにします
+description: 外部 SQL データベースにアクセスして、AEM アプリケーションがデータとやり取りできるようにします
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: platform
@@ -9,16 +9,25 @@ exl-id: 1082b2d7-2d1b-4c8c-a31d-effa403b21b2
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 95%
-
 ---
-
 # SQL データベースへの接続{#connecting-to-sql-databases}
 
-外部 SQL データベースにアクセスして、CQ アプリケーションがデータを操作できるようにします。
+外部 SQL データベースにアクセスして、CQ アプリケーションがデータとやり取りできるようにします：
 
 1. [JDBC ドライバーパッケージを書き出す OSGi バンドルを作成または取得します](#bundling-the-jdbc-database-driver)。
 1. [JDBC データソースプールプロバイダーを設定します](#configuring-the-jdbc-connection-pool-service)。
@@ -28,7 +37,7 @@ ht-degree: 95%
 
 一部のデータベースベンダー（[MySQL](https://dev.mysql.com/downloads/connector/j/) など）は、JDBC ドライバーを OSGi バンドル内で提供しています。 お使いのデータベース用の JDBC ドライバーが OSGi バンドルとして提供されていない場合は、ドライバーの JAR を取得して、それを OSGi バンドル内にラップします。 このバンドルは、データベースサーバーとのやり取りに必要なパッケージを書き出す必要があります。 バンドルは参照先のパッケージも読み込む必要があります。
 
-次の例では、[Maven 用プラグインのバンドル](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)を使用して、HSQLDB ドライバーを OSGi バンドル内にラップします。 POM では、このプラグインに対して、hsqldb.jar ファイルを埋め込み、そのファイルを依存関係として識別するように指示します。 すべての org.hsqldb パッケージが書き出されます。
+次の例では、[Maven 用プラグインのバンドル](https://felix.apache.org/documentation/subprojects/apache-felix-maven-bundle-plugin-bnd.html)を使用して、HSQLDB ドライバーを OSGi バンドル内にラップします。 POM では、このプラグインに対して、依存関係として識別される hsqldb.jar ファイルを埋め込むように指示します。 すべての org.hsqldb パッケージが書き出されます。
 
 このプラグインは、インポートすべきパッケージを自動的に決定し、それらをバンドルの MANIFEST.MF ファイルに記載します。 CQ サーバーで使用できないパッケージがある場合、インストール時にバンドルが起動しません。 次の 2 つの解決策が考えられます。
 
@@ -91,13 +100,13 @@ ht-degree: 95%
 
 ### JDBC 接続プールサービスの設定 {#configuring-the-jdbc-connection-pool-service}
 
-Add a configuration for the JDBC Connections Pool service that uses the JDBC driver to create data source objects. Your application code uses this service to obtain the object and connect to the database.
+JDBC ドライバーを使用してデータソースオブジェクトを作成するJDBC Connections Pool サービスの設定を追加します。 アプリケーションコードは、このサービスを使用してオブジェクトを取得し、データベースに接続します。
 
 JDBC 接続プール（`com.day.commons.datasource.jdbcpool.JdbcPoolService`）はファクトリサービスです。 異なるプロパティ（読み取り専用アクセスと読み取り／書き込みアクセスなど）を使用する接続が必要な場合は、複数の設定を作成します。
 
 CQ で作業する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
-プールに入れられた接続サービスを設定するには、次のプロパティを使用できます。 プロパティ名は、web コンソールに表示されるとおりに表示されます。 `sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。 エイリアスが `mydb` である HSQLDB サーバーおよびデータベースの値の例を示しています。
+接続プールサービスを設定するには、次のプロパティを使用できます。 プロパティ名は、web コンソールに表示されるとおりに表示されます。 `sling:OsgiConfig` ノードに対応する名前を括弧内に示しています。 エイリアスが `mydb` である HSQLDB サーバーおよびデータベースの値の例を示しています。
 
 * JDBC ドライバークラス（`jdbc.driver.class`）：java.sql.Driver インターフェイスを実装するために使用する Java™ クラス。例：`org.hsqldb.jdbc.JDBCDriver`。 データタイプは `String` です。
 

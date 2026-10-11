@@ -11,18 +11,25 @@ role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
 solution: Experience Manager
 feature: Communities
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1739'
 ht-degree: 1%
-
 ---
-
 # コミュニティグループコンソール {#community-groups-console}
 
-グループコンソールでは、コミュニティサイトの[&#x200B; テンプレート構造](/help/communities/sites-console.md#step1)に[&#x200B; グループ関数](/help/communities/functions.md#groups-function)が含まれている場合、コミュニティグループを作成するためのアクセス権を提供します。
+グループコンソールでは、コミュニティサイトの[ テンプレート構造](/help/communities/sites-console.md#step1)に[ グループ関数](/help/communities/functions.md#groups-function)が含まれている場合、コミュニティグループを作成するためのアクセス権を提供します。
 
-* AEM Communitiesでは、他のグループ内のグループのネストがサポートされます。 新しいグループ [&#128279;](/help/communities/tools-groups.md)の構造にグループ関数が含まれている場合、グループのネストが可能です。
+* AEM Communitiesでは、他のグループ内のグループのネストがサポートされます。 新しいグループ ](/help/communities/tools-groups.md)の[構造にグループ関数が含まれている場合、グループのネストが可能です。
 * オーサー環境の場合のみ、サイト作成ウィザードと同様のグループ作成ウィザードがあります。
 * メンバーがパブリッシュ環境でグループを作成できるかどうか。グループ関数をコミュニティサイト構造またはコミュニティグループ構造に追加する際に設定できます。
 
@@ -43,9 +50,9 @@ This is a 404 on helpx. Update or remove.
 
 >[!NOTE]
 >
->このグループコンソールは、Communities Sites コンソールからのみアクセス可能で、メンバーグループの管理用にメンバー[&#x200B; グループコンソール &#x200B;](/help/communities/members.md)と混同しないでください。
+>このグループコンソールは、Communities Sites コンソールからのみアクセス可能で、メンバーグループの管理用にメンバー[ グループコンソール ](/help/communities/members.md)と混同しないでください。
 >
->メンバーグループは、パブリッシュ環境に登録され、[&#x200B; トンネルサービス &#x200B;](/help/communities/deploy-communities.md#tunnel-service-on-author)を使用してオーサー環境からアクセスするユーザーグループです。
+>メンバーグループは、パブリッシュ環境に登録され、[ トンネルサービス ](/help/communities/deploy-communities.md#tunnel-service-on-author)を使用してオーサー環境からアクセスするユーザーグループです。
 
 ## グループ作成 {#group-creation}
 
@@ -56,8 +63,8 @@ This is a 404 on helpx. Update or remove.
 * 既存のコミュニティサイトフォルダーを選択して開きます。
 * フォルダー内のコミュニティサイトのインスタンスを選択します。
 
-   * コミュニティサイトの構造には、グループ関数を含める必要があります。
-   * これらのスクリーンショットは、[&#x200B; パブリッシュでグループを作成した後の入門チュートリアルのものです](/help/communities/published-site.md)。
+  * コミュニティサイトの構造には、グループ関数を含める必要があります。
+  * これらのスクリーンショットは、[ パブリッシュでグループを作成した後の入門チュートリアルのものです](/help/communities/published-site.md)。
 
   ![create-group](assets/create-group.png)
 
@@ -73,12 +80,12 @@ This is a 404 on helpx. Update or remove.
 
 ### ステップ 1：コミュニティグループテンプレート {#step-community-group-template}
 
-![多言語コミュニティグループ &#x200B;](assets/multi-lingual-group.png)
+![多言語コミュニティグループ ](assets/multi-lingual-group.png)
 
 * **コミュニティグループタイトル**
 
   グループの表示タイトル。
-タイトルは、グループの公開サイトに表示されます。
+  タイトルは、グループの公開サイトに表示されます。
 
 * **コミュニティグループの説明**
 
@@ -87,7 +94,7 @@ This is a 404 on helpx. Update or remove.
 * **コミュニティグループルート**
 
   グループへのルートパス。
-デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。変更することはお勧めできません。
+  デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。 変更することはお勧めできません。
 
 * **その他の利用可能なコミュニティグループ言語** メニュー
 
@@ -97,14 +104,14 @@ This is a 404 on helpx. Update or remove.
 
   URLに表示されるグループのルートページの名前。 グループ名にアンダースコア文字（_）やリソースや設定などのキーワードを使用しないでください。
 
-   * グループの作成後に名前が簡単に変更されないので、名前を再確認します。
-   * ベース URLは`Community Group Name`の下に表示されます。
-   * 有効なURLに「.html」を追加します
-     *例：*、`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
+  * グループの作成後に名前が簡単に変更されないので、名前を再確認します。
+  * ベース URLは`Community Group Name`の下に表示されます。
+  * 有効なURLに「.html」を追加します
+    *例：*、`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **コミュニティグループテンプレート** メニュー
 
-  ドロップダウンを使用して、使用可能な[&#x200B; コミュニティグループテンプレート &#x200B;](/help/communities/tools.md)を選択します。
+  ドロップダウンを使用して、使用可能な[ コミュニティグループテンプレート ](/help/communities/tools.md)を選択します。
 
 ### ステップ 2：デザイン {#step-design}
 
@@ -118,7 +125,7 @@ This is a 404 on helpx. Update or remove.
 
 親サイトのテーマとは異なるテーマを選択することができます。
 
-コミュニティサイトが公開されたら、[&#x200B; プロパティを編集して](#modifyinggroupproperties)別のテーマを選択できます。
+コミュニティサイトが公開されたら、[ プロパティを編集して](#modifyinggroupproperties)別のテーマを選択できます。
 
 ### コミュニティグループブランディング {#community-group-branding}
 
@@ -134,14 +141,14 @@ This is a 404 on helpx. Update or remove.
 * 画像はブラウザーウィンドウの左端にピン留めされています
 * 画像の幅が次の場合に、画像のサイズ変更は行われません。
 
-   * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
-   * ブラウザーの幅よりも大きい画像は切り抜かれたように見えます。
+  * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
+  * ブラウザーの幅よりも大きい画像は切り抜かれたように見えます。
 
 ### 手順3：設定 {#step-settings}
 
 **モデレーション**
 
-![&#x200B; コミュニティグループメンバーの役割を選択](assets/group-admin.png)
+![ コミュニティグループメンバーの役割を選択](assets/group-admin.png)
 
 **コミュニティグループモデレーター**
 
@@ -173,7 +180,7 @@ This is a 404 on helpx. Update or remove.
 
 * **制限付きメンバーシップ**
 
-  選択した場合、コミュニティグループは秘密グループです。 コミュニティメンバーを明示的に招待する必要があります。 招待されたメンバーは検索ボックスに入力されます。 メンバーは、オーサー環境の[&#x200B; メンバーおよびグループコンソール &#x200B;](/help/communities/members.md)を使用して、後で追加できます。 デフォルトは選択されていません。
+  選択した場合、コミュニティグループは秘密グループです。 コミュニティメンバーを明示的に招待する必要があります。 招待されたメンバーは検索ボックスに入力されます。 メンバーは、オーサー環境の[ メンバーおよびグループコンソール ](/help/communities/members.md)を使用して、後で追加できます。 デフォルトは選択されていません。
 
 **サムネール**
 
@@ -197,11 +204,11 @@ This is a 404 on helpx. Update or remove.
 
 プロセスが完了すると、新しいサブコミュニティサイト（グループ）のカードがコミュニティサイトグループコンソールに表示され、作成者がページコンテンツを追加したり、管理者がサイトのプロパティを変更したりできます。
 
-![&#x200B; コミュニティグループの作成](assets/create-community-groups.png)
+![ コミュニティグループの作成](assets/create-community-groups.png)
 
 >[!NOTE]
 >
->グループは、すべての言語で作成されます。詳しくは、[手順1：追加の利用可能なコミュニティグループ言語のコミュニティグループテンプレート &#x200B;](/help/communities/groups.md#step-community-group-template)を、それぞれのコミュニティサイトのコミュニティグループコンソールで参照してください。
+>グループは、すべての言語で作成されます。詳しくは、[手順1：追加の利用可能なコミュニティグループ言語のコミュニティグループテンプレート ](/help/communities/groups.md#step-community-group-template)を、それぞれのコミュニティサイトのコミュニティグループコンソールで参照してください。
 
 ## オーサーグループコンテンツ {#author-group-content}
 
@@ -215,7 +222,7 @@ This is a 404 on helpx. Update or remove.
 
 ![edit-site](assets/edit-site.png)
 
-次のプロパティの詳細は、[&#x200B; グループ作成](#group-creation) セクションに記載されている説明と一致しています。 パブリッシュ環境またはオーサー環境で作成したネストされたグループは、すべて変更できます。
+次のプロパティの詳細は、[ グループ作成](#group-creation) セクションに記載されている説明と一致しています。 パブリッシュ環境またはオーサー環境で作成したネストされたグループは、すべて変更できます。
 
 ![community-group-basic](assets/community-group-basic.png)
 
@@ -236,17 +243,17 @@ This is a 404 on helpx. Update or remove.
 
 構造パネルを使用すると、オーサー環境またはパブリッシュ環境からサブコミュニティサイトを作成する際に選択したコミュニティグループテンプレートから最初に作成された構造を変更できます。 パネルから、次のことが可能です。
 
-* 追加の[&#x200B; コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
+* 追加の[ コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
 * サイト構造内のコミュニティ関数のインスタンス：
 
-   * **`Gear icon`**
-表示タイトル、URL、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
+  * **`Gear icon`**
+    表示タイトル、URL、および[特権メンバーグループ ](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
 
-   * **`Trashcan icon`**
-サイト構造から関数を削除（削除）します。
+  * **`Trashcan icon`**
+    サイト構造から関数を削除（削除）します。
 
-   * **`Grid icon`**
-サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
+  * **`Grid icon`**
+    サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
 
 >[!CAUTION]
 >
@@ -258,7 +265,7 @@ This is a 404 on helpx. Update or remove.
 >
 >グループ関数&#x200B;*not*&#x200B;は、サイト構造内の&#x200B;*firstまたはonly*&#x200B;関数である必要があります。
 >
->[&#x200B; ページ関数](/help/communities/functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
+>[ ページ関数](/help/communities/functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
 
 **例：サブコミュニティ （グループ）構造へのカレンダー関数の追加**
 
@@ -271,19 +278,19 @@ This is a 404 on helpx. Update or remove.
 * [コミュニティグループのテーマ](#community-group-theme)
 * [コミュニティグループブランディング](#community-group-branding)
 
-   * パネルの一番下までスクロールして、ブランド画像を変更できます。
+  * パネルの一番下までスクロールして、ブランド画像を変更できます。
 
 ### 設定を変更 {#modify-settings}
 
-設定パネルでは、コミュニティ [&#x200B; モデレーター](#moderation)を追加できます。
+設定パネルでは、コミュニティ [ モデレーター](#moderation)を追加できます。
 
 ### メンバーシップを変更 {#modify-membership}
 
-[&#x200B; メンバーシップ &#x200B;](#membership) パネルは情報提供のみです。 設定されたグループメンバーシップのタイプを、オプション、必須、または制限のいずれにしても変更することはできません。
+[ メンバーシップ ](#membership) パネルは情報提供のみです。 設定されたグループメンバーシップのタイプを、オプション、必須、または制限のいずれにしても変更することはできません。
 
 ### サムネールを変更 {#modify-thumbnail}
 
-[&#x200B; サムネール &#x200B;](#thumbnail) パネルを使用すると、パブリッシュ環境のサイト訪問者と、オーサー環境のCommunities サイトのグループコンソールで、コミュニティグループを表す画像をアップロードできます。
+[ サムネール ](#thumbnail) パネルを使用すると、パブリッシュ環境のサイト訪問者と、オーサー環境のCommunities サイトのグループコンソールで、コミュニティグループを表す画像をアップロードできます。
 
 ## グループを公開 {#publish-the-group}
 

@@ -10,7 +10,18 @@ exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 15fb75221470fe30d4a0c603e1bb0d0a45575eb5
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 97%
@@ -225,7 +236,7 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 ![chlimage_1-128](assets/chlimage_1-128.png)
 
-*これは Adobe Analytics への&#x200B;**最初の呼び出し**&#x200B;であり、次の値が含まれています。*
+*これは Adobe Analytics への&#x200B;**最初の呼び出し**であり、次の値が含まれています。*
 
 * *eventdata.a.media.name に対する prop1 と eVar1*
 * *prop2～4、および contentType（video）と segment（1:O:1-4）を格納している eVar2 と eVar3*
@@ -233,7 +244,7 @@ Adobe Analytics のデータ追跡例では、4、8、16、20 および 24 の�
 
 ![chlimage_1-129](assets/chlimage_1-129.png)
 
-*これは Adobe Analytics への&#x200B;**3 回目の呼び出**&#x200B;しです。*
+*これは Adobe Analytics への&#x200B;**3 回目の呼び出**しです。*
 
 * *prop1 と eVar1 には a.media.name が格納されている*
 * *セグメントが表示されたことによって event1 が送信された*
@@ -320,7 +331,7 @@ eventdata.events.milestoneXX
 
    ![lmilestones1](assets/lmilestones1.png)
 
-   *この呼び出しで送信される&#x200B;**pev3**&#x200B;変数には、以下の情報が格納されます。*
+   *この呼び出しで送信される&#x200B;**pev3**変数には、以下の情報が格納されます。*
 
    * *Name* - ビデオファイルの名前（例：*film.avi*）
 

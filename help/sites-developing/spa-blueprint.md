@@ -10,13 +10,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2114'
 ht-degree: 98%
-
 ---
-
 
 # SPA ブループリント{#spa-blueprint}
 
@@ -92,7 +106,7 @@ SPA コンポーネントは、ページモデルと同期する必要があり�
 
 ### フレームワーク固有のモジュール {#framework-specific-module}
 
-懸念を分けることで、プロジェクトの実装を容易にすることができます。 したがって、npm 固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントの集計と公開を担当します。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが予期するデータへのアクセスを提供する必要があります。 このモジュールは、基になるライブラリの有用なエントリーポイントを移行的に公開する役割も果たします。
+関心事を分離することで、プロジェクトの実装を容易にすることができます。 したがって、npm 固有のパッケージを提供する必要があります。 このパッケージは、基本モジュール、サービス、コンポーネントを集約して公開する役割を担います。 これらのコンポーネントは、データモデルの管理ロジックをカプセル化し、プロジェクトのコンポーネントが必要とするデータへのアクセスを提供する必要があります。 このモジュールは、基になるライブラリの有用なエントリーポイントを推移的に公開する役割も果たします。
 
 ライブラリの相互運用性を高めるために、アドビはフレームワーク固有のモジュールに対し、以下のライブラリをバンドルするよう推奨しています。 必要に応じて、レイヤーは基になる API をカプセル化して調整してから、プロジェクトに公開できます。
 
@@ -111,13 +125,13 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 ## メインサービスとコンポーネント {#main-services-and-components}
 
-次のエンティティは、各フレームワークに固有のガイドラインに従って実装する必要があります。 フレームワークのアーキテクチャに基づいて、実装は大きく異なる場合がありますが、説明する機能を提供する必要があります。
+次のエンティティは、各フレームワークに固有のガイドラインに従って実装する必要があります。 フレームワークのアーキテクチャに基づいて、実装は大きく異なる場合がありますが、説明されている機能を提供する必要があります。
 
 ### モデルプロバイダー {#the-model-provider}
 
 プロジェクトコンポーネントは、モデルのフラグメントへのアクセスをモデルプロバイダーに委任する必要があります。 次に、モデルプロバイダーは、モデルの指定したフラグメントに対する変更をリッスンし、更新されたモデルを委任コンポーネントに返します。
 
-これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。 次に、変更が発生すると、その変更を受け取り、更新されたデータが委任コンポーネントに渡されます。 慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。 このプロパティはコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
+これをおこなうには、モデルプロバイダーを ` [PageModelManager](/help/sites-developing/spa-blueprint.md#pagemodelmanager)` に登録する必要があります。 次に、変更が発生すると、更新されたデータを受け取り、それを委任コンポーネントに渡します。 慣例により、モデルのフラグメントを伝達する委任コンポーネントで使用可能になるプロパティは、`cqModel` という名前が付けられます。 実装では、このプロパティをコンポーネントに自由に提供できますが、フレームワークアーキテクチャとの統合、検出可能性、使いやすさなどの側面を考慮する必要があります。
 
 ### コンポーネントの HTML デコレーター {#the-component-html-decorator}
 
@@ -129,7 +143,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 * `data-cq-data-path`：`jcr:content` に関連したリソースへのパス。
 
-#### 機能の宣言とプレースホルダの編集 {#editing-capability-declaration-and-placeholder}
+#### 編集機能の宣言とプレースホルダー {#editing-capability-declaration-and-placeholder}
 
 プロジェクトのコンポーネントによって生成される外側の HTML 要素に、次のメタデータとクラス名を追加する必要があります。 ページエディターでオファー関連の機能が有効になります。
 
@@ -138,7 +152,7 @@ npm モジュール：[@adobe/aem-angular-editable-components](https://www.npmjs
 
 **空のコンポーネントのプレースホルダー**
 
-各コンポーネントは、外側の HTML 要素を修飾する機能を使用して拡張する必要があります。この機能は、コンポーネントが空であると識別された場合に、プレースホルダーと関連オーバーレイに固有のデータ属性とクラス名を使用して実行されます。
+各コンポーネントは、コンポーネントが空であると識別された場合に、外側の HTML 要素をプレースホルダーおよび関連するオーバーレイに固有のデータ属性とクラス名で修飾する機能で拡張する必要があります。
 
 **空のコンポーネントについて**
 
@@ -237,7 +251,7 @@ ComponentMapping.map = function map (resourceTypes, clazz, editConfig) {};
 
 * `data-cq-data-path`：`PageModel` によって指定されたコンポーネントの相対パス（`"root/responsivegrid/image"` など）。 この属性はページには追加しないでください。
 
-要約すると、エディターによって編集可能と認識されるためには、プロジェクトコンポーネントは次の契約に準拠する必要があります。
+要約すると、ページエディターによって編集可能と認識されるためには、プロジェクトコンポーネントは次の契約に準拠する必要があります。
 
 * フロントエンドコンポーネントインスタンスを AEM リソースに関連付けるために、必要な属性を指定します。
 * 空のプレースホルダーを作成できるようにする適切な属性とクラス名のセットを指定します。

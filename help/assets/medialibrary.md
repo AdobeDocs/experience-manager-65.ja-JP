@@ -7,15 +7,26 @@ feature: Asset Management
 exl-id: e10d632d-1d90-4f28-8617-95ee41602997
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 100%
-
 ---
 
-
-# 基本的なアセット管理での Media Library の使用 {#manage-assets-using-media-library}
+# 基本的なアセット管理のためのメディアライブラリの使用 {#manage-assets-using-media-library}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -42,7 +53,7 @@ Experience Manager Assets は、エンタープライズグレードの DAM 機�
 
 ## Media Library の使用 {#use-media-library}
 
-Media Library には、次の使用例に対する基本的な DAM 機能が用意されています。
+メディアライブラリには、次のユースケース向けの基本的な DAM 機能が用意されています。
 
 * [!DNL Adobe Experience Manager Sites] を使用して作成された web ページ。
 * [!DNL Adobe Experience Manager Forms] を使用して作成されたアダプティブフォームと通信
@@ -55,7 +66,7 @@ Media Library には、次の使用例に対する基本的な DAM 機能が用�
 
 -->
 
-Media Library 機能を使用するには、デフォルトの [!DNL Experience Manager] ユーザーインターフェイスを使用できます。 Media Library は [!DNL Experience Manager Sites] インストールに含まれており、別のインターフェイスやアドオンは必要ありません。 Media Library ユーザーは、既存のインターフェイスを使用して、次のタスクを実行できます。
+Media Library 機能を使用するには、デフォルトの [!DNL Experience Manager] ユーザーインターフェイスを使用できます。 Media Library は [!DNL Experience Manager Sites] インストールに含まれており、別のインターフェイスやアドオンは必要ありません。 メディアライブラリユーザーは、既存のインターフェイスを使用して、次のタスクを実行できます。
 
 * アセットを整理するフォルダーの作成
 * アセットのアップロード
@@ -87,7 +98,7 @@ As per PM, we must avoid stating such a list, as we do not have a list that make
 
 >[!IMPORTANT]
 >
->DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。 Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。 ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。 質問がある場合は、アドビカスタマーサポートまで問い合わせください。
+>DAM の高度なユースケースの多くは、[!DNL Experience Manager Assets] で処理されます。 Media Library ライセンスでは、Media Library を使用して、記載されているユースケースのみを実行することができます。 ユースケースがリストに表示されていない場合は、Media Library ライセンスで使用しないでください。 質問がある場合は、アドビカスタマーサポートまでお問い合わせください。
 
 なお、[!DNL Assets] ライセンスがなければ、スマートタグ、[!DNL Asset] リンク、[!DNL Asset] セレクター、一括タグ付け、アセットワークフローの変更、Media Library にアクセスするための標準 [!DNL Adobe Experience Manager] ユーザーインターフェイスは使用できません。
 

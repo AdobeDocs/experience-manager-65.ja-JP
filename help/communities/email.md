@@ -10,13 +10,20 @@ role: Admin
 exl-id: bf97d388-f8ca-4e37-88e2-0c536834311e
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '849'
 ht-degree: 5%
-
 ---
-
 # メールの設定 {#configuring-email}
 
 AEM Communitiesでは、次の目的で電子メールを使用します。
@@ -28,20 +35,20 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 >[!CAUTION]
 >
->通知と購読の電子メールは、[&#x200B; プライマリパブリッシャー](deploy-communities.md#primary-publisher)でのみ設定する必要があります。
+>通知と購読の電子メールは、[ プライマリパブリッシャー](deploy-communities.md#primary-publisher)でのみ設定する必要があります。
 
 ## デフォルトのメールサービス設定 {#default-mail-service-configuration}
 
 デフォルトのメールサービスは、通知と購読の両方に必要です。
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * `Day CQ Mail Service`を探します。
 * 編集アイコンを選択します。
 
-これは、[&#x200B; メール通知の設定](../../help/sites-administering/notification.md)に関するドキュメントに基づいていますが、フィールド `"From" address`が&#x200B;*ではなく*&#x200B;必要であり、空のままにしておく必要があるという違いがあります。
+これは、[ メール通知の設定](../../help/sites-administering/notification.md)に関するドキュメントに基づいていますが、フィールド `"From" address`が&#x200B;*ではなく*&#x200B;必要であり、空のままにしておく必要があるという違いがあります。
 
 例えば、次の例のように入力します（値が入力されているのは実例の場合のみ）。
 
@@ -75,11 +82,11 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 ## AEM Communitiesのメール設定 {#aem-communities-email-configuration}
 
-[&#x200B; デフォルトのメールサービス &#x200B;](#default-mail-service-configuration)を設定すると、リリースに含まれている`AEM Communities Email Reply Configuration` OSGi設定の2つの既存のインスタンスが機能するようになります。
+[ デフォルトのメールサービス ](#default-mail-service-configuration)を設定すると、リリースに含まれている`AEM Communities Email Reply Configuration` OSGi設定の2つの既存のインスタンスが機能するようになります。
 
 メールによる返信を許可する場合は、サブスクリプションのインスタンスのみを追加で設定する必要があります。
 
-1. [&#x200B; メール &#x200B;](#configuration-for-notifications) インスタンス：
+1. [ メール ](#configuration-for-notifications) インスタンス：
 
    通知の場合は、返信メールをサポートしていないので、変更しないでください。
 
@@ -89,9 +96,9 @@ AEM Communitiesでは、次の目的で電子メールを使用します。
 
 Communities メール設定インスタンスにアクセスするには：
 
-* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)にアクセスします
+* 管理者権限でプライマリパブリッシャーにログインし、[Web コンソール ](../../help/sites-deploying/configuring-osgi.md)にアクセスします
 
-   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * `AEM Communities Email Reply Configuration` を見つけます。
 
@@ -144,11 +151,11 @@ Communities サブスクリプションの場合、メンバーがメールに�
 
   トラッカーIDがReply-to ヘッダーに追加されている場合は、この区切り文字が使用されます。 デフォルトは`+` （プラス記号）です。
 
-* 件名&#x200B;**の** トラッカーID プレフィックス
+* 件名&#x200B;]**の**[!UICONTROL  トラッカーID プレフィックス
 
   トラッカーIDが件名に追加されている場合は、この接頭辞が使用されます。 デフォルトは `post#` です。
 
-* メッセージ本文&#x200B;**の** トラッカーID プレフィックス
+* メッセージ本文&#x200B;]**の**[!UICONTROL  トラッカーID プレフィックス
 
   トラッカーIDがメッセージ本文に追加されている場合は、このプレフィックスが使用されます。 デフォルトは `Please do not remove this:` です。
 
@@ -187,7 +194,7 @@ Communities サブスクリプションの場合、メンバーがメールに�
 * **[!UICONTROL パスに読み込む]** （&amp;ast）
 
   *（必須）*&#x200B;をに設定 `/content/usergenerated/mailFolder/postEmails`
-`postEmails` フォルダーを参照して、**OK**&#x200B;を選択します。
+  `postEmails` フォルダーを参照して、**OK**&#x200B;を選択します。
 
 * **[!UICONTROL 更新間隔（秒）]**
 
@@ -212,8 +219,8 @@ Communities サブスクリプションの場合、メンバーがメールに�
 * 管理者権限でプライマリパブリッシャーにログインし、[https://&lt;server>:&lt;port>/crx/de/index.jsp#/etc/importers/polling](http://localhost:4503/crx/de/index.jsp#/etc/importers/polling)を参照します。
 * 新しく作成した設定を選択し、次のプロパティを変更します。
 
-   * **feedType**: `pop3s`を&#x200B;**`emailreply`**&#x200B;に置換します
-   * **source**: ソースのプロトコル `pop3s://`を&#x200B;**`emailreply://`**&#x200B;に置換します
+  * **feedType**: `pop3s`を&#x200B;**`emailreply`**&#x200B;に置換します
+  * **source**: ソースのプロトコル `pop3s://`を&#x200B;**`emailreply://`**&#x200B;に置換します
 
 ![polling-protocol](assets/polling-protocol.png)
 

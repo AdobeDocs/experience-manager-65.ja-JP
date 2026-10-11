@@ -7,13 +7,29 @@ feature: Interactive Communication
 exl-id: ea0c8971-56f4-4094-87e4-1b222b73951f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 100%
-
 ---
-
 # チュートリアル：インタラクティブなコミュニケーションの計画 {#tutorial-plan-the-interactive-communication}
 
 インタラクティブなコミュニケーション用の分析の計画
@@ -29,7 +45,7 @@ ht-degree: 100%
 インタラクティブなコミュニケーションには、次の要素が含まれます。
 
 * **スタティックテキスト**&#x200B;には多くの場合、すべての顧客への通信に含まれる一般的なインタラクティブなコミュニケーションの一部が含まれます。 例えば、ヘッダー、フッター、あいさつ文、免責事項などです。
-* **バックエンドシステムが作成元のデータ（フォームデータモデル）**&#x200B;は、顧客固有で、インタラクティブなコミュニケーションと動的に結合されます。 例えば、ポリシー番号や住所はフォームデータモデルを使用することができます。
+* **バックエンドシステムが作成元のデータ（フォームデータモデル）**&#x200B;は、顧客固有で、インタラクティブなコミュニケーションと動的に結合されます。 例えば、ポリシー番号や住所はフォームデータモデルを使用して取得できます。
 * 印刷および web 版のインタラクティブなコミュニケーション用の&#x200B;**レイアウトまたはテンプレート**。
 * インタラクティブなコミュニケーションに配置する多様なテキスト段落の&#x200B;**順序**。
 * 送信する前に通信をカスタマイズする&#x200B;**現場の社員が入力したデータ（エージェント UI）**。 例えば、支払期日です。
@@ -38,7 +54,7 @@ ht-degree: 100%
 * ロゴや署名画像など&#x200B;**リポジトリに保存された画像**。 会社ロゴなどの画像は、ほとんど、またはすべてのインタラクティブなコミュニケーションに表示されます。
 * **グラフやテーブル**&#x200B;は、インタラクティブなコミュニケーションの複雑なデータ表示を簡略化する必要があります。
 
-## インタラクティブなコミュニケーションの分析 {#anatomy-of-the-interactive-communication}
+## インタラクティブなコミュニケーションの構成 {#anatomy-of-the-interactive-communication}
 
 インタラクティブなコミュニケーションの作成に使用する内容および要素が確定したら、インタラクティブなコミュニケーションの分析を作成することができます。 分析には、「[計画の考慮事項](/help/forms/using/planning-interactive-communications.md#planning-considerations)」セクションに記載されている詳細が必要です。 ユースケースに基づいて、通信会社が顧客に送る毎月の請求書の分析事例は次のとおりです。
 

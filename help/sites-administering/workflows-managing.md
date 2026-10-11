@@ -9,13 +9,22 @@ exl-id: cc54d637-d66c-49d2-99ee-00d96f1a74e0
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
-
+source-wordcount: '581'
+ht-degree: 89%
 ---
-
 # ワークフローへのアクセスの管理{#managing-access-to-workflows}
 
 ユーザーアカウントに応じて ACL を設定し、ワークフローの開始およびワークフローへの参加を許可（または無効に）します。
@@ -27,21 +36,21 @@ ht-degree: 100%
 * `admin` アカウントを使用している。
 * アカウントがデフォルトグループ `workflow-users` に割り当てられている。
 
-   * このグループは、ユーザーがワークフローアクションを実行するために必要なすべての権限を保持しています。
-   * このグループに属するアカウントは、自分が開始したワークフローにのみアクセスできます。
+  * このグループは、ユーザーがワークフローアクションを実行するために必要なすべての権限を保持しています。
+  * このグループに属するアカウントは、自分が開始したワークフローにのみアクセスできます。
 
 * アカウントがデフォルトグループ `workflow-administrators` に割り当てられている。
 
-   * このグループは、ユーザーがワークフローを監視および管理するために必要なすべての権限を保持しています。
-   * このグループに属するアカウントは、すべてのワークフローにアクセスできます。
+  * このグループは、ユーザーがワークフローを監視および管理するために必要なすべての権限を保持しています。
+  * このグループに属するアカウントは、すべてのワークフローにアクセスできます。
 
 >[!NOTE]
 >
->これらは最小要件です。具体的な手順を実行するには、アカウントが割り当て済みの参加者または割り当て済みのグループのメンバーである必要があります。
+>これらは最小要件です。 具体的な手順を実行するには、アカウントが割り当て済みの参加者または割り当て済みのグループのメンバーである必要があります。
 
 ## ワークフローへのアクセスの設定 {#configuring-access-to-workflows}
 
-ワークフローモデルは、ユーザーがワークフローを操作する方法を制御するためのデフォルトのアクセス制御リスト（ACL）を継承します。ユーザーアクセスをワークフロー用にカスタマイズするには、リポジトリでワークフローモデルノードを含むフォルダーのアクセス制御リスト（ACL）を変更します。
+ワークフローモデルは、ユーザーがワークフローを操作する方法を制御するためのデフォルトのアクセス制御リスト（ACL）を継承します。 ユーザーアクセスをワークフロー用にカスタマイズするには、リポジトリでワークフローモデルノードを含むフォルダーのアクセス制御リスト（ACL）を変更します。
 
 * [特定のワークフローモデル用の ACL の /var/workflow/models への適用](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)
 * [/var/workflow/models へのサブフォルダーの作成と、それに対する ACL の適用](/help/sites-administering/workflows-managing.md#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that)
@@ -54,7 +63,7 @@ ht-degree: 100%
 
 ワークフローモデルが `/var/workflow/models` 内に保存されている場合、（そのワークフローにのみ関連する）特定の ACL をフォルダーに割り当てることができます。
 
-1. Web ブラウザーで CRXDE Lite を開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
+1. Web ブラウザーでCRXDE Liteを開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
 1. ノードツリーで、次のワークフローモデルフォルダーのノードを選択します。
 
    `/var/workflow/models`
@@ -66,7 +75,7 @@ ht-degree: 100%
    * **プリンシパル**：`content-authors`
    * **型**：`Deny`
    * **権限**：`jcr:read`
-   * **rep:glob**： 特定のワークフローへの参照
+   * **担当者:glob**：特定のワークフローへの参照
 
    ![wf-108](assets/wf-108.png)
 
@@ -90,7 +99,7 @@ ht-degree: 100%
 
 その後、ACL をフォルダー自体に追加できます。
 
-1. Web ブラウザーで CRXDE Lite を開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
+1. Web ブラウザーでCRXDE Liteを開きます（例：[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）。
 1. ノードツリーで、ワークフローモデルフォルダーの個別のフォルダー用に、例えば次のようなノードを選択します。
 
    `/var/workflow/models/prototypes`
@@ -106,7 +115,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >[特定のワークフローモデル用の ACL の /var/workflow/models への適用](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)にあるように、rep:glob を指定して、特定のワークフローに対するアクセスを制限できます。
+   >[特定のワークフローモデルのACLを/var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models)に適用するように、担当者:globを含めて、特定のワークフローへのアクセスを制限できます。
 
    ![wf-110](assets/wf-110.png)
 

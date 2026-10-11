@@ -5,13 +5,33 @@ exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 100%
-
+source-wordcount: '674'
+ht-degree: 99%
 ---
-
 # AEM でのヘッドレス向けオーサリング - 概要 {#author-headless-introduction}
 
 [AEM ヘッドレスコンテンツ作成者ジャーニー](overview.md)のこの部分では、Adobe Experience Manager（AEM）でのヘッドレスコンテンツ配信向けコンテンツのオーサリングを理解するために必要な（基本）概念と用語について説明します。
@@ -25,7 +45,7 @@ ht-degree: 100%
 
 コンテンツ管理システムとは
 
-コンテンツ管理システム（CMS）は、その名のとおり、コンテンツの管理に使用されるコンピュータシステムです。もう少し正確に言えば、web サイトで公開するコンテンツの管理に（通常）使用されるものです。
+コンテンツ管理システム（CMS）は、その名のとおり、コンテンツの管理に使用されるコンピュータシステムです。 もう少し正確に言えば、web サイトで公開するコンテンツの管理に（通常）使用されるものです。
 
 ## ヘッドレス CMS {#headless-cms}
 
@@ -35,7 +55,7 @@ ht-degree: 100%
 
 しかし、ヘッドレスでは、コンテンツセットを CMS で管理し、1 つ以上の（独立した）アプリケーションからそのコンテンツにアクセスすることができます。
 
-つまり、コンテンツを様々な形式で任意のデバイスに配信できるということです。これにより、プロセス全体がはるかに柔軟になり、レイアウトや書式設定を気にする必要もなくなります。
+つまり、コンテンツを様々な形式で任意のデバイスに配信できるということです。 これにより、プロセス全体がはるかに柔軟になり、レイアウトや書式設定を気にする必要もなくなります。
 
 >[!NOTE]
 >
@@ -50,19 +70,19 @@ ht-degree: 100%
 つまり、AEM は以下のものとして使用できます。
 
 * ヘッドレス CMS
-   * ヘッドレスの場合、コンテンツは&#x200B;**コンテンツフラグメント**としてオーサリングできます。
-これは、様々なアプリケーションから直接アクセスできる自己完結型のコンテンツ項目で、**コンテンツフラグメントモデル**に基づいて構造が事前に定義されています。
-つまり、豊富な機能を使用して様々な形式で様々なデバイスにコンテンツを配信できます
-（さらに、必要に応じて、これらのフラグメントを AEM web ページの作成時に使用することもできます）。
+  * ヘッドレスの場合、コンテンツは&#x200B;**コンテンツフラグメント**としてオーサリングできます。
+    これは、様々なアプリケーションから直接アクセスできる自己完結型のコンテンツ項目で、**コンテンツフラグメントモデル**に基づいて構造が事前に定義されています。
+    つまり、豊富な機能を使用して様々な形式で様々なデバイスにコンテンツを配信できます
+    （さらに、必要に応じて、これらのフラグメントを AEM web ページの作成時に使用することもできます）。
 
 * 「従来の」CMS
-   * コンテンツは、web サイト上でのコンテンツのレンダリング方法を定義する様々なコンポーネントを使用して、web ページ用に作成されます。ここでも AEM は、カスタマイズしたコンポーネントをプロジェクトチームが開発できるので、きわめて柔軟です。
+  * コンテンツは、web サイト上でのコンテンツのレンダリング方法を定義する様々なコンポーネントを使用して、web ページ用に作成されます。 ここでも AEM は、カスタマイズしたコンポーネントをプロジェクトチームが開発できるので、きわめて柔軟です。
 
 ## コンテンツモデリング {#content-modeling}
 
 もう 1 つの技術用語は、コンテンツモデリングです（データモデリングとも呼ばれます）。なぜ、これが作成者の関心事になるのでしょうか。
 
-ヘッドレスアプリケーションがコンテンツにアクセスして何らかの処理を行えるようにするには、事前に定義された構造がコンテンツに必要です。コンテンツを自由形式にすることも可能ですが、その場合は、アプリケーション側の処理が&#x200B;*非常に*&#x200B;複雑になります。
+ヘッドレスアプリケーションがコンテンツにアクセスして何らかの処理を行えるようにするには、事前に定義された構造がコンテンツに必要です。 コンテンツを自由形式にすることも可能ですが、その場合は、アプリケーション側の処理が&#x200B;*非常に*&#x200B;複雑になります。
 
 基本的に、コンテンツが従うべき構造を定義するプロセスには、モデルの設計が不可欠です。これをデータモデリングと呼びます。
 
@@ -74,12 +94,12 @@ AEM の場合は、コンテンツアーキテクトの役割（多くの場合�
 
 ## 次の手順 {#whats-next}
 
-これで、概念と用語を説明したので、次の手順は [AEM を使用したヘッドレスのオーサリングの基本](basics.md)です。ここでは、AEM の基本操作とコンテンツフラグメントのオーサリング方法を紹介します。
+これで、概念と用語を説明したので、次の手順は[コンテンツフラグメントのオーサリングの基本について](basics.md)です。 ここでは、AEM の基本操作とコンテンツフラグメントのオーサリング方法を紹介します。
 
 ## その他のリソース {#additional-resources}
 
 * AEM ヘッドレスデベロッパージャーニー
-   * [CMS ヘッドレス開発について](/help/journey-headless/developer/learn-about.md)
+  * [CMS ヘッドレス開発について](/help/journey-headless/developer/learn-about.md)
 
 * [AEM ヘッドレスコンテンツアーキテクトジャーニー](/help/journey-headless/architect/overview.md)
 
@@ -87,6 +107,6 @@ AEM の場合は、コンテンツアーキテクトの役割（多くの場合�
 
 * [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
 
-* [AEM 開発者ポータル](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)
 
 * [AEM のヘッドレスに関するチュートリアル](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=ja)

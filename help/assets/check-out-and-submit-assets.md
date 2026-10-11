@@ -1,5 +1,5 @@
 ---
-title: ' [!DNL Assets] 内ファイルのチェックインとチェックアウト'
+title: '[!DNL Assets]のファイルのチェックインとチェックアウト'
 description: 編集のためにアセットをチェックアウトし、変更が完了した後にアセットをチェックインする方法について説明します。
 contentOwner: AG
 role: User
@@ -7,13 +7,22 @@ feature: Asset Management
 exl-id: 544ef73c-4e4b-433f-a173-fdf1c8f45d8e
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 100%
-
+source-wordcount: '479'
+ht-degree: 98%
 ---
-
 # [!DNL Experience Manager] DAM 内ファイルのチェックイン、チェックアウト {#check-in-and-check-out-files-in-assets}
 
 | バージョン | 記事リンク |
@@ -21,7 +30,7 @@ ht-degree: 100%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/check-out-and-submit-assets.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-[!DNL Adobe Experience Manager Assets] では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。 アセットをチェックアウトした後は、その人だけがアセットを編集、注釈、公開、移動、削除できるようになります。 アセットのチェックアウトでアセットにロックがかかることになります。 アセットが [!DNL Assets] にチェックインされるまで、他のユーザーはそのアセットではどんな作業も行えません。 ただし、ロックされたアセットのメタデータは変更することができます。
+[!DNL Adobe Experience Manager Assets] では、編集のためにアセットをチェックアウトし、変更終了後にアセットをチェックインすることができます。 アセットをチェックアウトした後は、アセットを編集、注釈、公開、移動、削除できるのは自分だけです。 アセットのチェックアウトでアセットにロックがかかることになります。 アセットが [!DNL Assets] にチェックインされるまで、他のユーザーはそのアセットではどんな作業も行えません。 ただし、ロックされたアセットのメタデータは変更することができます。
 
 アセットをチェックイン／チェックアウトするには、アセットへの書き込み権限が必要です。
 
@@ -35,7 +44,7 @@ ht-degree: 100%
 
    ![chlimage_1-471](assets/chlimage_1-471.png)
 
-   アセットを選択します。 ツールバーには、アセットの編集、注釈付け、公開、削除を行うためのオプションが表示されないことを確認してください。
+   アセットを選択します。 ツールバーには、アセットの編集、注釈付け、公開、削除を行うためのオプションが表示されないことに注意してください。
 
    ![chlimage_1-472](assets/chlimage_1-472.png)
 

@@ -1,6 +1,6 @@
 ---
 title: 通し番号を使用したドキュメントのアセンブリ
-description: 通し番号を使用して、Java および web サービス API を使用して PDF ドキュメントをアセンブリします。
+description: ベイツ番号を使用して、Java および web サービス API を使用して PDF ドキュメントを組み立てます。
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/assembling_pdf_documents
@@ -10,18 +10,32 @@ role: Developer
 exl-id: 2a4e21c4-f2f5-44cd-b8ed-7b572782a2f1
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 100%
-
 ---
-
 # 通し番号を使用したドキュメントのアセンブリ {#assembling-documents-using-bates-numbering}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-通し番号を使用すると、個別ページの ID を含む PDF ドキュメントをアセンブリすることができます。 *通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。 ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。 例えば、原材料情報を含む、1 つの組立部品の製造に関する生産ドキュメントに、1 つの識別子が割り当てられます。 ベイツ番号の数値は連続した増分値で、オプションで接頭辞やサフィックスが付きます。 接頭辞 + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
+通し番号を使用すると、一意のページ識別子を含む PDF ドキュメントをアセンブリすることができます。 *通し番号*&#x200B;は、関連するドキュメントのバッチに一意の ID を適用する方法です。 ドキュメント内の各ページ（またはドキュメントのセット）に、ページを一意に識別する通し番号が割り当てられます。 例えば、原材料情報を含む、1 つの組立部品の製造に関する生産ドキュメントに、1 つの識別子が割り当てられます。 ベイツ番号の数値は連続した増分値で、オプションで接頭辞やサフィックスが付きます。 接頭辞 + 数値 + サフィックスは&#x200B;*通し番号パターン*&#x200B;と言われます。
 
 次のイラストは、ドキュメントのヘッダーに一意の ID を含む PDF ドキュメントを示しています。
 
@@ -46,7 +60,7 @@ ht-degree: 100%
  </DDX>
 ```
 
-この DDX ドキュメントは *map.pdf* および *directions.pdf* という名前が付いた 2 つの PDF ドキュメントを単一の PDF ドキュメントに結合します。 結果の PDF ドキュメントには、個別のページの ID で構成されるヘッダーが含まれます。 例えば、上のイラストのドキュメントは 000016 です。
+この DDX ドキュメントは *map.pdf* および *directions.pdf* という名前が付いた 2 つの PDF ドキュメントを単一の PDF ドキュメントに結合します。 結果の PDF ドキュメントには、一意のページ識別子で構成されるヘッダーが含まれます。 例えば、上のイラストのドキュメントには 000016 と表示されています。
 
 >[!NOTE]
 >
@@ -62,7 +76,7 @@ ht-degree: 100%
 
 ## 手順の概要 {#summary-of-steps}
 
-個別ページの ID（通し番号の追加）を含む PDF ドキュメントをアセンブリするには、次のタスクを実行します。
+一意のページ識別子（通し番号の追加）を含む PDF ドキュメントをアセンブリするには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
 1. PDF Assembler クライアントを作成します。
@@ -84,7 +98,7 @@ ht-degree: 100%
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
+AEM Forms が、JBoss 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。 すべての AEM Forms JAR ファイルの場所については、[AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)を参照してください。
 
 **Assembler クライアントの PDF を作成**
 
@@ -96,7 +110,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **参照入力 PDF ドキュメント**
 
-入力 PDF ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 例えば、map.pdf ドキュメントと directions.pdf ドキュメントを参照して、これらの PDF ドキュメントを 1 つの PDF ドキュメントにアセンブリする必要があります。
+入力 PDF ドキュメントを参照して、PDF ドキュメントをアセンブリする必要があります。 例えば、map.pdf ドキュメントと directions.pdf ドキュメントを参照して、これらの PDF ドキュメントを 1 つの PDF ドキュメントにアセンブルする必要があります。
 
 **初期通し番号値を設定**
 
@@ -108,7 +122,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 **結果を抽出**
 
-アセンブラーサービスは、ジョブの結果を含むコレクションオブジェクトを返します。 結果の PDF ドキュメントと、例外が投げられた場合はそれを抽出できます。 この場合、暗号化された PDF ドキュメントは、コレクションオブジェクト内に配置されます。
+アセンブラーサービスは、ジョブの結果を含むコレクションオブジェクトを返します。 結果の PDF ドキュメントと、例外が投げられた場合はそれを抽出できます。 この場合、暗号化された PDF ドキュメントはコレクションオブジェクト内にあります。
 
 >[!NOTE]
 >
@@ -122,13 +136,13 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 [PDF ドキュメントをプログラムで組み立てる](/help/forms/developing/programmatically-assembling-pdf-documents.md)
 
-## Java API を使用して通し番号のあるドキュメントをアセンブリ {#assemble-documents-with-bates-numbering-using-the-java-api}
+## Java API を使用した通し番号付きドキュメントのアセンブリ {#assemble-documents-with-bates-numbering-using-the-java-api}
 
 Assembler Service API（Java）を使用して、一意のページ ID（通し番号）を使用する PDFドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -143,12 +157,12 @@ Assembler Service API（Java）を使用して、一意のページ ID（通し�
 1. 入力 PDF ドキュメントを参照します。
 
    * `HashMap` コンストラクターを使用して、入力 PDF ドキュメントを格納するために使用する `java.util.Map` オブジェクトを作成します。
-   * 入力 PDF ドキュメントごとに、コンストラクターを使用して入力 PDF ドキュメントの場所を渡すことにより、`java.io.FileInputStream` オブジェクトを作成します。 この場合は、安全でない PDF ドキュメントの場所が渡されます。
+   * 入力 PDF ドキュメントごとに、コンストラクターを使用して入力 PDF ドキュメントの場所を渡すことにより、`java.io.FileInputStream` オブジェクトを作成します。 この場合は、セキュリティ保護されていない PDF ドキュメントの場所を渡します。
    * 入力 PDF ドキュメントごとに、`com.adobe.idp.Document` オブジェクトを作成して PDF ドキュメントを含んだ `java.io.FileInputStream` オブジェクトを渡します。
    * `put` メソッドを呼び出して次の引数を渡すことにより、`java.util.Map` オブジェクトにエントリを追加してください。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります 例えば、この節で紹介する DDX ドキュメントで指定された PDF ソースファイルの名前は Loan.pdf です。
-      * 安全でない PDF ドキュメントを含んだ `com.adobe.idp.Document` オブジェクト
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります 例えば、この節で紹介する DDX ドキュメントで指定された PDF ソースファイルの名前は Loan.pdf です。
+     * 安全でない PDF ドキュメントを含んだ `com.adobe.idp.Document` オブジェクト
 
 1. ベイツ番号の初期値を設定します。
 
@@ -175,7 +189,7 @@ Assembler Service API（Java）を使用して、一意のページ ID（通し�
 
 **関連情報**
 
-[クイックスタート（SOAP モード）：ベイツ番号を使用した PDF ドキュメントを、Java API を使用してアセンブリする](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したベイツ番号付き PDF ドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-with-bates-numbering-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -183,7 +197,7 @@ Assembler Service API（Java）を使用して、一意のページ ID（通し�
 
 ## ベイツ番号を使用したドキュメントを、web サービス API を使用してアセンブリする {#assemble-documents-with-bates-numbering-using-the-web-service-api}
 
-Assembler Service API（web サービス）を使用して、一意のページ識別子（ベイツ番号）を使用する PDF ドキュメントを組み立てます。
+Assembler Service AP（web サービス）を使用して、一意のページ識別子（ベイツ番号）を使用する PDF ドキュメントを組み立てます。
 
 1. プロジェクトファイルを含めます。
 
@@ -201,10 +215,10 @@ Assembler Service API（web サービス）を使用して、一意のページ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 

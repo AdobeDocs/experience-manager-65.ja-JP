@@ -11,13 +11,22 @@ feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 90%
-
 ---
-
 # コードのアップグレードとカスタマイズ{#upgrading-code-and-customizations}
 
 アップグレードを計画するときは、実装の次の領域を調査して対処する必要があります。
@@ -42,7 +51,8 @@ ht-degree: 90%
 
 コードベースのアップグレードや、新しい AEM バージョンに合わせたカスタマイズを行うオプションに加えて、6.5 では [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)に記載された後方互換性機能を使用して、より効率的にカスタマイズを管理できます。
 
-上記の説明および下の図に示したように、最初の手順で[パターン検出](/help/sites-deploying/pattern-detector.md)を実行することで、アップグレードの全体的な複雑性を評価できます。 また、互換モードで実行するか、すべての新しい AEM 6.5 の機能を使用するようにカスタマイズを更新するかを決定することもできます。 詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
+上記の説明および下の図に示したように、最初の手順で[パターン検出](/help/sites-deploying/pattern-detector.md)を実行することで、アップグレードの全体的な複雑性を評価できます。 また、互換モードで実行するか、すべての新しい AEM 6.5 の機能を使用するようにカスタマイズを更新するかを決定することもできます。 詳しくは、[AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)のページを参照してください。
+[![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
 
 ## コードベースのアップグレード {#upgrade-code-base}
 
@@ -158,7 +168,7 @@ ContextHub 設定は、アップグレードの影響を受けます。 既存�
 >
 >この手順は、AEM 6.2 から編集可能テンプレートを使用して Sites をアップグレードする場合にのみ必要になります。
 
-AEM 6.2と6.3の間で、編集可能テンプレートの構造が変更されました。 6.2以前からアップグレードする場合で、サイトのコンテンツが編集可能なテンプレートを使用して構築されている場合は、[&#x200B; レスポンシブノードクリーンアップツール &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)を使用する必要があります。 このツールは、アップグレード&#x200B;**後**&#x200B;に実行して、コンテンツをクリーンアップすることを目的としています。 このツールは、オーサー層とパブリッシュ層の両方に対して実行します。
+AEM 6.2と6.3の間で、編集可能テンプレートの構造が変更されました。 6.2以前からアップグレードする場合で、サイトのコンテンツが編集可能なテンプレートを使用して構築されている場合は、[ レスポンシブノードクリーンアップツール ](https://github.com/Adobe-Marketing-Cloud/aem-sites-template-migration)を使用する必要があります。 このツールは、アップグレード&#x200B;**後**&#x200B;に実行して、コンテンツをクリーンアップすることを目的としています。 このツールは、オーサー層とパブリッシュ層の両方に対して実行します。
 
 ### CUG 実装の変更 {#cug-implementation-changes}
 

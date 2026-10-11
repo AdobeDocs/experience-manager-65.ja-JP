@@ -10,13 +10,20 @@ exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1631'
 ht-degree: 2%
-
 ---
-
 # コミュニティサイトの作成{#author-a-new-community-site}
 
 ## コミュニティサイトの作成 {#create-a-community-site}
@@ -36,9 +43,9 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 ### 手順1：サイトテンプレート {#step-site-template}
 
-サイトを作成する![&#x200B; テンプレート &#x200B;](assets/create-site.png)
+サイトを作成する![ テンプレート ](assets/create-site.png)
 
-[&#x200B; サイトテンプレート手順](/help/communities/sites-console.md#step2013asitetemplate)で、タイトル、説明、URLの名前を入力し、次のようなコミュニティサイトテンプレートを選択します。
+[ サイトテンプレート手順](/help/communities/sites-console.md#step2013asitetemplate)で、タイトル、説明、URLの名前を入力し、次のようなコミュニティサイトテンプレートを選択します。
 
 * **コミュニティサイトタイトル**: `Getting Started Tutorial`
 * **コミュニティサイトの説明**: `A site for engaging with the community.`
@@ -48,10 +55,10 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 * **コミュニティサイト名**: エンゲージ
 
-   * サイトの作成後に簡単に変更できないので、名前を再確認します
-   * 最初のURLは、コミュニティサイト名の下に表示されます
-   * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
-   * *例：*, https://localhost:4502/content/sites/ `engage/en.html`
+  * サイトの作成後に簡単に変更できないので、名前を再確認します
+  * 最初のURLは、コミュニティサイト名の下に表示されます
+  * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
+  * *例：*、https://localhost:4502/content/sites/ `engage/en.html`
 
 * **テンプレート**：プルダウンで`Reference Site`を選択
 
@@ -81,7 +88,7 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 #### User Management {#user-management}
 
-[&#x200B; ユーザー管理](/help/communities/sites-console.md#user-management)のすべてのチェックボックスをオンにします
+[ ユーザー管理](/help/communities/sites-console.md#user-management)のすべてのチェックボックスをオンにします
 
 * サイト訪問者が自己登録し
 * サイト訪問者がログインせずにサイトを表示できるようにするには
@@ -91,24 +98,24 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 >[!NOTE]
 >
->実稼動環境の場合は、カスタムのFacebookおよびTwitter アプリケーションを作成する必要があります。 [FacebookおよびTwitterでのソーシャルログイン &#x200B;](/help/communities/social-login.md)を参照してください。
+>実稼動環境の場合は、カスタムのFacebookおよびTwitter アプリケーションを作成する必要があります。 [FacebookおよびTwitterでのソーシャルログイン ](/help/communities/social-login.md)を参照してください。
 
-![&#x200B; コミュニティサイト設定](assets/site-settings.png)
+![ コミュニティサイト設定](assets/site-settings.png)
 
 #### タグ付け {#tagging}
 
-コミュニティコンテンツに適用されるタグは、[Tagging Console](/help/sites-administering/tags.md#tagging-console)で事前に定義されたAEM名前空間（[&#x200B; チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)など）を選択することで制御されます。
+コミュニティコンテンツに適用されるタグは、[Tagging Console](/help/sites-administering/tags.md#tagging-console)で事前に定義されたAEM名前空間（[ チュートリアル名前空間](/help/communities/setup.md#create-tutorial-tags)など）を選択することで制御されます。
 
 先行型検索を使用すると、名前空間を簡単に検索できます。 例：
 
 * 型 `tut`
 * `Tutorial` を選択します。
 
-![&#x200B; タグ付け](assets/tagging.png)
+![ タグ付け](assets/tagging.png)
 
 #### 役割 {#roles}
 
-[&#x200B; コミュニティメンバーの役割](/help/communities/users.md)は、「役割」セクションの設定を通じて割り当てられます。
+[ コミュニティメンバーの役割](/help/communities/users.md)は、「役割」セクションの設定を通じて割り当てられます。
 
 コミュニティメンバー（またはメンバーのグループ）にコミュニティマネージャーとしてサイトを体験させるには、先行検索を使用して、ドロップダウンのオプションからメンバーまたはグループ名を選択します。
 
@@ -119,15 +126,15 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 >[!NOTE]
 >
->[&#x200B; トンネルサービス &#x200B;](https://helpx.adobe.com/jp/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)では、パブリッシュ環境でのみ存在するメンバーとグループを選択できます。
+>[ トンネルサービス ](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author)では、パブリッシュ環境でのみ存在するメンバーとグループを選択できます。
 
-新しいサイトの![&#x200B; ユーザーの役割](assets/site-admin-1.png)
+新しいサイトの![ ユーザーの役割](assets/site-admin-1.png)
 
 #### モデレーション {#moderation}
 
-ユーザー生成コンテンツ （UGC）の[&#x200B; モデレーション &#x200B;](/help/communities/sites-console.md#moderation)のデフォルトのグローバル設定を受け入れます。
+ユーザー生成コンテンツ （UGC）の[ モデレーション ](/help/communities/sites-console.md#moderation)のデフォルトのグローバル設定を受け入れます。
 
-![&#x200B; モデレーション &#x200B;](assets/moderation1.png)
+![ モデレーション ](assets/moderation1.png)
 
 #### 分析 {#analytics}
 
@@ -184,17 +191,17 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 * **サイトを公開**
 
-  世界アイコンを選択すると、コミュニティサイトが公開されます（例えば、パブリッシュサーバーがローカルマシンで実行されている場合は、デフォルトでlocalhost:4503に公開されます）。
+  世界アイコンを選択すると、コミュニティサイトが公開されます（例えば、パブリッシュサーバーがローカルマシンで実行されている場合は、デフォルトでlocalhost:4503になります）。
 
 * **サイトを書き出し**
 
-  書き出しアイコンを選択すると、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md)に保存され、ダウンロードされたコミュニティサイトのパッケージが作成されます。 UGCはサイトパッケージに含まれていません。
+  書き出しアイコンを選択すると、[ パッケージマネージャー](/help/sites-administering/package-manager.md)に保存され、ダウンロードされたコミュニティサイトのパッケージが作成されます。 UGCはサイトパッケージに含まれていません。
 
 * **サイトを削除**
 
   削除アイコンを選択すると、**[!UICONTROL コミュニティ/サイトコンソール]**&#x200B;内からコミュニティサイトが削除されます。 このアクションは、UGC、ユーザーグループ、アセット、データベースレコードなど、サイトに関連付けられたすべての項目を削除します。
 
-![&#x200B; サイトアクション &#x200B;](assets/siteactions.png)
+![ サイトアクション ](assets/siteactions.png)
 
 >[!NOTE]
 >
@@ -203,11 +210,11 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 >オーサーインスタンスで、メインメニューから次の操作を行います。
 >
 >1. **[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]** メニューに移動します。
->1. 作成者&#x200B;**の** Agentsを選択します。
+>1. 作成者&#x200B;]**の**[!UICONTROL  Agentsを選択します。
 >1. **[!UICONTROL Default Agent （publish）]**&#x200B;を選択します。
 >1. **[!UICONTROL 設定]**&#x200B;の横にある&#x200B;**[!UICONTROL 編集]**&#x200B;を選択します。
 >1. エージェント設定のポップアップダイアログで、「**[!UICONTROL トランスポート]**」タブを選択します。
->1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート 6103を使用する場合は、https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート 6103を使用するには、https://localhost:6103/bin/receive?sling:authRequestLogin=1を指定します
 >1. 「**[!UICONTROL OK]**」を選択します。
 >1. （オプション）「**[!UICONTROL クリア]**」または「**[!UICONTROL 再試行を強制]**」を選択して、レプリケーションキューをリセットします。
 
@@ -221,9 +228,9 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 ### 新しいコミュニティユーザーグループ {#new-community-user-groups}
 
-新しいコミュニティサイトと共に、様々な管理機能に対して適切な権限が設定された新しいユーザーグループが作成されます。 詳しくは、[&#x200B; コミュニティサイトのユーザーグループ &#x200B;](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
+新しいコミュニティサイトと共に、様々な管理機能に対して適切な権限が設定された新しいユーザーグループが作成されます。 詳しくは、[ コミュニティサイトのユーザーグループ ](/help/communities/users.md#usergroupsforcommunitysites)を参照してください。
 
-この新しいコミュニティサイトでは、ステップ 1のサイト名「engage」を指定すると、4つの新しいユーザーグループが[&#x200B; グループコンソール &#x200B;](/help/communities/members.md)から表示されます（グローバルナビゲーション：Communities、Groups）。
+この新しいコミュニティサイトでは、ステップ 1のサイト名「engage」を指定すると、4つの新しいユーザーグループが[ グループコンソール ](/help/communities/members.md)から表示されます（グローバルナビゲーション：Communities、Groups）。
 
 * Community Engage コミュニティマネージャー
 * Community Engage グループ管理者
@@ -246,7 +253,7 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 ## 認証エラー用に設定 {#configure-for-authentication-error}
 
-サイトを設定して公開にプッシュしたら、公開インスタンスで[設定ログイン マッピング &#x200B;](/help/communities/sites-console.md#configure-for-authentication-error) （`Adobe Granite Login Selector Authentication Handler`）を行います。 ログイン資格情報が正しく入力されていない場合、認証エラーはエラーメッセージを含むコミュニティサイトのログインページを再表示します。
+サイトを設定して公開にプッシュしたら、公開インスタンスで[設定ログイン マッピング ](/help/communities/sites-console.md#configure-for-authentication-error) （`Adobe Granite Login Selector Authentication Handler`）を行います。 ログイン資格情報が正しく入力されていない場合、認証エラーはエラーメッセージを含むコミュニティサイトのログインページを再表示します。
 
 `Login Page Mapping`を次のように追加
 
@@ -258,7 +265,7 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 公開サイトをデモ目的で使用する場合は、デフォルトのホームページを新しいサイトに変更すると便利です。
 
-これには、[CRXDE](https://localhost:4503/crx/de) Liteを使用して、パブリッシュ時に[&#x200B; リソースマッピング &#x200B;](/help/sites-deploying/resource-mapping.md) テーブルを編集する必要があります。
+これには、[CRXDE](https://localhost:4503/crx/de) Liteを使用して、パブリッシュ時に[ リソースマッピング ](/help/sites-deploying/resource-mapping.md) テーブルを編集する必要があります。
 
 最初のステップは以下のとおりです。
 
@@ -269,25 +276,25 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
    * 「**ノードを作成：**」を選択
 
-      * **名前** localhost.4503
-（*not*&#x200B;は&#39;:&#39;を使用しません）
+     * **名前** localhost.4503
+       （*not*&#x200B;は&#39;:&#39;を使用しません）
 
-      * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+     * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. 新しく作成された`localhost.4503` ノードを選択しました：
 
    * プロパティを追加：
 
    * **名前** sling:match
-      * **Type**&#x200B;文字列
-      * **値** localhost.4503/$
-（&#39;$&#39;文字で終わる必要があります）
+     * **Type**&#x200B;文字列
+     * **値** localhost.4503/$
+       （&#39;$&#39;文字で終わる必要があります）
 
    * プロパティを追加：
 
-      * **名前** sling:internalRedirect
-      * **Type**&#x200B;文字列
-      * **値** /content/sites/engage/en.html
+     * **名前** sling:internalRedirect
+     * **Type**&#x200B;文字列
+     * **値** /content/sites/engage/en.html
 
 1. **すべて保存**&#x200B;を選択します
 1. （オプション）閲覧履歴を削除します。
@@ -313,12 +320,12 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 ### サイトの変更 {#modify-the-site}
 
-サイトの作成後、作成者は[&#x200B; サイトを開くアイコン &#x200B;](/help/communities/sites-console.md#authoring-site-content)を使用して、標準のAEM オーサリングアクティビティを実行できます。
+サイトの作成後、作成者は[ サイトを開くアイコン ](/help/communities/sites-console.md#authoring-site-content)を使用して、標準のAEM オーサリングアクティビティを実行できます。
 
-さらに、管理者は[&#x200B; サイトを編集アイコン &#x200B;](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトのプロパティを変更できます。
+さらに、管理者は[ サイトを編集アイコン ](/help/communities/sites-console.md#modifying-site-properties)を使用して、タイトルなどのサイトのプロパティを変更できます。
 
 変更が完了したら、**保存**&#x200B;してサイトを&#x200B;**公開**&#x200B;してください。
 
 >[!NOTE]
 >
->AEMに詳しくない場合は、[基本処理](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[&#x200B; ページのオーサリングに関するクイックガイド &#x200B;](/help/sites-authoring/qg-page-authoring.md)をご覧ください。
+>AEMに詳しくない場合は、[基本処理](/help/sites-authoring/basic-handling.md)に関するドキュメントと、[ ページのオーサリングに関するクイックガイド ](/help/sites-authoring/qg-page-authoring.md)をご覧ください。

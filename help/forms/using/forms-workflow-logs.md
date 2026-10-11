@@ -9,46 +9,60 @@ exl-id: 601c8d95-0d1a-4945-a522-e85d3e9fc4ae
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '293'
 ht-degree: 100%
-
 ---
-
 # AEM Forms ワークフローへのログイン{#logging-in-aem-forms-workflows}
 
-Forms Workflow の手順では、ワークフローに関する問題をデバッグするのに便利な詳細なログを提供しています。ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
+Forms Workflow の手順では、ワークフローに関する問題をデバッグするのに便利な詳細なログを提供しています。 ログを表示するには AEM Formsワークフローのデバッグログを有効にします。
 
 デフォルトでは、すべてのログ情報は */crx-repository/logs/* ディレクトリに保存されている **error.log** ファイルにあります。
 
 Forms ワークフローのデバッグログには、次の内容が含まれます。
 
-* 各ワークフロー手順のエントリ。次に例を示します。\
+* 各ワークフロー手順のエントリ。 次に例を示します。\
   `[DEBUG] "Executing Invoke DDX Process step"`
 
-* 各ワークフロー手順の終了。次に例を示します。\
+* 各ワークフロー手順の終了。 次に例を示します。\
   `[DEBUG] "Successfully finished Invoke DDX Process step"`
 
-* サービス呼び出しメッセージ。次に例を示します。\
+* サービス呼び出しメッセージ。 次に例を示します。\
   `[DEBUG] Invoking Adobe Sign Service for creating agreement`
 
-* サービス終了メッセージ。次に例を示します。\
+* サービス終了メッセージ。 次に例を示します。\
   `[DEBUG] Agreement created successfully with agreement id <agreement id>`
 
-* メタデータマップから読み取られた変数。次に例を示します。\
+* メタデータマップから読み取られた変数。 次に例を示します。\
   `[DEBUG] Successfully retrieved variable <variable name> from workflow meta data map`
 
-* JCR リポジトリで書き込まれた変数。次に例を示します。
+* JCR リポジトリで書き込まれた変数。 次に例を示します。
 
   ```verilog
      [DEBUG] Successfully written variable <variable name> into meta data node at <JCR path where meta data is being written>
   ```
 
-* 完全なスタックトレースを含む例外メッセージ。次に例を示します。\
+* 完全なスタックトレースを含む例外メッセージ。 次に例を示します。\
   `[DEBUG] Exception in Adobe Sign Service <complete stack trace>`
 
-* 動的な手順のメタデータパラメーター。次に例を示します。
+* 動的な手順のメタデータパラメーター。 次に例を示します。
 
   ```verilog
   [DEBUG] Document of Record to be generated for adaptive form <path of adaptive form>
@@ -81,15 +95,15 @@ AEM Forms Workflow のデバッグログを有効にするには、次の手順�
 
 1. AEM web コンソール設定マネージャーに移動します。
 
-   https://&#39;[server]:[port]&#39;/system/console/configMgr
+   https://'[server]:[port]'/system/console/configMgr
 
 1. **[!UICONTROL Sling]**／**[!UICONTROL ログのサポート]**&#x200B;を選択します。
 1. 「**[!UICONTROL 新規ロガーを追加]**」を選択します。
 1. **[!UICONTROL デバッグ]**&#x200B;を&#x200B;**[!UICONTROL ログレベル]**&#x200B;として選択します。
-1. ログファイルの場所を指定します。ログファイルのデフォルトの場所は *logs\error.log* です。
+1. ログファイルの場所を指定します。 ログファイルのデフォルトの場所は *logs\error.log* です。
 1. **[!UICONTROL ロガー]**&#x200B;列でパッケージの名前を **com.adobe.granite.workflow.core** として指定します。
 
-   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。**[!UICONTROL +]** を選択して次のパッケージ名をリストに追加します。
+   これらの手順を実行すると、**com.adobe.granite.workflow.core** パッケージのデバッグログを格納できるようになります。 **[!UICONTROL +]** を選択して次のパッケージ名をリストに追加します。
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

@@ -1,17 +1,31 @@
 ---
-title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
+title: 一般リリースノート（[!DNL Adobe Experience Manager] 6.5）
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4981'
 ht-degree: 96%
-
 ---
-
 # 一般リリースノート（[!DNL Adobe Experience Manager] 6.5）{#general-release-notes-for-adobe-experience-manager}
 
 ## リリース情報 {#release-information}
@@ -246,12 +260,12 @@ AEM Screens の変更点について詳しくは、[AEM Screens ユーザーガ�
 
 * Adobe Target の統合で Target Standard API が使用されるようになりました。 以前のバージョンの AEM では Target Classic HTTP API を使用していましたが、現在は非推奨になっています。
 * Adobe Target の `mbox.js` バージョン 63 が含まれています。 アドビは、実装を `at.js` v1.x に切り替えることを強くお勧めします。
-* `at.js` バージョン 1.5.0 が含まれるようになりました。 [Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
+* `at.js` バージョン 1.5.0 が含まれるようになりました。 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して `at.js` 1.x をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 が含まれています。 実装を `AppMeasurement.js` に切り替えることをお勧めします。
-* `AppMeasurement.js` v1.8.0 が含まれています。 [Adobe Experience Platform Launch](https://business.adobe.com/jp/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
+* `AppMeasurement.js` v1.8.0 が含まれています。 [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) を使用して AppMeasurement.js をサイトにプロビジョ二ングすることをお勧めします。
 
 #### AEM と Commerce {#aem-commerce}
 
@@ -290,7 +304,7 @@ AEM Communitiesでは、登録ユーザーがUser Generated Contentで、他の�
 
 **一括モデレートのリスト表示**
 
-UI が改善された新しいリスト表示が一括モデレートで利用できるようになり、ユーザ生成コンテンツエントリを表示できるようになりました。
+UI が改善された新しいリスト表示が一括モデレートで利用できるようになり、ユーザー生成コンテンツエントリを表示できるようになりました。
 
 ![リスト表示での一括モデレート](/help/release-notes/assets/list-view-moderation.png)
 
@@ -435,7 +449,7 @@ AEM 6.5 Forms では、いくつかの新機能と機能強化が加えられて
 
 アドビは、お客様が開発のすべての段階、つまり仕様、開発、テストに関与できる顧客中心開発モデルを使用しています。 このプロセスにご協力いただいているお客様とパートナーの皆様に感謝いたします。
 
-アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。 [Experience Manager サポート ポータル](https://experienceleague.adobe.com/ja?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。 研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。 開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
+アドビでは、お客様志向のバグ修正と機能強化リクエストの開発に関する、情報収集、優先順位付け、トラッキングのための手順とプロセスを整備しています。 [Experience Manager サポート ポータル](https://experienceleague.adobe.com/?support-solution=Experience+Manager&lang=ja#support)は、アドビの機能強化および欠陥追跡システムと統合されています。 お客様からの問い合わせは、可能であれば、カスタマーサポートチームで特定して解決します。 研究開発部門にエスカレートされた場合は、お客様の情報をすべて収集して、優先順位付けとレポートに使用します。 開発では有償のサポート、保証の問題、有償の顧客向け強化機能が優先されます。
 
 このような優先順位付けのプロセスにより、AEM 6.5 では 750 件を超えるお客様中心の変更が行われました。
 

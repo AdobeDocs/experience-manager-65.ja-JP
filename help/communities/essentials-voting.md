@@ -9,14 +9,23 @@ exl-id: e8ff751f-404a-498d-8e90-62a13ab593ff
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 2%
 ---
 # 投票の基本事項 {#voting-essentials}
 
-投票コンポーネント [&#x200B; タリー](tally.md) サブクラスは、メンバーが自分の意見を示すために上向き矢印または下向き矢印を選択するだけで特定のコンテンツを評価できる便利なツールです。
+投票コンポーネント [ タリー](tally.md) サブクラスは、メンバーが自分の意見を示すために上向き矢印または下向き矢印を選択するだけで特定のコンテンツを評価できる便利なツールです。
 
 同じページに投票コンポーネントの複数のインスタンスを配置することは許可されています。各インスタンスは一意の`tally name` プロパティで設定する必要があります。
 
@@ -66,7 +75,7 @@ ht-degree: 2%
 ### UGC （投稿された投票）へのアクセス {#accessing-posted-voting-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -74,7 +83,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
 * [SRP](accessing-ugc-with-srp.md)を使用したUGCへのアクセス – コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

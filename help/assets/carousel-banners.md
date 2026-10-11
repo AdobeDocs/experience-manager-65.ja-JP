@@ -10,13 +10,27 @@ feature: Carousel Banners
 role: User, Admin
 exl-id: 53d34d3a-ecb6-4fa0-9665-60d21f48021e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: e82a35fa-5829-4d45-8047-ede0efd4c4ad
+    internal-label: Carousel banners
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4665'
-ht-degree: 98%
-
+source-wordcount: '4791'
+ht-degree: 99%
 ---
-
 # カルーセルバナー{#carousel-banners}
 
 カルーセルバナーを使用すると、回転するインタラクティブなプロモーションコンテンツをマーケティング担当者が簡単に作成して、任意の画面に配信できるようになり、コンバージョンを推進できます。
@@ -88,7 +102,7 @@ Web サイトではカルーセルバナーは次のように表示されます�
 
    * [Web サイトページへのカルーセルバナーの追加](#adding-a-carousel-banner-to-your-website-page) コピーしておいたカルーセルバナーの URL または埋め込みコードを web サイトページに追加できます。
 
-      * [カルーセルバナーと既存のクイックビューの統合](#integrating-the-carousel-banner-with-an-existing-quickview)。 サードパーティの web コンテンツ管理システムを使用している場合は、新しいカルーセルバナーを、web サイト上の既存のクイックビュー実装に統合する必要があります。
+     * [カルーセルバナーと既存のクイックビューの統合](#integrating-the-carousel-banner-with-an-existing-quickview)。 サードパーティの web コンテンツ管理システムを使用している場合は、新しいカルーセルバナーを、web サイト上の既存のクイックビュー実装に統合する必要があります。
 
    * [Experience Manager で web サイトにカルーセルバナーを追加します。](/help/assets/adding-dynamic-media-assets-to-pages.md) Experience Manager Sites のユーザーである場合は、Experience Manager でインタラクティブメディアコンポーネントを使用して、カルーセルセットをページに直接追加できます。
 
@@ -126,7 +140,7 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 * Google Chrome で、ブラウザーから送信されるすべての HTTP リクエストを参照するには、F12 キー（Windows）または Command + Option + I キー（Mac）を押してデベロッパーツールパネルを開き、「Network」タブを選択します。
 * Firefox では、F12 キー（Windows）または Command + Option + I キー（Mac）を押して Firebug プラグインを有効にして「Net」タブを使用するか、ビルトインの Inspector ツールとその「Network」タブを使用します。
 
-ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
+ブラウザーでネットワークモニタリングをオンにして、ページ上でクイックビューをトリガーします。
 
 次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。 通常、クイックビューをトリガーすると、多数のリクエストがサーバーに送信されます。 クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。 この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
@@ -144,10 +158,10 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
    <td>単一の SKU（クエリ文字列内）</td>
    <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-     <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
-     <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
+     <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
     </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。 したがって、ホットスポットや画像マップには、次のような値が設定された SKU フィールドのみが必要になります。 <code>866558,</code> <code>1196184,</code> <code>1081492,</code> <code>1898294.</code></p> </td>
   </tr>
   <tr>
@@ -163,9 +177,9 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
    <td>SKU とカテゴリ ID（クエリ文字列内）</td>
    <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-     <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
-     <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
+     <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
     </ul> <p>この場合、URL には変化する部分が 2 つあります。 SKU が <code>prodId</code> パラメーターに、カテゴリ ID が <code>category=</code> パラメーターに格納されています。</p> <p>そのため、ホットスポット／画像マップ定義はペアになります。 つまり、SKU 値と、<code>categoryId</code> という追加の変数です。 結果のペアは次のようになります。</p>
     <ul>
      <li><p>SKU が <strong><code>305466</code></strong>、<code>categoryId</code> が <code>1100004</code>。</p> </li>
@@ -286,23 +300,23 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 
    * 「**[!UICONTROL クイックビュー]**」を選択します。
 
-      * Experience Manager Sites と eCommerce をご利用の場合は、製品ピッカーアイコン（虫眼鏡）を選択して、製品を選択ページを開きます。 使用する製品を選択してから、ページの右上隅のチェックマークを選択して、カルーセルバナーエディターに戻ります。
-      * Experience Manager Sites または eCommerce の顧客でない場合は、次のようにします。
+     * Experience Manager Sites と eCommerce をご利用の場合は、製品ピッカーアイコン（虫眼鏡）を選択して、製品を選択ページを開きます。 使用する製品を選択してから、ページの右上隅のチェックマークを選択して、カルーセルバナーエディターに戻ります。
+     * Experience Manager Sites または eCommerce の顧客でない場合は、次のようにします。
 
-         * これらの変数を定義するときは、[ホットスポットの変数の識別](#identifying-hotspot-and-image-map-variables)を参照してください。
-         * 次に、SKU 値を手動で入力します。 「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
-         * （オプション）クイックビュー内で製品をさらに識別するために必要な他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」を選択します。 テキストフィールドに追加の変数を指定します。 例えば、追加の変数として category=Mens などと指定します。
+       * これらの変数を定義するときは、[ホットスポットの変数の識別](#identifying-hotspot-and-image-map-variables)を参照してください。
+       * 次に、SKU 値を手動で入力します。 「SKU 値」テキストフィールドに、製品の SKU（Stock Keeping Unit）を入力します。SKU は、提供している製品またはサービスごとの一意の識別子です。 入力した SKU 値によってクイックビューテンプレートの変数部分が自動的に入力され、タップされたホットスポットが特定の SKU のクイックビューに関連付けられます。
+       * （オプション）クイックビュー内で製品をさらに識別するために必要な他の変数がある場合は、「**[!UICONTROL 汎用変数を追加]**」を選択します。 テキストフィールドに追加の変数を指定します。 例えば、追加の変数として category=Mens などと指定します。
 
-         * 詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
+       * 詳しくは、[セレクターの操作](/help/assets/working-with-selectors.md)を参照してください。
 
    * 「**[!UICONTROL ハイパーリンク]**」を選択します。
 
-      * Adobe Experience Manager Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）を選択して URL に移動します。
-        >[!NOTE]
-        >
-        >インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+     * Adobe Experience Manager Sites のユーザーである場合は、サイトセレクターアイコン（フォルダー）を選択して URL に移動します。
+       >[!NOTE]
+       >
+       >インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
 
-      * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
+     * スタンドアロンユーザーである場合は、「HREF」テキストフィールドに、リンクされる Web ページへの完全な URL パスを指定します。
 
    このリンクを新しいブラウザータブで開く（推奨のデフォルト）か同じタブで開くかを指定してください。
 
@@ -310,16 +324,16 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 
    * 「**[!UICONTROL エクスペリエンスフラグメント]**」を選択します。
 
-      * Experience Manager Sitesをご利用の場合は、検索アイコン（虫眼鏡）を選択してエクスペリエンスフラグメントページを開きます。使用するエクスペリエンスフラグメントを選択し、ページの右上隅にある&#x200B;**[!UICONTROL Select]**&#x200B;を選択して、ホットスポット管理ページに戻ります。
-[&#x200B; エクスペリエンスフラグメント &#x200B;](/help/sites-authoring/experience-fragments.md)を参照してください。
+     * Adobe Experience Manager Sites のユーザーである場合は、検索アイコン（虫眼鏡）を選択してエクスペリエンスフラグメントページを開きます。 使用するエクスペリエンスフラグメントを選択し、ページの右上隅の「**[!UICONTROL 選択]** 」を選択して、ホットスポット管理ページに戻ることができます。
+       [エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)を参照してください。
 
-      * エクスペリエンスフラグメントがバナーに表示されるときの幅と高さを指定します。
+     * エクスペリエンスフラグメントがバナーに表示されるときの幅と高さを指定します。
 
-        >[!NOTE]
-        >
-        >カルーセルバナーのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされないことに注意してください。
-        >
-        >この問題を回避するには、ソーシャルメディアでの共有ツールを持たないビューアープリセットを作成します。 このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。
+       >[!NOTE]
+       >
+       >カルーセルバナーのソーシャルメディア共有ツールは、エクスペリエンスフラグメントにビューアを埋め込む場合はサポートされないことに注意してください。
+       >
+       >この問題を回避するには、ソーシャルメディアでの共有ツールを持たないビューアープリセットを作成します。 このようなビューアプリセットを使用すると、ビューアをエクスペリエンスフラグメントに正常に埋め込むことができます。
 
    ![experience_fragment-carouselbanner](assets/experience_fragment-carouselbanner.png)
 
@@ -377,10 +391,10 @@ Experience Manager Assets でバナー画像にホットスポットまたは画
 
 プレビューを使用して、カルーセルバナーが顧客にどのように表示されるかを確認し、カルーセルバナーのホットスポットと画像マップが期待通りに動作しているかどうかをテストすることができます。
 
-カルーセルバナーに問題がなければ、公開できます。
-Web ページへのビデオまたは画像ビューアの埋め込み[を参照してください](/help/assets/embed-code.md)。
-「[Web アプリケーションへのURLのリンク &#x200B;](/help/assets/linking-urls-to-yourwebapplication.md)」を参照してください。インタラクティブコンテンツに相対URL （特にExperience Manager Sites ページへのリンク）を含むリンクがある場合、URL ベースのリンクは使用できません。
-[&#x200B; ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+カルーセルバナーの設定が完了したら、このカルーセルバナーを公開できます。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
+[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
 カルーセルバナーは、カルーセルエディター（推奨）または&#x200B;**[!UICONTROL ビューア]**&#x200B;リストでプレビューできます。
 
@@ -424,11 +438,11 @@ Web ページへのビデオまたは画像ビューアの埋め込み[を参照
 
 ただし、スタンドアロンの Experience Manager アセットの顧客の場合、この節で説明するように、カルーセルバナーを web サイトのランディングページに手動で追加することができます。
 
-1. 公開したカルーセルセットの埋め込みコードをコピーします。
-「[Web ページにビデオまたは画像ビューアを埋め込む](/help/assets/embed-code.md)」を参照してください。
+1. 公開済みのカルーセルセットの埋め込みコードをコピーします。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
 
-1. Experience Manager Assetsからweb ページにコピーした埋め込みコードを追加します。
-コピーされた埋め込みコードはレスポンシブなので、ページの埋め込み領域に自動的に収まる必要があります。
+1. Experience Manager Assets から web ページにコピーした埋め込みコードを追加します。
+コピーされた埋め込みコードはレスポンシブなため、ページの埋め込み領域に自動的に適応します。
 
 ## カルーセルバナーと既存のクイックビューとの統合 {#integrating-the-carousel-banner-with-an-existing-quickview}
 
@@ -466,7 +480,7 @@ Experience Manager Assets によって返される埋め込みコードには、
 
 [ホットスポットと画像マップの変数の識別](#identifying-hotspot-and-image-map-variables)を参照してください。
 
-クイックビュー URL をトリガーしてクイックビューパネルをアクティベートするための最後の手順では、フロントエンドの IT 担当者のサポートが必要になる可能性が高くなります。 フロントエンド IT 担当者は、すぐに使用できるクイックビュー URL を用意し、クイックビューを適切な手順で正しく実装するための最適な方法を知っています。
+クイックビュー URL をトリガーしてクイックビューパネルをアクティベートするための最後の手順では、フロントエンドの IT 担当者のサポートが必要になる可能性が高くなります。 フロントエンド IT 担当者は、すぐに使用できるクイックビュー URL を用意したうえで、適切な手順からクイックビューの実装を正確にトリガーする最適な方法を知っています。
 
 ## クイックビューを使用してカスタムポップアップを作成する {#using-quickviews-to-create-custom-pop-ups}
 

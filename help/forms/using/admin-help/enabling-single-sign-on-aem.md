@@ -9,13 +9,29 @@ exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1719'
-ht-degree: 95%
-
+source-wordcount: '1740'
+ht-degree: 96%
 ---
-
 # AEM forms でのシングルサインオンの有効化{#enabling-single-sign-on-in-aem-forms}
 
 >[!NOTE]
@@ -43,12 +59,12 @@ AEM Forms で前述のいずれの方法を使用してもユーザーが認証�
 1. 必要に応じて、ページの残りの設定を調整し、「OK」をクリックします。
 
    * **SSO の種類：**（必須）HTTP ヘッダーを使用して SSO を有効化するには HTTP ヘッダーを選択します。
-   * **ユーザーの識別子の HTTP ヘッダー：**（必須）ログインしたユーザーの固有な識別子を値に含むヘッダーの名前です。 User Management は、この値を使用して User Management データベースからユーザーを検索します。 このヘッダーから取得される値は、LDAP ディレクトリから同期されるユーザーの固有な識別子と一致する必要があります （[ユーザー設定](/help/forms/using/admin-help/adding-configuring-users.md#user-settings)を参照）。
-   * **ユーザー固有の識別子ではなく、ユーザー ID に対して識別子の値をマップします：**&#x200B;ユーザー固有の識別子の値をユーザー ID にマップします。 このオプションを選択するのは、ユーザー固有の識別子が、HTTP ヘッダーで簡単に伝播できないバイナリ値の場合です（例えば、Active Directory からユーザーを同期する場合は objectGUID）。
+   * **ユーザーの識別子の HTTP ヘッダー：**（必須）ログインしたユーザーの固有な識別子を値に含むヘッダーの名前です。 User Management は、この値を使用して User Management データベースからユーザーを検索します。 このヘッダーから取得される値は、LDAP ディレクトリから同期されるユーザーの一意の ID と一致する必要があります （[ユーザー設定](/help/forms/using/admin-help/adding-configuring-users.md#user-settings)を参照）。
+   * **ユーザー固有の識別子ではなく、ユーザー ID に対して識別子の値をマップします：**&#x200B;ユーザー固有の識別子の値をユーザー ID にマップします。 このオプションを選択するのは、ユーザーの一意の ID が、HTTP ヘッダーで簡単に伝播できないバイナリ値の場合です（例えば、Active Directory からユーザーを同期する場合は objectGUID）。
    * **ドメインの HTTP ヘッダー：**（非必須）ドメイン名を値に含むヘッダー名です。 この設定は、ユーザーを一意に識別する単一の HTTP ヘッダーが存在しない場合にのみ使用します。 この設定は、複数のドメインが存在し、固有な識別子がそのドメイン内でのみ一意である場合に使用します。 この場合、このテキストボックスでヘッダー名を指定し、「ドメインマッピング」ボックスに複数のドメインのドメインマッピングを指定します （[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)を参照）。
    * **ドメインマッピング：**（必須）複数のドメインのマッピングは、「*header value=domain name*」の形式で指定します。
 
-     例えば、ドメインの HTTP ヘッダーが domainName で、その値に domain1、domain2 または domain3 を使用できる状況を考えます。 この場合は、ドメインマッピングを使用して domainName の値を User Management のドメイン名にマップします。 各マッピングは、異なる行で指定する必要があります。
+     例えば、ドメインの HTTP ヘッダーが domainName で、その値に domain1、domain2 または domain3 を使用できる状況を考えます。 この場合は、ドメインマッピングを使用して domainName の値をユーザー管理のドメイン名にマップします。 各マッピングは、異なる行で指定する必要があります。
 
      domain1=UMdomain1
 
@@ -75,29 +91,29 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 >JEE での AEM Forms は複数の子ドメイン環境で Kerberos／SPNEGO を使用した SSO の設定をサポートしていません。
 
 1. SSO を有効化するために使用するドメインを決定します。 AEM Forms サーバーとユーザーは、同じ Windows ドメインまたは信頼されたドメインの一部である必要があります。
-1. Active Directory に、AEM Forms サーバーを表すユーザーを作成します （[&#x200B; ユーザーアカウントの作成](enabling-single-sign-on-aem.md#create-a-user-account)を参照）。 SPNEGOを使用するように複数のドメインを設定する場合は、これらの各ユーザーのパスワードが異なることを確認してください。 パスワードが同じ場合、SPNEGO SSO は機能しません。
+1. Active Directory に、AEM Forms サーバーを表すユーザーを作成します。 （[ ユーザーアカウントの作成](enabling-single-sign-on-aem.md#create-a-user-account)を参照）。 SPNEGOを使用するように複数のドメインを設定する場合は、これらの各ユーザーのパスワードが異なることを確認してください。 パスワードが同じ場合、SPNEGO SSO は機能しません。
 1. サービスプリンシパル名をマップします （[サービスプリンシパル名（SPN）のマッピング](enabling-single-sign-on-aem.md#map-a-service-principal-name-spn)を参照）。
 1. ドメインコントローラーを設定します （[Kerberos 整合性チェックの失敗の回避](enabling-single-sign-on-aem.md#prevent-kerberos-integrity-check-failures)を参照）。
-1. [ドメインの追加](/help/forms/using/admin-help/adding-domains.md#adding-domains)または[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)で説明されているとおりに、エンタープライズドメインを追加または編集します。 エンタープライズドメインを作成または編集するときは、次のタスクを実行する必要があります。
+1. [ドメインの追加](/help/forms/using/admin-help/adding-domains.md#adding-domains)または[既存のドメインの編集と変換](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains)で説明されているとおりに、エンタープライズドメインを追加または編集します。 エンタープライズドメインを作成または編集するときは、次のタスクを実行します。
 
    * Active Directory の情報を含むディレクトリを追加または編集します。
    * 認証プロバイダーとして LDAP を追加します。
    * 認証プロバイダーとして Kerberos を追加します。 Kerberos の新規認証ページまたは認証を編集ページに、以下の情報を入力します。
 
-      * **認証プロバイダー：** Kerberos
-      * **DNS IP：** AEM Forms を実行しているサーバーの DNS IP アドレス。 この IP アドレスは、コマンドラインで `ipconfig/all` を実行して確認できます。
-      * **KDC ホスト：**&#x200B;認証に使用する Active Directory サーバーの完全修飾ホスト名または IP アドレス。
-      * **サービスユーザー：** KtPass ツールに渡されるサービスプリンシパル名（SPN）。 前に挙げた例では、サービスパスワードは `HTTP/lcserver.um.lc.com` です。
-      * **サービス領域：** Active Directory のドメイン名。 前に挙げた例では、サービスパスワードは `UM.LC.COM.` です。
-      * **サービスパスワード：**&#x200B;サービスユーザーのパスワード。 前に挙げた例では、サービスパスワードは `password` です。
-      * **SPNEGO を有効にする：**&#x200B;シングルサインオン（SSO）で SPNEGO を使用できるようにします。 このオプションを選択します。
+     * **認証プロバイダー：** Kerberos
+     * **DNS IP：** AEM Forms を実行しているサーバーの DNS IP アドレス。 この IP アドレスは、コマンドラインで `ipconfig/all` を実行して確認できます。
+     * **KDC ホスト：**&#x200B;認証に使用する Active Directory サーバーの完全修飾ホスト名または IP アドレス。
+     * **サービスユーザー：** KtPass ツールに渡されるサービスプリンシパル名（SPN）。 前に挙げた例では、サービスパスワードは `HTTP/lcserver.um.lc.com` です。
+     * **サービス領域：** Active Directory のドメイン名。 前に挙げた例では、サービスパスワードは `UM.LC.COM.` です。
+     * **サービスパスワード：**&#x200B;サービスユーザーのパスワード。 前に挙げた例では、サービスパスワードは `password` です。
+     * **SPNEGO を有効にする：**&#x200B;シングルサインオン（SSO）で SPNEGO を使用できるようにします。 このオプションを選択します。
 
-1. SPNEGO クライアントブラウザー設定を設定します （[SPNEGO クライアントブラウザー設定の設定](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)を参照）。
+1. SPNEGO クライアントブラウザーの設定を行います。 （[SPNEGO クライアントブラウザー設定の設定](enabling-single-sign-on-aem.md#configuring-spnego-client-browser-settings)を参照）。
 
 ### ユーザーアカウントを作成 {#create-a-user-account}
 
 1. SPNEGO の場合、AEM Forms となるドメインコントローラー上にある Active Directory 内のユーザーとしてサービスを登録します。 そのドメインコントローラーで、スタートメニュー／管理ツール／Active Directory ユーザーとコンピューターに移動します。 「管理ツール」がスタートメニューにない場合は、コントロールパネルを使用します。
-1. Users フォルダーをクリックして、ユーザーのリストを表示します。
+1. 「ユーザー」フォルダーをクリックして、ユーザーのリストを表示します。
 1. Users フォルダーを右クリックし、新規作成／ユーザーを選択します。
 1. 「姓」、「名」および「ユーザーログオン名」を入力し、「次へ」をクリックします。 例えば、次の値を設定します。
 
@@ -122,7 +138,7 @@ Windows 環境で LDAP サーバーに Active Directory を使用している場
 
    **host：** Forms サーバーの完全修飾名または一意の URL です。 この例では、lcserver.um.lc.com に設定しています。
 
-   **REALM：**&#x200B;ドメインコントローラーの Active Directory 領域です。 この例では、UM.LC.COM に設定しています。 領域は大文字で入力してください。 Windows 2003 の領域を決めるには、次の手順を実行します。
+   **REALM：**&#x200B;ドメインコントローラーの Active Directory 領域です。 この例では、UM.LC.COM に設定しています。 realm はすべて大文字で入力してください。 Windows 2003 の領域を決めるには、次の手順を実行します。
 
    * 「マイコンピューター」を右クリックし、「プロパティ」を選択します。
    * 「コンピューター名」タブをクリックします。 「ドメイン名」の値が領域名です。
@@ -151,7 +167,7 @@ ktpass -princ HTTP/lcserver.um.lc.com@UM.LC.COM -mapuser spnegodemo
 1. 以前に入力したものと同じパスワードを入力し、確認します。 この例では、`password` に設定されています。
 1. 「ユーザーは次回ログオン時にパスワード変更が必要」を選択解除し、「OK」をクリックします。
 
-### SPNEGO クライアントブラウザー設定の設定 {#configuring-spnego-client-browser-settings}
+### SPNEGO クライアントブラウザー設定 {#configuring-spnego-client-browser-settings}
 
 SPNEGO ベースの認証を機能させるには、ユーザーアカウントを作成しているドメインにクライアントコンピューターが含まれている必要があります。 また、SPNEGO ベースの認証を許可するようにクライアントブラウザーを設定する必要があります。 さらに、SPNEGO ベースの認証を必要とするサイトを、信頼できるサイトにする必要があります。
 
@@ -172,7 +188,7 @@ https://lcserver:8080などのコンピューター名を使用してサーバ�
    約:config - Mozilla Firefox ダイアログボックスが表示されます。
 
 1. 「フィルター」ボックスに、`negotiate`
-1. 表示されたリストで、network.negotiate-auth.trusted-uri をダブルクリックし、環境に応じて、次のいずれかのコマンドを入力します。
+1. 表示されたリストで、network.negotiate-auth.trusted-uri をクリックし、環境に応じて、次のいずれかのコマンドを入力します。
 
    `.um.lc.com` - 末尾が um.lc.com のすべての URL を SPNEGO に対して許可するよう Firefox を設定します。 ドット（「。」）が含まれていることを確認します。 まず最初に。
 
@@ -184,9 +200,9 @@ https://lcserver:8080などのコンピューター名を使用してサーバ�
 
 ## ユーザーおよびグループへの役割の割り当て {#assign-roles-to-users-groups}
 
-1. JEE 上の AEM forms 環境にログインします。
-1. 管理コンソールで、設定／User Management／ドメインの管理をクリックします。
-1. LDAPなどのドメイン設定を選択し、クリックします。作成されたすべてのユーザーとグループがディレクトリに表示されます。必要に応じて、新しいユーザーまたはグループを作成できます。
+1. JEE 上の AEM Forms 環境にログインします。
+1. 管理コンソールで、設定／ユーザー管理／ドメインの管理をクリックします。
+1. ドメイン設定（LDAP など）を選択し、クリックします。 ディレクトリに、作成したすべてのユーザーおよびグループが表示されます。 必要に応じて、新しいユーザーまたはグループを作成できます。
    ![ドメイン管理ページ](/help/forms/using/assets/domain-mgmt-page.png)
 1. 「認証」をクリックし、新しいページで、LDAP などの認証プロバイダーを選択します。
 1. ドメイン管理ページに移動し、LDAP を選択して、「**今すぐ同期**」をクリックし、AEM アクセス用に設定した認証スキームとディレクトリを同期します。

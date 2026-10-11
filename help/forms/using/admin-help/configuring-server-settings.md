@@ -9,13 +9,27 @@ exl-id: 362b7b91-c58b-4e47-a6ef-56a4b54a100c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: b631b5d4308a2ad1e2397c60c4ee78ec097beaa9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2665'
 ht-degree: 100%
-
 ---
-
 # サーバー設定の指定 {#configuring-server-settings}
 
 サーバー設定ページから、Forms Workflow の様々な設定にアクセスできます。
@@ -82,7 +96,7 @@ AEM Forms でユーザーからのメールメッセージを受信して処理�
 * タスクの割り当て
 * デッドライン
 
-グループへのメール通知を生成するには、User Management でそのグループのメールアドレスを指定します。 <!--Fix broken link See Setting up and organizing users -->Forms Workflow によってメール通知がグループに送信されると、そのグループ内の、メールアドレスが指定されている各メンバーがそのメール通知を受け取ります。 メール通知を受信したグループのメンバーがタスクを要求する場合、そのメール通知に記載されている要求リンクをクリックして、Workspace のタスクの詳細ページを開く必要があります。 メンバーは、このページから、作業項目を要求または要求して開くことができます。
+グループへのメール通知を生成するには、ユーザー管理でそのグループのメールアドレスを指定します。 <!--Fix broken link See Setting up and organizing users -->Forms Workflow によってメール通知がグループに送信されると、そのグループ内の、メールアドレスが指定されている各メンバーがそのメール通知を受け取ります。 メール通知を受信したグループのメンバーがタスクを要求する場合、そのメール通知に記載されている要求リンクをクリックして、Workspace のタスクの詳細ページを開く必要があります。 メンバーは、このページから、作業項目を要求または要求して開くことができます。
 
 >[!NOTE]
 >

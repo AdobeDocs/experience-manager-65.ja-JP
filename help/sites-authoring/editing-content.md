@@ -10,13 +10,26 @@ exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: ed9b9f3835af2dc40ed4c5d3f9e3209dfc6bed90
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3030'
 ht-degree: 96%
-
 ---
-
 # ページのコンテンツの編集{#editing-page-content}
 
 （新規で、またはローンチやライブコピーの一部として）ページが作成されたら、コンテンツを編集して、必要な更新を行うことができます。
@@ -231,7 +244,7 @@ ht-degree: 96%
 
 * **編集**
 
-  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md) [コンポーネントのコンテンツを編集](#edit-content)できます。 多くの場合、ツールバーが用意されています。
+  [コンポーネントの種類に応じて](/help/sites-authoring/default-components.md)[コンポーネントのコンテンツを編集](#edit-content)できます。 多くの場合、ツールバーが用意されています。
 
   ![編集](do-not-localize/screen_shot_2018-03-22at112936.png)
 
@@ -269,9 +282,9 @@ ht-degree: 96%
 
   クリップボードのコンポーネントをページにペーストします。 元のコンポーネントが残るかどうかは、コピーまたはカットのどちらを使用したかによって異なります。
 
-   * 同じページまたは別のページにペーストできます。
-   * ペースト操作を選択した項目の上に、対象の項目がペーストされます。
-   * ペースト操作は、クリップボードにコンテンツがある場合にのみ表示されます。
+  * 同じページまたは別のページにペーストできます。
+  * ペースト操作を選択した項目の上に、対象の項目がペーストされます。
+  * ペースト操作は、クリップボードにコンテンツがある場合にのみ表示されます。
 
   ![ペースト](assets/screen_shot_2018-03-22at113553.png)
 
@@ -514,15 +527,15 @@ AEM では、他のユーザーによるコンテンツの変更を防ぐため�
 
 * **サイト**&#x200B;コンソール
 
-   1. [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)でページを選択します。
-   1. ロックアイコンを選択します。
+  1. [選択モード](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)でページを選択します。
+  1. ロックアイコンを選択します。
 
   ![ロックアイコン](assets/screen_shot_2018-03-22at134928.png)
 
 * **ページエディター**
 
-   1. メニューを開くには、**ページ情報**&#x200B;アイコンを選択します。
-   1. 「**ページをロック**」オプションを選択します。
+  1. メニューを開くには、**ページ情報**&#x200B;アイコンを選択します。
+  1. 「**ページをロック**」オプションを選択します。
 
 ロックすると、コンソールビュー情報が更新され、ロックシンボルの編集時にツールバーに表示されます。
 

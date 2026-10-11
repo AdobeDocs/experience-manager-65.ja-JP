@@ -7,13 +7,24 @@ feature: Asset Management
 exl-id: bc0cfb0e-3f70-4377-8831-326a7cae73bd
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 100%
-
 ---
-
 # デジタルアセットに透かしをつける {#watermarking}
 
 | バージョン | 記事リンク |
@@ -25,7 +36,7 @@ ht-degree: 100%
 
 アセットに透かしを適用できるようにするには、[!UICONTROL DAM アセットの更新] ワークフローに透かしステップを追加してください。
 
-1. [!DNL Experience Manager] ユーザインターフェイスにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;に移動してください。
+1. [!DNL Experience Manager] ユーザーインターフェイスにアクセスし、**[!UICONTROL ツール]**／**[!UICONTROL ワークフロー]**／**[!UICONTROL モデル]**&#x200B;に移動してください。
 1. **[!UICONTROL ワークフローモデル]**&#x200B;ページで、**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを選択し、**[!UICONTROL 編集]**&#x200B;をクリックしてください。
 
 1. サイドパネルから、**[!UICONTROL 透かしを追加]**&#x200B;ステップを [!UICONTROL DAM アセットの更新]ワークフローにドラッグしてください。
@@ -46,11 +57,11 @@ ht-degree: 100%
    *図：[!DNL Assets]において「透かしを追加」ステップの引数を指定*
 
 1. 透かしステップを追加した **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを保存します。
-1. [!DNL Assets] ユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしがフォントサイズやカラーなどと共に、上記手順で設定した位置に表示されます。
+1. [!DNL Assets] ユーザーインターフェイスから、サンプルアセットをアップロードします。 透かしが、上記手順で設定した位置に、指定したフォントサイズやカラーなどの設定で表示されます。
 
 プログラムで、あるいは動的情報を使用して PDF ドキュメントに透かしを付ける場合は、 [Experience Manager ドキュメントサービス](/help/forms/using/overview-aem-document-services.md)の使用を検討してください。
 
 ## ヒントと制限事項 {#tips-limitations}
 
 * テキストベースの透かしのみがサポートされます。 [!UICONTROL 透かしプロセスの追加]を作成する際には画像をアップロードできますが、画像は透かしとして使用されません。
-* 透かしの使用は、PNG ファイルと JPEG ファイルのみでサポートされています。 その他のアセット形式には透かしは入りません。
+* 透かしを適用できるのは、PNG ファイルと JPEG ファイルのみです。 その他のアセット形式には透かしは入りません。

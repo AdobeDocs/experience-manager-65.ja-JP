@@ -10,7 +10,18 @@ exl-id: c705710b-a94a-4f4f-affa-ddd4fc6cb0ec
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '5471'
 ht-degree: 90%
@@ -248,7 +259,7 @@ AEM と連携する場合は、いくつかの方法でこのようなサービ�
 
 ### JavaScript を使用したメディアクエリの評価 {#evaluating-media-queries-using-javascript}
 
-W3Cが定義する[MediaQueryList インターフェイス &#x200B;](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
+W3Cが定義する[MediaQueryList インターフェイス ](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface)の実装により、JavaScriptを使用してメディアクエリを評価できます。 メディアクエリの結果にロジックを適用し、現在のウィンドウを対象とするスクリプトを実行できます。
 
 * MediaQueryList インターフェイスを実装するブラウザーは `window.matchMedia()` 関数をサポートします。 この関数は、指定された文字列に対してメディアクエリをテストします。 この関数は、クエリ結果へのアクセスを提供する `MediaQueryList` オブジェクトを返します。
 

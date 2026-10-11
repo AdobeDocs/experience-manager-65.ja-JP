@@ -9,13 +9,22 @@ exl-id: ff041ef0-e566-4373-818e-76680ff668d8
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 3545595dd67b5703d357964a752bf8979a38ea55
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 92%
-
+source-wordcount: '1796'
+ht-degree: 91%
 ---
-
 # タグの管理 {#administering-tags}
 
 タグを使用すると、web サイト内のコンテンツを素早く簡単に分類できます。 タグは、コンテンツを検索結果としてより迅速に見つけらるようにするキーワードまたはラベル（メタデータ）と考えることができます。
@@ -40,22 +49,22 @@ AEM 内のタグには以下のような機能があります。
 * 新しいタグを作成する場合、タグが特定の名前空間内で一意である必要があります。
 * タグのタイトルには、タグパスの区切り文字を含めないでください（含めても表示されません）。
 
-   * コロン `:` - 名前空間タグを区切ります
-   * スラッシュ `/` - サブタグを区切ります
+  * コロン `:` - 名前空間タグを区切ります
+  * スラッシュ `/` - サブタグを区切ります
 
 * タグは、作成者とサイト訪問者が適用できます。 作成者に関係なく、ページに割り当てたとき、または検索時に、すべての形式のタグが使用可能になります。
 * タグの作成やタグの分類の変更は、「タグ管理者」グループのメンバーおよび `/content/cq:tags` に対する変更権限を持つメンバーがおこなうことができます。
 
-   * 子タグが含まれるタグはコンテナタグと呼ばれます
-   * コンテナタグ以外のタグはリーフタグと呼ばれます
-   * タグの名前空間はリーフタグまたはコンテナタグのいずれかです
+  * 子タグが含まれるタグはコンテナタグと呼ばれます
+  * コンテナタグ以外のタグはリーフタグと呼ばれます
+  * タグの名前空間はリーフタグまたはコンテナタグのいずれかです
 
 * タグを[検索コンポーネント](https://helpx.adobe.com/jp/experience-manager/core-components/using/quick-search.html)で使用すると、コンテンツを簡単に検索できます。
 * タグは [ティーザーコンポーネント](https://helpx.adobe.com/jp/experience-manager/core-components/using/teaser.html)で使用され、ユーザーのタグクラウドを監視してターゲットのコンテンツを提供できます。
 * タグ付けがコンテンツの重要な側面である場合は、次のことに注意します。
 
-   * タグとタグを使用するページを必ずパッケージ化すること
-   * [タグの権限](#setting-tag-permissions)に読み取りアクセスを有効にすること
+  * タグとタグを使用するページを必ずパッケージ化すること
+  * [タグの権限](#setting-tag-permissions)に読み取りアクセスを有効にすること
 
 ## タグ付けコンソール {#tagging-console}
 
@@ -69,9 +78,9 @@ AEM 内のタグには以下のような機能があります。
 * 管理者権限でログインします
 * グローバルナビゲーションから、次の操作を行います。
 
-   * **`Tools`**&#x200B;を選択
-   * **`General`** を選択
-   * **`Tagging`** を選択
+  * **`Tools`**&#x200B;を選択
+  * **`General`** を選択
+  * **`Tagging`** を選択
 
 ![managing_tags_usingthetagasadministrationconsole](assets/managing_tags_usingthetagasministrationconsolea.png)
 
@@ -86,7 +95,7 @@ AEM 内のタグには以下のような機能があります。
 * **タイトル**
   *（必須）* 名前空間の表示タイトル。
 
-* **名前**
+* **名**
   *（オプション）* 名前空間の名前。 指定しない場合、有効なノード名が「タイトル」から作成されます。 [タグ ID](/help/sites-developing/framework.md#tagid) を参照してください。
 
 * **説明**
@@ -173,7 +182,7 @@ AEM 内のタグには以下のような機能があります。
 
 ![chlimage_1-195](assets/chlimage_1-195.png)
 
-名前空間または他のタグが選択されている場合、**`Edit`**&#x200B;アイコンを選択すると、タイトルや説明を変更したり、タイトルのローカリゼーションを提供したりできます。
+名前空間または他のタグが選択されている場合、**`Edit`**アイコンを選択すると、タイトルや説明を変更したり、タイトルのローカリゼーションを提供したりできます。
 
 編集が完了したら、「**保存**」を選択します。
 
@@ -252,30 +261,30 @@ AEM 内のタグには以下のような機能があります。
 
 * オーサーインスタンスで
 
-   * 管理者権限でログインします
-   * [セキュリティコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)にアクセスします。
+  * 管理者権限でログインします
+  * [セキュリティコンソール](/help/sites-administering/security.md#accessing-user-administration-with-the-security-console)にアクセスします。
 
-      * 例えば、http://localhost:4502/useradminを参照します
+    * 例えば、http://localhost:4502/useradminを参照します。
 
-   * 左側のペインで、[読み取り権限](/help/sites-administering/security.md#permissions)を付与するグループ（またはユーザー）を選択します
-   * 右側のペインで、タグの名前空間への&#x200B;**パス &#x200B;** を見つけます
+  * 左側のペインで、[読み取り権限](/help/sites-administering/security.md#permissions)を付与するグループ（またはユーザー）を選択します
+  * 右側のペインで、タグの名前空間への**パス **を見つけます
 
-      * 例：`/content/cq:tags/mycommunity`
+    * 例：`/content/cq:tags/mycommunity`
 
-   * **読み取り**&#x200B;列の `checkbox` を選択します
-   * 「**保存**」を選択
+  * **読み取り**&#x200B;列の `checkbox` を選択します
+  * 「**保存**」を選択
 
 ![chlimage_1-204](assets/chlimage_1-204.png)
 
 * すべてのパブリッシュインスタンスが同じ権限となるようにします
 
-   * 1 つのアプローチは、オーサー環境で名前空間の[パッケージを作成](/help/sites-administering/package-manager.md#package-manager)することです
+  * 1 つのアプローチは、オーサー環境で名前空間の[パッケージを作成](/help/sites-administering/package-manager.md#package-manager)することです
 
-      * `Advanced` タブの `AC Handling` で、`Overwrite` を選択
+    * `Advanced` タブの `AC Handling` で、`Overwrite` を選択
 
-   * パッケージをレプリケートします
+  * パッケージをレプリケートします
 
-      * パッケージマネージャーから `Replicate` を選択します
+    * パッケージマネージャーから `Replicate` を選択します
 
 ## 他の言語でのタグの管理 {#managing-tags-in-different-languages}
 
@@ -285,7 +294,7 @@ AEM 内のタグには以下のような機能があります。
 
 次に、タグ **Animals**&#x200B;の`title`を英語からドイツ語とフランス語に翻訳する方法を説明します。
 
-最初に、**Stock Photography**&#x200B;名前空間の下にあるタグを選択し、**`Edit`** アイコンを選択します（[&#x200B; タグの編集](#editing-tags) セクションを参照）。
+最初に、**Stock Photography**&#x200B;名前空間の下にあるタグを選択し、**`Edit`** アイコンを選択します（[ タグの編集](#editing-tags) セクションを参照）。
 
 タグを編集パネルで、タグのタイトルを翻訳する言語を選択できます。
 

@@ -9,13 +9,29 @@ role: Developer
 exl-id: e861d848-b0b7-4ae9-a56d-c0957ec95730
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 100%
-
 ---
-
 # PDF ユーティリティサービス Java API クイックスタート（SOAP） {#pdf-utilities-service-java-apiquick-start-soap}
 
 PDF ユーティリティサービスでは、次のクイックスタートが利用できます。
@@ -28,13 +44,13 @@ PDF ユーティリティサービスでは、次のクイックスタートが�
 
 [クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの保存スタイルの設定](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[クイックスタート（SOAP モード）：PDF ドキュメントの非表示情報をすべて削除](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[クイックスタート（SOAP モード）：PDF ドキュメントのサニタイズ](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
 AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは、SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」のクイックスタートは、Forms サーバーオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」のクイックスタートは、Forms サーバーのオペレーティングシステムに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントから XDP ドキュメントへの変換 {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
@@ -582,7 +598,7 @@ public class CreatePDFADocument {
 }
 ```
 
-## クイックスタート（SOAP モード）：PDF ドキュメントの非表示情報をすべて削除 {#quick-start-soap-mode-sanitizing-pdf-documents}
+## クイックスタート（SOAP モード）：PDF ドキュメントのサニタイズ {#quick-start-soap-mode-sanitizing-pdf-documents}
 
 次の Java コードの例では、*Loan.pdf* という名前の PDF ドキュメントの非表示情報をすべて削除します。
 

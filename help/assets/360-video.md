@@ -14,18 +14,30 @@ autotag-review: '2026-05-18T18:33:16.243Z'
 TQID: 'https://experienceleague.adobe.com/t3-PFZjnQPbbgNMFEjG7SDwG1Pt1TkvD9wNNYYgaEyE'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: b1c2c8dc-d13a-43c3-9c5b-efc536a708ca
+    internal-label: 360 VR Video
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Intermediate
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 1093
-ht-degree: 91%
-
+source-wordcount: '1223'
+ht-degree: 93%
 ---
-
 # 360/VR ビデオ {#vr-video}
 
 360 度ビデオでは、すべての方向のビューが同時に記録されます。 このタイプのビデオは、全方位カメラやカメラのコレクションを使用して撮影されます。 フラットディスプレイでの再生時には、ユーザーは視野角を制御できます。また、モバイルデバイスでの再生では通常、デバイスビルトインのジャイロスコープ制御を使用します。
@@ -34,7 +46,7 @@ Dynamic Media - Scene7 モードには、360 度ビデオアセット配信の�
 
 この節では、360/VR ビデオビューアを操作して、部屋、物件、場所、風景、医療処置などの没入感のある視聴体験のために、エクイレクタングラー形式のビデオをレンダリングする方法について説明します。
 
-空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、お客様がカメラの表示角度を変更してもバランス（L/R）は変化しません。
+空間オーディオは現在サポートされていません。オーディオをステレオにミックスした場合、ユーザーがカメラの表示角度を変更してもバランス（L/R）は変化しません。
 
 詳しくは、[ビューアプリセットの管理](/help/assets/managing-viewer-presets.md)を参照してください。
 
@@ -42,12 +54,12 @@ Dynamic Media - Scene7 モードには、360 度ビデオアセット配信の�
 
 「[Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS)」を選択して、ブラウザーウィンドウを開き、360 度ビデオを視聴します。 ビデオ再生中にマウスポインターを新しい位置にドラッグすると、表示角度が変更されます。
 
-![国際宇宙ステーションとその背後にある地球と太陽を含む360 ビデオのサンプル。](assets/6_5_360videoiss_simplified.png)
+![宇宙空間に浮かぶ国際宇宙ステーションとその背後にある地球と太陽を含む 360 ビデオサンプル。](assets/6_5_360videoiss_simplified.png)
 *宇宙ステーション 360*&#x200B;からのビデオフレーム
 
 ## 360/VR ビデオと Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
-Adobe Premier Pro を使用して、360/VR フッテージを表示および編集できます。 例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
+Adobe Premiere Pro を使用して、360/VR フッテージを表示および編集できます。 例えば、シーン内にロゴやテキストを適切に配置したり、エクイレクタングラー形式のメディアに特化して設計されたエフェクトやトランジションを適用したりできます。
 
 [360/VR ビデオの編集](https://helpx.adobe.com/jp/premiere-pro/how-to/edit-360-vr-video.html)を参照してください。
 
@@ -69,14 +81,14 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
    * できれば、元の 360 ビデオコンテンツの解像度は次のいずれかにしてください。
 
-      * 1080p - 1920 x 1080：フル HD または FHD 解像度と呼ばれます。
-      * 2160p - 3840 x 2160：4K、UHD または Ultra HD 解像度と呼ばれます。 この大きなディスプレイ解像度は、ハイエンドのテレビやコンピューターモニターでよく見られます。 2160p 解像度がよく「4K」と呼ばれるのは、その幅が 4000 ピクセルに近いからです。 つまり、そのピクセル数は 1080p の 4 倍になります。
+     * 1080p - 1920 x 1080：フル HD または FHD 解像度と呼ばれます。
+     * 2160p - 3840 x 2160：4K、UHD または Ultra HD 解像度と呼ばれます。 この大きなディスプレイ解像度は、ハイエンドのテレビやコンピューターモニターでよく見られます。 2160p 解像度がよく「4K」と呼ばれるのは、その幅が 4000 ピクセルに近いからです。 つまり、そのピクセル数は 1080p の 4 倍になります。
 
    * より高品質のレンディションを含む[カスタムアダプティブビデオプロファイルを作成](/help/assets/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming)します。 例えば、次の 3 つの設定を含むアダプティブビデオプロファイルを作成します。
 
-      * width=auto; height=720; bitrate=2500 kbps
-      * width=auto; height=1080; bitrate=5000 kbps
-      * width=auto; height=1440; bitrate=6600 kbps
+     * width=auto; height=720; bitrate=2500 kbps
+     * width=auto; height=1080; bitrate=5000 kbps
+     * width=auto; height=1440; bitrate=6600 kbps
 
    * 360 ビデオアセット専用のフォルダー内の 360 ビデオコンテンツを処理します。
 
@@ -84,7 +96,7 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
 1. [フォルダーにビデオをアップロードします](/help/assets/managing-video-assets.md#upload-and-preview-video-assets)。
 
-## 360 ビデオのデフォルト縦横比のオーバーライド  {#overriding-the-default-aspect-ratio-of-videos}
+## 360 ビデオのデフォルトアスペクト比の上書き  {#overriding-the-default-aspect-ratio-of-videos}
 
 アップロードしたアセットを、360 ビデオビューアで使用する 360 ビデオにするには、アセットの縦横比が 2 である必要があります。
 
@@ -92,8 +104,8 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
 * `/conf/global/settings/cloudconfigs/dmscene7/jcr:content`
 
-   * **プロパティタイプ**：Double
-   * **値**：縦横比を表す浮動小数点（デフォルトは 2.0）。
+  * **プロパティタイプ**：Double
+  * **値**：縦横比を表す浮動小数点（デフォルトは 2.0）。
 
 このプロパティの設定が完了すると、既存のビデオと新しくアップロードされたビデオの両方で、すぐに設定が有効になります。
 
@@ -109,9 +121,9 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
 360 ビデオの設定が完了したら、このビデオを公開できます。
 
-「[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)」を参照してください。
-「[Web アプリケーションへのURLのリンク &#x200B;](/help/assets/linking-urls-to-yourwebapplication.md)」を参照してください。インタラクティブコンテンツに相対URL （特にExperience Manager Sites ページへのリンク）を含むリンクがある場合、URL ベースのリンクは使用できません。
-[&#x200B; ページへのDynamic Media Assetsの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
+[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)を参照してください。
+[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)を参照してください。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)を参照してください。
 
 **360 ビデオをプレビューするには：**
 
@@ -136,7 +148,7 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 
      バーチャルリアリティ（VR）ビデオは、バーチャルリアリティヘッドセットで視聴する、没入感のあるビデオコンテンツです。 通常のビデオと同様に、360 度ビデオカメラを使用してビデオを録画またはキャプチャする際、最初に VR ビデオを作成します。
 
-   ![宇宙空間に浮かぶ国際宇宙ステーションのクローズアップ画面、背景には地球と太陽が部分的に見える](assets/6_5_360video-preview-video360vr.png)
+   ![地球と太陽の一部が背景に見える、宇宙空間に浮かぶ国際宇宙ステーションの拡大図のスクリーンショット](assets/6_5_360video-preview-video360vr.png)
    *360 VR ビデオのスクリーンショット。*
 
 1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
@@ -146,6 +158,6 @@ Adobe Experience Manager にアップロードされた 360 ビデオアセッ�
 360 ビデオを公開して使用できるようにします。 360 ビデオを公開すると、URL と埋め込みコードがアクティベートされます。 また、スケーラブルで効率の良い配信のために CDN と統合された Dynamic Media クラウドにも、360 ビデオが公開されます。
 
 360 ビデオの公開方法について詳しくは、[Dynamic Media アセットの公開](/help/assets/publishing-dynamicmedia-assets.md)を参照してください。
-「[Web ページへのビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)」も参照してください。
-[Web アプリケーションへのURLのリンク &#x200B;](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。インタラクティブコンテンツに相対URL （特にExperience Manager Sites ページへのリンク）を含むリンクがある場合、URL ベースのリンクは使用できません。
-[&#x200B; ページへのDynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。
+[Web ページへの ビデオビューアまたは画像ビューアの埋め込み](/help/assets/embed-code.md)も参照してください。
+[Web アプリケーションへの URL のリンク](/help/assets/linking-urls-to-yourwebapplication.md)も参照してください。 インタラクティブコンテンツに相対 URL のリンク（特に Experience Manager Sites ページへのリンク）がある場合、URL ベースのリンク方法は使用できません。
+[ページへの Dynamic Media アセットの追加](/help/assets/adding-dynamic-media-assets-to-pages.md)も参照してください。

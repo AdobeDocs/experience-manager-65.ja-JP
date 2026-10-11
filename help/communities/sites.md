@@ -9,18 +9,27 @@ role: Admin
 exl-id: 05a944a3-adb1-47b4-b4a5-15bac91c995e
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 3%
 ---
 # サイトテンプレート {#site-templates}
 
-サイトテンプレートコンソールは、[&#x200B; グループテンプレート &#x200B;](tools-groups.md) コンソールと似ています。このコンソールは、コミュニティグループにとって関心のある機能に焦点を当てています。
+サイトテンプレートコンソールは、[ グループテンプレート ](tools-groups.md) コンソールと似ています。このコンソールは、コミュニティグループにとって関心のある機能に焦点を当てています。
 
 >[!NOTE]
 >
->[&#x200B; コミュニティサイト &#x200B;](sites-console.md)、[&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md)、[&#x200B; コミュニティグループテンプレート &#x200B;](tools-groups.md)、[&#x200B; コミュニティ関数](functions.md)の作成用コンソールは、オーサー環境でのみ使用できます。
+>[ コミュニティサイト ](sites-console.md)、[ コミュニティサイトテンプレート ](sites.md)、[ コミュニティグループテンプレート ](tools-groups.md)、[ コミュニティ関数](functions.md)の作成用コンソールは、オーサー環境でのみ使用できます。
 
 ## サイトテンプレートコンソール {#site-templates-console}
 
@@ -28,7 +37,7 @@ ht-degree: 3%
 
 * グローバルナビゲーションから：**[!UICONTROL ツール/コミュニティ/サイトテンプレート]**
 
-このコンソールには、[&#x200B; コミュニティサイト &#x200B;](sites-console.md)を作成できるテンプレートが表示され、新しいサイトテンプレートを作成できます。
+このコンソールには、[ コミュニティサイト ](sites-console.md)を作成できるテンプレートが表示され、新しいサイトテンプレートを作成できます。
 
 ![site-template](assets/site-template.png)
 
@@ -64,11 +73,11 @@ ht-degree: 3%
 
 ### 構造 {#structure}
 
-![&#x200B; サイト構造](assets/site-structure.png)
+![ サイト構造](assets/site-structure.png)
 
 コミュニティ機能を追加するには、サイトメニューリンクが表示される順序で、右側から左側にドラッグします。 スタイルは、サイトの作成中にテンプレートに適用されます。
 
-例えば、ホームページが必要な場合は、ライブラリからページ関数をドラッグし、テンプレートビルダーの下にドロップします。 これにより、ページ設定ダイアログが開きます。 設定ダイアログについて詳しくは、[関数コンソール &#x200B;](functions.md)を参照してください。
+例えば、ホームページが必要な場合は、ライブラリからページ関数をドラッグし、テンプレートビルダーの下にドロップします。 これにより、ページ設定ダイアログが開きます。 設定ダイアログについて詳しくは、[関数コンソール ](functions.md)を参照してください。
 
 このテンプレートに基づいて、コミュニティサイトに必要なその他のコミュニティ機能を引き続きドラッグ&amp;ドロップします。
 
@@ -78,9 +87,9 @@ page関数は空のページを提供します。 グループ機能を使用す
 >
 >グループ関数は、サイト構造内の最初の関数でも唯一の関数でもない&#x200B;*必要があります。*
 >
->[&#x200B; ページ関数](functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
+>[ ページ関数](functions.md#page-function)などの他の関数を最初に含めてリストする必要があります。
 
-![&#x200B; サイトエディター](assets/site-editor.png)
+![ サイトエディター](assets/site-editor.png)
 
 ### グループ機能のグループテンプレート {#group-templates-for-groups-function}
 
@@ -98,6 +107,6 @@ page関数は空のページを提供します。 グループ機能を使用す
 
 ## サイトテンプレートを編集 {#edit-site-template}
 
-メインの[&#x200B; サイトテンプレートコンソール &#x200B;](#site-templates-console)でサイトテンプレートを表示する場合、既存のサイトテンプレートを編集用に選択できます。
+メインの[ サイトテンプレートコンソール ](#site-templates-console)でサイトテンプレートを表示する場合、既存のサイトテンプレートを編集用に選択できます。
 
-このプロセスは、[&#x200B; サイトテンプレートの作成](#create-site-template)と同じパネルを提供します。
+このプロセスは、[ サイトテンプレートの作成](#create-site-template)と同じパネルを提供します。

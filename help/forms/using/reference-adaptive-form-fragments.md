@@ -8,13 +8,31 @@ exl-id: 933c164e-7c39-4d2e-834b-53a3c2b4ec90
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '407'
 ht-degree: 100%
-
 ---
-
 # 参照用のアダプティブフォームフラグメント{#reference-adaptive-form-fragments}
 
 [アダプティブフォームフラグメント](../../forms/using/adaptive-form-fragments.md)は、フォームの作成時に使用できるフィールドのグループまたはフィールドのグループを含むパネルです。 これを使用してフォームを簡単にすばやく作成できます。 サイドバーのアセットブラウザーを使用して、アダプティブフォームフラグメントをフォームにドラッグ＆ドロップし、それをフォームエディターで編集できます。
@@ -30,7 +48,7 @@ ht-degree: 100%
 * 収入と支出
 * 名前
 * 利用条件
-* 署名付き利用条件
+* 手書き付き利用条件
 
 パッケージをインストールすると、フォームとドキュメントの下に参照用フラグメントを含む参照用フラグメントフォルダーが作成されます。 パッケージのインストールについては、[パッケージの作業方法](/help/sites-administering/package-manager.md)を参照してください。
 
@@ -38,7 +56,7 @@ ht-degree: 100%
 
 ## アドレス {#address}
 
-アドレスを指定するためのフィールドが含まれています。 使用できるフィールドは、アドレス、郵便番号、市、州および国です。 指定された米国の郵便番号に対応する市と州を入力する事前設定済みの web サービスも含まれています。
+郵送先住所を指定するためのフィールドが含まれています。 使用できるフィールドは、アドレス、郵便番号、市、州および国です。 指定された米国の郵便番号に対応する市と州を入力する事前設定済みの web サービスも含まれています。
 
 ![住所フラグメント](assets/address.png)
 
@@ -115,7 +133,7 @@ ht-degree: 100%
 
 ## 名前 {#name}
 
-称号、名、ミドルネームおよび姓を指定するためのフィールドが含まれています。
+敬称、名、ミドルネームおよび姓を指定するためのフィールドが含まれています。
 
 ![名前フラグメント](assets/name.png)
 
@@ -137,7 +155,7 @@ ht-degree: 100%
 ](assets/tnc-1.png)
 -->
 
-## 署名付き利用条件 {#terms-conditions-with-scribble}
+## 手書き付き利用条件 {#terms-conditions-with-scribble}
 
 ユーザーがフォームを送信する前に同意して署名する利用条件を指定します。
 

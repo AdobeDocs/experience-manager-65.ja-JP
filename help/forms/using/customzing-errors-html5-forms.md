@@ -7,37 +7,52 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: c4ae53a3-8de1-4985-a73e-829749de9814
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '508'
 ht-degree: 100%
-
 ---
-
 # HTML5 フォームのエラーメッセージのカスタマイズ {#customizing-error-messages-for-html-forms}
 
 出荷時の設定の状態の HTML5 フォームでは、エラーメッセージおよび警告の位置と表示方法（フォントおよび色）は固定されており、エラーは選択したフィールドのみに、1 つだけ表示されます。
 
 この記事では、以下のことができるように HTML5 フォームのエラーメッセージをカスタマイズする手順が説明されています。
 
-* エラーメッセージの外観と位置を変更する手順を説明します。エラーの表示位置は、フィールドの上側、下側、または右側から選べます。
+* エラーメッセージの外観と位置を変更する手順を説明します。 エラーの表示位置は、フィールドの上側、下側、または右側から選べます。
 * 複数のフィールドのエラーメッセージを任意の時点で表示できます。
 * フィールドが選択されているかどうかに関わらずエラーを表示できます。
 
-## エラーメッセージのカスタマイズ {#customizing-error-messages-nbsp}
+## エラーメッセージのカスタマイズ  {#customizing-error-messages-nbsp}
 
 エラーメッセージをカスタマイズする前に、添付のパッケージ（CustomErrorManager-1.0-SNAPSHOT.zip）をダウンロードして解凍します。
 
-パッケージを抽出したら、CustomErrorManager-1.0-SNAPSHOT フォルダーを開きます。jcr_root および META-INF フォルダーが含まれます。これらのフォルダーには、エラーメッセージのカスタマイズに必要な CSS ファイルと .JS ファイルが含まれています。
+パッケージを抽出したら、CustomErrorManager-1.0-SNAPSHOT フォルダーを開きます。 jcr_root および META-INF フォルダーが含まれます。 これらのフォルダーには、エラーメッセージのカスタマイズに必要な CSS ファイルと .JS ファイルが含まれています。
 
 [ファイルを入手](assets/customerrormanager-1.0-snapshot.zip)
 
-### エラーメッセージの位置のカスタマイズ {#customizing-the-position-of-error-messages-nbsp}
+### エラーメッセージの位置のカスタマイズ  {#customizing-the-position-of-error-messages-nbsp}
 
-エラーメッセージの位置をカスタマイズするには、それぞれのエラーおよび警告フィールドに対して &lt;div> タグを追加し、&lt;div> タグを左側または右側に配置して、&lt;div> タグに CSS スタイルを適用します。詳しくは、以下に示す手順を参照してください。
+エラーメッセージの位置をカスタマイズするには、それぞれのエラーおよび警告フィールドに対して &lt;div> タグを追加し、&lt;div> タグを左側または右側に配置して、&lt;div> タグに CSS スタイルを適用します。 詳しくは、以下に示す手順を参照してください。
 
 1. `CustomErrorManager-1.0-SNAPSHOT` フォルダーに移動し、`etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` フォルダーを開きます。
-1. `customErrorManager.js` ファイルを編集用として開きます。ファイル内の `markError` 関数は、次のパラメーターを受け付けます。
+1. `customErrorManager.js` ファイルを編集用として開きます。 ファイル内の `markError` 関数は、次のパラメーターを受け付けます。
 
    |   |  |
    |---|---|
@@ -45,7 +60,7 @@ ht-degree: 100%
    | msg | エラーメッセージを格納します |
    | type | エラーか警告かを示します |
 
-1. 出荷時の設定での実装では、エラーメッセージはフィールドの右側に表示されます。エラーメッセージを上側に表示するには、次のコードを使用します。
+1. 出荷時の設定での実装では、エラーメッセージはフィールドの右側に表示されます。 エラーメッセージを上側に表示するには、次のコードを使用します。
 
    ```javascript
    markError: function (jqWidget, msg, type) {
@@ -75,18 +90,18 @@ ht-degree: 100%
    ```
 
 1. ファイルを保存して閉じます。
-1. `CustomErrorManager-1.0-SNAPSHOT` フォルダーに移動し、jcr_root フォルダーと META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
+1. `CustomErrorManager-1.0-SNAPSHOT` フォルダーに移動し、jcr_root フォルダーと META-INF フォルダーのアーカイブを作成します。 アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使用し、パッケージをアップロードしてインストールします。
 
-## 複数のフィールドのエラーメッセージを表示 {#display-error-messages-for-multiple-fields-nbsp}
+## 複数のフィールドのエラーメッセージを表示  {#display-error-messages-for-multiple-fields-nbsp}
 
-すべてのフィールドのエラーメッセージを同時に表示するには、添付されているパッケージを使用します。エラーメッセージを単独で表示するには、デフォルトのプロファイルを使用します。
+すべてのフィールドのエラーメッセージを同時に表示するには、添付されているパッケージを使用します。 エラーメッセージを単独で表示するには、デフォルトのプロファイルを使用します。
 
-### エラーメッセージの表示方法のカスタマイズ  {#customizing-the-appearance-of-error-messages-nbsp}
+### エラーメッセージの表示方法のカスタマイズ  {#customizing-the-appearance-of-error-messages-nbsp}
 
 1. etc\clientlibs\mf-custom-error-manager\CustomErrorManager\css フォルダーに移動します。
 
-1. sample.css ファイルを開いて編集します。CSS ファイルには、#customError と #customWarning の 2 つの ID が含まれています。これらの ID を使用して、色やフォントサイズなどの様々なプロパティを変更できます。
+1. sample.css ファイルを開いて編集します。 CSS ファイルには、#customError と #customWarning の 2 つの ID が含まれています。 これらの ID を使用して、色やフォントサイズなどの様々なプロパティを変更できます。
 
    次のコードを使用して、エラーメッセージや警告メッセージのフォントサイズと色を変更します。
 
@@ -113,10 +128,10 @@ ht-degree: 100%
    ```
 
 1. ファイルを保存して閉じます。
-1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
+1. CustomErrorManager-1.0-SNAPSHOT フォルダーに移動し、jcr_root および META-INF フォルダーのアーカイブを作成します。 アーカイブの名前を CustomErrorManager-1.0-SNAPSHOT.zip に変更します。
 1. パッケージマネージャーを使用し、パッケージをアップロードしてインストールします。
 
-## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
+## 新しいプロファイルでフォームをレンダリングします。  {#render-the-form-with-the-new-profile-nbsp}
 
 出荷時の設定では、HTML5 フォームはデフォルトのプロファイル `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;` を使用します。
 

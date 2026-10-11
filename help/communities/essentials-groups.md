@@ -9,7 +9,16 @@ exl-id: f45ae7be-a500-463a-ab3e-81f281651a9d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 4%
@@ -86,9 +95,9 @@ ht-degree: 4%
 
 [Groups関数](functions.md#groups-function)を含むコミュニティサイト構造は、パブリッシュ環境とオーサー環境からの新しい`community groups`の作成をサポートしています。 作成されたコミュニティグループには、グループのメンバーをリストする`community groups member list` コンポーネントが含まれています。
 
-コミュニティ グループ ページのデザインを提供する1つ以上の[&#x200B; コミュニティ グループ テンプレート &#x200B;](tools-groups.md)を、グループ関数に設定できます。 これは、関数が[&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md)に追加されているか、コミュニティグループテンプレート内にネストされている場合に当てはまります。
+コミュニティ グループ ページのデザインを提供する1つ以上の[ コミュニティ グループ テンプレート ](tools-groups.md)を、グループ関数に設定できます。 これは、関数が[ コミュニティサイトテンプレート ](sites.md)に追加されているか、コミュニティグループテンプレート内にネストされている場合に当てはまります。
 
-複数のコミュニティグループテンプレートを含めると、選択が行われます。 すなわち、コミュニティサイト用にコミュニティグループを作成する際に、許可されたユーザに提示されるデザインの選択である。 作成者については、[&#x200B; コミュニティグループ &#x200B;](creating-groups.md)の節を参照してください。
+複数のコミュニティグループテンプレートを含めると、選択が行われます。 すなわち、コミュニティサイト用にコミュニティグループを作成する際に、許可されたユーザに提示されるデザインの選択である。 作成者については、[ コミュニティグループ ](creating-groups.md)の節を参照してください。
 
 ### ネストされたグループ {#nested-groups}
 

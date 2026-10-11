@@ -9,13 +9,22 @@ exl-id: af6cf1e0-8901-4621-9f72-e791cb8d68ae
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '322'
 ht-degree: 100%
-
 ---
-
 # 画像エディター{#image-editor}
 
 画像エディターは AEM の中核となる要素であり、コンテンツ作成者はこれを使用することで、画像を容易に操作できます。
@@ -26,11 +35,11 @@ ht-degree: 100%
 
 ## 画像マップの相対単位 {#relative-units-for-image-map}
 
-画像マップ領域は、絶対単位および相対単位として画像エディターに保持されます。相対単位は、レスポンシブ画像コンポーネント内のクライアントサイドで画像マップのサイズを（画像サイズに対して）動的に変更するデータ属性として指定する場合に役立ちます。
+画像マップ領域は、絶対単位および相対単位として画像エディターに保持されます。 相対単位は、レスポンシブ画像コンポーネント内のクライアントサイドで画像マップのサイズを（画像サイズに対して）動的に変更するデータ属性として指定する場合に役立ちます。
 
 ### imageMap プロパティ {#imagemap-property}
 
-画像マップの座標は、画像エディターで `imageMap` プロパティとして JCR に保持されます。このエディターは、以下の形式から構成されています。
+画像マップの座標は、画像エディターで `imageMap` プロパティとして JCR に保持されます。 このエディターは、以下の形式から構成されています。
 
 このプロパティは、マップ領域を次のように格納します。
 
@@ -53,7 +62,7 @@ ht-degree: 100%
 
 ## MIME タイプによるプラグインの有効化 {#enabling-plugins-by-mime-type}
 
-特定の状況では、サーバーサイドの処理がサポートされないため、特定の MIME タイプに対してオーサリングアクションを制限する必要があります。例えば、SVG 画像の編集は許可されない場合があります。
+特定の状況では、サーバーサイドの処理がサポートされないため、特定の MIME タイプに対してオーサリングアクションを制限する必要があります。 例えば、SVG 画像の編集は許可されない場合があります。
 
 画像エディター内のプラグインは、個々のプラグインの設定ノードで `supportedMimeTypes` プロパティを設定することで、MIME タイプによって選択的に有効にできます。
 

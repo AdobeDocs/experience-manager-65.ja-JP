@@ -11,25 +11,34 @@ autotag-review: '2026-05-18T18:42:08.975Z'
 TQID: 'https://experienceleague.adobe.com/bNzzsvSVfI6u9wYojbIgKckxmceQk3bGzfCMWNZMUQ4'
 product_v2:
   - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-source-git-commit: 9c96b6744c7af2f061b4dfbf403560047485f9b5
+    internal-label: Intermediate
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: 264
+source-wordcount: '264'
 ht-degree: 100%
-
 ---
-
 # Dynamic Media のセットアップ {#setting-up-dynamic-media}
 
-[Dynamic Media ](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。 Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
+[Dynamic Media ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html)では、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信し、アセットを管理できます。これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。 Dynamic Media は、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
 
 >[!NOTE]
 >
->このドキュメントでは、Dynamic Media を Adobe Experience Manager に直接統合して使用する際の機能について説明します。 Dynamic Media Classic を Experience Manager に統合して使用する場合は、[Dynamic Media Classic 統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
+>このドキュメントでは、Adobe Experience Manager に直接統合されている Dynamic Media の機能について説明します。 Dynamic Media Classic を Experience Manager に統合して使用する場合は、[Dynamic Media Classic 統合ドキュメント](/help/sites-administering/scene7.md)を参照してください。
 >
 >Experience Manager を Dynamic Media Classic と Dynamic Media の両方に統合して使用する場合は、[両方を利用するシナリオ](/help/sites-administering/scene7.md#dual-use-scenario)を参照してください。
 

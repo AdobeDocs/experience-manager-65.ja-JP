@@ -9,13 +9,20 @@ exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '695'
 ht-degree: 2%
-
 ---
-
 # 初期セットアップ {#initial-setup}
 
 ## オーサーインスタンスとパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
@@ -31,21 +38,21 @@ AEM Communitiesの場合，
 
 * オーサー環境は次の目的で使用されます。
 
-   * サイト、テンプレート、コンポーネントの開発。
-   * 管理タスクと設定タスク：
+  * サイト、テンプレート、コンポーネントの開発。
+  * 管理タスクと設定タスク：
 
 * パブリッシュ環境は次の目的で使用されます。
 
-   * コンテンツの投稿とモデレーションを行うコミュニティ体験。
-   * コミュニティグループ、メンバー、メンバーグループの作成。
+  * コンテンツの投稿とモデレーションを行うコミュニティ体験。
+  * コミュニティグループ、メンバー、メンバーグループの作成。
 
 >[!NOTE]
 >
->AEMに詳しくない場合は、[基本処理](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[&#x200B; ページのオーサリングに関するクイックガイド &#x200B;](../../help/sites-authoring/qg-page-authoring.md)をご覧ください。
+>AEMに詳しくない場合は、[基本処理](../../help/sites-authoring/basic-handling.md)に関するドキュメントと、[ ページのオーサリングに関するクイックガイド ](../../help/sites-authoring/qg-page-authoring.md)をご覧ください。
 
 ## 最新のCommunities リリースのインストール {#install-latest-communities-release}
 
-このチュートリアルでは、AEM Communities 6.2機能パックバージョン 1.10をベースとする[&#x200B; エンゲージメントコミュニティサイト &#x200B;](overview.md#engagement-community)を作成します。
+このチュートリアルでは、AEM Communities 6.2機能パックバージョン 1.10をベースとする[ エンゲージメントコミュニティサイト ](overview.md#engagement-community)を作成します。
 
 最新の機能パックがインストールされていることを確認するには、次のサイトにアクセスしてください。
 
@@ -67,11 +74,11 @@ Adobe Analyticsとの連携はオプションです。
 
 ## トンネルサービスを有効にする {#enable-the-tunnel-service}
 
-オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼できるコミュニティメンバーに役割を割り当てることができます。 トンネルサービスでは、オーサー環境の[&#x200B; メンバーおよびグループコンソール &#x200B;](members.md)からコミュニティメンバーにアクセスすることもできます。
+オーサー環境でコミュニティサイトを作成する場合、トンネルサービスを使用すると、パブリッシュ環境に登録されている信頼できるコミュニティメンバーに役割を割り当てることができます。 トンネルサービスでは、オーサー環境の[ メンバーおよびグループコンソール ](members.md)からコミュニティメンバーにアクセスすることもできます。
 
-この規則は、パブリッシュ環境で作成されたメンバーとメンバーグループをオーサー環境で&#x200B;*not*&#x200B;に再作成する場合に適用されます。 詳しくは、[&#x200B; ユーザーとユーザーグループの管理](users.md)を参照してください。
+この規則は、パブリッシュ環境で作成されたメンバーとメンバーグループをオーサー環境で&#x200B;*not*&#x200B;に再作成する場合に適用されます。 詳しくは、[ ユーザーとユーザーグループの管理](users.md)を参照してください。
 
-**Author** インスタンスでトンネルサービスを有効にする簡単な手順については、[&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)を参照してください。
+**Author** インスタンスでトンネルサービスを有効にする簡単な手順については、[ トンネルサービス ](deploy-communities.md#tunnel-service-on-author)を参照してください。
 
 ## コミュニティ管理者の役割 {#community-administrator-role}
 
@@ -83,23 +90,23 @@ Adobe Analyticsとの連携はオプションです。
 
 * オーサーインスタンスで
 
-   * 例：[http://localhost:4502/](http://localhost:4503/)
+  * 例：[http://localhost:4502/](http://localhost:4503/)
 
 * 管理者権限でログイン
 
-   * 例えば、ユーザー名&#39;admin&#39; / パスワード &#39;admin&#39;などです
+  * 例えば、ユーザー名&#39;admin&#39; / パスワード &#39;admin&#39;などです
 
 * メインコンソールから、**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL ユーザー]**&#x200B;に移動します。
 * **編集** メニューから、**[!UICONTROL ユーザーを追加]**&#x200B;を選択します
 
 * `Create New User` ダイアログで、次のように入力します。
 
-   * **[!UICONTROL ID]**: sirius
-   * **[!UICONTROL 電子メールアドレス]**: sirius.nilson@mailinator.com
-   * **[!UICONTROL パスワード]**：password
-   * **[!UICONTROL パスワードの確認（&amp;A）;]**: パスワード
-   * **[!UICONTROL 名]**: シリウス
-   * **[!UICONTROL 姓]**: Nilson
+  * **[!UICONTROL ID]**: sirius
+  * **[!UICONTROL 電子メールアドレス]**: sirius.nilson@mailinator.com
+  * **[!UICONTROL パスワード]**：password
+  * **[!UICONTROL パスワードの確認（&amp;A）;]**: パスワード
+  * **[!UICONTROL 名]**: シリウス
+  * **[!UICONTROL 姓]**: Nilson
 
 ### コミュニティ管理者グループへのSiriusの割り当て {#assign-sirius-to-community-administrators-group}
 
@@ -107,8 +114,8 @@ Adobe Analyticsとの連携はオプションです。
 
 * 検索するには「C」と入力してください
 
-   * `Community Administrators` を選択します。
-   * `Community Enablement Managers` を選択します。
+  * `Community Administrators` を選択します。
+  * `Community Enablement Managers` を選択します。
 
 * 「**[!UICONTROL 保存]**」を選択します。
 
@@ -118,18 +125,18 @@ Adobe Analyticsとの連携はオプションです。
 
 FacebookやTwitterでのソーシャルログインのデモ版を使用する前に、次のことが必要です
 
-1. 修正パックまたは[最新の機能パック &#x200B;](deploy-communities.md#latestfeaturepack)をインストールします（2017年3月のFacebook APIの変更点）。
-1. [&#x200B; パブリッシュ環境でOAuth プロバイダー](social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
+1. 修正パックまたは[最新の機能パック ](deploy-communities.md#latestfeaturepack)をインストールします（2017年3月のFacebook APIの変更点）。
+1. [ パブリッシュ環境でOAuth プロバイダー](social-login.md#adobe-granite-oauth-authentication-handler)を有効にします。
 
 本番サーバーの場合は、ソーシャルログインを提供するために必要なクラウドサービスを作成する必要があります。
 
-[FacebookおよびTwitterでのソーシャルログイン &#x200B;](social-login.md)を参照してください。
+[FacebookおよびTwitterでのソーシャルログイン ](social-login.md)を参照してください。
 
 ## チュートリアルタグの作成 {#create-tutorial-tags}
 
 タグを作成して、`Tutorial`のタグ名前空間を使用して、エンゲージメントチュートリアルに使用できるようにします。
 
-[&#x200B; タグ付けコンソール &#x200B;](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
+[ タグ付けコンソール ](../../help/sites-administering/tags.md#tagging-console)を使用して、次のタグを作成します。
 
 * `Tutorial: Sports / Baseball`
 * `Tutorial: Sports / Gymnastics`
@@ -142,8 +149,8 @@ FacebookやTwitterでのソーシャルログインのデモ版を使用する�
 
 次に、指示に従って次の操作を行います。
 
-1. [&#x200B; タグ権限を設定](../../help/sites-administering/tags.md#setting-tag-permissions)。
-1. [&#x200B; タグを公開](../../help/sites-administering/tags.md#publishing-tags)。
+1. [ タグ権限を設定](../../help/sites-administering/tags.md#setting-tag-permissions)。
+1. [ タグを公開](../../help/sites-administering/tags.md#publishing-tags)。
 
 AEM Communities入門チュートリアル用に作成されたタグのサンプルパッケージ
 
@@ -151,8 +158,8 @@ AEM Communities入門チュートリアル用に作成されたタグのサン�
 
 ## MongoDB for UGC Common Store {#mongodb-for-ugc-common-store}
 
-[MSRP](msrp.md) （MongoDB）を[共通ストア &#x200B;](working-with-srp.md)として設定して、パブリッシュ環境とオーサー環境のいずれかからすべてのUGCを柔軟にモデレートできるようにすることをお勧めしますが、オプションで設定することをお勧めします。
+[MSRP](msrp.md) （MongoDB）を[共通ストア ](working-with-srp.md)として設定して、パブリッシュ環境とオーサー環境のいずれかからすべてのUGCを柔軟にモデレートできるようにすることをお勧めしますが、オプションで設定することをお勧めします。
 
-手順については、[&#x200B; デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
+手順については、[ デモ用MongoDBのセットアップ方法](demo-mongo.md)を参照してください。
 
-デフォルトでは、オーサーインスタンスとパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が[JCR Tar ストレージ &#x200B;](../../help/sites-deploying/platform.md)に保存され、[JSRP](jsrp.md)を使用してアクセスされます。 JSRPは一般的なストアではないため、UGCは入力されたインスタンスでのみ表示されます。 通常、UGCはパブリッシュインスタンスで入力され、オーサー環境では表示されないため、パブリッシュインスタンスを使用する必要があるすべてのモデレーションタスクが発生します。
+デフォルトでは、オーサーインスタンスとパブリッシュインスタンスをインストールすると、ユーザー生成コンテンツ（UGC）が[JCR Tar ストレージ ](../../help/sites-deploying/platform.md)に保存され、[JSRP](jsrp.md)を使用してアクセスされます。 JSRPは一般的なストアではないため、UGCは入力されたインスタンスでのみ表示されます。 通常、UGCはパブリッシュインスタンスで入力され、オーサー環境では表示されないため、パブリッシュインスタンスを使用する必要があるすべてのモデレーションタスクが発生します。

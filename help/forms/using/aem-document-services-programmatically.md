@@ -8,22 +8,40 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '6595'
 ht-degree: 99%
-
 ---
-
 # AEM Document Services をプログラムとして使用する  {#using-aem-document-services-programmatically}
 
 このドキュメントのサンプルと例は、OSGi 環境の AEM Forms で AEM ドキュメントサービスを理解し、使用する際に役立ちます。 JEE 上の AEM Forms 環境のサンプルと例については、以下を参照してください。
 
-* [Signature Service Java API Quick Start](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=ja#programming-aem-forms-jee)
+* [Signature Service Java API クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/signature-service-java-api-quick.html?lang=ja#programming-aem-forms-jee)
 
-* [Encryption Service Java API Quick Start](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?lang=ja#developer-reference)
+* [Encryption Service Java API クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/encryption-service-java-api-quick.html?lang=ja#developer-reference)
 
-* [Acrobat Reader extensions Service Java API Quick Start](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=ja#developer-reference)
+* [Acrobat Reader extensions Service Java API クイックスタート](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=ja#developer-reference)
 
 ## 前提条件 {#prerequisite}
 
@@ -75,7 +93,7 @@ DocAssurance サービスを使用して、以下の操作を実行できます�
 
 ### 非表示署名フィールドの追加 {#adding-an-invisible-signature-field}
 
-署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。 署名フィールドは、表示または非表示に設定することができます。 署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。 どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。 プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。 You can add more than one signature field to a PDF document. ただし、それぞれの署名フィールド名は一意である必要があります。
+署名は、署名の画像表示を含むフォームフィールドである署名フィールドに表示されます。 署名フィールドは、表示または非表示に設定することができます。 署名者は既存の署名フィールドを使用することができます。また、プログラムによって署名フィールドを追加することもできます。 どちらの場合においても、PDF ドキュメントに署名するには、署名フィールドが存在している必要があります。 プログラムによって署名フィールドを追加するには、Signature サービス Java API や 署名 Web サービス API を使用します。 PDF ドキュメントに複数の署名フィールドを追加できます。 ただし、それぞれの署名フィールド名は一意である必要があります。
 
 **構文**：`addInvisibleSignatureField(Document inDoc, String signatureFieldName, FieldMDPOptionSpec fieldMDPOptionsSpec, PDFSeedValueOptionSpec seedValueOptionsSpec, UnlockOptions unlockOptions)`
 
@@ -766,7 +784,7 @@ public class GetSignature {
 
 | パラメーター | 説明 |
 |---|---|
-| `inDoc` | PDF を含む document オブジェクトです。 |
+| `inDoc` | PDF を含む document オブジェクトです |
 | `unlockOptions` | 暗号化されたファイルのロックを解除するために必要なパラメーターなどがあります。 ファイルが暗号化されている場合にのみ必要となります。 |
 
 以下の Java コードの例は、PDF ドキュメント内にある署名フィールドの名前を取得します。

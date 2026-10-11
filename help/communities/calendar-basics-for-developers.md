@@ -9,7 +9,16 @@ exl-id: 069e379d-c6fd-49ca-b337-df6fd466e023
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 4%
@@ -62,7 +71,7 @@ ht-degree: 4%
 
 ### カレンダー機能 {#calendar-function}
 
-[&#x200B; カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[特権メンバーユーザーグループ &#x200B;](users.md#privileged-members-group)の識別をサポートしています。
+[ カレンダー関数](functions.md#calendar-function)を含むコミュニティサイト構造には、`calendar` コンポーネントが設定されています。 カレンダー関数は、[特権メンバーユーザーグループ ](users.md#privileged-members-group)の識別をサポートしています。
 
 ### カレンダー投稿へのアクセス（UGC） {#accessing-calendar-posts-ugc}
 
@@ -72,7 +81,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例
-* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピング

@@ -9,13 +9,17 @@ exl-id: 3924bb8f-27cb-4648-8be2-9444e9a58c66
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 4%
-
 ---
-
 # コンテンツの公開／非公開{#publish-unpublish-content}
 
 {{ue-over-mobile}}
@@ -57,4 +61,4 @@ FAIL >>[!NOTE]
 * [AEM Mobile On-demand Services向けAEM コンテンツの開発](/help/mobile/aem-mobile-on-demand.md)
 * [AEM Mobile On-demand Servicesを使用するためのコンテンツの管理](/help/mobile/aem-mobile.md)
 
-オーサリングトピックについて引き続き詳しく知りたい場合は、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング &#x200B;](/help/mobile/mobile-apps-ondemand.md)を参照してください。
+オーサリングトピックについて引き続き詳しく知りたい場合は、[AEM Mobile On-demand Services アプリ用AEM コンテンツのオーサリング ](/help/mobile/mobile-apps-ondemand.md)を参照してください。

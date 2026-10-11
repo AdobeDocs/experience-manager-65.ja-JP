@@ -6,13 +6,29 @@ role: Admin,User
 exl-id: 5da3cc59-4243-4098-b1e0-438304fcd0c5
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 99%
-
 ---
-
 # OSGi 環境における AEM Forms の堅牢化と保護 {#hardening-and-securing-aem-forms-on-osgi-environment}
 
 OSGi サーバー上で AEM Forms を保護するための推奨事項とベストプラクティスについて説明します。
@@ -123,9 +139,9 @@ AEM Forms は非常にカスタマイズ性が高いため、様々な環境で�
 
 パブリッシュノード上で使用可能なアセットには、デフォルトですべてのユーザーがアクセスすることができます。 すべてのアセットで、読み取り専用アクセス権が有効になっています。 匿名アクセスを有効にするには、読み取り専用アクセス権が必要になります。 フォームの表示アクセス権と送信アクセス権を認証済みユーザーだけに制限する場合は、共通グループを使用して、パブリッシュノード上で使用可能なアセットに対する読み取り専用アクセス権を、認証ユーザーに対してのみ付与します。 以下に示す場所／ディレクトリには、保護する必要がある（認証済みユーザーに対する読み取り専用アクセス権が必要な）フォームアセットが保管されています。
 
-* /content/&ast;
-* /etc.clientlibs/fd/&ast;
-* /libs/fd/&ast;
+* /content/&amp;ast;
+* /etc.clientlibs/fd/&amp;ast;
+* /libs/fd/&amp;ast;
 
 ## フォームデータの安全な操作  {#securely-handle-forms-data}
 

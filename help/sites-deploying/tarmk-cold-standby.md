@@ -10,13 +10,22 @@ feature: Administering
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 5575628c54e2e588dfae4c34383af7d6d55ce859
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2696'
 ht-degree: 93%
-
 ---
-
 # TarMK コールドスタンバイによる AEM の実行方法{#how-to-run-aem-with-tarmk-cold-standby}
 
 ## はじめに {#introduction}
@@ -325,7 +334,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 これを行うには、次に示す手順に従います。
 
-1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**&#x200B;bean を使用してコールドスタンバイインスタンスの同期処理を停止します。 この方法について詳しくは、[監視](#monitoring)に関するセクションを参照してください。
+1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**bean を使用してコールドスタンバイインスタンスの同期処理を停止します。 この方法について詳しくは、[モニタリング](#monitoring)に関する節を参照してください。
 1. コールドスタンバイインスタンスを停止します。
 1. ホットフィックスをプライマリインスタンスにインストールします。 ホットフィックスのインストール方法について詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 1. インストール後の問題に対してインスタンスをテストします。
@@ -336,7 +345,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 ## モニタリング {#monitoring}
 
-この機能は、JMX または MBean を使用して情報を公開します。 これにより、[JMX コンソール &#x200B;](/help/sites-administering/jmx-console.md)を使用して、スタンバイとプライマリの現在の状態を調べることができます。 この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
+この機能は、JMX または MBean を使用して情報を公開します。 これにより、[JMX コンソール ](/help/sites-administering/jmx-console.md)を使用して、スタンバイとプライマリの現在の状態を調べることができます。 この情報は、`type org.apache.jackrabbit.oak:type="Standby"` の`Status`という MBean で見ることができます。
 
 **スタンバイ**
 
@@ -389,7 +398,7 @@ TarMK コールドスタンバイのセットアップを作成するには、�
 
 時間の経過と共にリポジトリが過度に増大するのを防ぐために、メンテナンスを定期的に実行することをお勧めします。 コールドスタンバイのリポジトリのメンテナンスを手動で実行するには、次の手順に従います。
 
-1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: ステータス（&quot;スタンバイ&quot;）** Bean を使用して、スタンバイインスタンスのスタンバイプロセスを停止します。 この方法について詳しくは、[監視](/help/sites-deploying/tarmk-cold-standby.md#monitoring)に関する前述のセクションを参照してください。
+1. JMX コンソールに移動し、**org.apache.jackrabbit.oak: ステータス（&quot;スタンバイ&quot;）** Bean を使用して、スタンバイインスタンスのスタンバイプロセスを停止します。 この方法について詳しくは、[モニタリング](/help/sites-deploying/tarmk-cold-standby.md#monitoring)に関する前述の節を参照してください。
 
 1. プライマリの AEM インスタンスを停止します。
 1. プライマリインスタンスで Oak 圧縮ツールを実行します。 詳しくは、[リポジトリの保守](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository)を参照してください。

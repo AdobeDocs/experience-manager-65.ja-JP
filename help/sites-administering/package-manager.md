@@ -9,7 +9,18 @@ content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: c705667e60ccfbc4612ef3212dbe549e6bea66a9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3576'
 ht-degree: 97%
@@ -173,7 +184,7 @@ ht-degree: 97%
 | include | 「include」には、指定したディレクトリ内で、正規表現に一致するすべてのファイルとフォルダーが含まれます。 「include」には、指定したルートパスの下のその他のファイルやフォルダーは含まれ&#x200B;**ません**。 |
 | 除外 | 「exclude」では、正規表現に一致するすべてのファイルとフォルダーが除外されます。 |
 
-パッケージ フィルターは、最初に[&#x200B; パッケージを作成するときに最もよく定義されます。](#creating-a-new-package) ただし、後で編集することもできますが、その後でパッケージを再作成して、新しいフィルター定義に基づいてその内容を更新する必要があります。
+パッケージ フィルターは、最初に[ パッケージを作成するときに最もよく定義されます。](#creating-a-new-package) ただし、後で編集することもできますが、その後でパッケージを再作成して、新しいフィルター定義に基づいてその内容を更新する必要があります。
 
 >[!TIP]
 >
@@ -242,7 +253,7 @@ ht-degree: 97%
 
    ![新規パッケージ](assets/new-package.png)
 
-1. **編集**&#x200B;をクリックして、[&#x200B; パッケージの内容を定義します。](#package-contents) 設定の編集が完了したら、「**保存**」をクリックします。
+1. **編集**&#x200B;をクリックして、[ パッケージの内容を定義します。](#package-contents) 設定の編集が完了したら、「**保存**」をクリックします。
 
 1. これで、パッケージを[ビルド](#building-a-package)できます。
 

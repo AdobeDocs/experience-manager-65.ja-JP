@@ -9,7 +9,16 @@ exl-id: 3ed3768a-1b3c-45a1-a34c-61694cd407d9
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 15%
@@ -20,7 +29,7 @@ ht-degree: 15%
 
 Adobe Experience Manager（AEM） Communitiesは、フォーラム、ユーザーグループ、ブログ、Q&amp;A、カレンダー、コメント、レビュー、投票、評価、割り当てなどのコミュニティ機能の作成とカスタマイズを簡素化します。 これらの機能により、UGC （ユーザー生成コンテンツ）がパブリッシュ環境に入力されます。
 
-[&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites)の基盤は、[&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](scf.md) （SCF）です。 コミュニティサイトの作成は、[&#x200B; コミュニティ関数](functions.md)で構成される[&#x200B; コミュニティサイトテンプレート &#x200B;](sites-console.md)を選択することから始まります。
+[ コミュニティサイト ](overview.md#communitiessites)の基盤は、[ ソーシャルコンポーネントフレームワーク ](scf.md) （SCF）です。 コミュニティサイトの作成は、[ コミュニティ関数](functions.md)で構成される[ コミュニティサイトテンプレート ](sites-console.md)を選択することから始まります。
 
 概要と基本チュートリアルについては、次のサイトを参照してください。
 
@@ -33,22 +42,22 @@ Adobe Experience Manager（AEM） Communitiesは、フォーラム、ユーザ�
 
 ## 推奨されるデプロイメント {#recommended-deployments}
 
-* [&#x200B; コミュニティコンテンツストレージ &#x200B;](working-with-srp.md):UGC共通ストアで利用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
-* [&#x200B; コミュニティに推奨されるトポロジ &#x200B;](topologies.md)：ユースケースとSRPの選択に基づいてトポロジについて説明します
+* [ コミュニティコンテンツストレージ ](working-with-srp.md):UGC共通ストアで利用可能なソーシャルリソースプロバイダー（SRP）の選択肢について説明します
+* [ コミュニティに推奨されるトポロジ ](topologies.md)：ユースケースとSRPの選択に基づいてトポロジについて説明します
 
 ## ソーシャルコンポーネントフレームワーク {#social-component-framework}
 
-* [&#x200B; ソーシャルコンポーネントフレームワーク &#x200B;](scf.md)：フレームワークとAPIの概要。
+* [ ソーシャルコンポーネントフレームワーク ](scf.md)：フレームワークとAPIの概要。
 * [SCF ハンドルバーのヘルパー](handlebars-helpers.md)：既定のヘルパーとカスタムヘルパーの書き方。
-* [&#x200B; クライアントサイドのカスタマイズ &#x200B;](client-customize.md): ブラウザーで実行されるコードをカスタマイズしています。
-* [&#x200B; サーバーサイドのカスタマイズ &#x200B;](server-customize.md): サーバー上で実行されるコードをカスタマイズしています。
-* [&#x200B; ストレージリソースプロバイダー（SRP） &#x200B;](srp.md)：コミュニティコンテンツストレージの概要。
-* [&#x200B; コーディングガイドライン &#x200B;](code-guide.md)：ガイドライン、ヒント、テクニック。
-* [&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)：インタラクティブ開発ツール。
+* [ クライアントサイドのカスタマイズ ](client-customize.md): ブラウザーで実行されるコードをカスタマイズしています。
+* [ サーバーサイドのカスタマイズ ](server-customize.md): サーバー上で実行されるコードをカスタマイズしています。
+* [ ストレージリソースプロバイダー（SRP） ](srp.md)：コミュニティコンテンツストレージの概要。
+* [ コーディングガイドライン ](code-guide.md)：ガイドライン、ヒント、テクニック。
+* [ コミュニティコンポーネントガイド ](components-guide.md)：インタラクティブ開発ツール。
 
 ## コンポーネント、関数、および機能の基本 {#component-function-and-feature-essentials}
 
-AEM Communitiesのコンポーネント、関数、機能は、[&#x200B; コミュニティサイト &#x200B;](sites-console.md)の構成要素を提供します。
+AEM Communitiesのコンポーネント、関数、機能は、[ コミュニティサイト ](sites-console.md)の構成要素を提供します。
 
 * [コンポーネントおよび機能の基本事項](essentials.md)
 * [コミュニティコンポーネントの clientlib](clientlibs.md)
@@ -63,7 +72,7 @@ AEM Communitiesのコンポーネント、関数、機能は、[&#x200B; コミ�
 
 ## コミュニティグループ {#community-groups}
 
-[&#x200B; コミュニティグループ &#x200B;](overview.md#communitygroups)は、コミュニティサイト内でコミュニティメンバーがサブコミュニティを形成できるようにするための概念です。 コミュニティグループの作成は、パブリッシュ環境またはオーサー環境で行うことができます。
+[ コミュニティグループ ](overview.md#communitygroups)は、コミュニティサイト内でコミュニティメンバーがサブコミュニティを形成できるようにするための概念です。 コミュニティグループの作成は、パブリッシュ環境またはオーサー環境で行うことができます。
 
 * [コミュニティグループの基本事項](essentials-groups.md)
 * [Groups関数](functions.md#groups-function)
@@ -89,8 +98,8 @@ AEM Communitiesのコンポーネント、関数、機能は、[&#x200B; コミ�
 
 ## 関連するCommunities ドキュメント {#related-communities-documentation}
 
-* 推奨されるデプロイメントとDispatcher設定について詳しくは、[&#x200B; コミュニティのデプロイ &#x200B;](deploy-communities.md)を参照してください。
+* 推奨されるデプロイメントとDispatcher設定について詳しくは、[ コミュニティのデプロイ ](deploy-communities.md)を参照してください。
 
-* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージの設定について詳しくは、[&#x200B; コミュニティサイトの管理](administer-landing.md)にアクセスしてください。
+* コミュニティサイトの作成、コミュニティサイトテンプレートの設定、コミュニティコンテンツの管理、メンバーの管理、メッセージの設定について詳しくは、[ コミュニティサイトの管理](administer-landing.md)にアクセスしてください。
 
-* Communities コンポーネントを使用してオーサリングおよび設定する方法については、[Communities コンポーネントのオーサリング &#x200B;](author-communities.md)を参照してください。
+* Communities コンポーネントを使用してオーサリングおよび設定する方法については、[Communities コンポーネントのオーサリング ](author-communities.md)を参照してください。

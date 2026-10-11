@@ -11,13 +11,25 @@ role: User
 exl-id: 76652a16-cad6-4e95-9e66-41efec452b03
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: e00c7c12-7035-41fe-ad76-1ec82c8c3f01
+    internal-label: Brand Portal
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 100%
-
 ---
-
 # Brand Portal へアセットを公開 {#publish-assets-to-brand-portal}
 
 | バージョン | 記事リンク |
@@ -25,7 +37,7 @@ ht-degree: 100%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開（または公開ワークフローを未来の日時で設定）できます。 ただし、最初に AEM Assets を Brand Portal と連携するように設定する必要があります。 詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
+Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォルダーを組織の AEM Assets Brand Portal インスタンスに公開したり、公開ワークフローを後の日時にスケジュールしたりできます。 ただし、最初に AEM Assets を Brand Portal と連携するように設定する必要があります。 詳しくは [AEM Assets と Brand Portal の連携の設定](/help/assets/configure-aem-assets-with-brand-portal.md)を参照してください。
 
 レプリケーションが正常に終了したら、アセット、フォルダー、コレクションを Brand Portal に公開することができます。 アセットを Brand Portal に公開するには、次の手順を実行します。
 
@@ -51,9 +63,9 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 * ツールバーで「**[!UICONTROL 公開を管理]**」を選択します。
 
-   1. 次に、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
+  1. 次に、**[!UICONTROL アクション]**&#x200B;から「**[!UICONTROL Brand Portal に公開]**」を選択し、**[!UICONTROL スケジュール]**&#x200B;から「**[!UICONTROL 今すぐ]**」を選択します。 「**[!UICONTROL 次へ]**」をクリックします。
 
-   2. **[!UICONTROL 範囲]**&#x200B;で選択内容を確認し、**[!UICONTROL Brand Portal に公開]**&#x200B;をクリックします。
+  2. **[!UICONTROL 範囲]**&#x200B;で選択内容を確認し、**[!UICONTROL Brand Portal に公開]**&#x200B;をクリックします。
 
 アセットが Brand Portal への公開用のキューに入れられたことを示すメッセージが表示されます。 Brand Portal のインターフェイスにログインして、公開されたアセットを確認します。
 
@@ -75,7 +87,7 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
    ![publishworkflow](assets/publishworkflow.png)
 
-次に、Brand Portal にログインして、公開したアセットが Brand Portal インターフェイスで使用できるかどうかを確認します。
+次に、Brand Portal にログインして、公開したアセットが Brand Portal インターフェイスで利用可能かどうかを確認します。
 
 ![bp_landingpage](assets/bp_landingpage.png)
 
@@ -87,6 +99,6 @@ Adobe Experience Manager（AEM）Assets の管理者は、アセットやフォ�
 
 1. リスト表示 ![リスト表示](assets/list-view.svg) に切り替えて、アセットの現在の公開ステータスを確認します。
 
-<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
 
 ![生成されたレポートのステータス](assets/report-status.JPG)

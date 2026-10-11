@@ -11,13 +11,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1653'
 ht-degree: 98%
-
 ---
-
 
 # SPA エディターの概要{#spa-editor-overview}
 
@@ -98,7 +112,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 >次の点に注意してください。
 >
 >* SPA は常にその表示を担当している
->* SPA エディターは SPA 自体から切り離されている
+>* SPA エディターは SPA 自体から切り離されています。
 >* 実稼働環境（パブリッシュ）では SPA エディターは読み込まれない
 >
 
@@ -109,7 +123,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 ![page_editor_spa_authoringmediator-2](assets/page_editor_spa_authoringmediator-2.png)
 
 1. SPA がそれ自体を初期化し、Sling Model Exporter にあるページモデルをリクエストします。
-1. Sling Model Exporter がリポジトリーに、ページを構成するリソースをリクエストします。
+1. Sling Model Exporter がリポジトリに、ページを構成するリソースをリクエストします。
 1. リポジトリーがリソースを返します。
 1. Sling Model Exporter がページのモデルを返します。
 1. SPA がページモデルに基づいてコンポーネントをインスタンス化します。
@@ -118,13 +132,13 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
    **6b** ページエディターがコンポーネントのオーサリング設定をリクエストします。
 
    **6c** ページエディターがコンポーネントの設定を受け取ります。
-1. 作成者がコンポーネントを編集すると、ページエディターがデフォルトの POST サーブレットに変更リクエストをポストします。
+1. 作成者がコンポーネントを編集すると、ページエディターがデフォルトの POST サーブレットに変更リクエストを送信します。
 1. リソースがリポジトリーで更新されます。
 1. 更新されたリソースが POST サーブレットに提供されます。
 1. デフォルトの POST サーブレットがページエディターに、リソースが更新されたことを通知します。
 1. ページエディターが新しいページモデルをリクエストします。
-1. （リポジトリーにある）ページを構成するリソースが、リクエストされます。
-1. ページを構成するリソースが、リポジトリーから Sling Model Exporter に提供されます。
+1. ページを構成するリソースがリポジトリからリクエストされます。
+1. ページを構成するリソースが、リポジトリから Sling Model Exporter に提供されます。
 1. 更新されたページモデルがエディターに返されます。
 1. ページエディターが SPA のページモデル参照を更新します。
 1. SPA が新しいページモデル参照に基づいてコンポーネントを更新します。
@@ -146,7 +160,7 @@ SPA エディターの主な要素に留意すると、AEM 内での SPA 編集�
 1. **2A** ページモデルがエディターに、オーサリングに必要なデータを提供します。
 
    **2b** 通知を受けると、コンポーネントオーケストレーターがページのコンテンツ構造を更新します。
-1. コンポーネントオーケストレーターが、AEM リソースタイプと SPA コンポーネントの間のマッピングについて問い合わせます。
+1. コンポーネントオーケストレーターが、AEM リソースタイプと SPA コンポーネントの間のマッピングを照会します。
 1. コンポーネントオーケストレーターが、ページモデルとコンポーネントマッピングに基づいて、SPA コンポーネントを動的にインスタンス化します。
 1. ページエディターがページモデルを更新します。
 1. **6a** ページモデルがページエディターに、更新されたオーサリングデータを提供します。

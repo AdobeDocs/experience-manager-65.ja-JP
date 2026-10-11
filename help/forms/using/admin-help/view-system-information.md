@@ -9,16 +9,30 @@ exl-id: 27a2e81c-47b0-4de8-95bd-7cb34b9450da
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '546'
 ht-degree: 100%
-
 ---
-
 # システム情報を表示 {#view-system-information}
 
-「システム」タブには、リソースモニタリングチャートおよび AEM forms を実行するサーバーに関する情報が表示されます。この情報にアクセスするには、管理コンソールで、ページの右上隅にある「ヘルスモニター」をクリックします。クラスター環境で AEM Forms を実行している場合は、「サーバー」リストから選択したノードの情報が表示されます。
+「システム」タブには、リソースモニタリングチャートおよび AEM forms を実行するサーバーに関する情報が表示されます。 この情報にアクセスするには、管理コンソールで、ページの右上隅にある「ヘルスモニター」をクリックします。 クラスター環境で AEM Forms を実行している場合は、「サーバー」リストから選択したノードの情報が表示されます。
 
 現在のシステム情報をプロパティファイルとして保存するには、「保存」をクリックします。
 
@@ -32,7 +46,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->グラフデータ、サーバー情報の値および時刻は、10 分ごとに更新されます。この情報は、リアルタイムでは表示されません。
+>グラフデータ、サーバー情報の値および時刻は、10 分ごとに更新されます。 この情報は、リアルタイムでは表示されません。
 
 「システム」タブの左側のパネルには、サーバーまたはノードに関する次の情報が表示されます。
 

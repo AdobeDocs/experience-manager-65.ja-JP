@@ -8,18 +8,34 @@ role: Admin,User
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: b6714ae8f3464ef600c252c7ae5dcc75cbe6610b
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7949'
 ht-degree: 96%
-
 ---
-
 # JEE 上の AEM Forms 環境の堅牢化 {#hardening-your-aem-forms-on-jee-environment}
 
 企業のイントラネット内で動作する JEE 上の AEM Forms のセキュリティを強化するための、様々なセキュリティ強化設定について学びます。
 
-この記事では、JEE 上の AEM Forms を実行するサーバーを保護するためのレコメンデーションとベストプラクティスについて説明します。 ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。 企業のイントラネット内で運用している JEE 上の AEM Forms のセキュリティを強化するために行うことが望ましい、様々なセキュリティ堅牢化設定について説明します。 なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティの監視、検出および応答の方策を実装することも必要です。
+この記事では、JEE 上の AEM Forms を実行するサーバーを保護するためのレコメンデーションとベストプラクティスについて説明します。 ここでは、オペレーティングシステムとアプリケーションサーバーのホストの堅牢化について包括的な説明はしません。 企業のイントラネット内で運用している JEE 上の AEM Forms のセキュリティを強化するために行うことが望ましい、様々なセキュリティ堅牢化設定について説明します。 なお、JEE 上の AEM Forms アプリケーションサーバーのセキュリティを確実に保つには、これだけでなく、セキュリティのモニタリング、検出および応答の方策を実装することも必要です。
 
 この記事では、インストールと設定の作業において、次の各段階で適用する堅牢化手法について説明します。
 
@@ -35,7 +51,7 @@ JEE 上の AEM Forms をインストールする前には、ネットワーク�
 
 **UNIX および Linux へのインストールと設定**
 
-JEE 上の AEM Forms のインストール作業や設定作業を実行するときは、ルートシェルを使用しないでください。 デフォルトでは、ファイルは /opt ディレクトリの下にインストールされるので、インストールを実行するユーザーには /opt 以下のすべてのファイルの権限が必要です。 または、各ユーザーには /user ディレクトリに対するすべてのファイル権限があらかじめ付与されているので、/user ディレクトリにインストールを実行することもできます。
+JEE 上の AEM Forms のインストール作業や設定作業を実行するときは、ルートシェルを使用しないでください。 デフォルトでは、ファイルは /opt ディレクトリの下にインストールされるので、インストールを実行するユーザーには /opt 以下のすべてのファイルの権限が必要です。 または、個人ユーザーには /user ディレクトリに対するすべてのファイル権限があらかじめ付与されているので、/user ディレクトリにインストールを実行することもできます。
 
 **Windows へのインストールと設定**
 
@@ -190,12 +206,12 @@ AEM Forms on JEE は、デフォルトで LocalSystem アカウントを使用�
    * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
    * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。
    * **AEM Forms 一時ディレクトリ**：
-      * （Windows）環境変数で設定されている TMP または TEMP パス
-      * （AIX、Linux、Solaris）ログインしたユーザーのホーム・ディレクトリ
-UNIX ベースのシステムでは、ルート以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
-      * （Linux）/var/tmp または /usr/tmp
-      * （AIX）/tmp または /usr/tmp
-      * （Solaris）/var/tmp または /usr/tmp
+     * （Windows）環境変数で設定されている TMP または TEMP パス
+     * （AIX、Linux、Solaris）ログインしたユーザーのホーム・ディレクトリ
+       UNIX ベースのシステムでは、ルート以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+     * （Linux）/var/tmp または /usr/tmp
+     * （AIX）/tmp または /usr/tmp
+     * （Solaris）/var/tmp または /usr/tmp
 1. 新しいユーザーアカウントに、次のディレクトリへの書き込み権限を付与します。
    * [JBoss ディレクトリ]\standalone\deployment
    * [JBoss ディレクトリ]\standalone\
@@ -262,7 +278,7 @@ Configuration Manager は、アプリケーションサーバーにデプロイ�
 1. AEM Forms サーバーを起動します。
 1. 以下の URL をブラウザーに入力して変更をテストし、URL が機能しないことを確認します。
 
-   https://&lt;localhost>:&lt;port>/adobe-bootstrapper/bootstrap
+   https://<localhost>:<port>/adobe-bootstrapper/bootstrap
 
 **Trust Store へのリモートアクセスのロックダウン**
 
@@ -423,7 +439,7 @@ AEM Forms への認証にユーザーが繰り返し失敗した場合に、AEM 
 #### 自動アカウントロックの設定 {#set-automatic-account-locking}
 
 1. 管理コンソールにログインします。
-1. **設定**／**User Management**／**ドメイン管理**&#x200B;をクリックします。
+1. **設定**／**ユーザー管理**／**ドメイン管理**&#x200B;をクリックします。
 1. 自動アカウントロックの設定で、「**連続する認証エラーの最大回数**」を 3 などの低い数に設定します。
 1. 「**保存**」をクリックします。
 
@@ -453,7 +469,7 @@ AEM Forms への認証にユーザーが繰り返し失敗した場合に、AEM 
   </tr> 
   <tr> 
    <td><p>ログファイルの冗長性</p> </td> 
-   <td><p>リソースが許可されている場合は、Syslog、Tivoli、Microsoft Operations Manager（MOM）サーバーまたは別のメカニズムを使用して、攻撃者がアクセスできないように（書き込み専用）リアルタイムで別のサーバーにログを送信します。</p> <p>この方法でログを保護することで、改ざんを防ぐことができます。 また、中央リポジトリにログを保存すると、相関性と監視に役立ちます（例えば、複数の Forms サーバーを使用している場合に、パスワードの照会先となる複数のコンピューターに対してパスワード推測攻撃が行われた場合など）。</p> </td> 
+   <td><p>リソースが許可されている場合は、Syslog、Tivoli、Microsoft Operations Manager（MOM）サーバーまたは別のメカニズムを使用して、攻撃者がアクセスできないように（書き込み専用）リアルタイムで別のサーバーにログを送信します。</p> <p>この方法でログを保護することで、改ざんを防ぐことができます。 また、中央リポジトリにログを保存すると、相関性とモニタリングに役立ちます（例えば、複数の Forms サーバーを使用している場合に、パスワードの照会先となる複数のコンピューターに対してパスワード推測攻撃が行われた場合など）。</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -642,13 +658,13 @@ JEE 上の AEM Forms web アプリケーションのアプリケーションル�
   </tr> 
   <tr> 
    <td><p>/um/</p> </td> 
-   <td><p>User Management 認証</p> </td> 
+   <td><p>ユーザー管理の認証</p> </td> 
    <td><p>いいえ</p> </td> 
    <td><p>はい</p> </td> 
   </tr> 
   <tr> 
    <td><p>/um/*</p> </td> 
-   <td><p>User Management 管理インターフェイス</p> </td> 
+   <td><p>ユーザー管理の管理インターフェイス</p> </td> 
    <td><p>はい</p> </td> 
    <td><p>いいえ</p> </td> 
   </tr> 
@@ -713,7 +729,7 @@ Document Services を最初にインストールすると、許可されてい�
 
 **許可されているリファラーリストの管理**
 
-許可されているリファラーリストは、管理コンソールの User Management インターフェイスから管理できます。 User Management インターフェイスを使用すると、リストを作成、編集または削除できます。 許可されているリファラーのリストの操作について詳しくは、*管理ヘルプ*&#x200B;の[CSRF 攻撃の防止](/help/forms/using/admin-help/preventing-csrf-attacks.md)を参照してください。
+許可されているリファラーリストは、管理コンソールのユーザー管理インターフェイスから管理できます。 ユーザー管理インターフェイスを使用すると、リストを作成、編集または削除できます。 許可されているリファラーのリストの操作について詳しくは、*管理ヘルプ*&#x200B;の[CSRF 攻撃の防止](/help/forms/using/admin-help/preventing-csrf-attacks.md)を参照してください。
 
 **許可されているリファラーの例外および許可されている URI のリストの管理**
 
@@ -871,7 +887,7 @@ JDK 8 インスタンスでヘルスチェックが失敗したと報告され�
   </tr> 
   <tr> 
    <td><p>UNC ファイル IO</p> </td> 
-   <td><p>サービスに対する入力用の監視フォルダーを JEE 上の AEM Forms で監視（監視フォルダーエンドポイント）</p> </td> 
+   <td><p>サービスに対する入力用のモニタリングフォルダーを JEE 上の AEM Forms でモニタリング（モニタリングフォルダーエンドポイント）</p> </td> 
   </tr> 
   <tr> 
    <td><p>LDAP</p> </td> 
@@ -899,7 +915,7 @@ JDK 8 インスタンスでヘルスチェックが失敗したと報告され�
   </tr> 
   <tr> 
    <td><p>JMX</p> </td> 
-   <td><p>JEE 上の AEM Forms は監視対象の MBeans を JMX を使用して公開</p> </td> 
+   <td><p>JEE 上の AEM Forms はモニタリング対象の MBeans を JMX を使用して公開</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -910,7 +926,7 @@ JDK 8 インスタンスでヘルスチェックが失敗したと報告され�
 
 >[!NOTE]
 >
->デフォルトでは、サーバーは、adobe.com 名前空間で複数の JMX MBeans を公開します。 サーバーの正常性監視に有用な情報だけが公開されます。 ただし、情報開示を防ぐには、信頼できないネットワーク内の呼び出し元から JMX MBeans がルックアップされたり正常性指標にアクセスされたりしないようにしてください。
+>デフォルトでは、サーバーは、adobe.com 名前空間で複数の JMX MBeans を公開します。 サーバーの正常性のモニタリングに有用な情報だけが公開されます。 ただし、情報開示を防ぐには、信頼できないネットワーク内の呼び出し元から JMX MBeans がルックアップされたり正常性指標にアクセスされたりしないようにしてください。
 
 **JBoss ポート**
 
@@ -1030,12 +1046,12 @@ AEM Forms on JEE の自動インストールでは、デフォルトでローカ
    * **グローバルドキュメントストレージ (GDS) ディレクトリ**：GDS ディレクトリの場所は、AEM Forms のインストールプロセス中に手動で設定します。 インストール時に場所を指定しないと、`[JBoss root]/server/[type]/svcnative/DocumentStorage` にあるアプリケーションサーバーのインストールディレクトリの下にあるディレクトリがデフォルトの場所になります。
    * **CRX リポジトリディレクトリ**：デフォルトの場所は `[AEM-Forms-installation-location]\crx-repository` です。
    * **AEM Forms 一時ディレクトリ**：
-      * （Windows）環境変数で設定されている TMP または TEMP パス
-      * （AIX、Linux、Solaris）ログインしたユーザーのホーム・ディレクトリ
-UNIX ベースのシステムでは、ルート以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
-      * （Linux）/var/tmp または /usr/tmp
-      * （AIX）/tmp または /usr/tmp
-      * （Solaris）/var/tmp または /usr/tmp
+     * （Windows）環境変数で設定されている TMP または TEMP パス
+     * （AIX、Linux、Solaris）ログインしたユーザーのホーム・ディレクトリ
+       UNIX ベースのシステムでは、ルート以外のユーザーは次のディレクトリを一時ディレクトリとして使用できます。
+     * （Linux）/var/tmp または /usr/tmp
+     * （AIX）/tmp または /usr/tmp
+     * （Solaris）/var/tmp または /usr/tmp
 1. 新しいユーザーアカウントに、次のディレクトリへの書き込み権限を付与します。
    * [JBoss ディレクトリ]\standalone\deployment
    * [JBoss ディレクトリ]\standalone\
@@ -1066,7 +1082,7 @@ Forms サーバーサービスでドキュメントを送受信する方法と�
 
 ### JBoss 管理コンソールおよび JMX コンソールの無効化 {#disable-jboss-management-console-and-jmx-console}
 
-JBoss 管理コンソールと JMX コンソールへのアクセスは、自動インストール方法を使用して JBoss に AEM Forms on JEE をインストールしたときに既に設定されています（JMX 監視は無効になっています）。 独自の JBoss Application Server を使用している場合は、JBoss 管理コンソールおよび JMX 監視コンソールへのアクセスが保護されていることを確認してください。 JMX 監視コンソールへのアクセスは、jmx-invoker-service.xml という JBoss 設定ファイルで設定されています。
+JBoss 管理コンソールと JMX コンソールへのアクセスは、自動インストール方法を使用して JBoss に AEM Forms on JEE をインストールしたときに既に設定されています（JMX モニタリングは無効になっています）。 独自の JBoss Application Server を使用している場合は、JBoss 管理コンソールおよび JMX モニタリングコンソールへのアクセスが保護されていることを確認してください。 JMX モニタリングコンソールへのアクセスは、jmx-invoker-service.xml という JBoss 設定ファイルで設定されています。
 
 ### ディレクトリ参照の無効化 {#disable-directory-browsing}
 

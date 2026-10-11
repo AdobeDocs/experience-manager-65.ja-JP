@@ -9,13 +9,17 @@ exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 4%
-
+source-wordcount: '625'
+ht-degree: 3%
 ---
-
 # 作成ウィザードを使用したAEM Mobile アプリの作成{#creating-a-new-aem-mobile-app-using-create-wizard}
 
 {{ue-over-mobile}}
@@ -34,13 +38,13 @@ AEM Mobileは、ページ構造とプロパティを定義する設計図にも�
 ビルドクラウドサービス用およびAdobe Mobile Services SDK プラグインをアプリに統合するためのタブが追加（およびオプション）で用意されています。
 
 * ビルド：設定の管理をクリックし、ここでbuild.phonegap.com ビルドサービスを設定します。 次に、ドロップダウンから、新しく作成したPhoneGap ビルドクラウドサービスを選択できます。
-* Analytics:「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=ja) クラウドサービスを設定します。 次に、ドロップダウンから、新しく作成したモバイルサービスを選択して、モバイルアプリに統合できます。
+* Analytics:「設定を管理」をクリックし、[Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) クラウドサービスを設定します。 次に、ドロップダウンから、新しく作成したモバイルサービスを選択して、モバイルアプリに統合できます。
 
 ## アプリテンプレートの使用 {#using-app-templates}
 
 アプリテンプレートは、AEM内で新しいアプリを作成するために使用される、開発者が作成した既存のデザインを簡単に使用する方法を提供します。
 
-アプリテンプレートとは？これは、アプリのベースラインや基盤を表すページテンプレートとコンポーネントのコレクションと考えてください。
+アプリテンプレートとは？ これは、アプリのベースラインや基盤を表すページテンプレートとコンポーネントのコレクションと考えてください。
 別のアプリのテンプレートに基づいてアプリを作成する場合、作成元のアプリを代表する開始点を持つアプリが表示されます。
 
 この機能を使用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリがインストールされている場合）が必要です。

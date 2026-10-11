@@ -1,6 +1,6 @@
 ---
 title: パターン検出を使用したアップグレードの複雑性の評価
-description: パターン検出を使用してアップグレードの複雑さを評価する方法について説明します。
+description: Pattern Detector を使用してアップグレードの複雑さを評価する方法について説明します。
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: upgrading
@@ -10,20 +10,29 @@ feature: Upgrading
 exl-id: c42373e9-712e-4c11-adbb-4e3626e0b217
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 95%
-
 ---
-
 # パターン検出を使用したアップグレードの複雑性の評価
 
 ## 概要 {#overview}
 
 この機能を使用すると、次の使用されているパターンを検出することで、既存の AEM インスタンスのアップグレード可能性を確認できます。
 
-1. 特定のルールに違反しており、アップグレードで影響を受けているか上書きされる領域で実行されている
+1. 特定のルールに違反しており、アップグレードによって影響を受けるか上書きされる領域で実行されている
 1. AEM 6.5 と下位互換性のない AEM 6.x の機能や API を使用しており、アップグレード後に動作しない可能性がある
 
 これにより、AEM 6.5 へのアップグレードに必要な開発の作業量を評価できます。
@@ -36,10 +45,10 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->パターン検出は、ローカル開発インスタンスを含むあらゆる開発で実行できます。 ただし、次の目的で使用します。
+>パターン検出は、ローカル開発インスタンスを含むあらゆる環境で実行できます。 ただし、次の目的で使用します。
 >
 >* 検出率を上げる
->* ビジネスにとって重大なインスタンスの減速を避ける
+>* ビジネスにとって重大なインスタンスでの速度低下を避ける
 >
 >ユーザーアプリケーション、コンテンツ、設定の分野において、実稼働環境にできるだけ近い&#x200B;**ステージング環境で**&#x200B;実行することをお勧めします。
 
@@ -53,7 +62,7 @@ ht-degree: 95%
    ![screenshot-2018-2-5pattern-detector](assets/screenshot-2018-2-5pattern-detector.png)
 
 * **事後対応テキストベースまたは通常の JSON インターフェイスを使用**
-* **事後対応 JSON Lines インターフェイスを使用し、**&#x200B;各行に個別の JSON ドキュメントを生成します。
+* **リアクティブ JSON Lines インターフェイスを使用し、 **各行に個別の JSON ドキュメントを生成します。
 
 これらの両方の方法については、以下で詳しく説明します。
 
@@ -61,7 +70,7 @@ ht-degree: 95%
 
 事後対応インターフェイスを使用すると、疑念が検出された場合にすぐに違反レポートを処理できます。
 
-出力は現在、次の 2 つの URL で使用できます。
+出力は現在、次の 2 つの URL で利用できます。
 
 1. プレーンテキストインターフェイス
 1. JSON インターフェイス
@@ -114,7 +123,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
     "code": "ECU",
     "type": "extraneous.content.usage",
     "detective": "ContentAccessDetector",
-    "moreInfo": "https://www.adobe.com/go/aem6_ECU_jp"
+    "moreInfo": "https://www.adobe.com/go/aem6_ECU"
   },
   "item": {
     "id": "a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f",
@@ -123,7 +132,7 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 }
 ```
 
-進行状況は 5 秒ごとにレポートされ、疑念のあるメッセージとしてマークされていないメッセージを除外することで取得できます。
+進行状況は 5 秒ごとにレポートされ、疑わしいものとしてマークされたメッセージ以外を除外することで取得できます。
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == false)'
@@ -222,4 +231,4 @@ curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-det
 
 >[!NOTE]
 >
->パターン検出はアップグレードに関する警告を正確に予測しようとします。 ただし、シナリオによっては誤検知が発生する可能性があります。
+>Pattern Detector は、アップグレードに関する警告を正確に予測しようとします。 ただし、シナリオによっては誤検知が発生する可能性があります。

@@ -10,7 +10,18 @@ exl-id: f13ac6c2-16ab-422d-9005-ab0b49172271
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '2240'
 ht-degree: 96%
@@ -109,7 +120,7 @@ Granite エンジニアリングプラットフォームには、基盤 UI フ�
 ![chlimage_1-81](assets/chlimage_1-81.png)
 GraniteUI.pdf
 
-[&#x200B; ファイルを取得](assets/graniteui.pdf)
+[ ファイルを取得](assets/graniteui.pdf)
 Granite UI:
 
 * Sling の RESTful アーキテクチャを使用
@@ -243,14 +254,14 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 | `pathfield, paragraphreference` | `granite/ui/components/foundation/form/pathbrowser` |
 | `selection` | `granite/ui/components/foundation/form/select` |
 | `sizefield` | `cq/gui/components/authoring/dialog/sizefield` |
-| `tags` | `granite/ui/components/foundation/form/autocomplete`&#x200B;`cq/gui/components/common/datasources/tags` |
+| `tags` | `granite/ui/components/foundation/form/autocomplete``cq/gui/components/common/datasources/tags` |
 | `textarea` | `granite/ui/components/foundation/form/textarea` |
 | `textfield` | `granite/ui/components/foundation/form/textfield` |
 
 | **ノードタイプ** | **Granite UI のリソースタイプ** |
 |---|---|
 | `cq:WidgetCollection` | `granite/ui/components/foundation/container` |
-| `cq:TabPanel` | `granite/ui/components/foundation/container`&#x200B;`granite/ui/components/foundation/layouts/tabs` |
+| `cq:TabPanel` | `granite/ui/components/foundation/container``granite/ui/components/foundation/layouts/tabs` |
 | `cq:panel` | `granite/ui/components/foundation/container` |
 
 ### Granite UI 管理コンポーネント {#granite-ui-administration-components}
@@ -275,7 +286,7 @@ Granite UI を使用するように ExtJS コードをアップグレードす�
 
 CoralUI.pdf
 
-[&#x200B; ファイルを取得](assets/coralui.pdf)
+[ ファイルを取得](assets/coralui.pdf)
 Coral UI （CUI）は、複数の製品間でユーザーエクスペリエンスの一貫性を保つように設計された、タッチ対応UI用のAdobeのビジュアルスタイルの実装です。 Coral UI は、オーサリング環境で使用されるビジュアルスタイルを採用するのに必要なものをすべて備えています。
 
 >[!CAUTION]

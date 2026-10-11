@@ -1,30 +1,39 @@
 ---
-title: "[!DNL Adobe Camera Raw] のデジタルアセット処理サポート"
-description: ' [!DNL Adobe Experience Manager Assets] で  [!DNL Adobe Camera Raw]  のサポートを有効にする方法を説明します'
+title: '[!DNL Adobe Camera Raw] のデジタルアセット処理サポート'
+description: '[!DNL Adobe Experience Manager Assets]で[!DNL Adobe Camera Raw] サポートを有効にする方法について説明します'
 contentOwner: AG
 role: Admin
 feature: Developer Tools
 exl-id: 7159a908-4c36-42b4-bbb4-d7fb1be4ee1b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 100%
-
+source-wordcount: '396'
+ht-degree: 98%
 ---
-
 # [!DNL Adobe Camera Raw] を使用して画像を処理する {#camera-raw-support}
 
-[!DNL Adobe Camera Raw] サポートを有効にすると、CR2、NEF、RAF などの RAW ファイル形式を処理し、画像を JPEG 形式でレンダリングできます。この機能は、ソフトウェア配布から入手できる [Camera Raw パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を使用して [!DNL Adobe Experience Manager Assets] でサポートされています。
+[!DNL Adobe Camera Raw] サポートを有効にすると、CR2、NEF、RAF などの RAW ファイル形式を処理し、画像を JPEG 形式でレンダリングできます。 この機能は、ソフトウェア配布から入手できる [Camera Raw パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg)を使用して [!DNL Adobe Experience Manager Assets] でサポートされています。
 
 >[!NOTE]
 >
->この機能は JPEG レンディションのみをサポートします。これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされます。
+>この機能は JPEG レンディションのみをサポートします。 これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされます。
 
 [!DNL Experience Manager Assets] で [!DNL Camera Raw] サポートを有効にするには、次の手順に従います。
 
 1. [[!DNL Camera Raw]  パッケージ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip)を [!DNL Software Distribution] からダウンロードします。
-1. `https://[aem_server]:[port]/workflow` にアクセスします。**[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを開きます。
+1. `https://[aem_server]:[port]/workflow` にアクセスします。 **[!UICONTROL DAM アセットの更新]**&#x200B;ワークフローを開きます。
 1. **[!UICONTROL サムネールを処理]**&#x200B;手順を編集します。
 1. 「**[!UICONTROL サムネール]**」タブで次の設定を入力します。
 
@@ -43,10 +52,10 @@ ht-degree: 100%
    * **[!UICONTROL MIME タイプ]**：`image/dng` および `image/x-raw-(.*)`
    * **[!UICONTROL コマンド]**：
 
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.140.100.jpeg 140 100`
-      * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.web.1280.1280.jpeg 1280 1280`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.319.319.jpeg 319 319`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.140.100.jpeg 140 100`
+     * `DAM_Raw_Converter ${directory}/${filename} ${directory} cq5dam.thumbnail.48.48.jpeg 48 48`
 
    ![chlimage_1-130](assets/chlimage_1-336.png)
 
@@ -56,7 +65,7 @@ ht-degree: 100%
 >
 >上記の設定が **[!UICONTROL Camera RAW および DNG 処理ステップによるサンプルの DAM 更新アセット]**&#x200B;設定と同じであることを確認してください。
 
-これで、Camera Raw ファイルを Assets にインポートすることができます。Camera RAW パッケージをインストールして必要なワークフローを設定した後、パネルのリストに「**[!UICONTROL 画像調整]**」オプションが表示されます。
+これで、Camera Raw ファイルを Assets にインポートすることができます。 Camera RAW パッケージをインストールして必要なワークフローを設定した後、パネルのリストに「**[!UICONTROL 画像調整]**」オプションが表示されます。
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
@@ -66,12 +75,12 @@ ht-degree: 100%
 
 *図：オプションを使用して、画像に軽量の編集をおこないます。*
 
-[!DNL Camera Raw] 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。[!DNL Camera Raw] 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
+[!DNL Camera Raw] 画像に対する編集を保存すると、その画像に対して、新しいレンディション「`AdjustedPreview.jpg`」が生成されます。 [!DNL Camera Raw] 以外の画像タイプの場合は、変更内容がすべてのレンディションに反映されます。
 
 ## ベストプラクティス、既知の問題および制限 {#best-practices}
 
 この機能には次の制限があります。
 
-* この機能は JPEG レンディションのみをサポートします。これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされています。
+* この機能は JPEG レンディションのみをサポートします。 これは、Windows 64 ビット、Mac OS および RHEL 7.x でサポートされています。
 * RAW および DNG 形式では、メタデータの書き戻しはサポートされていません。
-* [!DNL Camera Raw] ライブラリには、一度に処理できる合計ピクセルに関する制限があります。現在、最初に検出された条件に応じて、ファイルの長辺で最大 65000 ピクセルまたは 512 MP を処理できます。
+* [!DNL Camera Raw] ライブラリには、一度に処理できる合計ピクセルに関する制限があります。 現在、最初に検出された条件に応じて、ファイルの長辺で最大 65000 ピクセルまたは 512 MP を処理できます。

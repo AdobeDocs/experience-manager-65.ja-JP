@@ -10,13 +10,27 @@ role: Developer
 exl-id: 28abf044-6c8e-4578-ae2e-54cdbd694c5f
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1870'
 ht-degree: 96%
-
 ---
-
 # フォームデータの計算 {#calculating-form-data}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -84,7 +98,7 @@ Forms サービスでは、ユーザーがフォームに入力した値を計�
      NumericField3 = NumericField2 + NumericField1
 ```
 
-このフォームデザインでは、「計算」ボタンはコマンドボタンであり、スクリプトはこのボタンの `Click` イベントにあります。 ユーザーが最初の 2 つのフィールド（NumericField1 および NumericField2）に値を入力して「計算」ボタンをクリックすると、フォームが Forms サービスに送信され、スクリプトが実行されます。 Forms サービスは、NumericField3 フィールドに表示された計算結果を使用して、フォームをクライアントデバイスにレンダリングし直します。
+このフォームデザインでは、「計算」ボタンはコマンドボタンであり、スクリプトはこのボタンの `Click` イベントにあります。 ユーザーが最初の 2 つのフィールド（NumericField1 および NumericField2）に値を入力して「計算」ボタンをクリックすると、フォームが Forms サービスに送信され、スクリプトが実行されます。 Forms サービスは、計算結果が NumericField3 フィールドに表示された状態で、フォームをクライアントデバイスにレンダリングし直します。
 
 >[!NOTE]
 >
@@ -128,7 +142,7 @@ Forms サービスのクライアント API を使用して、サーバー上で
 [Web サービス APIを使用したフォームデータの計算](/help/forms/developing/calculating-form-data.md#calculate-form-data-using-the-web-service-api)
 [接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 [Forms サービス API クイックスタート](/help/forms/developing/forms-service-api-quick-starts.md#forms-service-api-quick-starts)
-[&#x200B; インタラクティブ PDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
+[ インタラクティブ PDF formsのレンダリング](/help/forms/developing/rendering-interactive-pdf-forms.md)
 [FormsをレンダリングするWeb アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
 ## Java API を使用してフォームデータを計算する {#calculate-form-data-using-the-java-api}
@@ -149,10 +163,10 @@ Forms API（Java）を使用してフォームデータを計算します。
    * 計算スクリプトを含むフォームデータを取得するには、コンストラクターを使用して、コンストラクター内から `javax.servlet.http.HttpServletResponse` オブジェクトの `getInputStream` メソッドを呼び出すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、以下の値を渡します。
 
-      * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つ以上の値を指定して、処理するコンテンツタイプを指定します。 例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
-      * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
+     * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
+     * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つ以上の値を指定して、処理するコンテンツタイプを指定します。 例えば、XML データと PDF データを処理するには、このパラメーターに文字列値「`CONTENT_TYPE=application/xml&CONTENT_TYPE=application/pdf`」を指定します。
+     * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
+     * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
@@ -196,17 +210,17 @@ Forms API（web サービス）を使用してフォームデータを計算し�
    * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。 `RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出し、ロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、以下の値を渡します。
 
-      * フォームデータを含む `BLOB` オブジェクト。
-      * 関連するすべての HTTP ヘッダーが含まれる環境変数を指定する文字列の値。 例えば、次の文字列の値を指定できます。`HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
-      * `HTTP_USER_AGENT` ヘッダーの値を指定する文字列の値。例えば、`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などです。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。 その他の情報。
-      * このメソッドで入力される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
-      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
-      * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
-      * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
+     * フォームデータを含む `BLOB` オブジェクト。
+     * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 例えば、次の文字列の値を指定できます。`HTTP_REFERER=referrer&HTTP_CONNECTION=keep-alive&CONTENT_TYPE=application/xml`
+     * `HTTP_USER_AGENT` ヘッダーの値を指定する文字列の値。例えば、`Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などです。
+     * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。 その他の情報。
+     * このメソッドで入力される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
+     * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
+     * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
+     * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
 
      `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。 `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 

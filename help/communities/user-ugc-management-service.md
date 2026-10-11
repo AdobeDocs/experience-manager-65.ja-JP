@@ -10,13 +10,20 @@ role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
 solution: Experience Manager
 feature: Communities
-source-git-commit: f4fc3b788d4128135ff77ebb87f1369059b1d2ec
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 5%
-
+source-wordcount: '628'
+ht-degree: 6%
 ---
-
 # AEM Communities のユーザーおよび UGC 管理サービス {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]
@@ -29,9 +36,9 @@ AEM Communitiesでは、すぐに利用できるAPIを通じてユーザーの�
 
 >[!NOTE]
 >
->AEM Communities[&#128279;](/help/communities/analytics.md) サイトでAdobe Analyticsを設定した場合、キャプチャしたユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsには、ユーザーデータへのアクセス、書き出し、削除をおこない、GDPRに準拠するためのAPIが用意されています。 詳細については、[&#x200B; アクセス要求と削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html?lang=ja)を参照してください。
+>AEM Communities](/help/communities/analytics.md) サイトで[Adobe Analyticsを設定した場合、キャプチャしたユーザーデータはAdobe Analytics サーバーに送信されます。 Adobe Analyticsには、ユーザーデータへのアクセス、書き出し、削除をおこない、GDPRに準拠するためのAPIが用意されています。 詳細については、[ アクセス要求と削除要求の送信](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html)を参照してください。
 
-これらのAPIを使用するには、UserUgcManagement サービスをアクティブ化して`/services/social/ugcmanagement` エンドポイントを有効にする必要があります。 このサービスをアクティブにするには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)で利用可能な[&#x200B; サンプルサーブレット &#x200B;](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)をインストールします。 次に、次のようなhttp リクエストを使用して、コミュニティサイトのパブリッシュインスタンスのエンドポイントを適切なパラメーターでクリックします。
+これらのAPIを使用するには、UserUgcManagement サービスをアクティブ化して`/services/social/ugcmanagement` エンドポイントを有効にする必要があります。 このサービスをアクティブにするには、[GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)で利用可能な[ サンプルサーブレット ](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet)をインストールします。 次に、次のようなhttp リクエストを使用して、コミュニティサイトのパブリッシュインスタンスのエンドポイントを適切なパラメーターでクリックします。
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`. ただし、ユーザープロファイルとユーザー生成コンテンツをシステムで管理するUI （ユーザーインターフェイス）を構築することもできます。
 
@@ -65,7 +72,7 @@ Adobe Analyticsからユーザーデータを削除するには、APIはAdobe An
 
 AEM Communitiesで使用されるAdobe Analytics変数マッピングについては、次の図を参照してください。
 
-![Adobe AnalyticsのAEM communities変数マッピング &#x200B;](assets/analytics-communities-mapping.png)
+![Adobe AnalyticsのAEM communities変数マッピング ](assets/analytics-communities-mapping.png)
 
 ## ユーザーアカウントの無効化 {#disable-a-user-account}
 

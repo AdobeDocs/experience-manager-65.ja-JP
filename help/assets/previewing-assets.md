@@ -10,13 +10,24 @@ feature: Asset Management
 role: User, Admin
 exl-id: 84f0c406-4ab6-48c7-8223-61a8c3ade363
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1432'
 ht-degree: 89%
-
 ---
-
 # ソフトウェアインターフェイスを使用したアセットのプレビュー {#previewing-assets}
 
 プレビューを使用して、アップロードしたデジタルアセットがユーザーによる Web ブラウザーでの閲覧時にどのように表示されるかを確認できます。 アセットに割り当てられたデフォルトのクロスデバイス対応組み込みビューアがプレビューに使用されます。
@@ -122,7 +133,7 @@ ht-degree: 89%
       <tr>
       <td>カルーセルセット</td>
       <td>不可</td>
-      <td>はい</td>
+      <td>可</td>
       <td><strong>特定のビューアでアセットをプレビューするには：</strong>
       <ul>
       <li>ページの左上隅近くにあるアイコンをクリックして、ドロップダウンリストを表示します。 アセットに適用するビューアーを選択します。</li>

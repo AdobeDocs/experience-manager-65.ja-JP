@@ -9,7 +9,23 @@ exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1949'
 ht-degree: 89%
@@ -44,9 +60,9 @@ AEM Forms には、土曜日と日曜日が非稼働日に指定されている�
 
    業務カレンダーキーをユーザーに割り当てる方法は、エンタープライズドメイン、ローカルドメイン、ハイブリッドドメインのいずれを使用しているかによって異なります。 ドメインの設定について詳しくは、[ドメインの追加](/help/forms/using/admin-help/adding-domains.md#adding-domains)を参照してください。
 
-   ローカルドメインまたはハイブリッドドメインを使用している場合、ユーザーに関する情報は User Management データベースにのみ格納されます。 これらのユーザーに業務カレンダーキーを設定するには、User Management でユーザーを追加または編集する際に、「業務カレンダーキー」フィールドに文字列を入力します （[&#x200B; ユーザーの追加と設定](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)を参照）。 次に、ビジネス カレンダーキー（文字列）をフォームワークフローのビジネス カレンダーにマッピングします。 （詳しくは、[業務カレンダーへのユーザーおよびグループのマッピング](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)を参照してください）。
+   ローカルドメインまたはハイブリッドドメインを使用している場合、ユーザーに関する情報は User Management データベースにのみ格納されます。 これらのユーザーに業務カレンダーキーを設定するには、User Management でユーザーを追加または編集する際に、「業務カレンダーキー」フィールドに文字列を入力します （[ ユーザーの追加と設定](/help/forms/using/admin-help/adding-configuring-users.md#adding-and-configuring-users)を参照）。 次に、ビジネス カレンダーキー（文字列）をフォームワークフローのビジネス カレンダーにマッピングします。 （詳しくは、[業務カレンダーへのユーザーおよびグループのマッピング](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)を参照してください）。
 
-   エンタープライズドメインを使用している場合、ユーザーに関する情報は、User Management が User Management データベースと同期する LDAP ディレクトリなど、サードパーティのストレージシステムに存在します。 これによって、業務カレンダーキーを LDAP ディレクトリのフィールドにマッピングできるようになります。 例えば、ディレクトリ内の各ユーザーレコードに「国」フィールドが含まれ、ユーザーが所在する国に基づいて業務カレンダーを割り当てる場合は、ディレクトリのユーザー設定を指定する際に「国」フィールド名を「業務カレンダーキー」フィールドに指定します。 （[&#x200B; ディレクトリの設定](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)を参照）。 その後、ビジネスカレンダーキー（LDAP ディレクトリの「国」フィールドに定義された値）をフォームワークフローのビジネスカレンダーにマッピングできます。 （詳しくは、[業務カレンダーへのユーザーおよびグループのマッピング](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)を参照してください）。
+   エンタープライズドメインを使用している場合、ユーザーに関する情報は、User Management が User Management データベースと同期する LDAP ディレクトリなど、サードパーティのストレージシステムに存在します。 これによって、業務カレンダーキーを LDAP ディレクトリのフィールドにマッピングできるようになります。 例えば、ディレクトリ内の各ユーザーレコードに「国」フィールドが含まれ、ユーザーが所在する国に基づいて業務カレンダーを割り当てる場合は、ディレクトリのユーザー設定を指定する際に「国」フィールド名を「業務カレンダーキー」フィールドに指定します。 （[ ディレクトリの設定](/help/forms/using/admin-help/configuring-directories.md#configuring-directories)を参照）。 その後、ビジネスカレンダーキー（LDAP ディレクトリの「国」フィールドに定義された値）をフォームワークフローのビジネスカレンダーにマッピングできます。 （詳しくは、[業務カレンダーへのユーザーおよびグループのマッピング](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)を参照してください）。
 
 1. Forms Workflow で、同じ非稼働日を共有するユーザーの各セットに対してカレンダーを定義します （詳しくは、[業務カレンダーを作成または更新](configuring-business-calendars.md#create-or-update-a-business-calendar)を参照してください）。
 1. Forms Workflow で、業務カレンダーキーまたはグループのメンバーシップを各カレンダーにマッピングします （詳しくは、[業務カレンダーへのユーザーおよびグループのマッピング](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar)を参照してください）。

@@ -9,13 +9,22 @@ exl-id: ccd8577b-3bbf-40ba-9696-474545f07b84
 feature: Administering
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1802'
 ht-degree: 99%
-
 ---
-
 
 # Adobe Experience Manager（AEM）のサービスユーザー {#service-users-in-aem}
 
@@ -153,7 +162,7 @@ ht-degree: 99%
 
 ## ServiceUserMapper 設定への修正の追加 {#adding-a-configuration-amendment-to-the-serviceusermapper-configuration}
 
-サービスから対応するシステムユーザーへのマッピングを追加するには、[`ServiceUserMapper` &#x200B;](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) サービスのファクトリ設定を作成する必要があります。 このモジュラーを維持するために、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定を指定できます。 このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
+サービスから対応するシステムユーザーへのマッピングを追加するには、[`ServiceUserMapper` ](https://sling.apache.org/apidocs/sling7/org/apache/sling/serviceusermapping/ServiceUserMapper.html) サービスのファクトリ設定を作成する必要があります。 このモジュラーを維持するために、[Sling 修正メカニズム](https://issues.apache.org/jira/browse/SLING-3578)を使用してこのような設定を指定できます。 このような設定をバンドルと共にインストールする場合は、[Sling の初期コンテンツ読み込み機能](https://sling.apache.org/documentation/bundles/content-loading-jcr-contentloader.html)を使用することをお勧めします。
 
 1. バンドルの src/main/resources フォルダーの下にサブフォルダー SLING-INF/content を作成します。
 1. このフォルダーに、ファクトリ設定の内容（すべてのサブサービスユーザーマッピングを含む）を定義した org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended-&lt;ファクトリ設定の一意の名前>.xml という名前のファイルを作成します。 例：

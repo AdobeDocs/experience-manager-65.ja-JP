@@ -10,13 +10,27 @@ role: Developer
 exl-id: d2bd7c3e-4f75-4234-a7aa-ee8524430493
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 100%
-
 ---
-
 # PDF ポートフォリオのアセンブリ {#assembling-pdf-portfolios}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -101,7 +115,7 @@ PDF ポートフォリオをアセンブリする際に、NAV ファイル（ナ
 
 `<Install folder>\Acrobat 9.0\Acrobat\Navigators`
 
-NAV ファイルを Acrobat 9（またはそれ以降）のインストールディレクトリからコピーします。 NAV ファイルは、クライアントアプリケーションがアクセスできる場所に配置します。 すべてのファイルは、Map コレクションオブジェクト内のアセンブラーサービスに渡されます。
+NAV ファイルを Acrobat 9（またはそれ以降）のインストールディレクトリからコピーします。 NAV ファイルは、クライアントアプリケーションがアクセスできる場所に配置します。 すべてのファイルは、Map コレクションオブジェクト内でアセンブラーサービスに渡されます。
 
 >[!NOTE]
 >
@@ -137,7 +151,7 @@ Assembler Service API（Java）を使用して PDF ポートフォリオをア�
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -156,8 +170,8 @@ Assembler Service API（Java）を使用して PDF ポートフォリオをア�
    * `com.adobe.idp.Document` オブジェクトを作成して NAV ファイルを含む `java.io.FileInputStream` オブジェクトを渡してください（ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します）。
    * `put` メソッドを呼び出して次の引数を渡すことにより、`java.util.Map` オブジェクトにエントリを追加してください。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定されたソース要素の値と一致する必要があります。 （ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します）。
-      * PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。 （ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します）。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定されたソース要素の値と一致する必要があります。 （ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します）。
+     * PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。 （ポートフォリオの作成に必要なファイルごとに、このタスクを繰り返します）。
 
 1. 実行時オプションを設定します。
 
@@ -210,10 +224,10 @@ Assembler Service API（web サービス）を使用して PDF ポートフォ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 

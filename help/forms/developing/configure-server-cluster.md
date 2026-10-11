@@ -5,13 +5,27 @@ exl-id: 230fc2f1-e6e5-4622-9950-dae9449ed3f6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3986'
 ht-degree: 97%
-
 ---
-
 # JEE サーバークラスター上の AEM Forms の設定とトラブルシューティング {#configuring-troubleshooting-aem-forms-jee-server-cluster}
 
 ## 必要な知識 {#prerequisites}
@@ -268,7 +282,8 @@ INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
 
 ここでは、Quartz インスタンスの名前は、`IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975` です。 スケジューラーの Quartz インスタンスの名前は、常に文字列 `IDPSchedulerService_$_` で始まります。 この末尾に追加される文字列が、Quartz がクラスターモードで実行されているかどうかを示しています。 ノードのホスト名と長い数字の文字列から生成される、長い一意の ID（ここでは `ap-hp8.ottperflab.adobe.com1312883903975`）は、クラスターで動作していることを示します。 1 つのノードとして動作している場合、この ID は 2 桁の数字「20」になります。
 
-INFO `[org.quartz.core.QuartzScheduler]` Scheduler `IDPSchedulerService_$_20` started.（スケジューラーが起動しました）各ノードのスケジューラーは独立してクラスターモードで実行するかどうかを決定するので、このチェックはすべてのクラスターノードで個別に行う必要があります。
+INFO `[org.quartz.core.QuartzScheduler]` Scheduler `IDPSchedulerService_$_20` started.（スケジューラーが起動しました）
+各ノードのスケジューラーは独立してクラスターモードで実行するかどうかを決定するので、このチェックはすべてのクラスターノードで個別に行う必要があります。
 
 ### Quartz を間違ったモードで実行している場合に発生する問題 {#quartz-running-in-wrong-mode}
 

@@ -9,18 +9,27 @@ exl-id: 7c856e87-9f90-435d-aceb-994f10ea6f50
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 100%
-
+source-wordcount: '953'
+ht-degree: 99%
 ---
-
 # JSON 形式のページ情報の取得{#obtaining-page-information-in-json-format}
 
 ページ情報を取得するには、JSON 形式のページメタデータを取得するためのリクエストを PageInfo サーブレットに送信します。
 
-PageInfo サーブレットは、リポジトリ内のリソースに関する情報を返します。このサーブレットは、URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` にバインドされており、`path` パラメーターを使用してリソースを識別します。例えば、次の URL は、`/content/we-retail/us/en` ノードに関する情報を返します。
+PageInfo サーブレットは、リポジトリ内のリソースに関する情報を返します。 このサーブレットは、URL `https://<server>:<port>/libs/wcm/core/content/pageinfo.json` にバインドされており、`path` パラメーターを使用してリソースを識別します。 例えば、次の URL は、`/content/we-retail/us/en` ノードに関する情報を返します。
 
 ```shell
 http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retail/us/en
@@ -38,7 +47,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 ## ページ情報プロバイダー {#page-information-providers}
 
-ページコンポーネントは、ページメタデータを生成する 1 つまたは複数の `com.day.cq.wcm.api.PageInfoProvider` サービスに関連付けることができます。PageInfo サーブレットは、各 PageInfoProvider サービスを呼び出して、メタデータを集約します。
+ページコンポーネントは、ページメタデータを生成する 1 つまたは複数の `com.day.cq.wcm.api.PageInfoProvider` サービスに関連付けることができます。 PageInfo サーブレットは、各 PageInfoProvider サービスを呼び出して、メタデータを集約します。
 
 1. HTTP クライアントは、ページの URL を含むリクエストを PageInfo サーブレットに送信します。
 1. PageInfo サーブレットは、ページをレンダリングするコンポーネントを検出します。
@@ -49,7 +58,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->JSON 形式の情報のリストを更新するには、PageInfoProvider と同様に ListInfoProvider を使用してください（[Web サイト管理コンソールのカスタマイズ](/help/sites-developing/customizing-siteadmin.md)を参照）。
+>JSON 形式の情報のリストを更新するには、PageInfoProvider と同様に ListInfoProvider を使用してください （[Web サイト管理コンソールのカスタマイズ](/help/sites-developing/customizing-siteadmin.md)を参照）。
 
 ## デフォルトのページ情報プロバイダー {#default-page-information-providers}
 
@@ -60,7 +69,7 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 * **コンテンツ言語サーブレット：**&#x200B;現在のページの言語と、そのページで使用できる各言語に関する情報。
 * **ワークフローステータスプロバイダー：**&#x200B;このページをペイロードとして持つ実行中のワークフローに関するステータス情報。
 * **ワークフローパッケージ情報プロバイダー：**&#x200B;リポジトリに格納された各ワークフローパッケージに関する情報と、各パッケージに現在のリソースが含まれているかどうかについての情報。
-* **エミュレーター情報プロバイダー：**&#x200B;このリソースで使用可能なモバイルデバイスエミュレーターに関する情報。ページコンポーネントがモバイルページをレンダリングしない場合、エミュレーターは使用できません。
+* **エミュレーター情報プロバイダー：**&#x200B;このリソースで使用可能なモバイルデバイスエミュレーターに関する情報。 ページコンポーネントがモバイルページをレンダリングしない場合、エミュレーターは使用できません。
 * **注釈情報プロバイダー：**&#x200B;ページ上の注釈に関する情報。
 
 例えば、PageInfo サーブレットは、`/content/we-retail/us/en` ノードに関して次の JSON 応答を返します。
@@ -470,22 +479,22 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 ## ワークフローパッケージ情報のフィルター処理 {#filtering-workflow-package-information}
 
-関心のあるワークフローパッケージに関する情報のみを返すように、Day CQ WCM ワークフローパッケージ情報プロバイダーのサービスを設定します。デフォルトでは、ワークフローパッケージ情報プロバイダーのサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。ワークフローパッケージのサブセットを反復すると、使用できるサーバーリソースが減少します。
+関心のあるワークフローパッケージに関する情報のみを返すように、Day CQ WCM ワークフローパッケージ情報プロバイダーのサービスを設定します。 デフォルトでは、ワークフローパッケージ情報プロバイダーのサービスは、リポジトリ内のすべてのワークフローパッケージに関する情報を返します。 ワークフローパッケージのサブセットを反復すると、使用できるサーバーリソースが減少します。
 
 >[!NOTE]
 >
->サイドキックの「ワークフロー」タブでは、PageInfo サーブレットを使用して、ワークフローパッケージのリストが取得されます。このリストから、現在のページを追加するパッケージを選択できます。このリストは、ユーザーが作成したフィルターの影響を受けます。
+>サイドキックの「ワークフロー」タブでは、PageInfo サーブレットを使用して、ワークフローパッケージのリストが取得されます。 このリストから、現在のページを追加するパッケージを選択できます。 このリストは、ユーザーが作成したフィルターの影響を受けます。
 >
 
-サービスの ID は、`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider` です。フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
+サービスの ID は、`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider` です。 フィルターを作成するには、`workflowpackageinfoprovider.filter` プロパティの値を指定します。
 
-プロパティの値の前には、+ または - の文字があり、その後にパッケージのパスが続きます。
+プロパティの値の前には接頭辞として、+ または - の文字があり、その後にパッケージのパスが続きます。
 
-* このパスは、ワークフローパッケージのルートノードのパスです。パスでは、FileVault 構文が使用されます。
-* パッケージを組み込むには、+ プレフィックスを使用します。
-* パッケージを除外するには、- プレフィックスを使用します。
+* このパスは、ワークフローパッケージのルートノードのパスです。 パスでは、FileVault 構文が使用されます。
+* パッケージを組み込むには、+ 接頭辞を使用します。
+* パッケージを除外するには、- 接頭辞を使用します。
 
-サービスにより、すべてのフィルターを累積した結果が適用されます。例えば、次のフィルター値を指定すると、Editions フォルダー内にあるものを除き、すべてのワークフローパッケージが除外されます。
+サービスにより、すべてのフィルターを累積した結果が適用されます。 例えば、次のフィルター値を指定すると、Editions フォルダー内にあるものを除き、すべてのワークフローパッケージが除外されます。
 
 ```
 -/etc/workflow/packages(/.*)?
@@ -494,11 +503,11 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 >[!NOTE]
 >
->AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
+>AEM と連携する場合は、いくつかの方法でこのようなサービスの設定を管理できます。 詳しくは、[OSGi の設定](/help/sites-deploying/configuring-osgi.md)を参照してください。
 
 例えば、CRXDE Lite を使用してサービスを設定するには、次の手順を実行します。
 
-1. CRXDE Lite（[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）を開きます。
+1. CRXDE Lite （[http://localhost:4502/crx/de](http://localhost:4502/crx/de)）を開きます。
 1. アプリケーションの config フォルダーでノードを作成します。
 
    * 名前：`com.day.cq.wcm.workflow.impl.WorkflowPackageInfoProvider`
@@ -540,10 +549,10 @@ http://localhost:4502/libs/wcm/core/content/pageinfo.json?path=/content/we-retai
 
 1. `com.day.cq.wcm.api.PageInfoProvider` インターフェイスを実装します。
 1. クラスをバンドルし、OSGi サービスとしてデプロイします。
-1. アプリケーションのページコンポーネントを作成します。`foundation/components/page` を `sling:resourceSuperType` プロパティの値として使用します。
+1. アプリケーションのページコンポーネントを作成します。 `foundation/components/page` を `sling:resourceSuperType` プロパティの値として使用します。
 
 1. `cq:infoProviders` という名前のコンポーネントノードにノードを追加します。
-1. `cq:infoProviders` ノードに、PageInfoProvider サービスのノードを追加します。ノードには、任意の名前を指定できます。
+1. `cq:infoProviders` ノードに、PageInfoProvider サービスのノードを追加します。 ノードには、任意の名前を指定できます。
 1. PageInfoProvider ノードに次のプロパティを追加します。
 
    * 名前：className

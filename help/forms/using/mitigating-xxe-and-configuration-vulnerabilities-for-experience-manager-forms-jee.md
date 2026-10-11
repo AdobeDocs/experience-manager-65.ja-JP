@@ -8,14 +8,20 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
-release-date: 2025-08-05T00:00:00Z
-source-git-commit: 3f64cfa688ef1f0090b7ce0d821324593cbea693
-workflow-type: ht
-source-wordcount: '675'
-ht-degree: 100%
-
+release-date: 2025-08-05T00:00:00.000Z
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '699'
+ht-degree: 94%
 ---
-
 # AEM Forms on JEE での RCE（CVE-2025-49533）、Struts 開発モード設定（CVE-2025-54253）、XXE（CVE-2025-54254）、脆弱性の軽減 {#mitigating-xxe-configuration-rce-vulnerabilities-aem-forms}
 
 ## クイックリファレンス
@@ -46,7 +52,7 @@ ht-degree: 100%
 
 ### 影響を受けないもの
 
-- Experience Manager Forms Workbench（すべてのバージョン）
+- Experience Manager Forms ワークベンチ（すべてのバージョン）
 - OSGi 版 Experience Manager Forms（すべてのバージョン）
 - Experience Manager Forms as a Cloud Service
 
@@ -81,7 +87,7 @@ ht-degree: 100%
 
 **手順 1：ホットフィックスパッケージをダウンロードして抽出**
 
-- Adobe ソフトウェア配布ポータルから [6.5.18.0～6.5.22 のホットフィックス](/help/release-notes/aem-forms-hotfix.md)をダウンロードします
+- 6.5.18.0の[ ホットフィックスをダウンロード - 6.5.22.](/help/release-notes/aem-forms-hotfix.md) Adobe Software Distribution Portalから
 - ローカルで抽出します
 
 **手順 2：正しいバージョンフォルダーに移動**
@@ -128,7 +134,7 @@ ht-degree: 100%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-1. EAR を保存します。変更が適切に保存されていることを確認します。
+1. EAR を保存します。 変更が適切に保存されていることを確認します。
 
 
 1. `adobe-edcserver-jboss.ear` を次に置き換えます
@@ -167,7 +173,7 @@ ht-degree: 100%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-1. EAR を保存します。変更が適切に保存されていることを確認します。
+1. EAR を保存します。 変更が適切に保存されていることを確認します。
 
 
 1. `adobe-edcserver-weblogic.ear` を次に置き換えます
@@ -204,7 +210,7 @@ ht-degree: 100%
 
    例えば、`adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar` のように指定します。
 
-1. EAR を保存します。変更が適切に保存されていることを確認します。
+1. EAR を保存します。 変更が適切に保存されていることを確認します。
 
 
 1. `adobe-edcserver-websphere.ear` を次に置き換えます
@@ -257,7 +263,7 @@ Document Security（旧称 Rights Management）を使用している場合は、
 
 ## 参照
 
-- [CWE-611：XML 外部エンティティ参照の不適切な制限](https://cwe.mitre.org/data/definitions/611.html)
+- [CWE-611:XML外部エンティティ参照の不適切な制限](https://cwe.mitre.org/data/definitions/611.html)
 - [CWE-16：設定](https://cwe.mitre.org/data/definitions/16.html)
-- [OWASP XXE 防止チートシート](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms セキュリティのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja)
+- [OWASP XXE防止ファクトシート](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
+- [Adobe Experience Manager Formsのセキュリティのベストプラクティス](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=ja)

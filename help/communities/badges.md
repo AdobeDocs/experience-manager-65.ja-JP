@@ -1,6 +1,6 @@
 ---
 title: バッジコンソール
-description: コミュニティバッジコンソールを使用すると、メンバーが獲得（授与）した場合や、コミュニティで特定の役割を担った（割り当てられた）場合に表示できるカスタムバッジを追加できます
+description: コミュニティバッジコンソールでは、メンバーが獲得（授与）またはコミュニティ内の特定の役割（割り当て）を引き受けたときに表示できるカスタムバッジを追加できます
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -10,22 +10,29 @@ role: Admin
 exl-id: 50ed9ec4-ff04-4f9d-aefb-0837542a9455
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '291'
 ht-degree: 6%
-
 ---
-
 # バッジコンソール {#badges-console}
 
 ## バッジについて {#about-badges}
 
-コミュニティバッジコンソールを使用すると、メンバーが獲得（授与）した場合や、コミュニティで特定の役割を担った（割り当てられた）場合に表示できるカスタムバッジを追加できます。
+コミュニティバッジコンソールでは、メンバーが獲得（授与）またはコミュニティ内の特定の役割（割り当て）を引き受けたときにメンバーに表示できるカスタムバッジを追加できます。
 
 ### バッジの表示 {#badge-visibility}
 
-現在、コミュニティメンバーが獲得または割り当てられているバッジは、名前とアバターと共に次の場所に表示されます。
+現在、コミュニティメンバーが獲得または割り当てられたバッジは、名前とアバターとともに次の場所に表示されます。
 
 * プロファイル
 * [フォーラム](/help/communities/forum.md)
@@ -33,9 +40,9 @@ ht-degree: 6%
 * [リーダーボード](/help/communities/enabling-leaderboard.md)
 * [アイディエーション](/help/communities/ideation-feature.md)
 
-オーサー環境でバッジコンソールに移動します。
+オーサー環境で、バッジコンソールに移動します。
 
-* グローバルナビゲーションから：**[!UICONTROL ツール]**/**[!UICONTROL コミュニティ]**/**[!UICONTROL バッジ]**
+* グローバルナビゲーションから：**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL バッジ]**
 
 このコンソールには、現在使用可能なバッジと、新しいバッジを追加できるバッジが表示されます。
 
@@ -43,30 +50,30 @@ ht-degree: 6%
 
 ## バッジを作成 {#create-badge}
 
-バッジは、適切な小さい画像（高さが 26～32 ピクセルの 72 dpi）をアップロードし、名前を付けることで作成されます。 バッジの画像は、`/libs/settings/community/badging/images` のリポジトリに保存され、自動的にパブリッシュ環境にレプリケートされます。
+バッジを作成するには、適切な小さい画像（高さが26～32 ピクセルの72 dpi）をアップロードし、名前を入力します。 バッジ画像は`/libs/settings/community/badging/images`のリポジトリに保存され、パブリッシュ環境に自動的にレプリケートされます。
 
-パブリッシュ環境がパブリッシャーのファームである場合は、[&#x200B; ユーザー同期 &#x200B;](/help/communities/sync.md) を設定する必要があります。
+パブリッシュ環境がパブリッシャーのファームである場合、[ ユーザー同期](/help/communities/sync.md)を設定する必要があります。
 
 ![create-badge](assets/create-badge.png)
 
 * **画像をアップロード**
 
-  （*必須*）JPEG形式または PNG 形式で、推奨サイズが 32 x 32 ピクセル、72 dpi のバッジ画像。
+  （*必須*） JPEGまたはPNG形式で、推奨サイズが32 x 32 ピクセル、72 dpiのバッジ画像。
 
 * **名前**
 
-  （*必須*）バッジ名。 これは、デフォルトの `Display Name` であり、リポジトリノード名でもあります。 `Name` が有効なリポジトリノード名でない場合は、変更されます。
+  （*必須*） バッジ名。 デフォルトの`Display Name`とリポジトリノード名です。 `Name`が有効なリポジトリノード名でない場合は、変更されます。
 
 * **表示名**
 
-  （*オプション*）ユーザーインターフェイスでバッジに表示する名前。 デフォルトは、`Name` ージに対して入力された変更されていないテキストです。
+  （*オプション*） ユーザーインターフェイスでバッジに表示する名前。 デフォルトは、`Name`に入力された変更されていないテキストです。
 
 * **説明**
 
-  （*任意*）バッジの説明。
+  （*オプション*）バッジの説明。
 
 ## 追加情報 {#additional-information}
 
-スコアおよびバッジルールの設定について詳しくは、[&#x200B; スコアおよびバッジ &#x200B;](/help/communities/implementing-scoring.md) を参照してください。
+スコアリングとバッジルールの設定について詳しくは、[ スコアリングとバッジ ](/help/communities/implementing-scoring.md)を参照してください。
 
-メンバーのバッジの管理については、[&#x200B; メンバーコンソール &#x200B;](/help/communities/members.md) を参照してください。
+メンバーのバッジの管理については、[ メンバーコンソール ](/help/communities/members.md)を参照してください。

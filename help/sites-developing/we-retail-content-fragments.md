@@ -9,24 +9,38 @@ exl-id: 1e5d8184-7164-4984-b43e-421015e8bf52
 solution: Experience Manager, Experience Manager Sites
 feature: Content Fragments,Developing
 role: Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 100%
-
+source-wordcount: '516'
+ht-degree: 88%
 ---
-
 # We.Retail のコンテンツフラグメントの使用{#trying-out-content-fragments-in-we-retail}
 
-コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。（Adobe Experience Manager の標準のインスタンスで使用できる）**We.Retail** には、基本のサンプルとして **Arctic Surfing in Lofoten** フラグメントが用意されています。このフラグメントは、次のことを示しています。
+コンテンツフラグメントを使用すると、チャネルに特化しないコンテンツをチャネル固有のバリエーションと共に作成できます。 （Adobe Experience Manager の標準のインスタンスで使用できる）**We.Retail** には、基本のサンプルとして **Arctic Surfing in Lofoten** フラグメントが用意されています。 このフラグメントは、次のことを示しています。
 
-* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。これにより、チャネルに依存しないコンテンツを様々なバリエーション（チャネル固有）で作成できます。
+* Adobe Experience Manager（AEM）のコンテンツフラグメントは、[ページに依存しないアセット](/help/assets/content-fragments/content-fragments.md)として作成および管理されます。 これにより、チャネルに依存しないコンテンツを様々なバリエーション（チャネル固有）で作成できます。
 
-   * [We.Retail でのコンテンツフラグメントアセットの場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
+  * [We.Retail でのコンテンツフラグメントアセットの場所](#where-to-find-content-fragments-in-we-retail)を参照してください。
 
 * その後、コンテンツページを[オーサリングする際に、これらのフラグメントとそれらのバリエーションを使用](/help/sites-authoring/content-fragments.md)できます。
 
-   * [We.Retail でコンテンツフラグメントが使用される場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
+  * [We.Retail でコンテンツフラグメントが使用される場所](#where-content-fragments-are-used-in-we-retail)を参照してください。
 
 コンテンツフラグメントの作成、管理、使用および開発に関する完全なドキュメントについて：
 
@@ -36,7 +50,7 @@ ht-degree: 100%
 >
 >**コンテンツフラグメント**&#x200B;と&#x200B;**[エクスペリエンスフラグメント](/help/sites-authoring/experience-fragments.md)**&#x200B;は、AEM 内の異なる機能です。
 >
->* **コンテンツフラグメント**&#x200B;はエディトリアルコンテンツで、主にテキストや関連する画像です。これらは、デザインやレイアウトを含まない純粋なコンテンツです。
+>* **コンテンツフラグメント**&#x200B;はエディトリアルコンテンツで、主にテキストや関連する画像です。 これらは、デザインやレイアウトを含まない純粋なコンテンツです。
 >* **エクスペリエンスフラグメント**&#x200B;は完全にレイアウトされたコンテンツであり、web ページのフラグメントです。
 >
 >エクスペリエンスフラグメントには、コンテンツフラグメントの形式でコンテンツを含めることができますが、その逆はできません。
@@ -49,7 +63,7 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 * **Assets**／**ファイル**／**We.Retail**／**英語**／**エクスペリエンス**／**Arctic Surfing in Lofoten** の順に移動します。
 
-   * [http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
+  * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/jp/experiences/arctic-surfing-in-lofoten)
 
 ![cf-44](assets/cf-44.png)
 
@@ -75,9 +89,9 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 例えば、**Arctic Surfing in Lofoten** のコンテンツフラグメントは、次の手順に沿って Sites ページで参照できます。
 
-* **Sites**／**We.Retail**／**言語マスター**／**英語**／**エクスペリエンス**&#x200B;の順に移動します。その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
+* **Sites**／**We.Retail**／**言語マスター**／**英語**／**エクスペリエンス**&#x200B;の順に移動します。 その後、**Arctic Surfing in Lofoten** を開いて編集をおこないます。
 
-   * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
+  * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 
 ![cf-53](assets/cf-53.png)
 
@@ -87,16 +101,16 @@ We.Retail には、様々なコンテンツフラグメントのサンプルが�
 
 * [コンテンツフラグメントの操作](/help/assets/content-fragments/content-fragments.md)
 
-   * コンテンツフラグメントアセットを作成、編集および管理する方法について説明します。
+  * コンテンツフラグメントアセットを作成、編集および管理する方法について説明します。
 
 * [コンテンツフラグメントを使用したページのオーサリング](/help/sites-authoring/content-fragments.md)
 
-   * ページのオーサリング時にコンテンツフラグメントを使用します。
+  * ページのオーサリング時にコンテンツフラグメントを使用します。
 
 * [AEM の開発 - コンテンツフラグメント用コンポーネント](/help/sites-developing/components-content-fragments.md)
 
-   * コンテンツフラグメント用コンポーネントの概要です。
+  * コンテンツフラグメント用コンポーネントの概要です。
 
 * [コンテンツフラグメントの開発と拡張](/help/sites-developing/customizing-content-fragments.md)
 
-   * コンテンツフラグメントの開発と拡張に役立つ情報です。
+  * コンテンツフラグメントの開発と拡張に役立つ情報です。

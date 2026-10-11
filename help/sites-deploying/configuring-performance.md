@@ -1,19 +1,26 @@
 ---
 title: パフォーマンスの最適化
-
 description: パフォーマンスを最適化するために AEM の特定の側面を設定する方法を説明します。
-
-
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
 topic-tags: configuring
-
 feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '6650'
 ht-degree: 98%
@@ -235,7 +242,7 @@ AEM 6.0 以降、Adobe Experience Manager は Oak ベースのリポジトリア
 
 #### リポジトリでの設定 {#configuration-in-the-repo}
 
-sling:OsgiConfig ノード [&#128279;](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
+sling:OsgiConfig ノード ](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)を使用してサービス [を設定する場合は、既存のサービスのPID （例：org.apache.sling.event.jobs.QueueConfiguration.370aad73-d01b-4a0b-abe4-20198d85f705）を見つける必要があります。 Web コンソールを使用すると、PID を検出できます。
 
 `queue.maxparallel` という名前のプロパティを設定します。
 
@@ -432,7 +439,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 | エラーのシナリオ | エラータイプ | いいえ。 /ユーザー | トランザクション/秒（予想値） | トランザクション/秒（テスト値） | 説明 |
 |---|---|---|---|---|---|
-| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &ast;&ast;&amp;ast；のみが検索されます。 |
+| 検索コンポーネントのオーバーロード | グローバルワイルドカード（アスタリスク）で検索 | 10 | 1 |  | &amp;ast;&amp;ast;&amp;ast；のみが検索されます。 |
 |   | ストップワード | 20 | 2 |  | ストップワードの検索。 |
 |   | 空の文字列 | 10 | 1 |  | 空の文字列の検索。 |
 |   | 特殊文字 | 10 | 1 |  | 特殊文字の検索。 |
@@ -479,7 +486,7 @@ Web サイトが公開されてからの最初の数日間は、より高い関�
 
 ## Dispatcher の使用時のパフォーマンスの最適化 {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
+[Dispatcher ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) はアドビのキャッシュ／ロードバランシングツールです。 Dispatcher を使用する場合は、キャッシュパフォーマンスを確保するために web サイトの最適化を検討してください。
 
 >[!NOTE]
 >

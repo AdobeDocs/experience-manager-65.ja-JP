@@ -9,24 +9,31 @@ exl-id: fb4e3973-2193-4bb5-8120-bf2f3ec80112
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '666'
-ht-degree: 21%
-
+source-wordcount: '687'
+ht-degree: 20%
 ---
-
 # Communities 用の Dispatcher の設定 {#configuring-dispatcher-for-communities}
 
 ## AEM Communities {#aem-communities}
 
-AEM Communitiesの場合、[&#x200B; コミュニティサイト &#x200B;](overview.md#community-sites)が適切に機能するようにDispatcherを構成する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
+AEM Communitiesの場合、[ コミュニティサイト ](overview.md#community-sites)が適切に機能するようにDispatcherを構成する必要があります。 ソーシャルログインなどの機能を含める場合は、追加の設定が必要です。
 
 特定のデプロイメントとサイト設計に必要な情報を学習する
 
-* [カスタマーケア](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja&support-tab=home#support)に問い合わせる
+* [カスタマーケア](https://experienceleague.adobe.com/?support-solution=General&lang=ja&support-tab=home#support)に問い合わせる
 
-[Dispatcherのメインのドキュメント &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)も参照してください。
+[Dispatcherのメインのドキュメント ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja)も参照してください。
 
 ## Dispatcher のキャッシュ {#dispatcher-caching}
 
@@ -42,19 +49,19 @@ Dispatcher キャッシュをサポートするように設定されている場
 
 ### 要件 {#requirements}
 
-* Dispatcher バージョン 4.1.2以降（最新バージョンについては、[Dispatcherのインストール &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)を参照）
+* Dispatcher バージョン 4.1.2以降（最新バージョンについては、[Dispatcherのインストール ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=ja)を参照）
 * [ACS AEM Commons パッケージ](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
-   * バージョン 3.3.2以降
-   * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
+  * バージョン 3.3.2以降
+  * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age` OSGi設定
 
 ### 設定 {#configuration}
 
 OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age**&#x200B;は、指定されたパスの下に表示されるキャッシュされたページの有効期限を設定します。
 
-* [Web コンソール &#x200B;](../../help/sites-deploying/configuring-osgi.md)から。
+* [Web コンソール ](../../help/sites-deploying/configuring-osgi.md)から。
 
-   * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+  * 例：[http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
 * `ACS AEM Commons - Dispatcher Cache Control Header - Max Age`を検索
 * 「+」アイコンを選択して、接続設定を作成します。
@@ -64,12 +71,12 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 * **フィルターパターン**
   *（必須）* コミュニティページへの1つ以上のパス。 例えば、`/content/sites/engage/(.*)` のように指定します。
 
-* **キャッシュ制御の最大年齢**
+* **キャッシュコントロールの最大有効期間**
   *（必須）* キャッシュ コントロール ヘッダーに追加する最大経過時間（秒単位）です。 値は0より大きくなければなりません。
 
 ## Dispatcher フィルター {#dispatcher-filters}
 
-`dispatcher.any` ファイルの/filter セクションについては、[&#x200B; コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
+`dispatcher.any` ファイルの/filter セクションについては、[ コンテンツへのアクセスの設定 – /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja)を参照してください。
 
 この節では、コミュニティ機能の適切な機能に必要な可能性が高いエントリについて説明します。
 
@@ -84,7 +91,7 @@ OSGi設定&#x200B;**ACS AEM Commons - Dispatcher Cache Control Header - Max Age*
 >[!NOTE]
 >
 >**プロパティ名の例**
->表示されるすべてのプロパティ名（**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など）は、既存の`dispatcher.any`設定ファイルに収まるように調整する必要があります。
+>**/0050**&#x200B;や&#x200B;**/0170**&#x200B;など、表示されるすべてのプロパティ名は、既存の`dispatcher.any`設定ファイルに収まるように調整する必要があります。
 >
 
 >[!CAUTION]

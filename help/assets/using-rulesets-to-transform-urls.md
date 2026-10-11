@@ -9,13 +9,31 @@ role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: Configuration,Rulesets
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: 9e13e2c2-3788-53ff-a622-b0cb8a3a3622
+    internal-label: Rulesets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '748'
 ht-degree: 100%
-
 ---
-
 # ルールセットを使用した URL の変換 {#using-rulesets-to-transform-urls}
 
 Dynamic Media でルールセットをデプロイして、URL を変換できます。 ルールセットはスクリプティング言語（JavaScript など）で記述された命令セットで、XML データを評価して、そのデータが特定の条件を満たす場合に特定のアクションを実行します。 各ルールは、1 つ以上の条件と 1 つ以上のアクションで構成されます。 ルールは、XML データを条件に対して評価し、条件が満たされている場合は適切なアクションを実行します。 ルールセットの例には、次のようなものがあります。
@@ -30,11 +48,11 @@ Dynamic Media でルールセットをデプロイして、URL を変換でき�
   「[Adobe Dynamic Media Classic が SEO をサポートする方法](/help/assets/assets/s7_seo.pdf)」を参照してください。
 
 * ダウンロードを開始するための Content Disposition の設定。
-* パーソナライゼーションのための画像サービングテンプレート URL の簡略化。 例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
+* パーソナライズ機能のための画像サービングテンプレート URL の簡略化。 例えば、`rgb{XX,YY,ZZ}` を RTF 対応の `\redXX\greenYY\blueZZ` に変換します。
 
 * `$`、`{`、`}` などの特定の文字のエンコードと、ImageServer への特定の文字のデコードのリクエスト。 例えば、Facebook は特殊文字を含む URL では正しく機能しません。
 
-Dynamic Media のコンテキストで、XML ベースのシステムを使用してアセット情報を管理する web サイトは、XML ファイルを Dynamic Media にアップロードできます。 これらのファイルのいずれかを、Dynamic Media のアセットを処理するための前処理ルールセットファイルとして指定できます。 このファイルは、Dynamic Media と統合するシステムのビジネスロジックを満たすよう、標準 URL プロトコル形式を再構成します。 XML ファイルをルールセット定義ファイルのパスとして指定します。
+Dynamic Media では、XML ベースのシステムを使用してアセット情報を管理する web サイトは、XML ファイルを Dynamic Media にアップロードできます。 これらのファイルのいずれかを、Dynamic Media のアセットを処理するための前処理ルールセットファイルとして指定できます。 このファイルは、Dynamic Media と統合するシステムのビジネスロジックを満たすよう、標準 URL プロトコル形式を再構成します。 XML ファイルをルールセット定義ファイルのパスとして指定します。
 
 >[!CAUTION]
 >
@@ -79,6 +97,6 @@ OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-st
 1. セットアップページの右下隅にある「**[!UICONTROL 閉じる]**」を選択します。
 1. Image Server 公開ジョブを実行します。
 
-   ルールセットの条件が、現在の Dynamic Media の Image Server へのリクエストに適用されます。
+   ルールセットの条件が、本番稼働中の Dynamic Media の Image Server へのリクエストに適用されます。
 
    ルールセットファイルを変更した場合、更新したルールセットファイルを再アップロードして再公開すると、変更内容が直ちに適用されます。

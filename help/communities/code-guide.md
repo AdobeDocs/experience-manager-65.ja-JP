@@ -1,6 +1,6 @@
 ---
 title: コーディングのガイドライン
-description: Communities 開発者のガイドライン、ヒント、テクニック
+description: Communitiesの開発者向けガイドライン、ヒント、テクニック
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,35 +9,42 @@ exl-id: a23aab83-1dfa-4d91-9b6b-6246a2103896
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 3%
-
 ---
-
 # コーディングのガイドライン {#coding-guidelines}
 
-## ガイドライン、ヒントおよびテクニック {#guidelines-tips-and-tricks}
+## ガイドライン、ヒント、テクニック {#guidelines-tips-and-tricks}
 
-AEM Communitiesの操作は、Java Server Pages への依存度が高くなっただけでなく、ビジネスロジック、スタイル、ページコンテンツが異なるテンプレートスクリプト言語を柔軟に選択できるようになった。
+AEM Communitiesの使用は、Java Server Pagesに大きく依存することから、ビジネスロジック、スタイル、ページコンテンツが異なるテンプレートスクリプト言語の選択の柔軟性へと進化しました。
 
-ユーザー生成コンテンツ（UGC）での操作がさらに柔軟なのは、SocialResourceProvider API を使用することで可能になります。これにより、デプロイメントで [SRP](srp.md) オプションが選択されたことを認識する必要がなくなります。
+ユーザー生成コンテンツ（UGC）の操作に関する柔軟性をさらに高めるために、SocialResourceProvider APIを使用します。これにより、デプロイメントに選択された[SRP](srp.md) オプションを認識する必要がなくなります。
 
-AEM Communities開発者向けの様々なコーディングガイドラインとベストプラクティスを以下に示します。
+以下に、AEM Communities開発者向けの様々なコーディングガイドラインとベストプラクティスを示します。
 
 ### コード {#code}
 
-* [SRP による UGC へのアクセス &#x200B;](accessing-ugc-with-srp.md) - UGC が JCR （JSRP）に格納されている場合にのみ機能するアプリケーションの書き込みを回避する方法。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。
-* [&#x200B; 命名規則 &#x200B;](naming-conventions.md) - カスタム Java クラスの命名規則。
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - UGCがJCR （JSRP）に保存されている場合にのみ機能するアプリケーションの書き込みを避ける方法。
+* [SocialUtils リファクタリング ](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。
+* [命名規則](naming-conventions.md) - カスタム Java クラスの命名規則。
 
 ### スクリプト {#scripts}
 
-* [Communities コンポーネントのサイドローディング &#x200B;](sideloading.md) - ページの読み込み後にコンポーネントを動的に追加する方法。
-* [&#x200B; リッチテキストエディターの基本事項 &#x200B;](rte.md) - メンバーに提供されるリッチテキスト UI をカスタマイズしてコンテンツを投稿する方法。
+* [Sideloading Communities Components](sideloading.md) - ページの読み込み後にコンポーネントを動的に追加する方法。
+* [ リッチテキストエディターの基本](rte.md) - コンテンツを投稿するためにメンバーに提供されるリッチテキスト UIをカスタマイズする方法。
 
 ### IDE {#ide}
 
-* [&#x200B; コミュニティでの Maven の使用 &#x200B;](maven.md) - Communities API jar を含める方法。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) - SocialUtils に代わる SRP のユーティリティメソッド。
+* [Maven for Communitiesの使用](maven.md) - Communities API jarを含める方法。
+* [SocialUtils リファクタリング ](socialutils.md) - SocialUtilsを置き換えるSRPのユーティリティ メソッド。

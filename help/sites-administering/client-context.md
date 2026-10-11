@@ -10,7 +10,20 @@ exl-id: 69c66c82-fbd6-406e-aefd-b85480a62109
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2007'
 ht-degree: 97%
@@ -39,13 +52,13 @@ Client Context は、現在のページと訪問者に関する特定の情報�
 ![ClientContext ウィンドウの編集アイコン、読み込みアイコン、リセットアイコン](do-not-localize/clientcontext_icons.png)
 
 * **編集**
-新しいページが開き、[&#x200B; プロファイルプロパティの編集、追加、または削除が可能になります](#editingprofiledetails)。
+新しいページが開き、[ プロファイルプロパティの編集、追加、または削除が可能になります](#editingprofiledetails)。
 
 * **ロード**
-プロファイルのリストから[選択して、テストするプロファイル &#x200B;](#loading-a-new-user-profile)を読み込むことができます。
+プロファイルのリストから[選択して、テストするプロファイル ](#loading-a-new-user-profile)を読み込むことができます。
 
 * **リセット**
-プロファイル [&#128279;](#resetting-the-profile-to-the-current-user)を現在のユーザーのプロファイルに リセットできます。
+プロファイル ](#resetting-the-profile-to-the-current-user)を現在のユーザーのプロファイルに[ リセットできます。
 
 ## 使用できる ClientContext のコンポーネント {#available-client-context-components}
 

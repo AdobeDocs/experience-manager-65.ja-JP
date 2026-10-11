@@ -10,18 +10,32 @@ role: Developer
 exl-id: 7d6fd230-e477-4286-9fb3-18a3474e3e48
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2139'
 ht-degree: 100%
-
 ---
-
 # PDF ドキュメントをプログラムで組み立てる {#programmatically-assembling-pdf-documents}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-Assembler Service API を使用して、複数の PDF ドキュメントを 1 つの PDF ドキュメントにアセンブリすることができます。 次のイラストは、3 つの PDF ドキュメントを 1 つの PDF ドキュメントに結合する様子を示しています。
+Assembler Service API を使用して、複数の PDF ドキュメントを 1 つの PDF ドキュメントに組み立てることができます。 次のイラストは、3 つの PDF ドキュメントを 1 つの PDF ドキュメントに結合する様子を示しています。
 
 ![pa_pa_document_assembly](assets/pa_pa_document_assembly.png)
 
@@ -85,7 +99,7 @@ Assembler Service API を使用して、複数の PDF ドキュメントを 1 �
 * adobe-utilities.jar（AEM Forms が JBoss にデプロイされている場合に必要）
 * jbossall-client.jar（AEM Formsが JBoss にデプロイされている場合に必要）
 
-AEM Forms が、JBOSS 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
+AEM Forms が、JBoss 以外のサポート対象の J2EE アプリケーションサーバー上にデプロイされている場合は、adobe-utilities.jar と jbossall-client.jar を、AEM Forms がデプロイされている J2EE アプリケーションサーバー固有の JAR ファイルに置き換える必要があります。
 
 **PDF Assembler クライアントの作成**
 
@@ -99,7 +113,7 @@ DDX ドキュメントを参照して、PDF ドキュメントをアセンブリ
 
 アセンブラーサービスに渡す入力 PDF ドキュメントを参照します。 例えば、Map と Directions という名前の 2 つの入力 PDF ドキュメントを渡す場合は、対応する PDF ファイルを渡す必要があります。
 
-map.pdf ファイルと dorictions.pdf ファイルの両方をコレクションオブジェクトに配置する必要があります。 キーの名前は、DDX ドキュメントの PDF ソース属性の値と一致する必要があります。 DDX ドキュメント内のキーとソース属性が一致する場合、PDF ファイルの名前は関係ありません。
+map.pdf ファイルと directions.pdf ファイルの両方をコレクションオブジェクトに配置する必要があります。 キーの名前は、DDX ドキュメントの PDF ソース属性の値と一致する必要があります。 DDX ドキュメント内のキーとソース属性が一致する場合、PDF ファイルの名前は関係ありません。
 
 >[!NOTE]
 >
@@ -136,7 +150,7 @@ map.pdf ファイルと dorictions.pdf ファイルの両方をコレクショ�
   <tr>
    <td><p><code><i>documentName</i></code></p></td>
    <td><p><code>Exception</code></p></td>
-   <td><p>ドキュメントの例外を含みます</p></td>
+   <td><p>ドキュメントに関する例外を含みます</p></td>
   </tr>
   <tr>
    <td><p><code>OutputMapConstants.LOG_NAME</code></p></td>
@@ -156,11 +170,11 @@ map.pdf ファイルと dorictions.pdf ファイルの両方をコレクショ�
 
 ## Java API を使用した PDF ドキュメントのアセンブリ {#assemble-pdf-documents-using-the-java-api}
 
-Assembler Service API（Java）を使用して PDF ドキュメントをアセンブリします。
+アセンブラーサービス API（Java）を使用して PDF ドキュメントをアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -179,8 +193,8 @@ Assembler Service API（Java）を使用して PDF ドキュメントをアセ�
    * 入力 PDF ドキュメントごとに、`com.adobe.idp.Document` オブジェクトを作成して、PDF ドキュメントを含む `java.io.FileInputStream` オブジェクトを渡します。
    * 入力ドキュメントごとに、`put` メソッドを呼び出して次の引数を渡すことにより、`java.util.Map` オブジェクトにエントリーを追加します。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
-      * ソース PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト（または複数のドキュメントを指定する `java.util.List` オブジェクト）。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります
+     * ソース PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト（または複数のドキュメントを指定する `java.util.List` オブジェクト）。
 
 1. 実行時オプションを設定します。
 
@@ -211,7 +225,7 @@ Assembler Service API（Java）を使用して PDF ドキュメントをアセ�
 
 **関連項目**
 
-[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントの組み立て](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-a-pdf-document-using-the-java-api)
 
 [AEM Forms Java ライブラリファイルを含める](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -237,10 +251,10 @@ Assembler Service API（web サービス）を使用して PDF ドキュメン�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 

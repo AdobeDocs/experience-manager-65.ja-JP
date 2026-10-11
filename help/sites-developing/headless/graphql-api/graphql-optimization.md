@@ -5,13 +5,39 @@ exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: f2c92b990a5c09cbcf532e0800e264620d98af77
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1915'
-ht-degree: 99%
-
+source-wordcount: '1995'
+ht-degree: 97%
 ---
-
 # GraphQL クエリの最適化 {#optimizing-graphql-queries}
 
 >[!NOTE]
@@ -60,7 +86,7 @@ GraphQL を使用しているお客様は、Experience Manager コンテンツ�
 
 ### キャッシュ方法 {#cache-strategy}
 
-キャッシュの様々な方法の最適化に使用することもできます。
+最適化には、様々なキャッシュ方法を使用することもできます。
 
 #### AEM Dispatcher のキャッシュを有効化する {#enable-aem-dispatcher-caching}
 
@@ -137,7 +163,7 @@ Contact Adobe to enable this capability for your AEM Cloud Service program and e
 
 これは、GraphQL クエリ内で使用されているモデルを共有する&#x200B;*すべての*&#x200B;フラグメントを、メモリに読み込む必要があるためです。 これは時間とメモリの両方を消費します。 結果セット全体をメモリに読み込んだ&#x200B;**後に**&#x200B;のみ、（最終的な）結果セット内の項目数を減らす可能性のあるフィルタリングを適用できます。
 
-これにより、小さな結果セットでもパフォーマンスが低下するというインプレッションを与える可能性があります。 ただし、実際には、フィルタリングを適用する前に内部で処理する必要があるので、初期結果セットのサイズが原因で速度が低下します。
+これにより、小さな結果セットでもパフォーマンスが低下するという印象を与える可能性があります。 ただし、実際には、フィルタリングを適用する前に内部で処理する必要があるので、初期結果セットのサイズが原因で速度が低下します。
 
 パフォーマンスとメモリの問題を減らすには、この初期結果セットをできるだけ小さく保つ必要があります。
 
@@ -146,11 +172,11 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 * [ハイブリッドフィルタリング](#use-aem-graphql-hybrid-filtering)
 * [ページング](#use-aem-graphql-pagination)（またはページネーション）
 
-   * [並べ替え](#use-graphql-sorting)は、最適化に直接関連していませんが、ページングに関連しています
+  * [並べ替え](#use-graphql-sorting)は、最適化に直接関連していませんが、ページングに関連しています
 
 各アプローチには、独自のユースケースと制限があります。 このセクションでは、ハイブリッドフィルターとページングに関する情報と、GraphQL クエリの最適化で使うための[ベストプラクティス](#best-practices)をいくつか紹介します。
 
-#### AEM GraphQL ハイブリッドフィルタリングを使用する {#use-aem-graphql-hybrid-filtering}
+#### AEM GraphQL ハイブリッドフィルタリングの使用 {#use-aem-graphql-hybrid-filtering}
 
 **レコメンデーション**
 
@@ -183,11 +209,11 @@ AEM には、GraphQL クエリを最適化する 2 つの方法があります�
 
 AEM の GraphQL では、次の 2 種類のページネーションに対応しています。
 
-* [制限/オフセットベースのページネーション &#x200B;](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
+* [制限/オフセットベースのページネーション](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#list-offset-limit)
 これはリスト クエリに使用されます。これらは`List`で終わります。例：`articleList`。
-これを使用するには、返す最初の項目の位置（`offset`）と返す項目の数（`limit`、またはページサイズ）を指定する必要があります。
+これを使用するには、最初に返す項目（`offset`）と返す項目の数（`limit` またはページサイズ）を指定する必要があります。
 
-* [&#x200B; カーソルベースのページネーション &#x200B;](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （`first`および`after`で表されます）
+* [ カーソルベースのページネーション ](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#paginated-first-after) （`first`および`after`で表されます）
 これにより、アイテムごとに一意のIDが提供されます。これはカーソルとも呼ばれます。
 クエリでは、前のページの最後の項目のカーソルとページサイズ（返される項目の最大数）を指定します。
 
@@ -223,17 +249,17 @@ AEM の GraphQL では、次の 2 種類のページネーションに対応し�
 
 以下を参照してください。
 
-* [_tags ID でフィルタリングし、バリエーションを除外し、名前で並べ替えられたクエリの例](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-filtering-tag-not-variations)
+* [_tags ID でフィルタリングし、バリエーションを除外して、名前で並べ替えるサンプルクエリ](/help/sites-developing/headless/graphql-api/content-fragments-graphql-samples.md#sample-filtering-tag-not-variations)
 
 ## ベストプラクティス {#best-practices}
 
-すべての最適化レコメンデーションでの主な目的は、初期結果セットを減らすことです。 ここに示すベストプラクティスで、その方法を説明します。 組み合わせることができます（推奨）。
+すべての最適化に関する推奨事項の主な目的は、初期結果セットを減らすことです。 ここに示すベストプラクティスで、その方法を説明します。 組み合わせることができます（推奨）。
 
 ### 最上位のプロパティのみをフィルター {#filter-top-level-properties-only}
 
 現在、JCR レベルでのフィルタリングは、最上位のフラグメントに対してのみ機能します。
 
-フィルターがネストされたフラグメントのフィールドに対応する場合、AEM はフォールバックして、基になるモデルを共有するすべてのフラグメントを（メモリに）読み込む必要があります。
+フィルターがネストされたフラグメントのフィールドを対象とする場合、AEM はフォールバックして、基になるモデルを共有するすべてのフラグメントを（メモリに）読み込む必要があります。
 
 最上位のフラグメントのフィールドとネストされたフラグメントのフィールドのフィルター式を、[AND 演算子](#logical-operations-in-filter-expressions)と組み合わせることで、このような GraphQL クエリを引き続き最適化できます。
 
@@ -302,7 +328,7 @@ AEM では、通常、リポジトリ構造を使用して、処理するコン�
 
 ### ：フィルタリング除外 {#filtering-exclusions}
 
-JCR レベルでフィルター式を評価できない場合が他にもいくつかあります（したがって、最高のパフォーマンスを実現するには回避する必要があります）。
+JCR レベルでフィルター式を評価できない場合が他にもいくつかあります（したがって、最高のパフォーマンスを実現するには回避する必要があります）：
 
 * `_sensitiveness` フィルターオプションを使用し、`_sensitiveness` が `0.0` 以外に設定されている `Float` 値の式をフィルタリングします。
 
@@ -334,7 +360,7 @@ AEM GraphQL は、複数の形式（リッチテキスト、シンプルテキ�
 
 ### コンテンツフラグメントの変更 {#modifying-content-fragments}
 
-AEM UI または API を使用して、コンテンツフラグメントとそれらのリソースを変更します。 JCR で直接、変更を行わないでください。
+コンテンツフラグメントとそれらのリソースは、AEM UI または API を使用してのみ変更します。 JCR で直接、変更を行わないでください。
 
 ### クエリをテストする {#test-your-queries}
 

@@ -9,16 +9,25 @@ exl-id: c037a788-c943-4f95-a028-1fcb0ef48f86
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 6%
 ---
 # ソーシャルグラフの基本事項  {#social-graph-essentials}
 
-コミュニティメンバーが[&#x200B; アクティビティ &#x200B;](essentials-activities.md)に従ってフォローする機能は、次の2つのコンポーネントによって確立されます。
+コミュニティメンバーが[ アクティビティ ](essentials-activities.md)に従ってフォローする機能は、次の2つのコンポーネントによって確立されます。
 
-`following` コンポーネントは別のリソースに関連付ける必要があり、この関連付けは[&#x200B; コミュニティサイト &#x200B;](overview.md#communitiessites)の既存のコミュニティメンバーと機能に対して既に確立されています。
+`following` コンポーネントは別のリソースに関連付ける必要があり、この関連付けは[ コミュニティサイト ](overview.md#communitiessites)の既存のコミュニティメンバーと機能に対して既に確立されています。
 
 `following` コンポーネントには、現在のメンバーに従っているか、現在のメンバーに従っているメンバーが一覧表示されます。 このメンバー間の関係のソーシャルグラフは、コミュニティサイト用に構築されたユーザープロファイルに含まれる。
 

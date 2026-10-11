@@ -11,13 +11,30 @@ solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2879'
 ht-degree: 86%
-
 ---
-
 
 # Adobe Campaign コンポーネント{#adobe-campaign-components}
 
@@ -220,20 +237,20 @@ Dynamic Media Classic（Scene7）画像テンプレートはレイヤー化さ�
 * **画像のプロパティ**（**詳細画像プロパティ**）
 次の項目を設定できます。
 
-   * **タイトル**
-ブロックのタイトル。マウスオーバーで表示されます。
+  * **タイトル**
+    ブロックのタイトル。マウスオーバーで表示されます。
 
-   * **代替テキスト**
-画像を表示できない場合に表示される代替テキスト。
+  * **代替テキスト**
+    画像を表示できない場合に表示される代替テキスト。
 
-   * **リンク先**
-web サイト内のアセットや他のページへのリンクを作成できます。
+  * **リンク先**
+    web サイト内のアセットや他のページへのリンクを作成できます。
 
-   * **説明**
-画像の説明。
+  * **説明**
+    画像の説明。
 
-   * **サイズ**
-画像の高さと幅を設定します。
+  * **サイズ**
+    画像の高さと幅を設定します。
 
 >[!NOTE]
 >
@@ -305,28 +322,28 @@ Adobe Campaign と統合するように設定されているフォームを開�
    <td><p><strong>フィールドの例</strong></p> </td>
   </tr>
   <tr>
-   <td><p>チェックボックス (Campaign)</p> </td>
-   <td><p>Boolean</p> </td>
+   <td><p>チェックボックス （Campaign）</p> </td>
+   <td><p>ブール値</p> </td>
    <td><p>今後の連絡は不要（どのチャネルからも）</p> </td>
   </tr>
   <tr>
    <td><p>日付フィールド （Campaign）</p> <p>日付フィールド / HTML 5 （Campaign）</p> </td>
-   <td><p>日付</p> </td>
+   <td><p>date</p> </td>
    <td><p>生年月日</p> </td>
   </tr>
   <tr>
-   <td><p>数値フィールド (Campaign)</p> </td>
+   <td><p>数値フィールド （Campaign）</p> </td>
    <td><p>数値（byte、short、long、double）</p> </td>
    <td><p>年齢</p> </td>
   </tr>
   <tr>
-   <td><p>オプションフィールド (Campaign)</p> </td>
+   <td><p>オプションフィールド （Campaign）</p> </td>
    <td><p>値が関連付けられたバイト</p> </td>
    <td><p>性別</p> </td>
   </tr>
   <tr>
-   <td><p>テキストフィールド (Campaign)</p> </td>
-   <td><p>string</p> </td>
+   <td><p>テキストフィールド （Campaign）</p> </td>
+   <td><p>文字列</p> </td>
    <td><p>メール</p> </td>
   </tr>
  </tbody>

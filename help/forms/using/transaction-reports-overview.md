@@ -8,13 +8,26 @@ feature: Transaction Reports
 exl-id: bb812614-f4d8-4f57-bea2-8f7d31457039
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: bcb3e79d-a57e-59a4-ad50-e03803c9f153
+    internal-label: Transaction Reports
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
-
 ---
-
 # OSGi 上の AEM Forms のトランザクションレポート {#transaction-reports-overview}
 
 <!--
@@ -41,9 +54,9 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 
 ## サポートされるトポロジ {#supported-topology}
 
-トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。 author-publish、author-processing-publish のほか、トポロジの処理のみがサポートされます。 トポロジについて詳しくは、[AEM Forms のアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md)を参照してください。
+トランザクションレポートは、OSGi 環境の AEM Forms でのみ使用できます。 author-publish、author-processing-publish、および処理のみのトポロジがサポートされます。 トポロジについて詳しくは、[AEM Forms のアーキテクチャとデプロイメントトポロジ](../../forms/using/transaction-reports-overview.md)を参照してください。
 
-トランザクション数は、パブリッシュインスタンスからオーサーインスタンスまたは処理インスタンスにリバースレプリケートされます。 指標となるオーサーとパブリッシュのトポロジを次に示します。
+トランザクション数は、パブリッシュインスタンスからオーサーインスタンスまたは処理インスタンスにリバースレプリケートされます。 オーサーとパブリッシュの代表的なトポロジを次に示します。
 
 ![simple-author-publish-topology](assets/simple-author-publish-topology.png)
 
@@ -62,5 +75,5 @@ PDF フォームの送信、エージェント UI によるインタラクティ
 ## 関連記事 {#related-articles}
 
 * [OSGi 上の AEM Forms のトランザクションレポートの表示と理解](../../forms/using/viewing-and-understanding-transaction-reports.md)
-* [OSGi 上の AEM Forms のトランザクションレポート請求可能 API](../../forms/using/transaction-reports-billable-apis.md)
+* [OSGi 上の AEM Forms のトランザクションレポートの課金対象 API](../../forms/using/transaction-reports-billable-apis.md)
 * [OSGi 上の AEM Forms のカスタム実装のトランザクションの記録](/help/forms/using/record-transaction-custom-implementation.md)

@@ -9,16 +9,25 @@ exl-id: 01c6bb29-1d2d-4a45-b291-0e8d97c01a08
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '320'
 ht-degree: 100%
-
 ---
-
 # 命名規則 {#naming-conventions}
 
-リポジトリのノードは、[Java コンテンツリポジトリ](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。ただし、AEM によってページノード名に追加の規則が課せられます。
+リポジトリのノードは、[Java コンテンツリポジトリ](/help/sites-developing/the-basics.md#java-content-repository)の命名規則の対象です。 ただし、AEM によってページノード名に追加の規則が課せられます。
 
 ## ページの命名規則 {#naming-conventions-for-pages}
 
@@ -28,22 +37,22 @@ ht-degree: 100%
 * ページマネージャー：[ページマネージャー](#page-manager)は、ページレベルの操作用のメソッドを提供します。
 * 使用する UI：
 
-   * [標準のタッチ操作対応 UI](#standard-ui)
-   * [クラシック UI](#classic-ui)
+  * [標準のタッチ操作対応 UI](#standard-ui)
+  * [クラシック UI](#classic-ui)
 
 ### JCR ユーティリティ {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は JCR ユーティリティの AEM 実装です。名前の検証では特に、制御する文字マッピングおよび次の点が確認されます。
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) は JCR ユーティリティの AEM 実装です。 名前の検証では特に、制御する文字マッピングおよび次の点が確認されます。
 
 * `isValidName`
 
-   * 名前が空でなく、有効な文字のみが含まれるかどうかを確認します。
-   * 推奨される名前が有効かどうかを確認するのに使用できます。
+  * 名前が空でなく、有効な文字のみが含まれるかどうかを確認します。
+  * 推奨される名前が有効かどうかを確認するのに使用できます。
 
 * `createValidName`
 
-   * 任意の文字列から有効なラベルを作成します。
-   * タイトルから名前を作成するのに使用できます。
+  * 任意の文字列から有効なラベルを作成します。
+  * タイトルから名前を作成するのに使用できます。
 
 ### ページマネージャー {#page-manager}
 
@@ -55,8 +64,8 @@ ht-degree: 100%
 
 * 次のいずれかの場合、ページマネージャーによって課せられる制約に従って名前が確認されます。
 
-   * ノード名に変換されるようにページタイトルが提供されている。
-   * 明示的なノード名が提供されている。
+  * ノード名に変換されるようにページタイトルが提供されている。
+  * 明示的なノード名が提供されている。
 
 ### クラシック UI {#classic-ui}
 
@@ -64,13 +73,13 @@ ht-degree: 100%
 
 * 名前が有効と判断されるのは、明示的なノード名が次のいずれかの場合です。
 
-   * ノード名に変換されるようにページタイトルが提供されている。
-   * 明示的なノード名が提供されている。
+  * ノード名に変換されるようにページタイトルが提供されている。
+  * 明示的なノード名が提供されている。
 
 * 有効な文字（`PageManagerImpl` によって他の文字の使用が許可されていても、クラシック UI でページを作成する場合は、次の文字のみが有効です）。
 
-   * a～z
-   * A～Z
-   * 0～9
-   * _（アンダースコア）
-   * `-`（ダッシュ／マイナス）
+  * a～z
+  * A～Z
+  * 0～9
+  * _（アンダースコア）
+  * `-`（ダッシュ／マイナス）

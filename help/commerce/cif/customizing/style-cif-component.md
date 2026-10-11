@@ -11,13 +11,21 @@ thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: a45b09c52d780a954e606d4cae73a3a02a8a6aa4
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2684'
+source-wordcount: '2693'
 ht-degree: 93%
-
 ---
-
 # AEM CIF コアコンポーネントのスタイル設定 {#style-aem-cif-core-components}
 
 [CIF Venia プロジェクト](https://github.com/adobe/aem-cif-guides-venia)は、[CIF コアコンポーネント](https://github.com/adobe/aem-core-cif-components)を使用するための参照用コードベースです。 このチュートリアルでは、Venia 参照用プロジェクトを調べ、AEM CIF コアコンポーネントで使用される CSS と JavaScript がどのように構成されているかを説明します。 また、CSS を使用してスタイルを作成し、**製品ティーザー**&#x200B;コンポーネントのデフォルトのスタイルを更新します。
@@ -257,7 +265,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 クライアントサイドライブラリを含める方法には、いくつかのオプションがあります。 次に、生成されたプロジェクトに、[ページテンプレート](/help/sites-developing/templates.md)を介してどのように `clientlib-site` ライブラリがインクルードされるかを調べます。
 
-1. AEM エディター内のサイトの&#x200B;**ホームページ**&#x200B;に移動します：[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
+1. AEM エディターでサイトの&#x200B;**ホームページ**&#x200B;に移動します：[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。
 
 1. **ページ情報**&#x200B;メニューを選択し、「**テンプレートを編集**」をクリックします。
 
@@ -292,7 +300,7 @@ Venia プロジェクト[のクローンを作成して](https://github.com/adob
 
 webpack-dev-server は、AEM のローカルインスタンスから画像と一部の CSS/JavaScript をプロキシしますが、デベロッパーは、`ui.frontend` モジュール内のスタイルと JavaScript を変更できます。
 
-1. ブラウザーで、**ホーム** ページに移動し、**公開済みとして表示**: [http://localhost:4502/content/venia/us/en.html?wcmmode=disabled](http://localhost:4502/content/venia/us/en.html?wcmmode=disabled)します。
+1. ブラウザーで、**ホーム** ページに移動し、**公開済みとして表示**: [http://localhost:4502/content/venia/us/en.html?wcmmode=disabled](http://localhost:4502/content/venia/us/en.html?wcmmode=disabled)。
 
 1. ページのソースとページの生の HTML **コピー**&#x200B;を表示します。
 
@@ -451,7 +459,7 @@ IDE と生成されたプロジェクトに戻ります。
 
 プロジェクトのコードを AEM にデプロイした後は、製品ティーザーの変更を確認できるようになります。
 
-1. ブラウザーに戻り、ホームページを更新します：[http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)。 アップデートされた製品ティーザースタイルが適用されていることが確認できます。
+1. ブラウザーに戻り、ホームページ [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html)を更新します。 アップデートされた製品ティーザースタイルが適用されていることが確認できます。
 
    ![製品ティーザースタイルのアップデート](../assets/style-cif-component/product-teaser-new-style.png)
 

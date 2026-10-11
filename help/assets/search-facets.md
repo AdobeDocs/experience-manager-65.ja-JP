@@ -1,19 +1,30 @@
 ---
 title: 検索結果をフィルタリングするための検索ファセット
-description: ' [!DNL Adobe Experience Manager] で検索ファセットを作成、変更および使用する方法。'
+description: '[!DNL Adobe Experience Manager]で検索ファセットを作成、変更、使用する方法。'
 contentOwner: AG
 role: Admin, Developer
 feature: Search
 exl-id: acaf46e6-ff70-4825-8922-ce8f82905a92
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2437'
 ht-degree: 98%
-
 ---
-
 # 検索ファセット {#search-facets}
 
 | バージョン | 記事リンク |
@@ -109,7 +120,7 @@ CRXDE リポジトリのオプションでノード構造を手動で作成す�
 
 >[!NOTE]
 >
->オプションの述語は、求める動作を実行するためにプロパティの述語を組み合わせたカスタムのラッパーです。 現時点で、この機能をネイティブにサポートする REST エンドポイントは存在しません。
+>オプションの述語は、説明した動作を示すためにプロパティの述語を含むカスタムラッパーです。 現時点で、この機能をネイティブにサポートする REST エンドポイントは存在しません。
 
 1. [!DNL Experience Manager] ロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL 一般]**／**[!UICONTROL 検索フォーム]**&#x200B;に移動します。
 1. **[!UICONTROL 検索フォーム]**&#x200B;ページで、「**[!UICONTROL Assets 管理者の検索レール]**」を選択し、「**[!UICONTROL 編集]**」 をクリックします。
@@ -140,7 +151,7 @@ CRXDE リポジトリのオプションでノード構造を手動で作成す�
 1. 「**[!UICONTROL 区切り文字サポート]**」が選択されていることを確認します。 「**[!UICONTROL 入力区切り文字]**」フィールドで、それぞれの値を区切る文字を指定します。 デフォルトでは、コンマが区切り文字に指定されています。 別の区切り文字を指定できます。
 1. 「**説明**」フィールドに説明を任意で入力し、「**[!UICONTROL 完了]**」をクリックします。
 1. [!DNL Assets] ユーザーインターフェイスのフィルターパネルに移動します。 **[!UICONTROL 複数値プロパティ]**&#x200B;の述語がパネルに追加されています。
-1. 複数値フィールドで複数の値を区切り文字で区切って指定し、検索を実行します。 述語は、指定した値と完全に一致するテキストをフェッチします。
+1. 複数値フィールドで複数の値を区切り文字で区切って指定し、検索を実行します。 述語は、指定した値と完全に一致するテキストを返します。
 
 ## タグ用述語の追加 {#adding-a-tags-predicate}
 
@@ -177,7 +188,7 @@ CRXDE リポジトリのオプションでノード構造を手動で作成す�
 | [!UICONTROL 最終変更アセット] | 最近変更されたアセットを検索するための検索用述語。 | <ul><li>プロパティ名</li><li>プロパティ値</li><li>説明</li></ul> |
 | [!UICONTROL 公開ステータス] | 公開ステータスに基づいてアセットを検索するための検索用述語 | <ul><li>ラベル</li><li>プロパティ名</li><li>説明</li></ul> |
 | [!UICONTROL レーティング] | 平均評価に基づいてアセットを検索するための検索用述語。 | <ul><li>ラベル</li><li>プロパティ名</li><li>オプションパス</li><li>説明</li></ul> |
-| [!UICONTROL 有効期限ステータス] | 有効期限に基づいてアセットを検索するための検索用述語。 | <ul><li>ラベル</li><li>プロパティ名</li><li>説明</li></ul> |
+| [!UICONTROL 有効期限ステータス] | 有効期限のステータスに基づいてアセットを検索するための検索用述語。 | <ul><li>ラベル</li><li>プロパティ名</li><li>説明</li></ul> |
 | [!UICONTROL 非表示] | 非表示のフィールドプロパティを定義してアセットを検索するための検索用述語です。 | <ul><li>プロパティ名</li><li>プロパティ値</li><li>説明</li></ul> |
 
 ## デフォルトの検索ファセットを復元 {#restoring-default-search-facets}

@@ -9,7 +9,16 @@ exl-id: d66fc1ff-a669-4a2c-b45a-093060facd97
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 3%
@@ -18,19 +27,19 @@ ht-degree: 3%
 
 AEM 6.1 Communitiesでは、サンプルページを作成する最も簡単な方法は、Page関数だけで構成されるシンプルなコミュニティサイトを作成することです。
 
-これにはparsys コンポーネントが含まれているため、[&#x200B; オーサリング用のコンポーネントを有効にできます](basics.md#accessing-communities-components)。
+これにはparsys コンポーネントが含まれているため、[ オーサリング用のコンポーネントを有効にできます](basics.md#accessing-communities-components)。
 
-サンプルコンポーネントを使用して調査するもうひとつの方法は、[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)で示されている機能を使用することです。
+サンプルコンポーネントを使用して調査するもうひとつの方法は、[ コミュニティコンポーネントガイド ](components-guide.md)で示されている機能を使用することです。
 
 ## コミュニティサイトの作成 {#create-a-community-site}
 
 これは、[AEM Communitiesの概要](getting-started.md)に記載されているサイトを作成する場合と同様です。
 
-大きな違いは、このチュートリアルでは、[&#x200B; ページ関数](functions.md#page-function)のみを含むコミュニティサイトテンプレートを作成して、シンプルなコミュニティサイトを作成することです。 これは他の機能（すべてのコミュニティサイトに基本的な事前有線機能を除く）を無料で提供します。
+大きな違いは、このチュートリアルでは、[ ページ関数](functions.md#page-function)のみを含むコミュニティサイトテンプレートを作成して、シンプルなコミュニティサイトを作成することです。 これは他の機能（すべてのコミュニティサイトに基本的な事前有線機能を除く）を無料で提供します。
 
 ### 新しいサイトテンプレートを作成 {#create-new-site-template}
 
-開始するには、シンプルな[&#x200B; コミュニティサイトテンプレート &#x200B;](sites.md)を作成します。
+開始するには、シンプルな[ コミュニティサイトテンプレート ](sites.md)を作成します。
 
 オーサーインスタンスのグローバルナビゲーションから、**[!UICONTROL ツール]** > **[!UICONTROL コミュニティ]** > **[!UICONTROL サイトテンプレート]**&#x200B;を選択します。
 
@@ -100,7 +109,7 @@ AEM 6.1 Communitiesでは、サンプルページを作成する最も簡単な�
 
 ![publish-site](assets/publish-site.png)
 
-[&#x200B; コミュニティサイトコンソール &#x200B;](sites-console.md)から、公開アイコンを選択してサイトを公開します。デフォルトではhttp://localhost:4503です。
+[ コミュニティサイトコンソール ](sites-console.md)から、公開アイコンを選択してサイトを公開します。デフォルトではhttp://localhost:4503です。
 
 ## 編集モードで作成者のサイトを開く {#open-the-site-on-author-in-edit-mode}
 
@@ -116,4 +125,4 @@ URLは[http://localhost:4502/editor.html/content/sites/sample/en.html](http://lo
 
 ## 公開時にサイトを表示 {#view-site-on-publish}
 
-ページを公開した後、[&#x200B; パブリッシュインスタンス &#x200B;](http://localhost:4503/content/sites/sample/en.html)でページを開き、匿名のサイト訪問者、サインインメンバー、または管理者として機能を試します。 オーサー環境で表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。
+ページを公開した後、[ パブリッシュインスタンス ](http://localhost:4503/content/sites/sample/en.html)でページを開き、匿名のサイト訪問者、サインインメンバー、または管理者として機能を試します。 オーサー環境で表示される管理リンクは、管理者がログインしない限り、パブリッシュ環境には表示されません。

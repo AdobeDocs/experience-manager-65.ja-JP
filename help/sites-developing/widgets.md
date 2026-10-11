@@ -1,20 +1,27 @@
 ---
 title: ウィジェットの使用および拡張（クラシック UI）
-
 description: Adobe Experience Manager の web ベースインターフェイスでは、AJAX やその他の最新のブラウザー技術を使用しています。これらの技術により、作成者は、web ページ上でコンテンツの WYSIWYG 編集や書式設定を行うことができます。
-
-
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: components
 content-type: reference
-
 docset: aem65
 exl-id: 56a9591c-cd78-42e8-a5d7-6b48581d6af6
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '5049'
 ht-degree: 92%
@@ -211,7 +218,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 複数パネルダイアログを使用するには：
 
 1. **Dialog Basics** コンポーネントのダイアログを&#x200B;**マルチパネル** ダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
 ![screen_shot_2012-01-31at50119pm](assets/screen_shot_2012-01-31at50119pm.png)
@@ -232,7 +239,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 **リッチ**&#x200B;ダイアログを使用するには：
 
 1. **Dialog Basics** コンポーネントのダイアログを&#x200B;**Rich** ダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
 ![screen_shot_2012-01-31at50429pm](assets/screen_shot_2012-01-31at50429pm.png) ![screen_shot_2012-01-31at50519pm](assets/screen_shot_2012-01-31at50519pm.png)
@@ -328,7 +335,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 **任意** ダイアログを使用するには：
 
 1. **動的ダイアログ** コンポーネントのダイアログを&#x200B;**任意** ダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
 ![screen_shot_2012-02-01at115300am](assets/screen_shot_2012-02-01at115300am.png)
@@ -364,7 +371,7 @@ AEM で使用可能なすべてのウィジェットについて詳しくは、[
 **Toggle Fields** ダイアログを使用するには、次の手順を実行します。
 
 1. **動的ダイアログ** コンポーネントのダイアログを、**フィールドの切り替え** ダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
 ![screen_shot_2012-02-01at115518am](assets/screen_shot_2012-02-01at115518am.png)
@@ -459,7 +466,7 @@ AEM 付属のすぐに使用できるウィジェットは、ほとんどのユ�
 **カスタム Treebrowse** ウィジェットベースのダイアログを使用するには：
 
 1. **カスタムウィジェット** コンポーネントのダイアログを&#x200B;**カスタムツリー参照** ダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。次のようなダイアログが表示されます。
 
 ![screen_shot_2012-02-01at120104pm](assets/screen_shot_2012-02-01at120104pm.png)
@@ -496,9 +503,9 @@ RTE プラグイン：
 **リッチテキストエディター（RTE）プラグイン**&#x200B;ベースのダイアログを使用するには：
 
 1. **カスタムウィジェット** コンポーネントのダイアログを、**リッチテキストエディター（RTE）プラグイン** ベースのダイアログに置き換えます。
-[例2：単一パネルダイアログ &#x200B;](#example-single-panel-dialog)の手順に従います
+[例2：単一パネルダイアログ ](#example-single-panel-dialog)の手順に従います
 1. コンポーネントを編集します。
-1. 右端のアイコン（4 つの矢印が付いているアイコン）をクリックします。 パスを入力し、**OK**&#x200B;をクリックします。
+1. 右端のアイコン（4 つの矢印が付いているアイコン）をクリックします。 パスを入力し、**OK**をクリックします。
 パスは角括弧（[）で表示されます ]）内に表示されます。
 1. 「**OK**」をクリックして、リッチテキストエディタを閉じます。
 

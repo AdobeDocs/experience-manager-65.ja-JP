@@ -10,13 +10,22 @@ feature: Upgrading
 exl-id: 37d4aee4-15eb-41ab-ad71-dfbd5c7910f8
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2049'
 ht-degree: 98%
-
 ---
-
 # アップグレード前のメンテナンスタスク{#pre-upgrade-maintenance-tasks}
 
 アップグレードの開始前に、次のメンテナンスタスクに従って、システムの準備が完了し、問題が発生した場合にロールバックができる状態にしておくことが重要です。
@@ -56,7 +65,7 @@ jar ファイルから AEM を起動すると、`crx-quickstart/conf` の下に 
 
 ## ワークフローおよび監査ログのパージの設定 {#configure-wf-audit-purging}
 
-`WorkflowPurgeTask` タスクと `com.day.cq.audit.impl.AuditLogMaintenanceTask` タスクには個別の OSGi 設定が必要であり、この設定がない場合は機能しません。 アップグレード前のタスクの実行中にこれらのタスクが失敗した場合、最も考えられる原因は、タスクに設定がないことです。 したがって、これらのタスクに OSGi 設定を追加するか、タスクを実行しない場合はアップグレード前の最適化タスクリストから完全に削除してください。 ワークフローのパージタスクの設定に関するドキュメントは[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)で、監査ログのメンテナンスタスクの設定に関するドキュメントは [AEM 6 の監査ログのメンテナンス](/help/sites-administering/operations-audit-log.md)で参照できます。
+`WorkflowPurgeTask` タスクと `com.day.cq.audit.impl.AuditLogMaintenanceTask` タスクには個別の OSGi 設定が必要であり、この設定がない場合は機能しません。 アップグレード前のタスクの実行中にこれらのタスクが失敗した場合、最も考えられる原因は設定が不足していることです。 したがって、これらのタスクに OSGi 設定を追加するか、タスクを実行しない場合はアップグレード前の最適化タスクリストから完全に削除してください。 ワークフローのパージタスクの設定に関するドキュメントは[ワークフローインスタンスの管理](/help/sites-administering/workflows-administering.md)で、監査ログのメンテナンスタスクの設定に関するドキュメントは [AEM 6 の監査ログのメンテナンス](/help/sites-administering/operations-audit-log.md)で参照できます。
 
 ## アップグレード前のタスクのインストール、設定および実行 {#install-configure-run-pre-upgrade-tasks}
 
@@ -334,8 +343,8 @@ CRX3 インスタンスでリビジョンクリーンアップを実行した後
 >
 >このアップグレード前のメンテナンスタスクは、次の場合にのみ必要です。
 >
->* AEM 6.3 より前の AEM バージョンからアップグレードしている
->* アップグレード中に以下に示すエラーが発生した
+>* AEM 6.3 より前の AEM バージョンからアップグレードする場合
+>* アップグレード中に以下に示すエラーが発生した場合
 >
 
 サービスユーザーが以前の AEM バージョンで、通常のユーザーとして適切にタグ付けされていない場合があります。
@@ -350,7 +359,7 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 この問題を回避するには、必ず次の手順を実行してください。
 
 1. インスタンスを実稼動トラフィックから切り離します。
-1. 問題の原因となっている 1 人以上のユーザーのバックアップを作成します。 バックアップの作成は、パッケージマネージャーから実行できます。 詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
+1. 問題の原因となっている 1 人以上のユーザーのバックアップを作成します。 このタスクは、パッケージマネージャーを使用して実行できます。 詳しくは、[パッケージの使用方法](/help/sites-administering/package-manager.md)を参照してください。
 1. 問題の原因となっている 1 人以上のユーザーを削除します。 以下は、このカテゴリに該当する可能性のあるユーザーのリストです。
 
    1. `dynamic-media-replication`
@@ -362,4 +371,4 @@ java.lang.RuntimeException: Unable to create service user [communities-utility-r
 
 ## ログファイルのローテーション {#rotate-log-files}
 
-アップグレードを開始する前に、現在のログファイルをアーカイブすることをお勧めします。 これにより、アップグレード中やアップグレード後にログファイルを監視およびスキャンして、発生する可能性のある問題を特定および解決することが容易になります。
+Adobe では、アップグレードを開始する前に現在のログファイルをアーカイブすることをお勧めします。 これにより、アップグレード中やアップグレード後にログファイルを監視およびスキャンして、発生する可能性のある問題を特定および解決することが容易になります。

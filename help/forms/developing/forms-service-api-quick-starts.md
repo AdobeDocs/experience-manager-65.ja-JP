@@ -9,13 +9,29 @@ role: Developer
 exl-id: acb33000-25b3-4471-9df9-b6e039ab2bda
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 99%
-
 ---
-
 # Forms サービス API のクイックスタート {#forms-service-api-quick-starts}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -28,21 +44,21 @@ Forms サービスでは、次のクイックスタートを利用できます�
 
 [クイックスタート（SOAP モード）：Java™ API を使用した、フラグメントベースのフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java™ API を使用した、権限が有効なフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した、使用権限が有効なフォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-rights-enabled-form-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java™ API を使用した HTML フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java™ API を使用した、カスタムツールバーでの HTML フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した、カスタムツールバーを備えた HTML フォームのレンダリング](forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-with-a-custom-toolbar-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java™ API を使用した、XML として送信された PDF フォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した、XML として送信された PDF forms の処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java™ API を使用した、PDF として送信された PDF フォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した、PDF として送信された PDF forms の処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java™ API を使用した、XML として送信された HTML フォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java™ API を使用した、送信済み XML データを含む PDF ドキュメントの作成](forms-service-api-quick-starts.md#quick-start-soap-mode-creating-pdf-documents-with-submitted-xml-data-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java™ API を使用した、編集可能なレイアウトを含むフォームの事前入力](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
+[クイックスタート（SOAP モード）：Java™ API を使用した、フローレイアウトを含むフォームの事前入力](forms-service-api-quick-starts.md#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java™ API を使用した、計算スクリプトを含むフォームの処理](forms-service-api-quick-starts.md#quick-start-soap-mode-handling-a-form-containing-a-calculation-script-using-the-java-api)
 
@@ -56,7 +72,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 >[!NOTE]
 >
->「v によるプログラミング」にあるクイックスタートは、Forms サーバーに基づいています。UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「v によるプログラミング」にあるクイックスタートは、Forms サーバーが Windows 上で動作していることを前提としています。UNIX® などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 **ヒント**：アドビの開発者向け web サイトにある次の記事では、Forms サービスを呼び出してフォームをレンダリングする ASP.NET アプリケーションの作成方法について説明しています。
 
@@ -743,7 +759,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java™ API を使用した HTML フォームのレンダリング {#quick-start-soap-mode-rendering-an-html-form-using-the-java-api}
 
-次のコードの例では、Forms サービス Java™ API を使用して HTML フォームをレンダリングします。 ツールバーが HTML フォームと 2 つの添付ファイルに追加されます。 さらに、ユーザーエージェントの値が `HttpServletRequest` オブジェクトから取得されます。 （[Forms を HTML としてレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-as-html)を参照。）
+次のコードの例では、Forms サービス Java™ API を使用して HTML フォームをレンダリングします。 ツールバーが HTML フォームに追加され、2 つのファイル添付も追加されます。 さらに、ユーザーエージェントの値が `HttpServletRequest` オブジェクトから取得されます。 （[Forms を HTML としてレンダリング](/help/forms/developing/rendering-forms.md#rendering-forms-as-html)を参照。）
 
 ```java
  /*
@@ -1384,7 +1400,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java™ API を使用した、PDF として送信された PDF フォームの処理 {#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api}
 
-次のコードの例では、PDF データとして送信されたフォームが処理されます。 `processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/pdf` です。 送信されたフォームは、*tempPDF.pdf* という名前の PDF ファイルとして保存されます。 また、フォームは PDF として送信されるので、添付ファイルを取得できます。 添付ファイルはすべて JPEG ファイルとして保存されます。 （[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
+次のコードの例では、PDF データとして送信されたフォームを処理しています。 `processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/pdf` です。 送信されたフォームは、*tempPDF.pdf* という名前の PDF ファイルとして保存されます。 また、フォームは PDF として送信されるので、添付ファイルを取得できます。 添付ファイルはすべて JPEG ファイルとして保存されます。 （[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照してください）。
 
 ```java
  /*
@@ -1534,7 +1550,7 @@ Forms サービス API を使用するアプリケーションロジックは、
 
 ## クイックスタート（SOAP モード）：Java™ API を使用した、XML として送信された HTML フォームの処理 {#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api}
 
-次のコードの例では、XML データとして送信された HTML フォームが処理されます。 `processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。 `mortgageAmount`、`lastName`、`firstName` という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。 `org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列の値を受け入れます。 このメソッドは、ノードの値を表す文字列値を返します。 （[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照。）
+次のコードの例では、XML データとして送信された HTML フォームを処理しています。 `processFormSubmission` メソッドに渡されるコンテンツタイプの値は `CONTENT_TYPE=application/x-www-form-urlencoded` です。 `mortgageAmount`、`lastName`、`firstName` という名前のフィールドに対応する値が表示されます。 このクイックスタートでは、`getNodeText` という名前のユーザー定義メソッドを使用します。 `org.w3c.dom.Document` インスタンスと、ノード名を指定する文字列の値を受け入れます。 このメソッドは、ノードの値を表す文字列値を返します。 （[送信されたフォームの処理](/help/forms/developing/rendering-forms.md#handling-submitted-forms)を参照。）
 
 ```java
  /*
@@ -1964,9 +1980,9 @@ Forms サービス API を使用するアプリケーションロジックは、
  }
 ```
 
-## クイックスタート（SOAP モード）：Java™ API を使用した、編集可能なレイアウトを含むフォームの事前入力 {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
+## クイックスタート（SOAP モード）：Java™ API を使用した、フローレイアウトを含むフォームの事前入力 {#quick-start-soap-mode-prepopulating-forms-with-flowable-layouts-using-the-java-api}
 
-次のコードの例では、フォームに動的データソースが事前入力されます。 つまり、データソースは実行時に作成されるものであり、XML ファイル内には含まれていないか、またはデザイン時に作成されません。 このコード例には、3 つのユーザー定義メソッドが使用されています。
+次のコードの例では、フォームに動的データソースが事前入力されます。 つまり、データソースは実行時に作成されるものであり、XML ファイル内に含まれておらず、デザイン時に作成されるものでもありません。 このコード例には、3 つのユーザー定義メソッドが含まれています。
 
 * `createDataSource`：フォームの事前入力に使用されるデータソースを表す `org.w3c.dom.Document` オブジェクトを作成します。 このユーザー定義メソッドは、`org.w3c.dom.Document` オブジェクトを返します。
 * `convertDataSource`：`org.w3c.dom.Document` オブジェクトを `com.adobe.idp.Document` オブジェクトに変換します。 このメソッドは、入力パラメーターとして `org.w3c.dom.Document` オブジェクトを受け入れ、`com.adobe.idp.Document` オブジェクトを返します。

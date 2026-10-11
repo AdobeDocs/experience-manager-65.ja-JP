@@ -9,13 +9,20 @@ exl-id: 3df90511-e43e-442b-bf73-44c22c1886b7
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 7%
-
 ---
-
 # コミュニティでの Maven の使用 {#using-maven-for-communities}
 
 ## 概要 {#overview}
@@ -34,7 +41,7 @@ Adobe Experience Manager（AEM）のコミュニティに関するドキュメ�
 >
 >最新のCommunities リリースを使用して最新情報を入手します。
 >
->最新バージョンを特定できる最新のリリース [&#128279;](deploy-communities.md#latest-releases)の節を参照してください。
+>最新バージョンを特定できる最新のリリース ](deploy-communities.md#latest-releases)の節を参照してください。[
 
 ## Maven依存関係の例
 
@@ -49,7 +56,7 @@ Adobe Experience Manager（AEM）のコミュニティに関するドキュメ�
 
 >[!NOTE]
 >
->最新のUber jar アーティファクトを特定できる[AEM Uber jar リポジトリ &#x200B;](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
+>最新のUber jar アーティファクトを特定できる[AEM Uber jar リポジトリ ](https://mvnrepository.com/artifact/com.adobe.aem/uber-jar)を参照してください。
 
 <!--
 There are now two "uber" artifacts that replace individual artifacts:

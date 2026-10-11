@@ -10,13 +10,29 @@ role: Developer
 exl-id: b3c19c82-e26f-4dc8-b846-6aec705cee08
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2111'
-ht-degree: 99%
-
+source-wordcount: '2183'
+ht-degree: 100%
 ---
-
 # DDX ドキュメントの動的な作成 {#dynamically-creating-ddx-documents}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -36,7 +52,7 @@ DDX ドキュメントをアセンブラーサービスに渡す前に、XML を
  </DDX>
 ```
 
-この DDX ドキュメントは、PDF ドキュメントをディスアセンブリします。 PDF ドキュメントのディスアセンブリに関する知識を身に付けることをお勧めします。
+この DDX ドキュメントは、PDF ドキュメントを分解します。 PDF ドキュメントのディスアセンブリに関する知識を身に付けることをお勧めします。
 
 >[!NOTE]
 >
@@ -112,11 +128,11 @@ PDF ドキュメントを分割するには、分割する PDF ドキュメン�
 
 ## Java API を使用した DDX ドキュメントの動的な作成 {#dynamically-create-a-ddx-document-using-the-java-api}
 
-Assembler Service API（Java）を使用して、DDX ドキュメントを動的に作成し、PDF ドキュメントをディスアセンブリします。
+アセンブラーサービス API（Java）を使用して、DDX ドキュメントを動的に作成し、PDF ドキュメントをディスアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
-   adobe-livecycle-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
+   adobe-assembler-client.jar などのクライアント JAR ファイルを Java プロジェクトのクラスパスに含めます。
 
 1. PDF Assembler クライアントを作成します。
 
@@ -128,7 +144,7 @@ Assembler Service API（Java）を使用して、DDX ドキュメントを動的
    * `DocumentBuilderFactory` クラスの `newInstance` メソッドを呼び出して、Java の `DocumentBuilderFactory` オブジェクトを作成します。
    * `DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出して、Java の `DocumentBuilder` オブジェクトを作成します。
    * `DocumentBuilder` オブジェクトの `newDocument` メソッドを呼び出し、`org.w3c.dom.Document` オブジェクトをインスタンス化します。
-   * `org.w3c.dom.Document` オブジェクトの`createElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。このメソッドは、ルート要素を表す`Element` オブジェクトを作成します。要素の名前を表す文字列値を`createElement` メソッドに渡します。戻り値を`Element`にキャストします。次に、`setAttribute` メソッドを呼び出して、子要素の値を設定します。最後に、ヘッダー要素の`appendChild` メソッドを呼び出してヘッダー要素に要素を追加し、子要素オブジェクトを引数として渡します。次のコード行は、このアプリケーションロジックを示しています。
+   * `org.w3c.dom.Document` オブジェクトの `createElement` メソッドを呼び出して、DDX ドキュメントのルート要素を作成します。 このメソッドは、 ルート要素を表す `Element` オブジェクトを作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 次に、`setAttribute` メソッド呼び出して、子要素の値を設定します。 最後に、ヘッダー要素を要素に追加するには、ヘッダー要素の `appendChild` メソッドを呼び出して、子要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
      ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
    * `Document` オブジェクトの `createElement` メソッドを呼び出して、`PDFsFromBookmarks` 要素を作成します。 要素名を表す文字列値を `createElement` メソッドに渡します。 戻り値を `Element` にキャストします。 `setAttribute` メソッドを呼び出して、`PDFsFromBookmarks` 要素の値を設定 します。 DDX 要素の `appendChild` メソッドを呼び出して、`DDX` 要素に `PDFsFromBookmarks` 要素を追加します。 `PDFsFromBookmarks` 要素オブジェクトを引数として渡します。 次のコード行は、このアプリケーションロジックを示しています。
@@ -158,8 +174,8 @@ Assembler Service API（Java）を使用して、DDX ドキュメントを動的
    * `com.adobe.idp.Document` オブジェクトを作成します。 ディスアセンブリする PDF ドキュメントを含む `java.io.FileInputStream` オブジェクトを作成します。
    * `put` メソッドを呼び出して次の引数を渡すことにより、`java.util.Map` オブジェクトにエントリを追加してください。
 
-      * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります （動的に作成される DDX ドキュメントでは、値は `AssemblerResultPDF.pdf` です）。
-      * 分割する PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
+     * キー名を表す文字列値。 この値は、DDX ドキュメントで指定された PDF ソース要素の値と一致する必要があります （動的に作成される DDX ドキュメントでは、値は `AssemblerResultPDF.pdf` です）。
+     * 分割する PDF ドキュメントを含む `com.adobe.idp.Document` オブジェクト。
 
 1. 実行時オプションを設定します。
 
@@ -194,7 +210,7 @@ Assembler Service API（Java）を使用して、DDX ドキュメントを動的
 
 ## Web サービス API を使用した DDX ドキュメントの動的な作成 {#dynamically-create-a-ddx-document-using-the-web-service-api}
 
-Assembler Service API（web サービス）を使用して、DDX ドキュメントを動的に作成し、PDF ドキュメントをディスアセンブリします。
+アセンブラーサービス API（web サービス）を使用して、DDX ドキュメントを動的に作成し、PDF ドキュメントをディスアセンブリします。
 
 1. プロジェクトファイルを含めます。
 
@@ -212,10 +228,10 @@ Assembler Service API（web サービス）を使用して、DDX ドキュメン
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. DDX ドキュメントを作成します。
 

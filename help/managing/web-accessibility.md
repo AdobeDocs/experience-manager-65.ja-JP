@@ -5,16 +5,32 @@ exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer, Leader, User
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 100%
-
+source-wordcount: '419'
+ht-degree: 89%
 ---
-
 # AEM と Web アクセシビリティのガイドライン{#aem-and-the-web-accessibility-guidelines}
 
-ウェブコンテンツを、障害や制限の有無にかかわらず、対象オーディエンスにとって可能な限りアクセシブルであるよう設計することには、多くの社会的、経済的、法的動機があります。このため Adobe Experience Manager（AEM）による web アクセシビリティは、優れた web デザインの重要な側面となっています。
+ウェブコンテンツを、障害や制限の有無にかかわらず、対象オーディエンスにとって可能な限りアクセシブルであるよう設計することには、多くの社会的、経済的、法的動機があります。 このため Adobe Experience Manager（AEM）による web アクセシビリティは、優れた web デザインの重要な側面となっています。
 
 AEM を使用して、アクセスしやすい web サイトおよびコンテンツを作成する場合、次のような影響があります。
 
@@ -22,7 +38,7 @@ AEM を使用して、アクセスしやすい web サイトおよびコンテ�
 
 * 作成者は、これらの機能を使用して、アクセシブルな Web サイトを作成する必要があります。
 
-  アクセシブルなコンテンツの作成はプロセスです。AEM には各種機能が用意されていますが、コンテンツ作成者は、アクセスしやすいコンテンツを作成するために必要な手法に従う必要があります。
+  アクセシブルなコンテンツの作成はプロセスです。 AEM には各種機能が用意されていますが、コンテンツ作成者は、アクセスしやすいコンテンツを作成するために必要な手法に従う必要があります。
 
 * テンプレート開発者も同様に、Web サイトデザインを実装する際に、こうした問題を認識する必要があります。
 
@@ -34,7 +50,7 @@ Adobe Experience Manager は、[World Wide Web Consortium](#world-wide-web-conso
 
 ## World Wide Web Consortium {#world-wide-web-consortium}
 
-[World Wide Web Consortium（W3C）](https://www.w3.org/)は、Web 標準の策定を専門とする国際コミュニティです。[Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)は、[Web コンテンツのアクセシビリティに関するガイドライン](#wcag-accessibility-guidelines)を公開しています。
+[World Wide Web Consortium（W3C）](https://www.w3.org/)は、Web 標準の策定を専門とする国際コミュニティです。 [Web Accessibility Initiative（WAI）](https://www.w3.org/WAI/)は、[Web コンテンツのアクセシビリティに関するガイドライン](#wcag-accessibility-guidelines)を公開しています。
 
 ## Web Content Accessibility Guidelines（WCAG）2.1 {#wcag-accessibility-guidelines}
 
@@ -50,11 +66,11 @@ Adobe Experience Manager を使用すると、コンテンツ作成者や Web �
 
 * AEM との関係について詳しくは、[アクセシブルなコンテンツの作成](/help/sites-authoring/creating-accessible-content.md)を参照してください。
 
-* [アクセスしやすいサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
-アクセスしやすいコンテンツを作成するための AEM の設定方法を示す、管理者向けのガイドラインです。
+* [ アクセス可能なサイトを作成するためのリッチテキストエディターの設定](/help/sites-administering/rte-accessible-content.md)
+アクセス可能なコンテンツを生成するために管理者がAEMを設定する方法に関するガイドラインです。
 
-* [アクセシブルなアダプティブフォームの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
-Adobe Experience Manager（AEM）には、ユーザーの様々な能力に合わせてアダプティブフォームの使いやすさを向上させる機能が、いくつか含まれています。このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
+* [ アクセス可能なアダプティブ Formsの作成](/help/forms/using/creating-accessible-adaptive-forms.md)
+Adobe Experience Manager（AEM）には、能力が異なるユーザー向けにアダプティブフォームの使いやすさを向上させる機能がいくつか用意されています。 このソリューションは、フォーム作成者がアクセスしやすいアダプティブフォームを作成する上でも役立ちます。
 
 >[!NOTE]
 >

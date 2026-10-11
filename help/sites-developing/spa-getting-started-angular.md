@@ -1,6 +1,6 @@
 ---
 title: AEM での SPA の概要 - Angular
-description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、Angular フレームワークを使用して独自の SPA の運用をすぐに開始する方法についても説明します。
+description: この記事では、サンプルの SPA アプリケーションを紹介し、その構成を説明するほか、Angular フレームワークを使用して独自の SPA をすばやく立ち上げる方法についても説明します。
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
 content-type: reference
@@ -10,19 +10,33 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 100%
-
 ---
-
 
 # AEM での SPA の概要 - Angular{#getting-started-with-spas-in-aem-angular}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。 開発者にとっては、SPA フレームワークを使用してサイトを構築できると都合がよく、作成者にとっては、SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集できると便利です。
 
-SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。 この記事では、Angular フレームワーク上のシンプルな SPA アプリケーションを紹介し、その組み合わせ方法を説明します。これにより、独自の SPA をすぐに使い始めることができます。
+SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。 この記事では、Angular フレームワーク上のシンプルな SPA アプリケーションを紹介し、その構成を説明します。これにより、独自の SPA をすぐに使い始めることができます。
 
 >[!NOTE]
 >
@@ -42,7 +56,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 >[!NOTE]
 >
->SPA 内のコンテンツを作成するには、コンテンツを AEM に格納し、コンテンツモデルによって公開する必要があります。
+>SPA 内でコンテンツをオーサリングできるようにするには、そのコンテンツを AEM に格納し、コンテンツモデルによって公開する必要があります。
 >
 >AEM 以外で開発された SPA については、コンテンツモデルのコントラクトに準拠していない場合、オーサリングを行うことはできません。
 

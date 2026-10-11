@@ -9,13 +9,22 @@ exl-id: 317bab41-3504-4e46-9ddc-72e291a34e06
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 100%
-
 ---
-
 
 # Adobe Campaign Classic 統合に関するトラブルシューティング{#troubleshooting-your-adobe-campaign-classic-integration}
 
@@ -28,8 +37,8 @@ Adobe Campaign Classic（ACC）統合に関する問題のトラブルシュー�
 両方のソリューション（AEM／Adobe Campaign Classic、Adobe Campaign Classic／AEM）で HTTP 呼び出しが送受信されるかどうかを確認します。 このヒントは、ファイアウォール／SSL の問題を回避するのに役立ちます。
 
 * AEM の機能では、JSON の呼び出しが AEM オーサーインターフェイスからリクエストされます
-   * これらの呼び出しでは、HTTP 500 のエラーは表示されません。
-   * HTTP 500 のエラーが表示される場合は、`error.log` で詳細を確認します。
+  * これらの呼び出しでは、HTTP 500 のエラーは表示されません。
+  * HTTP 500 のエラーが表示される場合は、`error.log` で詳細を確認します。
 * AEM でキャンペーンクラスのデバッグレベルを上げることも問題のトラブルシューティングに役立ちます。
 
 ## 接続に失敗する場合 {#when-the-connection-fails}
@@ -131,8 +140,8 @@ AEM は、Adobe Campaign Classic 配信でコンテンツを同期しようと�
 
 * 元のプロトコルをヘッダーとして渡すように、AEM ディスパッチャーまたはリバースプロキシを設定する必要があります。
 * AEM の OSGi 設定において、**Apache Felix Http Service SSL Filter** の設定に適切なヘッダー設定を使用する必要があります。
-   * `https://<host>:<port>/system/console/configMgr`
-   * 詳しくは、[https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter) を参照してください。
+  * `https://<host>:<port>/system/console/configMgr`
+  * 詳しくは、[https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter](https://github.com/apache/felix-dev/tree/master/http#using-the-ssl-filter) を参照してください。
 
 ## ページのプロパティでカスタムテンプレートを選択できない場合 {#if-the-custom-template-i-created-cannot-be-selected-in-page-properties}
 

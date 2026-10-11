@@ -9,13 +9,29 @@ role: Developer
 exl-id: bee0eebb-c21d-472c-bbdf-28d8c3a5ed4a
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 100%
-
 ---
-
 # 呼び出し API クイックスタート {#invocation-api-quick-starts}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -72,13 +88,13 @@ ht-degree: 100%
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP を介した BLOB データを使用した AEM Forms の呼び出し</a>（Java web サービスの例）</p></td>
    <td><p>該当なし</p></td>
    <td><p>該当なし</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">クイックスタート：.NET プロジェクトで BLOBデータを使用して HTTP 経由でサービスを呼び出す</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_net_project">クイックスタート：.NET プロジェクトで BLOB データを使用した HTTP 経由でのサービスの呼び出し</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http">HTTP を介した BLOB データを使用した AEM Forms の呼び出し</a>（.NET web サービスの例）</p></td>
    <td><p>該当なし</p></td>
    <td><p>該当なし</p></td>
-   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">クイックスタート：Java プロジェクトで、BLOB データを使用して HTTP 経由でサービスを呼び出す</a></p></td>
+   <td><p><a href="invocation-api-quick-starts.md#quick_start_invoking_a_service_using_blob_data_over_http_in_a_java_project">クイックスタート：Java プロジェクトで、BLOB データを使用した HTTP 経由でのサービスの呼び出し</a></p></td>
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-dime">DIME を使用した AEM Forms の呼び出し</a>（Java web サービスの例）</p></td>
@@ -94,7 +110,7 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#passing_secure_documents_to_invoke_processes_using_remoting">Remoting を使用してプロセスを呼び出すための安全なドキュメントの受け渡し</a></p></td>
-   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">クイックスタート：（AEM Forms では非推奨）AEM Forms Remoting を使用して安全なドキュメントを渡すことにより、短期間のプロセスを呼び出す</a></p></td>
+   <td><p><a href="/help/forms/developing/invoking-aem-forms-using-remoting.md#quick-start-invoking-a-short-lived-process-by-passing-a-secure-document-using-remoting">クイックスタート：（AEM Forms では非推奨）AEM Forms Remoting を使用して安全なドキュメントを渡すことにより、短時間のみ有効なプロセスを呼び出す</a></p></td>
    <td><p>該当なし</p></td>
    <td><p>該当なし</p></td>
   </tr>
@@ -394,7 +410,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：（AEM Forms では非推奨）AEM Forms Remoting を使用して保護されていないドキュメントを渡すことにより、短期間のプロセスを呼び出す {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
+## クイックスタート：（AEM Forms では非推奨）AEM Forms Remoting を使用して保護されていないドキュメントを渡すことによる短期間のプロセスの呼び出し {#quick-start-invoking-a-short-lived-process-by-passing-an-unsecure-document-using-deprecated-for-aem-forms-aem-forms-remoting}
 
 次の Flex コード例は、`MyApplication/EncryptDocument` という名前の短期間のプロセスを呼び出します。 （[（AEM Forms では非推奨）AEM Forms Remoting を使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting)を参照してください）。
 
@@ -551,7 +567,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：.NET プロジェクトで DIME を使用してサービスを呼び出す {#quick-start-invoking-a-service-using-dime-in-a-net-project}
+## クイックスタート：.NET プロジェクトで DIME を使用したサービスの呼び出し {#quick-start-invoking-a-service-using-dime-in-a-net-project}
 
 次の C# コード例は、Dime を使用して Microsoft.NET プロジェクトから `MyApplication/EncryptDocument` という名前のプロセスを呼び出します。 （[Base64 エンコーディングを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-base64-encoding)を参照してください）。
 
@@ -757,7 +773,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：Java プロジェクトで、BLOB データを使用して HTTP 経由でサービスを呼び出す {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
+## クイックスタート：Java プロジェクトで、BLOB データを使用した HTTP 経由でのサービスの呼び出し {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-java-project}
 
 次の Java コード例は、HTTP を経由でデータを使用して `MyApplication/EncryptDocument` という名前のプロセスを呼び出します。 （[HTTP を介する BLOB データを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を参照してください）。
 
@@ -832,7 +848,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート：.NET プロジェクトで BLOBデータを使用して HTTP 経由でサービスを呼び出す {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
+## クイックスタート：.NET プロジェクトで BLOB データを使用した HTTP 経由でのサービスの呼び出し {#quick-start-invoking-a-service-using-blob-data-over-http-in-a-net-project}
 
 次の C# コード例は、HTTP を介しデータを使用して Microsoft.NET プロジェクトから `MyApplication/EncryptDocument` という名前のプロセスを呼び出します。 （[HTTP を介して BLOB データを使用した AEM Forms の呼び出し](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-blob-data-over-http)を参照してください）。
 

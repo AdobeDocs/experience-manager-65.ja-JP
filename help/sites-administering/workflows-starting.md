@@ -9,7 +9,18 @@ exl-id: 84a1964c-4121-4763-b946-9eee6093747d
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 95%
@@ -171,7 +182,7 @@ ht-degree: 95%
 
      このランチャープロパティは、次のような項目のコンマ区切りリストです。
 
-     * `property-name`は、指定されたプロパティ名でトリガーされた`jcr` イベントを無視します。 &grave;&grave;
+     * `property-name`は、指定されたプロパティ名でトリガーされた`jcr` イベントを無視します。 ``
      * `event-user-data:<*someValue*>`は、[`ObservationManager` API] （https://experienceleague.adobe.com/en/tools/aem-api-documentation/spec/jsr170/javadocs/jcr-2.0/javax/jcr/observation/ObservationManager.html#setUserData(java.lang.String)）を通じて設定された`*<someValue*`> `user-data`を含むイベントを無視します。
 
      次に例を示します。

@@ -9,18 +9,36 @@ feature: Document Services,Output Service
 exl-id: 82b0293a-711f-4769-9b11-b4cff4fec021
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 9cc5e18e-2002-58a1-befa-285122cf6653
+    internal-label: Output Service
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '519'
 ht-degree: 100%
-
 ---
-
 # Output サービス{#output-service}
 
 ## 概要 {#overview}
 
-出力サービスは、AEM ドキュメントサービスの一部を成す OSGi サービスです。出力サービスは、様々な出力形式や、AEM Forms Designer の出力設計機能をサポートしています。出力サービスでは、XFA テンプレートと XML データを変換して、様々な形式の印刷ドキュメントを生成することができます。
+出力サービスは、AEM ドキュメントサービスの一部を成す OSGi サービスです。 出力サービスは、様々な出力形式や、AEM Forms Designer の出力設計機能をサポートしています。 出力サービスでは、XFA テンプレートと XML データを変換して、様々な形式の印刷ドキュメントを生成することができます。
 
 Output サービスにより、以下のような機能を備えたアプリケーションを作成することができます。
 
@@ -31,15 +49,15 @@ Output サービスにより、以下のような機能を備えたアプリケ�
 
 >[!NOTE]
 >
->Output サービスは、32 ビットアプリケーションです。Microsoft Windows では、32 ビットアプリケーションが使用できるメモリは最大 2 GB です。この制限は Output サービスにも適用されます。
+>Output サービスは、32 ビットアプリケーションです。 Microsoft Windows では、32 ビットアプリケーションが使用できるメモリは最大 2 GB です。 この制限は Output サービスにも適用されます。
 
 ## 非インタラクティブ形式のドキュメントを作成する {#creating-non-interactive-form-documents}
 
 ![usingoutput_modified](assets/usingoutput_modified.png)
 
-通常、テンプレートは AEM Forms Designer を使用して作成します。これらのテンプレートは、出力サービスの `generatePDFOutput` と `generatePrintedOutput` の各 API により、PDF、ポストスクリプト、ZPL や PCL などの様々な形式に直接変換することができます。
+通常、テンプレートは AEM Forms Designer を使用して作成します。 これらのテンプレートは、出力サービスの `generatePDFOutput` と `generatePrintedOutput` の各 API により、PDF、ポストスクリプト、ZPL や PCL などの様々な形式に直接変換することができます。
 
-`generatePDFOutput` 操作は PDF を生成する一方で、`generatePrintedOutput` 操作は、PostScript、ZPL、および PCL の形式でドキュメントを生成します。各演算の最初のパラメーターは、テンプレートファイルの名前（例えば、`ExpenseClaim.xdp`）、またはテンプレートが含まれているドキュメントオブジェクトのいずれかを受け取ります。テンプレートファイルの名前を指定した場合は、テンプレートを含むフォルダへのパスとしてのコンテンツルートも指定します。コンテンツルートの指定には、`PDFOutputOptions` または `PrintedOutputOptions` パラメータのいずれかを使用します。これらのパラメーターを使用して指定できる他のオプションについて詳しくは、Javadoc を参照してください。
+`generatePDFOutput` 操作は PDF を生成する一方で、`generatePrintedOutput` 操作は、PostScript、ZPL、および PCL の形式でドキュメントを生成します。 各演算の最初のパラメーターは、テンプレートファイルの名前（例えば、`ExpenseClaim.xdp`）、またはテンプレートが含まれているドキュメントオブジェクトのいずれかを受け取ります。 テンプレートファイルの名前を指定した場合は、テンプレートを含むフォルダへのパスとしてのコンテンツルートも指定します。 コンテンツルートの指定には、`PDFOutputOptions` または `PrintedOutputOptions` パラメータのいずれかを使用します。 これらのパラメーターを使用して指定できる他のオプションについて詳しくは、Javadoc を参照してください。
 
 2 番目のパラメーターは、出力ドキュメントの生成中にテンプレートと結合される XML ドキュメントを受け取ります。
 
@@ -51,16 +69,16 @@ Output サービスにより、以下のような機能を備えたアプリケ�
 
 各レコードの印刷文書を生成するために、出力サービスの `generatePDFOutputBatch` と `generatePrintedOutputBatch` の演算を使用します。
 
-また、単一のドキュメントにレコードを組み合わせることもできます。いずれの演算でも、4 つのパラメーターが必要です。
+また、単一のドキュメントにレコードを組み合わせることもできます。 いずれの演算でも、4 つのパラメーターが必要です。
 
 最初のパラメーターはマップであり、この中には、任意の文字列が鍵として、およびテンプレートファイルの名前が値として収められています。
 
-2番目のパラメーターは別のマップです。この値は、XML データを含むドキュメントオブジェクトです。この鍵は、最初のパラメーターに指定したものと同じものです。
+2番目のパラメーターは別のマップです。この値は、XML データを含むドキュメントオブジェクトです。 この鍵は、最初のパラメーターに指定したものと同じものです。
 
 `generatePDFOutputBatch` または `generatePrintedOutputBatch` の 3 番目のパラメーターは、それぞれ `PDFOutputOptions` タイプまたは `PrintedOutputOptions` タイプです。
 
 パラメータータイプは `generatePDFOutput` と `generatePrintedOutput` 演算のためのパラメーターのタイプと同じで、効果も同じです。
 
-第 4 のパラメーターはタイプ `BatchOptions` です。これは、レコードごとに別のファイルを生成するかどうかを指定するために使用します。このパラメータのデフォルト値は false です。
+第 4 のパラメーターはタイプ `BatchOptions` です。これは、レコードごとに別のファイルを生成するかどうかを指定するために使用します。 このパラメータのデフォルト値は false です。
 
-`generatePrintedOutputBatch` と `generatePDFOutputBatch` は、共にタイプ `BatchResult` の値を返します。値には、生成されたドキュメントのリストが含まれています。また、XML 形式のメタデータドキュメントも含まれており、この中には、生成された各ドキュメントに関連する情報が収められています。
+`generatePrintedOutputBatch` と `generatePDFOutputBatch` は、共にタイプ `BatchResult` の値を返します。 値には、生成されたドキュメントのリストが含まれています。 また、XML 形式のメタデータドキュメントも含まれており、この中には、生成された各ドキュメントに関連する情報が収められています。

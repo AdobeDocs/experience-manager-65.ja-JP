@@ -9,13 +9,33 @@ role: Admin,User
 exl-id: 722e75a0-bcb3-465e-bb74-ea94a3b99fd3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms Upgrade,AEM Forms on JEE
-source-git-commit: 894956434811b74fadea6d4e1f1a0ad88330e818
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: b9cdd520-e7a7-4af9-a95f-296f28882b69
+    internal-label: AEM Forms upgrade
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 63%
-
 ---
-
 # JEE 上の AEM 6.5 Forms へのアップグレード {#upgrade-to-aem-forms-jee}
 
 AEM 6.5.18.0 JEE版Formsには、フルインストーラーとパッチインストーラーの2種類のインストーラーが用意されています。
@@ -41,5 +61,5 @@ AEM 6.5.18.0 JEE版Formsには、フルインストーラーとパッチイン�
    * [JEE上のAEM FormsのJBoss EAPを7.4.10から7.4.23にアップグレードする](/help/forms/using/upgrade-jboss-eap-from-7-4-10-to-7-4-23.md)
    * [JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。](/help/forms/using/upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23.md)
 
-LiveCycle ES2、LiveCycle ES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms を AEM 6.5 Forms に直接アップグレードすることはできません。 LiveCycle または AEM Forms のバージョンを 1 つ以上中間アップグレードした後に、AEM 6.5 Forms にアップグレードできます。 中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
+LiveCycle ES2、LiveCycle ES3、AEM 6.0 Forms、AEM 6.1 Forms、AEM 6.2 Forms を AEM 6.5 Forms に直接アップグレードすることはできません。 LiveCycle または AEM Forms の 1 つ以上のバージョンに中間アップグレードした後、AEM 6.5 Forms にアップグレードできます。 中間バージョンのリストと対応するアップグレード手順について詳しくは、「[アップグレードパスを選択する](upgrade.md)」を参照してください。
 

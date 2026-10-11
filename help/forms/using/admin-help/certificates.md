@@ -9,13 +9,29 @@ exl-id: 1fe0e7b4-6109-4f7a-8858-8237a1c5c93b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 100%
-
 ---
-
 # 証明書の管理 {#managing-certificates}
 
 >[!NOTE]
@@ -27,7 +43,7 @@ Trust Store 管理を使用すると、電子署名の検証および証明書�
 * **Trust for Certificate Authentication with CA：** CRL の検証では、「ID で信頼」も選択します。
 * **Trust for Certificate Authentication with ICA：**「ID で信頼」だけを選択します。 ICA は証明書認証では信頼しないでください。 ICA を証明書認証で信頼する場合、ICA はパス構築のための CA になります。 ICA が証明書認証と ID の両方で信頼された場合、ICA が CA となるので、CA ベンダー証明書は無視されます。
 * **Trust for OCSP Server with HTTPs：** OCSP 応答側サーバーが HTTPS の場所に存在する場合は、「SSL 接続で信頼」も選択する必要があります。 OCSP 応答側で CRL の検証を必要とする場合は、必ず「ID で信頼」も選択します。
-* **Adobe Root：**「SSL Connections」または「OCSP Server」の Trust Store の種類は選択しないでください。 「Adobe Root」は「SSL Connections」および「OCSP Server」では信頼されません。 Adobe では OCSP および SSL の証明書は発行されません。 「Adobe Root」はエイリアス名 =&quot;ADOBEROOT&quot; によって暗黙的に信頼されます。
+* **Adobe Root：**「SSL Connections」または「OCSP Server」の Trust Store の種類は選択しないでください。 「Adobe Root」は「SSL Connections」および「OCSP Server」では信頼されません。 Adobe では OCSP および SSL の証明書は発行されません。 「Adobe Root」は、エイリアス名=&quot;ADOBEROOT&quot; で暗黙的に信頼されます。
 
 サポートされるのは、X509v3 証明書のみです。 この証明書タイプは、DER でエンコードされたバイナリファイル（.cer ファイル）または同じ DER でエンコードされた証明書の Base64 でエンコードされたバージョンを含むテキストファイル（Privacy Enhanced Mail（PEM）形式の X509 証明書など）で提供されます。
 
@@ -49,7 +65,7 @@ Trust Manager API を使用して証明書の読み込みおよび削除を行�
 
    >[!NOTE]
    >
-   >Trust Store ではアドビのルート証明書の証明書認証、署名、署名の認証および ID が暗黙的に信頼されます。
+   >Trust Store では、証明書認証、署名、証明署名および ID のために、アドビのルート証明書が暗黙的に信頼されます。
 
 1. 「エイリアス」ボックスに、この証明書の ID を入力します。
 1. 「**[!UICONTROL 参照]**」をクリックして証明書を探し、「**[!UICONTROL OK]**」をクリックします。

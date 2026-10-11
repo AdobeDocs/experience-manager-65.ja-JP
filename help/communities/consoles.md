@@ -9,7 +9,16 @@ role: Admin
 exl-id: 36f2e3d2-46c7-48a8-a1e9-213f581bd9f3
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 2%
@@ -19,20 +28,20 @@ ht-degree: 2%
 AEM Communitiesのコンソールは、グローバルナビゲーションパネルからオーサー環境で使用でき、次のような管理タスクにアクセスできます。
 
 * [コミュニティサイトの作成](sites-console.md)
-* サイト内にネストされた[&#x200B; グループ &#x200B;](groups.md)を追加しています
-* [&#x200B; コミュニティサイトテンプレートの管理](sites.md)
-* [&#x200B; コミュニティメンバー](members.md)の管理
-* [&#x200B; ユーザー生成コンテンツ （UGC）の管理](moderate-ugc.md)
-* [&#x200B; カスタムバッジの作成](badges.md)
-* UGC[&#128279;](srp-config.md)の デフォルトストレージの設定
+* サイト内にネストされた[ グループ ](groups.md)を追加しています
+* [ コミュニティサイトテンプレートの管理](sites.md)
+* [ コミュニティメンバー](members.md)の管理
+* [ ユーザー生成コンテンツ （UGC）の管理](moderate-ugc.md)
+* [ カスタムバッジの作成](badges.md)
+* UGC](srp-config.md)の[ デフォルトストレージの設定
 
-[UGC ストレージ &#x200B;](working-with-srp.md)がオーサー環境とパブリッシュ環境で共有される共通のストアとして設定されている場合、オーサー環境とパブリッシュ環境の両方から利用できる[&#x200B; モデレーションコンソール &#x200B;](moderation.md)は、UGCの単独インスタンスで動作します。
+[UGC ストレージ ](working-with-srp.md)がオーサー環境とパブリッシュ環境で共有される共通のストアとして設定されている場合、オーサー環境とパブリッシュ環境の両方から利用できる[ モデレーションコンソール ](moderation.md)は、UGCの単独インスタンスで動作します。
 
 オーサー環境では、管理者権限でログインした後、ナビゲーションおよびツールコンソールから`Communities` コンソールを使用できます。
 
 >[!NOTE]
 >
->パブリッシュ環境では、サインインしたメンバーが適切な権限を持っている場合、[&#x200B; コミュニティサイト &#x200B;](sites-console.md)に`Administration` メニュー項目が表示されます。
+>パブリッシュ環境では、サインインしたメンバーが適切な権限を持っている場合、[ コミュニティサイト ](sites-console.md)に`Administration` メニュー項目が表示されます。
 
 ## グローバルナビゲーションパネル {#global-navigation-panel}
 
@@ -49,11 +58,11 @@ AEM Communitiesのコンソールは、グローバルナビゲーションパ�
 
 * [Sites](sites-console.md)
 
-  Sites コンソールには、コミュニティ サイトとその[&#x200B; グループ &#x200B;](groups.md)を作成および管理するためのオーサー環境でアクセスできます。
+  Sites コンソールには、コミュニティ サイトとその[ グループ ](groups.md)を作成および管理するためのオーサー環境でアクセスできます。
 
 * [モデレート](moderation.md)
 
-  モデレーションコンソールは、UGCとオーサー環境の一括モデレーション用です。 パブリッシュ環境では、1つ以上のコミュニティサイトに[&#x200B; コミュニティモデレーター](users.md#publishenvironmentusersandgroups)の役割を割り当てられたコミュニティメンバーに同様の一括管理コンソールがアクセスできます。
+  モデレーションコンソールは、UGCとオーサー環境の一括モデレーション用です。 パブリッシュ環境では、1つ以上のコミュニティサイトに[ コミュニティモデレーター](users.md#publishenvironmentusersandgroups)の役割を割り当てられたコミュニティメンバーに同様の一括管理コンソールがアクセスできます。
 
 * [メンバー、グループ](members.md)
 
@@ -65,4 +74,4 @@ AEM Communitiesのコンソールは、グローバルナビゲーションパ�
 
 ## ツールコンソール {#tools-console}
 
-[&#x200B; コミュニティツール &#x200B;](tools.md) （旧管理コンソール）にアクセスするには、グローバルナビゲーションから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL コミュニティコンソール]**
+[ コミュニティツール ](tools.md) （旧管理コンソール）にアクセスするには、グローバルナビゲーションから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL コミュニティコンソール]**

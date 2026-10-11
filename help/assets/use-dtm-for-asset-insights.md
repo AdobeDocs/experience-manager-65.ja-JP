@@ -6,34 +6,50 @@ role: User, Admin
 feature: Asset Insights,Asset Reports
 exl-id: 80e8f84e-3235-4212-9dcd-6acdb9067893
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a4e1c1f5-18fc-592e-bfc7-453ce6ae0030
+    internal-label: Asset Insights
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: c29e3a96-cd2b-4e21-b382-a8279aa04553
+    internal-label: Asset reports
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '668'
 ht-degree: 100%
-
 ---
-
 # DTM での Assets Insights の有効化 {#enable-asset-insights-through-dtm}
 
-Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。これは Adobe Analytics のユーザーに無償で提供されます。トラッキングコードをカスタマイズして、サードパーティの CMS ソリューションで Assets Insights を使用できるようにするか、DTM を使用して Assets Insights タグを挿入できます。インサイトのサポートおよび提供が行われるのは、画像に対してのみです。
+Adobe Dynamic Tag Management は、デジタルマーケティングツールをアクティベートするツールです。 これは Adobe Analytics のユーザーに無償で提供されます。 トラッキングコードをカスタマイズして、サードパーティの CMS ソリューションで Assets Insights を使用できるようにするか、DTM を使用して Assets Insights タグを挿入できます。 インサイトのサポートおよび提供が行われるのは、画像に対してのみです。
 
 >[!CAUTION]
 >
->Adobe DTM は [!DNL Adobe Experience Platform] に置き換わったことにより非推奨のため、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)となります。Adobeでは、 [!DNL Adobe Experience Platform] アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=ja) には [ を使用することをお勧めします。
+>Adobe DTM は [!DNL Adobe Experience Platform] に置き換わったことにより非推奨のため、まもなく[提供終了](https://medium.com/launch-by-adobe/dtm-plans-for-a-sunset-3c6aab003a6f)となります。 Adobeでは、 [!DNL Adobe Experience Platform] アセットインサイト](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=ja) には [ を使用することをお勧めします。
 
 DTM を使用して Assets Insights を有効にするには、次の手順を実行します。
 
 1. Experience Manager のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL インサイト設定]**&#x200B;に移動します。
 1. [DTM Cloud Service を使用した Experience Manager デプロイメントの設定](/help/sites-administering/dtm.md)
 
-   API トークンは、[https://dtm.adobe.com](https://dtm.adobe.com/) にログオンすると使用できるようになります。ユーザープロファイルから「**[!UICONTROL アカウント設定]**」にアクセスします。Experience Manager Sites と Assets Insights の統合は現在準備中のため、この手順は Assets Insights の観点からは必要ありません。
+   API トークンは、[https://dtm.adobe.com](https://dtm.adobe.com/) にログオンすると使用できるようになります。ユーザープロファイルから「**[!UICONTROL アカウント設定]**」にアクセスします。 Experience Manager Sites と Assets Insights の統合は現在準備中のため、この手順は Assets Insights の観点からは必要ありません。
 
 1. [https://dtm.adobe.com](https://dtm.adobe.com/) にログオンし、必要に応じて会社を選択します。
 1. 既存の web プロパティを作成するか、開きます。
 
    * 「**[!UICONTROL Web プロパティ]**」タブを選択し、「**[!UICONTROL プロパティを追加]**」をクリックします。
 
-   * 必要に応じてフィールドを更新し、「**[!UICONTROL プロパティを作成]**」をクリックします。[ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
+   * 必要に応じてフィールドを更新し、「**[!UICONTROL プロパティを作成]**」をクリックします。 [ドキュメント](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=ja)を参照してください。
 
    ![Web プロパティを編集または作成](assets/Create-edit-web-property.png)
 
@@ -41,21 +57,21 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
 
    ![chlimage_1-58](assets/chlimage_1-194.png)
 
-1. 「**[!UICONTROL Javascript／サードパーティタグ]**」を展開します。次に、「**[!UICONTROL 順次 HTML]**」タブの「**[!UICONTROL 新規スクリプトを追加]**」をクリックして、スクリプトダイアログを開きます。
+1. 「**[!UICONTROL Javascript／サードパーティタグ]**」を展開します。 次に、「**[!UICONTROL 順次 HTML]**」タブの「**[!UICONTROL 新規スクリプトを追加]**」をクリックして、スクリプトダイアログを開きます。
 
    ![chlimage_1-59](assets/chlimage_1-195.png)
 
 1. Experience Manager のロゴをクリックし、**[!UICONTROL ツール]**／**[!UICONTROL Assets]** に移動します。
-1. 「**[!UICONTROL Insights ページトラッカー]**」をクリックし、トラッカーコードをコピーして、手順 6 で開いたスクリプトダイアログに貼り付けます。変更内容を保存します。
+1. 「**[!UICONTROL Insights ページトラッカー]**」をクリックし、トラッカーコードをコピーして、手順 6 で開いたスクリプトダイアログに貼り付けます。 変更内容を保存します。
 
    >[!NOTE]
    >
    >* `AppMeasurement.js` が削除されました。 これは、DTM の Adobe Analytics ツールで使用できるはずです。
-   >* `assetAnalytics.dispatcher.init()` の呼び出しは削除されました。この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
+   >* `assetAnalytics.dispatcher.init()` の呼び出しは削除されました。 この関数は、DTM の Adobe Analytics ツールの読み込みが完了すると呼び出されるはずです。
    >* Assets Insights ページトラッカーがホストされる場所（例えば、Experience Manager や CDN など）によっては、スクリプトソースのオリジンを変更する必要があります。
    >* Experience Manager でホストされるページトラッカーの場合、ソースがディスパッチャーインスタンスのホスト名を使用してパブリッシュインスタンスを指す必要があります。
 
-1. `https://dtm.adobe.com` にアクセスします。Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。ツールを作成する際に、「**[!UICONTROL 設定方法]**」を「**[!UICONTROL 自動]**」に設定できます。
+1. `https://dtm.adobe.com` にアクセスします。 Web プロパティの「**[!UICONTROL 概要]**」をクリックし、「**[!UICONTROL ツールを追加]**」をクリックするか既存の Adobe Analytics ツールを開きます。 ツールを作成する際に、「**[!UICONTROL 設定方法]**」を「**[!UICONTROL 自動]**」に設定できます。
 
    ![Adobe Analytics ツールを追加します。](assets/Add-Adobe-Analytics-Tool.png)
 
@@ -107,11 +123,11 @@ DTM を使用して Assets Insights を有効にするには、次の手順を�
    })();
    ```
 
-   * DTM のページ読み込みルールには、`pagetracker.js` コードのみが含まれています。`assetAnalytics` のフィールドはすべて、デフォルト値の上書きと見なされます。これらは、デフォルトでは必要ありません。
-   * このコードは、`assetAnalytics.dispatcher.init()` を呼び出す前に、`_satellite.getToolsByType('sc')[0].getS()` が初期化され、`assetAnalytics,dispatcher.init` が使用可能であることを確認します。このため、手順 11 ではこのコードの追加をスキップできます。
-   * Insights ページトラッカーコード（**[!UICONTROL ツール／Assets／Insights ページトラッカー]**）内のコメントに記述されているように、ページトラッカーが `AppMeasurement` オブジェクトを作成しないとき、最初の 3 つの引数（RSID、トラッキングサーバー、訪問者の名前空間）は関係ありません。これを示すため代わりに空の文字列が渡されます。\
-      その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
-   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
+   * DTM のページ読み込みルールには、`pagetracker.js` コードのみが含まれています。 `assetAnalytics` のフィールドはすべて、デフォルト値の上書きと見なされます。 これらは、デフォルトでは必要ありません。
+   * このコードは、`assetAnalytics.dispatcher.init()` を呼び出す前に、`_satellite.getToolsByType('sc')[0].getS()` が初期化され、`assetAnalytics,dispatcher.init` が使用可能であることを確認します。 このため、手順 11 ではこのコードの追加をスキップできます。
+   * Insights ページトラッカーコード（**[!UICONTROL ツール／Assets／Insights ページトラッカー]**）内のコメントに記述されているように、ページトラッカーが `AppMeasurement` オブジェクトを作成しないとき、最初の 3 つの引数（RSID、トラッキングサーバー、訪問者の名前空間）は関係ありません。 これを示すため代わりに空の文字列が渡されます。\
+     その他の引数は、インサイト設定ページ（**[!UICONTROL ツール／アセット／インサイト設定]**）で設定された内容に対応しています。
+   * AppMeasurement オブジェクトは、すべての使用可能な SiteCatalyst エンジンで `satelliteLib` に対するクエリを実行して取得されます。 複数のタグが設定されている場合は、配列セレクターのインデックスをそれに応じて変更します。 配列のエントリは、DTM インターフェイスで使用可能な SiteCatalyst ツールの順に並んでいます。
 
 1. 保存して、コードエディターウィンドウを閉じます。その後、変更内容をツール設定で保存します。
-1. 「**[!UICONTROL 承認]**」タブで、承認が保留されている両方の項目を承認します。DTM タグを Web ページに挿入する準備ができました。
+1. 「**[!UICONTROL 承認]**」タブで、承認が保留されている両方の項目を承認します。 DTM タグを Web ページに挿入する準備ができました。

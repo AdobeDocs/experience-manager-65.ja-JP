@@ -8,13 +8,29 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 1a139530-27bd-44da-8bf4-5b375e75cf32
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2541'
-ht-degree: 97%
-
+source-wordcount: '2552'
+ht-degree: 98%
 ---
-
 # アダプティブフォームのテーブル{#tables-in-adaptive-forms}
 
 <span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
@@ -128,8 +144,8 @@ AEM Forms では、サイドバーのコンポーネントブラウザーにテ�
 
 1. ページのツールバーで、プレビューを実行する前に、![canvas-drop-down](assets/canvas-drop-down.png)／**スタイル**&#x200B;を選択します。
 
-1. サイドバーでテーブルを選択し、編集ボタン ![edit-button](assets/edit-button.png)を選択します。
-サイドバーにスタイル設定のプロパティが表示されます。
+1. サイドバーでテーブルを選択し、「編集」ボタン ![edit-button](assets/edit-button.png) を選択します。
+サイドバーにスタイルプロパティが表示されます。
 
 ![テーブルのスタイルプロパティ](assets/style-table.png)
 
@@ -287,7 +303,7 @@ XML ファイルからのデータを使って銀行取引概略表に入力す�
 
 サンプル XML では、行のデータは、テーブルの行の要素名である `<Row1>` タグによって定義されています。 `<Row1>` タグ内では、各セルのデータは、タグ内の `<tableItem1>`、`<tableItem2>`、`<tableItem3>`、`<type>` などの要素名で定義されています。
 
-このデータを実行時にテーブルと結合するには、wcmmode を無効にした状態で、XML の絶対位置をテーブルを含むアダプティブフォームに示す必要があります。 例えば、アダプティブフォームが&#x200B;*https://localhost:4502/myForms/bankTransaction.html*&#x200B;にあり、データ XML ファイルが&#x200B;*C:/myTransactions/bankSummary.xml*&#x200B;に保存されている場合、次のURLのデータを含むテーブルを表示できます。
+このデータを実行時にテーブルと結合するには、wcmmode を無効にした状態で、XML の絶対位置をテーブルを含むアダプティブフォームに示す必要があります。 例えば、アダプティブフォームが&#x200B;*https://localhost:4502/myForms/bankTransaction.html*&#x200B;で、データ XML ファイルが&#x200B;*C:/myTransactions/bankSummary.xml*&#x200B;に保存されている場合、次のURLのデータを含むテーブルを表示できます。
 
 *https://localhost:4502/myForms/bankTransaction.html?dataRef=file:/// C:/myTransactions/bankSummary.xml&amp;wcmmode=disabled*
 

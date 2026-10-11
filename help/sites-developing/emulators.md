@@ -10,13 +10,22 @@ exl-id: 009b7e2c-ac37-4acc-a656-0a34d3853dfd
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
-workflow-type: ht
-source-wordcount: '609'
-ht-degree: 100%
-
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '618'
+ht-degree: 92%
 ---
-
 # エミュレーター{#emulators}
 
 {{ue-over-mobile}}
@@ -46,7 +55,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 ### エミュレーターによるコンテンツの変換方法 {#how-the-emulator-transforms-the-content}
 
-エミュレーターは HTML の本文コンテンツをエミュレーターの DIV にラップすることによって機能します。例えば、次の html コードがあるとします。
+エミュレーターは、HTMLの本文をエミュレーターDIVにラップすることで機能します。 例えば、次のhtml コードを使用します。
 
 ```xml
 <body>
@@ -98,7 +107,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 >[!NOTE]
 >
->前述の例と同様に、単一の div 内の本文コンテンツをプロジェクトの HTML でラップすることをお勧めします。本文コンテンツに複数のタグが含まれる場合は、予測できない結果が生じる可能性があります。
+>前述の例と同様に、単一の div 内の本文コンテンツをプロジェクトの HTML でラップすることをお勧めします。 本文コンテンツに複数のタグが含まれる場合は、予測できない結果が生じる可能性があります。
 
 ### モバイルエミュレーター {#mobile-emulators}
 
@@ -113,21 +122,20 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
 * モバイルページコンポーネント `head.jsp` は、次のメソッドを使用して、デバイスグループの関連するエミュレーターの init コンポーネント（オーサーモードの場合のみ）とデバイスグループのレンダリング CSS をインクルードします。
 
-
   `deviceGroup.drawHead(pageContext);`
 
-* メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれ、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
+* メソッド `DeviceGroup.drawHead(pageContext)` には、エミュレーターの init コンポーネントを含まれ、エミュレーターコンポーネントの `init.html.jsp` を呼び出します。 エミュレーターコンポーネントが独自の `init.html.jsp` を持たず、モバイルベースエミュレーター（`wcm/mobile/components/emulators/base)`）に依存している場合、モバイルベースエミュレーターの init スクリプトが呼び出されます（`/libs/wcm/mobile/components/emulators/base/init.html.jsp`）。
 
 * モバイルベースエミュレーターの init スクリプトは JavaScript を使用して次の定義を行います。
 
-   * ページ用に定義されるすべてのエミュレーターの設定（emulatorConfigs）
-   * 次のメソッドを使用してエミュレーターの機能をページに統合するエミュレーターマネージャー。
+  * ページ用に定義されるすべてのエミュレーターの設定（emulatorConfigs）
+  * 次のメソッドを使用してエミュレーターの機能をページに統合するエミュレーターマネージャー。
 
-     `emulatorMgr.launch(config)`
+    `emulatorMgr.launch(config)`
 
-     エミュレーターマネージャーは次のように定義されます。
+    エミュレーターマネージャーは次のように定義されます。
 
-     `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
+    `/libs/wcm/emulator/widgets/source/EmulatorManager.js`
 
 #### カスタムモバイルエミュレーターの作成 {#creating-a-custom-mobile-emulator}
 
@@ -141,7 +149,7 @@ AEM エミュレーターフレームワークの機能を次に示します。
 
    例として、ノード `/libs/wcm/mobile/components/emulators/iPhone/css` を参照できます。
 
-1. 必要に応じて、JS クライアントライブラリを定義します。例えば、特定のプラグインを定義する場合は、名前 = js、ノードタイプ = cq:ClientLibrary にします。
+1. 必要に応じて、例えば、特定のプラグインを定義するJS クライアントライブラリを定義します。name = js、node type = cq:ClientLibrary
 
    例として、ノード `/libs/wcm/mobile/components/emulators/base/js` を参照できます。
 

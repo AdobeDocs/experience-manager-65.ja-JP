@@ -9,13 +9,17 @@ exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1206'
 ht-degree: 4%
-
 ---
-
 # アプリを管理タイル{#manage-app-tile}
 
 {{ue-over-mobile}}
@@ -61,7 +65,7 @@ Apple App StoreやGoogle Play Storeなどの各ベンダーアプリケーショ
 
 >[!NOTE]
 >
->**`Manage App`** タイルについて理解できたら、[&#x200B; アプリのメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照して、メタデータを表示および編集します。
+>**`Manage App`** タイルについて理解できたら、[ アプリのメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照して、メタデータを表示および編集します。
 
 #### 共通メタデータ {#common-metadata}
 
@@ -143,7 +147,7 @@ Content Update Server URL プロパティは、直接またはDispatcherまた�
 
 >[!NOTE]
 >
->スクリーンショットを追加および削除するには、[&#x200B; アプリメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照してください。
+>スクリーンショットを追加および削除するには、[ アプリメタデータの編集](/help/mobile/phonegap-editmetadata.md)を参照してください。
 
 ### 「認証」タブ {#the-authentication-tab}
 

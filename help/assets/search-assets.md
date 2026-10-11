@@ -1,6 +1,6 @@
 ---
-title: ' [!DNL Adobe Experience Manager] でのデジタルアセットと画像の検索'
-description: フィルターパネルを使用して  [!DNL Adobe Experience Manager]  で必要なアセットを検索する方法と、検索で表示されたアセットの使用方法を説明します。
+title: '[!DNL Adobe Experience Manager]でデジタルアセットと画像を検索'
+description: フィルターパネルを使用して[!DNL Adobe Experience Manager]で必要なアセットを検索する方法と、検索に表示されるアセットを使用する方法について説明します。
 contentOwner: AG
 mini-toc-levels: 1
 feature: Search, Metadata
@@ -8,13 +8,27 @@ role: User
 exl-id: 588433b2-564a-430f-9d04-480465ece2ad
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '5796'
+source-wordcount: '5854'
 ht-degree: 97%
-
 ---
-
 # [!DNL Adobe Experience Manager] でデジタルアセットを検索 {#search-assets-in-aem}
 
 | バージョン | 記事リンク |
@@ -69,7 +83,7 @@ ht-degree: 97%
 
 オムニサーチフィールドからキーワード検索を実行できます。 キーワード検索は、（一般的に使用されるすべてのメタデータフィールドの）全文検索で、大文字と小文字が区別されません。 複数のキーワードを使用する場合は、`AND` がキーワード間のデフォルトの演算子になります。
 
-結果は、最も近い一致を先頭に関連性の高い順に並べ替えられます。 複数のキーワードがある場合は、メタデータに含まれるキーワードが多いアセットが、より関連性の高い結果になります。 メタデータ内では、スマートタグとして表示されるキーワードは、他のメタデータフィールドに表示されるキーワードより高くランク付けされます。 [!DNL Experience Manager] では、特定の検索語に、より高い重みを付けることができます。 また、特定の検索語について、対象となるいくつかのアセットの[ランクを上げる](#searchrank)こともできます。
+結果は、最も近い一致を先頭に関連性の高い順に並べ替えられます。 複数のキーワードがある場合は、メタデータに含まれるキーワードが多いアセットが、より関連性の高い結果になります。 メタデータ内では、スマートタグとして表示されるキーワードは、他のメタデータフィールドに表示されるキーワードより高くランキングされます。 [!DNL Experience Manager] では、特定の検索語に、より高い重みを付けることができます。 また、特定の検索語について、対象となるいくつかのアセットの[ランキングを上げる](#searchrank)こともできます。
 
 関連性の高いアセットをすばやく見つけるために、この機能豊富なインターフェイスには、フィルタリング、並べ替え、選択のメカニズムが用意されています。 複数の条件に基づいて結果をフィルタリングし、検索されたアセットの数を様々なフィルター別に確認できます。 または、オムニサーチフィールドのクエリを変更して検索を再実行することもできます。 検索語やフィルターを変更しても、その他のフィルターは依然として適用され、検索のコンテキストが保たれます。
 
@@ -87,8 +101,8 @@ ht-degree: 97%
 * `woman.running`
 * `woman-running`
 
-ただし、クエリ `woman -running`は、`running`がメタデータに含まれていないアセットを返します。
-スマートタグを使用すると、追加の`OR`句が追加され、適用されたスマートタグとして検索語が検索されます。スマートタグを使用して`woman`または`running`のタグが付けられたアセットも、そのような検索クエリに表示されます。つまり、検索結果は、モバイル版とweb版を，
+ただし、クエリ `woman -running` は、メタデータに `running` を含まないアセットを返します。
+スマートタグを使用すると、スマートタグを検索語として適用し、検索語のいずれかを探すための `OR` 句が追加されます。 スマートタグを使用して `woman` または `running` のどちらかがタグ付けされているアセットも検索クエリに表示されます。 検索結果は、以下を組み合わせたものになります。
 
 * `woman` と `running` の両方のキーワードがメタデータ内にあるアセット（デフォルト動作）。
 
@@ -124,11 +138,11 @@ ht-degree: 97%
 1. 「**[!UICONTROL 昇格を検索]**」ボックスで、画像検索時の強化の対象となるキーワードを指定し、「**[!UICONTROL 追加]**」をクリックします。 同じ方法で複数のキーワードを指定できます。
 1. 「**[!UICONTROL 保存して閉じる]**」をクリックします。 指定したキーワードに対して昇格したアセットが、検索結果の上位に表示されます。
 
-ターゲットを絞ったキーワードの検索結果で一部のアセットのランクを上げることで、この機能をうまく利用できます。 以下の例（ビデオ）を参照してください。 詳しくは、「[&#x200B; での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
+ターゲットを絞ったキーワードの検索結果で一部のアセットのランキングを上げることで、この機能をうまく利用できます。 以下の例（ビデオ）を参照してください。 詳しくは、「[ での検索](https://experienceleague.adobe.com/ja/docs/experience-manager-learn/assets/search-and-discovery/search-boost)」を参照してください。 [!DNL Experience Manager]
 
->[!VIDEO](https://video.tv.adobe.com/v/3410338/?captions=jpn&quality=6)
+>[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
-*ビデオ：検索結果のランク付けの方法とランクへの影響について*
+*ビデオ：検索結果のランキングの方法とランキングへの影響について*
 
 ## 詳細検索 {#scope}
 
@@ -222,7 +236,7 @@ TBD: Where are the limit, size, orderby properties defined?
 
 ### [!DNL Adobe Stock] 画像の検索 {#adobe-stock1}
 
-[!DNL Experience Manager] のユーザーインターフェイス内から Adobe Stock アセットを検索し、必要なアセットのライセンスを取得できます。 オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。 また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。 「[&#x200B; [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage) の  [!DNL Adobe Stock]  画像の管理」を参照してください。
+[!DNL Experience Manager] のユーザーインターフェイス内から Adobe Stock アセットを検索し、必要なアセットのライセンスを取得できます。 オムニサーチフィールドに「`Location: Adobe Stock`」を追加します。 また、**[!UICONTROL フィルター]**&#x200B;パネルを使用して、ライセンス取得済みまたはライセンス未取得のアセットをすべて検索したり、Adobe Stock ファイル番号を使用して特定のアセットを検索したりすることもできます。 「[ [!DNL Experience Manager]](/help/assets/aem-assets-adobe-stock.md#usemanage) の  [!DNL Adobe Stock]  画像の管理」を参照してください。
 
 ### [!DNL Dynamic Media] アセットの検索 {#dynamic-media}
 
@@ -285,7 +299,7 @@ TBD: Where are the limit, size, orderby properties defined?
 
 ## 検索のヒント {#tips}
 
-* アセットのレビューステータスを監視する場合は、該当するオプションを使用して、承認されているアセットまたは承認待ちのアセットを検索します。
+* アセットのレビューステータスをモニタリングする場合は、該当するオプションを使用して、承認されているアセットまたは承認待ちのアセットを検索します。
 * 様々な Creative アプリから取得した使用状況の統計に基づいて、サポートされるアセットを検索するには、インサイトの述語を使用します。 使用状況データが、使用状況スコア、インプレッション数、クリック数およびメディアチャネルでグループ化され、アセットがカテゴリ別に表示されます。
 * 「**[!UICONTROL すべて選択]**」チェックボックスを使用して、検索したアセットを選択します。 [!DNL Experience Manager] では、最初の 100 件のアセットがカードで、200 件のアセットがリストで表示されます。 検索結果をスクロールすると、アセットがさらに読み込まれます。 読み込まれたアセットより多くのアセットを選択できます。 選択したアセットの数が、検索結果ページの右上隅に表示されます。 選択範囲に対して操作を実行できます。例えば、選択したアセットのダウンロード、選択したアセットのメタデータプロパティの一括更新、選択したアセットのコレクションへの追加などが可能です。 表示されている数よりも多くのアセットが選択されている場合は、選択したすべてのアセットにアクションが適用されるか、ダイアログにアセットが適用されている数が表示されます。 読み込まれなかったアセットにアクションを適用するには、すべてのアセットが明示的に選択されていることを確認します。
 * 必須メタデータを含んでいないアセットを検索する場合は、[必須メタデータ](#mandatorymetadata)を参照してください。

@@ -1,20 +1,36 @@
 ---
-title: アセットのデジタル著作権管理
-description: ' [!DNL Experience Manager] でライセンスされているアセットの有効期限の状態と情報を管理する方法について説明します。'
+title: アセットのDigital Rights Management
+description: '[!DNL Experience Manager]のライセンス済みアセットの有効期限と情報を管理する方法について説明します。'
 contentOwner: AG
 role: User, Admin
 feature: DRM,Asset Management
 exl-id: a49cfd25-e8d9-492f-be5e-acab0cf67a28
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: bbc7b67e-ac49-47fe-8657-97e42c72f200
+    internal-label: Digital rights management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1440'
-ht-degree: 100%
-
+ht-degree: 99%
 ---
-
-# アセットのデジタル著作権管理 {#digital-rights-management-in-assets}
+# アセットのDigital Rights Management {#digital-rights-management-in-assets}
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -41,7 +57,7 @@ ht-degree: 100%
 >
 >アセットの有効期限の表示はタイムゾーンごとに異なります。
 
-アセットの有効期限切れのステータスは、**[!UICONTROL 参照]**&#x200B;パネルからも確認できます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照元のサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
+アセットの有効期限切れのステータスは、**[!UICONTROL 参照]**&#x200B;パネルからも確認できます。 ここではアセットの有効期限切れのステータスと、複合アセットと参照されるサブアセット、コレクションおよびプロジェクトの間の関係を管理します。
 
 1. 参照先の Web ページと複合アセットを表示するアセットに移動します。
 1. 左パネルでアセットを選択し、**[!UICONTROL 参照]**&#x200B;を開きます。 有効期限切れのアセットの場合、[!UICONTROL 参照]パネルの上部に有効期限切れのステータス「**[!UICONTROL アセットは期限切れです]**」が表示されます。
@@ -83,7 +99,7 @@ ht-degree: 100%
    >
    >アセットの有効期限が切れると、アセットの作成者（[!DNL Assets] に特定のアセットをアップロードしたユーザー）のみがメールを受け取ります。 [!DNL Experience Manager] の全レベルでメール通知を設定することについて詳しくは、「[メール通知の設定方法](/help/sites-administering/notification.md)」 を参照してください。
 
-1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。 アセット作成者には、アセットの有効期限が切れる前に、指定した時間が経過するとアセットの有効期限が切れることを知らせるメッセージが届きます。 アセットの有効期限が切れた後に、有効期限切れを確認する別の通知が届きます。 さらに、期限切れアセットはアクティベートが解除されます。
+1. 「**[!UICONTROL Prior notification in seconds]**」フィールドで、アセットの有効期限が切れる何秒前に有効期限切れに関する通知を受け取るかを指定します。 アセット作成者には、アセットの有効期限が切れる前に、指定した時間が経過するとアセットの有効期限が切れることを知らせるメッセージが届きます。 アセットの有効期限が切れた後に、有効期限切れを確認する別の通知が届きます。 さらに、期限切れアセットは無効化されます。
 
 1. 「**[!UICONTROL 保存]**」をクリックします。
 
@@ -113,7 +129,7 @@ ht-degree: 100%
 
 1. [!DNL Assets] コンソールで、フォルダーを選択してフォルダーにレビュータスクを作成します。
 1. レビュータスクでアセットを承認または拒否して、「**[!UICONTROL 完了]**」をクリックします。
-1. レビュータスクを作成するフォルダーに移動します。 承認または拒否したアセットのステータスがカード表示の下部に表示されます。 リスト表示では、承認および有効期限のステータスが該当する列に表示されます。
+1. レビュータスクを作成したフォルダーに移動します。 承認または拒否したアセットのステータスがカード表示の下部に表示されます。 リスト表示では、承認および有効期限のステータスが該当する列に表示されます。
 
    ![chlimage_1-161](assets/chlimage_1-161.png)
 

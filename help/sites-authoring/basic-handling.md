@@ -10,13 +10,26 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 174d9e7466002e209422fefdc32a363a98dc99f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3122'
 ht-degree: 91%
-
 ---
-
 # 基本操作{#basic-handling}
 
 >[!NOTE]
@@ -37,7 +50,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
 
 ### 最初の手順 {#first-steps}
 
-ログイン直後に、[&#x200B; ナビゲーションパネル &#x200B;](#navigation-panel)に移動します。 いずれかのオプションを選択すると、それぞれのコンソールが開きます。
+ログイン直後に、[ ナビゲーションパネル ](#navigation-panel)に移動します。 いずれかのオプションを選択すると、それぞれのコンソールが開きます。
 
 ![ナビゲーション](assets/bh-01.png)
 
@@ -431,7 +444,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
   * 変更の詳細
   * ページ言語
   * 公開の詳細
-  * [&#x200B; ページのオン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-off-time) （設定されている場合）
+  * [ ページのオン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-off-time) （設定されている場合）
 
 ### カード表示 {#card-view}
 
@@ -480,7 +493,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
     * 前回の公開以降にページが更新された場合、列エントリには警告アイコンがバッジされます。
     * ![前回の公開以降に変更](assets/modified.png)
   * **公開** - 公開ステータス
-    * ページに[&#x200B; オン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-time)が設定されている場合、列エントリには時計アイコンが付けられます。
+    * ページに[ オン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-time)が設定されている場合、列エントリには時計アイコンが付けられます。
     * アイコンにカーソルを合わせると、詳細が表示されます。
     * ![時間外設定](assets/on-off-time.png)
   * **テンプレート** - ページがベースにしているテンプレート
@@ -553,7 +566,7 @@ AEM UI はタッチ対応なので、タッチデバイス（モバイルやタ�
     * [コメント](#timelineaddingandviewingcomments)
     * 注釈
     * 編集や公開などのアクティビティ
-      * ページに[&#x200B; オン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-off-time)が設定されており、現在の時間がオン/オフ時間ウィンドウ外にある場合、「ページ無効」アクティビティが表示される場合があります。
+      * ページに[ オン/オフ時間](/help/sites-authoring/editing-page-properties.md#on-off-time)が設定されており、現在の時間がオン/オフ時間ウィンドウ外にある場合、「ページ無効」アクティビティが表示される場合があります。
       * これは、ページが有効ウィンドウ外であることを示すだけで、必ずしもページが非公開であるとは限りません。
     * [ローンチ](/help/sites-authoring/launches.md)
     * [バージョン](/help/sites-authoring/working-with-page-versions.md)

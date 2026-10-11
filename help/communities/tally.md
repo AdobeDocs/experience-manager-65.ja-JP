@@ -9,7 +9,16 @@ exl-id: 0b508df9-1a24-4728-a254-f913eeb9b391
 solution: Experience Manager
 feature: Communities
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 1%
@@ -28,7 +37,7 @@ Tallyは、メンバーが特定の製品やサービスをどのように評価
 
 AEM 6.1以降、ポーリングコンポーネントは使用できなくなりました。
 
-[&#x200B; レビュー](reviews-basics.md)は、[&#x200B; コメント &#x200B;](essentials-comments.md)と[評価](rating-basics.md)のハイブリッドであるSCF コンポーネントです。
+[ レビュー](reviews-basics.md)は、[ コメント ](essentials-comments.md)と[評価](rating-basics.md)のハイブリッドであるSCF コンポーネントです。
 
 ## クライアントサイドの基本 {#essentials-for-client-side}
 
@@ -45,7 +54,7 @@ AEM 6.1以降、ポーリングコンポーネントは使用できなくなり�
 ### UGC （投稿済み集計）へのアクセス {#accessing-posted-tallies-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -53,7 +62,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。

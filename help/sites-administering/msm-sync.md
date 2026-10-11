@@ -10,13 +10,25 @@ feature: Multi Site Manager
 exl-id: ac24b8b4-b3ed-47fa-9a73-03f0c9e68ac8
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e86b80f2-7cb0-4646-8fcd-51d3bf272fce
+    internal-label: Multi Site Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2681'
 ht-degree: 91%
-
 ---
-
 # ライブコピーの同期の設定{#configuring-live-copy-synchronization}
 
 次のタスクを実行して、ライブコピーとソースコンテンツを同期する方法およびタイミングを制御します。
@@ -229,7 +241,8 @@ ht-degree: 91%
   </tr>
   <tr>
    <td>productCreateUpdate</td>
-   <td>カタログ内の製品リソースを作成または更新します。 このアクションは、次のいづれかの場合に使用します。<ul>
+   <td>カタログ内の製品リソースを作成または更新します。 このアクションは、次のいづれかの場合に使用します。
+    <ul>
      <li>カタログ（またはカタログのセクション）を生成またはロールアウトする。</li>
      <li>ユーザーが製品コンポーネントの同期の継承を復元する。</li>
     </ul> </td>

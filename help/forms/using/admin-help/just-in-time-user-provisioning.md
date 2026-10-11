@@ -9,7 +9,23 @@ exl-id: 7bde0a09-192a-44a8-83d0-c18e335e9afa
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 100%
@@ -28,11 +44,11 @@ AEM Forms では、User Management にまだ存在していないユーザーの
 
    **存在する：**&#x200B;ユーザーが登録されており、ロックされていない場合、User Management は認証成功を返します。 これに対して、ユーザーが登録されていないか、またはロックされている場合、User Management は認証失敗を返します。
 
-   **存在しない：** User Management は認証失敗を返します。
+   **存在しない：**&#x200B;ユーザー管理は認証失敗を返します。
 
-   **無効：** User Management は認証失敗を返します。
+   **無効：**&#x200B;ユーザー管理は認証失敗を返します。
 
-1. 認証プロバイダーが返した結果が評価されます。 認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。 そうでない場合は、User Management は次の認証プロバイダーに対して確認（手順 2～3）を行います。
+1. 認証プロバイダーが返した結果が評価されます。 認証プロバイダーが認証成功を返した場合、ユーザーのログインが許可されます。 そうでない場合は、ユーザー管理は次の認証プロバイダーに対して確認（手順 2～3）を行います。
 1. ユーザーの秘密鍵証明書を検証する利用可能な認証プロバイダーがなくなると、認証の失敗が返されます。
 
 ジャストインタイムプロビジョニングが実装されているときに、認証プロバイダーの 1 つがユーザーの秘密鍵証明書を検証すると、新しいユーザーが User Management 内に動的に作成されます （上記、従来の認証手順 3 の後）。
@@ -89,7 +105,7 @@ public Boolean assign(User user);
 1. DSC を Forms サーバーにデプロイします。
 1. ジャストインタイムが有効なドメインを作成します。
 
-   * 管理コンソールで、設定／User Management／ドメインの管理／新規エンタープライズドメインをクリックします。
+   * 管理コンソールで、設定／ユーザー管理／ドメインの管理／新規エンタープライズドメインをクリックします。
    * ドメインを設定し、「ジャストインタイムプロビジョニングを有効にする」を選択します。<!--Fix broken link (See Setting up and managing domains).-->
    * 認証プロバイダーを追加します。 認証プロバイダーを追加する際に、新規認証画面で、登録された「ID 作成者」および「割り当てプロバイダー」を選択します。
 

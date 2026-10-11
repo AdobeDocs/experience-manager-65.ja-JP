@@ -9,13 +9,17 @@ exl-id: ea6c8aa3-f86e-4878-8550-fe1662f10696
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 3%
-
 ---
-
 # 記事の管理{#managing-articles}
 
 {{ue-over-mobile}}
@@ -30,7 +34,7 @@ ht-degree: 3%
 >
 >AEM Mobile アプリケーションの次のトピックについて詳しくは、オンラインヘルプの次の資料を参照してください。
 >
->* [&#x200B; デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [ デザインに関する考慮事項](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
 >* [記事の管理](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
 >

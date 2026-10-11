@@ -10,13 +10,33 @@ exl-id: b183d42f-343c-4acb-bc73-f80ad72e54df
 solution: Experience Manager, Experience Manager Forms
 feature: HTML5 Forms,Adaptive Forms,Mobile Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 97aafc4b-2598-52d6-9012-295a95969e38
+    internal-label: HTML5 Forms
+  - id: 59f95943-e802-56ac-990d-21ab923984c1
+    internal-label: Mobile Forms
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1790'
 ht-degree: 100%
-
 ---
-
 # AEM Forms Workspace のカスタマイズの概要{#introduction-to-customizing-aem-form-workspace}
 
 AEM Forms Workspace では、プレゼンテーションセマンティックおよびインターフェイスの機能を変更することが可能です。 スタイル、レイアウト、書式設定、ブランド、およびコア機能を変更するカスタマイズのタイプについては、以下に説明します。
@@ -189,47 +209,47 @@ AEM Forms Workspace は容易にカスタマイズや再利用が可能なコン
 
 * client-pkg:
 
-   * src - CRX ノードを作成するのに必要なアーティファクトを含みます。
-   * pom.xml - 様々なプロファイルのデプロイパッケージを構築するスクリプト（WS - デプロイパッケージ）
+  * src - CRX ノードを作成するのに必要なアーティファクトを含みます。
+  * pom.xml - 様々なプロファイルのデプロイパッケージを構築するスクリプト（WS - デプロイパッケージ）
 
 * client-html:
 
-   * assembly - AEM Forms Workspace SDK を作成するスクリプトが使用する zip.xml を含みます。
-   * src/main/webapp -
+  * assembly - AEM Forms Workspace SDK を作成するスクリプトが使用する zip.xml を含みます。
+  * src/main/webapp -
 
-      * css - AEM Forms Workspace のスタイルシートを含みます。
-      * images - AEM Forms Workspace で使用する画像を含みます。
-      * js:
+    * css - AEM Forms Workspace のスタイルシートを含みます。
+    * images - AEM Forms Workspace で使用する画像を含みます。
+    * js:
 
-         * libs - AEM Forms Workspace で使用されているすべてのサードパーティライブラリを含みます。
-         * licenses - HTML と JS ファイルのライセンスおよびこれらのライセンスをそれぞれのソースファイルの前に接頭辞として付けるコードを含みます。
-         * minifier - カスタマイズされた JavaScript コードの結合、縮小および醜怪化に使用されます。
-         * resourcejs_optimizer - JavaScript ソースの結合、縮小および醜怪化に使用されます。
-         * resource_generator - register.js および modelcontrollerpath.js の生成に使用されます。
-         * runtime:
+      * libs - AEM Forms Workspace で使用されているすべてのサードパーティライブラリを含みます。
+      * licenses - HTML と JS ファイルのライセンスおよびこれらのライセンスをそれぞれのソースファイルの前に接頭辞として付けるコードを含みます。
+      * minifier - カスタマイズされた JavaScript コードの結合、縮小および醜怪化に使用されます。
+      * resourcejs_optimizer - JavaScript ソースの結合、縮小および醜怪化に使用されます。
+      * resource_generator - register.js および modelcontrollerpath.js の生成に使用されます。
+      * runtime:
 
-            * initializer - AEM Forms Workspace で使用するバックボーンビューやモデルの初期化に使用する initializer.js を含みます。
-            * models - AEM Forms Workspace にあるすべてのコンポーネントのバックボーンモデルを含みます。
-            * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
-            * services - AEM Forms Workspace 内で使用される service.js を含みます。 すべてのサーバー呼び出しは service.js を介して行われます。
-            * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのビューの HTML ファイルを含みます。
-            * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（JavaScript）を含みます。
-            * views - AEM Forms Workspace 内のすべてのコンポーネントのバックボーンビューを含みます。
+        * initializer - AEM Forms Workspace で使用するバックボーンビューやモデルの初期化に使用する initializer.js を含みます。
+        * models - AEM Forms Workspace にあるすべてのコンポーネントのバックボーンモデルを含みます。
+        * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
+        * services - AEM Forms Workspace 内で使用される service.js を含みます。 すべてのサーバー呼び出しは service.js を介して行われます。
+        * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのビューの HTML ファイルを含みます。
+        * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（JavaScript）を含みます。
+        * views - AEM Forms Workspace 内のすべてのコンポーネントのバックボーンビューを含みます。
 
-         * main.js
-         * router.js
+      * main.js
+      * router.js
 
-      * libs/ws：pdf.html および pluginPing.pdf は、PDF フォームを AEM Forms Workspace に読み込むのに使用されます。WSNextAdapter.swf は、SWF フォームおよび Guide を AEM Forms Workspace に読み込むのに使用されます。
-      * ロケール：
+    * libs/ws：pdf.html および pluginPing.pdf は、PDF フォームを AEM Forms Workspace に読み込むのに使用されます。WSNextAdapter.swf は、SWF フォームおよび Guide を AEM Forms Workspace に読み込むのに使用されます。
+    * ロケール：
 
-         * de-DE - ドイツ語の translation.json を含みます。
-         * en-US - 英語の translation.json を含みます。
-         * fr-FR - フランス語の translation.json を含みます。
-         * ja-JP - 日本語の translation.json を含みます。
-         * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
+      * de-DE - ドイツ語の translation.json を含みます。
+      * en-US - 英語の translation.json を含みます。
+      * fr-FR - フランス語の translation.json を含みます。
+      * ja-JP - 日本語の translation.json を含みます。
+      * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
 
-      * html.jsp
-      * GET.jsp
+    * html.jsp
+    * GET.jsp
 
 ### CRX パッケージ {#crx-package}
 
@@ -256,30 +276,30 @@ CRX パッケージは CRX™ リポジトリにデプロイできます。 こ�
 * images - すべての画像を含みます。
 * js:
 
-   * libs:
+  * libs:
 
-      * require - require.js を含みます。
-      * jqueryui - jquery.ui.datepicker.ja.js を含みます。
+    * require - require.js を含みます。
+    * jqueryui - jquery.ui.datepicker.ja.js を含みます。
 
-   * runtime:
+  * runtime:
 
-      * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
+    * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
 
-   * main.js（combined、minified および uglified）。
-   * registry.js
+  * main.js（combined、minified および uglified）。
+  * registry.js
 
 * libs:
 
-   * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
+  * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
 
 * Locale - .content.xml を含みます。
 * ロケール：
 
-   * de-DE - ドイツ語の translation.json を含みます。
-   * en-US - 英語の translation.json を含みます。
-   * fr-FR - フランス語の translation.json を含みます。
-   * ja-JP - 日本語の translation.json を含みます。
-   * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
+  * de-DE - ドイツ語の translation.json を含みます。
+  * en-US - 英語の translation.json を含みます。
+  * fr-FR - フランス語の translation.json を含みます。
+  * ja-JP - 日本語の translation.json を含みます。
+  * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
 
 * Index - .content.xml を含みます。
 * profile - offline.jsp を含みます。
@@ -301,30 +321,30 @@ CRX パッケージは CRX™ リポジトリにデプロイできます。 こ�
 * images - すべての画像を含みます。
 * js:
 
-   * libs:
+  * libs:
 
-      * require - require.js を含みます。
-      * jqueryui - jquery.ui.datepicker.ja.js を含みます。
+    * require - require.js を含みます。
+    * jqueryui - jquery.ui.datepicker.ja.js を含みます。
 
-   * runtime:
+  * runtime:
 
-      * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
+    * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
 
-   * main.js（組み合わせ）
-   * registry.js
+  * main.js（組み合わせ）
+  * registry.js
 
 * libs:
 
-   * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
+  * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
 
 * Locale - .content.xml を含みます。
 * ロケール：
 
-   * de-DE - ドイツ語の translation.json を含みます。
-   * en-US - 英語の translation.json を含みます。
-   * fr-FR - フランス語の translation.json を含みます。
-   * ja-JP - 日本語の translation.json を含みます。
-   * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
+  * de-DE - ドイツ語の translation.json を含みます。
+  * en-US - 英語の translation.json を含みます。
+  * fr-FR - フランス語の translation.json を含みます。
+  * ja-JP - 日本語の translation.json を含みます。
+  * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
 
 * Index - .content.xml を含みます。
 * profile - offline.jsp を含みます。
@@ -345,35 +365,35 @@ client-pkg への mvn clean -P Dev インストール
 * images - すべての画像を含みます。
 * js:
 
-   * libs - AEM Forms Workspace で使用されるすべてのライブラリを含みます。
-   * require - require.js を含みます。
-   * jqueryui - jquery.ui.datepicker.ja.js を含みます。
-   * runtime:
+  * libs - AEM Forms Workspace で使用されるすべてのライブラリを含みます。
+  * require - require.js を含みます。
+  * jqueryui - jquery.ui.datepicker.ja.js を含みます。
+  * runtime:
 
-      * initializer - initializer.js と modelcontrollerpath.js を含みます。
-      * models - AEM Forms Workspace 内のすべてのコンポーネントのモデルを含みます。
-      * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
-      * services - AEM Forms Workspace 内で使用される service.js を含みます。
-      * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
-      * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（JavaScript）を含みます。
-      * views - AEM Forms Workspace 内のすべてのコンポーネントのビューを含みます。
+    * initializer - initializer.js と modelcontrollerpath.js を含みます。
+    * models - AEM Forms Workspace 内のすべてのコンポーネントのモデルを含みます。
+    * routes - AEM Forms Workspace に開始プロセス、todo、トラッキングおよび環境設定を読み込む JavaScript ファイルと HTML ファイルを含みます。
+    * services - AEM Forms Workspace 内で使用される service.js を含みます。
+    * templates - AEM Forms Workspace 内にあるすべてのテンプレート、すなわちすべてのコンポーネントの HTML ファイルを含みます。
+    * util - AEM Forms Workspace 内で使用されているすべてのユーティリティファイル（JavaScript）を含みます。
+    * views - AEM Forms Workspace 内のすべてのコンポーネントのビューを含みます。
 
-   * main.js
-   * registry.js
-   * router.js
+  * main.js
+  * registry.js
+  * router.js
 
 * libs:
 
-   * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
+  * ws - pluginPing.pdf、pdf.html および WSNextAdapter.swf を含みます。
 
 * Locale - .content.xml を含みます。
 * ロケール：
 
-   * de-DE - ドイツ語の translation.json を含みます。
-   * en-US - 英語の translation.json を含みます。
-   * fr-FR - フランス語の translation.json を含みます。
-   * ja-JP - 日本語の translation.json を含みます。
-   * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
+  * de-DE - ドイツ語の translation.json を含みます。
+  * en-US - 英語の translation.json を含みます。
+  * fr-FR - フランス語の translation.json を含みます。
+  * ja-JP - 日本語の translation.json を含みます。
+  * html.jsp - 現在のブラウザーのロケールを調べるコードを含みます。
 
 * Index - .content.xml を含みます。
 * profile - offline.jsp を含みます。

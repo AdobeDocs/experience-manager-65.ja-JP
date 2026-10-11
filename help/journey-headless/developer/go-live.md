@@ -5,13 +5,39 @@ exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+  - id: d429a63e-ade4-4117-b04e-9b996d1c94ef
+    internal-label: Integrations
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+  - id: a02b73a7-bdfc-4225-bdfd-69f7891ab55e
+    internal-label: GraphQL
+  - id: d781bc8f-52af-43f6-84d0-b73e59a130d5
+    internal-label: Persisted queries
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1930'
 ht-degree: 99%
-
 ---
-
 # ヘッドレスアプリケーションの運用開始方法 {#go-live}
 
 [AEM ヘッドレスデベロッパージャーニー](overview.md)のこの部分では、ヘッドレスアプリケーションを実稼働環境にデプロイする方法を説明します。
@@ -118,9 +144,9 @@ AEM ヘッドレスプロジェクトのローンチの準備をするには、�
 ### CDN キャッシュヒット率の最大化 {#maximize-cdn}
 
 * サーフェスからライブコンテンツをリクエストする場合を除き、直接の GraphQL クエリは使用しません。
-   * 可能な限り、永続的クエリを使用します。
-   * CDN がキャッシュできるよう、CDN の TTL 値を 600 秒以上に指定します。
-   * AEM は既存のクエリに対するモデル変更の影響を計算できます。
+  * 可能な限り、永続的クエリを使用します。
+  * CDN がキャッシュできるよう、CDN の TTL 値を 600 秒以上に指定します。
+  * AEM は既存のクエリに対するモデル変更の影響を計算できます。
 * CDN へのクライアントトラフィックを減らし、より高い TTL を割り当てるため、JSON ファイル／GraphQL クエリをコンテンツ変更率の低いものと高いものに分けます。 これにより、CDN でのオリジンサーバーに対する JSON の再検証が最小限に抑えられます。
 * CDN からコンテンツを能動的に無効にするには、ソフトパージを使用します。 これにより、CDN は、キャッシュミスを引き起こすことなくコンテンツを再ダウンロードできます。
 
@@ -157,22 +183,22 @@ Cloud Manager を使用して AMS を使用している場合、すべてがテ�
 You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively - see the [Overview](/help/implementing/deploying/overview.md) to start.
 -->
 
-## パフォーマンスの監視 {#performance-monitoring}
+## パフォーマンスのモニタリング {#performance-monitoring}
 
 AEM ヘッドレスアプリケーションの使用時に最高のユーザーエクスペリエンスを得るには、以下に説明するように、主要パフォーマンス指標を監視することが重要です。
 
 * アプリのプレビューバージョンと実稼動バージョンの動作を検証する
 * AEM ステータスページで現在のサービス稼働状況を確認する
 * パフォーマンスレポートにアクセスする
-   * 配信のパフォーマンス
-      * オリジンサーバー - 呼び出し数、エラー率、CPU 負荷、ペイロードトラフィックを確認する
-   * オーサーのパフォーマンス
-      * ユーザー数、リクエスト数および読み込み数を確認する
+  * 配信のパフォーマンス
+    * オリジンサーバー - 呼び出し数、エラー率、CPU 負荷、ペイロードトラフィックを確認する
+  * オーサーのパフォーマンス
+    * ユーザー数、リクエスト数および読み込み数を確認する
 * アプリおよびスペース固有のパフォーマンスレポートにアクセスする
-   * サーバーが起動したら、一般的な指標が緑／オレンジ／赤のどれになっているかを確認し、アプリの具体的な問題を特定する
-   * アプリやスペース（Photoshop デスクトップ、ペイウォールなど）にフィルタリングされた上記と同じレポートを開く
-   * Splunk ログ API を使用してサービスやアプリケーションのパフォーマンスにアクセスする
-   * その他の問題が発生した場合は、カスタマーサポートに連絡する
+  * サーバーが起動したら、一般的な指標が緑／オレンジ／赤のどれになっているかを確認し、アプリの具体的な問題を特定する
+  * アプリやスペース（Photoshop デスクトップ、ペイウォールなど）にフィルタリングされた上記と同じレポートを開く
+  * Splunk ログ API を使用してサービスやアプリケーションのパフォーマンスにアクセスする
+  * その他の問題が発生した場合は、カスタマーサポートに連絡する
 
 ## トラブルシューティング {#troubleshooting}
 
@@ -225,9 +251,9 @@ AEM でヘッドレスストアを停止する必要はありません。 [ジ�
 
 * CDN キャッシュ
 
-   * [CDN キャッシュの制御](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#controlling-a-cdn-cache)
+  * [CDN キャッシュの制御](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja#controlling-a-cdn-cache)
 
-   * [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=ja) の設定（*CDN Rewriter の検索*）
+  * [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=ja) の設定（*CDN Rewriter の検索*）
 
 * [ヘッドレス CMS としての AEM の概要](/help/sites-developing/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=ja)

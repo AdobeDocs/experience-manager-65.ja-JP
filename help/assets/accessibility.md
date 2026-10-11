@@ -1,18 +1,31 @@
 ---
-title: ' [!DNL Adobe Experience Manager Assets] のアクセシブルな機能およびインターフェイス'
-description: 障がいを持つユーザーにとって  [!DNL Adobe Experience Manager] 6.5 [!DNL Assets]  のアクセシビリティ機能がどのように役立つかを説明します。
+title: '[!DNL Adobe Experience Manager Assets]のアクセス可能な機能とインターフェイス'
+description: '[!DNL Adobe Experience Manager] 6.5 [!DNL Assets]のアクセシビリティ機能が障害のあるユーザーにどのように役立つかをご覧ください。'
 contentOwner: AG
 feature: Asset Management
 role: User, Developer, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 57%
-
+source-wordcount: '1934'
+ht-degree: 56%
 ---
-
 <!--
 Possible topics to cover in this article are below.
 
@@ -44,7 +57,7 @@ Possible topics to cover in this article are below.
 
 準拠レベルの詳細を記載したレポートについては、[アクセシビリティ準拠レポート](https://www.adobe.com/accessibility/compliance.html)（ACR）のページを参照してください。
 
-[!DNL Dynamic Media] のアクセシビリティについて詳しくは、「[&#x200B; [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ」を参照してください。
+[!DNL Dynamic Media] のアクセシビリティについて詳しくは、「[ [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ」を参照してください。
 
 ## 支援テクノロジー {#at-support}
 
@@ -60,8 +73,8 @@ Possible topics to cover in this article are below.
 
 [!DNL Experience Manager] のアクセシビリティ機能は、[!DNL Experience Manager] ユーザーとその顧客の 2 つの主要な要件に対応しています。
 
-* コンテンツデザイナーやクリエーターには、アクセシブルなコンテンツを作成して公開する機能が提供されます。作成されたコンテンツは、顧客や web サイト訪問者によって使用されます。 障がいを持つユーザーは、支援テクノロジーを活用してコンテンツを利用します。 詳しくは、[Web アクセシビリティガイドライン &#x200B;](/help/managing/web-accessibility.md)を参照してください。
-* [!DNL Experience Manager]では、障害を持つユーザーと管理者がユーザーインターフェイスとコントロールにアクセスして、コンテンツを作成および管理することもできます。 障害を持つユーザーは、支援テクノロジーを使用して、[!DNL Assets] 機能をナビゲート、使用、管理できます。
+* コンテンツデザイナーやクリエーターには、アクセシブルなコンテンツを作成して公開する機能が提供されます。作成されたコンテンツは、顧客や web サイト訪問者によって使用されます。 障がいを持つユーザーは、支援テクノロジーを活用してコンテンツを利用します。 詳しくは、[Web アクセシビリティガイドライン ](/help/managing/web-accessibility.md)を参照してください。
+* [!DNL Experience Manager]では、障害を持つユーザーと管理者がユーザーインターフェイスとコントロールにアクセスして、コンテンツを作成および管理することもできます。 障害のある個人は、支援テクノロジーを使用して、[!DNL Assets] 機能をナビゲート、使用、管理できます。
 
 [!DNL Assets] の主な機能は以前よりもアクセスしやすく、定期的にアップデートされており、グローバル標準への準拠が改善されています。 [!DNL Assets]のCRUD操作には、ある程度のアクセシビリティが組み込まれています。 アセットの追加、管理、検索、配布などの DAM ワークフローには、キーボードショートカット、スクリーンリーダーテキスト、カラーコントラストなどの支援を受けてアクセスできます。
 
@@ -90,7 +103,7 @@ TBD items:
 | [!DNL Assets] コンソール | &grave; | サイドパネルを切り替えます。 |
 | [!DNL Assets] コンソール | `Alt + 1` | コンテンツツリーを開きます。 |
 | [!DNL Assets] コンソール | `Alt + 2` | 左側のパネルで[!UICONTROL ナビゲーション]を開きます。 |
-| [!DNL Assets] コンソール | `Alt + 3` | 選択したアセットの[!UICONTROL &#x200B; タイムライン &#x200B;]を表示します。 |
+| [!DNL Assets] コンソール | `Alt + 3` | 選択したアセットの[!UICONTROL  タイムライン ]を表示します。 |
 | [!DNL Assets] コンソール | `Alt + 4` | 選択したアセットのライブコピーの参照を開きます。 |
 | [!DNL Assets] コンソール | `Alt + 5` | 検索を開始し、選択したフォルダー内を検索します。 |
 | アセットまたはフォルダーが選択されている | Backspace | 選択したアセットまたはフォルダーを削除します。 |
@@ -170,15 +183,15 @@ CRUD 操作、アセットのダウンロード、メタデータの追加など
 
 マーケターや管理者などの役割によって通常おこなわれるメタデータ操作では、次の機能によってアクセシビリティが向上します。
 
-* アセット [!UICONTROL &#x200B; プロパティ &#x200B;] ページの[!UICONTROL 保存と閉じる] オプションに、キーボードからアクセスできるようになりました。
-* スクリーンリーダーは、アセット [!UICONTROL &#x200B; プロパティ &#x200B;]の「[!UICONTROL 基本]」タブで選択したタグを削除するオプションを通知します。
+* アセット [!UICONTROL  プロパティ ] ページの[!UICONTROL 保存と閉じる] オプションに、キーボードからアクセスできるようになりました。
+* スクリーンリーダーは、アセット [!UICONTROL  プロパティ ]の「[!UICONTROL 基本]」タブで選択したタグを削除するオプションを通知します。
 * ユーザーは、キーボードで日付選択ポップアップダイアログボックスを使用できます。 日付選択ユーザーインターフェイス要素を使用して、オンタイムとオフタイムを設定し、日付を選択します。
-* キーボードを使用したドラッグ機能は、スクリーンリーダーのブラウズモードで[!UICONTROL &#x200B; メタデータスキーマエディター]で正しく機能します。
+* キーボードを使用したドラッグ機能は、スクリーンリーダーのブラウズモードで[!UICONTROL  メタデータスキーマエディター]で正しく機能します。
 * ユーザーはキーボードを使用して、**ユーザーまたはグループを追加** フィールドにフォーカスを移動できます。
 
 ## デジタルアセットの検索 {#search-assets}
 
-すばやくシームレスなアセット検索の経験により、コンテンツの速度が向上します。 コンテンツ速度の使用例は、主な [!DNL Assets] 機能の一部です。 オムニサーチバーから検索を開始するには、キーボードショートカット `/`を使用するか、スクリーンリーダーと一緒に`Tab`を使用して、検索オプションをすばやく見つけることができます。 検索オプション ![検索オプション](assets/do-not-localize/search_icon.png) にフォーカスがある場合、スクリーンリーダーはオプションの名前を「検索ボタン」として読み上げます。 `Return` を押すと、「オムニサーチ」ボックスが開きます。 スクリーンリーダーは、検索ボックスに入力されたキーワードだけでなく、[!DNL Experience Manager Assets]が提供する候補もナレーションします。 矢印キー、`Return`、`Tab`を組み合わせて使用し、様々なオプションにアクセスして検索をトリガーできます。
+すばやくシームレスなアセット検索エクスペリエンスにより、コンテンツベロシティが向上します。 コンテンツ速度の使用例は、主な [!DNL Assets] 機能の一部です。 オムニサーチバーから検索を開始するには、キーボードショートカット `/`を使用するか、スクリーンリーダーと一緒に`Tab`を使用して、検索オプションをすばやく見つけることができます。 検索オプション ![検索オプション](assets/do-not-localize/search_icon.png) にフォーカスがある場合、スクリーンリーダーはオプションの名前を「検索ボタン」として読み上げます。 `Return` を押すと、「オムニサーチ」ボックスが開きます。 スクリーンリーダーは、検索ボックスに入力されたキーワードだけでなく、[!DNL Experience Manager Assets]が提供する候補もナレーションします。 矢印キー、`Return`、`Tab`を組み合わせて使用し、様々なオプションにアクセスして検索をトリガーできます。
 
 検索機能のアクセシビリティは次の機能で実現されています。
 
@@ -206,9 +219,9 @@ TBD: Anything about accessibility in DA, BP? AAL team confirmed that there's no 
 
 * リンク共有ダイアログボックスで、参照モードで移動する際に、スクリーンリーダー，
 
-   * ダイアログボックスの読み込み時にテーブル情報を読み上げないでください。
-   * リストに表示されているすべての候補に移動します。
-   * 「メールアドレスを検索／追加」フィールドに対して表示された提案を読み上げる。
+  * ダイアログボックスの読み込み時にテーブル情報を読み上げないでください。
+  * リストに表示されているすべての候補に移動します。
+  * 「メールアドレスを検索／追加」フィールドに対して表示された提案を読み上げる。
 
 ## アクセシビリティの高いドキュメント {#accessible-docs}
 
@@ -225,7 +238,7 @@ TBD: Anything about accessibility in DA, BP? AAL team confirmed that there's no 
 
 >[!MORELIKETHIS]
 >
->* [&#x200B;  [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ機能。
+>* [  [!DNL Dynamic Media]](/help/assets/accessibility-dm.md) のアクセシビリティ機能。
 >* [各サービスパックのリリースでおこなわれた機能強化のリリースノート](/help/release-notes/release-notes.md)。
 >* [[!DNL Adobe Experience Manager] アクセシビリティガイダンス](/help/managing/web-accessibility.md)
 >* [アドビソリューションのアクセシビリティ準拠レポート（ACR）および VPAT リスト](https://www.adobe.com/accessibility/compliance.html)

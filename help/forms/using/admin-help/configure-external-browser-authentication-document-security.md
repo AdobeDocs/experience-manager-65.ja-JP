@@ -9,13 +9,24 @@ feature: Document Security
 exl-id: a452674c-aea0-45d6-88cd-438af539d355
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 89a07256cd5bb850aac19565ad86273322fa1f31
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1029'
 ht-degree: 4%
-
 ---
-
 # ドキュメントのセキュリティのために外部ブラウザーからの拡張認証を設定する {#configure-external-browser-authentication-document-security}
 
 >[!NOTE]
@@ -30,13 +41,13 @@ ht-degree: 4%
 
 外部ブラウザー認証を設定する前に、次の要件が満たされていることを確認します。
 
-* サービスパック 6.5.25.0がデプロイされたJEE上のAEM Forms 6.5、またはサポートされているアプリケーションサーバー（JBoss、WebLogic、またはWebSphere）にインストールされた該当するJEE ホットフィックスパッチを含むサービスパック 6.5.24.0。 AEM Forms JEE Hotfix2 6.5.24.0[&#128279;](#software-distribution-links)の ソフトウェア配布リンクを参照してください。
-* 拡張認証（サードパーティ認証）は既に有効になっており、IDPで機能します。 [&#x200B; サーバー設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)および[拡張認証プロバイダーの追加](/help/forms/using/admin-help/configuring-client-server-options.md#add-the-extended-authentication-provider)を参照してください。
+* サービスパック 6.5.25.0がデプロイされたJEE上のAEM Forms 6.5、またはサポートされているアプリケーションサーバー（JBoss、WebLogic、またはWebSphere）にインストールされた該当するJEE ホットフィックスパッチを含むサービスパック 6.5.24.0。 AEM Forms JEE Hotfix2 6.5.24.0](#software-distribution-links)の[ ソフトウェア配布リンクを参照してください。
+* 拡張認証（サードパーティ認証）は既に有効になっており、IDPで機能します。 [ サーバー設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)および[拡張認証プロバイダーの追加](/help/forms/using/admin-help/configuring-client-server-options.md#add-the-extended-authentication-provider)を参照してください。
 * Adobe Acrobat ProまたはAdobe Acrobat Reader（64 ビット）を最新のアップデートでクライアントのWindows PCにインストールします。
 
 >[!NOTE]
 >
-> 外部ブラウザー認証には、クライアントでサポートされているバージョンのAdobe AcrobatまたはAdobe Acrobat Readerが必要です。 バージョンの詳細とアップデートについては、[Acrobat リリースノート（2026年3月の継続的なトラック） &#x200B;](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)を参照してください。
+> 外部ブラウザー認証には、クライアントでサポートされているバージョンのAdobe AcrobatまたはAdobe Acrobat Readerが必要です。 バージョンの詳細とアップデートについては、[Acrobat リリースノート（2026年3月の継続的なトラック） ](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)を参照してください。
 
 ### AEM Forms JEE ホットフィックス 2 6.5.24.0のソフトウェア配布リンク {#software-distribution-links}
 
@@ -44,7 +55,7 @@ ht-degree: 4%
 
 JEE サービスパック 6.5.24.0以前のAEM Formsを使用している場合は、次のいずれかの操作を行います。
 
-* JEE サービスパック 6.5.25.0[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)のAEM Formsにアップグレードします。
+* JEE サービスパック 6.5.25.0](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.25.0.zip)の[AEM Formsにアップグレードします。
 * 以下のリンクを使用して、アプリケーションサーバーとプラットフォーム用のAEM Forms JEE ホットフィックス 6.5.24.0 パッチをインストールします。
 
 お使いのプラットフォームのAEM Forms JEE ホットフィックス 6.5.24.0 パッチを[Adobe ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/ja/aem.html)からダウンロードしてインストールします。
@@ -52,19 +63,19 @@ JEE サービスパック 6.5.24.0以前のAEM Formsを使用している場合�
 **JBoss**
 
 * Windows: [Windows for JBoss JEE サーバー](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-jboss.zip)のAEM Service Pack 6.5.24.0のホットフィックス
-* Linux: [JBoss JEE サーバー用Linux上のAEM サービスパック 6.5.24.0のホットフィックス &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)
+* Linux: [JBoss JEE サーバー用Linux上のAEM サービスパック 6.5.24.0のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/jboss/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-jboss.tar.gz)
 
 **WebSphere**
 
-* Windows: WebSphere JEE サーバー[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)のWindows上のAEM Service Pack 6.5.24.0のホットフィックス
-* Linux: [WebSphere JEE サーバー用Linux上のAEM Service Pack 6.5.24.0のホットフィックス &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)
+* Windows: WebSphere JEE サーバー](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-websphere.zip)のWindows上のAEM Service Pack 6.5.24.0のホットフィックス[
+* Linux: [WebSphere JEE サーバー用Linux上のAEM Service Pack 6.5.24.0のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/websphere/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-websphere.tar.gz)
 
 **WebLogic**
 
-* Windows: WebLogic JEE サーバー[&#128279;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)のWindows上のAEM Service Pack 6.5.24.0のホットフィックス
-* Linux: [WebLogic JEE サーバー用Linux上のAEM サービスパック 6.5.24.0のホットフィックス &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)
+* Windows: WebLogic JEE サーバー](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-win-weblogic.zip)のWindows上のAEM Service Pack 6.5.24.0のホットフィックス[
+* Linux: [WebLogic JEE サーバー用Linux上のAEM サービスパック 6.5.24.0のホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-24-0-hotfix-02/weblogic/adobe-aem-forms-jee-hotfix2-6.5.24.0-linux-weblogic.tar.gz)
 
-インストール手順については、[JEE パッチのインストール &#x200B;](/help/release-notes/jee-patch-installer-65.md)を参照してください。
+インストール手順については、[JEE パッチのインストール ](/help/release-notes/jee-patch-installer-65.md)を参照してください。
 
 ## 外部ブラウザー認証を有効にする {#enable-external-browser-authentication}
 
@@ -79,7 +90,7 @@ JEE サービスパック 6.5.24.0以前のAEM Formsを使用している場合�
    * **Adobe Acrobat Reader （32 ビット） – デスクトップ**
 1. 「**OK**」をクリックします。
 
-サーバー設定の説明については、[&#x200B; サーバー設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)を参照してください。
+サーバー設定の説明については、[ サーバー設定](/help/forms/using/admin-help/configuring-client-server-options.md#server-configuration-settings)を参照してください。
 
 <!--
 ## Client configuration (Acrobat / Reader) {#client-configuration}

@@ -1,6 +1,6 @@
 ---
 title: アプリのメタデータの編集
-description: アプリのメタデータは、ベンダーのストアにアプリをリリースするために必要な詳細です。 このページでは、アプリデータの編集について説明します。
+description: アプリケーションのメタデータは、アプリケーションをベンダーのストアにリリースするために必要な詳細です。 このページでは、アプリデータの編集について説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -9,18 +9,22 @@ exl-id: 897a04b9-e357-4f1c-8aa0-2c2528f8556d
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 9%
-
 ---
-
 # アプリのメタデータの編集 {#editing-app-metadata}
 
 {{ue-over-mobile}}
 
-**アプリを管理** タイルと「アプリを管理」ページは、アプリケーションのメタデータを表示および編集する手段を提供します。 アプリのメタデータは、ベンダーのストアにアプリをリリースするために必要な詳細です。 これには、共通のメタデータ、iOSのメタデータおよびスクリーンショットが含まれる場合があります。 共通のメタデータとiOSメタデータについて詳しくは、[&#x200B; アプリを管理 &#x200B;](/help/mobile/phonegap-app-details-tile.md) タイルを参照してください。
+**アプリの管理** タイルと「アプリの管理」ページには、アプリケーションのメタデータを表示および編集するための手段が用意されています。 アプリケーションのメタデータは、アプリケーションをベンダーのストアにリリースするために必要な詳細です。 これには、一般的なメタデータ、iOSのメタデータ、スクリーンショットが含まれます。 共通およびiOS メタデータの詳細については、[ アプリ タイルの管理](/help/mobile/phonegap-app-details-tile.md)を参照してください。
 
 ## アプリデータの編集 {#editing-the-app-data}
 
@@ -30,24 +34,24 @@ ht-degree: 9%
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. **アプリの管理** タイルの右下隅にある「。..」をクリックして詳細を表示または編集します。
+1. 詳細を表示または編集するには、**アプリを管理** タイルの右下隅にある「。..」をクリックします。
 
-1. 次の図に示すように、5 つのタブのいずれかで詳細を入力または表示します。
+1. 次の図に示すように、5つのタブで詳細を入力または表示します。
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-## 共通メタデータとIOS メタデータの編集 {#editing-common-and-ios-metadata}
+## 共通およびIOS メタデータの編集 {#editing-common-and-ios-metadata}
 
-共通メタデータとIOS メタデータは次の場所で編集できます。
+共通およびIOS メタデータを編集できます。
 
-* アプリの説明ページで「**詳細**」タブを選択します。
-* 共通メタデータとIOS メタデータを編集または表示します。 詳しくは、以下の図を参照してください。
+* アプリの説明ページから「**詳細**」タブを選択します。
+* 共通およびIOS メタデータを編集または表示します。 詳しくは、以下の図を参照してください。
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
 
 ## スクリーンショットの追加と削除 {#add-and-remove-screenshots}
 
-メタデータロールアップにアプリのスクリーンショットを含めることができます。 一部のベンダーは、アプリストアにアプリを送信する際に、正確なスクリーンショットを必要とします。 これらの画像は、既にAssetsに存在している必要があります。 [&#x200B; アセットピッカー &#x200B;](../assets/search-assets.md#assetpicker) を参照して、スクリーンショットをアップロードします。
+アプリのスクリーンショットをメタデータロールアップに含めることができます。 一部のベンダーは、アプリをアプリストアに送信する際に、正確なスクリーンショットを必要とします。 これらの画像は、Assetsに既に存在している必要があります。 スクリーンショットをアップロードするには、[ アセットピッカー](../assets/search-assets.md#assetpicker)を参照してください。
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -55,18 +59,18 @@ ht-degree: 9%
 
 アセットをスクリーンショットとして追加するには：
 
-1. **アプリを管理** ページの編集モードで、追加（プラスアイコン）をクリックします。
-1. アセットを選択し、「**選択** をクリックしてアセットを追加します。
+1. **アプリを管理** ページの編集モードで、「追加」（プラスアイコン）をクリックします。
+1. アセットを選択し、**選択**&#x200B;をクリックしてアセットを追加します。
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. アセットを選択し、「**選択** をクリックしてアセットを追加します。
+1. アセットを選択し、**選択**&#x200B;をクリックしてアセットを追加します。
 
 >[!NOTE]
 >
->スクリーンショットは、ターゲット・デバイスの画面解像度と一致する必要があります。
+>スクリーンショットは、ターゲットデバイスの画面解像度と一致している必要があります。
 
-### スクリーンショットを削除 {#delete-screenshots}
+### Screenshotsの削除 {#delete-screenshots}
 
 スクリーンショットを削除するには：
 
@@ -76,17 +80,17 @@ ht-degree: 9%
 
 ## 次の手順 {#the-next-steps}
 
-他のオーサリングの役割について詳しくは、次のリソースを参照してください。
+その他のオーサリングの役割について詳しくは、次のリソースを参照してください。
 
 * [アプリを管理タイル](/help/mobile/phonegap-app-details-tile.md)
-* [アプリの定義](/help/mobile/phonegap-app-definitions.md)
-* [アプリの作成ウィザードを使用した新しいアプリの作成](/help/mobile/phonegap-create-new-app.md)
-* [既存のハイブリッドアプリを読み込む](/help/mobile/phonegap-adding-content-to-imported-app.md)
+* [アプリ定義](/help/mobile/phonegap-app-definitions.md)
+* [アプリ作成ウィザードを使用した新しいアプリの作成](/help/mobile/phonegap-create-new-app.md)
+* [既存のハイブリッドアプリの読み込み](/help/mobile/phonegap-adding-content-to-imported-app.md)
 * [コンテンツサービス](/help/mobile/develop-content-as-a-service.md)
 
 ### その他のリソース {#additional-resources}
 
-管理者と開発者の役割と責任については、以下のリソースを参照してください。
+管理者と開発者の役割と責任について詳しくは、以下のリソースを参照してください。
 
-* [AEMを使用したAdobe PhoneGap Enterprise 向けの開発](/help/mobile/developing-in-phonegap.md)
+* [AEMを使用したAdobe PhoneGap Enterpriseの開発](/help/mobile/developing-in-phonegap.md)
 * [AEM を使用した Adobe PhoneGap Enterprise のコンテンツの管理](/help/mobile/administer-phonegap.md)

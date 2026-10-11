@@ -6,13 +6,22 @@ role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 6ab943894398733d178f561430d3f391e8722195
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3255'
 ht-degree: 99%
-
 ---
-
 # Experience Manager Assets を Adobe Asset Link 用に設定 {#adobe-asset-link}
 
 [Adobe Asset Link（AAL）](https://www.adobe.com/jp/creativecloud/business/enterprise/adobe-asset-link.html) を使用すると、コンテンツ作成プロセスでのクリエイターとマーケターの共同作業を効率化できます。 Adobe Experience Manager Assets を Creative Cloud デスクトップアプリケーションの Adobe InDesign、Adobe Photoshop および Adobe Illustrator に接続します。 Adobe Asset Link パネルを使用すると、クリエイターが最も慣れているクリエイティブアプリから離れることなく、AEM Assets に保存されたコンテンツをアクセスしたり、変更したりすることができます。
@@ -33,7 +42,7 @@ Experience Manager Assetsを Asset Link と共に使用するように設定す�
 
 | Assets の機能 | Experience Manager のバージョンとサポート要件 |
 |--- |--- |
-| アセットリンクはデフォルトで機能します | Experience Manager 6.5および6.5.2以降。</br> Experience Manager 6.4.4および6.4.6以降。</br> Adobeでは、AALを使用する前に、最新の[Experience Manager サービスパック（SP） &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールすることをお勧めします。 |
+| アセットリンクはデフォルトで機能します | Experience Manager 6.5および6.5.2以降。</br> Experience Manager 6.4.4および6.4.6以降。</br> Adobeでは、AALを使用する前に、最新の[Experience Manager サービスパック（SP） ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=ja)をインストールすることをお勧めします。 |
 | パッケージのインストール後にアセットリンクが機能します | Experience Manager 6.4.0 ～ 6.4.3 の場合は、[adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support) パッケージをインストールします。 |
 | Adobe Stock の統合 | Experience Manager 6.4.2 以降 |
 | ビジュアル検索または類似性検索 | Experience Manager 6.5.0 以降 |

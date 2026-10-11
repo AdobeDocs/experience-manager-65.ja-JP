@@ -9,13 +9,24 @@ feature: Document Security
 exl-id: 616e8821-ca96-4471-9120-0e1076a06178
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 100%
-
 ---
-
 # 大量の保護された情報の配布 {#high-volume-secure-information-delivery}
 
 通信会社で保護された月次請求書を生成する場合など、ドキュメントを量産する環境では、ドキュメントごとに固有のライセンスを作成すると大量のリソースが消費されます。 このような場合、Document Security はドキュメントに対してではなく、ユーザーに対するライセンスの関連付けをサポートしています。 1 人のユーザーに対して生成されるライセンスは、そのユーザーに対して保護されているすべてのドキュメントで使用されます。

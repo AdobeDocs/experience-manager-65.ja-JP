@@ -1,6 +1,6 @@
 ---
 title: モバイルアプリのテスト
-description: Learn how to automate or manually test your mobile apps using various tools.
+description: さまざまなツールを使用してモバイルアプリを自動化または手動でテストする方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
 topic-tags: developing
@@ -9,27 +9,31 @@ exl-id: e10e1904-7016-4eb0-9408-36297285f378
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 1%
-
 ---
-
 # モバイルアプリのテスト{#testing-mobile-apps}
 
 {{ue-over-mobile}}
 
-Given the wide range of devices on the market and devices being released, testing your Apps has become imperative. This is an area where functionality and usability may garner low reviews on an app store, but a single defect can result in your app being uninstalled. Careful attention must be made in your testing plans and quality assurance. The following link covers many of the topics that must be addressed in general, such as identifying your environment, defining test cases, types of testing, assumptions, and customer involvement. Also discussed are tools to help in the testing effort. Internal tools, like [Hobbes](/help/sites-developing/hobbes.md), can help with web-based UI testing. [Tough Day](/help/sites-developing/tough-day.md) can stress your instances with a simulated load. If your testing environment already has experience with 3rd-party tools, like Selenium, these too can be used.
+市場に出回っている幅広いデバイスとリリースされているデバイスを考えると、アプリのテストは不可欠なものとなっています。 これは、機能と使いやすさがアプリストアで低いレビューを集める可能性がありますが、1つの欠陥が原因でアプリがアンインストールされる可能性があります。 試験計画と品質保証には、慎重に注意する必要があります。 次のリンクでは、環境の特定、テストケースの定義、テストの種類、仮定、顧客の関与など、一般的に対処する必要がある多くのトピックについて説明します。 また、テストの取り組みに役立つツールについても説明します。 [Hobbes](/help/sites-developing/hobbes.md)などの内部ツールは、web ベースのUI テストに役立ちます。 [ タフな日](/help/sites-developing/tough-day.md)は、シミュレートされた負荷でインスタンスに負荷をかけることができます。 テスト環境でSeleniumなどのサードパーティツールの使用経験がある場合は、これも使用できます。
 
-When developing a mobile app, there are many new concerns specific to devices that have to be addressed along with those of traditional testing.
+モバイルアプリを開発する際には、従来のテストと合わせて対処しなければならないデバイスに特有の新しい懸念事項が数多くあります。
 
-* Functional - Are all requirements met by your app?
-* Usability - Is the app easy to use and understand by your customer?
-* Performance - What happens during a spike in usage? Are the app elements, like swipes and carousels, quick and do not detract away from the experience?
-* Failure or Interrupts - What happens when there is an incoming call or notification while your app is running? What happens if there is a network outage or power off?
-* Installation and Updates - How is the installation experience? How are updates pushed out?
-* Technical - Is your app consuming too much power from a device?
+* 機能的 – すべての要件がアプリで満たされていますか？
+* ユーザビリティ – アプリは使いやすく、お客様に理解してもらえますか？
+* パフォーマンス – 使用率が急増した場合はどうなりますか？ スワイプやカルーセルなどのアプリ要素は、素早く、エクスペリエンスを損なうことはありませんか？
+* 失敗または中断 – アプリの実行中に着信呼び出しまたは通知が発生した場合はどうなりますか？ ネットワークの停止または電源オフが発生した場合はどうなりますか？
+* インストールとアップデート – インストールのエクスペリエンスはどうですか？ 更新はどのようにプッシュされますか？
+* テクニカル – アプリがデバイスから電力を消費しすぎていますか？
 * ローカライズ – アプリ内のすべての領域が翻訳されていますか？
 * 認定 – あなたのアプリは認定を受けていますか？ 顧客は、データプライバシーの法的要件をすべて満たしていると信頼できますか？
 
@@ -49,12 +53,12 @@ When developing a mobile app, there are many new concerns specific to devices th
 * デバイスの大きなプールに対してテストします（理想的には実際のデバイスですが、実際のデバイスが利用できない場合はシミュレータ/エミュレータ）。
 * 有益なフィードバックの提供：
 
-   * クラッシュレポート，
-   * 分析/トラッキング，
-   * ユーザビリティ，
-   * 注目すべき領域，
-   * パフォーマンス，
-   * データや電力の消費などを行います。
+  * クラッシュレポート，
+  * 分析/トラッキング，
+  * ユーザビリティ，
+  * 注目すべき領域，
+  * パフォーマンス，
+  * データや電力の消費などを行います。
 
 ## ツール {#tools}
 

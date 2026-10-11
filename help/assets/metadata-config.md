@@ -1,19 +1,33 @@
 ---
 title: メタデータ機能の設定と管理。
-description: メタデータの追加と管理に関連した  [!DNL Experience Manager Assets]  機能の設定と管理。
+description: メタデータの追加と管理に関連する[!DNL Experience Manager Assets]機能の設定と管理。
 contentOwner: AG
 role: User, Admin
 feature: Metadata
 exl-id: 56c92b7f-e687-4ab5-a376-afa58bdb6ee0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: ed6971a3-2c12-4fd2-81f4-ff329c416250
+    internal-label: Metadata
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2005'
-ht-degree: 94%
-
+source-wordcount: '2006'
+ht-degree: 93%
 ---
-
 # [!DNL Assets] でのメタデータ機能の設定と管理 {#config-metadata}
 
 | バージョン | 記事リンク |
@@ -120,7 +134,7 @@ Scope of metadata articles:
 
 <!--
 TBD: Revisit to find out the correct config. and update these steps. When fixed, also o
-These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/jp/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
+These steps have been carried forward from old AEM versions. See https://helpx.adobe.com/experience-manager/6-2/assets/using/metadata-profiles.html#ApplyingaMetadataProfiletoFolders
 
 ### Configuration to apply a metadata profile globally {#apply-a-metadata-profile-globally}
 
@@ -171,7 +185,7 @@ To apply a metadata profile globally, follow these steps:
 
    ![adding_components](assets/adding_components.png)
 
-   複数のタブを作成する場合は、コンポーネントを追加する特定のタブをクリックします。
+   複数のタブを作成する場合は、コンポーネントを追加するには特定のタブをクリックします。
 
 1. コンポーネントを設定するには、コンポーネントを選択して、「**[!UICONTROL 設定]**」タブでそのプロパティを変更します。
 
@@ -234,13 +248,13 @@ To apply a metadata profile globally, follow these steps:
 
 フォルダーのメタデータスキーマを設定すると、スキーマフォームのパスは、`./jcr:content` の下のフォルダーノードの `folderMetadataSchema` プロパティに格納されます。
 
-#### フォルダーメタデータスキーマページからのスキーマへの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
+#### フォルダーメタデータスキーマページからのスキーマの割り当て {#assign-to-a-schema-from-the-folder-metadata-schema-page}
 
 1. [!DNL Experience Manager]インターフェイスで、**[!UICONTROL ツール]**／**[!UICONTROL アセット]**／**[!UICONTROL フォルダーのメタデータスキーマ]**&#x200B;に移動します。
 1. フォルダーメタデータスキーマフォームページから、フォルダーに適用するスキーマフォームを選択します。
 1. ツールバーの&#x200B;**[!UICONTROL フォルダーに適用]**&#x200B;をクリックします。
 
-1. スキーマを適用するフォルダーを選択し、「**[!UICONTROL 適用]**」をクリックします。 既にフォルダーにメタデータスキーマが適用されている場合は、既存のメタデータスキーマを上書きするかどうかを確認する警告メッセージが表示されます。 「**[!UICONTROL 上書き]**」をクリックします。
+1. スキーマを適用するフォルダーを選択し、「**[!UICONTROL 適用]**」をクリックします。 既にフォルダーにメタデータスキーマが適用されている場合は、既存のメタデータスキーマを上書きしようとしていることを知らせる警告メッセージが表示されます。 「**[!UICONTROL 上書き]**」をクリックします。
 1. メタデータスキーマを適用したフォルダーのメタデータプロパティを開きます。
 
    ![folder_properties](assets/folder_properties.png)
@@ -274,7 +288,7 @@ To apply a metadata profile globally, follow these steps:
 
 * カスタム名前空間にメタデータを読み込むには、まず、その名前空間を登録します。
 * プロパティピッカーは、スキーマエディターおよび検索フォームで使用されるプロパティを表示します。 プロパティピッカーはアセットからメタデータプロパティを選択しません。
-* [!DNL Experience Manager] 6.5にアップグレードする前から、既存のメタデータプロファイルが存在している可能性があります。 アップグレード後、「[!UICONTROL &#x200B; メタデータプロファイル &#x200B;]」タブのフォルダー[!UICONTROL &#x200B; プロパティ &#x200B;]にそのようなプロファイルを適用すると、メタデータフォームフィールドが表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
+* [!DNL Experience Manager] 6.5にアップグレードする前から、既存のメタデータプロファイルが存在している可能性があります。 アップグレード後、「[!UICONTROL  メタデータプロファイル ]」タブのフォルダー[!UICONTROL  プロパティ ]にそのようなプロファイルを適用すると、メタデータフォームフィールドが表示されません。 ただし、新しく作成したメタデータプロファイルを適用すると、フォームのフィールドは表示されますが、期待どおりに使用できません。 機能は失われませんが、（使用できない）フォームフィールドを表示したい場合は、既存のメタデータプロファイルを編集して保存します。
 
 >[!MORELIKETHIS]
 >

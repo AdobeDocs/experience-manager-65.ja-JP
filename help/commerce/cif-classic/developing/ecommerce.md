@@ -5,16 +5,24 @@ exl-id: da63c576-34cd-40ce-81de-d7391a331364
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '156'
 ht-degree: 100%
-
 ---
+# e コマース{#ecommerce}
 
-# e コマース {#ecommerce}
-
-統合フレームワークには、API を備えた統合レイヤーが含まれています。次の操作が可能です。
+統合フレームワークには、API を備えた統合レイヤーが含まれています。 次の操作が可能です。
 
 * e コマースシステムをプラグインして、製品データを AEM に取り込む
 * 特定の e コマースエンジンに依存しないコマース機能を提供する AEM コンポーネントを作成する
@@ -30,7 +38,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。詳しくは、[e コマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
+>この統合フレームワークを外部 e コマースプロバイダーと連携して利用するには、まず必要なパッケージをインストールする必要があります。 詳しくは、[e コマースのデプロイ](/help/commerce/cif-classic/deploying/ecommerce.md)を参照してください。
 >
 >e コマース実装の概念と管理については、[e コマースの管理](/help/commerce/cif-classic/administering/ecommerce.md)を参照してください。
 

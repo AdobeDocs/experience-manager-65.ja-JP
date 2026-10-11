@@ -1,20 +1,27 @@
 ---
 title: ワークフローステップのリファレンス
-
 description: Adobe Experience Manager のワークフローについては、このステップのリファレンスを参照してください。
-
-
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
 content-type: reference
-
 docset: aem65
 exl-id: 8de78bde-2fcb-4221-873e-59e347ff2d74
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3288'
 ht-degree: 98%
@@ -174,7 +181,7 @@ function check(){
 
 ### ルール定義を使用した for ループのシミュレーション {#simulateforloop}
 
-ルーティング式としてルール定義を使用し、for ループをシミュレートすることもできます。 Long データタイプの[&#x200B; **count** 変数を作成します](/help/forms/using/variable-in-aem-workflows.md#create-a-variable)。 **[変数の設定](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)**&#x200B;ステップのマッピングモードとして&#x200B;**式**&#x200B;を使用し、**変数の設定**&#x200B;ステップの各実行で **count** 変数の値を **count + 1** に設定してください。
+ルーティング式としてルール定義を使用し、for ループをシミュレートすることもできます。 Long データタイプの[ **count** 変数を作成します](/help/forms/using/variable-in-aem-workflows.md#create-a-variable)。 **[変数の設定](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable)**&#x200B;ステップのマッピングモードとして&#x200B;**式**&#x200B;を使用し、**変数の設定**&#x200B;ステップの各実行で **count** 変数の値を **count + 1** に設定してください。
 
 ![for ループのシミュレーション](assets/variable_use_case_count_new.png)
 

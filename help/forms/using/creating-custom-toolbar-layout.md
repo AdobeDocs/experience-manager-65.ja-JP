@@ -1,28 +1,44 @@
 ---
 title: カスタムツールバーレイアウトの作成
-description: フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
+description: フォームのツールバーレイアウトを指定できます。 ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 docset: aem65
 exl-id: 44516956-00aa-41d5-a7e9-746c7618e5db
-solution: "Experience Manager, Experience Manager Forms"
+solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms,Foundation Components
-source-git-commit: 5723e9990969dff1b508062d69a68f68a20eb576
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 100%
-
+source-wordcount: '549'
+ht-degree: 96%
 ---
-
 # カスタムツールバーレイアウトの作成{#creating-custom-toolbar-layout}
 
 ## ツールバーレイアウト {#layout}
 
-アダプティブフォームを作成する際に、フォームのツールバーレイアウトを指定できます。ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
+アダプティブフォームを作成する際に、フォームのツールバーレイアウトを指定できます。 ツールバーレイアウトは、フォーム上のツールバーのコマンドとレイアウトを定義します。
 
-ツールバーレイアウトの使用は、複雑な JavaScript と CSS コードによるクライアントサイドの処理に大きく依存しています。このコードの提供を編成および最適化することが厄介な問題となることがあります。この問題に対処するために、AEM はクライアントサイドライブラリフォルダーを提供しています。これにより、クライアントサイドコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。クライアントサイドのライブラリスステムは、最終的な web ページで正しいコードをロードするための正しいリンクを生成する作業を担当します。詳細については、[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)を参照してください。
+ツールバーレイアウトの使用は、複雑な JavaScript と CSS コードによるクライアントサイドの処理に大きく依存しています。 このコードの提供を編成および最適化することが厄介な問題となることがあります。 この問題に対処するために、AEM はクライアントサイドライブラリフォルダーを提供しています。これにより、クライアントサイドコードをリポジトリに格納し、カテゴリ別に整理して、それぞれのカテゴリのコードをクライアントに提供するタイミングと方法を定義できます。 クライアントサイドのライブラリスステムは、最終的な web ページで正しいコードをロードするための正しいリンクを生成する作業を担当します。 詳細については、[AEM におけるクライアントサイドライブラリの機能](/help/sites-developing/clientlibs.md)を参照してください。
 
 ![ツールバーのサンプルレイアウト](assets/default_toolbar_layout.png)
 
@@ -38,18 +54,18 @@ ht-degree: 100%
 
 次の手順では、3 つのアクションをツールバーに表示し、その他のアクションをツールバーのドロップダウンリストに表示するカスタムツールバーの作成手順を説明します。
 
-付属のコンテンツパッケージには、以下に示すコード全体が含まれています。コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html` を開いてカスタムツールバーレイアウトのデモをご覧ください。
+付属のコンテンツパッケージには、以下に示すコード全体が含まれています。 コンテンツパッケージをインストールしたら、`/content/forms/af/CustomLayoutDemo.html` を開いてカスタムツールバーレイアウトのデモをご覧ください。
 
 CustomToolbarLayoutDemo.zip
 
-[ファイルの取得](assets/customtoolbarlayoutdemo.zip)
-デモカスタムツールバーレイアウト
+[ ファイルを取得](assets/customtoolbarlayoutdemo.zip)
+カスタムツールバーレイアウトのデモ
 
 ## カスタムツールバーレイアウトを作成するには {#layout-1}
 
-1. カスタムツールバーレイアウトを保持するフォルダーを作成します。例：
+1. カスタムツールバーレイアウトを保持するフォルダーを作成します。 例：
 
-   `/apps/customlayout/toolbar`。
+   `/apps/customlayout/toolbar`
 
    カスタムレイアウトを作成するには、次のフォルダーに用意されている既成のツールバーレイアウトの 1 つを使用（およびカスタマイズ）できます。
 
@@ -65,9 +81,9 @@ CustomToolbarLayoutDemo.zip
 
 1. コピーしたノード `mobileFixedToolbarLayout` の名前を `customToolbarLayout.` に変更します。
 
-   また、ノードに関連する説明も入力します。例えば、ノードの jcr:description を&#x200B;**ツールバーのカスタムレイアウト**&#x200B;に変更します。
+   また、ノードに関連する説明も入力します。 例えば、ノードのjcr:descriptionを&#x200B;**ツールバー**&#x200B;のカスタムレイアウトに変更します。
 
-   ノードの `guideComponentType` プロパティによりレイアウトタイプが決まります。この場合、レイアウトタイプはツールバーなので、ツールバーレイアウト選択ドロップダウンに表示されます。
+   ノードの `guideComponentType` プロパティによりレイアウトタイプが決まります。 この場合、レイアウトタイプはツールバーなので、ツールバーレイアウト選択ドロップダウンに表示されます。
 
    ![適切な説明を付けたノード](assets/toolbar3.png)
 
@@ -107,7 +123,7 @@ CustomToolbarLayoutDemo.zip
 
    >[!NOTE]
    >
-   >レイアウトの guidetoolbar クラスを追加します。ツールバーの標準提供のスタイル設定は、guidetoolbar クラスに基づいて定義されています。
+   >レイアウトの guidetoolbar クラスを追加します。 ツールバーの標準提供のスタイル設定は、guidetoolbar クラスに基づいて定義されています。
 
    サンプル `toolBarCommon.jsp`：
 

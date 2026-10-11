@@ -9,7 +9,23 @@ exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 0835dca60d8011ce8660f1e7fdefb2b14ccd6129
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 97%
@@ -71,7 +87,7 @@ ht-degree: 97%
 1. 管理コンソールで、設定／ユーザー管理／設定／システム属性の詳細設定をクリックしてください。
 1. 「同期完了の Cron 形式」に、失敗した同期をユーザー管理で再試行する間隔を表す Cron 形式を入力します。 Cron 式の使用方法は、Quartz オープンソースジョブスケジュールシステムのバージョン 1.4.0 に基づきます。
 
-   デフォルトは0 0/13 &ast; ? &ast; :13分ごとにチェックが行われます。
+   デフォルトは0 0/13 &amp;ast; ? &amp;ast; :13分ごとにチェックが行われます。
 
 ## 手動でディレクトリを同期する {#manually-synchronize-directories}
 

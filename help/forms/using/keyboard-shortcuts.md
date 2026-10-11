@@ -8,7 +8,25 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 01f4fdd3-fd2a-4e90-9c91-c1b05bbc2c6a
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1208'
 ht-degree: 94%
@@ -27,22 +45,22 @@ ht-degree: 94%
 | 選択したアダプティブフォームコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
 | 選択したアダプティブフォームコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Command + S |
 | 選択したアダプティブフォームコンポーネントのルールを編集する | Ctrl + Alt + Enter | Command + Alt + Return |
-| プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl+Shift+M&ast; |
-| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&ast; |
+| プレビューと現在選択されているモード（編集モードや基礎モードなど）を切り替える | Ctrl + Shift + M | Ctrl+Shift+M&amp;ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&amp;ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
 | 複数のコンポーネントを選択する | Shift キーを押しながらクリック | Shift キーを押しながらクリック |
-| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&ast; |
-| 選択したコンポーネントを切り取る （カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl-X&ast; |
+| 選択したコンポーネントをコピーする | Ctrl + C | Ctrl+C&amp;ast; |
+| 選択したコンポーネントを切り取る （カットしたコンポーネントは、新しい場所にペーストするまで非表示になりません）。 | Ctrl + X | Ctrl-X&amp;ast; |
 | コンポーネントをペーストする | Ctrl + V | Ctrl + V |
-| 選択したコンポーネントを削除する | Ctrl + Del | Ctrl+Del&ast; |
-| 選択したコンポーネントを削除する | Ctrl + Backspace キー | Ctrl+Backspace&ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B キー | Ctrl+B&ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを斜体にする | Ctrl + I | Ctrl+I&ast; |
-| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&ast; |
+| 選択したコンポーネントを削除する | Ctrl + Del | Ctrl+Del&amp;ast; |
+| 選択したコンポーネントを削除する | Ctrl + Backspace キー | Ctrl+Backspace&amp;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + B キー | Ctrl+B&amp;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを斜体にする | Ctrl + I | Ctrl+I&amp;ast; |
+| プレビューモードでリッチテキストエディターコンポーネントを使用している場合に、テキストを太字にする | Ctrl + U | Ctrl+U&amp;ast; |
 
 >[!NOTE]
 >
->「&ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
+>「&amp;ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 >[!NOTE]
 >
@@ -58,13 +76,13 @@ ht-degree: 94%
 |---|---|---|
 | テーマで選択したコンポーネントのプロパティブラウザーを開く | Alt + Enter | Alt + Return |
 | テーマで選択したコンポーネントのプロパティブラウザーを閉じる | Ctrl + Alt + W | Command + Alt + W |
-| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&ast; |
-| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&ast; |
-| テーマで選択したコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&ast; |
+| 最後におこなった変更操作を取り消す | Ctrl + Z | Ctrl+Z&amp;ast; |
+| 最後におこなった変更操作をやり直す | Ctrl + Y | Ctrl+Y&amp;ast; |
+| テーマで選択したコンポーネントの変更内容をプロパティブラウザーに保存する | Ctrl + S | Ctrl+S&amp;ast; |
 
 >[!NOTE]
 >
->「&ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
+>「&amp;ast;」でマークされたショートカットは、macOSのCtrl キーとCommand キーの両方で機能します。
 
 ## コンテンツブラウザー  {#contentbrowser}
 

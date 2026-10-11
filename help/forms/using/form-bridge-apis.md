@@ -1,6 +1,6 @@
 ---
 title: HTML5 フォームの Form Bridge API
-description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。API は親ウィンドウで FormBridgeInitialized イベントを送出します。
+description: 外部アプリケーションは FormBridge API を使用して XFA Mobile Form に接続します。 API は親ウィンドウで FormBridgeInitialized イベントを送出します。
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: developer-reference
@@ -8,18 +8,32 @@ exl-id: b598ef47-49ff-4806-8cc7-4394aa068eaa
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '938'
-ht-degree: 100%
-
+ht-degree: 99%
 ---
-
 # HTML5 フォームの Form Bridge API {#form-bridge-apis-for-html-forms}
 
-各種 Form Bridge API を使用すると、XFA ベースの HTML5 フォームとお使いのアプリケーション間の通信チャネルを開くことができます。これらの Form Bridge API では接続作成用の&#x200B;**接続** API を使用できます。
+各種 Form Bridge API を使用すると、XFA ベースの HTML5 フォームとお使いのアプリケーション間の通信チャネルを開くことができます。 これらの Form Bridge API では接続作成用の&#x200B;**接続** API を使用できます。
 
-**接続** API はハンドラーを引数として受け入れます。XFA ベースの HTML5 フォームと Form Bridge 間の接続が正常に作成されると、ハンドルが呼び出されます。
+**接続** API はハンドラーを引数として受け入れます。 XFA ベースの HTML5 フォームと Form Bridge 間の接続が正常に作成されると、ハンドルが呼び出されます。
 
 次のサンプルコードを使用して接続を作成できます。
 
@@ -59,8 +73,8 @@ window.addEventListener("FormBridgeInitialized",
 
 * **必要情報**:
 
-   * **handler**：Form Bridge が接続された後に実行する関数
-   * **context**：*handler* 関数のコンテキスト（this）の設定対象オブジェクト
+  * **handler**：Form Bridge が接続された後に実行する関数
+  * **context**：*handler* 関数のコンテキスト（this）の設定対象オブジェクト
 
 * **出力**：なし
 * **エラー**：なし
@@ -69,76 +83,76 @@ window.addEventListener("FormBridgeInitialized",
 
 * **必要情報:**
 
-   * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
+  * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
-      * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数。この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
-      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数検証関数にはエラー文字列の配列が渡されます。
-      * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
+    * **error**：エラーハンドラー関数
+    * **success**：サクセスハンドラー関数。 この関数には *data* プロパティに XML が含まれているオブジェクトが渡されます。
+    * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
+    * **validationChecker**：サーバーから受信した検証エラーを確認するために呼び出す関数 検証関数にはエラー文字列の配列が渡されます。
+    * **formState**：XML のデータを返す必要がある XFA フォームの JSON 状態 指定されていない場合、現在のレンダリングされているフォームの XML のデータ。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。サポートされる設定は config セクションで指定します。
+**registerConfig(configName, config)**： ユーザー / ポータル固有の設定を FormBridge に登録します。 これらの設定はデフォルト設定をオーバーライドします。 サポートされる設定は config セクションで指定します。
 
 * **必要情報:**
 
-   * **configName：**&#x200B;オーバーライドする設定の名前
+  * **configName：**&#x200B;オーバーライドする設定の名前
 
-      * **widgetConfig：**&#x200B;フォーム内のデフォルトウィジェットをカスタムウィジェットでオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
+    * **widgetConfig：**&#x200B;フォーム内のデフォルトウィジェットをカスタムウィジェットでオーバーライドするのをユーザーに許可します。 設定は次のようにオーバーライドされます。
 
-        *formBridge.registerConfig(&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/})*
+      *formBridge.registerConfig （&quot;widgetConfig&quot;:{/&amp;ast;configuration&amp;ast;/}）*
 
-      * **pagingConfig：**&#x200B;最初のページのみがレンダリングされるデフォルト動作をオーバーライドするのをユーザーに許可します。設定は次のようにオーバーライドされます。
+    * **pagingConfig：**&#x200B;最初のページのみがレンダリングされるデフォルト動作をオーバーライドするのをユーザーに許可します。 設定は次のようにオーバーライドされます。
 
-        *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).*
+      *window.formBridge.registerConfig(&quot;pagingConfig&quot;:{pagingDisabled: &lt;true | false>, shrinkPageDisabled: &lt;true | false> }).*
 
-      * **LoggingConfig：**&#x200B;ユーザーがログのレベル、あるカテゴリのログの無効化、またはログコンソールを表示するかサーバーに送信するかをオーバーライドすることを可能にします。設定は次のようにオーバーライドできます。
+    * **LoggingConfig：**&#x200B;ユーザーがログのレベル、あるカテゴリのログの無効化、またはログコンソールを表示するかサーバーに送信するかをオーバーライドすることを可能にします。 設定は次のようにオーバーライドできます。
 
-     ```javascript
-     formBridge.registerConfig{
-       "LoggerConfig" : {
-     {
-     "on":`<true *| *false>`,
-     "category":`<array of categories>`,
-     "level":`<level of categories>`, "
-     type":`<"console"/"server"/"both">`
-     }
-       }
-     ```
+    ```javascript
+    formBridge.registerConfig{
+      "LoggerConfig" : {
+    {
+    "on":`<true *| *false>`,
+    "category":`<array of categories>`,
+    "level":`<level of categories>`, "
+    type":`<"console"/"server"/"both">`
+    }
+      }
+    ```
 
-      * **SubmitServiceProxyConfig：**&#x200B;ユーザーが送信を登録し、プロキシサービスをロギングできるようにします。
+    * **SubmitServiceProxyConfig：**&#x200B;ユーザーが送信を登録し、プロキシサービスをロギングできるようにします。
 
-        ```javascript
-        window.formBridge.registerConfig("submitServiceProxyConfig",
-        {
-        "submitServiceProxy" : "`<submitServiceProxy>`",
-        "logServiceProxy": "`<logServiceProxy>`",
-        "submitUrl" : "`<submitUrl>`"
-        });
-        ```
+      ```javascript
+      window.formBridge.registerConfig("submitServiceProxyConfig",
+      {
+      "submitServiceProxy" : "`<submitServiceProxy>`",
+      "logServiceProxy": "`<logServiceProxy>`",
+      "submitUrl" : "`<submitUrl>`"
+      });
+      ```
 
-   * **config：**&#x200B;設定の値
+  * **config：**&#x200B;設定の値
 
 * **出力：***data* プロパティに設定の元の値が含まれているオブジェクト。
 
 * **エラー**：なし
 
-**hideFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを非表示にします。指定フィールドの presence プロパティを invisible に設定します
+**hideFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを非表示にします。 指定フィールドの presence プロパティを invisible に設定します
 
 * **必要情報:**
 
-   * **fieldArray：**&#x200B;非表示にするフィールドの SOM 式の配列
+  * **fieldArray：**&#x200B;非表示にするフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
 
-**showFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを表示します。提供されたフィールドの presence プロパティを visible に設定します
+**showFields(fieldArray)**：fieldArray で SOM 式が提供されるフィールドを表示します。 提供されたフィールドの presence プロパティを visible に設定します
 
 * **必要情報:**
 
-   * **fieldArray：**&#x200B;表示するフィールドの SOM 式の配列
+  * **fieldArray：**&#x200B;表示するフィールドの SOM 式の配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
@@ -156,16 +170,16 @@ window.addEventListener("FormBridgeInitialized",
 
 * **エラー**：なし
 
-**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
+**restoreFormState(options)**：options オブジェクトに提供された JSON ステートからフォームステートを復元します。 状態が適用され、操作の完了後にサクセスまたはエラーハンドラーが呼び出されます。
 
 * **必要情報:**
 
-   * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
+  * **options：**&#x200B;次のプロパティが含まれている JavaScript オブジェクト。
 
-      * **error**：エラーハンドラー関数
-      * **success**：サクセスハンドラー関数
-      * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
-      * **formState**: フォームの JSON ステート。フォームは JSON ステートに復元されます。
+    * **error**：エラーハンドラー関数
+    * **success**：サクセスハンドラー関数
+    * **context**：*success*&#x200B;関数のコンテキスト（this）の設定対象オブジェクト
+    * **formState**: フォームの JSON ステート。 フォームは JSON ステートに復元されます。
 
 * **出力：**&#x200B;なし
 * **エラー**：なし
@@ -180,8 +194,8 @@ window.addEventListener("FormBridgeInitialized",
 
 * **必要情報:**
 
-   * **som：**&#x200B;フィールドの SOM 式が含まれている配列。フィールドの値を設定するための SOM 式。
-   * **value：** **SOM** 配列で提供された SOM 式に対応する値が含まれている配列。値のデータタイプが fieldType と同じでない場合、値は変更されません。
+  * **som：**&#x200B;フィールドの SOM 式が含まれている配列。 フィールドの値を設定するための SOM 式。
+  * **value：** **SOM** 配列で提供された SOM 式に対応する値が含まれている配列。 値のデータタイプが fieldType と同じでない場合、値は変更されません。
 
 * **出力：**&#x200B;なし
 * **エラー：** SOM 式が間違っている場合、例外をスローします
@@ -210,8 +224,8 @@ if(a.errors) {
 
 * **必要情報:**
 
-   * **som：**&#x200B;フィールドの SOM 式が含まれている配列
-   * **property：**&#x200B;値が要求されるプロパティの名前
+  * **som：**&#x200B;フィールドの SOM 式が含まれている配列
+  * **property：**&#x200B;値が要求されるプロパティの名前
 
 * **出力：**&#x200B;結果が配列として *data* プロパティに含まれているオブジェクト
 
@@ -221,9 +235,9 @@ if(a.errors) {
 
 * **必要情報:**
 
-   * **som：**&#x200B;値の設定が要求されるフィールドの SOM 式が含まれている配列
-   * **property：**&#x200B;値の設定が要求されるプロパティ
-   * **value：** SOM 式で指定されたフィールドの提供されたプロパティの値が含まれている配列
+  * **som：**&#x200B;値の設定が要求されるフィールドの SOM 式が含まれている配列
+  * **property：**&#x200B;値の設定が要求されるプロパティ
+  * **value：** SOM 式で指定されたフィールドの提供されたプロパティの値が含まれている配列
 
 * **出力：**&#x200B;なし
 * **エラー**：なし

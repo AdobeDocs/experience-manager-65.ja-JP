@@ -9,13 +9,20 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 8%
-
 ---
-
 # コミュニティサイト {#communities-sites}
 
 このセクションは、AEM Communitiesを管理し、AEM Communitiesの機能に精通しているユーザーを対象としています。
@@ -31,31 +38,31 @@ ht-degree: 8%
 
 ### Communities サイトの作成と管理 {#communities-site-creation-and-management}
 
-* コミュニティ [&#x200B; コンソール &#x200B;](consoles.md)
+* コミュニティ [ コンソール ](consoles.md)
 
-   * [Sites](sites-console.md)
+  * [Sites](sites-console.md)
 
-      * [グループ（サブコミュニティ）](groups.md)
+    * [グループ（サブコミュニティ）](groups.md)
 
-   * [モデレート](moderation.md)
-   * [メンバーとグループの管理](members.md)
-   * [レポート](reports.md)
+  * [モデレート](moderation.md)
+  * [メンバーとグループの管理](members.md)
+  * [レポート](reports.md)
 
 * コミュニティ [*ツール*](tools.md):
 
-   * [サイトテンプレート](sites.md)
-   * [グループテンプレート](tools-groups.md)
-   * [コミュニティ機能](functions.md)
-   * [ストレージ設定](srp-config.md)
-   * [コンポーネントガイド](components-guide.md)
-   * [バッジ](badges.md)
+  * [サイトテンプレート](sites.md)
+  * [グループテンプレート](tools-groups.md)
+  * [コミュニティ機能](functions.md)
+  * [ストレージ設定](srp-config.md)
+  * [コンポーネントガイド](components-guide.md)
+  * [バッジ](badges.md)
 
 
 ### ユーザー生成コンテンツ {#user-generated-content}
 
 AEM Communitiesの主な機能は、サインインサイト訪問者（メンバー）がUGCを生成することです。 UGCの利用方法について詳しくは、次のサイトをご覧ください。
 
-* [共通UGC ストア &#x200B;](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
+* [共通UGC ストア ](working-with-srp.md):UGCの共有ストレージ用のSRPの選択
 * [UGCの管理](moderate-ugc.md)：信頼できるメンバーは、一括またはコンテキスト内でUGCを管理できます
 * [UGC](tag-ugc.md)のタグ付け：メンバーがコンテンツをタグ付けできるように機能を設定できます
 * [UGCの翻訳](translate-ugc.md)：すべてのUGCを翻訳するように機能を設定するか、メンバーが選択した投稿を翻訳できるように設定できます
@@ -63,16 +70,16 @@ AEM Communitiesの主な機能は、サインインサイト訪問者（メン�
 
 ### コミュニティメンバー {#community-members}
 
-* [&#x200B; ユーザーとユーザーグループの管理](users.md)：権限のあるメンバーを含む、コミュニティメンバーとメンバーグループの詳細。
+* [ ユーザーとユーザーグループの管理](users.md)：権限のあるメンバーを含む、コミュニティメンバーとメンバーグループの詳細。
 * [貢献度制限](limits.md)：新しいメンバーによる投稿を制限する機能。
-* [&#x200B; トンネルサービス &#x200B;](deploy-communities.md#tunnel-service-on-author)：パブリッシュサイドのメンバーとメンバーグループにオーサー環境からアクセスできるようにします。
-* [&#x200B; メンバーとグループ コンソール &#x200B;](members.md)：パブリッシュサイドのメンバーとメンバーグループを作成し、オーサー環境から管理できます。
-* [&#x200B; ユーザー同期](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期します。
-* [FacebookおよびTwitterでログイン &#x200B;](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティ メンバーになる機能。
-* [&#x200B; スコアリングとバッジ &#x200B;](implementing-scoring.md): バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得できるようにする機能。
+* [ トンネルサービス ](deploy-communities.md#tunnel-service-on-author)：パブリッシュサイドのメンバーとメンバーグループにオーサー環境からアクセスできるようにします。
+* [ メンバーとグループ コンソール ](members.md)：パブリッシュサイドのメンバーとメンバーグループを作成し、オーサー環境から管理できます。
+* [ ユーザー同期](sync.md)：複数のパブリッシュインスタンス間でメンバーとメンバーグループを同期します。
+* [FacebookおよびTwitterでログイン ](social-login.md)：サイト訪問者がFacebookまたはTwitterの資格情報を使用してコミュニティ メンバーになる機能。
+* [ スコアリングとバッジ ](implementing-scoring.md): バッジを割り当ててメンバーの役割を特定し、メンバーがコミュニティへの参加を通じてバッジを獲得できるようにする機能。
 * [通知](notifications.md)：メンバーがフォローしているアクティビティを通知する機能。
-* [&#x200B; サブスクリプション &#x200B;](subscriptions.md)：メンバーが外部メールを使用してコミュニティと対話する機能。
-* [&#x200B; メッセージ &#x200B;](messaging.md)：メンバーが内部メッセージを使用してコミュニティと対話する機能。
+* [ サブスクリプション ](subscriptions.md)：メンバーが外部メールを使用してコミュニティと対話する機能。
+* [ メッセージ ](messaging.md)：メンバーが内部メッセージを使用してコミュニティと対話する機能。
 
 ### デプロイメント {#deployment}
 
@@ -86,12 +93,12 @@ AEM プラットフォームに最新のCommunities リリースをインスト�
 
 * [最新のコミュニティ機能パック](deploy-communities.md#latestfeaturepack)
 
-[&#x200B; アップグレード &#x200B;](upgrade.md)、[Dispatcher](dispatcher.md)、[&#x200B; レプリケーション &#x200B;](deploy-communities.md#replication-agents-on-author)など、その他のコミュニティ固有の情報については、デプロイメントページを参照してください。
+[ アップグレード ](upgrade.md)、[Dispatcher](dispatcher.md)、[ レプリケーション ](deploy-communities.md#replication-agents-on-author)など、その他のコミュニティ固有の情報については、デプロイメントページを参照してください。
 
 ## 関連するCommunities ドキュメント {#related-communities-documentation}
 
-* [&#x200B; コミュニティのデプロイ &#x200B;](deploy-communities.md)にアクセスすると、推奨されるデプロイメントについて確認できます。
+* [ コミュニティのデプロイ ](deploy-communities.md)にアクセスすると、推奨されるデプロイメントについて確認できます。
 
-* [&#x200B; コミュニティの開発](communities.md)にアクセスして、ソーシャルコンポーネントフレームワーク（SCF）とコミュニティのコンポーネントと機能のカスタマイズについて学ぶことができます。
+* [ コミュニティの開発](communities.md)にアクセスして、ソーシャルコンポーネントフレームワーク（SCF）とコミュニティのコンポーネントと機能のカスタマイズについて学ぶことができます。
 
-* [Communities コンポーネントのオーサリング &#x200B;](author-communities.md)にアクセスして、Communities コンポーネントのオーサリングと設定方法を学ぶことができます。
+* [Communities コンポーネントのオーサリング ](author-communities.md)にアクセスして、Communities コンポーネントのオーサリングと設定方法を学ぶことができます。

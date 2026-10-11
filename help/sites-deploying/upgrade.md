@@ -10,20 +10,29 @@ feature: Upgrading
 exl-id: 722d544c-c342-4c1c-80e5-d0a1244f4d36
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '703'
-ht-degree: 91%
-
+ht-degree: 90%
 ---
-
 # Adobe Experience Manager（AEM）6.5 へのアップグレード {#upgrading-to-aem}
 
 この節では、AEM 6.5 への AEM インストール環境のアップグレードについて説明します。
 
 * [アップグレードの計画](/help/sites-deploying/upgrade-planning.md)
 * [パターン検出を使用したアップグレードの複雑性の評価](/help/sites-deploying/pattern-detector.md)
-* [AEM 6.5 における後方互換性](/help/sites-deploying/backward-compatibility.md)
+* [AEM 6.5の下位互換性](/help/sites-deploying/backward-compatibility.md)
   <!--* [Using Offline Reindexing To Reduce Downtime During an Upgrade](/help/sites-deploying/upgrade-offline-reindexing.md)-->
 * [アップグレード手順](/help/sites-deploying/upgrade-procedure.md)
 * [コードのアップグレードとカスタマイズ](/help/sites-deploying/upgrading-code-and-customizations.md)

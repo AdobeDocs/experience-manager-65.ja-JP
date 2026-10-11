@@ -6,7 +6,20 @@ role: User, Admin
 feature: Asset Management
 exl-id: 1ea9d8fe-602c-452b-9a24-4125b705aedf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1473'
 ht-degree: 99%
@@ -63,7 +76,7 @@ INDD ファイルがアップロードされると、`xmpMM:InstanceID` およ�
 ### ZIP ファイルに書き出してアセットの参照を作成 {#create-references-to-aem-assets-by-exporting-a-zip-file}
 
 1. [ワークフローモデルの作成](/help/sites-developing/workflows-models.md)の手順を実行し、ワークフローを作成します。
-1. [!DNL Adobe InDesign] の[パッケージ機能](https://helpx.adobe.com/jp/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントをエクスポートします。 [!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。 この場合、エクスポートされたフォルダーには、[!DNL InDesign] ファイル内のサブアセットを格納するための `Links` フォルダーが含まれます。 この `Links` フォルダーが INDD ファイルと同じフォルダーに存在する。
+1. [!DNL Adobe InDesign] の[パッケージ機能](https://helpx.adobe.com/indesign/how-to/indesign-package-files-for-handoff.html)を使用して、ドキュメントをエクスポートします。 [!DNL Adobe InDesign] ではドキュメントおよびリンクされたアセットを 1 つのパッケージとして書き出すことができます。 この場合、エクスポートされたフォルダーには、[!DNL InDesign] ファイル内のサブアセットを格納するための `Links` フォルダーが含まれます。 この `Links` フォルダーが INDD ファイルと同じフォルダーに存在する。
 1. ZIP ファイルを作成し、このファイルを [!DNL Experience Manager] リポジトリにアップロードします。
 1. `Unarchiver` ワークフローを開始します。
 1. ワークフローが完了すると、Links フォルダー内の参照がサブアセットとして自動的に参照されます。 参照されているアセットのリストを表示するには、[!DNL InDesign] アセットのアセットの詳細ページに移動して、[パネル](/help/sites-authoring/basic-handling.md#rail-selector)を閉じます。

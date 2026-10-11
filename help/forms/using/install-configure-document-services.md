@@ -6,7 +6,23 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: b860fd19c0aeaa94fb0e04052dac70b0bc58b11b
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '10825'
 ht-degree: 95%
@@ -25,7 +41,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。 ドキュメントを暗号化すると、その内容は判読できなくなります。 許可されたユーザーはドキュメントを復号化して、内容にアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
 
-* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとして処理します。 詳しくは、[&#x200B; Forms サービス](/help/forms/using/forms-service.md)を参照してください。
+* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとして処理します。 詳しくは、[ Forms サービス](/help/forms/using/forms-service.md)を参照してください。
 
 * **Output サービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成します。 レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。 詳しくは、[Output サービス](/help/forms/using/output-service.md)を参照してください。
 
@@ -911,7 +927,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 >
 >AEM Forms PDF Generator などのサーバーサイドの自動処理シナリオでは、保護モードを無効にする必要があります。 この設定は、エンドユーザーのデスクトップではなく、専用サーバー環境でのみ変更する必要があります。
 
-詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/jp/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
+詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
 
 
 
@@ -1152,7 +1168,7 @@ AEM FormsがWindows サービスとして実行されている間に、マルチ
 
 WordとExcelのマルチスレッド変換を有効にするには：
 
-1. PDF Generatorの[&#x200B; ローカルユーザーアカウント &#x200B;](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
+1. PDF Generatorの[ ローカルユーザーアカウント ](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL PDF Generator を設定]**&#x200B;に移動します。 デフォルトの URL は <http://localhost:4502/libs/fd/pdfg/config/ui.html> です。
 1. 「**[!UICONTROL 一般設定]**」タブで、次のオプションを設定します（WordではPDFMaker、ExcelではNative2PDFを設定）。
 

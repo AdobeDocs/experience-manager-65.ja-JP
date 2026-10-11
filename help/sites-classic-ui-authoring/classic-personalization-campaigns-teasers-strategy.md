@@ -10,7 +10,20 @@ exl-id: 27b8302c-250b-4ce6-b3cf-c938738f2d92
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 93%
@@ -21,7 +34,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント &#x200B;](/help/sites-authoring/content-targeting-touch.md)を使用してください。
+>ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント ](/help/sites-authoring/content-targeting-touch.md)を使用してください。
 
 * **ブランドページ**&#x200B;は、web サイトの「キャンペーン」セクションに格納されます。 各ブランドには個々のキャンペーンが含まれます。
 * **キャンペーンページ**&#x200B;は、web サイトの「キャンペーン」セクションに格納されます。 各キャンペーンには個々のページがあり、ページの下にティーザー定義が保持されます。 コンテナページまたは概要ページにも、個々のティーザーページに関する特定の情報と統計情報が保持されます。
@@ -29,7 +42,7 @@ ht-degree: 93%
 AEM 内のティーザーは、次の複数の部分で構成されています。
 
 * **ティーザーページ**&#x200B;は各キャンペーンページに格納され、各キャンペーンにのみ使用できるティーザー段落の定義を保持します。 これらの定義は、ティーザー段落を表示する際に使用されます。コンテンツのバリエーション、バリエーションとブースト係数の選択に使用されるセグメントなどがあります。
-* **ティーザーコンポーネント**&#x200B;は標準提供ですぐに使用でき、コンテンツページに特定のティーザー段落のインスタンスを作成できます。 サイドキックからティーザーコンポーネントをドラッグし、ティーザー定義を指定して独自のティーザー段落を作成できます。 **注：** ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント &#x200B;](/help/sites-authoring/content-targeting-touch.md)を使用してください。
+* **ティーザーコンポーネント**&#x200B;は標準提供ですぐに使用でき、コンテンツページに特定のティーザー段落のインスタンスを作成できます。 サイドキックからティーザーコンポーネントをドラッグし、ティーザー定義を指定して独自のティーザー段落を作成できます。 **注：** ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント ](/help/sites-authoring/content-targeting-touch.md)を使用してください。
 * **ティーザー段落**&#x200B;は、コンテンツページ内のティーザーの実際のインスタンスです。 訪問者セグメントの一部を引き付けて、関心を持ったコンテンツに誘導します。
 * 特定の訪問者セグメントに焦点を当てたキャンペーンコンテンツを保持するページ。 通常、ティーザー段落は、訪問者をそのようなページに誘導します。
 
@@ -233,7 +246,7 @@ AEM 内のティーザーは、次の複数の部分で構成されています�
 
 >[!NOTE]
 >
->ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント &#x200B;](/help/sites-authoring/content-targeting-touch.md)を使用してください。
+>ティーザーコンポーネントは、AEM 6.2で非推奨（廃止予定）になりました。 代わりに、[Target コンポーネント ](/help/sites-authoring/content-targeting-touch.md)を使用してください。
 
 1. キャンペーンページに誘導するティーザー段落を配置するコンテンツページに移動します。
 1. 必要な位置に&#x200B;**ティーザー**&#x200B;コンポーネント（サイドキックの「**パーソナライズ機能**」セクションで使用可能）を追加します。 最初に作成したときには、キャンペーンパスがまだ設定されていないと表示されます。

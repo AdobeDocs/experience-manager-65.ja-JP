@@ -9,14 +9,25 @@ exl-id: 46c2fbd0-7eff-4a6c-a088-57560ad2c5e4
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '104'
 ht-degree: 100%
-
 ---
-
-# Target オファー {#target-offers}
+# Target オファー{#target-offers}
 
 ## Test&amp;Target オファーエクスペリエンスの作成 {#creating-a-test-target-offer-experience}
 
@@ -34,7 +45,7 @@ ht-degree: 100%
 
    >[!NOTE]
    >
-   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。「キャンペーン」の下の **web サイト**&#x200B;コンソールからアクセスできます。
+   >Test&amp;Target のエクスペリエンスは、この時点で MCM のリストに表示されていません。 「キャンペーン」の下の **web サイト**&#x200B;コンソールからアクセスできます。
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 

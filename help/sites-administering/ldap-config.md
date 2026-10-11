@@ -1,17 +1,29 @@
 ---
 title: AEM 6 での LDAP の設定
 description: AEM で LDAP サービスを使用および設定する方法について説明します。
-
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: Security
 content-type: reference
-
 exl-id: 2ebca4fb-20f7-499c-96a0-4018eaeddc1a
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1657'
 ht-degree: 98%
@@ -244,7 +256,7 @@ SSL 経由で LDAP を使用して認証を行うように AEM を設定する�
 
 1. SSL ライブラリがインストールされ、機能していることを確認します。 この手順では、例として OpenSSL を使用します。
 
-1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。 この設定は、デフォルトの **openssl.cnf &#x200B;** 設定ファイルをコピーし、カスタマイズすることで実行できます。 UNIX® システムでは、このファイルは `/usr/lib/ssl/openssl.cnf` にあります。
+1. カスタマイズした OpenSSL 設定（cnf）ファイルを作成します。 この設定は、デフォルトの **openssl.cnf ** 設定ファイルをコピーし、カスタマイズすることで実行できます。 UNIX® システムでは、このファイルは `/usr/lib/ssl/openssl.cnf` にあります。
 
 1. ターミナルで以下のコマンドを実行して CA ルートキーを作成します。
 
@@ -280,12 +292,12 @@ LDAP ID プロバイダーと外部ログインモジュールの両方に対し
 
 * ログレベル：デバッグ
 * ログファイル：logs/ldap.log
-* メッセージパターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &ast;{4}&ast; {2} {3} {5}
+* メッセージパターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * ロガー：org.apache.jackrabbit.oak.security.authentication.ldap
 
 * ログレベル：デバッグ
 * ログファイル：logs/external.log
-* メッセージパターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &ast;{4}&ast; {2} {3} {5}
+* メッセージパターン：{0,date,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger：org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## グループへの関連付けに関する注意事項 {#a-word-on-group-affiliation}

@@ -9,13 +9,29 @@ role: Admin,User
 exl-id: 153986f0-b6ff-4278-8bb6-70c320a4e539
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '928'
 ht-degree: 100%
-
 ---
-
 # アダプティブフォームのキャッシュの設定 {#configure-adaptive-forms-cache}
 
 キャッシュは、データへのアクセスにかかる時間を短縮し、遅延を削減して I／O 速度を改善するメカニズムです。 アダプティブフォームのキャッシュは、アダプティブフォームの HTML コンテンツと JSON の構造のみを保存し、事前入力されたデータは保存しません。 これにより、クライアントサイドのアダプティブフォームのレンダリングの時間を短縮します。 特にアダプティブフォーム向けに設計されています。
@@ -51,10 +67,10 @@ ht-degree: 100%
 * カスタムコンポーネントの開発時には、開発に使用されるサーバー上でアダプティブフォームのキャッシュを無効にしておく必要があります。
 * 拡張子のない URL はキャッシュされません。 例えば、パターン `/content/forms/[folder-structure]/[form-name].html` の URL はキャッシュされ、パターン `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content` の URL は無視されます。 このように、キャッシュのメリットを活用するには、拡張子が付いた URL を使用します。
 * ローカライズされたアダプティブフォームの考慮事項：
-   * `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>` の代わりに `http://host:port/content/forms/af/<afName>.<locale>.html` の URL 形式を使用して、アダプティブフォームのローカライズ版をリクエストします。
-   * [ 形式の URL に対するブラウザーロケール](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) `http://host:port/content/forms/af/<adaptivefName>.html` の使用を無効にします。
-   * URL 形式 `http://host:port/content/forms/af/<adaptivefName>.html` を使用し、設定マネージャーで&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が無効になっている場合、アダプティブフォームの非ローカライズ版が提供されます。 非ローカライズ言語とは、アダプティブフォームの開発時に使用される言語です。 ブラウザーに設定されているロケール（ブラウザーロケール）は考慮されず、アダプティブフォームの非ローカライズ版が提供されます。
-   * URL 形式 `http://host:port/content/forms/af/<adaptivefName>.html` を使用し、設定マネージャーで&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が有効になっている場合、アダプティブフォームのローカライズ版が提供されます（利用可能な場合）。 ローカライズされたアダプティブフォームの言語は、ブラウザーに設定されたロケール（ブラウザーロケール）に基づきます。 これは、[アダプティブフォームの最初のインスタンスのみがキャッシュされる]原因になる可能性があります。 インスタンスで問題が発生しないようにするには、[トラブルシューティング](#only-first-insatnce-of-adptive-forms-is-cached)を参照してください。
+  * `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>` の代わりに `http://host:port/content/forms/af/<afName>.<locale>.html` の URL 形式を使用して、アダプティブフォームのローカライズ版をリクエストします。
+  * [ 形式の URL に対するブラウザーロケール](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) `http://host:port/content/forms/af/<adaptivefName>.html` の使用を無効にします。
+  * URL 形式 `http://host:port/content/forms/af/<adaptivefName>.html` を使用し、設定マネージャーで&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が無効になっている場合、アダプティブフォームの非ローカライズ版が提供されます。 非ローカライズ言語とは、アダプティブフォームの開発時に使用される言語です。 ブラウザーに設定されているロケール（ブラウザーロケール）は考慮されず、アダプティブフォームの非ローカライズ版が提供されます。
+  * URL 形式 `http://host:port/content/forms/af/<adaptivefName>.html` を使用し、設定マネージャーで&#x200B;**[!UICONTROL ブラウザーロケールを使用]**&#x200B;が有効になっている場合、アダプティブフォームのローカライズ版が提供されます（利用可能な場合）。 ローカライズされたアダプティブフォームの言語は、ブラウザーに設定されたロケール（ブラウザーロケール）に基づきます。 これは、[アダプティブフォームの最初のインスタンスのみがキャッシュされる]原因になる可能性があります。 インスタンスで問題が発生しないようにするには、[トラブルシューティング](#only-first-insatnce-of-adptive-forms-is-cached)を参照してください。
 
 ### Dispatcher でのキャッシュの有効化
 

@@ -10,13 +10,24 @@ feature: Interactive Videos
 role: User, Admin
 exl-id: d118879d-c17b-43f3-9cc8-0405531b4d9f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2287199-aefe-59f7-9b29-14176a1a51d4
+    internal-label: Interactive Videos
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6186'
+source-wordcount: '6208'
 ht-degree: 97%
-
 ---
-
 # インタラクティブビデオ{#interactive-videos}
 
 ビデオから直接コンバージョンを推進するインタラクティブビデオ（ショッパブルビデオとも呼ばれます）を簡単に作成できます。 ビデオに対する顧客エンゲージメントは、ビデオプレーヤーの隣のパネルで行われ、関連するサービス、情報または製品のサムネールが、ビデオの特集に基づいてスクロール表示されます。 顧客はサムネールを選択して、サービスを直接参照したり、買い物かごに商品を追加して即時に購入したり、Web ページを参照して詳細を確認したりできます。
@@ -33,7 +44,7 @@ ht-degree: 97%
 
 * ビデオを一時停止する場合は、サムネールを選択し、製品のクイックビューを開きます。 例えば、ビデオ内の KitchenAid のサムネール画像を選択すると、このミキサーの 360 度のスピンビューを見たり、細部を拡大表示したりすることができます。
 
-<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html?lang=ja. This now needs to call a new interactive video-->
+<!-- There was a link here that showed the video frame of an interactive video and when the reader selected the frame the video would play https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/AXIS/index.html. This now needs to call a new interactive video-->
 
 ![インタラクティブなショッパブルビデオのフレーム](assets/chlimage_1-126.png) *インタラクティブなショッパブルビデオからのビデオフレームキャプチャ。*
 
@@ -135,7 +146,7 @@ NOT FOUND; FIND REPLACEMENT
 
 * Internet Explorer では、**F12** キーを押してデバッガーツールを起動します。
 
-ブラウザーでネットワーク監視をオンにして、ページ上でクイックビューをトリガーします。
+ブラウザーでネットワークモニタリングをオンにして、ページ上でクイックビューをトリガーします。
 
 次に、ネットワークログ内でクイックビューの Ajax URL を見つけ、記録された URL を今後の分析のためにコピーします。 通常、クイックビューをトリガーすると、多数のリクエストがサーバーに送信されます。 クイックビューの Ajax URL は通常、そのリスト内の最初のほうにあります。 この URL には複雑なクエリ文字列部分またはパスが含まれ、その応答の MIME タイプは `text/html`、`text/xml`、`text/javascript` のいずれかになります。
 
@@ -153,10 +164,10 @@ NOT FOUND; FIND REPLACEMENT
     <td><p>単一の SKU（クエリ文字列内）</p> </td>
     <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-      <li><p><code>https://server/json?productId=866558&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1196184&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1081492&source=100</code></p> </li>
-      <li><p><code>https://server/json?productId=1898294&source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=866558&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
+      <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
     </ul> <p>この URL で変化する唯一の部分は <code>productId=</code> というクエリ文字列パラメーターの値であり、これが SKU 値であることは明白です。 そのため、サムネールでは、<strong><code>866558</code></strong>、<strong><code>1196184</code></strong>、<strong><code>1081492</code></strong>、<strong><code>1898294</code></strong> などの値が入力された SKU フィールドのみが必要になります。</p> </td>
   </tr>
   <tr>
@@ -172,9 +183,9 @@ NOT FOUND; FIND REPLACEMENT
     <td><p>SKU とカテゴリ ID（クエリ文字列内）</p> </td>
     <td><p>記録されたクイックビューの URLとしては以下が挙げられます。</p>
     <ul>
-      <li><p><code>https://server/quickView/product/?category=1100004&prodId=305466</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1100004&prodId=310181</code></p> </li>
-      <li><p><code>https://server/quickView/product/?category=1740148&prodId=308706</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
+      <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
     </ul> <p>この場合、URL には変化する部分が 2 つあります。 SKU が <code>prodId</code> パラメーターに、カテゴリ ID が <code>category=</code> パラメーターに格納されています。</p> <p>そのため、サムネール定義はペアになります。 つまり、SKU 値と、<code>categoryId</code> という追加の変数です。 結果のペアは次のようになります。</p>
     <ul>
       <li>SKU が <code>305466</code>、<code>categoryId</code> が <code>1100004</code></li>
@@ -258,7 +269,7 @@ NOT FOUND; FIND REPLACEMENT
 1. 目的のフォルダーに、ビデオおよび関連するサムネールアセットをアップロードします。
 
    [アセットのアップロード](/help/assets/manage-assets.md)を参照してください。
-[FTP ジョブスケジューリングを使用したアセットのアップロード](/help/assets/manage-assets.md)を参照してください。
+   [FTP ジョブスケジューリングを使用したアセットのアップロード](/help/assets/manage-assets.md)を参照してください。
 
    これで、ビデオにインタラクティブ機能を追加できます。
 
@@ -368,9 +379,9 @@ NOT FOUND; FIND REPLACEMENT
 
      次のナビゲーションショートカットを使用すると、ビデオのセグメントを簡単にチェックして微調整することができます。
 
-      * そのセグメントの先頭に直接移動するには、先頭の青い楕円を選択します。
-      * そのセグメントの末尾に直接移動するには、末尾の青い楕円を選択します。
-      * そのセグメントの先頭からビデオを再生するには、セグメント全体を選択します。
+     * そのセグメントの先頭に直接移動するには、先頭の青い楕円を選択します。
+     * そのセグメントの末尾に直接移動するには、末尾の青い楕円を選択します。
+     * そのセグメントの先頭からビデオを再生するには、セグメント全体を選択します。
 
    ![chlimage_1-26](assets/chlimage_1-132.png)
 
@@ -663,27 +674,27 @@ Adobe Experience Manager によって返される埋め込みコードには、�
   <tbody>
   <tr>
     <td><p>単一の SKU（クエリ文字列内）</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/json?productId=" + inData.sku + "&amp;source=100";
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   <tr>
     <td>単一の SKU（URL パス内）</td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/product/" + inData.sku;
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   <tr>
     <td><p>SKU とカテゴリ ID（クエリ文字列内）</p> </td>
-    <td><code class="code">s7interactivevideoviewer.setHandlers(&lbrace;
-      "quickViewActivate": function(inData) &lbrace;
+    <td><code class="code">s7interactivevideoviewer.setHandlers({
+      "quickViewActivate": function(inData) {
       var quickViewUrl = "https://server/quickView/product/?category=" + inData.categoryId + "&amp;prodId=" + inData.sku;
-      &rbrace;,
-      &rbrace;);</code></td>
+      },
+      });</code></td>
   </tr>
   </tbody>
 </table>

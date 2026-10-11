@@ -1,18 +1,27 @@
 ---
 title: ページの公開
 description: オーサー環境でコンテンツを作成およびレビューした後は、公開 web サイトでコンテンツを公開します。
-
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
 content-type: reference
-
 docset: aem65
 exl-id: 3f6aa06e-b5fd-4ab0-9ecc-14250cb3f55e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1032'
 ht-degree: 90%
@@ -168,6 +177,6 @@ Web サイトコンソールでページをアクティベートできます。 
 
 1. 次から実行するアクションを選択します。
 
-   1. アクティブ化するページ *を確認する場合は、**ドライラン**&#x200B;を選択します。*&#x200B;これはエミュレーションに過ぎず、ページはアクティベートされません。
+   1. アクティブ化するページ *を確認する場合は、**ドライラン**を選択します。*&#x200B;これはエミュレーションに過ぎず、ページはアクティベートされません。
 
    1. ページをアクティベートする場合は、「**アクティベート**」を選択します。

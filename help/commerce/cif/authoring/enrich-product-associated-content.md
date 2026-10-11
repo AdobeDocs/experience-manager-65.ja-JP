@@ -6,7 +6,17 @@ feature: Commerce Integration Framework
 exl-id: 1a069fbc-c036-419a-b585-6aa43e15de16
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 100%
@@ -17,19 +27,19 @@ ht-degree: 100%
 
 ## デジタルアセット
 
->[!VIDEO](https://video.tv.adobe.com/v/3447310/?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339121/?quality=12&learn=on)
 
 デジタルアセットは、1 つ以上の製品 SKU に関連付けることができます。 関連付けると、SKU にもとづくキーワード検索でデジタルアセットを検出できます。 また、関連製品を含むページを編集する際に、アセットが関連コンテンツとして自動的に表示されるので、次のデジタルエクスペリエンスをより簡単に作成できます。
 
 ## エクスペリエンスフラグメント
 
->[!VIDEO](https://video.tv.adobe.com/v/343339/?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333205/?quality=12&learn=on)
 
 エクスペリエンスフラグメントは、マーケターが **非構造化** された再利用可能なコンテンツを作成できるようにする Adobe Experience Manager の機能です。 エクスペリエンスフラグメントは、製品 SKU またはカタログ ID に関連付けることができます。 関連付けると、マーケターはページに表示される製品に基づいて、関連するフラグメントを簡単に検出できます。 エクスペリエンスフラグメントは、プレースホルダーと関連付けを使用して、製品カタログページに動的に含めることもできます。
 
 ## コンテンツフラグメント
 
->[!VIDEO](https://video.tv.adobe.com/v/3452158/?captions=jpn&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/339182/?quality=12&learn=on)
 
 コンテンツフラグメントは、マーケターが **構造化** された再利用可能なコンテンツを作成できるようにする Adobe Experience Manager の機能です。 コンテンツフラグメントは、製品 SKU またはカタログ ID に関連付けることができます。 関連付けると、マーケターはページに表示される製品に基づいて、関連するフラグメントを簡単に検出できます。 コンテンツフラグメントは、プレースホルダーと関連付けを使用して、製品カタログページに動的に含めることもできます。
 

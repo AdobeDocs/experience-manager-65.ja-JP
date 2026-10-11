@@ -9,7 +9,16 @@ exl-id: 91e0e245-a2f1-4bd7-b38f-7641fd94a547
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 9f5812d7b252bcf39896b4fbf2e3ac5c24bdb808
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 3%
@@ -18,7 +27,7 @@ ht-degree: 3%
 
 この機能は、レビューとレビューの概要という2つのコンポーネントで構成されています。
 
-レビューは、[&#x200B; コメントシステム &#x200B;](essentials-comments.md)に基づく複合コンポーネントで、1つ以上の[評価](rating-basics.md) （集計）コンポーネントを含みます。
+レビューは、[ コメントシステム ](essentials-comments.md)に基づく複合コンポーネントで、1つ以上の[評価](rating-basics.md) （集計）コンポーネントを含みます。
 
 レビューの匿名への投稿はサポートされていません。 レビューを追加するには、サイト訪問者が登録してログインする必要があります。 ログインした訪問者（メンバー）は、いつでもレビューを更新できます。
 
@@ -63,7 +72,7 @@ ht-degree: 3%
 | [**clientllibs**](client-customize.md#clientlibs-for-scf) | cq.social.hbs.reviews |
 | **テンプレート** | /libs/social/reviews/components/hbs/summary/summary.hbs |
 | **css** | /libs/social/reviews/components/hbs/reviews/clientlibs/review.css |
-| **プロパティ** | [&#x200B; レビューの使用](reviews.md)を参照してください |
+| **プロパティ** | [ レビューの使用](reviews.md)を参照してください |
 
 * [クライアントサイドのカスタマイズ](client-customize.md)
 
@@ -78,7 +87,7 @@ ht-degree: 3%
 ### 投稿されたレビューへのアクセス（UGC） {#accessing-posted-reviews-ugc}
 
 UGCは、モデレーションの標準的な方法のひとつを使用してモデレーションする必要があります。
-[&#x200B; ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
+[ ユーザー生成コンテンツの管理](moderate-ugc.md)を参照してください。
 
 AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使用すると、選択したストレージオプション（ASRP、MSRP、JSRPなど）に関係なく、UGCにプログラムでアクセスできます。
 
@@ -86,7 +95,7 @@ AEM 6.1 Communitiesでは、UGC用の[common store](working-with-srp.md)を使�
 
 以下を参照してください。
 
-* [&#x200B; ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
+* [ ストレージリソースプロバイダーの概要](srp.md) – 概要とリポジトリの使用状況の概要。
 * [SRPおよびUGC Essentials](srp-and-ugc.md) - SRP ユーティリティのメソッドと例。
-* [SRPを使用したUGCへのアクセス &#x200B;](accessing-ugc-with-srp.md) - コーディング ガイドライン。
-* [SocialUtils リファクタリング &#x200B;](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
+* [SRPを使用したUGCへのアクセス ](accessing-ugc-with-srp.md) - コーディング ガイドライン。
+* [SocialUtils リファクタリング ](socialutils.md) – 非推奨のユーティリティメソッドを現在のSRP ユーティリティメソッドにマッピングします。
