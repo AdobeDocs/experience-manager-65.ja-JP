@@ -9,16 +9,32 @@ exl-id: b8cb7233-3d9e-41d4-85c5-8e8c2481f89c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1217'
 ht-degree: 100%
-
 ---
-
 # 再利用可能なコンポーネントの説明 {#description-of-reusable-components}
 
-AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されており、これらのコンポーネントは CRX™ 内の固有の[フォルダー構造](/help/forms/using/folder-structure.md)内に整理されています。各コンポーネントには、フォルダー構造内の指定場所にあるモデル、表示、テンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JavaScript オブジェクトがあります。再利用可能なコンポーネントの完全なリストを、それらの構成ファイル名と依存関係と共に、以下に示します。
+AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-html-ws-components-web.md)コンポーネントで構成されており、これらのコンポーネントは CRX™ 内の固有の[フォルダー構造](/help/forms/using/folder-structure.md)内に整理されています。 各コンポーネントには、フォルダー構造内の指定場所にあるモデル、表示、テンプレートファイル、他のコンポーネントファイルの JavaScript™ 依存関係、コンポーネントがリッスンするイベント、および AEM Forms Workspace 内でこれらのイベントをトリガーする JavaScript オブジェクトがあります。 再利用可能なコンポーネントの完全なリストを、それらの構成ファイル名と依存関係と共に、以下に示します。
 
 ## TaskList {#tasklist}
 
@@ -262,7 +278,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->TeamFilter は、TaskList コンポーネントから選択されているタスクを示すイベントを取得します。これらのコンポーネントはモデルクラスを共有しますが、依存関係はありません。
+>TeamFilter は、TaskList コンポーネントから選択されているタスクを示すイベントを取得します。 これらのコンポーネントはモデルクラスを共有しますが、依存関係はありません。
 
 ## TaskDetails {#taskdetails}
 
@@ -363,7 +379,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->このコンポーネントは、StartPointList、StartPoint、Task など、他の一部のコンポーネントのモデルクラスを使用します。この依存関係以外に、CategoryList を独立して使用することもできます。
+>このコンポーネントは、StartPointList、StartPoint、Task など、他の一部のコンポーネントのモデルクラスを使用します。 この依存関係以外に、CategoryList を独立して使用することもできます。
 
 ## カテゴリ {#category}
 
@@ -454,7 +470,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。CategoryList は、どのカテゴリの開始ポイントが表示されるかについての情報にアクセスします。StartPointList を独立して使用するには、CategoryList からイベントトリガーをシミュレートします。
+>StartPointList と CategoryList コンポーネントはモデルクラスを共有するため、前者は後者に依存します。 CategoryList は、どのカテゴリの開始ポイントが表示されるかについての情報にアクセスします。 StartPointList を独立して使用するには、CategoryList からイベントトリガーをシミュレートします。
 
 ## StartPoint {#startpoint}
 
@@ -548,7 +564,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->StartProcess コンポーネントと StartPointList コンポーネントは、モデルクラスを共有します。このコンポーネントは、StartPointList から startpoint を選択すると関連が生じます。
+>StartProcess コンポーネントと StartPointList コンポーネントは、モデルクラスを共有します。 このコンポーネントは、StartPointList から startpoint を選択すると関連が生じます。
 
 ## ProcessNameList {#processnamelist}
 
@@ -588,7 +604,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessNameList は、他のコンポーネントに依存しません。ただし、他のコンポーネントに依存する ProcessInstanceList モデルクラスに内部的に依存します。したがって、ProcessNameList は、ProcessInstanceList、ProcessInstance、TaskList、Teamtask、Task など、多くのモデルクラスを使用します。これらの依存関係に加えて、ProcessNameList を独立して使用することもできます。
+>ProcessNameList は、他のコンポーネントに依存しません。 ただし、他のコンポーネントに依存する ProcessInstanceList モデルクラスに内部的に依存します。 したがって、ProcessNameList は、ProcessInstanceList、ProcessInstance、TaskList、Teamtask、Task など、多くのモデルクラスを使用します。 これらの依存関係に加えて、ProcessNameList を独立して使用することもできます。
 
 ## ProcessName {#processname}
 
@@ -658,7 +674,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessInstanceList は、インスタンスを取得し表示するために、プロセス名を示す ProcessNameList からのイベントを期待します。ProcessInstanceList を独立して使用するには、イベントトリガーを個別にシミュレートします。
+>ProcessInstanceList は、インスタンスを取得し表示するために、プロセス名を示す ProcessNameList からのイベントを期待します。 ProcessInstanceList を独立して使用するには、イベントトリガーを個別にシミュレートします。
 
 ## ProcessInstance {#processinstance}
 
@@ -733,7 +749,7 @@ AEM Forms Workspace は、[再利用可能な](/help/forms/using/integrating-htm
 
 >[!NOTE]
 >
->ProcessInstanceHistory は、どのプロセスインスタンスの履歴を表示するかどうかを示す ProcessInstanceList からのイベントを期待します。この依存関係に加えて、コンポーネントを独立して使用することもできます。
+>ProcessInstanceHistory は、どのプロセスインスタンスの履歴を表示するかどうかを示す ProcessInstanceList からのイベントを期待します。 この依存関係に加えて、コンポーネントを独立して使用することもできます。
 
 ## OutofOffice {#outofoffice}
 
