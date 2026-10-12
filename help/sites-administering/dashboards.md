@@ -75,7 +75,7 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 
 ### 概要 {#overview}
 
-ダッシュボードコンポーネントは、通常の[AEM コンポーネント ](/help/sites-developing/developing-components-samples.md)に過ぎません。 この節では、AEMに付属のレポートコンポーネントについて説明します。
+ダッシュボードコンポーネントは、通常の[AEM コンポーネント &#x200B;](/help/sites-developing/developing-components-samples.md)に過ぎません。 この節では、AEMに付属のレポートコンポーネントについて説明します。
 
 ### Web 分析レポート用コンポーネント {#web-analytics-reporting-components}
 
