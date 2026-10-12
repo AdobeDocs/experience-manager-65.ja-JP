@@ -289,9 +289,9 @@ private void signRendition(Asset asset, Rendition rendition) {
 
 >[!MORELIKETHIS]
 >
->*  [!DNL Experience Manager as a Cloud Service]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/c2pa-metadata-assets-view)のAssets ビューのC2PA メタデータ
->*  [!DNL Experience Manager Assets Essentials]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/content-credentials)のC2PA メタデータ
->*  [!DNL Dynamic Media]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/c2pa-metadata)のC2PA メタデータ
+>*  [!DNL Experience Manager as a Cloud Service]&#x200B;[&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/assets-view/c2pa-metadata-assets-view)のAssets ビューのC2PA メタデータ
+>*  [!DNL Experience Manager Assets Essentials]&#x200B;[&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-assets-essentials/help/content-credentials)のC2PA メタデータ
+>*  [!DNL Dynamic Media]&#x200B;[&#128279;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/c2pa-metadata)のC2PA メタデータ
 >* [XMPがレンディションに書き戻されました](/help/assets/xmp-writeback.md)
 >* [&#x200B; アセットに透かし](/help/assets/watermarking.md)
 >* [Content Authenticity Initiative](https://contentauthenticity.org/)
