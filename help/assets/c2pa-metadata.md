@@ -29,7 +29,7 @@ ht-degree: 6%
 
 ## 前提条件 {#Prerequisites}
 
-C2PA メタデータのサポートには、[!DNL Adobe Experience Manager] 6.5 サービスパックが必要です。 サービスパック 6.5.25.0で、[AEM 6.5 SP25 - C2PA GenAI準拠ホットフィックス ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-ASSETS-75868-SP25-1.0.zip)をインストールします。
+C2PA メタデータのサポートには、[!DNL Adobe Experience Manager] 6.5 サービスパックが必要です。 サービスパック 6.5.25.0で、[AEM 6.5 SP25 - C2PA GenAI準拠ホットフィックス &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/cq-6.5.0-hotfix-ASSETS-75868-SP25-1.0.zip)をインストールします。
 
 ## サポートされている形式とプラットフォーム {#supported-formats}
 
@@ -65,7 +65,7 @@ C2PA メタデータのサポートには、2つの部分があります。ア�
 
 [C2PA メタデータの検出](#detect)に示す&#x200B;**[!UICONTROL C2PA資格情報の検出]** ステップは、デフォルトの&#x200B;**[!UICONTROL DAM アセットの更新]** ワークフローモデルの一部です。 そのモデルのカスタムコピーを使用する場合は、次の手順を自分で追加します。
 
-1. [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動し、![編集アイコン ](assets/edit.svg) **[!UICONTROL 編集]** モードでモデルを開きます。
+1. [!DNL Experience Manager] インターフェイスで、**[!UICONTROL ツール]** > **[!UICONTROL ワークフロー]** > **[!UICONTROL モデル]**&#x200B;に移動し、![編集アイコン &#x200B;](assets/edit.svg) **[!UICONTROL 編集]** モードでモデルを開きます。
 1. **[!UICONTROL メタデータプロセッサー]**&#x200B;の後に&#x200B;**[!UICONTROL C2PA資格情報の検出]** ステップを追加してから、任意のステップでレンディションが生成されます。
 1. **[!UICONTROL 同期]**&#x200B;を選択して、モデルを保存します。
 
@@ -103,7 +103,7 @@ C2PA メタデータを含むAssetsでは、[!DNL Assets] ユーザーインタ�
 
 次の図に示す&#x200B;**cr** バッジは、アセットにC2PA メタデータが含まれているかどうかを示します。 マニフェスト自体は表示されません。 完全なマニフェストを表示するには、アセットをダウンロードし、[Verify](https://contentcredentials.org/verify)で開きます。
 
-![cr バッジ ](assets/cr.png)
+![cr バッジ &#x200B;](assets/cr.png)
 
 [!DNL Experience Manager]は、検出されたマニフェストをアセットの`c2pa-manifest.json` レンディションとして保存します。 このレンディションは内部のものです。 アセットの詳細ページの&#x200B;**[!UICONTROL レンディション]** パネルやレンディションピッカーには表示されません。
 
@@ -119,7 +119,7 @@ C2PA メタデータを含むAssetsでは、[!DNL Assets] ユーザーインタ�
 
 * ソースアセットには`dam:isAiGenerated`が`true`に設定されています。 マニフェストを持っているがAIで生成されていないAssetsには、**cr** バッジが表示されますが、[!DNL Experience Manager]はレンディションの再署名を行いません。
 * ソースマニフェストは読み取り可能で、検証状態が`INVALID`ではありません。 [!DNL Experience Manager]は、アセットが改ざんされた後など、検証に失敗したマニフェストに新しい署名をチェーンしません。
-* レンディション形式は、埋め込みC2PA マニフェストをサポートしています。 詳しくは、[ サポートされている形式](#supported-formats)を参照してください。 [!DNL Experience Manager]は、サポートされていない形式をエラーなしでスキップします。
+* レンディション形式は、埋め込みC2PA マニフェストをサポートしています。 詳しくは、[&#x200B; サポートされている形式](#supported-formats)を参照してください。 [!DNL Experience Manager]は、サポートされていない形式をエラーなしでスキップします。
 
 [C2PA メタデータの検出](#detect)に示す&#x200B;**[!UICONTROL DAM アセットワークフローの更新ワークフローが完了しました]** ワークフローの次の手順は、出力に署名します。
 
@@ -138,7 +138,7 @@ C2PA メタデータを含むAssetsでは、[!DNL Assets] ユーザーインタ�
 | **[!UICONTROL サムネールを作成]** | サムネールのレンディション： | 形式が変更されると`c2pa.resized`と`c2pa.transcoded`が表示されます。 |
 | **[!UICONTROL Web対応イメージの作成]** | web レンディション： | 形式が変更されると`c2pa.resized`と`c2pa.transcoded`が表示されます。 |
 | **[!UICONTROL コマンドライン]**&#x200B;例：[!DNL ImageMagick] | プライマリ出力、派生サムネール、web レンディション。 | `c2pa.resized`、`c2pa.transcoded` または `c2pa.edited` |
-| **[!UICONTROL 画像の透かし処理]** | 透かし入りのレンディション、または透かし入りの元のレンディション。 詳しくは、[ アセットに透かしを設定](/help/assets/watermarking.md)を参照してください。 | `c2pa.edited` |
+| **[!UICONTROL 画像の透かし処理]** | 透かし入りのレンディション、または透かし入りの元のレンディション。 詳しくは、[&#x200B; アセットに透かしを設定](/help/assets/watermarking.md)を参照してください。 | `c2pa.edited` |
 | **[!UICONTROL ビデオストーリーボードを作成]** | ストーリーボードのキーフレーム： | `c2pa.transcoded` |
 | **[!UICONTROL XMPの書き戻し]** | メタデータが書き戻された後、元のレンディション。 詳しくは、[XMPのレンディションへの書き戻し](/help/assets/xmp-writeback.md)を参照してください。 | `c2pa.edited` |
 
@@ -199,8 +199,8 @@ timeoutMillis=L"60000"
 
 * **最初に検出を実行します。** レンディションを作成または変更するすべての手順の前に、**[!UICONTROL C2PA資格情報を検出]**&#x200B;してください。
 * **最後に署名** 署名後にバイナリに変更を加えると、署名は無効になります。 レンディションに署名したステップの後にレンディションを変更するステップを実行しないでください。
-* **署名する手順を使用します。** [Sign レンディション ](#sign-renditions)に記載されている組み込み手順は、出力に署名します。 **[!UICONTROL コマンドライン]** プロセス以外を実行するカスタムステップとサードパーティツールは、署名が明示的に追加されない限り、出力に署名しません。 詳しくは、[ メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)を参照してください。
-* **XMPの書き戻し]**&#x200B;および&#x200B;**[!UICONTROL 画像の透かし処理]**&#x200B;のように、手順が再署名しない限り、元の場所&#x200B;**を修正しないでください。**[!UICONTROL 
+* **署名する手順を使用します。** [Sign レンディション &#x200B;](#sign-renditions)に記載されている組み込み手順は、出力に署名します。 **[!UICONTROL コマンドライン]** プロセス以外を実行するカスタムステップとサードパーティツールは、署名が明示的に追加されない限り、出力に署名しません。 詳しくは、[&#x200B; メディアハンドラーとワークフローを使用したアセットの処理](/help/assets/media-handlers.md)を参照してください。
+* **XMPの書き戻し**&#x200B;および&#x200B;**[!UICONTROL 画像の透かし処理]**&#x200B;のように、手順が再署名しない限り、元の場所&#x200B;**を修正しないでください。**
 
 ### カスタムワークフローステップからのレンディションの署名 {#custom-step}
 
@@ -289,10 +289,10 @@ private void signRendition(Asset asset, Rendition rendition) {
 
 >[!MORELIKETHIS]
 >
->*  [!DNL Experience Manager as a Cloud Service]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/c2pa-metadata-assets-view)のAssets ビューの[C2PA メタデータ
->*  [!DNL Experience Manager Assets Essentials]](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/content-credentials)の[C2PA メタデータ
->*  [!DNL Dynamic Media]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/c2pa-metadata)の[C2PA メタデータ
+>*  [!DNL Experience Manager as a Cloud Service]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/c2pa-metadata-assets-view)のAssets ビューのC2PA メタデータ
+>*  [!DNL Experience Manager Assets Essentials]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/content-credentials)のC2PA メタデータ
+>*  [!DNL Dynamic Media]&#x200B;[&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/c2pa-metadata)のC2PA メタデータ
 >* [XMPがレンディションに書き戻されました](/help/assets/xmp-writeback.md)
->* [ アセットに透かし](/help/assets/watermarking.md)
+>* [&#x200B; アセットに透かし](/help/assets/watermarking.md)
 >* [Content Authenticity Initiative](https://contentauthenticity.org/)
 >* [検証](https://contentcredentials.org/verify)
