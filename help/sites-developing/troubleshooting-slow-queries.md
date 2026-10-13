@@ -57,7 +57,7 @@ AEM 6.3 では、デフォルトでトラバーサルが 100,000 回に達する
 
 #### 開発時 {#during-development}
 
-**すべての** クエリを説明し、クエリ プランに&#x200B;**/&amp;ast; トラバース**&#x200B;の説明が含まれていないことを確認します。 トラバースするクエリプランの例は次のとおりです。
+**すべての** クエリを説明し、クエリ プランに&#x200B;**/&ast; トラバース**&#x200B;の説明が含まれていないことを確認します。 トラバースするクエリプランの例は次のとおりです。
 
 * **プラン：** `[nt:unstructured] as [a] /* traverse "/content//*" where ([a].[unindexedProperty] = 'some value') and (isdescendantnode([a], [/content])) */`
 

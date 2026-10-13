@@ -35,4 +35,4 @@ ht-degree: 69%
 [Designer サンプル](https://www.adobe.com/go/learn_aemforms_designer_samples_65_jp)
 [Designer スクリプティングの基本](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65_jp)
 [Designer スクリプト参照](https://www.adobe.com/go/learn_aemforms_scriptingReference_65_jp)
-[Designer FormCalc リファレンス ](https://www.adobe.com/go/learn_aemforms_formCalc_65_jp)
+[Designer FormCalc リファレンス &#x200B;](https://www.adobe.com/go/learn_aemforms_formCalc_65_jp)
