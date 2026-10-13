@@ -65,7 +65,7 @@ Adobe Targetの下にある「**設定を表示**」をクリックします。
 >* 単一ページアプリケーション向けの実装オプションの改善
 >* target.js に含まれていたコンポーネントが AT.js にも含まれているので、ターゲットへの呼び出しがなくなりました。
 
-<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja -->
+<!-- OLD URL WHICH IS 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### プロビジョニングされた Target フレームワークのプロパティ {#provisioned-target-framework-properties}
 
@@ -128,7 +128,7 @@ Adobe Targetの下にある「**設定を表示**」をクリックします。
 >
 >**クライアントライブラリ**&#x200B;ドロップダウンメニューでは、AT.js または mbox.js を選択できます。
 
-<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html?lang=ja -->
+<!-- OLD URL from above was 404 https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/mbox-download.html -->
 
 ### Target クラウド設定の作成 {#creating-a-target-cloud-configuration}
 
@@ -244,7 +244,7 @@ Target クラウド設定を設定したら、Target フレームワークを追
 >
 >* Adobe Target テナント（clientcode）で **xt_only** オプションが&#x200B;**オフ**&#x200B;になっている場合は、XT アクティビティと A/B アクティビティの&#x200B;**両方**&#x200B;を AEM で作成できます。
 >
->**追加のメモ：**&#x200B;**xt_only** オプションは、特定の Target テナント（クライアントコード）に対して適用される設定であり、Adobe Target 内でのみ直接変更できます。 このオプションは AEM で有効および無効にすることはできません。
+>**追加のメモ：****xt_only** オプションは、特定の Target テナント（クライアントコード）に対して適用される設定であり、Adobe Target 内でのみ直接変更できます。 このオプションは AEM で有効および無効にすることはできません。
 
 ### Target フレームワークとサイトの関連付け {#associating-the-target-framework-with-your-site}
 
