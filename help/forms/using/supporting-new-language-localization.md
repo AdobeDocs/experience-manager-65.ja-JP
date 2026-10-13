@@ -9,13 +9,29 @@ feature: Adaptive Forms,Foundation Components
 role: Admin,User
 exl-id: 2ed4d99e-0e90-4b21-ac17-aa6707a3ba7d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 98%
-
+source-wordcount: '869'
+ht-degree: 96%
 ---
-
 # アダプティブフォームのローカリゼーション用に新しいロケールをサポート{#supporting-new-locales-for-adaptive-forms-localization}
 
 | バージョン | 記事リンク |
@@ -39,18 +55,18 @@ ht-degree: 98%
 
 * 指定した順序で次のパラメーターを確認します。
 
-   * 要求パラメーター`afAcceptLang`
-ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡してロケールを強制的に指定します。例えば、次のURLは、フォームを日本語ロケールでレンダリングすることを強制しました。
-     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
+  * リクエストパラメーター `afAcceptLang`
+ユーザーのブラウザーロケールを上書きするには、`afAcceptLang` リクエストパラメーターを渡してロケールを強制的に指定します。 例えば、次の URL はフォームを日本語ロケールで強制的にレンダリングします。
+    `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ja`
 
-   * ユーザー向けに設定されるブラウザーのロケールです。これは、`Accept-Language` ヘッダーを使用したリクエストで指定されます。
+  * ユーザー向けに設定されるブラウザーのロケールです。これは、`Accept-Language` ヘッダーを使用したリクエストで指定されます。
 
-   * AEM のユーザー指定の言語設定です。
+  * AEM のユーザー指定の言語設定です。
 
-   * ブラウザーのロケールはデフォルトで有効です。 ブラウザーロケール設定を変更するには
-      * 設定マネージャーを開きます。 URL は `http://[server]:[port]/system/console/configMgr` です
-      * 「**[!UICONTROL アダプティブフォームおよびインタラクティブなコミュニケーション Web チャネル]**」の設定を検索して開きます。
-      * 「**[!UICONTROL ブラウザーロケールを使用]**」オプションのステータスを変更して設定を「**[!UICONTROL 保存]**」します。
+  * ブラウザーのロケールはデフォルトで有効です。 ブラウザーロケール設定を変更するには
+    * 設定マネージャーを開きます。 URL は `http://[server]:[port]/system/console/configMgr` です
+    * 「**[!UICONTROL アダプティブフォームおよびインタラクティブなコミュニケーション Web チャネル]**」の設定を検索して開きます。
+    * 「**[!UICONTROL ブラウザーロケールを使用]**」オプションのステータスを変更して設定を「**[!UICONTROL 保存]**」します。
 
 ロケールが識別されると、アダプティブフォームはフォームに固有の辞書を参照します。 要求されたロケールに対応するフォーム固有の辞書が見つからない場合、アダプティブフォームが作成された言語の辞書が使用されます。
 

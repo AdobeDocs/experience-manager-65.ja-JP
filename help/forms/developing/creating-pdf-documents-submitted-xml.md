@@ -10,13 +10,29 @@ role: Developer
 exl-id: d9d5b94a-9d10-4d90-9e10-5142f30ba4a3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1334'
 ht-degree: 100%
-
 ---
-
 # 送信された XML データを使用した PDF ドキュメントの作成 {#creating-pdf-documents-with-submittedxml-data}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -27,32 +43,32 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このコンテンツを読む前に、送信されたフォームの処理について十分に理解しておくことをお勧めします。 フォームデザインと送信された XML データの関係などの概念については、「送信された Forms の処理」で説明しています。
+>このコンテンツを読む前に、送信されたフォームの処理について十分に理解しておくことをお勧めします。 フォームデザインと送信された XML データの関係などの概念については、「送信されたフォームの処理」で説明しています。
 
 3 つの AEM Forms サービスを含む次のワークフローについて考えてみます。
 
 * ユーザーが、web ベースのアプリケーションから Forms サービスに XML データを送信します。
-* Forms サービスは、送信されたフォームを処理し、フォームフィールドを抽出するために使用します。 フォームデータは処理できます。 たとえば、データをエンタープライズデータベースに送信できます。
+* Forms サービスは、送信されたフォームを処理し、フォームフィールドを抽出するために使用されます。 フォームデータは処理できます。 たとえば、データをエンタープライズデータベースに送信できます。
 * フォームデータは Output サービスに送信され、非インタラクティブ型の PDF ドキュメントが作成されます。
-* 非インタラクティブ型の PDF ドキュメントが Content サービス（非推奨） に保存されます。
+* 非インタラクティブ型の PDF ドキュメントが Content Services（非推奨）に保存されます。
 
 次の図は、このワークフローを視覚的に表したものです。
 
 ![cd_cd_finsrv_architecture_xml_pdf1](assets/cd_cd_finsrv_architecture_xml_pdf1.png)
 
-ユーザーがクライアントの web ブラウザーからフォームを送信すると、非インタラクティブ型の PDF ドキュメントが Content サービス（非推奨）に保存されます。 次の図は、Content サービス（非推奨）に保存されている PDF ドキュメントを示しています。
+ユーザーがクライアントの web ブラウザーからフォームを送信すると、非インタラクティブ型の PDF ドキュメントが Content Services（非推奨）に保存されます。 次の図は、Content Services（非推奨）に保存されている PDF ドキュメントを示しています。
 
 ![cd_cd_cs_gui](assets/cd_cd_cs_gui.png)
 
 ### 手順の概要 {#summary-of-steps}
 
-送信された XML データを使用して非インタラクティブ型の PDF ドキュメントを作成し、Content サービス（非推奨）で PDF ドキュメントに保存するには、次のタスクを実行します。
+送信された XML データを使用して非インタラクティブ型の PDF ドキュメントを作成し、その PDF ドキュメントを Content Services（非推奨）に保存するには、次のタスクを実行します。
 
 1. プロジェクトファイルを含めます。
 1. Forms、Output、Document Management のオブジェクトを作成します。
 1. Forms サービスを使用してフォームデータを取得します。
 1. Output サービスを使用して、非インタラクティブ型の PDF ドキュメントを作成します。
-1. ドキュメント管理サービスを使用して、PDF フォームを Content サービス（非推奨）に保存します。
+1. ドキュメント管理サービスを使用して、PDF フォームを Content Services（非推奨）に保存します。
 
 **プロジェクトファイルを含める**
 
@@ -72,7 +88,7 @@ Output サービスを使用して、フォームデザインと XML フォー�
 
 **Document Management サービスを使用して、PDF フォームを Content サービス（非推奨）に格納する**
 
-Document Management サービス API を使用して、PDF ドキュメントを Content サービス（非推奨）に格納します。
+Document Management サービス API を使用して、PDF ドキュメントを Content Services（非推奨）に格納します。
 
 **関連トピック**
 
@@ -101,10 +117,10 @@ Forms、Output、Document Management API（Java）を使用して、送信され
 
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
-      * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む、環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つ以上の値を指定して、処理するコンテンツタイプを指定します。 例えば、XML データを処理するには、このパラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。
-      * `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などの `HTTP_USER_AGENT` ヘッダー値を指定する文字列値。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
+     * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
+     * 関連するすべての HTTP ヘッダーを含む、環境変数を指定する文字列値。 `CONTENT_TYPE` 環境変数に 1 つ以上の値を指定して、処理するコンテンツタイプを指定します。 例えば、XML データを処理するには、このパラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。
+     * `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)` などの `HTTP_USER_AGENT` ヘッダー値を指定する文字列値。
+     * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 

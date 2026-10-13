@@ -12,13 +12,27 @@ feature: Image Presets
 role: User, Admin
 exl-id: 556b99fe-91c3-441f-ba81-22cb8c10ef7f
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: d4b6216b-4a89-4ff0-8ac0-5a699ba23100
+    internal-label: Images and videos
+subfeature_v2:
+  - id: a16e03b7-8456-4383-8860-31ab5ab00e9e
+    internal-label: Image presets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3900'
-ht-degree: 90%
-
+source-wordcount: '3995'
+ht-degree: 91%
 ---
-
 # Dynamic Media 画像プリセットの管理{#managing-image-presets}
 
 画像プリセットを使用すると、Adobe Experience Manager Assets は異なるサイズや異なる形式の画像、あるいは動的に生成された他の画像プロパティを設定した画像を動的に配信できます。 各画像プリセットは、画像表示用のサイズやフォーマットに関するコマンドの事前定義済みコレクションを表します。 画像プリセットの作成時には、画像配信用のサイズを選択します。 また、フォーマットコマンドも選択すると、表示する画像が配信される際に画像の外観が最適化されます。
@@ -247,11 +261,11 @@ Dynamic Media 画像プリセットの作成によって、プレビューや公
 >
 >Internet Explorer 9 を使用している場合、プリセットを作成しても、保存後すぐにプリセットのリストに表示されません。 この問題を回避するには、IE9 のキャッシュを無効にします。
 
-AI、PDF、EPS ファイルの取り込みをサポートして、これらのファイル形式の動的レンディションを生成できるようにする場合は、画像プリセットを作成する前に、次の情報を確認してください。
-[Adobe Illustrator （AI）、Postscript （EPS）、およびPDF ファイル形式](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
+AI ファイル、PDF ファイル、EPS ファイルの取り込みをサポートして、これらのファイル形式の動的レンディションを生成できるようにする場合は、画像プリセットを作成する前に次の情報を確認してください。
+[Adobe Illustrator（AI）、Postscript（EPS）および PDF ファイル形式](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats)を参照してください。
 
-INDD ファイルの取り込みをサポートして、このファイル形式の動的レンディションを生成できるようにする場合は、画像プリセットを作成する前に、次の情報を確認することをお勧めします。
-[InDesign （INDD） ファイル形式](#indesign-indd-file-format)を参照してください。
+INDD 形式の取り込みをサポートし、これらのファイル形式の動的レンディションを生成する場合、画像プリセットを作成する前に次の情報を確認することをお勧めします。
+[InDesign（INDD）ファイル形式](#indesign-indd-file-format)を参照してください。
 
 >[!NOTE]
 >
@@ -326,7 +340,10 @@ INDD ファイルの取り込みをサポートして、このファイル形式
      <li><strong>JPG Chrominance Downsamplingを有効にする</strong> – 目は高周波の輝度よりも高周波のカラー情報に影響されにくいため、JPEGの画像では画像の情報を輝度とカラーのコンポーネントに分割します。 JPEG画像が圧縮されると、輝度コンポーネントはフル解像度のままになり、カラーコンポーネントはピクセルのグループを平均化してダウンサンプルされます。 ダウンサンプリングは、知覚品質にほとんど影響を与えずに、データ量を半分または3分の1に減少させます。 ダウンサンプリングはグレースケール画像には適用できません。 この技術は高コントラストの画像（オーバーレイされたテキストを含む画像など）で役立つ圧縮量を削減します。</li>
     </ul>
     <div>
-      「<strong>GIF</strong>」または「<strong>アルファ付き GIF</strong>」を選択すると、以下の追加の「<strong>GIF カラー量子化</strong>」オプションを入力できます。
+      選択中
+     <strong>GIF</strong>または
+     <strong> アルファ </strong>を含むGIFには、以下の追加機能が用意されています
+     <strong>GIFのカラー量子化</strong> オプション：
     </div>
     <ul>
      <li><strong>タイプ</strong> - 「<strong>アダプティブ</strong>」（デフォルト）、「<strong>Web</strong>」または「<strong>Macintosh</strong>」を選択します。 「<strong>アルファ付き GIF</strong>」を選択した場合は、「Macintosh」オプションは使用できません。</li>
@@ -335,7 +352,10 @@ INDD ファイルの取り込みをサポートして、このファイル形式
      <li><strong>カラーリスト</strong> - コンマ区切りのリストを入力します。 例えば、白、グレー、黒の場合は、<code>000000,888888,ffffff</code> と入力します。</li>
     </ul>
     <div>
-      「<strong>PDF</strong>」、「<strong>TIFF</strong>」または「<strong>アルファ付き TIFF</strong>」を選択すると、以下の追加オプションを入力できます。
+      選択中
+     <strong>PDF</strong>,
+     <strong>TIFF</strong>、または
+     <strong> アルファ </strong>を含むTIFFには、次の追加機能があります。
     </div>
     <ul>
      <li><strong>圧縮</strong> - 圧縮アルゴリズムを選択します。 PDF 用のアルゴリズムオプションは、<strong>なし</strong>、<strong>ZIP</strong>、<strong>JPEG</strong> です。TIFF のオプションの場合は、<strong>なし</strong>、<strong>LZW</strong>、<strong>JPEG</strong>、<strong>Zip</strong> です。また、アルファ付き TIFF の場合は、<strong>なし</strong>、<strong>LZW</strong>、<strong>Zip</strong> です。</li>
@@ -366,7 +386,7 @@ INDD ファイルの取り込みをサポートして、このファイル形式
   </tr>
   <tr>
    <td><strong>レンダリングインテント</strong></td>
-   <td>デフォルトのレンダリングインテントを上書きできます。レンダリングインテントは、ターゲットカラープロファイルで再現できないカラー（色域外）の処理を決定します。 レンダーインテントは、ICC プロファイルと互換性がない場合は無視されます。
+   <td>デフォルトのレンダリングインテントを上書きできます。 レンダリングインテントは、対象のカラープロファイルでは再現できない（色域外の）色をどうするかを定義します。 レンダリングインテントは、ICC プロファイルと互換性がない場合は無視されます。
     <ul>
      <li>「<strong>知覚的</strong>」は、元の画像の 1 つ以上の色が対象のカラースペースの色域外であるときに、一方のカラースペースの全色域をもう一方のカラースペースの色域に圧縮する場合に選択します。</li>
      <li>「<strong>相対的な色域を維持</strong>」は、現在のカラースペースの 1 色が対象のカラースペースの色域外であるときに選択します。 そして、他のカラーに影響を与えることなく、ターゲットカラースペースの範囲内で可能な限り最も近いカラーにマッピングする必要があります。 </li>
@@ -397,12 +417,13 @@ INDD ファイルの取り込みをサポートして、このファイル形式
      <li><strong>適用先</strong> - アンシャープを各カラーまたは明るさに適用するかを指定します。</li>
     </ul>
     <div>
-      シャープニングについては、<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf?lang=ja">画像のシャープニング</a>を参照してください。
+      シャープ化については、で説明します
+     <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf">画像をシャープ化</a>。
     </div> </td>
   </tr>
   <tr>
    <td><strong>再サンプリングモード</strong></td>
-   <td>「<strong>再サンプリングモード </strong>」オプションを選択します。次のオプションを使用すると、画像をダウンサンプルするときにシャープになります。
+   <td>「<strong>再サンプリングモード</strong>」オプションを選択します。 画像がダウンサンプリングされる場合に、以下のオプションによって画像がシャープニングされます。
     <ul>
      <li><strong>双線形</strong> – 最速の再サンプリング方法。 一部のエイリアスアーティファクトは目立ちます。</li>
      <li><strong>バイキュービック法</strong> - CPU 使用率は上昇しますが、目に見えるエイリアスアーティファクトが減少した、よりシャープな画像が生成されます。</li>

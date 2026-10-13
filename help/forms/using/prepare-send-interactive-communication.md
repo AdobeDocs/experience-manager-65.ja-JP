@@ -7,13 +7,27 @@ feature: Interactive Communication
 exl-id: 4fb82e9b-f870-47db-ac92-2d7510acace8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2029'
 ht-degree: 99%
-
 ---
-
 # エージェント UI を使用してインタラクティブなコミュニケーションの準備と送信を行う {#prepare-and-send-interactive-communication-using-the-agent-ui}
 
 エージェント UI を使用してインタラクティブなコミュニケーションの準備を行い、後処理用として送信することができます。 エージェントは、許可設定に基づいて必要な変更を行い、メールの送信や印刷出力などの後処理用としてインタラクティブなコミュニケーションを送信します。
@@ -71,8 +85,8 @@ ht-degree: 99%
 
    * [書式設定オプション](#formattingtext)
 
-      * [書式設定されたテキストを他のアプリケーションからコピー＆ペースト](#pasteformattedtext)
-      * [テキストの一部をハイライト表示](#highlightemphasize)
+     * [書式設定されたテキストを他のアプリケーションからコピー＆ペースト](#pasteformattedtext)
+     * [テキストの一部をハイライト表示](#highlightemphasize)
 
    * [特殊文字](#specialcharacters)
    * [ショートカットキー](/help/forms/using/keyboard-shortcuts.md)

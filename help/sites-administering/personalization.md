@@ -9,13 +9,24 @@ exl-id: 3a550a33-b54b-4217-b9a6-b5a7971276ee
 solution: Experience Manager, Experience Manager Sites
 feature: Administering,Personalization
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 100%
-
 ---
-
 # パーソナライズ機能 {#personalization}
 
 ## パーソナライゼーションとは {#what-is-personalization}
@@ -53,7 +64,7 @@ ht-degree: 100%
 
 * ルールベース：ビジネスマネージャーが、特定のプロファイルや行動に基づいてアクションのルールを定義します。
 * 単純なフィルタリング：事前に定義された、ユーザーやグループのレベルでのプロファイルに基づいて選択が行われます。
-* 共用／レコメンデーションフィルタリング：事前定義されたルールに従ってユーザーの行動が登録されます。 このルールは、同様の考えを持つ人々に見られる行動に基づいています。 収集された情報を使用して、ユーザーに表示する情報が調整されます。特に「おすすめ」という形で表示されます。
+* 共用／レコメンデーションフィルタリング：事前定義されたルールに従ってユーザーの行動が登録されます。 このルールは、同様の考えを持つ個人に見られる行動に基づいています。 収集された情報を使用して、ユーザーに表示する情報が調整されます。特に「おすすめ」という形で表示されます。
 
 ## パーソナライゼーションを使用する場合とタイミング {#how-and-when-can-personalization-be-used}
 

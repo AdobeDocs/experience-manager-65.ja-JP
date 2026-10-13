@@ -6,13 +6,22 @@ exl-id: 411d40ab-6be8-4658-87f6-74d2ac1a4913
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '455'
 ht-degree: 100%
-
 ---
-
 # Adobe Experience Manager（AEM）の基盤での GDPR リクエストの取り扱い{#handling-gdpr-requests-for-the-aem-foundation}
 
 >[!IMPORTANT]
@@ -21,7 +30,7 @@ ht-degree: 100%
 
 ## AEM 基盤の GDPR サポート {#aem-foundation-gdpr-support}
 
-AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。そのため、この記事では主に、GDPR のアクセスリクエストと削除リクエストに対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
+AEM 基盤のレベルでは、保存される個人データはユーザープロファイルです。 そのため、この記事では主に、GDPR のアクセスリクエストと削除リクエストに対処できるように、ユーザープロファイルのアクセス方法と削除方法について説明します。
 
 ## ユーザープロファイルへのアクセス {#accessing-a-user-profile}
 
@@ -41,7 +50,7 @@ AEM 基盤のレベルでは、保存される個人データはユーザープ�
 
 ### HTTP API {#http-api}
 
-前述したように、自動化を促進するために、アドビではユーザーデータにアクセスするための API を用意しています。利用可能な API には、以下のようにいくつかのタイプがあります。
+前述したように、自動化を促進するために、アドビではユーザーデータにアクセスするための API を用意しています。 利用可能な API には、以下のようにいくつかのタイプがあります。
 
 **UserProperties API**
 
@@ -75,7 +84,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 ### ユーザーの無効化 {#disable-user}
 
 1. 前述のように、ユーザー管理コンソールを開き、目的のユーザーを検索します。
-1. ユーザーの上にポインタを合わせ、選択アイコンをクリックします。プロファイルがグレーに変わり、選択されたことが示されます。
+1. ユーザーの上にポインタを合わせ、選択アイコンをクリックします。 プロファイルがグレーに変わり、選択されたことが示されます。
 
 1. 上部のメニューの「無効にする」ボタンをクリックして、このユーザーを無効にします。
 
@@ -85,7 +94,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-40-58](assets/image2018-2-6_1-40-58.png)
 
-   次のように、プロファイルがグレー表示されてロックが追加されるので、ユーザーのアクティベーションが解除されたことがわかります。
+   次のように、プロファイルカードがグレー表示されてロックが追加されるので、ユーザーが非アクティブ化されたことがわかります。
 
    ![disableduser](assets/disableduser.png)
 
@@ -99,7 +108,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
    ![image2018-2-6_1-58-25](assets/image2018-2-6_1-58-25.png)
 
-1. プロファイルノードとそのすべての子ノードを削除します。プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
+1. プロファイルノードとそのすべての子ノードを削除します。 プロファイルノードには、AEM のバージョンに応じて以下の 2 種類の形式があります。
 
    1. `[!UICONTROL /profile]` のデフォルトの非公開プロファイル
    1. `[!UICONTROL /profiles]`（AEM 6.5 を使用して作成された新しいプロファイル用）

@@ -5,13 +5,25 @@ feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 3a38a2f1e753e33d9d3d4d4e7ebc24f16f795966
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 99%
-
+source-wordcount: '1576'
+ht-degree: 98%
 ---
-
 # AEM での GraphQL の使用方法 - サンプルコンテンツとサンプルクエリ {#learn-graphql-with-aem-sample-content-queries}
 
 AEM で GraphQL を使用し、サンプルコンテンツとクエリで、コンテンツをヘッドレスに配信する方法を説明します。
@@ -142,7 +154,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 
 ### サンプルクエリ - すべての都市に関するすべての情報 {#sample-all-information-all-cities}
 
-すべての都市に関するすべての情報を取得するには、次のような基本的なクエリを使用します。
+すべての都市に関するすべての情報を取得するには、基本クエリを使用できます。
 **サンプルクエリ**
 
 ```graphql
@@ -153,7 +165,7 @@ GraphQL クエリの基本と、AEM コンテンツフラグメントとの連�
 }
 ```
 
-実行時にシステムは自動的にすべてのフィールドを含むようにクエリを展開します。
+実行時にクエリが自動的に展開されて、次のように、すべてのフィールドが組み込まれます。
 
 ```graphql
 {
@@ -705,7 +717,7 @@ query {
 
 ### サンプルクエリ - ドイツまたはスイスにあり、人口が 40 万人以上 100 万人未満のすべての都市 {#sample-all-cities-d-ch-population}
 
-ここでは、複数のフィールドの組み合わせがフィルタリングされます。`AND`（暗黙的）を使用して `population` の範囲を選択しつつ、`OR`（明示的）を使用して必要な都市を選択しています。
+ここでは、複数のフィールドの組み合わせがフィルタリングされます。 `AND`（暗黙的）を使用して `population` の範囲を選択しつつ、`OR`（明示的）を使用して必要な都市を選択しています。
 
 **サンプルクエリ**
 
@@ -1147,7 +1159,7 @@ query {
 
 ## WKND プロジェクトを使用したサンプルクエリ {#sample-queries-using-wknd-project}
 
-これらのサンプルクエリは WKND プロジェクトに基づいています。以下の項目があります。
+これらのサンプルクエリは WKND プロジェクトに基づいています。 以下の項目があります。
 
 * 次の URL で入手できるコンテンツフラグメントモデル：
   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
@@ -1245,11 +1257,11 @@ query {
 このサンプルクエリでは次のものを検索します。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * 特定のパス内にある、次のすべてのコンテンツ形式：
-      * HTML
-      * マークダウン
-      * プレーンテキスト
-      * JSON
+  * 特定のパス内にある、次のすべてのコンテンツ形式：
+    * HTML
+    * マークダウン
+    * プレーンテキスト
+    * JSON
 
 **サンプルクエリ**
 
@@ -1275,7 +1287,7 @@ query {
 このサンプルクエリでは次のものを検索します。
 
 * 1 つのコンテンツフラグメントについて
-   * 基になるコンテンツフラグメントモデルの詳細
+  * 基になるコンテンツフラグメントモデルの詳細
 
 **サンプルクエリ**
 
@@ -1299,7 +1311,7 @@ query {
 このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * 特定のパス内にある、参照されている（ネストされた）フラグメントのパスと作成者
+  * 特定のパス内にある、参照されている（ネストされた）フラグメントのパスと作成者
 
 >[!NOTE]
 >
@@ -1329,11 +1341,11 @@ query {
 このクエリでは次のものを問い合わせます。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
-   * 特定のモデルタイプ `Article` の他のフラグメントへのフラグメント参照を含むもの
+  * 特定のモデルタイプ `Article` の他のフラグメントへのフラグメント参照を含むもの
 
 >[!NOTE]
 >
->フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` が選択されています。クエリは `fragments` を `[Article]` の配列として配信します。
+>フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` が選択されています。 クエリは `fragments` を `[Article]` の配列として配信します。
 
 ```graphql
 {
@@ -1353,11 +1365,11 @@ query {
 このクエリでは次のものを問い合わせます。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
-   * 特定のモデルタイプ `Article` および `Adventure` の他のフラグメントへのフラグメント参照を含むもの
+  * 特定のモデルタイプ `Article` および `Adventure` の他のフラグメントへのフラグメント参照を含むもの
 
 >[!NOTE]
 >
->フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` および `Adventure` が選択されています。クエリは `fragments` を `[AllFragmentModels]` の配列として配信します。これはユニオン型でデリファレンスされます。
+>フィールド `fragments` のデータタイプは `fragment-reference` で、モデル `Article` および `Adventure` が選択されています。 クエリは `fragments` を `[AllFragmentModels]` の配列として配信します。これはユニオン型でデリファレンスされます。
 
 ```graphql
 {
@@ -1388,7 +1400,7 @@ query {
 これらのクエリでは次のものを検索します。
 
 * `bookmark` タイプの複数のコンテンツフラグメントについて
-   * 他のフラグメントへのコンテンツ参照を含むもの
+  * 他のフラグメントへのコンテンツ参照を含むもの
 
 #### プリフェッチされた参照を含んだ複数のコンテンツフラグメントのサンプルクエリ {#sample-wknd-multiple-fragments-prefetched-references}
 
@@ -1470,7 +1482,7 @@ query {
 このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `bookmark` タイプの 1 つのコンテンツフラグメントについて
-   * その中の RTE インライン参照
+  * その中の RTE インライン参照
 
 >[!NOTE]
 >
@@ -1516,7 +1528,7 @@ query {
 このクエリでは次のものを問い合わせます。
 
 * 特定のパスにある `article` タイプの 1 つのコンテンツフラグメントについて
-   * そのパス中の、バリエーション `variation1` に関するデータ
+  * そのパス中の、バリエーション `variation1` に関するデータ
 
 **サンプルクエリ**
 
@@ -1537,7 +1549,7 @@ query {
 }
 ```
 
-### 特定モデルの複数のコンテンツフラグメントの名前付きバリエーションを取得するサンプルクエリ {#sample-wknd-variation-multiple-fragment-given-model}
+### 特定モデルの複数のコンテンツフラグメントの名前付きバリエーションのサンプルクエリ {#sample-wknd-variation-multiple-fragment-given-model}
 
 このクエリでは次のものを問い合わせます。
 
@@ -1655,9 +1667,9 @@ query {
 
 サンプルクエリでは、次のコンテンツモデルとその相互関係（参照関係 ->）を使用します。
 
-* [Company](#model-company)
--> [Person](#model-person)
-    -> [Award](#model-award)
+* [会社](#model-company)
+-> [人](#model-person)
+    -> [Award](#model-award)
 
 * [City（市区町村）](#model-city)
 
@@ -1724,7 +1736,7 @@ query {
 |  Smith |  Joe |   |
 | Croft |  Lara | Gamestar |
 | Caulfield |  Max |  Gameblitz |
-| Jobs |  Steve |   |
+|  Jobs |  Steve |   |
 
 #### 賞 {#fragment-award}
 
@@ -1738,10 +1750,10 @@ query {
 
 | 名前 | 国 | 人口 | カテゴリ |
 |--- |--- |--- |--- |
-| Basel | スイス | 172258 | 市区町村 :emea |
-| Berlin | Germany | 3669491 | city:capital<br>city:emea |
-| Bucharest | Romania | 1821000 |  city:capital<br>city:emea |
-| San Francisco |  USA |  883306 |  city:beach<br>city:na |
-| San Jose |  USA |  102635 |  市区町村 :na |
-| Stuttgart |  Germany |  634830 |  市区町村 :emea |
-|  Zurich |  Switzerland |  415367 |  city:capital<br>city:emea |
+| Basel | スイス | 172258 | 市区町村:emea |
+| Berlin | Germany | 3669491 | 市区町村:capital<br>市区町村:emea |
+| Bucharest | Romania | 1821000 |  市区町村:capital<br>市区町村:emea |
+| San Francisco |  USA |  883306 |  市区町村:beach<br>市区町村:na |
+| San Jose |  USA |  102635 |  市区町村:na |
+| Stuttgart |  Germany |  634830 |  市区町村:emea |
+|  Zurich |  Switzerland |  415367 |  市区町村:capital<br>市区町村:emea |

@@ -7,13 +7,27 @@ hide: true
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 63b9494700aaafaa503216d037e2ad6efc8c5eac
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 91%
-
 ---
-
 # AEM Forms JEE パッチインストーラー {#aem-forms-jee-patch-installer}
 
 >[!NOTE]
@@ -36,15 +50,15 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
 1. 使用しているオペレーティングシステムに従って名前が付けられたディレクトリで、次の操作を実行します。
 
    * **ウィンドウ**
-インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダー上の適切なディレクトリに移動し、aemforms65_cfp_install.exe ファイルをダブルクリックします。
+     インストーラーをコピーしたハードディスク上のインストールメディアまたはフォルダー上の適切なディレクトリに移動し、aemforms65_cfp_install.exe ファイルをダブルクリックします。
 
-      * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
-      * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
+     * （Windows 32 ビット） `Windows\Disk1\InstData\VM`
+     * （Windows 64 ビット） `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-適切なディレクトリに移動し、コマンドプロンプトから「`./aem65_cfp_install.bin`」と入力します。
+     適切なディレクトリに移動し、コマンドプロンプトから「`./aem65_cfp_install.bin`」と入力します。
 
-      * （Linux®）`Linux/Disk1/InstData/NoVM`
+     * （Linux®）`Linux/Disk1/InstData/NoVM`
 
    これにより、インストール手順を示すインストールウィザードが起動します。
 
@@ -73,7 +87,7 @@ AEM 6.5 Forms JEE パッチインストーラーには、このパッチのリ�
    * [JBoss用AEM フォームのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installJBoss_65_jp)
    * [WebSphere用AEM Formsのインストールとデプロイ®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65_jp)
 
-1. （JBoss® のみ）パッチをインストールしてサーバーを設定した後、JBoss® Application Server の tmp および work ディレクトリを削除します。
+1. （JBoss® のみ）パッチをインストールしてサーバーを設定した後、JBoss® アプリケーションサーバーの tmp および work ディレクトリを削除します。
 
 ## デプロイメント後の設定 {#post-deployment-configurations}
 
@@ -88,7 +102,7 @@ SAML 認証を設定済みで、大きな IDP メタデータに関する問題�
 
 >[!NOTE]
 >
-> SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
+> 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
 ## 影響を受けるモジュール {#impacted-modules}
 

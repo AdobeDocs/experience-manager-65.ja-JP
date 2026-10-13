@@ -9,13 +9,22 @@ exl-id: 5a16be40-eede-4a47-b03b-3993e285232e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '270'
 ht-degree: 100%
-
 ---
-
 # テスト - 実行のタイミングとテスト実施者{#testing-when-and-with-whom}
 
 様々な役割のユーザーが、プロジェクト開発の様々な段階で、テストに参加することが考えられます。
@@ -35,7 +44,7 @@ ht-degree: 100%
   <tr>
    <td>品質保証チーム</td>
    <td><p>機能テストとパフォーマンステストを行うには、（適切な規模の）品質保証チームが必要です。</p> <p>彼らは中立的な、専任のテスト実施者です。「開発者が自分の成果物をテストしてはならない」というのはソフトウェア開発の鉄則です。</p> <p>このチームのメンバーは、業務プロジェクトチーム、パートナーまたは顧客のチームから集められる場合があります。</p> </td>
-   <td><p>最初の機能リリースは、（可能な場合は）テスト実施者に公開する必要があります。初期の中間リリースでは多くのバグが発生する可能性がありますが、それにより、重要な問題に関するフィードバックを早期に提供できます。</p> </td>
+   <td><p>最初の機能リリースは、（可能な場合は）テスト実施者に公開する必要があります。 初期の中間リリースでは多くのバグが発生する可能性がありますが、それにより、重要な問題に関するフィードバックを早期に提供できます。</p> </td>
   </tr>
   <tr>
    <td>顧客のテストチーム</td>

@@ -9,13 +9,17 @@ exl-id: dbe81ead-dfaa-4af0-9b66-a14917a1bcc7
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 7%
-
+source-wordcount: '430'
+ht-degree: 6%
 ---
-
 # アプリケーションの作成および設定アクション{#application-create-and-configuration-actions}
 
 {{ue-over-mobile}}
@@ -53,7 +57,7 @@ ht-degree: 7%
 
 アプリテンプレートは、AEM内で新しいアプリを作成するために使用される、開発者が作成した既存のデザインを簡単に使用する方法を提供します。
 
-アプリテンプレートとは？これは、アプリのベースラインや基盤を表すページテンプレートとコンポーネントのコレクションと考えてください。
+アプリテンプレートとは？ これは、アプリのベースラインや基盤を表すページテンプレートとコンポーネントのコレクションと考えてください。
 別のアプリのテンプレートに基づいてアプリを作成する場合、作成元のアプリを表す開始点を持つアプリが表示されます。
 
 この機能を使用するには、既存のモバイルアプリテンプレート（またはアプリテンプレートを持つアプリがインストールされている場合）が必要です。

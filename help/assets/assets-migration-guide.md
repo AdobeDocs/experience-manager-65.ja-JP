@@ -1,18 +1,36 @@
 ---
 title: アセットを一括で移行する
-description: ' [!DNL Adobe Experience Manager] へのアセットの移行、メタデータの適用、レンディションの生成、パブリッシュインスタンスでのアクティベートをそれぞれ行う方法について説明します。'
+description: アセットを[!DNL Adobe Experience Manager]に取り込み、メタデータを適用し、レンディションを生成し、パブリッシュインスタンスにアクティベートする方法について説明します。
 contentOwner: AG
 role: Developer, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 5be0fc8f-1cff-5c3e-bb92-2903a56a3de6
+    internal-label: Migration
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1858'
-ht-degree: 100%
-
+ht-degree: 99%
 ---
-
 # アセットを一括で移行する方法 {#assets-migration-guide}
 
 アセットを [!DNL Adobe Experience Manager] に移行する際には、いくつかの手順を考慮する必要があります。 現在のホームからアセットやメタデータを抽出する方法は、実装環境により方法が大きく異なるのでこのドキュメントでは説明しません。本書では、抽出したアセットを [!DNL Experience Manager] に移行してメタデータを適用し、レンディションを生成してそれらをパブリッシュインスタンスでアクティベートする方法について説明します。
@@ -84,7 +102,7 @@ HTTPS を通じたプッシュのアプローチには、主に次の 2 つの�
 ニーズに合わせてワークフローを設定したら、次の 2 つの方法のいずれかで実行できます。
 
 1. 最も簡単なアプローチは、[ACS Commons の Bulk Workflow Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/bulk-workflow-manager.html) です。 このツールを使用すると、クエリを実行し、クエリの結果をワークフローを通じて処理します。 バッチサイズを設定するオプションも用意されています。
-1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。 このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。 さらに、Fast Action Manager はサーバーリソースを動的に監視し、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。 サンプルスクリプトは ACS Commons の機能ページに記載されています。
+1. [ACS Commons の Fast Action Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) は[合成ワークフロー](https://adobe-consulting-services.github.io/acs-aem-commons/features/synthetic-workflow.html)と組み合わせて使用できます。 このアプローチはより複雑ですが、[!DNL Experience Manager] ワークフローエンジンのオーバーヘッドを削除し、サーバーリソースの使用を最適化します。 さらに、Fast Action Manager はサーバーリソースを動的にモニタリングし、システムに配置された読み込みをスロットリングすることでパフォーマンスを大幅に向上します。 サンプルスクリプトは ACS Commons の機能ページに記載されています。
 
 ### アセットのアクティベート {#activating-assets}
 

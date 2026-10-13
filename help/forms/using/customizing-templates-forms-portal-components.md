@@ -9,13 +9,24 @@ feature: Forms Portal
 exl-id: f889d996-77f7-4a4f-a637-da43fe1343c5
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 89%
-
+source-wordcount: '1257'
+ht-degree: 91%
 ---
-
 # フォームポータルコンポーネントのテンプレートのカスタマイズ{#customizing-templates-for-forms-portal-components}
 
 ## 前提条件 {#prerequisites}
@@ -41,8 +52,8 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
    * Search &amp; Lister コンポーネント：&quot;/libs/fd/fp/formTemplate&quot;
    * ドラフト／送信コンポーネント：
 
-      * ドラフトセクション：/libs/fd/fp/draftsTemplate
-      * 送信セクション：/libs/fd/fp/submissionsTemplate
+     * ドラフトセクション：/libs/fd/fp/draftsTemplate
+     * 送信セクション：/libs/fd/fp/submissionsTemplate
 
    * Link コンポーネント：&quot;/libs/fd/fp/linkTemplate&quot;
 
@@ -120,8 +131,8 @@ AEM Forms ユーザーインターフェイスでは、すべてのフォーム�
 1. **ローカリゼーションサポート**：静的テキストをローカライズするには、属性 `${localize-YOUR_TEXT}` を使用し、ローカライズされた値が存在しない場合は、値を用意します。
    *上記の例では、属性 `${localize-Apply}` と `${localize-Download}` は、「Apply」と「Download」のテキストをローカライズするのに使用します。*
 
-1. **並べ替えのサポート**: HTML要素をクリックして検索結果を並べ替えます。テーブルレイアウトでソートを実装するには、特定のテーブルヘッダーに「data-sortKey」属性を追加します。さらに、並べ替えるメタデータとしてその値を追加します。
-例えば、グリッドビューの「タイトル」ヘッダーの場合、「data-sortKey」ヘッダーの値は「title」です。 見出しをクリックすると、特定の列の値を並べ替えることができます。
+1. **並べ替えのサポート**：HTML 要素をクリックして、検索結果を並べ替えます。 テーブルレイアウトでの並べ替えを実行するには、特定のテーブルヘッダーに「data-sortKey」属性を追加します。 さらに、ソートしたいメタデータとしてその値を加えます。
+例えば、グリッド表示の「タイトル」ヘッダーでは、「data-sortKey」ヘッダーの値が「タイトル」 です。 見出しをクリックすると、特定の列の値を並べ替えることができます。
 
 1. **設定プロパティの使用**：Search &amp; Listerコンポーネントには、ユーザーインターフェイスに使える設定がいくつかあります。 例えば、編集ダイアログを通して保存された HTML ツールヒントテキストを表示するには、`${config-htmlLinkText}` 属性を使用します。 **同様に、PDF ツールヒントテキストにも、** `${config-pdfLinkText}` 属性を使用します。
 

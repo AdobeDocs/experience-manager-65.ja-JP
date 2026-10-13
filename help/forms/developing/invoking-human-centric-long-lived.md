@@ -9,13 +9,29 @@ role: Developer
 exl-id: c9ebad8b-b631-492d-99a3-094e892b2ddb
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3762'
+source-wordcount: '3764'
 ht-degree: 98%
-
 ---
-
 # 人間中心の長期間有効なプロセスの呼び出し {#invoking-human-centric-long-lived-processes}
 
 ワークベンチで作成された人間中心の長期間有効なプロセスを、以下のクライアントアプリケーションを使用して、プログラムで呼び出すことができます。
@@ -441,7 +457,7 @@ WAR ファイルを、AEM Forms がデプロイされている J2EE アプリケ
 
 ### Web アプリケーションのテスト {#test-your-web-application}
 
-Web アプリケーションをデプロイした後、Web ブラウザーを使用してテストできます。 AEM Forms をホストしているコンピューターを使用している場合は、次の URL を指定できます。
+Web アプリケーションをデプロイした後、Web ブラウザーを使用してテストできます。 AEM Forms をホストしている同じコンピューターを使用している場合は、次の URL を指定できます。
 
 * http://localhost:8080/PreLoanProcess/index.html
 

@@ -1,6 +1,6 @@
 ---
 title: Social タグクラウドの使用
-description: ログインしたコミュニティメンバーがトレンドのトピックをすばやく識別し、タグ付けされたコンテンツを見つけることができるようにするページにソーシャルタグクラウドコンポーネントを追加する方法を説明します。
+description: ソーシャルタグクラウドコンポーネントをページに追加して、サインインしているコミュニティメンバーがトレンドのトピックをすばやく特定し、タグ付きのコンテンツを見つけることができるようにする方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
@@ -9,117 +9,124 @@ exl-id: 56af5362-78de-4308-8958-63a45e8573cc
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '579'
 ht-degree: 6%
-
 ---
-
 # Social タグクラウドの使用 {#using-social-tag-cloud}
 
 ## はじめに {#introduction}
 
-`Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーによって適用されたタグをハイライト表示します。 これは、トレンドのトピックを識別し、サイト訪問者がタグ付きコンテンツをすばやく見つけられるようにするための手段です。
+`Social Tag Cloud` コンポーネントは、コンテンツの投稿時にコミュニティメンバーによって適用されたタグを強調表示します。 これは、トレンドのトピックを特定し、サイト訪問者がタグ付きのコンテンツをすばやく見つけられるようにするための手段です。
 
-現在のトレンドを特定するもう 1 つの方法については、[&#x200B; アクティビティのトレンド &#x200B;](trends.md) を参照してください。
+現在の傾向を特定するもう1つの方法については、[&#x200B; アクティビティの傾向](trends.md)を参照してください。
 
-このページでは、`Social Tag Cloud` コンポーネントダイアログの設定について説明し、ユーザーエクスペリエンスについて説明します。
+このページでは、`Social Tag Cloud` コンポーネントダイアログの設定を説明し、ユーザーエクスペリエンスについて説明します。
 
-開発者向けの詳細については、[&#x200B; タグの基本事項 &#x200B;](tag.md) を参照してください。
+開発者向けの詳細については、[Tag Essentials](tag.md)を参照してください。
 
 タグの作成および管理や、タグが適用されるコンテンツについては、[タグの管理](../../help/sites-administering/tags.md)を参照してください。
 
 ## ソーシャルタグクラウドの追加 {#adding-a-social-tag-cloud}
 
-オーサーモードでページに `Social Tag Cloud` コンポーネントを追加するには、コンポーネントブラウザーを使用して `Communities / Social Tag Cloud` のコンポーネントを探し、タグクラウドが表示されるページの上にドラッグします。
+作成者モードでページに`Social Tag Cloud` コンポーネントを追加するには、コンポーネントブラウザーを使用して`Communities / Social Tag Cloud`を見つけ、タグクラウドが表示されるページ上に配置するようにコンポーネントブラウザーをドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](tag.md#essentials-for-client-side) が含まれると、`Social Tag Cloud` のコンポーネントは次のように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](tag.md#essentials-for-client-side)が含まれている場合、`Social Tag Cloud` コンポーネントは次のように表示されます。
 
-![&#x200B; ソーシャルタグ &#x200B;](assets/social-tag.png)
+![social-tag](assets/social-tag.png)
 
-## Social タグクラウドの設定 {#configuring-social-tag-cloud}
+## ソーシャルタグクラウドの設定 {#configuring-social-tag-cloud}
 
-配置された `Social Tag Cloud` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
+配置された`Social Tag Cloud` コンポーネントを選択して、編集ダイアログを開く`Configure` アイコンにアクセスして選択できるようにします。
 
-![&#x200B; 設定 &#x200B;](assets/configure-new.png)
+![configure](assets/configure-new.png)
 
-「**[!UICONTROL ソーシャルタグクラウド]**」タブで、表示するタグと、タグがアクティブなリンクの場合は検索結果を表示するページの場所を指定します。
+「**[!UICONTROL ソーシャルタグクラウド]**」タブで、表示するタグを指定し、タグがアクティブリンクの場合は、検索結果のページの場所を指定します。
 
 ![social-tag-cloud](assets/social-tag-cloud.png)
 
-* **[!UICONTROL 表示するソーシャルタグ]**
-表示する UGC タグを特定します。 プルダウンオプションは次のとおりです。
+* 表示する&#x200B;**[!UICONTROL ソーシャルタグ]**
+表示するUGC タグを決める。 プルダウンオプションは次のとおりです。
 
-   * `From page and child pages`
-   * `All tags`
+  * `From page and child pages`
+  * `All tags`
 
-  デフォルトは `From page and child pages` です。「page」は以下の **Page** 設定を表します。
+  デフォルトは`From page and child pages`です。ここでは、「ページ」は以下の&#x200B;**ページ**&#x200B;設定を指します。
 
 * **[!UICONTROL Page]**
 
-  （ない場合は必須 `All tags)` ページの UGC へのパス。 空白のままにした場合、デフォルトは現在のページです。
+  （`All tags)`以外の場合は必須）ページのUGCへのパス。 空白のままにすると、デフォルトは現在のページになります。
 
 * **[!UICONTROL タグにリンクがありません]**
 
-  オンにすると、タグはタグクラウドにプレーンテキストとして表示されます。 オフにすると、タグは、そのタグが適用されるすべてのコンテンツを検索するアクティブなリンクとして表示されます。 デフォルトではオフになっており、**[!UICONTROL 検索結果のパス]** を設定する必要があります。
+  オンにすると、タグはタグクラウドにプレーンテキストとして表示されます。 チェックを外すと、タグはアクティブリンクとして表示され、そのタグが適用されているすべてのコンテンツを検索します。 デフォルトはオフになっており、**[!UICONTROL 検索結果パス]**&#x200B;を設定する必要があります。
 
 * **[!UICONTROL 検索結果のパス]**
 
-  **Page** 設定で指定された UGC パスを含む UGC を参照するように設定された、`Search Result` コンポーネントが配置されているページへのパス。
+  `Search Result` コンポーネントが配置されたページへのパスで、**ページ**&#x200B;設定で指定されたUGC パスを含むUGCを参照するように設定されています。
 
-## ソーシャル タグ クラウドの表示を変更する {#change-display-of-social-tag-cloud}
+## ソーシャルタグクラウドの表示を変更 {#change-display-of-social-tag-cloud}
 
-**ソーシャルタグクラウド** の表示を編集するには、[&#x200B; デザインモード &#x200B;](../../help/sites-authoring/default-components-designmode.md) と入力し、配置した `Social Tag Cloud` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
+**ソーシャルタグクラウド**&#x200B;の表示を編集するには、[&#x200B; デザインモード &#x200B;](../../help/sites-authoring/default-components-designmode.md)と入力し、配置された`Social Tag Cloud` コンポーネントをダブルクリックして、追加のタブを含むダイアログを開きます。
 
-**[!UICONTROL ソーシャルタグクラウド（デザイン）]** タブを使用して、タグの表示方法を指定します。 タグには、単純なタグ、デフォルトの名前空間に含まれる 1 つの単語、階層的な分類などがあります。
+「**[!UICONTROL ソーシャルタグクラウド（デザイン）]**」タブを使用して、タグの表示方法を指定します。 タグは、単純なタグ、デフォルトの名前空間の単一の単語、または階層分類法のいずれかです。
 
 ![social-tag-cloud-design](assets/social-tag-cloud-design.png)
 
-* **[!UICONTROL フルタイトルパスの表示]**
+* **[!UICONTROL 完全なタイトルパスを表示]**
 
-  オンにした場合、適用された各タグの親タグと名前空間のタイトルが表示されます。
+  オンにすると、適用された各タグの親タグと名前空間のタイトルが表示されます。
 
-  次に例を示します。
+  例：
 
-   * 確認済み：`Geometrixx Media: Gadgets / Cars`
-   * 未チェック：`Cars`
+  * チェック済み：`Geometrixx Media: Gadgets / Cars`
+  * 未選択：`Cars`
 
   単純なタグに違いはありません。
 
-  デフォルトではオフになっています。
+  デフォルトはオフです。
 
-* **[!UICONTROL リーフタグのみを表示]**
+* **[!UICONTROL 葉タグのみを表示]**
 
-  オンにすると、他のタグを含まない、適用されたタグのみが表示されます。
+  オンにすると、他のタグを含まない適用されたタグのみが表示されます。
 
-  例えば、次のタグ ID の場合：
+  例えば、次のタグ IDを指定します。
 
   `Geometrixx Media: Gadgets / Cars`
 
-  次の 3 つのタグを適用できます。
+  適用できるタグは3つあります。
 
   `Geometrixx Media (the namespace)`、`Gadgets` および `Cars`
 
-   * オン：適用されている場合、`Cars` のみ表示されます。
-   * オフ：`Geometrixx Media`、`Gadgets`、および `Cars` が適用されている場合は表示されます。
+  * チェック済み：適用されている場合は`Cars`のみが表示されます。
+  * チェックを外した場合：`Geometrixx Media`、`Gadgets`、`Cars`が表示されます（適用されている場合）。
 
-  単純なタグはリーフタグです。
+  シンプルなタグはリーフタグです。
 
-  デフォルトではオフになっています。
+  デフォルトはオフです。
 
-* **[!UICONTROL リンク テンプレート]**
+* **[!UICONTROL リンクテンプレート]**
 
-  コンポーネントの編集ダイアログでリンクを有効にした場合に、タグクラウドにリンクを表示するために使用されるテンプレート（デフォルト以外）。
+  コンポーネント編集ダイアログでリンクが有効になっている場合、デフォルト以外のテンプレートを使用してタグクラウドにリンクを表示します。
 
-* **[!UICONTROL すべてのタグで同じサイズ]**
+* **[!UICONTROL すべてのタグに同じサイズ]**
 
-  オンにすると、タグクラウド内のすべての単語のスタイルが同じになります。 オフにすると、単語のスタイルは使用法に応じて異なります。 デフォルトではオフになっています。
+  オンにすると、タグクラウド内のすべての単語に同じスタイルが適用されます。 チェックを外すと、単語のスタイルは使用状況に応じて異なります。 デフォルトはオフです。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [&#x200B; タグの初期設定 &#x200B;](tag.md) ページを参照してください。
+詳細については、開発者向けの[Tag Essentials](tag.md) ページを参照してください。
 
-タグの作成と管理については、[&#x200B; ユーザー生成コンテンツのタグ付け &#x200B;](tag-ugc.md) （UGC）を参照してください。
+タグの作成と管理について詳しくは、[&#x200B; ユーザー生成コンテンツのタグ付け](tag-ugc.md) （UGC）を参照してください。

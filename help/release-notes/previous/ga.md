@@ -1,17 +1,31 @@
 ---
-title: 一般リリースノート（ [!DNL Adobe Experience Manager]  6.5）
+title: 一般リリースノート（[!DNL Adobe Experience Manager] 6.5）
 description: '[!DNL Adobe Experience Manager] 6.5 のリリース情報、新機能、インストール方法および詳細な変更リストが記載されています。'
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: ed762d86-a04b-452b-a08f-86359bb8ff27
+    internal-label: Configuration and operations
+subfeature_v2:
+  - id: c21ccc2b-e0c8-4853-bf41-f12259ed93f8
+    internal-label: Release information
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4981'
 ht-degree: 96%
-
 ---
-
 # 一般リリースノート（[!DNL Adobe Experience Manager] 6.5）{#general-release-notes-for-adobe-experience-manager}
 
 ## リリース情報 {#release-information}
@@ -290,7 +304,7 @@ AEM Communitiesでは、登録ユーザーがUser Generated Contentで、他の�
 
 **一括モデレートのリスト表示**
 
-UI が改善された新しいリスト表示が一括モデレートで利用できるようになり、ユーザ生成コンテンツエントリを表示できるようになりました。
+UI が改善された新しいリスト表示が一括モデレートで利用できるようになり、ユーザー生成コンテンツエントリを表示できるようになりました。
 
 ![リスト表示での一括モデレート](/help/release-notes/assets/list-view-moderation.png)
 

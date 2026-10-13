@@ -5,13 +5,22 @@ exl-id: 182c464a-ff7a-467b-9eb5-8ffac335a87a
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 89%
-
+source-wordcount: '1088'
+ht-degree: 93%
 ---
-
 # AEM FAQ {#aem-faqs}
 
 AEM でのトラブルシューティングと設定に関するいくつかの問題の解決方法を説明します。
@@ -26,8 +35,8 @@ AEM でのトラブルシューティングと設定に関するいくつかの�
 
 #### バイナリレスディストリビューションを有効にする方法を教えてください。 {#how-do-i-enable-binary-less-distribution}
 
-バイナリレス配布を有効にするには、共有BLOB ストアを使用してデプロイします。
-OSGI設定の`useBinaryReferences` プロパティを、エージェントが使用しているファクトリ PID （`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*）*&#x200B;で確認します。
+バイナリレスディストリビューションを有効にするには、共有 BLOB ストアと共にデプロイします。
+エージェントが使用しているファクトリ PID（`org.apache.sling.distribution.serialization.impl.vlt.VaultDistributionPackageBuilderFactory`*）* を含む OSGI 設定の `useBinaryReferences` プロパティを確認します。
 
 #### 言語コピーを作成する際に AEM で Content-Authors の権限を有効にする方法を教えてください。 {#how-to-enable-permissions-while-creating-language-copy-for-content-authors-in-aem}
 
@@ -39,7 +48,7 @@ OSGI設定の`useBinaryReferences` プロパティを、エージェントが使
 
 翻訳プロジェクトを作成する前に、ルート内部に言語ルートおよび言語コピーを作成します。
 
-例：
+次に例を示します。
 名前が`fr_LU` （タイトルがフランス語（ルクセンブルク）の`/content/geometrixx`に言語ルートを作成します。 次に、参照パネルからページの言語コピーを作成し、`Create & Translate` 内の `Create structure only` オプションに移動します。 最後に、翻訳プロジェクトを作成し、言語コピーを翻訳ジョブに追加します。
 
 詳しくは、次の追加リソースを参照してください。
@@ -49,8 +58,8 @@ OSGI設定の`useBinaryReferences` プロパティを、エージェントが使
 
 #### ログイン試行や ACL／権限の変更といった AEM の機能を監査する方法を教えてください。 {#how-to-audit-aem-capabilities-such-as-login-attempts-and-acl-or-permission-changes}
 
-AEMでは、トラブルシューティングと監査を改善するために、管理上の変更をログに記録する機能が導入されました。デフォルトでは、情報は`error.log` ファイルに記録されます。監視を容易にするために、別のログファイルにリダイレクトすることをお勧めします。
-出力を別のログファイルにリダイレクトするには、[AEMでユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)を参照してください。
+トラブルシューティングと監査の質を高めるために、管理に関係する変更を記録する機能が追加されました。 デフォルトでは、`error.log` ファイルに情報が記録されます。 モニタリングを容易にするために、この情報を別のログファイルにリダイレクトすることをお勧めします。
+出力を別のログファイルにリダイレクトする方法については、[AEM でのユーザー管理操作を監査する方法](/help/sites-administering/audit-user-management-operations.md)を参照してください。
 
 #### デフォルトの SSL を有効にする方法を教えてください。 {#how-to-enable-ssl-by-default}
 
@@ -88,8 +97,8 @@ AEM コンテンツサービスを React アプリケーションから使用す
 
 タッチ UI を利用して言語コピーを作成する場合（**参照**／**言語コピーを更新**）、新しい DAM フォルダーが新しい言語下に作成され、アセットはそのフォルダーから参照されます。
 
-これは、すぐに使用できる設定のデフォルト設定です。翻訳設定では、**翻訳ページ Assets** = **翻訳しない**&#x200B;を設定できます。
-AEM 6.4の場合、**ツール** > **クラウドサービス** > **翻訳クラウドサービス**。
+これが標準設定のデフォルト設定です。 翻訳設定で「**ページのアセットを翻訳**」を「**翻訳しない**」に設定できます。
+AEM 6.4 の場合は、**ツール**／**クラウドサービス**／**翻訳クラウドサービス**&#x200B;を選択して設定します。
 
 #### AEM SegmentStore （AEM 6.3.1.1）の急激な増加を引き起こすAEM コンポーネントを無効にする方法を教えてください。 {#how-to-disable-an-aem-component-causing-exponential-growth-for-the-aem-segmentstore-aem}
 

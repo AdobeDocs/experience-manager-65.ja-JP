@@ -9,13 +9,25 @@ feature: Security
 exl-id: 0a8d7831-d076-45cf-835c-8063ee13d6ba
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1413'
 ht-degree: 96%
-
 ---
-
 # 相互 SSL を使用したレプリケーション{#replicating-using-mutual-ssl}
 
 オーサーインスタンス上のレプリケーションエージェントが相互 SSL（MSSL）を使用してパブリッシュインスタンスに接続するように AEM を設定します。 MSSL を使用して、レプリケーションエージェントとパブリッシュインスタンス上の HTTP サービスは、証明書を使用して互いに認証します。
@@ -145,7 +157,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。 そのためには�
 
 ### オーサーの秘密鍵のインストール {#install-the-author-private-key}
 
-1. オーサーインスタンスの User Management ページを開きます。 （[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
+1. オーサーインスタンスのユーザー管理ページを開きます。 （[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
 1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「キーストアを作成」リンクが表示されたら、そのリンクをクリックします。 パスワードを設定して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「キーストアを管理」をクリックします。
@@ -164,7 +176,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。 そのためには�
 
 ### パブリッシュの証明書のインストール {#install-the-publish-certificate}
 
-1. オーサーインスタンスの User Management ページを開きます。 （[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
+1. オーサーインスタンスのユーザー管理ページを開きます。 （[http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html)）
 1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「TrustStore を作成」リンクが表示されたら、そのリンクをクリックします。TrustStore のパスワードを作成して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「TrustStore を管理」をクリックします。
@@ -188,7 +200,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。 そのためには�
 
 ### パブリッシュの秘密鍵をインストール {#install-the-publish-private-key}
 
-1. パブリッシュインスタンスの User Management ページを開きます。 （[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）
+1. パブリッシュインスタンスのユーザー管理ページを開きます。 （[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）
 1. ユーザーアカウントのプロパティを開くには、ユーザー名をクリックします。
 1. 「アカウント設定」領域に「キーストアを作成」リンクが表示されたら、そのリンクをクリックします。 パスワードを設定して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「キーストアを管理」をクリックします。
@@ -199,7 +211,7 @@ pkcs#12 形式の秘密鍵と証明書を生成します。 そのためには�
 
 ### オーサーの証明書をインストール {#install-the-author-certificate}
 
-1. パブリッシュインスタンスの User Management ページを開きます。 （[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）
+1. パブリッシュインスタンスのユーザー管理ページを開きます。 （[http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html)）
 1. 「グローバルトラストストア」領域に「TrustStore を作成」リンクが表示されたら、そのリンクをクリックします。TrustStore のパスワードを作成して、「OK」をクリックします。
 1. 「アカウント設定」領域で、「TrustStore を管理」をクリックします。
 1. 「証明書を CER ファイルから追加」をクリックします。

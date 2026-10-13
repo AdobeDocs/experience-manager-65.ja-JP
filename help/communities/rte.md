@@ -1,6 +1,6 @@
 ---
 title: リッチテキストエディターの基本事項
-description: マークアップを使用してテキストを入力できるリッチテキストエディターの基本と機能について説明します。
+description: マークアップ付きのテキストを入力できるリッチテキストエディターの基本と機能について説明します。
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -9,30 +9,37 @@ exl-id: 821e32f4-da8d-4bbb-936a-0844b8a24cdd
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '240'
 ht-degree: 7%
-
 ---
-
 # リッチテキストエディターの基本事項 {#rich-text-editor-essentials}
 
 ## 概要 {#overview}
 
-リッチテキストエディター（RTE）を使用すると、マークアップでテキストを入力できます。
+リッチテキストエディター（RTE）を使用すると、マークアップ付きのテキストを入力できます。
 
-Communities コンポーネントの場合は、オーサー環境の [&#x200B; リッチテキストエディター &#x200B;](../../help/sites-authoring/rich-text-editor.md) と同様に、パブリッシュ環境で入力されるテキストに影響します。
+Communities コンポーネントの場合、オーサー環境の[&#x200B; リッチテキストエディター](../../help/sites-authoring/rich-text-editor.md)と同様ですが、パブリッシュ環境に入力されたテキストに影響します。
 
 ![rich-text-editor](assets/rich-text-editor.png)
 
 ## リッチテキストエディターの有効化 {#enabling-rich-text-editor}
 
-ユーザー生成コンテンツ（UGC）を許可する Communities コンポーネントを有効にして、RTE を許可できます。 コンポーネントがページに追加された場合や [function](functions.md) 内に含まれた場合、RTE はデフォルトで有効になっている場合とされていない場合があります。
+ユーザー生成コンテンツ（UGC）を許可するコミュニティコンポーネントを有効にして、RTEを許可できます。 コンポーネントがページに追加されたか、[関数](functions.md)に含まれている場合、RTEはデフォルトで有効にされるか、無効にされる可能性があります。
 
-有効にしない場合は、[&#x200B; オーサー編集モード &#x200B;](sites-console.md#authoring-site-content) に入り、編集するコンポーネントを選択して、「`Rich Text Editor`」チェックボックスをオンにします。
+有効になっていない場合は、[作成者の編集モード &#x200B;](sites-console.md#authoring-site-content)を入力し、編集するコンポーネントを選択して、`Rich Text Editor` チェックボックスを選択します。
 
-RTE は、次の Communities コンポーネントで使用できます。
+RTEは、次のCommunities コンポーネントで使用できます。
 
 * [ブログ](blog-feature.md)
 * [Calendar](calendar.md)
@@ -45,23 +52,23 @@ RTE は、次の Communities コンポーネントで使用できます。
 
 ## カスタマイズ {#customization}
 
-[CKEditor](https://ckeditor.com/) に基づいた実装なので、リッチテキストエディターのカスタマイズが可能です。
+実装は[CKEditor](https://ckeditor.com/)に基づいているため、リッチテキストエディターのカスタマイズが可能です。
 
-Communities コンポーネントの現在の設定は、`cq.social.  scf   clientlib` ージ、次のリポジトリにあります
+Communities コンポーネントの現在の設定は、次の場所にあるリポジトリの`cq.social.  scf   clientlib`にあります。
 
 `/libs/clientlibs/social/commons/scf/ckrte.js`
 
-今後のアップグレードでは編集内容が上書きされる可能性があるので、cq.social.scf clientlib の変更はお勧めしません。
+cq.social.scf clientlibの変更は、今後のアップグレードで変更内容が上書きされる可能性があるため、お勧めしません。
 
-### カスタマイズの例：インラインリンク {#example-customization-inline-links}
+### カスタマイズ例：インラインリンク {#example-customization-inline-links}
 
-セキュリティ上の問題があるため、既定でメンバーに表示されるリッチ テキスト アイコンのセットには、ハイパーリンク オプションは含まれません。 UGC で hrefs が許可されている場合、いたずらの能力は広範囲です。
+セキュリティ上の懸念により、ハイパーリンクオプションは、デフォルトでメンバーに表示されるリッチテキストアイコンのセットには含まれません。 UGCでヘルメットが許可されている場合、いたずらの余地は大きくなります。
 
 ツールバーにハイパーリンクオプションを追加するには：
 
 * 「`links`」という名前のツールバーを追加
-   * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
-* 「**[!UICONTROL すべて保存]**」を選択します。
+  * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
+* **[!UICONTROL すべて保存]**&#x200B;を選択
 
 #### /libs/clientlibs/social/commons/scf/ckrte.js {#libs-clientlibs-social-commons-scf-ckrte-js}
 

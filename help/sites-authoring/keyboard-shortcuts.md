@@ -9,13 +9,26 @@ exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: 512fb704c7edafc84f6c5856d076e7de503d5c22
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '388'
 ht-degree: 100%
-
 ---
-
 # コンソールのキーボードショートカット{#keyboard-shortcuts-for-consoles}
 
 AEM 全体で様々なキーボードショートカットを利用できます。 コンソール使用に適用されるものや、[ページ編集](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)に適用されるものなどがあります。
@@ -26,7 +39,7 @@ AEM 全体で様々なキーボードショートカットを利用できます�
 
 ## キーボードショートカット {#keyboard-shortcuts}
 
-サイト、コマース、スクリーン、アセット、ユーザー、グループ、プロジェクトおよびエクスペリエンスフラグメントの各コンソールで、次のショートカットを使用できます。
+Sites、Commerce、Screens、Assets、ユーザー、グループ、プロジェクトおよびエクスペリエンスフラグメントの各コンソールで、次のショートカットを使用できます。
 
 | 場所 | ショートカット | 説明 |
 |---|---|---|
@@ -86,7 +99,7 @@ AEM には、一般的に使用される機能の一部（編集、プロパテ�
 
 ユーザーがキーボードショートカットを使用しない場合や、特定のアクセシビリティ要件を持つ場合は、すべてのキーボードショートカットを無効にできます。
 
-キーボードショートカットは、次の 2 つの場所でディアクティベートできます。
+キーボードショートカットは、次の 2 つの場所で無効化できます。
 
 * [環境設定](/help/sites-authoring/user-properties.md#my-preferences)
 * [ヘルプメニュー](/help/sites-authoring/basic-handling.md#accessing-help)

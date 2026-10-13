@@ -9,13 +9,27 @@ exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 100%
-
 ---
-
 # ワークマネージャーとスロットリング{#work-manager-and-throttling}
 
 >[!NOTE]
@@ -24,11 +38,11 @@ ht-degree: 100%
 
 AEM Forms（および以前のバージョン）では、非同期に操作を実行するために JMS キューを使用していました。 AEM Forms では、JMS キューはワークマネージャーに置き換えられました。 ここでは、ワークマネージャーに関する背景について、およびワークマネージャーのスロットリングオプションを設定する場合の手順について説明します。
 
-## 有効期間が長い（同期）操作について {#about-long-lived-asynchronous-operations}
+## 有効期間が長い（非同期）操作について {#about-long-lived-asynchronous-operations}
 
-AEM Forms では、サービスによって実行される操作には、有効期間が短い（同期）操作または有効期間が長い（非同期）操作があります。 有効期間が短い操作は、呼び出された同じスレッドで同期して完了します。 また、応答が完了してから続行します。
+AEM Forms では、サービスによって実行される操作には、有効期間が短い（同期）操作または有効期間が長い（非同期）操作があります。 有効期間が短い操作は、呼び出された同じスレッドで同期して完了します。 これらの操作は、応答を待ってから続行します。
 
-有効期間が長い操作は、複数のシステムにまたがったり、さらには組織を越えて展開したりします。例えば、複数の自動タスクおよび手動タスクを統合する大規模なソリューションの一部として、顧客がローン申し込みフォームに入力して送信する場合などです。 このような操作は応答を待つ間続きます。 有効期間が長い操作は、基礎となる作業を非同期に実行し、本来であれば完了まで待つ必要があったリソースの実行を可能にします。 有効期間が短い操作とは異なり、有効期間が長い操作が呼び出されると、ワークマネージャーはその完了を考慮しません。 システムが同じサービス上の別の操作をリクエストしたり、ユーザーがフォームを送信したりするなど、別の外部のトリガーによって操作の完了が発生します。
+有効期間が長い操作は、複数のシステムにまたがったり、さらには組織を越えて展開したりします。例えば、複数の自動タスクおよび手動タスクを統合する大規模なソリューションの一部として、顧客がローン申し込みフォームに入力して送信する場合などです。 このような操作は応答を待つ間続きます。 有効期間が長い操作は、その基礎となる処理を非同期に実行するため、完了を待っている間もリソースを他の処理に使用できます。 有効期間が短い操作とは異なり、有効期間が長い操作が呼び出されると、ワークマネージャーはその完了を考慮しません。 システムが同じサービス上の別の操作をリクエストしたり、ユーザーがフォームを送信したりするなど、別の外部のトリガーによって操作の完了が発生します。
 
 ## ワークマネージャーについて {#about-work-manager}
 
@@ -36,7 +50,7 @@ AEM Forms（および以前のバージョン）では、非同期に操作を�
 
 非同期操作は次の方法で処理されます。
 
-1. ワークマネージャーで、実行予定の作業項目が受信されます。
+1. ワークマネージャーは、実行する作業項目を受け取ります。
 1. ワークマネージャーは作業項目をデータベースのテーブルに保存し、固有の識別子を作業項目に割り当てます。 データベースレコードには、作業項目の実行に必要なすべての情報が含まれます。
 1. ワークマネージャースレッドは、スレッドが空いたときに作業項目を取得します。 作業項目を取得する前に、必要なサービスが開始されているかどうか、次の作業項目を取得するために十分なヒープサイズがあるかどうか、作業項目を処理するために十分な CPU サイクルがあるかどうかがスレッドによってチェックされます。 また、ワークマネージャーでは作業項目のスケジュール時に作業項目の属性（優先度など）も評価されます。
 
@@ -104,7 +118,7 @@ AEM Forms 管理者は、ヘルスモニターを使用してワークマネー�
 
 1. WebSphere Administrative Console のナビゲーションツリーで、Servers／Server Types／WebSphere application servers をクリックします。
 1. 右側のパネルで、サーバー名をクリックします。
-1. 「Server Infrastructure」で、Java and forms workflow／Process Definition をクリックします。
+1. 「Server Infrastructure」で、Java and Forms Workflow／Process Definition をクリックします。
 1. 「その他のプロパティ」で「Java 仮想マシン」をクリックします。
 1. 「Generic JVM arguments」ボックスに、必要な引数を入力します。
 1. 「OK」または「Apply」をクリックし、「Save directly to master configuration」をクリックします。

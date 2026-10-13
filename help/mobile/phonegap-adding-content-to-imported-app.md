@@ -1,6 +1,6 @@
 ---
 title: ハイブリッドアプリの AEM Mobile 対応
-description: ハイブリッドアプリについて説明します。 Experience Managerのアプリは一般的に 2 つの部分に分かれています。 「シェル」と「コンテンツ」およびこのページでは、これらのトピックに関する詳細なインサイトを提供します。
+description: ハイブリッドアプリについて詳しく見る。 Experience Managerのアプリは一般にふたつの部分に分かれています。 このページでは、これらのトピックに関するより多くのinsightを提供します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -10,39 +10,43 @@ exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '738'
 ht-degree: 2%
-
 ---
-
-# ハイブリッドアプリのAdobe Experience Manager Mobile対応{#is-your-hybrid-app-ready-for-aem-mobile}
+# ハイブリッドアプリでAdobe Experience Manager Mobileを利用する準備ができましたか？{#is-your-hybrid-app-ready-for-aem-mobile}
 
 {{ue-over-mobile}}
 
-Hybrid PhoneGap または Cordova アプリをAEMに読み込んだということですね。 オーサリング可能なコンテンツをアプリに追加する場合があります。 このタスクを実行するには、AEM アプリの構造に関する一般的な知識が必要です。 AEMのアプリは通常、2 つの部分に分かれています。 「シェル」と「コンテンツ」。 「シェル」は、PhoneGap 設定ファイル、アプリフレームワーク、ナビゲーションコントロールなど、アプリの静的部分で構成されます。 インポートしたアーカイブの内容は、シェルの一部として保存されます。 このドキュメントのコンテキストでは、シェルは、アプリ開発者が作成したハイブリッド PhoneGap アプリの、AEMが作成していないすべてのコンテンツです。
+ハイブリッド PhoneGapまたはCordova アプリをAEMに読み込んだので、次は何を実行しますか？ アプリにオーサブルコンテンツを追加する場合に最適です。 このタスクを実行するには、AEM アプリの構造に関する一般的な理解が必要です。 AEMのアプリは一般にふたつの部分に分かれています。 「シェル」と「コンテンツ」です。 「シェル」は、PhoneGap設定ファイル、アプリフレームワーク、ナビゲーションコントロールなど、アプリの静的部分で構成されます。 インポートしたアーカイブの内容は、シェルの一部として保存されます。 このドキュメントのコンテキストでは、シェルは、アプリ開発者が作成したHybrid PhoneGap アプリのAEM以外で作成されたすべてのコンテンツです。
 
-コンテンツとは、AEM Developer によって構築されたAEMで作成される、コンポーネント、テンプレートおよび作成されたページを指します。 コンテンツは、開発者向けコンテンツまたは作成したコンテンツとして分類されます。 コンポーネント、デザインおよびページテンプレートは、開発者によって作成されるので、開発コンテンツと見なされます。 オーサーコンテンツは、コンポーネントとテンプレートを使用して作成されたページです。 これらのページは通常、Designerまたはマーケターが作成します。
+コンテンツとは、AEM Developerによって構築されたAEMで作成されたコンポーネント、テンプレート、オーサリングページを指します。 コンテンツは、開発者コンテンツまたはオーサリングコンテンツとして分類されます。 コンポーネント、デザイン、ページテンプレートは、開発者が作成したものなので、開発コンテンツとみなされます。 Author-contentsは、コンポーネントとテンプレートを使用して作成されたページです。 これらのページは通常、Designerまたはマーケターが作成します。
 
-作成したAEM ページをハイブリッドアプリに追加するには、アプリ開発者とAEM開発者の間で調整する必要があります。 作成済みコンテンツを追加するアプリ内の任意の場所で、アプリ開発者は、Experience Managerーでオーバーレイできる構造でこれらのページを整理する必要があります。 アプリ開発者は、Experience Managerが作成したコンテンツが追加されるパスをExperience Manager開発者に提供できる必要があります。 次に、ハイブリッドアプリでプレースホルダーページを提供します。このページは、Experience Manager開発者がページコンテンツをオーサリングした後で置き換えられます。
+ハイブリッド版アプリに作成済みのAEM ページを追加するには、アプリ開発者とAEM開発者の調整が必要です。 アプリ内でオーサリングされたコンテンツを追加する場合、アプリ開発者は、Experience Managerでオーバーレイできる構造でこれらのページを整理する必要があります。 アプリ開発者は、Experience Managerで作成されたコンテンツが追加される場所へのパスをExperience Manager開発者に提供できる必要があります。 次に、Experience Manager開発者がページコンテンツを作成した後に置き換えられるプレースホルダーページをハイブリッドアプリで指定します。
 
-説明をわかりやすくするために、AEM Experience Cloudが使用されています。概念を説明するためのAEM Mobile ハイブリッドリファレンス。 ハイブリッド参照アプリは、サイドメニューを含むようこそページで構成されています。
+説明を簡単にするために、AEM Experience Cloudが使用されています。AEM Mobile ハイブリッドリファレンスを使用して、コンセプトを説明します。 ハイブリッドリファレンスアプリは、サイドメニュー付きのウェルカムページで構成されます。
 
 ![chlimage_1-76](assets/chlimage_1-76.png)
 
-この例では、アプリケーションのようこそページを作成します。 ソース [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75) を確認します。 アプリ開発者は、ようこそページを定義し、アプリによってレンダリングされるページのテンプレートを提供しています。 このページでは、アプリ開発者とAEM開発者が調整する必要があります。 ハイブリッド参照アプリのようこそページテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されています。 AEM開発者はAEM リポジトリで同じパスを使用してようこそページを作成するので、このパスは重要です。
+この例では、アプリケーションのようこそページを作成します。 ソース [https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/hybrid-app/www/js/app.js#L75)を参照しています。 アプリ開発者がウェルカムページを定義し、アプリによってレンダリングされるページのテンプレートを提供していることに注意してください。 アプリ開発者とAEM開発者が連携する必要があります。 ハイブリッド参照アプリのウェルカムページテンプレートへのパスは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」として定義されます。 AEM開発者は、同じパスを使用してAEM リポジトリ内のウェルカムページをオーサリングするので、このパスは重要です。
 
 ![chlimage_1-77](assets/chlimage_1-77.png)
 
-ハイブリッドアプリとAEMで作成したコンテンツが同じパスを使用することは重要です。なぜなら、ハイブリッドアプリには、コンテンツ同期を使用してコンテンツをオーバーレイし、新しいページを追加する機能が必要だからです。 ハイブリッドアプリがAEMに読み込まれる際、読み込みプロセスの一環として、コンテンツ同期設定が設定されます。
+ハイブリッドアプリとAEMで作成されたコンテンツは、同じパスを使用することが重要です。これは、コンテンツシンクを使用してコンテンツをオーバーレイし、ハイブリッドアプリに新しいページを追加する機能に依存しているためです。 ハイブリッドアプリをAEMに読み込むと、インポートプロセスの一部としてContent Sync設定が設定されます。
 
 ![chlimage_1-78](assets/chlimage_1-78.png)
 
-アプリダッシュボードから「Sourceをダウンロード」すると、これらのコンテンツ同期スクリプトが実行されて、ハイブリッドアプリのアーカイブが作成されます。
+アプリダッシュボードから「Sourceをダウンロード」すると、これらのContentSync スクリプトが実行され、ハイブリッドアプリのアーカイブが作成されます。
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 
-ContentSync はまず、ハイブリッドアプリのすべてのアプリ開発コンテンツが保存されているアプリの「シェル」を取り込みます。 次に、アプリの「コンテンツ」を取り込みます。 ここで、「shell」内に、「content」内と同じパスを持つページがある場合、「shell」内のページは「content」内のページに（置き換えて）置き換えられます。 そのため、ハイブリッド参照アプリのサンプルでは、パスが「content/mobileapps/hybrid-reference-app/en/welcome.template.html」と同じAEMでページが作成されている場合、ContentSync の実行時に、ハイブリッド参照アプリの一部であったページがオーバーレイされます。 その場所にあるAEM内の内容でオーバーレイされます。 オーバーレイは ContentSync によって処理されるので、アプリを使用しているユーザーにとっては、AEMで作成したコンテンツを含んだアプリのアップデートはシームレスに見え、アプリを再構築する必要はありません。 その結果、アプリケーションを実行すると、ようこそページは次のように表示されます。
+ContentSyncは最初にアプリの「シェル」を引き出します。これは、ハイブリッドアプリのアプリ開発コンテンツがすべて保存される場所です。 そして、アプリの「コンテンツ」を取り込みます。 これで、「コンテンツ」と同じパスを持つ「シェル」内のページがある場合、「シェル」の下のページは「コンテンツ」の下のページに（置き換えられます）。 そのため、ハイブリッド参照アプリのサンプルでは、「content/mobileapps/hybrid-reference-app/en/welcome.template.html」と同じパスを持つAEMでページが作成された場合、ContentSyncが実行されると、ハイブリッド参照アプリの一部であったページがオーバーレイされます。 その場所にAEMにあるものを置いてオーバーレイします。 オーバーレイはContentSyncによって管理されるので、アプリを使用しているユーザーは、AEMで作成されたコンテンツを使用してアプリを更新すると、シームレスに見え、アプリを再構築する必要はありません。 その結果、アプリを実行すると、ようこそページが次のように表示されます。
 
 ![chlimage_1-80](assets/chlimage_1-80.png)

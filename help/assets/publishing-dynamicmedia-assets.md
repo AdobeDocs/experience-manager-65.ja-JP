@@ -9,19 +9,33 @@ role: User, Admin
 exl-id: 750627fc-2a29-43ff-867e-55cb2e371043
 feature: Publishing
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f59890ff-de81-47d5-9ef8-7ab2dd10c6c3
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: f901afa4-5613-4581-add5-219fa5f03fb5
+    internal-label: Publishing
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 97%
-
+source-wordcount: '497'
+ht-degree: 100%
 ---
-
 # Dynamic Media アセットの公開 {#publishing-dynamic-media-assets}
 
 Dynamic Media アセットを公開するには、既にアップロード済みのアセットを選択し、「**[!UICONTROL 公開]**」または「**[!UICONTROL クイック公開]**」をタップします。 Dynamic Media アセットを公開すると、URL を経由して、または web ページにコードを埋め込むことで、web ページに含めることができます。
 
-また、ユーザーの操作なしで、アップロードしたアセットを即座に公開することもできます。[Dynamic Mediaの設定 – Scene7 モード &#x200B;](config-dms7.md)を参照してください。
-また、フォルダーレベルで&#x200B;**[!UICONTROL 選択的公開]**&#x200B;を使用して、Dynamic MediaまたはAdobe Experience Managerに対して、相互に排他的にアセットを選択して公開することもできます。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
+また、ユーザーの介入なしに、アップロードしたアセットを即座に公開することもできます。 [Dynamic Media - Scene7 モードの設定](config-dms7.md)を参照してください。
+または、フォルダーレベルで「**[!UICONTROL 選択的公開]**」を使用して、相互に排他的なアセットを Dynamic Media または Adobe Experience Manager に選択的に公開することもできます。 詳しくは、[Dynamic Media での選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。
 
 **[!UICONTROL カード表示]**&#x200B;で、アセット名のすぐ下、アセットが発行されたことを示す日時の左側に、小さな地球アイコンが表示されます。 **[!UICONTROL リスト表示]**&#x200B;では、公開されたアセットと公開されていないアセットが「**[!UICONTROL 公開]**」列でわかります。
 

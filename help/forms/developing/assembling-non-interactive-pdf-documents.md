@@ -10,16 +10,30 @@ role: Developer
 exl-id: 4677b9e5-3811-4de3-b4f4-9574b5898486
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1819'
 ht-degree: 100%
-
 ---
-
 # 非インタラクティブ PDF ドキュメントの作成 {#assembling-non-interactive-pdf-documents}
 
-非インタラクティブ PDF ドキュメントは、インタラクティブ PDF フォームを入力として使用することで作成できます。 つまり、ユーザーがフィールドにデータを入力できるフォームがあるとします。 そのフォームをアセンブラーサービスに渡すと、ユーザーがフィールドにデータを入力できない PDF ドキュメントをアセンブラーサービスから受け取ることができます。 このドキュメントが非インタラクティブ PDF フォームです。 例えば、インタラクティブなフォームである住宅ローン申し込みフォームを次の図に示します。
+非インタラクティブ PDF ドキュメントは、インタラクティブ PDF フォームを入力として使用することで作成できます。 つまり、ユーザーがフィールドにデータを入力できるフォームがあるとします。 そのフォームをアセンブラーサービスに渡すと、ユーザーがフィールドにデータを入力できない PDF ドキュメントをアセンブラーサービスから受け取ることができます。 このドキュメントは非インタラクティブ PDF フォームです。 例えば、インタラクティブなフォームである住宅ローン申し込みフォームを次の図に示します。
 
 この説明では、次の DDX ドキュメントが使用されていると仮定します。
 
@@ -39,7 +53,7 @@ ht-degree: 100%
 
 この DDX ドキュメントには `NoXFA` 要素が含まれており、この要素はアセンブラーサービスに非インタラクティブ PDF ドキュメントを返すよう指示します。
 
-アセンブラーサービスは、入力 PDF ドキュメントが Acrobat フォームまたは静的 XFA フォームに基づいていれば、Output サービスが AEM Forms インストール環境に含まれていなくても、非インタラクティブ PDF ドキュメントを作成することができます。 ただし、入力 PDF ドキュメントが動的 XFA フォームの場合は、Output サービスが AEM Forms インストール環境に含まれている必要があります。 動的 XFA フォームの作成時に Output サービスが AEM Forms インストール環境に含まれていない場合は、例外がスローされます。 詳しくは、[ドキュメント Output ストリームの作成](/help/forms/developing/creating-document-output-streams.md)を参照してください。
+アセンブラーサービスは、入力 PDF ドキュメントが Acrobat フォームまたは静的 XFA フォームに基づいていれば、Output サービスが AEM Forms インストール環境に含まれていなくても、非インタラクティブ PDF ドキュメントを作成することができます。 ただし、入力 PDF ドキュメントが動的 XFA フォームの場合は、Output サービスが AEM Forms インストール環境に含まれている必要があります。 動的 XFA フォームのアセンブル時に Output サービスが AEM Forms インストール環境に含まれていない場合は、例外がスローされます。 詳しくは、[ドキュメント Output ストリームの作成](/help/forms/developing/creating-document-output-streams.md)を参照してください。
 
 >[!NOTE]
 >
@@ -62,7 +76,7 @@ ht-degree: 100%
 1. 既存の DDX ドキュメントを参照します。
 1. インタラクティブ PDF ドキュメントを参照します。
 1. 実行時オプションを設定します。
-1. PDF ドキュメントをアセンブリします。
+1. PDF ドキュメントを組み立てます。
 1. 非インタラクティブ PDF ドキュメントを保存します。
 
 **プロジェクトファイルを含める**
@@ -139,7 +153,7 @@ Assembler Service API（Java）を使用して、非インタラクティブ PDF
    * ランタイムオプションを格納する `AssemblerOptionSpec` オブジェクトをコンストラクタで作成します。
    * `AssemblerOptionSpec` オブジェクトに属するメソッドを呼び出して、ビジネス要件を満たすよう実行時オプションを設定します。 例えば、エラーが発生したときにジョブの処理を続行するようにアセンブラーサービスに指示するには、`AssemblerOptionSpec` オブジェクトの `setFailOnError` メソッドを呼び出して `false` を渡します。
 
-1. PDF ドキュメントをアセンブリします。
+1. PDF ドキュメントを組み立てます。
 
    `AssemblerServiceClient` オブジェクトの `invokeOneDocument` メソッドを呼び出して、以下の値を渡します。
 
@@ -154,11 +168,11 @@ Assembler Service API（Java）を使用して、非インタラクティブ PDF
    * `java.io.File` オブジェクトを作成し、ファイル拡張子が .pdf であることを確認します。
    * `Document` オブジェクトの `copyToFile` メソッドを呼び出して、`Document` オブジェクトのコンテンツをファイルにコピーします。 必ず `invokeOneDocument` メソッドが返した `Document` オブジェクトを使用するようにしてください。
 
-* 「クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントのアセンブリ」
+* 「クイックスタート（SOAP モード）：Java API を使用した非インタラクティブ PDF ドキュメントのアセンブリ」
 
 ## Web サービス API を使用した非インタラクティブ PDF ドキュメントのアセンブリ {#assemble-a-non-interactive-pdf-document-using-the-web-service-api}
 
-Assembler Service API（web サービス）を使用して、非インタラクティブ PDF ドキュメントをアセンブリします。
+アセンブラーサービス API（web サービス）を使用して、非インタラクティブ PDF ドキュメントをアセンブルします。
 
 1. プロジェクトファイルを含めます。
 
@@ -176,10 +190,10 @@ Assembler Service API（web サービス）を使用して、非インタラク�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AssemblerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AssemblerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 既存の DDX ドキュメントを参照します。
 

@@ -9,13 +9,29 @@ role: Developer
 exl-id: 34069505-a6cf-4540-932b-604f81823178
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 98%
-
 ---
-
 # Signature サービス Java API クイックスタート（SOAP） {#signature-service-java-api-quickstart-soap}
 
 AEM Forms JEE Signature サービスでは、次の Java API クイックスタート (SOAP) を使用できます。
@@ -40,11 +56,11 @@ AEM Forms JEE Signature サービスでは、次の Java API クイックスタ�
 
 [クイックスタート（SOAP モード）：Java API を使用したドキュメントのタイムスタンプの適用](#quick-start-soap-mode-apply-document-timestamp-using-the-java-api)
 
-AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使用して実行できます。接続モードは SOAP に設定する必要があります。
+AEM Forms JEE の操作は、AEM Forms の厳密に型指定された API を使用して実行できます。接続モードは SOAP に設定する必要があります。
 
 >[!NOTE]
 >
->「AEM Forms によるプログラミング」のクイックスタートは、JBoss アプリケーションサーバーとMicrosoft Windows オペレーティングシステムにデプロイされる Forms サーバーに基づいています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
+>「AEM Forms によるプログラミング」のクイックスタートは、JBoss アプリケーションサーバーおよび Microsoft Windows オペレーティングシステムに Forms サーバーがデプロイされていることを前提としています。 ただし、UNIX などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを必ず指定してください。 （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照）。
 
 ## クイックスタート（SOAP モード）：Java API を使用した PDF ドキュメントへの署名フィールドの追加 {#quick-start-soap-mode-adding-a-signature-field-to-a-pdf-document-using-the-java-api}
 
@@ -270,7 +286,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した署名フィールドの変更 {#quick-start-soap-mode-modifying-a-signature-field-using-the-java-api}
 
-次の Java コードの例では、署名フィールドに署名が適用されている場合にフォーム内のすべてのフィールドをロックし、変更が許可されていないことを確認して、SignatureField1 という名前の署名フィールドを変更します。 Signature サービスが変更された署名フィールドを含む PDF ドキュメントを返すと、その PDF ドキュメントは LoanSig.pdf という名前の PDF ファイルとして保存されます。 （この例では、Signature サービスに渡されるPDF ファイルを上書きします）。 （[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照してください）。
+次の Java コードの例では、署名フィールドに署名が適用されたときにフォーム内のすべてのフィールドをロックし、変更が許可されないようにして、SignatureField1 という名前の署名フィールドを変更します。 Signature サービスが変更された署名フィールドを含む PDF ドキュメントを返すと、その PDF ドキュメントは LoanSig.pdf という名前の PDF ファイルとして保存されます。 （この例では、Signature サービスに渡されるPDF ファイルを上書きします）。 （[署名フィールドの変更](/help/forms/developing/digitally-signing-certifying-documents.md#modifying-signature-fields)を参照してください）。
 
 ```java
  /*
@@ -908,7 +924,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用したデジタル署名の検証 {#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api}
 
-次の Java コードの例では、LoanSigned.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。 （[電子署名の検証](#verifying-digital-signatures)を参照してください）。
+次の Java コードの例では、LoanSigned.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションはベストエフォートに設定されます。 （[電子署名の検証](#verifying-digital-signatures)を参照してください）。
 
 ```java
  /*
@@ -1072,7 +1088,7 @@ AEM Forms JEE の操作は、AEM Forms で厳密に型指定された API を使
 
 ## クイックスタート（SOAP モード）：Java API を使用した複数のデジタル署名の検証 {#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api}
 
-次の Java コードの例では、LoanAllSigs.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内にある複数のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションは最適に設定されます。 （[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
+次の Java コードの例では、LoanAllSigs.pdf という名前の PDF ファイルに基づいた署名済み PDF ドキュメント内にある複数のデジタル署名を検証します。 検証時間は現在の時間に設定され、失効確認オプションはベストエフォートに設定されます。 （[複数の電子署名の検証](signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)を参照してください）。
 
 ```java
  /*

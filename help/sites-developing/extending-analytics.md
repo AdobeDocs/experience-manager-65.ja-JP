@@ -9,18 +9,27 @@ exl-id: a71d20e6-0321-4afb-95fe-6de8b7b37245
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Developer
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '492'
 ht-degree: 100%
-
 ---
-
 # イベント追跡の拡張{#extending-event-tracking}
 
-AEM Analytics では、web サイトでのユーザーインタラクションを追跡できます。開発者は次の作業が必要になる場合があります。
+AEM Analytics では、web サイトでのユーザーインタラクションを追跡できます。 開発者は次の作業が必要になる場合があります。
 
-* 訪問者がコンポーネントとどのようなやり取りを行っているかの追跡。これを行うには、[カスタムイベント](#custom-events)を使用します。
+* 訪問者がコンポーネントとどのようなやり取りを行っているかの追跡。 これを行うには、[カスタムイベント](#custom-events)を使用します。
 * [ContextHub の値へのアクセス](/help/sites-developing/extending-analytics.md#accessing-values-in-the-contexthub)。
 * [レコードのコールバックの追加](#adding-record-callbacks)。
 
@@ -32,11 +41,11 @@ AEM Analytics では、web サイトでのユーザーインタラクション�
 
 ## カスタムイベント {#custom-events}
 
-カスタムイベントはページ内の特定のコンポーネントの可用性に依存する要素を追跡します。また、ページコンポーネントは別のコンポーネントとして扱われるので、テンプレートに固有のイベントも含まれます。
+カスタムイベントはページ内の特定のコンポーネントの可用性に依存する要素を追跡します。 また、ページコンポーネントは別のコンポーネントとして扱われるので、テンプレートに固有のイベントも含まれます。
 
 ### ページの読み込み時のカスタムイベントの追跡 {#tracking-custom-events-on-page-load}
 
-これを行うには、疑似属性 `data-tracking`（下位互換性のために、古いレコード属性がまだサポートされています）を使用します。これは任意の HTML タグに追加できます。
+これを行うには、疑似属性 `data-tracking`（下位互換性のために、古いレコード属性がまだサポートされています）を使用します。 これは任意の HTML タグに追加できます。
 
 `data-tracking` の構文は次のとおりです。
 
@@ -59,7 +68,7 @@ AEM Analytics では、web サイトでのユーザーインタラクション�
 </span>
 ```
 
-ページの読み込み時に、すべての `data-tracking` 属性が収集されて ContextHub のイベントストアに追加され、Adobe Analytics イベントにマッピングできるようになります。マッピングされないイベントは Adobe Analytics では追跡されません。マッピングイベントについて詳しくは、[Adobe Analytics への接続](/help/sites-administering/adobeanalytics.md)を参照してください。
+ページの読み込み時に、すべての `data-tracking` 属性が収集されて ContextHub のイベントストアに追加され、Adobe Analytics イベントにマッピングできるようになります。 マッピングされないイベントは Adobe Analytics では追跡されません。 マッピングイベントについて詳しくは、[Adobe Analytics への接続](/help/sites-administering/adobeanalytics.md)を参照してください。
 
 ### ページの読み込み後のカスタムイベントの追跡 {#tracking-custom-events-after-page-load}
 
@@ -87,7 +96,7 @@ AEM Analytics では、web サイトでのユーザーインタラクション�
 
 ## ContextHub の値へのアクセス {#accessing-values-in-the-contexthub}
 
-ContextHub JavaScript API には、指定したストアを返す `getStore(name)` 関数があります（使用可能な場合）。このストアには、指定したキーの値を返す `getItem(key)` 関数があります（使用可能な場合）。`getKeys()` 関数を使用すると、特定のストアに対して定義されたキーの配列を取得できます。
+ContextHub JavaScript API には、指定したストアを返す `getStore(name)` 関数があります（使用可能な場合）。 このストアには、指定したキーの値を返す `getItem(key)` 関数があります（使用可能な場合）。 `getKeys()` 関数を使用すると、特定のストアに対して定義されたキーの配列を取得できます。
 
 `ContextHub.getStore(name).eventing.on(ContextHub.Constants.EVENT_STORE_UPDATED, handler, selector, triggerForPastEvents)` 関数を使用して関数をバインドすると、ストアの値が変更されたことを知らせる通知を受けることができます。
 
@@ -111,6 +120,6 @@ ContextHub の利用開始の通知を受けるには、`ContextHub.eventing.on(
 
 関数 `CQ_Analytics.registerBeforeCallback(callback,rank)` と `CQ_Analytics.registerAfterCallback(callback,rank)` を使用して、before コールバックと after コールバックを登録します。
 
-どちらの関数も、先頭の引数では関数を、2 番目の引数ではランクを受け取ります。このランクによって、コールバックの実行順序が決定されます。
+どちらの関数も、先頭の引数では関数を、2 番目の引数ではランキングを受け取ります。このランキングによって、コールバックの実行順序が決定されます。
 
 コールバックが false を返す場合、実行チェーンの後続のコールバックは実行されません。

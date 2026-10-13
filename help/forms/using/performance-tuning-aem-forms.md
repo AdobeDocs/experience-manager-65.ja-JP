@@ -9,13 +9,27 @@ role: Admin,User
 exl-id: 22926757-9cdb-4f8a-9bd9-16ddbc3f954a
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 99%
-
+source-wordcount: '918'
+ht-degree: 100%
 ---
-
 # AEM Forms サーバーのパフォーマンスチューニング{#performance-tuning-of-aem-forms-server}
 
 この記事では、ボトルネックを減らし、AEM Forms デプロイメントのパフォーマンスを最適化するために実装できる戦略とベストプラクティスについて説明します。
@@ -92,8 +106,8 @@ Apache は HTTP プロトコルを使用して CRX と通信できます。 こ�
    >
    >Linux® の場合、デフォルトの `APACHE_HOME` は `/etc/httpd/` です。
 
-1. crxのポート 4502でプロキシを設定します。
-次の設定を`APACHE_HOME/conf/httpd.conf`設定ファイルに追加します。
+1. crx のポート 4502 のプロキシを設定します。
+次の設定を `APACHE_HOME/conf/httpd.conf` 設定ファイルに追加します。
 
    ```shell
    ProxyPass / https://<server>:4502/
@@ -146,26 +160,26 @@ Apache は HTTP プロトコルを使用して CRX と通信できます。 こ�
 
 * AEM のインストールディレクトリ。 このディレクトリ全体を除外できない場合は、以下の項目を除外してください。
 
-   * [AEM インストールディレクトリ]\crx-repository\temp
-   * [AEM インストールディレクトリ]\crx-repository\repository
-   * [AEM インストールディレクトリ]\crx-repository\launchpad
+  * [AEM インストールディレクトリ]\crx-repository\temp
+  * [AEM インストールディレクトリ]\crx-repository\repository
+  * [AEM インストールディレクトリ]\crx-repository\launchpad
 
 * アプリケーションサーバーの一時ディレクトリ。 デフォルトの場所は以下のとおりです。
 
-   * （JBoss®）[AEM installation directory]\jboss\standalone\tmp
-   * （WebLogic）\Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
-   * （WebSphere®）\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
+  * （JBoss®）[AEM installation directory]\jboss\standalone\tmp
+  * （WebLogic）\Oracle\Middleware\user_projects\domains\LCDomain\servers\LCServer1\tmp
+  * （WebSphere®）\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv01\temp
 
 * **（AEM Forms on JEE のみ）**&#x200B;グローバルドキュメントストレージ（GDS）ディレクトリ。 デフォルトの場所は以下のとおりです。
 
-   * （JBoss®）[appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
-   * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
-   * （WebSphere®）[appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
+  * （JBoss®）[appserver root]/server/&#39;server&#39;/svcnative/DocumentStorage
+  * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
+  * （WebSphere®）[appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
 * **（AEM Forms on JEE のみ）** AEM Forms サーバーのログと一時ディレクトリ。 デフォルトの場所は以下のとおりです。
 
-   * サーバーログ - [AEM Forms インストールディレクトリ]\Adobe\AEM forms\[app-server]\server\all\logs
-   * 一時ディレクトリ - [AEM Forms インストールディレクトリ]\temp
+  * サーバーログ - [AEM Forms インストールディレクトリ]\Adobe\AEM forms\[app-server]\server\all\logs
+  * 一時ディレクトリ - [AEM Forms インストールディレクトリ]\temp
 
 >[!NOTE]
 >

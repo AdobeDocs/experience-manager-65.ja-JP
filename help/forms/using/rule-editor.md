@@ -9,16 +9,32 @@ docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6846'
+source-wordcount: '6838'
 ht-degree: 98%
-
 ---
-
 # アダプティブフォームのルールエディター{#adaptive-forms-rule-editor}
 
-<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を示すものであり、優れたユーザーエクスペリエンスを実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
+<span class="preview">[アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
 
 | バージョン | 記事リンク |
 | -------- | ---------------------------- |
@@ -374,7 +390,7 @@ When （オプション）：
 
 ルールエディターのユーザーインターフェイスの左側のペインには、「**[!UICONTROL フォームオブジェクト]**」と「**[!UICONTROL 関数]**」の 2 つのタブがあります。
 
-「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。 ここには、オブジェクトのタイトルとタイプが表示されます。 ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。 オブジェクトまたは関数をプレースホルダーにドラッグ＆ドロップしてルールの作成や編集を行うと、適切な値の型がプレースホルダーに自動的に取り込まれるます。
+「フォームオブジェクト」タブには、アダプティブフォームに含まれているオブジェクトがすべて階層表示されます。 ここには、オブジェクトのタイトルとタイプが表示されます。 ルールの作成時は、フォームオブジェクトをルールエディターまでドラッグ＆ドロップすることができます。 オブジェクトまたは関数をプレースホルダーにドラッグ＆ドロップしてルールの作成や編集を行うと、適切な値の型がプレースホルダーに自動的に取り込まれます。
 
 1 つ以上の有効なルールが適用されているフォームオブジェクトには、緑のドットが付いています。 フォームオブジェクトに適用されているルールのいずれかが無効な場合、フォームオブジェクトには黄色のドットが付きます。
 
@@ -390,7 +406,7 @@ When （オプション）：
 
 ### C. フォームオブジェクトと関数の切り替え {#c-form-objects-and-functions-toggle-br}
 
-切替スイッチボタンをタップすると、フォームオブジェクトと関数ペインが切り替わります。
+切替スイッチをタップすると、フォームオブジェクトと関数のペインの表示が切り替わります。
 
 ### D. ルールのビジュアルエディター {#d-visual-rule-editor}
 
@@ -601,10 +617,10 @@ forms-power-users グループに追加されたユーザーは、コードエ�
 関数で使用されるパラメーターを表示します。 関数には、複数のパラメータタグを設けることができます。各パラメーターは、実行順序に応じて 1 個のタグを設けることができます。
   `{type}` は、パラメータータイプを表します。 許可されているパラメータータイプは、以下のとおりです。
 
-   1. 文字列
-   1. 数値
-   1. ブール値
-   1. 対象範囲
+  1. 文字列
+  1. 数値
+  1. ブール値
+  1. 対象範囲
 
   範囲を使用して、アダプティブフォームのフィールドを参照します。 フォームが遅延読み込みを使用している場合は、`scope`を使用してフィールドにアクセスできます。 フィールドは、フィールドが読み込まれたときか、フィールドがグローバルとしてマークされているときにアクセスできます。
 
@@ -616,9 +632,9 @@ forms-power-users グループに追加されたユーザーは、コードエ�
 目的などの、関数に関する情報を追加します。
   {type} は、関数の戻り値のタイプを表します。 許可されている戻り値のタイプは次のとおりです。
 
-   1. 文字列
-   1. 数値
-   1. ブール値
+  1. 文字列
+  1. 数値
+  1. ブール値
 
   他のすべての戻り値のタイプは、上記のいずれかに分類されます。 「なし」はサポートされていません。 上記のタイプのいずれかを選択していることを確認してください。 戻り値のタイプでは、大文字と小文字が区別されません。
 

@@ -9,13 +9,22 @@ exl-id: a7281ca0-461f-4762-a631-6bb539596200
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 6fb844ea428c15adab71503dde6138e46eabf0a3
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 97%
-
 ---
-
 
 # AEM 6.5 と Adobe Campaign Classic の統合 {#integrating-campaign-classic}
 
@@ -43,8 +52,8 @@ AEM と Campaign の統合には、両方のソリューションでいくつか
 ## 前提条件 {#prerequisites}
 
 * Adobe Campaign Classic への管理者アクセス
-   * 統合を実行するには、設定済みのデータベースを含む、動作中の Adobe Campaign Classic インスタンスが必要です。
-   * Adobe Campaign Classic のセットアップおよび設定方法に関する詳細が必要な場合は、[Adobe Campaign Classic ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)、特にインストールおよび設定ガイドを参照してください。
+  * 統合を実行するには、設定済みのデータベースを含む、動作中の Adobe Campaign Classic インスタンスが必要です。
+  * Adobe Campaign Classic のセットアップおよび設定方法に関する詳細が必要な場合は、[Adobe Campaign Classic ドキュメント](https://experienceleague.adobe.com/docs/campaign-classic/using/campaign-classic-home.html?lang=ja)、特にインストールおよび設定ガイドを参照してください。
 * AEM への管理者アクセス
 
 ## Campaign への AEM 統合パッケージのインストール {#install-package}
@@ -242,8 +251,8 @@ Campaign が AEM と通信するには、AEM で `campaign-remote` ユーザー�
 1. このアカウントの「**一般**」タブで、[campaign-remote ユーザーパスワードの設定](#set-campaign-remote-password)手順で定義したユーザー情報を入力します。
 
    * **サーバー** - AEM オーサーサーバーのアドレス
-      * AEM オーサーサーバーは、Adobe Campaign Classic サーバーインスタンスからアクセスできる必要があります。
-      * サーバーアドレスは、末尾がスラッシュで&#x200B;**終わらない**&#x200B;ようにします。
+     * AEM オーサーサーバーは、Adobe Campaign Classic サーバーインスタンスからアクセスできる必要があります。
+     * サーバーアドレスは、末尾がスラッシュで&#x200B;**終わらない**&#x200B;ようにします。
    * **アカウント** - デフォルトでは、これは[campaign-remote ユーザーのパスワード設定](#set-campaign-remote-password)手順で AEM に設定した `campaign-remote` ユーザーです。
    * **パスワード** - このパスワードは、[campaign-remote ユーザーのパスワード設定](#set-campaign-remote-password)手順で AEM に設定した `campaign-remote` ユーザーと同じです。
 

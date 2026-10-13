@@ -10,13 +10,26 @@ exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1558'
 ht-degree: 100%
-
 ---
-
 # ページオーサリングのクイックガイド{#quick-guide-to-authoring-pages}
 
 ここでは、AEM でページコンテンツをオーサリングする際の主なアクションについて、概要レベルのクイックガイドとなる手順を示します。
@@ -39,20 +52,20 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **作成**
 
-   * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
+  * このボタンは多くのコンソールで使用できます。表示されるオプションはコンテキストに依存するため、シナリオによって変わることがあります。
 
 * フォルダー内のページの並べ替え
 
-   * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)で実行できます。 変更が適用され、他のビューに表示されます。
+  * これは[リスト表示](/help/sites-authoring/basic-handling.md#list-view)で実行できます。 変更が適用され、他のビューに表示されます。
 
 #### ページオーサリング {#page-authoring}
 
 * リンクのナビゲーション
 
-   * **編集**&#x200B;モードでは&#x200B;***リンクを使用して移動することはできません***。 リンクを使用して移動するには、次のいずれかを使用して[ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages)する必要があります。
+  * **編集**&#x200B;モードでは&#x200B;***リンクを使用して移動することはできません***。 リンクを使用して移動するには、次のいずれかを使用して[ページをプレビュー](/help/sites-authoring/editing-content.md#previewing-pages)する必要があります。
 
-      * [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)
-      * [公開済みとして表示](/help/sites-authoring/editing-content.md#view-as-published)
+    * [プレビューモード](/help/sites-authoring/editing-content.md#preview-mode)
+    * [公開済みとして表示](/help/sites-authoring/editing-content.md#view-as-published)
 
 * バージョンは、ページエディターで開始または作成されるわけではありません。（選択したリソースの「**作成**」または「[タイムライン](/help/sites-authoring/basic-handling.md#timeline)」を通じて）Sites コンソールで行われるようになりました。
 
@@ -111,8 +124,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * 次のように[必要なリソースを選択](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources)して、選択モードを開始します。
 
-      * モバイルデバイス：選択＆ホールド
-      * デスクトップ：[クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions) - チェックマークアイコン
+     * モバイルデバイス：選択＆ホールド
+     * デスクトップ：[クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions) - チェックマークアイコン
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
@@ -147,9 +160,9 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * 次の方法を使用して、[新しいコンポーネントをページに追加](/help/sites-authoring/editing-content.md#inserting-a-component)します。
 
-      * サイドパネルを開きます。
-      * 「コンポーネント」タブ（[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)）を選択します。
-      * 必要なコンポーネントをページにドラッグします。
+     * サイドパネルを開きます。
+     * 「コンポーネント」タブ（[コンポーネントブラウザー](/help/sites-authoring/author-environment-tools.md#components-browser)）を選択します。
+     * 必要なコンポーネントをページにドラッグします。
 
      サイドパネルは、次のアイコンで開く（および閉じる）ことができます。
 
@@ -157,24 +170,24 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * 次の操作を実行して、ページ上の[既存のコンポーネントのコンテンツを編集します](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)。
 
-      * いずれかをクリックしてコンポーネントツールバーを開きます。 「**編集**」（鉛筆）アイコンを使用してダイアログを開きます。
-      * 選択＆ホールドするか、ゆっくりダブルクリックして、コンポーネント用のインプレースエディターを開きます。 使用可能なアクションが表示されます（一部のコンポーネントでは、アクションが制限されます）。
-      * 実行できるすべてのアクションを表示するには、次のアイコンを使用して全画面表示モードに切り替えます。
+     * いずれかをクリックしてコンポーネントツールバーを開きます。 「**編集**」（鉛筆）アイコンを使用してダイアログを開きます。
+     * 選択＆ホールドするか、ゆっくりダブルクリックして、コンポーネント用のインプレースエディターを開きます。 使用可能なアクションが表示されます（一部のコンポーネントでは、アクションが制限されます）。
+     * 実行できるすべてのアクションを表示するには、次のアイコンを使用して全画面表示モードに切り替えます。
 
      ![全画面表示モード](do-not-localize/screen_shot_2018-03-21at160706.png)
 
    * [既存のコンポーネントのプロパティを設定します。](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * いずれかをクリックしてコンポーネントツールバーを開きます。 **設定**（スパナ）アイコンを使用してダイアログを開きます。
+     * いずれかをクリックしてコンポーネントツールバーを開きます。 **設定**（スパナ）アイコンを使用してダイアログを開きます。
 
    * 次のいずれかの方法で[コンポーネントを移動します](/help/sites-authoring/editing-content.md#moving-a-component)。
 
-      * 必要なコンポーネントを新しい場所にドラッグします。
-      * いずれかをクリックしてコンポーネントツールバーを開きます。 必要に応じて、「**カット**」アイコン、続いて「**ペースト**」アイコンを使用します。
+     * 必要なコンポーネントを新しい場所にドラッグします。
+     * いずれかをクリックしてコンポーネントツールバーを開きます。 必要に応じて、「**カット**」アイコン、続いて「**ペースト**」アイコンを使用します。
 
    * コンポーネントを[コピー（およびペースト）](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)します。
 
-      * いずれかをクリックしてコンポーネントツールバーを開きます。 必要に応じて、「**コピー**」アイコン、続いて「**ペースト**」アイコンを使用します。
+     * いずれかをクリックしてコンポーネントツールバーを開きます。 必要に応じて、「**コピー**」アイコン、続いて「**ペースト**」アイコンを使用します。
 
    >[!NOTE]
    >
@@ -182,17 +195,17 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * コンポーネントを[削除します。](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste)
 
-      * クリックしてコンポーネントツールバーを開き、「**削除**」アイコンを使用します。
+     * クリックしてコンポーネントツールバーを開き、「**削除**」アイコンを使用します。
 
    * 次の操作を実行して、ページに[注釈を追加します](/help/sites-authoring/annotations.md#annotations)。
 
-      * **注釈**&#x200B;モード（吹き出しアイコン）を選択します。 「**注釈を追加**」（プラス）アイコンを使用して注釈を追加します。 右上の X を使用して注釈モードを終了します。
+     * **注釈**&#x200B;モード（吹き出しアイコン）を選択します。 「**注釈を追加**」（プラス）アイコンを使用して注釈を追加します。 右上の X を使用して注釈モードを終了します。
 
      ![注釈](do-not-localize/screen_shot_2018-03-21at160813.png)
 
    * [ページのプレビュー](/help/sites-authoring/editing-content.md#preview-mode)（パブリッシュ環境での表示方法を確認するため）
 
-      * ツールバーの「**プレビュー**」を選択します。
+     * ツールバーの「**プレビュー**」を選択します。
 
    * **編集**&#x200B;ドロップダウンセレクターを使用して、編集モードに戻ります（または別のモードを選択します）。
 
@@ -206,20 +219,20 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **サイト**&#x200B;コンソールから：
 
-   1. 公開する[ページに移動します](#finding-your-page)。
-   1. 次のいずれかで「**プロパティ**」アイコンを選択します。
+  1. 公開する[ページに移動します](#finding-your-page)。
+  1. 次のいずれかで「**プロパティ**」アイコンを選択します。
 
-      * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
-      * ツールバー（[ページが選択されている](#selectiingyourpageforfurtheraction)場合）
+     * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
+     * ツールバー（[ページが選択されている](#selectiingyourpageforfurtheraction)場合）
 
   ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
-   1. ページのプロパティが表示されます。 必要に応じて変更を加え、「保存」を使用してそれらを保持します。
+  1. ページのプロパティが表示されます。 必要に応じて変更を加え、「保存」を使用してそれらを保持します。
 
 * [ページの編集](#editing-your-page-content)中に次の操作を実行します。
 
-   1. **ページ情報**&#x200B;メニューを開きます。
-   1. 「**プロパティを開く**」を選択して、プロパティを編集するためのダイアログを開きます。
+  1. **ページ情報**&#x200B;メニューを開きます。
+  1. 「**プロパティを開く**」を選択して、プロパティを編集するためのダイアログを開きます。
 
   ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
@@ -229,18 +242,18 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
 * **サイト**&#x200B;コンソールから：
 
-   1. 公開する[ページに移動します](#finding-your-page)。
-   1. 次のいずれかで「**クイック公開**」アイコンをクリックします。
+  1. 公開する[ページに移動します](#finding-your-page)。
+  1. 次のいずれかで「**クイック公開**」アイコンをクリックします。
 
-      * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
-      * （[ページが選択されている](#selectiingyourpageforfurtheraction)場合）ツールバー（「[後で公開する](/help/sites-authoring/publishing-pages.md#main-pars-title-12)」にアクセスすることもできます）
+     * 該当するリソースの[クイックアクション（カード表示／デスクトップのみ）](#quick-actions-card-view-desktop-only)
+     * （[ページが選択されている](#selectiingyourpageforfurtheraction)場合）ツールバー（「[後で公開する](/help/sites-authoring/publishing-pages.md#main-pars-title-12)」にアクセスすることもできます）
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * [ページの編集](#editing-your-page-content)中に次の操作を実行します。
 
-   1. **ページ情報**&#x200B;メニューを開きます。
-   1. 「**ページを公開**」を選択します。
+  1. **ページ情報**&#x200B;メニューを開きます。
+  1. 「**ページを公開**」を選択します。
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
@@ -266,15 +279,15 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * コピー：
 
-      * 新しい場所に移動して、貼り付けます。
+     * 新しい場所に移動して、貼り付けます。
 
    * 移動：
 
-      * ページの移動に必要な情報を収集するためのウィザードが開きます。 画面の指示に従って操作します。
+     * ページの移動に必要な情報を収集するためのウィザードが開きます。 画面の指示に従って操作します。
 
    * 削除：
 
-      * このアクションの確認が求められます。
+     * このアクションの確認が求められます。
 
    >[!NOTE]
    >
@@ -334,8 +347,8 @@ AEM によるオーサリングについて詳しくは、以下を参照して�
 
    * **このバージョンに戻る**
 
-      * バージョンが復元されます。
+     * バージョンが復元されます。
 
    * **違いを表示**
 
-      * （2 つのバージョン間の）違いがハイライト表示されたページが開きます。
+     * （2 つのバージョン間の）違いがハイライト表示されたページが開きます。

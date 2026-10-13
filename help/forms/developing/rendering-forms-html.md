@@ -10,13 +10,29 @@ role: Developer
 exl-id: e6887e45-a472-41d4-9620-c56fd5b72b4c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '4149'
 ht-degree: 96%
-
 ---
-
 # Forms を HTML としてレンダリング {#rendering-forms-as-html}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -216,7 +232,7 @@ HTML フォームのレンダリング時に、HTML 実行時オプションを�
 
 * `Home`：アプリケーションの web ルートへのリンクを提供します。
 * `Upload`：現在のフォームに添付するファイルを選択するためのユーザーインターフェイスを提供します。
-* `Download`：添付ファイルを表示するユーザインタフェースを提供します。
+* `Download`：添付ファイルを表示するユーザーインタフェースを提供します。
 
 HTML フォーム上に HTML ツールバーが表示されている場合、ユーザーは最大 10 個のファイルを選択して、フォームデータと共に送信することができます。 ファイルが送信されると、Forms サービスはファイルを取得することができます。
 

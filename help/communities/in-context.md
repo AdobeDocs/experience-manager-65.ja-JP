@@ -1,6 +1,6 @@
 ---
 title: コンテキスト内モデレート
-description: 管理者と信頼されたコミュニティメンバーがAdobe Experience Manager Communities でモデレーターアクションを実行する方法について説明します。
+description: Adobe Experience Manager Communitiesで管理者と信頼できるコミュニティメンバーがモデレーターアクションを実行する方法について説明します。
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -9,103 +9,110 @@ role: Admin
 exl-id: 47b3c19c-5228-4b72-b78c-7ed71b308921
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 0%
-
+source-wordcount: '830'
+ht-degree: 1%
 ---
-
 # コンテキスト内モデレート {#in-context-moderation}
 
-AEM Communitiesの場合、コミュニティコンテンツが投稿された公開済みページで、管理者や信頼されたコミュニティメンバーが直接モデレートを行うことができます。
+AEM Communitiesの場合、管理者と信頼できるコミュニティメンバーは、コミュニティコンテンツが投稿された公開済みページで直接モデレーションを実行できます。
 
-[&#x200B; モデレートコンソール &#x200B;](moderation.md) を使用すると、コンテンツに対して表示される情報には、公開されたページへのリンクが含まれ、コンテキスト内でモデレートする際に使用できる追加のモデレートアクションにアクセスできます。
+[&#x200B; モデレーションコンソール &#x200B;](moderation.md)を使用する場合、コンテンツに表示される情報には、公開済みページへのリンクが含まれており、コンテキスト内でモデレーションする際に使用できる追加のモデレーションアクションへのアクセスが可能になります。
 
-## モデレートアクション {#moderation-actions}
+## モデレーション活動 {#moderation-actions}
 
-[&#x200B; モデレートアクション &#x200B;](moderate-ugc.md#moderation-actions) の説明については、モデレートの概要を参照してください。
+[&#x200B; モデレーションアクション &#x200B;](moderate-ugc.md#moderation-actions)の説明については、モデレーションの概要を参照してください。
 
-## モデレート UI {#moderation-ui}
+## モデレーション UI {#moderation-ui}
 
-パブリッシュインスタンスでモデレーターに表示される UI は、ユーザー生成コンテンツ（UGC）を投稿および管理するためのダイアログ内に格納されています。 UI の要素は、サイト訪問者のステータスによって決定されます。つまり、次のいずれかになります。
+パブリッシュインスタンスのモデレーターに表示されるUIは、ユーザー生成コンテンツ（UGC）の投稿と管理用のダイアログ内に含まれています。 UIの要素は、サイト訪問者のステータスによって決まります – 彼らが…
 
 1. コンテンツを投稿したメンバー。
-1. 信頼できるメンバーモデレーター。
+1. 信頼できるメンバーモデレーター：
 1. 管理者。
-1. ログインしたが、コンテンツの管理者、モデレーター、作成者ではない。
+1. ログインしていますが、コンテンツの管理者、モデレーター、作成者ではありません。
 1. ログインしていません。
 
 ## 例 {#example}
 
-[AEM Communitiesの概要 &#x200B;](getting-started.md) の際に作成した [Geometrixxエンゲージメント &#x200B;](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、Publish環境の様々なモデレーションアクティビティを体験するためのスレッドをフォーラムに設定することが可能です。 以下を参照してください。
+[&#128279;](getting-started.md)Geometrixxの使用開始時に作成された[AEM Communities Engage](http://localhost:4503/content/sites/engage/en.html) サイトを使用して、パブリッシュ環境で様々なモデレーションアクティビティを体験するフォーラムにスレッドを設定できます。 &#x200B;以下を参照してください。
 
-Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時に community-engage-moderators グループに追加したことで、信頼できるコミュニティメンバーとして識別されました。
+Aaron McDonald （`aaron.mcdonald@mailinator.com`）は、サイトの作成時にcommunity-engage-moderators グループに追加することで、信頼できるコミュニティメンバーとして識別されました。
 
-Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[&#x200B; メンバーコンソール &#x200B;](members.md) を使用して、community-engage-members グループのメンバーとして追加できます。
+Rebekah Larsen （`rebekah.larsen@trashymail.com`）は、[&#x200B; メンバーコンソール &#x200B;](members.md)を使用して、community-engage-members グループのメンバーとして追加できます。
 
-コミュニティユーザーグループについて詳しくは、[&#x200B; ユーザーとユーザーグループの管理 &#x200B;](users.md) を参照してください。
+コミュニティユーザーグループについて詳しくは、[&#x200B; ユーザーとユーザーグループの管理](users.md)を参照してください。
 
-### フォーラムの投稿の作成 {#create-the-forum-posts}
+### フォーラム投稿の作成 {#create-the-forum-posts}
 
-* Rebekah Larsen としてログインします（rebekah.larsen@trashymail.com）。
+* Rebekah Larsen （rebekah.larsen@trashymail.com）としてログインします。
 
-   * フォーラムを選択
-   * 新しいPostを選択
-   * 件名を入力
+  * フォーラムを選択
+  * 新しい投稿を選択
+  * 件名を入力
 
-     ハミング鳥フィーダーで蜜を変える場合
+    Humming Bird Feederで蜜を変更するタイミング
 
-   * 本文を入力
+  * 本文を入力
 
-     毎年ハチドリのフィーダーをハングアップする時はあまり成功していませんでした。 1 日か 2 日か来たそうだそうだそうだそうだそうだそうだそうだそうだそうだね。 週に 1 回は変えるの長すぎるの？ もっと早く変更しなければいけませんか。
+    私は毎年ハチドリのフィーダーアップをぶら下げているときはあまり成功していません。 1日か2日は来ているようですが、それだけです。 1週間に1回変更するのは長すぎますか？ もっと早く変えなければいけませんか。
 
-   * Postを選択
-   * 「ログアウト」を選択します
+  * 投稿を選択
+  * ログアウトを選択
 
-* Aaron McDonald （aaron.mcdonald@mailinator.com）としてログインする
+* Aaron McDonaldとしてログインします（aaron.mcdonald@mailinator.com）
 
-   * フォーラムを選択
-   * 「Hummingbird」トピックについては、「詳細を表示」を選択します
-   * Post返信のコメントを入力
+  * フォーラムを選択
+  * Hummingbirdのトピックは、「Read More」を選択します
+  * 返信を投稿するためのコメントを入力
 
-     私は週に 1 回私のものを変え、私は 5 月から 10 月まで彼らを得ます。
+    私は週に1回変更し、5月から10月まで受け取ります。
 
-   * 返信を選択
-   * 「ログアウト」を選択します
+  * 返信を選択
+  * ログアウトを選択
 
-* Andrew Schaeffer （andrew.schaeffer@trashymail.com）としてログインします。
+* Andrew Schaefferとしてログインします（andrew.schaeffer@trashymail.com）
 
-   * フォーラムを選択
-   * 「Hummingbird」トピックについては、「詳細を表示」を選択します
-   * Post返信のコメントを入力
+  * フォーラムを選択
+  * Hummingbirdのトピックは、「Read More」を選択します
+  * 返信を投稿するためのコメントを入力
 
-     私は蜜とフィーダーを売っています – visit https://my.viral.url/
+    私はネクターとフィーダーを販売します – https://my.viral.url/を参照してください。
 
-   * 返信を選択
-   * 「ログアウト」を選択します
+  * 返信を選択
+  * ログアウトを選択
 
 ### 匿名サイト訪問者（#5） {#anonymous-site-visitor}
 
-以下は、ログインしていないサイト訪問者が閲覧したフォーラムのビューです（5）。
+以下は、ログインしていないサイト訪問者（5）が表示したフォーラムのビューです。
 
-匿名サイト訪問者はフォーラムの閲覧のみが可能ですが、コンテンツの投稿やモデレーションアクションは行えません。
+匿名のサイト訪問者はフォーラムを閲覧するだけですが、コンテンツを投稿したり、モデレーションアクションを実行したりすることはできません。
 
 ![community-forum-visitor](assets/community-forum-visitor.png)
 
-### 新規メンバー（#4） {#new-member}
+### 新しいメンバー（#4） {#new-member}
 
-オーサー環境に管理者としてログインし、[&#x200B; メンバーコンソール &#x200B;](members.md) を使用して、Boyd Larsen （boyd.larsen@dodgit.com）を community-engage-members グループの新しいメンバーとして追加してから、ログアウトします。
+作成者は、管理者としてログインし、[&#x200B; メンバーコンソール &#x200B;](members.md)を使用してCommunity-engage-members グループの新しいメンバーとしてBoyd Larsen （boyd.larsen@dodgit.com）を追加してからログアウトします。
 
-公開時に Boyd Larsen としてログインし、「`Forum`」を選択してスレッドにアクセスし、hummingbird の投稿を `Read more` します。
+公開時にBoyd Larsenとしてログインし、ハミングバードの投稿に「`Forum`」、「`Read more`」を選択してスレッドにアクセスします。
 
-注意：
+ご注意：
 
-* ボイドはフォーラムに参加していません。
+* Boydはフォーラムに参加していません。
 * ボイドは何も削除できません。
-* ボイドはログインし、コンテンツに返信したりフラグを立てたりできます。
+* Boydはログインしており、返信またはコンテンツにフラグを立てることができます。
 
-Boid に Andrew が投稿した内容を示すフラグを選択してもらいます。
+BoydにAndrewが投稿したコンテンツにフラグを付けるフラグを選択してもらいます。
 
 ログアウト
 
@@ -113,56 +120,56 @@ Boid に Andrew が投稿した内容を示すフラグを選択してもらい�
 
 ### 管理者（#3） {#administrator}
 
-管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿で「詳細を読む」を選択します。
+管理者（管理者）としてログインし、「フォーラム」を選択してスレッドにアクセスし、投稿の「詳細」を選択します。
 
-注意：
+ご注意：
 
-* 管理者は、フラグの設定、削除、編集、拒否、切り取り、閉じる、ピン留め、機能を実行できます。
-* 管理者は、「管理」を選択してモデレートコンソールにアクセスできます。
+* 管理者は、フラグ、削除、編集、拒否、カット、閉じる、ピン、機能を選択できます。
+* 管理者は、「管理」を選択してモデレーションコンソールにアクセスできます。
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-「管理」メニュー項目を選択して、Publishから [&#x200B; モデレートコンソール &#x200B;](moderation.md) にアクセスできます。
+管理メニュー項目を選択して、パブリッシュ環境から[&#x200B; モデレーションコンソール &#x200B;](moderation.md)にアクセスできるようにします。
 
-管理者には、Geometrixxエンゲージメントコミュニティサイトのコンテンツだけでなく、すべてのモデレート可能なコンテンツが表示されることに注意してください。
+管理者の場合、Geometrixx Engage コミュニティサイトのコンテンツだけでなく、モデレート可能なすべてのコンテンツが表示されます。
 
-検索フィルターは、開く/閉じるを切り替えるサイドパネルです。
+検索フィルターは、開くか閉じるかを切り替えるサイドパネルです。
 
 ログアウトします。
 
 ![moderation-console-publish](assets/moderation-console-publish.png)
 
-### コミュニティ モデレーター（#2） {#community-moderator}
+### コミュニティモデレーター（#2） {#community-moderator}
 
-コミュニティモデレーターの Aaron McDonald （`aaron.mcdonal@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、hummingbird の投稿の「詳細を読む」を選択します。
+コミュニティのモデレーターであるAaron McDonald （`aaron.mcdonal@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、ハミングバードの投稿に「詳細を読む」を選択します。
 
-注意：
+ご注意：
 
-* Aaron は自分の投稿を返信、削除、編集または拒否できます。
-* Aaron は、フラグ設定/許可、返信、削除、編集、その他のコンテンツの拒否も行うことができます。
-* Aaron は、フォーラムのトピックを切り取って、モデレートする別のフォーラムに移動できます。
-* Aaron は「管理」を選択してモデレートコンソールにアクセスできます。
+* Aaronは、自分の投稿に返信、削除、編集、または拒否できます。
+* Aaronは、他のコンテンツのフラグ/許可、返信、削除、編集、拒否も可能です。
+* Aaronは、フォーラムのトピックをカットして、彼が司会を務める別のフォーラムに移動することができます。
+* Aaronは管理を選択してモデレーションコンソールにアクセスできます。
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-「管理」メニュー項目を選択して、Publishから [&#x200B; モデレートコンソール &#x200B;](moderation.md) にアクセスできます。
+管理メニュー項目を選択して、パブリッシュ環境から[&#x200B; モデレーションコンソール &#x200B;](moderation.md)にアクセスできるようにします。
 
-コミュニティモデレーターの場合、Geometrixxエンゲージメント コミュニティサイトのモデレート可能なコンテンツのみが表示されます。
+コミュニティモデレーターの場合、Geometrixx Engage コミュニティサイトのモデレート可能なコンテンツのみが表示されます。
 
-コミュニティモデレーターは管理者と同じオプションを持ちますが（画像は検索サイドバーを閉じるに切り替えられています）、他のAEM コンソールにはアクセスできません。
+コミュニティモデレーターには管理者と同じオプションが設定されていますが（画像は検索サイドバーを閉じて切り替えています）、他のAEM コンソールにはアクセスできません。
 
 ログアウトします。
 
-![&#x200B; モデレーターによるアクセス &#x200B;](assets/moderator-access.png)
+![moderator-access](assets/moderator-access.png)
 
 ### コンテンツ作成者（#1） {#content-author}
 
-スレッドを開始したコミュニティメンバーの Rebekah Larsen （`rebekah.larsen@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、hummingbird の投稿の「詳細を読む」を選択します。
+スレッドを開始したコミュニティメンバーであるRebekah Larsen （`rebekah.larsen@mailinator.com`）としてログインし、「フォーラム」を選択してスレッドにアクセスし、ハミングバードの投稿に「詳細を読む」を選択します。
 
-注意：
+ご注意：
 
-* Rebekah は自分の投稿を削除または編集できます。
-* Rebekah は、他のコンテンツに返信したり、フラグを立てたりすることもできます。
-* Rebekah はモデレーションコンソールにアクセスできません。
+* Rebekahは、自分の投稿を削除または編集できます。
+* Rebekahは、他のコンテンツに返信したり、フラグを立てたりすることもできます。
+* Rebekahはモデレーションコンソールにアクセスできません。
 
 ![community-forum-author](assets/community-forum-author.png)

@@ -9,14 +9,30 @@ role: Developer
 exl-id: 699a7309-a976-480e-886f-2e466a477348
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 100%
-
 ---
-
-# XMP Utilities サービス Java API クイックスタート（SOA） {#xmp-utilities-service-java-apiquick-start-soap}
+# XMP Utilities Service Java API クイックスタート（SOAP） {#xmp-utilities-service-java-apiquick-start-soap}
 
 XMP Utilities サービスでは、次のクイックスタートを使用できます。
 
@@ -32,7 +48,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用した XMP メタデータの書き出し {#quick-start-soap-mode-exporting-xmp-metadata-using-the-java-api}
 
-次のコードの例では、XMP メタデータを取得、調査、保存します。 （[メタデータドキュメントからの PDF の書き出し](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照。）
+次のコードの例では、XMP メタデータを取得、検査、保存します。 （[メタデータドキュメントからの PDF の書き出し](/help/forms/developing/xmp-utilities.md#exporting-metadata-from-pdf-documents)を参照。）
 
 ```java
  /*

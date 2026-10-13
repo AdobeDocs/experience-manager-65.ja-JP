@@ -9,13 +9,22 @@ exl-id: 9e171b62-8efb-4143-a202-ba6555658d4b
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '466'
 ht-degree: 100%
-
 ---
-
 # ようこそコンソールのカスタマイズ（クラシック UI）{#customizing-the-welcome-console-classic-ui}
 
 >[!CAUTION]
@@ -28,7 +37,7 @@ ht-degree: 100%
 
 ![cq_welcomescreen](assets/cq_welcomescreen.png)
 
-表示されるリンクを設定できます。設定は、特定のユーザーまたはグループ向けに定義できます。実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
+表示されるリンクを設定できます。 設定は、特定のユーザーまたはグループ向けに定義できます。 実行されるアクションは、ターゲットタイプによって異なります（アクションが表示されるコンソールのセクションと相関関係があります）。
 
 * [メインコンソール](#links-in-main-console-left-pane) - メインコンソール（左パネル）のリンク
 * [リソース、ドキュメントとリファレンス、機能](#links-in-sidebar-right-pane) - サイドバー（右パネル）のリンク
@@ -41,7 +50,7 @@ AEM のメインコンソールが一覧表示されます。
 
 ### メインコンソールのリンクを表示するかどうかの設定 {#configuring-whether-main-console-links-are-visible}
 
-ノードレベルでの権限によって、リンクを表示するかどうかが決定されます。次のノードが対象となります。
+ノードレベルでの権限によって、リンクを表示するかどうかが決定されます。 次のノードが対象となります。
 
 * **Web サイト:** `/libs/wcm/core/content/siteadmin`
 
@@ -205,6 +214,6 @@ AEM のメインコンソールが一覧表示されます。
 
 [リンク選択メカニズム](#link-selection-mechanism)を使用して、独自のカスタム項目をリンクのリストに追加できます。
 
-`cq:Console` Mixin をウィジェットまたはリソースに追加することで、カスタム項目をリストに追加できます。次のプロパティを定義することによって、追加をおこないます。
+`cq:Console` Mixin をウィジェットまたはリソースに追加することで、カスタム項目をリストに追加できます。 次のプロパティを定義することによって、追加をおこないます。
 
 * `jcr:mixinTypes`（値：`cq:Console`）

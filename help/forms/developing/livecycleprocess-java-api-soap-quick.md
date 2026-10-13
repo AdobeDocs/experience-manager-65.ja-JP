@@ -1,6 +1,6 @@
 ---
 title: LiveCycleProcess Java API クイックスタート（SOAP）
-description: LiveCycleProcess Java API（SOAP）クイックスタートを使用して、プロセスインスタンスの検索、プロセスインスタンスの休止、中断されたプロセスインスタンスの開始、プロセスインスタンスの終了、プロセスデータのパージ、ジョブのステータスの取得を行います。
+description: LiveCycleProcess Java API（SOAP）クイックスタートを使用して、プロセスインスタンスの検索、プロセスインスタンスの一時停止、一時停止されたプロセスインスタンスの開始、プロセスインスタンスの終了、プロセスデータのパージ、ジョブのステータスの取得を行います。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,22 +9,38 @@ role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 100%
-
 ---
-
 # LiveCycleProcess Java API（SOAP）クイックスタート {#livecycleprocess-java-api-soap-quick-start}
 
-プロセスで Java API（SOAP）クイックスタートを使用できます。 *プロセスインスタンス*&#x200B;は、Invocation API などの呼び出しメソッドによって、またはワークスペース内から開始された特定のプロセスのオカレンスです。
+Java API（SOAP）クイックスタートは、プロセスで使用できます。 *プロセスインスタンス*&#x200B;は、Invocation API などの呼び出しメソッドによって、またはワークスペース内から開始された特定のプロセスのオカレンスです。
 
 [クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの検索](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの休止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの一時停止](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[クイックスタート（SOAP モード）：Java API を使用した中断されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用した一時停止されたプロセスインスタンスの開始](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの終了](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
@@ -36,7 +52,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 >[!NOTE]
 >
->Unix などの別のオペレーティングシステムを使用している場合、AEM Forms によるプログラミングのクイックスタートは Forms に基づいています。Windows 固有のパスを、該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
+>AEM Forms によるプログラミングのクイックスタートは Forms に基づいているため、Unix などの別のオペレーティングシステムを使用している場合は、Windows 固有のパスを該当するオペレーティングシステムでサポートされているパスに置き換えます。 同様に、別の J2EE アプリケーションサーバーを使用している場合は、有効な接続プロパティを指定する必要があります （[接続プロパティの設定](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)を参照。）
 
 ## クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの検索 {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
@@ -156,9 +172,9 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
  
 ```
 
-## クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの休止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## クイックスタート（SOAP モード）：Java API を使用したプロセスインスタンスの一時停止 {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
-次の Java コードの例では、プロセスインスタンスを休止します。 プロセスインスタンスを正常に休止するには、Invocation API を使用して長期間有効なプロセスを呼び出す際に取得できるプロセス呼び出し識別子が必要です。
+次の Java コードの例では、プロセスインスタンスを一時停止します。 プロセスインスタンスを正常に休止するには、Invocation API を使用して長期間有効なプロセスを呼び出す際に取得できるプロセス呼び出し識別子が必要です。
 
 ```java
  /*

@@ -4,13 +4,21 @@ description: hCaptcha&reg; サービスでフォームのセキュリティを�
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
-source-git-commit: 8025412849a1f324537019247a5e37b7931df7e7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 95%
-
+source-wordcount: '903'
+ht-degree: 96%
 ---
-
 # AEM Forms 環境と hCaptcha® の接続 {#connect-your-forms-environment-with-hcaptcha-service}
 
 <span class="preview">この機能は、機能切り替えID `FT_FORMS-12407`に基づいています。 この機能を有効にするには、[機能の切り替えを有効にする](/help/forms/using/enable-feature-toggle.md)の記事に記載されている手順に従います。</span>
@@ -55,7 +63,7 @@ AEM Forms を hCaptcha® サービスと統合するには、次の手順を実�
 1. クラウドサービスを設定します。
    1. AEM オーサーインスタンスで、![tools-1](assets/tools-1.png)／**[!UICONTROL クラウドサービス]**&#x200B;に移動し、 「**[!UICONTROL hCaptcha®]**」をクリックします。
       ![hCaptcha® の ui](assets/hcaptcha-in-ui.png)
-   1. 前の節で説明したように、作成または更新された設定コンテナを選択します。**[!UICONTROL 作成]**&#x200B;を選択します。
+   1. 前の節で説明したように、作成または更新した設定コンテナを選択します。 「**[!UICONTROL 作成]**」を選択します。
       ![hCaptcha® の設定](assets/config-hcaptcha.png)
    1. **[!UICONTROL タイトル]**、<!--**[!UICONTROL Name]**--> **[!UICONTROL サイトキー]**&#x200B;および&#x200B;**[!UICONTROL 秘密鍵]**&#x200B;を、[前提条件で取得](#prerequisite)した hCaptcha® サービスに指定します。
    1. 「**[!UICONTROL 作成]**」をクリックします。

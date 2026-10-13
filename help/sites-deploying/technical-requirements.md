@@ -6,13 +6,25 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 06cdf1211a48838d1e578d1d804aad00cd01eb79
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: c191041a-8b54-4bde-9e43-bc8d8f8cea74
+    internal-label: Deploying
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '3853'
 ht-degree: 91%
-
 ---
-
 # 技術要件{#technical-requirements}
 
 アドビは、このドキュメントの以下の情報に記載されているプラットフォームで、Adobe Experience Manager（AEM）をサポートしています。
@@ -101,7 +113,8 @@ Adobe Experience Manager は、次のバージョンの Java™ 仮想マシン�
 | Azul Zulu OpenJDK 11 - 64 ビット | A：サポート対象 `[3]` | |
 | Azul Zulu OpenJDK 8 - 64 ビット | A：サポート対象 `[3]` | |
 
-1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。 Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。 本番環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。 LTS リリースのすべてのメンテナンスアップデートを含むOracle Java™ SE JDKのサポートと配布は、Adobe Java™ SE テクノロジを使用するすべてのAEMのお客様に対して、Oracleで直接サポートされます。 詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。   **重要：Oracle Java™ 17および21は[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)でサポートされています。**
+1. Oracle は Oracle Java™ SE 製品の「長期サポート」（LTS）モデルに移行しました。 Java™ 9、Java™ 10、Java™ 12 は Oracle による非 LTS でのリリースです（[Oracle Java™ SE サポートロードマップ](https://www.oracle.com/jp/technetwork/java/eol-135779.html)を参照）。 本番環境に AEM をデプロイするために、アドビでは LTS リリース版の Java™ のみサポートします。 LTS リリースのすべてのメンテナンスアップデートを含むOracle Java™ SE JDKのサポートと配布は、Adobe Java™ SE テクノロジを使用するすべてのAEMのお客様に対して、Oracleで直接サポートされます。 詳しくは、[Adobe Experience Manager 用 Java™ サポートポリシー](assets/Java_Policy_for_Adobe_Experience_Manager.pdf)を参照してください。
+   **重要：Oracle Java™ 17および21は[AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements)でサポートされています。**
 
 1. IBM® JRE は、WebSphere® Application Server と共に使用する場合にのみサポートされます。
 
@@ -525,10 +538,10 @@ XMP の書き戻しは、次のプラットフォームおよびファイル形�
 
 * **オペレーティングシステム：**
 
-   * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
+  * Linux®（64 ビットシステムでの 32 ビットおよび 32 ビットアプリケーションのサポート）。
 
-   * Windows Server
-   * macOS X（64 ビット）
+  * Windows Server
+  * macOS X（64 ビット）
 
 * **ファイル形式**：JPEG、PNG、TIFF、PDF、INDD、AI、EPS
 

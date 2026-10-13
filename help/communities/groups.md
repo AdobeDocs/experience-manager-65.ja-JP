@@ -11,13 +11,20 @@ role: Admin
 exl-id: ef371ff8-6b4f-4e5a-98fb-d7c274927c46
 solution: Experience Manager
 feature: Communities
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1739'
 ht-degree: 1%
-
 ---
-
 # コミュニティグループコンソール {#community-groups-console}
 
 グループコンソールでは、コミュニティサイトの[&#x200B; テンプレート構造](/help/communities/sites-console.md#step1)に[&#x200B; グループ関数](/help/communities/functions.md#groups-function)が含まれている場合、コミュニティグループを作成するためのアクセス権を提供します。
@@ -56,8 +63,8 @@ This is a 404 on helpx. Update or remove.
 * 既存のコミュニティサイトフォルダーを選択して開きます。
 * フォルダー内のコミュニティサイトのインスタンスを選択します。
 
-   * コミュニティサイトの構造には、グループ関数を含める必要があります。
-   * これらのスクリーンショットは、[&#x200B; パブリッシュでグループを作成した後の入門チュートリアルのものです](/help/communities/published-site.md)。
+  * コミュニティサイトの構造には、グループ関数を含める必要があります。
+  * これらのスクリーンショットは、[&#x200B; パブリッシュでグループを作成した後の入門チュートリアルのものです](/help/communities/published-site.md)。
 
   ![create-group](assets/create-group.png)
 
@@ -78,7 +85,7 @@ This is a 404 on helpx. Update or remove.
 * **コミュニティグループタイトル**
 
   グループの表示タイトル。
-タイトルは、グループの公開サイトに表示されます。
+  タイトルは、グループの公開サイトに表示されます。
 
 * **コミュニティグループの説明**
 
@@ -87,7 +94,7 @@ This is a 404 on helpx. Update or remove.
 * **コミュニティグループルート**
 
   グループへのルートパス。
-デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。変更することはお勧めできません。
+  デフォルトのルートは親サイトですが、ルートはweb サイト内の任意の場所に移動できます。 変更することはお勧めできません。
 
 * **その他の利用可能なコミュニティグループ言語** メニュー
 
@@ -97,10 +104,10 @@ This is a 404 on helpx. Update or remove.
 
   URLに表示されるグループのルートページの名前。 グループ名にアンダースコア文字（_）やリソースや設定などのキーワードを使用しないでください。
 
-   * グループの作成後に名前が簡単に変更されないので、名前を再確認します。
-   * ベース URLは`Community Group Name`の下に表示されます。
-   * 有効なURLに「.html」を追加します
-     *例：*、`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
+  * グループの作成後に名前が簡単に変更されないので、名前を再確認します。
+  * ベース URLは`Community Group Name`の下に表示されます。
+  * 有効なURLに「.html」を追加します
+    *例：*、`https://localhost:4502/content/sites/mysight/en/mygroup.html`。
 
 * **コミュニティグループテンプレート** メニュー
 
@@ -134,8 +141,8 @@ This is a 404 on helpx. Update or remove.
 * 画像はブラウザーウィンドウの左端にピン留めされています
 * 画像の幅が次の場合に、画像のサイズ変更は行われません。
 
-   * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
-   * ブラウザーの幅よりも大きい画像は切り抜かれたように見えます。
+  * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
+  * ブラウザーの幅よりも大きい画像は切り抜かれたように見えます。
 
 ### 手順3：設定 {#step-settings}
 
@@ -239,14 +246,14 @@ This is a 404 on helpx. Update or remove.
 * 追加の[&#x200B; コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
 * サイト構造内のコミュニティ関数のインスタンス：
 
-   * **`Gear icon`**
-表示タイトル、URL、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
+  * **`Gear icon`**
+    表示タイトル、URL、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
 
-   * **`Trashcan icon`**
-サイト構造から関数を削除（削除）します。
+  * **`Trashcan icon`**
+    サイト構造から関数を削除（削除）します。
 
-   * **`Grid icon`**
-サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
+  * **`Grid icon`**
+    サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
 
 >[!CAUTION]
 >
@@ -271,7 +278,7 @@ This is a 404 on helpx. Update or remove.
 * [コミュニティグループのテーマ](#community-group-theme)
 * [コミュニティグループブランディング](#community-group-branding)
 
-   * パネルの一番下までスクロールして、ブランド画像を変更できます。
+  * パネルの一番下までスクロールして、ブランド画像を変更できます。
 
 ### 設定を変更 {#modify-settings}
 

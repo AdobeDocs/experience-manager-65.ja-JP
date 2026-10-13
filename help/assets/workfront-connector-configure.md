@@ -1,18 +1,27 @@
 ---
-title: ' [!DNL Workfront for Experience Manager enhanced connector] の設定'
-description: ' [!DNL Workfront for Experience Manager enhanced connector] の設定'
+title: '[!DNL Workfront for Experience Manager enhanced connector] の設定'
+description: '[!DNL Workfront for Experience Manager enhanced connector] の設定'
 role: Admin
 feature: Workfront Integrations and Apps
 exl-id: 2660de7c-0281-4884-98d9-e78f20cf571c
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c4a86a5d-6562-4fc6-aa00-bfa25833aed9
+    internal-label: Workfront
+feature_v2:
+  - id: a1f87682-0525-5459-aa06-3560bb4c3b2a
+    internal-label: Workfront Integrations and Apps
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 99%
-
 ---
-
 # [!DNL Workfront for Experience Manager enhanced connector] の設定 {#assets-integration-overview}
 
 | バージョン | 記事リンク |
@@ -38,9 +47,9 @@ ht-degree: 99%
 
 * プロジェクトにリンクされたフォルダーの自動作成。
 * Workfront ドキュメントのカスタムフォーム値の変更を AEM アセットメタデータに同期します。
-* プロジェクトの完了時に Brand Portal にアセットを自動的に公開します。
+* プロジェクト完了時の Brand Portal へのアセットの自動公開。
 
-これらの機能を使用するには、イベント購読を有効にします。
+これらの機能を使用するには、イベントサブスクリプションを有効にします。
 
 * 手順 5 で作成した [!UICONTROL Workfront ツール]クラウドサービスの設定を編集し、「[!UICONTROL イベント購読]」タブを選択します。
 * セクション 6 で作成した [!UICONTROL Workfront カスタム統合]を選択します。
@@ -67,7 +76,7 @@ ht-degree: 99%
 1. プロジェクトのステータス：プロジェクトのステータスを選択して、リンクされたフォルダーを作成します。
 1. ポートフォリオを使用してプロジェクトにリンクされたフォルダーを作成する：プロジェクトが属する必要のあるポートフォリオのリストで、リンクされたフォルダーを作成します。 この一覧を空のままにして、すべてのプロジェクトポートフォリオのリンクフォルダーを作成します。
 1. カスタムフォームフィールドを使用してプロジェクトにリンクされたフォルダーを作成する：プロジェクトに必要なカスタムフォームフィールドおよびそれに対応する値で、リンクされたフォルダーを作成します。 この設定は、空である場合は無視されます。 フィールドに `CUSTOM FORMS: Create DAM Linked Folder` を選択して、値に `Yes` を入力します。
-1. 「リンクされたフォルダーの自動作成を有効にする」をクリックします。 「イベントの購読」タブに戻ると、作成イベントが 1 つ表示されます。
+1. 「リンクされたフォルダーの自動作成を有効にする」をクリックします。 「イベントサブスクリプション」タブに戻ると、作成イベントが 1 つ表示されます。
 
 ![リンクされたフォルダー設定](/help/assets/assets/wf-linked-folder-config.png)
 
@@ -86,13 +95,13 @@ Workfront プロジェクトと AEM フォルダー間のメタデータマッ�
 1. [!UICONTROL Workfront フィールドからマッピング済み]フィールドで、選択した AEM フォルダープロパティにマッピングする Workfront フィールドの名前を選択します。 次のオプションを使用できます。
 
    * プロジェクトのカスタムフォームフィールド
-   * 「プロジェクト概要」フィールド (ID、名前、説明、参照番号、計画完了日、プロジェクト所有者、プロジェクトスポンサー、ポートフォリオ、プログラム )
+   * 「プロジェクト概要」フィールド (ID、名前、説明、参照番号、予定完了日、プロジェクト所有者、プロジェクトスポンサー、ポートフォリオまたはプログラム)
 
 ![メタデータマッピング設定](/help/assets/assets/wf-metadata-mapping-config2.png)
 
 ### アセットメタデータマッピングの設定 {#asset-metadata-mapping}
 
-Adobe Workfront ドキュメントとアセット間のメタデータマッピングは、AEM メタデータスキーマ内で定義されます。 メタデータスキーマは、AEM で通常どおりに作成および設定する必要があります。 Workfront ツールは、各メタデータスキーマフォームフィールドの「設定」指定タブに設定オプションを追加します。 これらのオプションを使用すると、各 AEM プロパティのマッピング先となる Workfront フィールドを指定できます。
+Adobe Workfront ドキュメントと Assets 間のメタデータマッピングは、AEM Metadata Schemas 内で定義されます。 メタデータスキーマは、AEM で通常どおりに作成および設定する必要があります。 Workfront ツールは、各メタデータスキーマフォームフィールドの「設定」指定タブに設定オプションを追加します。 これらのオプションを使用すると、各 AEM プロパティのマッピング先となる Workfront フィールドを指定できます。
 
 マッピングを設定するには、次の手順に従います。
 
@@ -119,27 +128,27 @@ Adobe Workfront ドキュメントとアセット間のメタデータマッピ�
 
 **ID プロパティ**：このフィールドでは、プロパティのマッピング先の Workfront オブジェクト ID へのパスを指定できます。 このフィールドで指定するパスは、ワークフローペイロードを基準とした相対パスにする必要があります。
 
-**プロパティの割り当て**：このマルチフィールドを使用すると、AEM プロパティと Workfront フィールド間のマッピングを指定できます。 複数フィールドの各項目は、1 つのマッピングを指定します。 各マッピングは、`<workfront-field>=<aem-mapped-property>` の形式である必要があります。
+**プロパティの割り当て**：このマルチフィールドを使用すると、AEM プロパティと Workfront フィールド間のマッピングを指定できます。 マルチフィールドの各項目は、1 つのマッピングを指定します。 各マッピングは、`<workfront-field>=<aem-mapped-property>` の形式である必要があります。
 
 * `workfront-field` は次になることができます。
 
-   * 接頭辞 `DE:` で識別されるカスタムフォームフィールド 。
-   * 名前で識別される編集可能なフィールド。 フィールド名は [[!DNL Workfront] API エクスプローラー](https://experience.workfront.com/s/api-explorer)にあります。
+  * 接頭辞 `DE:` で識別されるカスタムフォームフィールド 。
+  * 名前で識別される編集可能なフィールド。 フィールド名は [[!DNL Workfront] API エクスプローラー](https://experience.workfront.com/s/api-explorer)にあります。
 
 * `aem-mapped-property` は次になることができます。
 
-   * リテラル値。 これらは引用符で囲む必要があります。
-   * AEM プロパティ。 この参照は、ワークフローペイロードに対する相対参照にする必要があります。
-   * 名前付きの値。 これらは角括弧で囲む必要があります。
-   * 上記の 3 つの項目を連結したもの。 `{+}` を使用して指定します。
-   * 値を `{replace(<value>,"old-char","new-char")}` で囲むことによる上記の 3 つの項目の変更。
+  * リテラル値。 これらは引用符で囲む必要があります。
+  * AEM プロパティ。 この参照は、ワークフローペイロードに対する相対参照にする必要があります。
+  * 名前付きの値。 これらは角括弧で囲む必要があります。
+  * 上記の 3 つの項目を連結したもの。 `{+}` を使用して指定します。
+  * 値を `{replace(<value>,"old-char","new-char")}` で囲むことによる上記の 3 つの項目の変更。
 
 * 次に例を示します。
 
-   * `status="INP"`
-   * `DE:Asset Type=jcr:content/metadata/assetType`
-   * `DE:Path={path}`
-   * `URL="https://my-aem-author/assets.html"{+}{path}`
+  * `status="INP"`
+  * `DE:Asset Type=jcr:content/metadata/assetType`
+  * `DE:Path={path}`
+  * `URL="https://my-aem-author/assets.html"{+}{path}`
 
 ![プロパティをマッピングするための設定](/help/assets/assets/wf-map-property-config.png)
 
@@ -195,7 +204,7 @@ Experience Manager のワークフローエディターで、[!UICONTROL Workfro
 
 1. Experience Manager で、**[!UICONTROL ツール]**／**[!UICONTROL クラウドサービス]**／ **[!UICONTROL Workfront ツール設定]** をクリックし、「**[!UICONTROL 詳細]**」タブを開きます。
 
-1. 「**[!UICONTROL Workfront から送信されたときにアセットを自動的に公開する]**」を選択します。 このオプションを使用すると、Workfront から AEM にアセットが送信される際に、アセットの自動公開を有効にできます。 この機能は、Workfront カスタムフォームフィールドと、そのフィールドを設定する値を指定することで、条件付きで有効にできます。 ドキュメントが AEM に送信されるたびに、条件を満たしている場合、アセットは自動的に公開されます。
+1. 「**[!UICONTROL Workfront から送信されたときにアセットを自動的に公開する]**」を選択します。 このオプションを使用すると、Workfront から AEM にアセットが送信される際に、アセットが自動的に公開されます。 この機能は、Workfront カスタムフォームフィールドと、そのフィールドを設定する値を指定することで、条件付きで有効にできます。 ドキュメントが AEM に送信されるたびに、条件を満たしている場合、アセットは自動的に公開されます。
 
 1. 「**[!UICONTROL プロジェクトの完了時に、すべてのプロジェクトアセットを Brand Portal に公開する]**」を選択します。 このオプションを使用すると、属する Workfront プロジェクトのステータスが `Complete` に変更された場合、[!DNL Brand Portal] にアセットを自動的に公開できます。
 

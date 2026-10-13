@@ -1,6 +1,6 @@
 ---
 title: バウンス（配信不能）メールの追跡
-description: 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。
+description: 多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。 それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。 AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: personalization
@@ -9,14 +9,25 @@ exl-id: 6cda0a68-0df9-44e7-ae4f-9951411af6dd
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
 role: User
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 100%
-
+source-wordcount: '714'
+ht-degree: 90%
 ---
-
-# バウンス（配信不能）メールの追跡 {#tracking-bounced-emails}
+# バウンス（配信不能）メールの追跡{#tracking-bounced-emails}
 
 >[!NOTE]
 >
@@ -24,13 +35,13 @@ ht-degree: 100%
 >
 >レコメンデーションは、[Adobe Campaign および AEM の統合を使用](/help/sites-administering/campaign.md)することです。
 
-多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。デフォルトではバウンス率は 3 になっていますが、設定可能です。
+多数のユーザーにニュースレターを送信する場合、一般的に、リスト内に無効なメールアドレスが一部含まれています。 それらのアドレスにニュースレターを送信すると、配信不能として戻ってきます。 AEM にはそうしたバウンスを管理する機能があり、バウンスカウンターの設定値を超えると、それらのアドレスへのニュースレターの送信を停止できます。 デフォルトではバウンス率は 3 になっていますが、設定可能です。
 
-AEM でバウンスメールを追跡するには、バウンスメールが受信される既存のメールボックスをポーリングするように AEM をセットアップします。通常、この場所は、ニュースレターを送信をする際に指定する「送信元」のメールアドレスです。AEM はこのインボックスをポーリングし、ポーリング設定で指定されたパスの下のすべてのメールを読み込みます。次に、ワークフローがトリガーされ、各ユーザー内のバウンスメールアドレスが検索され、それに応じて、ユーザーの bounceCounter プロパティの値が更新されます。設定された最大バウンス数を超えると、そのユーザーはニュースレターリストから削除されます。
+AEM でバウンスメールを追跡するには、バウンスメールが受信される既存のメールボックスをポーリングするように AEM をセットアップします。 通常、この場所は、ニュースレターを送信をする際に指定する「送信元」のメールアドレスです。 AEM はこのインボックスをポーリングし、ポーリング設定で指定されたパスの下のすべてのメールを読み込みます。 次に、ワークフローがトリガーされ、各ユーザー内のバウンスメールアドレスが検索され、それに応じて、ユーザーの bounceCounter プロパティの値が更新されます。 設定された最大バウンス数を超えると、そのユーザーはニュースレターリストから削除されます。
 
 ## フィードインポーターの設定 {#configuring-the-feed-importer}
 
-フィードインポーターを使用すると、外部ソースからリポジトリにコンテンツを繰り返し読み込むことができます。フィードインポーターのこの設定を使用して、AEM は送信者のメールボックスでバウンスメールを確認します。
+フィードインポーターを使用すると、外部ソースからリポジトリにコンテンツを繰り返し読み込むことができます。 フィードインポーターのこの設定を使用して、AEM は送信者のメールボックスでバウンスメールを確認します。
 
 バウンスメールを追跡するためにフィードインポーターを設定するには、次の手順を実行します。
 
@@ -40,7 +51,7 @@ AEM でバウンスメールを追跡するには、バウンスメールが受�
 
    ![chlimage_1](assets/chlimage_1a.png)
 
-1. タイプを選択し、ポーリング URL に情報を追加して、ホストとポートを設定することで、設定を追加します。また、URL クエリに対する、メールおよびプロトコル固有のパラメーターをいくつか追加します。最低 1 日に 1 回はポーリングを行うように設定します
+1. タイプを選択し、ポーリング URL に情報を追加して、ホストとポートを設定することで、設定を追加します。 また、URL クエリに対する、メールおよびプロトコル固有のパラメーターをいくつか追加します。 最低 1 日に 1 回はポーリングを行うように設定します
 
    すべての設定で、ポーリング URL 内に次の情報が必要です。
 
@@ -52,7 +63,7 @@ AEM でバウンスメールを追跡するには、バウンスメールが受�
 
    **POP3 設定プロパティ：**
 
-   `pop3.leave.on.server`：サーバー上にメッセージを残すかどうかを定義します。サーバーにメッセージを残す場合は true に、そうでない場合は false に設定します。デフォルトは true です。
+   `pop3.leave.on.server`：サーバー上にメッセージを残すかどうかを定義します。 サーバーにメッセージを残す場合は true に、そうでない場合は false に設定します。 デフォルトは true です。
 
    **POP3 の例：**
 
@@ -64,13 +75,13 @@ AEM でバウンスメールを追跡するには、バウンスメールが受�
 
    検索するフラグを設定できます。
 
-   `imap.flag.SEEN`：新規または未読のメッセージには false を、既読のメッセージには true を設定します。
+   新しい/見えないメッセージの場合は`imap.flag.SEEN`:Set false、既読のメッセージの場合はtrue
 
    フラグの完全リストについて詳しくは、[https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) を参照してください。
 
    **IMAP の例：**
 
-   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret | SSL 経由の IMAP を使用して、ポート 993 で Gmail に接続（user と secret を使用）します。デフォルトで、新規のメッセージのみが取得されます。 |
+   | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret | SSL 経由の IMAP を使用して、ポート 993 で Gmail に接続（user と secret を使用）します。 デフォルトで、新規のメッセージのみが取得されます。 |
    |---|---|
    | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true | SSL 経由の IMAP を使用して、ポート 993 で Gmail に接続（user と secret を使用）すると、既読のメッセージのみが取得されます。 |
    | imaps://imap.gmail.com:993/inbox?username=user&amp;password=secret&amp;imap.flag.SEEN=true&amp;imap.flag.SEEN=false | SSL 経由の IMAP を使用して、ポート 993 で Gmail に接続（user と secret を使用）すると、既読または新規のメッセージが取得されます。 |
@@ -91,7 +102,7 @@ AEM でバウンスメールを追跡するには、バウンスメールが受�
 
    次の設定を指定すると、動作を調整できます。
 
-   | バウンスカウンターの最大値（max.bounce.count） | ニュースレターの送信時に、ユーザーをスキップするまでのバウンス回数を定義します。この値を 0 に設定すると、バウンスのチェックが完全に無効になります。 |
+   | バウンスカウンターの最大値（max.bounce.count） | ニュースレターの送信時に、ユーザーをスキップするまでのバウンス回数を定義します。 この値を 0 に設定すると、バウンスのチェックが完全に無効になります。 |
    |---|---|
    | アクティビティをキャッシュしない（sent.activity.nocache） | ニュースレターの送信アクティビティに対して使用するキャッシュの設定を定義します。 |
 

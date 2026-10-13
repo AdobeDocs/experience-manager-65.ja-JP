@@ -8,13 +8,22 @@ role: User
 exl-id: fdebbc2b-c04d-4cdd-b7c2-8e9a2a854e79
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: fa7b95c2-9969-5924-a7c7-8cde1e7a2e26
+    internal-label: 3D Assets
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 98%
-
+source-wordcount: '605'
+ht-degree: 99%
 ---
-
 # Adobe Experience Manager での 3D アセットのプレビュー {#previewing-3d-assets-aem}
 
 | バージョン | 記事リンク |
@@ -60,30 +69,30 @@ Experience Manager のアセットの詳細ページから、インタラクテ�
 
 **Experience Manager で 3D アセットをプレビューするには：**
 
-1. 3D アセットをExperience Managerにアップロードしていることを確認します。
-3D プレビュー[&#128279;](#supported-3d-previewing-assets)および[Assets](/help/assets/manage-assets.md#uploading-assets)のアップロードでサポートされている形式はを参照してください。
+1. 3D アセットが Experience Manager にアップロードされていることを確認します。
+詳しくは、[3D プレビューでサポートされるファイル形式](#supported-3d-previewing-assets)と[アセットのアップロード](/help/assets/manage-assets.md#uploading-assets)を参照してください。
 1. Experience Manager の&#x200B;**[!UICONTROL ナビゲーション]**&#x200B;ページで&#x200B;**[!UICONTROL アセット]**／**[!UICONTROL ファイル]**&#x200B;を選択します。
 
    ![ナビゲーションページ](/help/assets/assets-dm/navigation-assets.png)
 
 1. ページの右上隅付近にある「表示」ドロップダウンリストで「**[!UICONTROL カード表示]**」を選択し、プレビューする 3D アセットに移動します。
 
-   ![3D カードの選択](/help/assets/assets-dm/3d-card-select.png)
+   ![3D カード選択](/help/assets/assets-dm/3d-card-select.png)
    _カード表示で、プレビューする 3D アセットのカードを選択_
 
 1. 3D アセットのカードを選択します。
 
-   ![インタラクティブ 3D プレビュー](/help/assets/assets-dm/3d-preview.png)
+   ![&#x200B; インタラクティブ 3D プレビュー](/help/assets/assets-dm/3d-preview.png)
    _アセット詳細表示ページでの 3D アセットのインタラクティブプレビュー_
 1. 3D アセットのアセット詳細表示ページで、次のいずれかの操作を行います。
 
    | 表示 | 説明 | マウス操作 | タッチスクリーン操作 |
    | --- | --- | --- | --- |
-   | **カメラを回転** | 3D シーンとオブジェクトの周囲でビューを周回させます。 | 左クリックしながらドラッグします。 | 1 本指で押しながらドラッグします。 |
+   | **カメラを回転** | 3D シーンとオブジェクトの周囲でビューを回転させます。 | 左クリックしながらドラッグします。 | 1 本指で押しながらドラッグします。 |
    | **カメラをパン** | ビューを左、右、上、下にパンします。 | 右クリックしながらドラッグします。 | 2 本指で押しながらドラッグします。 |
    | **カメラをズーム** | 3D シーンの領域の内外に移動します。 | ホイールをスクロールします。 | 2 本指でピンチします。 |
    | **カメラを中心に戻す** | カメラを中心の位置に戻し、3D シーンのオブジェクトに合わせます。 | ダブルクリックします。 | ダブルクリックします。 |
-   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。 リセットを使用しても、アセット全体を表示したり、適切な表示サイズで表示するために、カメラを近づけたり遠ざけたりできます。 |   |   |
+   | **リセット** | ページの右下隅付近にあるリセットアイコンを選択して、視野のターゲットポイントを 3D アセットの中心に戻します。 リセットでは、アセット全体が適切な表示サイズで表示されるように、カメラを近づけたり遠ざけたりすることもできます。 |   |   |
    | **全画面表示モード** | フルスクリーンモードに入るには、ページの右下隅にあるフルスクリーンアイコンを選択します。 |   |   |
 
 1. 作業が完了したら、ページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。

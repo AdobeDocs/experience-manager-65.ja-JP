@@ -1,6 +1,6 @@
 ---
 title: Adobe Creative Cloud ベストプラクティスとの統合
-description: ' [!DNL Adobe Experience Manager] と [!DNL Adobe Creative Cloud] を統合してアセット転送ワークフローを効率化し高いコンテンツ速度を実現するためのベストプラクティスです。'
+description: アセット転送ワークフローを合理化し、高いコンテンツベロシティを実現するために、[!DNL Adobe Experience Manager]と[!DNL Adobe Creative Cloud]を統合するためのベストプラクティスを紹介します。
 contentOwner: AG
 mini-toc-levels: 1
 role: User, Admin
@@ -8,13 +8,35 @@ feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+    internal-label: Integrations
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+subfeature_v2:
+  - id: f7212149-7f65-4e43-89c2-1f075f45be16
+    internal-label: Collaboration
+  - id: f14a07fd-abc1-452c-8a48-fbcbc24a66ef
+    internal-label: Adobe Asset Link
+  - id: d18d21f5-ea10-400d-a1f0-a2071ad38419
+    internal-label: Desktop App
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3263'
+source-wordcount: '3390'
 ht-degree: 99%
-
 ---
-
 # [!DNL Adobe Experience Manager] と [!DNL Creative Cloud] の統合のベストプラクティス {#aem-and-creative-cloud-integration-best-practices}
 
 | バージョン | 記事リンク |
@@ -119,9 +141,9 @@ TBD: Add some info about XD integration and possibly info about DA v2.0.
 * Adobe Stock 内のアセットが [!DNL Experience Manager] に保存されると、それらは通常の [!DNL Assets] になり、バイナリが [!DNL Experience Manager] リポジトリに保存されます。 [!DNL Adobe Stock] に関係する一部のメタデータが [!DNL Experience Manager] 内のアセットに保存されます。その他の点では、取り込みプロセスは他のあらゆるファイルの場合と同様です。 例えば、スマートタグがアクティブな場合、保存時にこれらのアセットにタグが追加されます。
 * [!DNL Experience Manager] に保存されたアセットはコピーであり、[!DNL Adobe Stock] へのリンクではありません。
 
-**アセットの操作は、[!DNL Adobe Stock]から[!DNL Creative Cloud]**&#x200B;の[!DNL Experience Manager]に保存されました。この統合は[!DNL Adobe Asset Link]とは独立していますが、[!DNL Adobe Asset Link]はこの方法で[!DNL Stock]から保存されたアセットを認識し、これらのアセットに追加のメタデータと[!DNL Adobe Stock]のロゴを[!DNL Adobe Asset Link]拡張機能UIの[!DNL Photoshop]、[!DNL Illustrator]、または[!DNL InDesign]に表示します。これらのファイルは、[!DNL Experience Manager]に保存すると通常のアセットになるため、参照や開くなどの操作に利用できます。
-拡張機能[!DNL Adobe Asset Link]が存在する[!DNL Creative Cloud]個のアプリで作業しているCreative ユーザーは、[!DNL Adobe Stock]から[!DNL Experience Manager]までの既にライセンス済みのアセットにアクセスできるだけでなく、[!DNL Creative Cloud]個のライブラリパネルを使用して、[!DNL Adobe Stock]個のアセットを検索、プレビュー、ライセンス取得することもできます。
-[!DNL Adobe Stock]の[!DNL Assets]がライセンスされ、[!DNL Experience Manager]に保存されました。これは、[!DNL Experience Manager Assets]のデプロイメントにアクセスする幅広いチームが利用できるようになりました。一方、[!DNL Adobe Stock]のアセットを[!DNL Creative Cloud] ライブラリパネル経由でライセンス供与しているクリエイターは、デフォルトで[!DNL Creative Cloud] アカウントでのみ利用できます。
+**[!DNL Adobe Stock] から [!DNL Experience Manager] に保存されたアセットを[!DNL Creative Cloud]** で操作します。 この統合は [!DNL Adobe Asset Link] とは独立していますが、[!DNL Adobe Asset Link] は [!DNL Stock] からそのように保存されたこれらのアセットを認識し、[!DNL Photoshop]、[!DNL Illustrator] または [!DNL InDesign] の [!DNL Adobe Asset Link] 拡張 UI でこれらのアセットに追加のメタデータと [!DNL Adobe Stock] ロゴを表示するようにします。 ファイルは [!DNL Experience Manager] に保存されると標準のアセットとなるため、閲覧したり開いたりすることができます。
+[!DNL Adobe Asset Link] 拡張機能が存在する [!DNL Creative Cloud] アプリケーションで作業するクリエイティブ ユーザーは、[!DNL Adobe Stock] から [!DNL Experience Manager] へすでにライセンスを供与されているアセットにアクセスできるだけでなく、[!DNL Creative Cloud] ライブラリ パネルで [!DNL Adobe Stock] アセットの検索、プレビュー、ライセンスを供与できます。
+[!DNL Adobe Stock] からライセンスを取得して [!DNL Experience Manager] に保存した [!DNL Assets] は、[!DNL Experience Manager Assets] デプロイメントにアクセスする幅広いチームで利用できるようになります。一方、[!DNL Creative Cloud] ライブラリパネルを介して [!DNL Adobe Stock] からアセットのライセンスを取得したクリエイターは、デフォルトでは自分たちの [!DNL Creative Cloud] アカウントでのみ利用できるようになっています。
 
 <!-- 
 TBD: A condensed version of the below content is better placed in the Adobe DAM introduction article.

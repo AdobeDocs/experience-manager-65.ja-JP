@@ -9,13 +9,31 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Developer, Leader, User
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '902'
 ht-degree: 100%
-
 ---
-
 # AEM Sites - GDPR 対応{#aem-sites-gdpr-readiness}
 
 >[!IMPORTANT]
@@ -24,7 +42,7 @@ ht-degree: 100%
 
 データのプライバシー権に関する EU 一般データ保護規則（GDPR）が 2018 年 5 月に発効します。
 
-AEM Sites は、GDPR コンプライアンスに関する義務をお客様が果たすのを支援する準備が整っています。このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。
+AEM Sites は、GDPR コンプライアンスに関する義務をお客様が果たすのを支援する準備が整っています。 このページでは、AEM Sites での GDPR 要求の処理手順について詳しく説明します。 プライベートデータの格納場所や、それらのデータを手動で、またはコードを使用して削除する方法について説明します。
 
 詳しくは、[アドビプライバシーセンターの GDPR ページ](https://www.adobe.com/jp/privacy/general-data-protection-regulation.html)を参照してください。
 
@@ -40,7 +58,7 @@ AEM Sites は、GDPR コンプライアンスに関する義務をお客様が�
 
 サイト上で訪問者の認証に使用されるユーザーアカウント、およびパブリッシュサーバー上の UGC コンテンツについては、[プラットフォームの GDPR ドキュメント](/help/managing/data-protection-and-privacy.md)を参照してください。
 
-デフォルトの AEM Sites コンポーネントは、訪問者から入力されたフォームデータをパブリッシュサーバーに保存しません。サードパーティのシステムまたは Adobe Campaign にデータを転送してさらに処理を行うことをお勧めします。
+デフォルトの AEM Sites コンポーネントは、訪問者から入力されたフォームデータをパブリッシュサーバーに保存しません。 サードパーティのシステムまたは Adobe Campaign にデータを転送してさらに処理を行うことをお勧めします。
 
 ## オプトイン／オプトアウト {#opt-in-opt-out}
 
@@ -60,7 +78,7 @@ Adobe Target に関連する GDPR データサブジェクトリクエストの�
 
 ## ContextHub {#contexthub}
 
-AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用するオプションのデータレイヤーが用意されています。これにより、ブラウザーに訪問者固有のデータが保持され、そのデータに基づいてルールベースのパーソナライズ機能が実行されます。
+AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用するオプションのデータレイヤーが用意されています。 これにより、ブラウザーに訪問者固有のデータが保持され、そのデータに基づいてルールベースのパーソナライズ機能が実行されます。
 
 この訪問者データはデフォルトでは AEM に格納されません。ブラウザー内でパーソナライゼーションに関する決定を行うためのルールが、AEM からデータレイヤーに送信されます。
 
@@ -68,20 +86,20 @@ AEM には、[ContextHub](/help/sites-developing/contexthub.md) を使用する�
 >
 >Adobe AEM（CQ）5.6 より前は、ClientContext（ContextHub の旧バージョン）からサーバーにデータが送信されていたものの、そのデータはサーバーに保存されませんでした。
 >
->Adobe AEM 6.4 以前のバージョンはサポートが終了している（EOL）ので、このドキュメントでは説明しません。[Adobe Experience Manager、CQ、CRX の以前のバージョンのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)を参照してください。
+>Adobe AEM 6.4 以前のバージョンはサポートが終了している（EOL）ので、このドキュメントでは説明しません。 [Adobe Experience Manager、CQ、CRX の以前のバージョンのドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions)を参照してください。
 
 ### オプトイン／オプトアウトの実装 {#implementing-opt-in-opt-out}
 
 サイト所有者は、次のガイドラインに従ってオプトアウトコンポーネントを実装する必要があります。
 
-以下のガイドラインでは、デフォルトでオプトインが実装されています。そのため、web サイトの訪問者は、個人データがブラウザーの（クライアント側）永続ストレージに格納される前に、明確に同意する必要があります。
+以下のガイドラインでは、デフォルトでオプトインが実装されています。 そのため、web サイトの訪問者は、個人データがブラウザーの（クライアント側）永続ストレージに格納される前に、明確に同意する必要があります。
 
 * オプトアウトコンポーネントは、ContextHub コンポーネントを組み込むたびに必ず組み込んでください。
 * Web サイトの GDPR に関連する利用条件を web サイトの訪問者に表示して、訪問者が以下を行えるようにする必要があります。
 
-   * 同意
-   * 拒否
-   * 以前の選択の変更
+  * 同意
+  * 拒否
+  * 以前の選択の変更
 
 * サイト訪問者がサイトの利用条件に同意した場合は、ContextHub のオプトアウト cookie を削除する必要があります。
 
@@ -108,49 +126,49 @@ ContextHub を使用した永続性をプレビューするには、次の操作
 
 * ブラウザーのコンソールを使用する。例：
 
-   * Chrome:
+  * Chrome:
 
-      * 開発者ツール／アプリケーション／ストレージを選択
+    * 開発者ツール／アプリケーション／ストレージを選択
 
-         * ローカルストレージ／（Web サイト）／ContextHubPersistence
-         * セッションストレージ／（web サイト）／ContextHubPersistence
-         * Cookie／（Web サイト）／SessionPersistence
+      * ローカルストレージ／（Web サイト）／ContextHubPersistence
+      * セッションストレージ／（web サイト）／ContextHubPersistence
+      * Cookie／（Web サイト）／SessionPersistence
 
-   * Firefox:
+  * Firefox:
 
-      * 開発者ツール／ストレージを選択
+    * 開発者ツール／ストレージを選択
 
-         * ローカルストレージ／（Web サイト）／ContextHubPersistence
-         * セッションストレージ／（web サイト）／ContextHubPersistence
-         * Cookie／（Web サイト）／SessionPersistence
+      * ローカルストレージ／（Web サイト）／ContextHubPersistence
+      * セッションストレージ／（web サイト）／ContextHubPersistence
+      * Cookie／（Web サイト）／SessionPersistence
 
-   * Safari:
+  * Safari:
 
-      * メニューバーで、環境設定／詳細／開発者メニューを表示を選択
-      * 開発／JavaScript コンソールを表示を選択
+    * メニューバーで、環境設定／詳細／開発者メニューを表示を選択
+    * 開発／JavaScript コンソールを表示を選択
 
-         * コンソール／ストレージ／ローカルストレージ／（web サイト）／ContextHubPersistence
-         * コンソール／ストレージ／セッションストレージ／（web サイト）／ContextHubPersistence
-         * コンソール／ストレージ／Cookie／（web サイト）／ContextHubPersistence
+      * コンソール／ストレージ／ローカルストレージ／（web サイト）／ContextHubPersistence
+      * コンソール／ストレージ／セッションストレージ／（web サイト）／ContextHubPersistence
+      * コンソール／ストレージ／Cookie／（web サイト）／ContextHubPersistence
 
-   * Internet Explorer:
+  * Internet Explorer:
 
-      * F12 開発者ツール／コンソールを選択
+    * F12 開発者ツール／コンソールを選択
 
-         * localStorage.getItem(&#39;ContextHubPersistence&#39;)
-         * sessionStorage.getItem(&#39;ContextHubPersistence&#39;)
-         * document.cookie
+      * localStorage.getItem(&#39;ContextHubPersistence&#39;)
+      * sessionStorage.getItem(&#39;ContextHubPersistence&#39;)
+      * document.cookie
 
 * ブラウザーのコンソールで ContextHub API を使用する。
 
-   * ContextHub には、次のデータ永続性レイヤーが用意されています。
+  * ContextHub には、次のデータ永続性レイヤーが用意されています。
 
-      * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
-      * ContextHub.Utils.Persistence.Modes.SESSION
-      * ContextHub.Utils.Persistence.Modes.COOKIE
-      * ContextHub.Utils.Persistence.Modes.WINDOW
+    * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
+    * ContextHub.Utils.Persistence.Modes.SESSION
+    * ContextHub.Utils.Persistence.Modes.COOKIE
+    * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub ストアは、使用する永続性レイヤーを定義します。永続性の現在の状態を表示するには、すべてのレイヤーを確認する必要があります。
+    ContextHub ストアは、使用する永続性レイヤーを定義します。永続性の現在の状態を表示するには、すべてのレイヤーを確認する必要があります。
 
 例えば、localStorage に格納されているデータを表示するには、次のようにします。
 
@@ -158,28 +176,28 @@ ContextHub を使用した永続性をプレビューするには、次の操作
 
 * ブラウザーのコンソールを使用する。
 
-   * Chrome - 開発者ツール／アプリケーション／ストレージを選択
+  * Chrome - 開発者ツール／アプリケーション／ストレージを選択
 
-      * ローカルストレージ／（Web サイト）／ContextHubPersistence
-      * セッションストレージ／（web サイト）／ContextHubPersistence
-      * Cookie／（Web サイト）／SessionPersistence
+    * ローカルストレージ／（Web サイト）／ContextHubPersistence
+    * セッションストレージ／（web サイト）／ContextHubPersistence
+    * Cookie／（Web サイト）／SessionPersistence
 
-   * Firefox - 開発者ツール／ストレージを選択
+  * Firefox - 開発者ツール／ストレージを選択
 
-      * ローカルストレージ／（Web サイト）／ContextHubPersistence
-      * セッションストレージ／（web サイト）／ContextHubPersistence
-      * Cookie／（Web サイト）／SessionPersistence
+    * ローカルストレージ／（Web サイト）／ContextHubPersistence
+    * セッションストレージ／（web サイト）／ContextHubPersistence
+    * Cookie／（Web サイト）／SessionPersistence
 
 * ブラウザーのコンソールで ContextHub API を使用する。
 
-   * ContextHub には、次のデータ永続性レイヤーが用意されています。
+  * ContextHub には、次のデータ永続性レイヤーが用意されています。
 
-      * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
-      * ContextHub.Utils.Persistence.Modes.SESSION
-      * ContextHub.Utils.Persistence.Modes.COOKIE
-      * ContextHub.Utils.Persistence.Modes.WINDOW
+    * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
+    * ContextHub.Utils.Persistence.Modes.SESSION
+    * ContextHub.Utils.Persistence.Modes.COOKIE
+    * ContextHub.Utils.Persistence.Modes.WINDOW
 
-     ContextHub ストアは、使用する永続性レイヤーを定義します。永続性の現在の状態を表示するには、すべてのレイヤーを確認する必要があります。
+    ContextHub ストアは、使用する永続性レイヤーを定義します。永続性の現在の状態を表示するには、すべてのレイヤーを確認する必要があります。
 
 例えば、localStorage に格納されているデータを表示するには、次のようにします。
 
@@ -218,7 +236,7 @@ ContextHub の永続性を削除するには、以下を実行します。
 
 * すべての ContextHub 永続性レイヤーを削除するには、すべてのレイヤーに対して適切なコードを呼び出す必要があります。
 
-   * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
-   * ContextHub.Utils.Persistence.Modes.SESSION
-   * ContextHub.Utils.Persistence.Modes.COOKIE
-   * ContextHub.Utils.Persistence.Modes.WINDOW
+  * ContextHub.Utils.Persistence.Modes.LOCAL（デフォルト）
+  * ContextHub.Utils.Persistence.Modes.SESSION
+  * ContextHub.Utils.Persistence.Modes.COOKIE
+  * ContextHub.Utils.Persistence.Modes.WINDOW

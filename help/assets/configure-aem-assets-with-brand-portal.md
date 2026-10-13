@@ -10,13 +10,25 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 1c2c350e91fe9a0a67618ea4ec00d4a8b4e3f0ca
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: e00c7c12-7035-41fe-ad76-1ec82c8c3f01
+    internal-label: Brand Portal
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 100%
-
 ---
-
 
 # AEM Assets と Brand Portal の連携の設定 {#configure-integration-65}
 
@@ -27,7 +39,7 @@ ht-degree: 100%
 
 Adobe Experience Manager Assets Brand Portal では、承認済みのブランドアセットを Adobe Experience Manager Assets から Brand Portal に公開し、Brand Portal ユーザーに配信できます。
 
-AEM Assets と Brand Portal の連携は、Adobe 開発者コンソールを通じて設定されます。このコンソールでは、Brand Portal テナントの認証に使用する Adobe Identity Management サービス（IMS）アカウントトークンを調達します。
+AEM Assets と Brand Portal の連携は、Adobe Developer Console を通じて設定されます。このコンソールでは、Brand Portal テナントの認証に使用する Adobe Identity Management Services（IMS）アカウントトークンを調達します。
 
 >[!NOTE]
 >
@@ -51,9 +63,9 @@ This help describes the following two use-cases:
 * [New configuration](#configure-new-integration-65): If you are a new Brand Portal user and want to configure your AEM Assets Author instance with Brand Portal, you can create a configuration by way of the Adobe Developer Console. 
 * [Upgrade configuration](#upgrade-integration-65): If you are an existing Brand Portal user having configuration on legacy OAuth Gateway, delete the existing configuration and create a configuration by way of Adobe Developer Console.
 -->
-具体的には、以下の操作に関する十分な知識があるユーザーを対象としています。
+ここで提供する情報は、このヘルプを読む人が以下のテクノロジーに精通していることを前提としています。
 
-* Adobe Experience Manager パッケージと AEM パッケージのインストール、設定、管理。
+* Adobe Experience Manager および AEM パッケージのインストール、設定、管理。
 
 * Linux® オペレーティングシステムと Microsoft® Windows オペレーティングシステムの使用 。
 

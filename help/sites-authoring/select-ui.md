@@ -5,16 +5,29 @@ exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '738'
-ht-degree: 100%
-
+source-wordcount: '754'
+ht-degree: 88%
 ---
+# UI の選択{#selecting-your-ui}
 
-# UI の選択 {#selecting-your-ui}
-
-Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI になり、サイトの管理と編集でほぼ同等の機能が実現されました。ただし、ユーザーが[クラシック UI](/help/sites-classic-ui-authoring/classicui.md) に切り替えたい場合もあります。そのためのオプションがいくつか用意されています。
+Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI になり、サイトの管理と編集でほぼ同等の機能が実現されました。 ただし、ユーザーが[クラシック UI](/help/sites-classic-ui-authoring/classicui.md) に切り替えたい場合もあります。 そのためのオプションがいくつか用意されています。
 
 >[!NOTE]
 >
@@ -22,14 +35,14 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 
 使用する UI を様々な場所で定義できます。
 
-* [インスタンスのデフォルト UI の設定](#configuring-the-default-ui-for-your-instance)
-ユーザーのログイン時に表示されるデフォルトの UI を設定します。ユーザーは、この設定を上書きして、自分のアカウントまたは現在のセッション用に別の UI を選択できます。
+* [&#x200B; インスタンスのデフォルト UIの設定](#configuring-the-default-ui-for-your-instance)
+これは、ユーザーログイン時に表示するデフォルトのUIを設定します。 ユーザーは、この設定を上書きして、自分のアカウントまたは現在のセッション用に別の UI を選択できます。
 
-* [アカウント用のクラシック UI オーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
-ページの編集時にデフォルトで使用する UI を設定します。ただし、ユーザーはこの設定を上書きしたり、自分のアカウントまたは現在のセッション用に別の UI を選択したりできます。
+* [&#x200B; アカウントのクラシック UI オーサリングの設定](/help/sites-authoring/select-ui.md#setting-classic-ui-authoring-for-your-account)
+これは、ページを編集する際にUIをデフォルトに設定しますが、ユーザーはこれを上書きし、アカウントまたは現在のセッションに対して別のUIを選択できます。
 
-* [現在のセッション用のクラシック UI への切り替え](#switching-to-classic-ui-for-the-current-session)
-現在のセッション用にクラシック UI に切り替えます。
+* [現在のセッションのクラシック UIに切り替える](#switching-to-classic-ui-for-the-current-session)
+現在のセッションのクラシック UIに切り替えます。
 
 * [ページオーサリングの場合、システムは UI に関して特定の上書きを行います](#ui-overrides-for-the-editor)。
 
@@ -43,7 +56,7 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 >
 >以前のバージョンからアップグレードされたインスタンスでは、ページオーサリング用にクラシック UI が保持されます。
 >
->アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。[エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
+>アップグレード後、ページオーサリングが自動的にタッチ対応 UI に切り替わることはありませんが、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用すると、その切り替えを設定できます。 [エディターの UI 上書き](#ui-overrides-for-the-editor)を参照してください。
 
 ## 使用しているインスタンスへのデフォルト UI の設定 {#configuring-the-default-ui-for-your-instance}
 
@@ -59,7 +72,7 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 
 ## 現在のセッションのクラシック UI への切り替え {#switching-to-classic-ui-for-the-current-session}
 
-デスクトップユーザーがタッチ操作対応 UI を使用している場合に、クラシック（デスクトップのみ）UI に戻した方がよいこともあります。現在のセッションでクラシック UI に切り替える方法はいくつかあります。
+デスクトップユーザーがタッチ操作対応 UI を使用している場合に、クラシック（デスクトップのみ）UI に戻した方がよいこともあります。 現在のセッションでクラシック UI に切り替える方法はいくつかあります。
 
 * **ナビゲーションリンク**
 
@@ -70,7 +83,7 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
   >
   >詳しくは、[クラシック UI へのアクセスの有効化](/help/sites-administering/enable-classic-ui.md)を参照してください。
 
-  このオプションが有効になっている場合は、該当するコンソールにマウスを移動するたびに、アイコン（モニターシンボル）が表示されます。これをタップまたはクリックすると、適切な場所がクラシック UI で開きます。
+  このオプションが有効になっている場合は、該当するコンソールにマウスを移動するたびに、アイコン（モニターシンボル）が表示されます。 これをタップまたはクリックすると、適切な場所がクラシック UI で開きます。
 
   例えば、**Sites** から **siteadmin** へのリンクなどです。
 
@@ -78,13 +91,13 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 
 * **URL**
 
-  クラシック UI には、`welcome.html` のようこそ画面の URL を使用してアクセスできます。例は次のとおりです。
+  クラシック UIには、ようこそ画面（`welcome.html`）のURLを使用してアクセスできます。 次に例を示します。
 
   `https://localhost:4502/welcome.html`
 
   >[!NOTE]
   >
-  >タッチ対応 UI には、`sites.html` 経由でアクセスできます。例：
+  >タッチ対応 UI には、`sites.html` 経由でアクセスできます。 例：
   >
   >
   >`https://localhost:4502/sites.html`
@@ -107,21 +120,21 @@ Adobe Experience Manager（AEM）のタッチ操作対応 UI が標準 UI にな
 
 * ページのオーサリング時：
 
-   * URL で `cf#` を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。例：
-     `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
+  * URL で `cf#` を使用してページにアクセスする場合、クラシックエディターが強制的に使用されます。 例：
+    `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-   * URL で `/editor.html` を使用しているか、タッチデバイスを使用している場合、タッチ対応エディターが強制的に使用されます。例：
-     `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
+  * URL で `/editor.html` を使用しているか、タッチデバイスを使用している場合、タッチ対応エディターが強制的に使用されます。 例：
+    `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * 強制は一時的なものであり、ブラウザーセッションでのみ有効です。
 
-   * Cookie は、タッチ対応（`editor.html`）とクラシック（`cf#`）のどちらが使用されているかに応じて設定されます。
+  * Cookie は、タッチ対応（`editor.html`）とクラシック（`cf#`）のどちらが使用されているかに応じて設定されます。
 
 * `siteadmin` を使用してページを開くと、以下が存在するかどうかを確認します。
 
-   * Cookie
-   * ユーザーの環境設定
-   * どちらも存在しない場合は、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)で指定された定義がデフォルトで使用されます。
+  * Cookie
+  * ユーザーの環境設定
+  * どちらも存在しない場合は、**WCM オーサリング UI モードサービス**（`AuthoringUIMode` サービス）の [OSGi 設定](/help/sites-deploying/configuring-osgi.md)で指定された定義がデフォルトで使用されます。
 
 >[!NOTE]
 >

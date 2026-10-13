@@ -5,13 +5,27 @@ role: Developer
 exl-id: b0416716-dcc9-4f80-986a-b9660a7c8f6b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 99%
-
 ---
-
 # 外部ユーザー招待ハンドラーの作成 {#create-invite-external-users-handler}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -52,7 +66,7 @@ Rights Management SPI にはプロジェクトのクラスパスに設定する 
 
 外部ユーザー招待ハンドラーの実装には、`createLocalPrincipalAccount` という名前のユーザー定義メソッドが含まれます。 このメソッドは、メールアドレスをパラメーター値として指定する文字列値を受け入れます。 `createLocalPrincipalAccount` メソッドは、 `EDC_EXTERNAL_REGISTERED` と呼ばれるローカルドメインがすでに存在することを前提としています。 このドメイン名は任意の名前に設定できます。ただし、本番アプリケーションの場合は、エンタープライズドメインと統合する必要がある場合があります。
 
-`createUsers` メソッドは、すべてのメールアドレスを反復処理し、対応するユーザーオブジェクト（`EDC_EXTERNAL_REGISTERED` ドメインのローカルユーザー）を作成します。 最後に、`doEmails` メソッドが呼び出されます。 このメソッドは、サンプル内でスタブとして意図的に残されています。 実稼動環境の実装では、新しく作成されたユーザーに招待用のメールメッセージを送信するアプリケーションロジックが含まれます。 実際のアプリケーションのアプリケーションロジックフローを示すために、サンプルに残しておきます。
+`createUsers` メソッドは、すべてのメールアドレスを反復処理し、対応するユーザーオブジェクト（`EDC_EXTERNAL_REGISTERED` ドメインのローカルユーザー）を作成します。 最後に、`doEmails` メソッドが呼び出されます。 このメソッドは、サンプル内でスタブとして意図的に残されています。 本番環境の実装では、新しく作成されたユーザーに招待用のメールメッセージを送信するアプリケーションロジックが含まれます。 実際のアプリケーションのロジックフローを示すために、サンプルに残しておきます。
 
 ### 外部ユーザー招待ハンドラー実装の定義 {#user-handler-implementation}
 
@@ -231,7 +245,7 @@ A. コンポーネント Bで必要な外部JAR ファイル。 JAVA ファイ�
 
 外部ユーザー招待ハンドラーをテストするには、管理コンソールを使用して、招待する外部ユーザーを追加します。
 
-管理コンソールを使用して、招待する外部ユーザーを追加するには、次をおこないます。
+管理コンソールを使用して、招待する外部ユーザーを追加するには、次を行います。
 
 1. ワークベンチを使用して、外部ユーザー招待ハンドラーの JAR ファイルをデプロイします。
 1. アプリケーションサーバーを再起動します。
@@ -243,7 +257,7 @@ A. コンポーネント Bで必要な外部JAR ファイル。 JAVA ファイ�
 1. 管理コンソールにログインします。
 1. **[!UICONTROL サービス]**／**[!UICONTROL Rights Management]**／**[!UICONTROL 設定]**／ 招待済み&#x200B;**[!UICONTROL ユーザーの登録]**&#x200B;をクリックします。
 1. 招待ユーザーの登録を有効にするには、**[!UICONTROL 招待ユーザーの登録を有効にする]**&#x200B;ボックスをオンにします。 **[!UICONTROL ビルトインの登録システムを使用]**&#x200B;の下で「**[!UICONTROL いいえ]**」をクリックします。 設定を保存します。
-1. 管理コンソールホームページで、**[!UICONTROL 設定]**／**[!UICONTROL User Management]**／**[!UICONTROL ドメイン管理]**&#x200B;をクリックします。
+1. 管理コンソールホームページで、**[!UICONTROL 設定]**／**[!UICONTROL ユーザー管理]**／**[!UICONTROL ドメイン管理]**&#x200B;をクリックします。
 1. 「**[!UICONTROL 新規ローカルドメイン]**」をクリックします。 次のページで、名前と識別子の値が `EDC_EXTERNAL_REGISTERED` のドメインを作成します。 変更を保存します。
 1. 管理コンソールホームページで、**[!UICONTROL サービス]**／**[!UICONTROL Rights Management]**／**[!UICONTROL 招待ユーザーとローカルユーザー]**&#x200B;をクリックします。 **[!UICONTROL 招待ユーザーの追加]**&#x200B;ページが表示されます。
 1. メールアドレスを入力します（現在の外部ユーザー招待ハンドラーは、メールメッセージを実際に送信しないので、アドレスが有効である必要はありません）。 「**[!UICONTROL OK]**」をクリックします。 ユーザーがシステムに招待されます。

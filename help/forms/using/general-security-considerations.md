@@ -9,13 +9,29 @@ role: Admin,User
 exl-id: 3f150dd5-f486-4f16-9de9-035cde53b034
 solution: Experience Manager, Experience Manager Forms
 feature: Document Security,Adaptive Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 50158d81-1c06-57f7-8bd7-e8ff76a93f85
+    internal-label: Document Security
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 97%
-
 ---
-
 # JEE 上の AEM Forms のセキュリティに関する一般的な考慮事項{#general-security-considerations-for-aem-forms-on-jee}
 
 この記事には、AEM Forms 環境を堅牢化するための準備に役立つ、基本的な情報を記載しています。 これには、JEE 上の AEM Forms、オペレーティングシステム、アプリケーションサーバー、データベースセキュリティに関する前提条件の情報も含まれます。 環境のロックダウンを継続する前に、この情報を確認してください。
@@ -30,8 +46,8 @@ ht-degree: 97%
 
 オペレーティングシステムを保護する際には、次のようなオペレーティングシステムのベンダーが挙げている対策を実装することを慎重に検討してください。
 
-* ユーザー、ロール、権限を定義し、制御する
-* ログと監査記録を監視する
+* ユーザー、役割、権限を定義し、制御する
+* ログと監査記録のモニタリング
 * 不要なサービスとアプリケーションを削除する
 * ファイルのバックアップを作成する
 
@@ -74,7 +90,7 @@ JEE 上の AEM Forms がサポートするオペレーティングシステム�
 
 ### アプリケーションサーバーのセキュリティ情報 {#application-server-security-information}
 
-アプリケーションサーバーを保護する際には、次のようなサーバーのベンダーが挙げている対策を実装することを慎重に検討してください。
+アプリケーションサーバーを保護する際には、サーバーベンダーが説明している次の対策の実装を慎重に検討してください。
 
 * 管理者ユーザー名として推測しにくい名前を使用する
 * 不要なサービスを無効にする
@@ -82,7 +98,7 @@ JEE 上の AEM Forms がサポートするオペレーティングシステム�
 * Cookie の保護を有効にする
 * 不要なポートを閉じる
 * IP アドレスまたはドメインでクライアントを制限する
-* Java™ Security Manager を使用して、プログラムによって権限を制限する
+* Java™ セキュリティマネージャーを使用して、プログラムによって権限を制限する
 
 JEE 上の AEM Forms がサポートするアプリケーションサーバーのセキュリティリソースについては、次の表の資料を参照してください。
 
@@ -199,7 +215,7 @@ JEE 上の AEM Forms がサポートするデータベースのセキュリテ�
   </tr>
   <tr>
    <td>&gt;<p>LDAP</p> </td>
-   <td><p>LDAP サーバーを実行しているポート。 デフォルトのポートは通常389です。 ただし、「SSL」オプションを選択した場合、デフォルトのポートは通常636です。 指定するポートをLDAP管理者に確認します。</p> </td>
+   <td><p>LDAP サーバーが実行されているポート。 デフォルトのポートは通常389です。 ただし、「SSL」オプションを選択した場合、デフォルトのポートは通常636です。 指定するポートをLDAP管理者に確認します。</p> </td>
   </tr>
  </tbody>
 </table>
@@ -231,9 +247,9 @@ JBoss® Application Server は、デフォルトの HTTP ポートとして 8080
 
 ### データベース内のメールアドレスの資格情報は暗号化されない {#email-credentials-not-encrypted-in-database}
 
-アプリケーションに保存されているメールアドレスの資格情報は、JEE 上の AEM Forms データベースに保存される前に暗号化されません。 サービスのエンドポイントでメールアドレスを使用するように設定した場合、エンドポイント設定の一部として使用したパスワード情報は、データベースに保存される前に暗号化されません。
+アプリケーションに保存されているメールの資格情報は、JEE 上の AEM Forms データベースに保存される前に暗号化されません。 サービスのエンドポイントでメールアドレスを使用するように設定した場合、エンドポイント設定の一部として使用したパスワード情報は、データベースに保存される前に暗号化されません。
 
-### データベース内の Rights Management に関する機密性情報 {#sensitive-content-for-rights-management-in-the-database}
+### データベース内の Rights Management の機密コンテンツ {#sensitive-content-for-rights-management-in-the-database}
 
 JEE 上の AEM Forms は、JEE 上の AEM Forms データベースに、ポリシードキュメントで使用した機密ドキュメントキー情報と暗号化マテリアルを格納します。 データベースへの侵入を防御することで、このような機密性の高い情報を保護することができます。
 
@@ -241,7 +257,7 @@ JEE 上の AEM Forms は、JEE 上の AEM Forms データベースに、ポリ�
 
 JEE 上の AEM Forms を実行するアプリケーションサーバーでは、そのサーバー上に設定されたデータソースを介してデータベースにアクセスするように設定する必要があります。 アプリケーションサーバーがデータソース構成ファイルでデータベースパスワードをクリアテキストで公開しないようにしてください。
 
-lc_[database].xml ファイルには、クリアテキスト形式のパスワードを含めないでください。 アプリケーションサーバーのパスワードを暗号化する方法については、アプリケーションサーバーのベンダーにお問い合わせください。
+lc_[database].xml ファイルには、クリアテキスト形式のパスワードを含めないでください。 これらのパスワードをアプリケーションサーバー用に暗号化する方法については、アプリケーションサーバーのベンダーにお問い合わせください。
 
 >[!NOTE]
 >
@@ -251,4 +267,4 @@ IBM® WebSphere® Application Server および Oracle WebLogic Server は、デ�
 
 ### Trust Store に保管された秘密鍵の保護 {#protecting-the-private-key-stored-in-trust-store}
 
-Trust Store から読み込んだ秘密鍵や秘密鍵証明書は、JEE 上の AEM Forms データベースに保管されます。 データベースを保護し、アクセスを指名された管理者のみに制限するため、適切な注意を払う必要があります。
+Trust Store に読み込まれた秘密鍵または資格情報は、JEE 上の AEM Forms データベースに保管されます。 データベースを保護し、アクセスを指名された管理者のみに制限するため、適切な注意を払う必要があります。

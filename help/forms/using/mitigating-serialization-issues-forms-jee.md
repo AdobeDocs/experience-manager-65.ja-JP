@@ -6,13 +6,25 @@ feature: Security
 version: Experience Manager 6.5
 type: Documentation
 role: Admin
-source-git-commit: ec3941675081255879065c3be9d5af77474b2072
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '839'
 ht-degree: 1%
-
 ---
-
 
 # AEM Forms JEEでのシリアル化の問題の軽減 {#mitigating-serialization-issues-in-aem-forms-jee}
 
@@ -24,7 +36,7 @@ AEM Forms JEEには、オブジェクトのデシリアライズを試みる前�
 >
 >シリアル化解除フィルターのヘルスチェックで、サーバーでアクティブであることが既に報告されている場合（[&#x200B; エージェントのアクティベーションの検証](#verifying-the-agents-activation)を参照）、アプリケーションサーバーは既に保護されており、このドキュメントの残りの手順をスキップできます。
 
-## 開始する前に {#before-you-begin}
+## 始める前に {#before-you-begin}
 
 アプリケーションサーバーが実行するJava™ バージョンを確認します。
 

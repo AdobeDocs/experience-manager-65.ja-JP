@@ -10,13 +10,22 @@ exl-id: 0f3aaa0a-ccfb-4162-97a6-ee5485595d28
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1596'
 ht-degree: 96%
-
 ---
-
 
 # Salesforce との統合 {#integrating-with-salesforce}
 
@@ -57,7 +66,7 @@ AEM を Salesforce と統合するよう設定するには、以下のように�
 
    >[!NOTE]
    >
-   >新しい設定は新しいページにリダイレクトされます：**http://localhost:4502/etc/cloudservices/salesforce/developer.html**。 これは、Salesforce でリモートアクセスアプリケーションを作成するときに「Callback URL」で指定する必要がある値とまったく同じ値です。 これらの値が一致しなければなりません。
+   >新しい設定は、新しいページ **http://localhost:4502/etc/cloudservices/salesforce/developer.html**&#x200B;にリダイレクトされます。 これは、Salesforce でリモートアクセスアプリケーションを作成するときに「Callback URL」で指定する必要がある値とまったく同じ値です。 これらの値が一致しなければなりません。
 
 1. Salesforce アカウントにログインします（アカウントがない場合は [https://developer.salesforce.com](https://developer.salesforce.com) で作成します）。
 1. Salesforce で、**Create**／**Apps** に移動して、「**Connected Apps**」に移動します（以前のバージョンの Salesforce のワークフローは **Deploy**／**Remote Access**）。
@@ -215,7 +224,7 @@ AEM ユーザーを Salesforce ID にマッピングして、クライアント�
 
 Salesforce Client Context Store のデータを使用するセグメントを作成できます。 次の手順を実行します。
 
-1. AEMのセグメント化に移動するには、**Tools** > **Segmentation**&#x200B;に移動するか、[http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation)に移動します。
+1. AEMのセグメント化に移動するには、**ツール** > **セグメント化**&#x200B;に移動するか、[http://localhost:4502/miscadmin#/etc/segmentation](http://localhost:4502/miscadmin#/etc/segmentation)に移動します。
 1. Salesforce のデータを含めるように、セグメントを作成または更新します。 詳しくは、[セグメント化](/help/sites-administering/campaign-segmentation.md)を参照してください。
 
 ## リードの検索 {#searching-leads}

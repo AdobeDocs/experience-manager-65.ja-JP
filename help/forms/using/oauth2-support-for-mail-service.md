@@ -5,26 +5,40 @@ exl-id: cd3da71f-892c-4fde-905f-71a64fb5d4e4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 9b4dd5a4a137e529be8142fff1ddbfca889e64ae
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 95%
-
+source-wordcount: '1045'
+ht-degree: 97%
 ---
-
 # AEM Forms と Microsoft® Office 365 メールサーバープロトコルの統合 {#oauth2-support-for-the-microsoft-mail-server-protocols}
 
 組織が安全なメールの要件に準拠できるように、AEM Forms では、Microsoft® Office 365 メールサーバープロトコルとの統合のために OAuth 2.0 をサポートしています。 Azure Active Directory（Azure AD）OAuth 2.0 認証サービスを使用して、IMAP、POP、SMTP などの様々なプロトコルと接続し、Office 365 ユーザーのメールデータにアクセスできます。 OAuth 2.0 サービスを介して認証するように Microsoft® Office 365 メールサーバープロトコルを設定する手順を以下に示します。
 
-1. [https://portal.azure.com/](https://portal.azure.com/)にログインし、検索バーで&#x200B;**Azure Active Directory**&#x200B;を検索して、結果をクリックします。
-または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)に直接参照することもできます
+1. [https://portal.azure.com/](https://portal.azure.com/) にログインし、検索バーで **Azure Active Directory** を検索して、結果をクリックします。
+または、[https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview) を直接参照することもできます。
 1. **追加**／**アプリの登録**／**新しい登録**&#x200B;をクリックします。
 
    ![アプリの登録](/help/forms/using/assets/outh_outlook_microsoft_azure.png)
 
 1. 必要に応じて情報を入力し、「**登録**」をクリックします。
    ![&#x200B; サポートされているアカウント](/help/forms/using/assets/azure_suuportedaccountype.png)
-上記の場合、**任意の組織ディレクトリ （任意のAzure AD ディレクトリ – マルチテナント）および個人のMicrosoft® アカウント （Skype、Xboxなど）**&#x200B;のアカウントが選択されます。
+   上記の場合、**任意の組織ディレクトリ （任意のAzure AD ディレクトリ – マルチテナント）および個人のMicrosoft® アカウント （Skype、Xboxなど）**&#x200B;のアカウントが選択されます。
 
    >[!NOTE]
    >
@@ -139,7 +153,7 @@ ht-degree: 95%
    >
    >必要に応じて、ワークベンチで特定のプロセスの Auth 2.0 認証設定を基本認証に変更できます。 それには、「**接続設定**」タブの「**グローバル設定を使用**」で「**OAuth 2.0 認証**」の値を「False」に設定します。
 
-## OAuth タスク通知を有効にする手順は次のとおりです。 {#enable_oauth_task}
+## OAuth タスク通知の有効化 {#enable_oauth_task}
 
 1. **ホーム**／**サービス**／**フォームワークフロー**／**サーバー設定**／**メール設定**&#x200B;に移動します。
 1. OAuth タスクの通知を有効にするには、「**OAuth を有効にする**」チェックボックスを選択します。
@@ -153,7 +167,7 @@ ht-degree: 95%
    >
    > タスク通知に関して詳しくは、 [ここをクリック](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-email-endpoints.html?lang=ja#create-an-email-endpoint-for-the-complete-task-service)します。
 
-## メールのエンドポイントを設定する手順は次のとおりです。 {#configure_email_endpoint}
+## メールエンドポイントの設定 {#configure_email_endpoint}
 
 1. **ホーム**／**サービス**／**アプリケーションとサービス**／**エンドポイント管理**&#x200B;に移動します。
 1. メールエンドポイントを設定するには、**oAuth 2.0 認証設定**&#x200B;を `True` に設定します。
@@ -171,4 +185,4 @@ ht-degree: 95%
 
 * メールサービスが正しく動作していない場合は、上記の説明に従って `Refresh Token` を再生成します。 新しい値がデプロイされるまで数分かかります。
 
-* ワークベンチを使用してメールエンドポイントでメールサーバーの詳細を設定する際にエラーが発生した場合は、 ワークベンチの代わりに管理 UI を使用してエンドポイントを設定してみます。
+* ワークベンチを使用してメールエンドポイントでメールサーバーの詳細を設定する際のエラー。 ワークベンチの代わりに管理 UI を使用してエンドポイントを設定します。

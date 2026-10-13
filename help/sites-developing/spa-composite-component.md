@@ -6,13 +6,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 98%
-
 ---
-
 
 # SPA の複合コンポーネント {#composite-components-in-spas}
 
@@ -26,7 +40,7 @@ ht-degree: 98%
 
 ## ユースケース {#use-case}
 
-この記事では、一般的なカードコンポーネントをユースケースとして使用します。 カードは、多くのデジタルエクスペリエンスに共通の UI 要素で、通常は画像と関連するテキストまたはキャプションで構成されます。 ある作成者は、カード全体をドラッグ＆ドロップできるようにしながら、カードの画像を個別に編集したり、関連するテキストをカスタマイズきるようにしたいと考えています。
+この記事では、一般的なカードコンポーネントをユースケースの例として使用します。 カードは、多くのデジタルエクスペリエンスに共通の UI 要素で、通常は画像と関連するテキストまたはキャプションで構成されます。 ある作成者は、カード全体をドラッグ＆ドロップできるようにしながら、カードの画像を個別に編集したり、関連するテキストをカスタマイズできるようにしたいと考えています。
 
 ## 前提条件 {#prerequisites}
 
@@ -48,7 +62,7 @@ AEM 内の SPA 実装に応じて、複合コンポーネントを実装する�
 
 ### コンポーネントが AEM プロジェクトに存在しない。 {#component-does-not-exist}
 
-まず、合成コンポーネントを構成するコンポーネント（画像コンポーネントとテキストコンポーネント）を作成します。
+まず、複合コンポーネントを構成するコンポーネント（画像コンポーネントとテキストコンポーネント）を作成します。
 
 1. AEM プロジェクトにテキストコンポーネントを作成します。
 1. 対応する `resourceType` をコンポーネントの `editConfig` ノードのプロジェクトから追加します。
@@ -111,7 +125,7 @@ export const AEMCard = ({ pagePath, itemPath}) => (
 );
 ```
 
-この合成コンポーネントは、アプリ内の任意の場所に配置でき、SPA エディターでテキストと画像コンポーネントのプレースホルダーが追加されます。 以下のサンプルでは、カードコンポーネントがタイトルの下のホームコンポーネントに追加されています。
+この合成コンポーネントは、アプリ内の任意の場所に配置でき、SPA エディターでテキストコンポーネントと画像コンポーネントのプレースホルダーを追加します。 以下のサンプルでは、カードコンポーネントがタイトルの下のホームコンポーネントに追加されています。
 
 ```javascript
 function Home() {
@@ -131,7 +145,7 @@ function Home() {
 
 ### コンポーネントは AEM プロジェクトに存在するが、必要なコンテンツが存在しない。 {#content-does-not-exist}
 
-この場合、カードコンポーネントは、タイトルと画像ノードを含む AEM プロジェクトに作成済みです。 子ノード（テキストと画像）は、対応するリソースタイプを持っています。
+この場合、タイトルノードと画像ノードを含むカードコンポーネントは、AEM プロジェクト内にすでに作成されています。 子ノード（テキストと画像）は、対応するリソースタイプを持っています。
 
 ![カードコンポーネントのノード構造](assets/composite-node-structure.png)
 

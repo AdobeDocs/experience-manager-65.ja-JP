@@ -10,13 +10,20 @@ role: Admin
 exl-id: cadb62c9-210d-4204-8abc-d0cf70960392
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 1%
-
 ---
-
 # コミュニティの通知 {#communities-notifications}
 
 ## 概要 {#overview}
@@ -34,13 +41,13 @@ AEM Communitiesには、サインインコミュニティメンバーに関心�
 
 * 通知セクションへのリンクは、常にコミュニティサイトのヘッダーに表示されます。
 
-   * アクティビティでは、[&#x200B; アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります。
-   * サブスクリプションを購入するには、電子メール [&#128279;](/help/communities/email.md)の設定が必要です。
+  * アクティビティでは、[&#x200B; アクティビティストリーム関数](/help/communities/functions.md#activity-stream-function)をコミュニティサイトの構造に含める必要があります。
+  * サブスクリプションを購入するには、電子メール [&#128279;](/help/communities/email.md)の設定が必要です。
 
 * 通知の実装は、拡張性と接続性に優れたチャネルを通じて行われます。
 
-   * アクティビティはwebでのみ使用できます。
-   * サブスクリプションは、メールでのみ利用できます。
+  * アクティビティはwebでのみ使用できます。
+  * サブスクリプションは、メールでのみ利用できます。
 
 コミュニティ [FP1](/help/communities/deploy-communities.md#latestfeaturepack)の時点で、使用可能な通知チャネルは次のとおりです。
 
@@ -80,11 +87,11 @@ AEM Communitiesには、サインインコミュニティメンバーに関心�
 * 他のメンバーのプロファイルを表示する場合。
 * フォーラム、QnA、ブログなどの主要機能ページで、次の操作を行います。
 
-   * その一般的な機能のすべてのアクティビティに従います。
+  * その一般的な機能のすべてのアクティビティに従います。
 
 * フォーラムのトピック、QnAの質問、ブログ記事など、特定のエントリの場合：
 
-   * その特定のエントリのすべてのアクティビティに従います。
+  * その特定のエントリのすべてのアクティビティに従います。
 
 ## 通知設定の管理 {#managing-notification-settings}
 

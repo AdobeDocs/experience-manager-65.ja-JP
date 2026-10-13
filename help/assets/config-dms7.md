@@ -11,13 +11,29 @@ mini-toc-levels: 4
 exl-id: badd0f5c-2eb7-430d-ad77-fa79c4ff025a
 feature: Configuration,Scene7 Mode
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: da0dfbce-df02-4f8b-b32d-a4e3b1d05085
+    internal-label: Configuration
+  - id: bd0d2470-932c-4269-8eca-6d939b72d9ef
+    internal-label: Dynamic Media
+subfeature_v2:
+  - id: ee69dd13-2aba-4eb0-912b-399e82368d73
+    internal-label: Scene7 mode
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '6444'
-ht-degree: 97%
-
+source-wordcount: '6668'
+ht-degree: 98%
 ---
-
 # Dynamic Media - Scene7 モードの設定{#configuring-dynamic-media-scene-mode}
 
 開発、ステージング、実稼動など、様々な環境で Adobe Experience Manager を使用する場合は、環境ごとに Dynamic Media Cloud Services を設定します。
@@ -28,8 +44,8 @@ ht-degree: 97%
 
 新しいアーキテクチャでは、Experience Manager は、プライマリソースアセットを扱い、Dynamic Media と同期してアセットの処理や公開をおこないます。
 
-1. プライマリソースアセットがExperience Managerにアップロードされると、Dynamic Mediaにレプリケートされます。その時点で、Dynamic Mediaは、ビデオエンコーディングや画像の動的バリエーションなど、すべてのアセット処理とレンディション生成を処理します。
-（Dynamic Media - Scene7 モードでは、デフォルトのアップロードファイルサイズは2 GB以下です。2 GBから15 GBまでのアップロードファイルサイズを有効にするには、[&#x200B; （オプション） 2 GB](#optional-config-dms7-assets-larger-than-2gb)を超えるアセットのアップロード用にDynamic Media - Scene7 モードを設定するを参照してください。）
+1. プライマリソースアセットが Experience Manager にアップロードされると、Dynamic Media にレプリケートされます。 その時点で、Dynamic Media は、ビデオエンコーディングおよび画像の動的バリアントなど、すべてのアセットの処理とレンディションの生成を扱います。
+（Dynamic Media - Scene7 モードでは、デフォルトのアップロードファイルサイズは 2 GB 以下です。 アップロードファイルのサイズを 2 GB まで 15 GB にするには、 [（オプション）2 GB を超えるアセットのアップロードに対するDynamic Media - Scene7モードの設定](#optional-config-dms7-assets-larger-than-2gb)を参照してください。）
 1. レンディションが生成されると、Experience Manager から、リモート Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリが Experience Manager インスタンスに送り返されることはありません）。
 1. コンテンツを公開および承認する準備ができると、Dynamic Media サービスがトリガーされ、コンテンツが配信サーバーにプッシュされて、CDN（コンテンツ配信ネットワーク）にコンテンツがキャッシュされます。
 
@@ -100,7 +116,7 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
 
    「**[!UICONTROL Dynamic Media に接続]**」をクリックします。
 
-1. **[!UICONTROL パスワードを変更]**&#x200B;ダイアログボックスの「**[!UICONTROL 新しいパスワード]**」フィールドに、8～25 文字の新しいパスワードを入力します。 パスワードには、次のうち少なくとも 1 つを含める必要があります。
+1. **[!UICONTROL パスワードを変更]**&#x200B;ダイアログボックスの「**[!UICONTROL 新しいパスワード]**」フィールドに、8～25 文字の新しいパスワードを入力します。 パスワードには、次の各項目を少なくとも 1 つ含める必要があります。
 
    * 大文字
    * 小文字
@@ -133,25 +149,25 @@ Experience Manager Dynamic Media を 6.3 から 6.4 または 6.5 にアップ�
    * **[!UICONTROL 会社のルートフォルダーのパス]**
 
    * **[!UICONTROL アセットの公開]** - 次の 3 つのオプションから選択できます。
-      * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。 アセットを公開するためにユーザーが操作する必要はありません。
-      * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager 6.5.8 以降では、Experience Manager パブリッシュインスタンスは、**[!UICONTROL アクティベーション時]**&#x200B;公開モードでのみ`dam:scene7Domain`や `dam:scene7FileStatus` などの正確な Dynamic Media メタデータ値を反映します。 この機能を有効にするには、Service Pack 8 をインストールしてから、Experience Manager を再起動します。 Sling Config Manager に移動します。 `Scene7ActivationJobConsumer Component` の設定を検索または新しく作成します）。 「**[!UICONTROL Dynamic Media の公開後にメタデータをレプリケート]**」チェックボックスを選択してから「 **[!UICONTROL 保存]**」を選択します。
+     * **[!UICONTROL 即時公開]**&#x200B;とは、アセットがアップロードされると、システムがアセットを取り込み、URL／埋め込みをすぐに提供することを意味します。 アセットを公開するためにユーザーが操作する必要はありません。
+     * **[!UICONTROL アクティベーション時]**&#x200B;とは、URL／埋め込みリンクが提供される前に、最初にアセットを明示的に公開する必要があることを意味します。<br><!-- CQDOC-17478, Added March 9, 2021-->Experience Manager 6.5.8 以降では、Experience Manager パブリッシュインスタンスは、**[!UICONTROL アクティベーション時]**&#x200B;公開モードでのみ`dam:scene7Domain`や `dam:scene7FileStatus` などの正確な Dynamic Media メタデータ値を反映します。 この機能を有効にするには、Service Pack 8 をインストールしてから、Experience Manager を再起動します。 Sling Config Manager に移動します。 `Scene7ActivationJobConsumer Component` の設定を検索または新しく作成します）。 「**[!UICONTROL Dynamic Media の公開後にメタデータをレプリケート]**」チェックボックスを選択してから「 **[!UICONTROL 保存]**」を選択します。
 
-        ![「 Dynamic Media の公開後にメタデータをレプリケート」チェックボックス](assets-dm/replicate-metadata-setting.png)
+       ![「 Dynamic Media の公開後にメタデータをレプリケート」チェックボックス](assets-dm/replicate-metadata-setting.png)
 
-      * **[!UICONTROL 選択的公開]** このオプションを使用すると、Dynamic Media に公開するフォルダーを制御できます。 スマート切り抜きや動的レンディションなどの機能を使用したり、プレビュー用に Experience Manager でのみ公開するフォルダーを指定したりできます。 これらの同じアセットは、パブリックドメインで配信するために Dynamic Media で公開され&#x200B;*ません*。<br>このオプションは、**[!UICONTROL Dynamic Media クラウド設定]**&#x200B;で設定できます。または、必要に応じて、フォルダーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;でフォルダーレベルでこのオプションを設定することもできます。<br>この設定を後で変更するか、後でフォルダーレベルで変更した場合、これらの変更は、その時点からアップロードした新しいアセットのみに影響します。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。<br>この後のアセット フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
+     * **[!UICONTROL 選択的公開]** このオプションを使用すると、Dynamic Media に公開するフォルダーを制御できます。 スマート切り抜きや動的レンディションなどの機能を使用したり、プレビュー用に Experience Manager でのみ公開するフォルダーを指定したりできます。 これらの同じアセットは、パブリックドメインで配信するために Dynamic Media で公開され&#x200B;*ません*。<br>このオプションは、**[!UICONTROL Dynamic Media クラウド設定]**&#x200B;で設定できます。または、必要に応じて、フォルダーの&#x200B;**[!UICONTROL プロパティ]**&#x200B;でフォルダーレベルでこのオプションを設定することもできます。<br>この設定を後で変更するか、後でフォルダーレベルで変更した場合、これらの変更は、その時点からアップロードした新しいアセットのみに影響します。[Dynamic Mediaでの選択的公開の操作](/help/assets/selective-publishing.md)を参照してください。<br>この後のアセット フォルダー内の既存のアセットの公開状態は、**[!UICONTROL クイック公開]**&#x200B;または&#x200B;**[!UICONTROL 公開を管理]**&#x200B;ダイアログボックスから手動で変更するまで、そのままになります。
 
-   * **[!UICONTROL セキュアプレビューサーバー]** - セキュアレンディションプレビューサーバーへのURL パスを指定できます。つまり、レンディションが生成された後、Experience Managerはリモート Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリがExperience Manager インスタンスに送り返されることはありません）。
-自社のサーバーまたは特別なサーバーを使用するための特別な取り決めがない限り、Adobeでは、この設定を指定したままにすることをお勧めします。
+   * **[!UICONTROL プレビューサーバーを保護]** - セキュアなレンディションプレビューサーバーへの URL パスを指定できます。 つまり、レンディションが生成されると、Experience Manager は、リモート Dynamic Media レンディションに安全にアクセスしてプレビューできます（バイナリが Experience Manager インスタンスに送り返されることはありません）。
+     自社のサーバーまたは特別なサーバーを使用する特別な取り決めがない限り、この設定を指定されたとおりにしておくことをお勧めします。
 
    * **[!UICONTROL すべてのコンテンツを同期]** - <!-- NEW OPTION, CQDOC-15371, Added March 4, 2020-->デフォルトで選択されています。 Dynamic Media との同期で、アセットを選択して含めるまたは除外する場合は、このオプションの選択を解除します。 このオプションの選択を解除すると、次の 2 つの Dynamic Media 同期モードから選択できるようになります。
 
    * **[!UICONTROL Dynamic Media 同期モード]**
-      * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
-      * **[!UICONTROL デフォルトで無効]** – 選択したフォルダーをDynamic Mediaに同期するように明示的にマークするまで、設定は任意のフォルダーに適用されません。
-選択したフォルダーをDynamic Mediaに同期するようにマークするには、アセットフォルダーを選択し、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。**[!UICONTROL 詳細]** タブの&#x200B;**[!UICONTROL Dynamic Media同期モード]** ドロップダウンリストで、次の3つのオプションから選択します。完了したら、**[!UICONTROL 保存]**&#x200B;を選択します。*覚えておいてください：**[!UICONTROL すべてのコンテンツを以前に同期]**&#x200B;した場合、これら3つのオプションは使用できません。* Dynamic Mediaのフォルダーレベルで選択的公開を使用する[も参照してください](/help/assets/selective-publishing.md)。
-         * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つまたはクラウド設定のデフォルトモードから同期値を継承します。 継承した場合の詳細なステータスは、ツールチップで表示されます。
-         * **[!UICONTROL サブフォルダーに対して有効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期に含めます。 フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
-         * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
+     * **[!UICONTROL デフォルトで有効]** - フォルダーを特別に除外するようにマークしない限り、設定はすべてのフォルダーにデフォルトで適用されます。<!-- you can then deselect the folders that you do not want the configuration applied to.-->
+     * **[!UICONTROL デフォルトで無効]** - 選択したフォルダーを Dynamic Media と同期するように明示的にマークしない限り、設定はどのフォルダーにも適用されません。
+       選択したフォルダーを Dynamic Media と同期するようにマークするには、アセットフォルダーを選択した後、ツールバーで「**[!UICONTROL プロパティ]**」を選択します。 「**[!UICONTROL 詳細]**」タブの **[!UICONTROL Dynamic Media 同期モード]**&#x200B;ドロップダウンリストで、次の 3 つのオプションから選択します。 完了したら、「**[!UICONTROL 保存]**」を選択します。 *覚えておいてください：**[!UICONTROL 以前のすべてのコンテンツを同期]**&#x200B;を選択した場合、これらの3つのオプションは使用できません。* [Dynamic Mediaのフォルダーレベルでの選択的公開の操作](/help/assets/selective-publishing.md)も参照してください。
+       * **[!UICONTROL 継承]** - フォルダーに明示的な同期値はなく、代わりに、上位フォルダーの 1 つまたはクラウド設定のデフォルトモードから同期値を継承します。 継承した場合の詳細なステータスは、ツールチップで表示されます。
+       * **[!UICONTROL サブフォルダーに対して有効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期に含めます。 フォルダー固有の設定は、クラウド設定内のデフォルトモードよりも優先されます。
+       * **[!UICONTROL サブフォルダーで無効にする]** - このサブツリー内のすべての項目を Dynamic Media との同期から除外します。
 
    >[!NOTE]
    >
@@ -299,8 +315,8 @@ Dynamic Media - Scene7 モードでは、デフォルトのアセットアップ
 
 1. 「**[!UICONTROL プロパティ]** 」タブの「**[!UICONTROL 名前]**」列の下にある「`sizeLimit`」を探します。
 1. `sizeLimit` の名前の右側にある「**[!UICONTROL 値]**」列の下で、値フィールドをダブルクリックします。
-1. 適切な値をバイト単位で入力して、サイズ制限を目的のアップロードサイズの最大値まで増やすことができます。例えば、アップロードアセットのサイズ制限を10 GBに増やすには、「値」フィールドに「`10737418240`」と入力します。
-15 GB （`2013265920` バイト）までの値を入力できます。 この場合、15 GBを超えるアップロードされたアセットはアップロードされません。
+1. 適切な値をバイト単位で入力して、アップロードサイズ上限を任意の値に設定します。 例えば、アップロードアセットのサイズ上限を 10 GB に増やすには、値フィールドに「`10737418240` 」と入力します。
+最大 15 GB（`2013265920` バイト）の値を入力できます。 その場合、15 GB を超えるアップロード済みアセットはアップロードされません。
 
    ![サイズ上限値](/help/assets/assets-dm/uploadassets15gb_c.png)
 
@@ -667,7 +683,7 @@ Granite の一時的なワークフローキューは、**[!UICONTROL DAM アセ
 
 1. 「**[!UICONTROL 並列ジョブの最大数]**」フィールドで、目的の値に数値を変更します。
 
-   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。 正確な値は、ハードウェアの容量に依存します。 初回の移行や 1 回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、特定事例で値をテストして整する必要があります。
+   **[!UICONTROL 並列ジョブの最大数]**&#x200B;を増やすと、Dynamic Media へのファイルの大量アップロードを適切にサポートできます。 正確な値は、ハードウェアの容量に依存します。 初回の移行や 1 回限りのバルクアップロードなど、特定のシナリオでは、大きな値を使用できます。 ただし、大きな値（コア数の 2 倍など）を使用すると、他の同時アクティビティに悪影響を及ぼす可能性があることに注意してください。 そのため、個々のユースケースに基づいて値をテストし、調整する必要があります。
 
 <!--
 By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0&ndash;1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)

@@ -9,13 +9,29 @@ role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '17137'
 ht-degree: 99%
-
 ---
-
 # ドキュメントのデジタル署名と認証 {#digitally-signing-and-certifying-documents}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -131,11 +147,11 @@ Signature API (Java) を使用して署名フィールドを追加します。
    * 必要に応じて、デジタル署名が署名フィールドに適用された際にロックするフィールドを指定する `FieldMDPOptions` オブジェクトを作成します。
    * PDF ドキュメントに署名フィールドを追加するには、`SignatureServiceClient` オブジェクトの `addSignatureField` メソッドを呼び出して、次の値を渡します。
 
-      * `com.adobe.idp` です。 署名フィールドを追加する PDF ドキュメントを表す `Document` オブジェクトです。
-      * 署名フィールドの名前を指定する文字列値です。
-      * 署名フィールドを追加するページ番号を表す `java.lang.Integer` 値です。
-      * 署名フィールドの場所を指定する `PositionRectangle` オブジェクトです。
-      * デジタル署名が署名フィールドに適用された後にロックされる PDF ドキュメント内のフィールドを指定する `FieldMDPOptions` オブジェクトです。 このパラメータ値はオプションで、 `null` を渡すことができます。
+     * `com.adobe.idp` です。 署名フィールドを追加する PDF ドキュメントを表す `Document` オブジェクトです。
+     * 署名フィールドの名前を指定する文字列値です。
+     * 署名フィールドを追加するページ番号を表す `java.lang.Integer` 値です。
+     * 署名フィールドの場所を指定する `PositionRectangle` オブジェクトです。
+     * デジタル署名が署名フィールドに適用された後にロックされる PDF ドキュメント内のフィールドを指定する `FieldMDPOptions` オブジェクトです。 このパラメータ値はオプションで、 `null` を渡すことができます。
 
    * 様々な実行時の値を指定する `PDFSeedValueOptions` オブジェクトです。 このパラメータ値はオプションで、 `null` を渡すことができます。
 
@@ -174,10 +190,10 @@ Signature API（Web サービス）を使用して署名フィールドを追加
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 署名フィールドが追加された PDF ドキュメントを取得する
 
@@ -321,10 +337,10 @@ Signature API（Web サービス）を使用して署名フィールド名を取
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 署名フィールドを含む PDF ドキュメントを取得する
 
@@ -406,11 +422,11 @@ Signature サービスの操作をプログラムで実行する前に、Signatu
 * **フィルター**：署名フィールドで使用するフィルタを指定します。 例えば、Adobe.PPKLite フィルターを使用できます。 （[PDF リファレンス](https://www.adobe.com/devnet/acrobat/pdfs/pdf_reference_1-7.pdf)を参照してください）。
 * **フラグオプション**：この署名フィールドに関連付けられているフラグ値を指定します。 値が 1 の場合、署名者は指定された値のみをエントリに使用する必要があります。 値が 0 の場合、他の値も許可されています。 ビット位置は次のとおりです。
 
-   * **1（フィルター）：**&#x200B;署名フィールドへの署名に使用する署名ハンドラー
-   * **2（サブフィルタ）：**&#x200B;署名時に使用する有効なエンコードを示す名前の配列
-   * **3 (V)**：署名フィールドへの署名に使用される署名ハンドラーの必要最小限のバージョン番号
-   * **4 （理由）：**&#x200B;ドキュメントに署名する理由を指定する文字列の配列
-   * **5（PDFLegalWarnings）：**&#x200B;可能な法的証明を指定する文字列の配列
+  * **1（フィルター）：**&#x200B;署名フィールドへの署名に使用する署名ハンドラー
+  * **2（サブフィルタ）：**&#x200B;署名時に使用する有効なエンコードを示す名前の配列
+  * **3 (V)**：署名フィールドへの署名に使用される署名ハンドラーの必要最小限のバージョン番号
+  * **4 （理由）：**&#x200B;ドキュメントに署名する理由を指定する文字列の配列
+  * **5（PDFLegalWarnings）：**&#x200B;可能な法的証明を指定する文字列の配列
 
 * **法的証明**：ドキュメントを認証すると、ドキュメントの表示内容をあいまいにしたり誤解を招く可能性のある特定の種類のコンテンツが自動的にスキャンされます。 例えば、注釈により、認証される対象を把握するために重要なテキストが隠れてしまう場合があります。 スキャン処理により、こうした種類のコンテンツの存在を示す警告が生成されます。 また、警告が発生した可能性のあるコンテンツに関する追加の説明も提供されます。
 * **権限**：署名を無効にせずに、PDF ドキュメントで使用できる権限を指定します。
@@ -503,10 +519,10 @@ Signature API（web サービス）を使用して署名フィールドを変更
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変更する署名フィールドを含む PDF ドキュメントを取得
 
@@ -770,10 +786,10 @@ Signature API（web サービス）を使用した PDF ドキュメントのデ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 署名する PDF ドキュメントを取得
 
@@ -927,11 +943,11 @@ Forms と Signature API（Java）を使用してインタラクティブフォ�
    * 実行時オプションの設定に使用する `PDFFormRenderSpec` オブジェクトを作成します。 `PDFFormRenderSpec` オブジェクトの `setGenerateServerAppearance` メソッドを呼び出し、`true` を渡します。
    * `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを呼び出して、以下の値を渡します。
 
-      * レンダリングする PDF フォームを含む `com.adobe.idp.Document` オブジェクト。
-      * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
-      * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクト。 このパラメーター値として `null` を指定できます。
-      * 添付ファイルを格納する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合、`null` を指定できます。
+     * レンダリングする PDF フォームを含む `com.adobe.idp.Document` オブジェクト。
+     * フォームに結合するデータを含む `com.adobe.idp.Document` オブジェクト。
+     * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
+     * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクト。 このパラメーター値として `null` を指定できます。
+     * 添付ファイルを格納する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターで、フォームにファイルを添付しない場合、`null` を指定できます。
 
      `renderPDFForm2` メソッドは、 フォームデータストリームを含む `FormsResult` オブジェクトを返します。
 
@@ -994,9 +1010,9 @@ Forms and Signature API（web サービス）を使用して、インタラク�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
 
    * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
@@ -1019,14 +1035,14 @@ Forms and Signature API（web サービス）を使用して、インタラク�
    * 実行時オプションの設定に使用される `PDFFormRenderSpec` オブジェクトを作成します。 値 `true` を `PDFFormRenderSpec` オブジェクトの `generateServerAppearance` フィールドに割り当てます。
    * `FormsServiceClient` オブジェクトの `renderPDFForm2` メソッドを呼び出して、以下の値を渡します。
 
-      * レンダリングする PDF フォームを含む `BLOB` オブジェクト。
-      * フォームに結合するデータを含む `BLOB` オブジェクト。
-      * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
-      * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクト。 このパラメーター値として `null` を指定できます。
-      * 添付ファイルを格納する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターであり、フォームにファイルを添付しない場合に `null` を指定できます。
-      * フォームにページ数を保存するために使用される長い出力パラメーターです。
-      * ロケール値に使用される文字列出力パラメーターです。
-      * インタラクティブフォームの保存に使用される出力パラメーターの `FormResult` 値です。
+     * レンダリングする PDF フォームを含む `BLOB` オブジェクト。
+     * フォームに結合するデータを含む `BLOB` オブジェクト。
+     * 実行時オプションを格納する `PDFFormRenderSpec` オブジェクト。
+     * Forms サービスで必要な URI 値を格納する `URLSpec` オブジェクト。 このパラメーター値として `null` を指定できます。
+     * 添付ファイルを格納する `java.util.HashMap` オブジェクト。 これはオプションのパラメーターであり、フォームにファイルを添付しない場合に `null` を指定できます。
+     * フォームにページ数を保存するために使用される長い出力パラメーターです。
+     * ロケール値に使用される文字列出力パラメーターです。
+     * インタラクティブフォームの保存に使用される出力パラメーターの `FormResult` 値です。
 
    * `FormsResult` オブジェクトの `outputContent` フィールドを呼び出して、PDF フォームを取得します。 このフィールドは、インタラクティブフォームを表す `BLOB` オブジェクトを保存します。
 
@@ -1234,10 +1250,10 @@ Signature API（web サービス）を使用して PDF ドキュメントを認�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 認証する PDF ドキュメントを取得
 
@@ -1471,10 +1487,10 @@ Signature Service API（Web サービス）を使用してデジタル署名を�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 検証する署名を含む PDF ドキュメントを取得する
 
@@ -1686,10 +1702,10 @@ Signature Service API（web サービス）を使用して、複数のデジタ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 検証する署名が含まれている PDF ドキュメントを取得します
 
@@ -1850,10 +1866,10 @@ Signature API（Web サービス）を使用してデジタル署名を削除し
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `SignatureServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `SignatureServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 削除する署名が含まれている PDF ドキュメントを取得します。
 

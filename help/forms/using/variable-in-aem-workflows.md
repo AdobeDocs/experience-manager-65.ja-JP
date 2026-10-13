@@ -9,13 +9,27 @@ exl-id: beb2b83e-e8db-40bb-915f-cb6ba3140947
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '2208'
-ht-degree: 98%
-
+source-wordcount: '2291'
+ht-degree: 99%
 ---
-
 # AEM Forms ワークフローの変数{#variables-in-aem-forms-workflows}
 
 | バージョン | 記事リンク |
@@ -162,7 +176,7 @@ XML タイプの変数を選択し、XML ファイルを格納します。 XML �
 
 #### OR‧分岐ステップ {#or-split-step}
 
-OR‧分岐は、ワークフロー内に分割を作成し、以降は 1 つの分岐だけがアクティブになります。 これを使用すると、ワークフローに条件付き処理パスを導入できます。 必要に応じて、各分岐にワークフローステップを追加できます。
+OR 分岐は、ワークフロー内に分割を作成し、以降は 1 つの分岐だけがアクティブになります。 これを使用すると、ワークフローに条件付き処理パスを導入できます。 必要に応じて、各分岐にワークフローステップを追加できます。
 
 分岐のルーティング式は、ルール定義、ECMA スクリプト、または外部スクリプトを使用して定義できます。
 
@@ -279,8 +293,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 ### ワークフロー変数を使用して、機密性の高いユーザーデータを JCR 外に保存 {#jcr-independent-persistance}
 
-Forms Workflowを使用して処理されるデータには、個人情報や機密個人情報などの機密性の高い利用者データが含まれる場合があります。企業は、様々なワークフローステップ（およびワークフロー変数を使用して渡される）によって処理されるデータを、JCR ストレージから自社が所有および管理する外部データストアに保存できます。外部ストレージにワークフローデータを保持する方法について詳しくは、[顧客所有のデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
-[!DNL Adobe Experience Manager]は、ワークフロー変数を外部のAzure BLOB ストレージに保存するためのワークフローAPI [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer)を提供します。APIの使用について詳しくは、[&#x200B; ワークフロー変数を使用して機密データをパラメーター化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
+Forms Workflow を使用して処理されるデータには、個人を特定できる情報や個人情報などの機密性の高いユーザーデータが含まれることがあります。 企業は、様々なワークフローステップで処理される（およびワークフロー変数を使用して渡される）データを、JCR ストレージから所有および管理する外部データストアに格納することを選択できます。 外部ストレージへのワークフローデータの保持について詳しくは、[顧客が所有するデータストアに対するワークフロー変数の使用](/help/sites-administering/workflows-administering.md#using-workflow-variables-customer-datastore)を参照してください。
+[!DNL Adobe Experience Manager] は、ワークフロー API [UserMetaDataPersistenceProvider](https://github.com/adobe/workflow-variable-externalizer) を提供して、外部の Azure BLOB ストレージにワークフロー変数を保存します。 API の使用について詳しくは、[ワークフロー変数を使用して、機密データをパラメータ化し、外部データストアに保存する](/help/forms/using/aem-forms-workflow.md#externalize-wf-variables)を参照してください。
 
 ## 変数の編集 {#edit-a-variable}
 

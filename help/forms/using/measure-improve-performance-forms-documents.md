@@ -9,20 +9,36 @@ exl-id: 4f45ad22-611b-4b4f-8e89-cb64a122b70a
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 100%
-
 ---
-
 # フォームのコンバージョン率の測定と効率性の改善{#measure-and-improve-effectiveness-and-conversion-of-forms}
 
 ## 課題 {#the-challenge-br}
 
 今日、組織はますます顧客の裁量を拡大し、複数チャンネルにまたがるデジタルのセルフサービス経由で取引を行うことを推奨しています。 ただし、1 対 1 のフィードバックを受け取る仕組みがない場合、ビジネスがどれくらい成功しているのかを測定し、デジタルフォームを使用してカスタマーエクスペリエンスを改善し、コンバージョン率を上げるのは難しい課題になります。
 
-ROI を最大化するには、顧客がサービスをどのように利用しているのかをモニタリングし、デジタルアーティファクト（フォーム）を使用してカスタマーエクスペリエンスを改善する必要があります。 成功を測定して改善に向けた戦略を策定するには、組織は次のような疑問に答えられなければなりません。
+ROI を最大化するには、顧客がサービスをどのように利用しているのかをモニターし、デジタルアーティファクト（フォーム）を使用してカスタマーエクスペリエンスを改善する必要があります。 成功を測定して改善に向けた戦略を策定するには、組織は次のような疑問に答えられなければなりません。
 
 * フォームを利用してトランザクションを行った顧客の数は？
 * 問題なくトランザクションを完了した顧客の数は？
@@ -32,7 +48,7 @@ ROI を最大化するには、顧客がサービスをどのように利用し�
 
 ## 解決策 {#the-solution}
 
-AEM Forms は、[Adobe Marketing Cloud](https://www.adobe.com/jp/marketing-cloud.html) ソリューション（[Adobe Analytics](https://www.adobe.com/jp/marketing-cloud/web-analytics.html) と[Adobe Target](https://www.adobe.com/jp/marketing-cloud/testing-targeting.html)）に統合されているため、フォームのパフォーマンスをモニタリングして分析し、コンバージョン率を上げるためのエクスペリエンスを開発することができます。
+AEM Forms は、[Adobe Marketing Cloud](https://www.adobe.com/jp/marketing-cloud.html) ソリューション（[Adobe Analytics](https://www.adobe.com/jp/marketing-cloud/web-analytics.html) と[Adobe Target](https://www.adobe.com/jp/marketing-cloud/testing-targeting.html)）に統合されているため、フォームのパフォーマンスをモニターして分析し、コンバージョン率を上げるためのエクスペリエンスを開発することができます。
 
 ## ワークフロー {#the-workflow}
 

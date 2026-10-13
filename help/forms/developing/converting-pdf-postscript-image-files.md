@@ -9,20 +9,36 @@ role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2820'
 ht-degree: 98%
-
 ---
-
 # PDF の Postscript および画像ファイルへの変換 {#converting-pdf-to-postscript-andimage-files}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
 **Convert PDF サービスについて**
 
-Convert PDF サービスは、PDF ドキュメントを PostScript およびいくつかの画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでサーバーベースの無人印刷を行う場合に便利です。 PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換する方法が実用的です。
+Convert PDF サービスは、PDF ドキュメントを PostScript およびいくつかの画像形式（JPEG、JPEG 2000、PNG および TIFF）に変換します。 PDFドキュメントを PostScript に変換すると、PostScript プリンターでサーバーベースの無人印刷を行う場合に便利です。 PDF ドキュメントをサポートしていないコンテンツ管理システムでドキュメントをアーカイブする場合、PDF ドキュメントをマルチページ TIFF ファイルに変換することは実用的です。
 
 Convert PDF サービスを使用して、以下のタスクを実行できます。
 
@@ -54,7 +70,7 @@ PDF ドキュメントを PostScript ファイルに変換するには、次の�
 
 **プロジェクトファイルを含める**
 
-開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを追加します。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 **Convert PDF クライアントを作成**
 
@@ -80,7 +96,7 @@ PDF ドキュメントを PostScript ファイルに変換する際に、作成�
 
 **PDF ドキュメントを PostScript ファイルに変換**
 
-サービスクライアントを作成し、実行時オプションを設定したら、PostScript 変換操作を呼び出すことができます。 この操作では、変換するドキュメントに関する情報（ターゲットドキュメントに適した PostScript レベルを含む）が必要になります。
+サービスクライアントを作成し、実行時オプションを設定したら、PostScript 変換操作を呼び出すことができます。 この操作では、変換するドキュメントに関する情報（変換先ドキュメントに適した PostScript レベルを含む）が必要になります。
 
 **PostScript ファイルを保存**
 
@@ -100,7 +116,7 @@ PDF ドキュメントを PostScript に変換したら、出力を PostScript �
 
 ### Java API を使用して PDF ドキュメントを PS に変換 {#convert-a-pdf-document-to-ps-using-the-java-api}
 
-Convert PDF サービス API（Java）を使用して、PDF ドキュメントを PostScript に変換します。
+Convert PDF サービス API（Java）を使用して、PDF ドキュメントを PostScript に変換：
 
 1. プロジェクトファイルを含めます。
 
@@ -165,10 +181,10 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PostScript ファイルに変換する PDF ドキュメントを参照します。
 
@@ -211,7 +227,7 @@ Convert PDF サービス API（web サービス）を使用して、PDF キュ�
 
 Convert PDF サービスを使用すると、PDF ドキュメントを JPEG、JPEG 2000、TIFF、PNG などの画像形式にプログラムで変換できます。 PDF ドキュメントを画像ファイルに変換することにより、PDF ドキュメントを画像ファイルとして使用できます。 例えば、画像をストレージ用のエンタープライズコンテンツ管理システムに配置できます。
 
-Convert PDF サービスは、PDF ドキュメントを画像に変換する際に、ドキュメント内のページごとに個別の画像を作成します。 例えば、ドキュメントのページ数が 20 の場合、 Convert PDF サービスは 20 個の画像ファイルを作成します。 PDF ドキュメントを PDF 形式に変換する場合、PDF ドキュメント内のページごとに個々の画像を作成するか、画像ドキュメント全体の単一の画像ファイルを作成できます。
+Convert PDF サービスは、PDF ドキュメントを画像に変換する際に、ドキュメント内のページごとに個別の画像を作成します。 例えば、ドキュメントのページ数が 20 の場合、 Convert PDF サービスは 20 個の画像ファイルを作成します。 PDF ドキュメントを画像形式に変換する場合、PDF ドキュメント内のページごとに個々の画像を作成するか、PDF ドキュメント全体に対して単一の画像ファイルを作成できます。
 
 >[!NOTE]
 >
@@ -230,7 +246,7 @@ PDF ドキュメントをサポートされている任意のタイプに変換�
 
 **プロジェクトファイルを含める**
 
-開発プロジェクトに必要なファイルを含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
+開発プロジェクトに必要なファイルを追加します。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 **Convert PDF クライアントを作成**
 
@@ -326,10 +342,10 @@ Convert PDF サービス API（web サービス）を使用して、PDF ドキ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `ConvertPdfServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `ConvertPdfServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換する PDF ドキュメントを取得します。
 

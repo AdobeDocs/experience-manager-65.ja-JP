@@ -9,13 +9,29 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3434'
-ht-degree: 96%
-
+source-wordcount: '3480'
+ht-degree: 97%
 ---
-
 # スマートイメージング {#smart-imaging}
 
 スマートイメージングでは、各ユーザーに固有の閲覧特性を適用して、ユーザーのエクスペリエンス用に最適化された適切な画像を自動的に提供することで、より良いパフォーマンスとエンゲージメントをもたらします。
@@ -244,33 +260,33 @@ To understand pre-requisites for Smart Imaging, see [Am I eligible to use Smart 
 
    * **プライマリ連絡先の詳細：**
 
-      * 名前、メールおよび電話番号を記入します。
+     * 名前、メールおよび電話番号を記入します。
 
    * **有効にするスマートイメージング機能：**
 
-      * 自身のアカウントで必要な機能をリストします。
+     * 自身のアカウントで必要な機能をリストします。
 
-         * ブラウザーフォーマット変換：WebP または AVIF
-         * ネットワーク帯域幅の最適化
-         * DPR：DPR では、正しい `dprValue` を判断するためにクライアントサイドの調整が必要です。 したがって、アドビでは、`dpr=on,dprValue` を追加して URL 経由で DPR を有効にすることをお勧めします。
+       * ブラウザーフォーマット変換：WebP または AVIF
+       * ネットワーク帯域幅の最適化
+       * DPR：DPR では、正しい `dprValue` を判断するためにクライアントサイドの調整が必要です。 したがって、アドビでは、`dpr=on,dprValue` を追加して URL 経由で DPR を有効にすることをお勧めします。
 
    * **スマートイメージングのドメイン：**
 
-      * *`company.com`* や *`mycompany.scene7.com`* など、関連するドメインをすべてリストします
-      * スマートイメージングは、汎用ドメインとカスタムドメインの両方をサポートします。
-      * ドメインを識別するには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/ja/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)を開き、会社のアカウントにログインします。
+     * *`company.com`* や *`mycompany.scene7.com`* など、関連するドメインをすべてリストします
+     * スマートイメージングは、汎用ドメインとカスタムドメインの両方をサポートします。
+     * ドメインを識別するには、[Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/ja/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started)を開き、会社のアカウントにログインします。
 
-         1. **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
-         1. 「**[!UICONTROL 公開サーバー名]**」フィールドを探して、ドメインを確認します。
-         1. 別のプロバイダーが管理する CDN ではなく、アドビの CDN を使用していることを確認します。
+       1. **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 一般設定]**&#x200B;に移動します。
+       1. 「**[!UICONTROL 公開サーバー名]**」フィールドを探して、ドメインを確認します。
+       1. 別のプロバイダーが管理する CDN ではなく、アドビの CDN を使用していることを確認します。
 
    * **HTTP/2 サポートを示す：**
 
-      * スマートイメージングを HTTP/2 上で機能させる必要があるかどうかを指定します。
+     * スマートイメージングを HTTP/2 上で機能させる必要があるかどうかを指定します。
 
 1. アドビカスタマーサポートでは、リクエストされたスマートイメージング機能がデフォルトで有効になっているので、URL にパラメーターを手動で追加する必要はありません。
-1. Adobeでは、キャッシュを使用してパフォーマンスを最大化するために、TTL （Time To Live）を少なくとも24時間に設定することをお勧めします。
-TTLを調整するには：
+1. アドビでは、キャッシュによるパフォーマンスを最大化するために、有効期間（TTL）を 24 時間以上に設定することをお勧めします。
+TTL を調整するには：
 
    1. **Dynamic Media Classic の場合：**
       1. **[!UICONTROL 設定]**／**[!UICONTROL アプリケーション設定]**／**[!UICONTROL 公開設定]**／**[!UICONTROL Image Server]** に移動します。
@@ -338,9 +354,10 @@ TTLを調整するには：
 >
 >**X-Adobe-Smart-Imaging = -1 で WebP を配信中**
 >
->`X-Adobe-Smart-Imaging`の値が–1で、WebPがまだ配信されている場合、スマートイメージングはアクティブです。しかし、古いキャッシュのため、サイズのメリットは計算されませんでした。この問題を修正するには、画像のURLで`cache=update` （1回のみ）を使用できます。
->修飾子の使用例：
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`> キャッシュ全体を無効にするには、サポートケースを作成する必要があります。
+>`X-Adobe-Smart-Imaging` の値が -1 で、WebP がまだ配信中の場合、スマートイメージングはアクティブです。 ただし、キャッシュが古いので、サイズのメリットは計算されませんでした。 画像の URL で `cache=update` を（1 回だけ）使用して、この問題を修正できます。
+>この修飾子の使用例を次に示します。
+>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>キャッシュ全体を無効にするには、サポートケースを作成する必要があります。
 
 +++
 

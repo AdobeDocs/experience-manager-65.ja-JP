@@ -5,13 +5,25 @@ feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: a45b1e7f-e65f-4cd3-be86-5cec5d9449ef
+    internal-label: Content management
+subfeature_v2:
+  - id: b7f5d1e0-aa2f-4a55-83f4-c2b35a8bd3a7
+    internal-label: Content fragments
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 100%
-
 ---
-
 # 関連コンテンツ{#associated-content}
 
 AEM の関連コンテンツ機能により関連性を付加して、フラグメントをコンテンツページに追加する際に、アセットを（オプションで）フラグメントと共に使用できるようになります。 これにより、[ページ上のコンテンツフラグメントを使用する際に広範なアセットにアクセスでき](/help/sites-authoring/content-fragments.md#using-associated-content)、ヘッドレスコンテンツ配信の柔軟性が向上すると共に、適切なアセットの検索に必要な時間も短縮されます。 関連するコンテンツは、コンテンツフラグメントエディターを使用して設定できます。
@@ -35,7 +47,7 @@ AEM の関連コンテンツ機能により関連性を付加して、フラグ�
 
 1. 必要なコレクションを選択します。
 
-   選択したコレクションにフラグメント自体をオプションで追加できます。これにより追跡が可能になります。
+   選択したコレクションにフラグメント自体をオプションで追加できます。これによりトラッキングに役立ちます。
 
    ![コレクションの選択](assets/cfm-assoc-content-02.png)
 

@@ -10,13 +10,22 @@ exl-id: 0dc4a8ce-5b0e-4bc9-a6f5-df2a67149e22
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 100%
-
 ---
-
 # データストアのガベージコレクション {#data-store-garbage-collection}
 
 従来の WCM アセットを削除すると、基になるデータストアレコードの参照がノード階層から削除されますが、データストアレコード自体は残ります。 この未参照のデータストアレコードは、保持する必要のない「ガベージ」になります。 インスタンスにいくつかのガベージアセットが存在する場合、そのガベージアセットを削除すれば、領域を確保し、バックアップやファイルシステムのメンテナンスのパフォーマンスを最適化できます。
@@ -182,7 +191,7 @@ curl コマンドはすぐに制御を返します。
 
 データストアの整合性チェックは、欠落しているもののまだ参照されているデータストアのバイナリを報告するものです。 整合性チェックを開始するには、次の手順を実行します。
 
-1. JMX コンソールに移動します。 JMX コンソールの使用方法について詳しくは、[JMX コンソールを使用したサーバーリソースの監視](/help/sites-administering/jmx-console.md#using-the-jmx-console)を参照してください。
+1. JMX コンソールに移動します。 JMX コンソールの使用方法について詳しくは、[JMX コンソールを使用したサーバーリソースのモニタリング](/help/sites-administering/jmx-console.md#using-the-jmx-console)を参照してください。
 1. **BlobGarbageCollection** Mbean を検索し、それをクリックします。
 1. 「`checkConsistency()`」リンクをクリックします。
 

@@ -1,6 +1,6 @@
 ---
 title: プロジェクトの管理 - ベストプラクティスチェックリスト
-description: Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。 プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。 プロジェクトのライフサイクルの全フェーズを案内し、ステータスを全体的に監視します。
+description: Adobe Experience Manager（AEM）実装プロジェクトの管理には、計画と理解が必要です。 プロジェクトチェックリストは、プロジェクトを遂行する際のベストプラクティスをまとめたものです。 プロジェクトのライフサイクルの全フェーズを案内し、ステータスを全体的にモニタリングします。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
@@ -10,13 +10,29 @@ exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Admin,Developer,Leader
-source-git-commit: f6e1e28d6fbfc240a46c2c69f02c9c5fda1d0d0d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c42c36cf-eeed-484a-8b39-a33a68192a07
+    internal-label: Compliance
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3275'
+source-wordcount: '3277'
 ht-degree: 96%
-
 ---
-
 # プロジェクトの管理 - ベストプラクティスチェックリスト{#managing-projects-best-practices-checklist}
 
 Adobe Experience Manager（AEM）実装プロジェクトの管理では、プロジェクトの実装前および実装中の問題点と（関連する）決定を下す必要があることを認識するための計画と理解を必要とします。
@@ -25,16 +41,16 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * [インタラクティブなチェックリスト](/help/managing/best-practices-checklist.md)。これらのベストプラクティスの進行状況を追跡および監視できます。
 
-   * フェーズ、マイルストーンおよびペルソナに応じて入力と成果物を定義します。
-   * 進行状況とプロジェクトのヘルスを示す自動化された概要（品質、ヘルスおよび完了状況）を提供します。
+  * フェーズ、マイルストーンおよびペルソナに応じて入力と成果物を定義します。
+  * 進行状況とプロジェクトのヘルスを示す自動化された概要（品質、ヘルスおよび完了状況）を提供します。
 
 * [チェックリスト](/help/managing/best-practices-checklist.md)に基づいたドキュメントで、以下の詳細を説明しています。
 
-   * [プロジェクトのハートビート](#projectheartbeat)の分析
-   * [役割別のステータス](#status-by-role)の概要
-   * [フェーズおよびマイルストーン](#phases-and-milestones)
-   * [主要なペルソナ](#persona)および各（関連）段階でのペルソナの関与
-   * [必須ドキュメントと成果物](#required-documents-and-deliverables)の[用語集](/help/managing/best-practices-glossary.md)
+  * [プロジェクトのハートビート](#projectheartbeat)の分析
+  * [役割別のステータス](#status-by-role)の概要
+  * [フェーズおよびマイルストーン](#phases-and-milestones)
+  * [主要なペルソナ](#persona)および各（関連）段階でのペルソナの関与
+  * [必須ドキュメントと成果物](#required-documents-and-deliverables)の[用語集](/help/managing/best-practices-glossary.md)
 
 * [詳細情報](/help/managing/best-practices-further-reference.md)。特定の分野に関する詳細を提供します。
 
@@ -44,15 +60,15 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * **フェーズの品質**
 
-   * プロジェクト全体の[必須ドキュメントと成果物](#required-documents-and-deliverables)の品質を示します。
+  * プロジェクト全体の[必須ドキュメントと成果物](#required-documents-and-deliverables)の品質を示します。
 
 * **フェーズのヘルス**
 
-   * プロジェクトの全体的なステータスインジケーター。リスクの可能性のある領域を強調するのに便利です。
+  * プロジェクトの全体的なステータスインジケーター。リスクの可能性のある領域を強調するのに便利です。
 
 * **フェーズの完了状況**
 
-   * プロジェクト中、任意の時点で、プロジェクトの各フェーズがどれだけ完了済みかを示します。
+  * プロジェクト中、任意の時点で、プロジェクトの各フェーズがどれだけ完了済みかを示します。
 
 ## 役割別のステータス {#status-by-role}
 
@@ -66,7 +82,7 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 >[!NOTE]
 >
->個々の必要なドキュメントと成果物の間に、直接1:1の関係がありません。
+>個々の必要なドキュメントと成果物の間に、1:1の直接的な関係はありません。
 
 ### 準備 {#preparation}
 
@@ -74,11 +90,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * **ビジネスの論理的根拠**
 
-   * プロジェクトを開始するための根本的理由と正当性。
+  * プロジェクトを開始するための根本的理由と正当性。
 
 * **適用範囲とスケジュール**
 
-   * 要件と実施期間を定義するために、基本的な適用範囲と大まかなスケジュールを設定する必要があります。状況を明らかにするために役立つ場合は、適用範囲外にある事項も必要に応じて定義します。
+  * 要件と実施期間を定義するために、基本的な適用範囲と大まかなスケジュールを設定する必要があります。状況を明らかにするために役立つ場合は、適用範囲外にある事項も必要に応じて定義します。
 
 プロジェクトの準備、計画および実行方法と、ソリューションの実装方法は、制約による影響を受けます。 例えば、決められた予算やタイムライン、コンテンツの量、求められる品質などです。
 
@@ -94,29 +110,29 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   このフェーズでは、次のようなプロジェクトの目標を検証し、確認する必要があります。
 
-   * 何を達成または提供するか。
-   * 誰にメリットがあるか。
-   * 適用範囲はどうするか。
+  * 何を達成または提供するか。
+  * 誰にメリットがあるか。
+  * 適用範囲はどうするか。
 
-      * 状況を明らかにするために役立つ場合は、適用範囲外にある事項も定義します。
+    * 状況を明らかにするために役立つ場合は、適用範囲外にある事項も定義します。
 
-   * 成功をどう定義するか。
-   * 成功をどのように測定するか。
-   * ビジネス要件と技術要件。
-   * 置き換えが必要なレガシーシステムの有無。これが該当する場合は移行が必要なデータの有無。
-   * 誰が関与するか。
-   * 進行状況をどのように測定するか。
-   * プロジェクトの期間中に進行状況を確認する頻度。
+  * 成功をどう定義するか。
+  * 成功をどのように測定するか。
+  * ビジネス要件と技術要件。
+  * 置き換えが必要なレガシーシステムの有無。これが該当する場合は移行が必要なデータの有無。
+  * 誰が関与するか。
+  * 進行状況をどのように測定するか。
+  * プロジェクトの期間中に進行状況を確認する頻度。
 
 * **予算**
 
   プロジェクトを開始する前に、実装にかかるコストに関して信頼性が高く現実的な見積もりを行う必要があります。
 
-   * 検証マイルストーンの情報を見積もりの基礎として使用します。
-   * 現実的に見積もりを行います。
-   * クライアントが従うガイドライン、プロセスまたは制限を考慮し、尊重します。
-   * 後の段階で予算の再検討や見直しが必要になった場合の、不測の事態やレビューのプロセスを考慮します。
-   * 物品の購入やリソースの使用、手数料など、多くの形でコストが発生することに留意します。
+  * 検証マイルストーンの情報を見積もりの基礎として使用します。
+  * 現実的に見積もりを行います。
+  * クライアントが従うガイドライン、プロセスまたは制限を考慮し、尊重します。
+  * 後の段階で予算の再検討や見直しが必要になった場合の、不測の事態やレビューのプロセスを考慮します。
+  * 物品の購入やリソースの使用、手数料など、多くの形でコストが発生することに留意します。
 
 ### 計画 {#planning}
 
@@ -140,21 +156,21 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   どんなプロジェクトにおいても、コミュニケーションは常に成功への鍵となります。 明確かつ効率的なコミュニケーションにより、全員が次のことを確実に行えるようにします。
 
-   * 同じ基本目標に向かう
-   * 同じ情報ベースから出発する
-   * 同じチャネルを使用する
+  * 同じ基本目標に向かう
+  * 同じ情報ベースから出発する
+  * 同じチャネルを使用する
 
 * **キックオフ**
 
   キックオフミーティングは、プロジェクト開始の認識を高めるために使用されます。 次のことを行う良い機会です。
 
-   * 関係するすべての人（少なくともグループの代表者）の招待
-   * プロジェクトに関する重要な情報の提示
-   * 質問への回答
-   * メンバー全員のナレッジベースの合致
-   * 今後関係するすべての人からのコミットメント（コミットメントを得る必要が出てきます）
+  * 関係するすべての人（少なくともグループの代表者）の招待
+  * プロジェクトに関する重要な情報の提示
+  * 質問への回答
+  * メンバー全員のナレッジベースの合致
+  * 今後関係するすべての人からのコミットメント（コミットメントを得る必要が出てきます）
 
-      * 最重要プレーヤー（作成者になる見込みの人を含む）にプロジェクトの開始時点から参画してもらうと、その人たちのプロジェクトへのコミットメントを得られる可能性が高まります。
+    * 最重要プレーヤー（作成者になる見込みの人を含む）にプロジェクトの開始時点から参画してもらうと、その人たちのプロジェクトへのコミットメントを得られる可能性が高まります。
 
 ### 開発の準備 {#development-preparation}
 
@@ -170,27 +186,27 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   コンテンツのアーキテクチャでは、次のようなコンテンツの将来のアーキテクチャを定義し記述します。
 
-   * コンテンツツリー（アセットを含む）
-   * 基本構造（キャンペーンなどを含む）
-   * マルチサイトと多言語の構造（MSM、翻訳など）
-   * サポートコンテンツ（タグとタグ付けの概念を含む）
-   * キャッシュとコンテンツ再利用の戦略
+  * コンテンツツリー（アセットを含む）
+  * 基本構造（キャンペーンなどを含む）
+  * マルチサイトと多言語の構造（MSM、翻訳など）
+  * サポートコンテンツ（タグとタグ付けの概念を含む）
+  * キャッシュとコンテンツ再利用の戦略
 
 * **システムのアーキテクチャ**
 
   システムのアーキテクチャでは、特に次の情報を含むシステムの概念表示を定義します。
 
-   * 必要なすべての環境の[システム構造](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
-   * サブシステム
-   * サードパーティシステム
-   * インターフェイス（ハードウェア、ソフトウェアおよび人間の操作）
-   * 各環境のサーバー（[技術要件](/help/sites-deploying/technical-requirements.md)および[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)を参照）
+  * 必要なすべての環境の[システム構造](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
+  * サブシステム
+  * サードパーティシステム
+  * インターフェイス（ハードウェア、ソフトウェアおよび人間の操作）
+  * 各環境のサーバー（[技術要件](/help/sites-deploying/technical-requirements.md)および[ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)を参照）
 
-   * 各環境用のプロセス（デプロイメント要件やメンテナンス要件など）
-   * メンテナンスアクティビティ（データストア GC、TarPM の最適化など）
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) のキャッシング
-   * [公開/作成者共有のクラスター化](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
-   * クライアント側のパフォーマンス（JavaScript の圧縮、結合、CSS スプライト、HTTP リクエストの合計数など）
+  * 各環境用のプロセス（デプロイメント要件やメンテナンス要件など）
+  * メンテナンスアクティビティ（データストア GC、TarPM の最適化など）
+  * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=ja) のキャッシング
+  * [公開/作成者共有のクラスター化](/help/sites-deploying/recommended-deploys.md#deployment-scenarios)
+  * クライアント側のパフォーマンス（JavaScript の圧縮、結合、CSS スプライト、HTTP リクエストの合計数など）
 
 * **アプリケーションのアーキテクチャ**
 
@@ -198,24 +214,24 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   次に焦点を当てます。
 
-   * アプリケーション間およびアプリケーションとユーザーのやり取りの方法。
-   * 内部構造ではなく、アプリケーションによって消費および生成されるデータ。
+  * アプリケーション間およびアプリケーションとユーザーのやり取りの方法。
+  * 内部構造ではなく、アプリケーションによって消費および生成されるデータ。
 
   定義では、以下についてカバーする必要があります。
 
-   * プロジェクトの基本コード構造
-   * コードアーティファクト（バンドル、パッケージなど）
-   * テンプレートまたはコンポーネントの分類とその関係
-   * 必要なカスタマイズの全体的な概要（具体的なオーバーレイは後で検討します）
-   * ソリューションで必要なワークフローのデザイン（コンテンツの作成、承認、公開、変換、読み込み、書き出しなど）
-   * MSM、コマース、サードパーティ統合など、複雑なモジュールに関する特別な検討事項
+  * プロジェクトの基本コード構造
+  * コードアーティファクト（バンドル、パッケージなど）
+  * テンプレートまたはコンポーネントの分類とその関係
+  * 必要なカスタマイズの全体的な概要（具体的なオーバーレイは後で検討します）
+  * ソリューションで必要なワークフローのデザイン（コンテンツの作成、承認、公開、変換、読み込み、書き出しなど）
+  * MSM、コマース、サードパーティ統合など、複雑なモジュールに関する特別な検討事項
 
 * **システム統合**
 
   システム統合では、以下を計画（その後実装）する必要があります。
 
-   * すべてのサブシステムと[ソリューションの統合](/help/sites-administering/integration.md)をどのようにまとめ、1 つの一貫性のあるシステムとして稼動させるか
-   * サードパーティのシステムをどのように統合するか（オフラインかオンラインか、クライアント側かブラウザー側か、サードパーティのシステムがダウンした時のフェイルオーバー処理などの特別な考慮も必要）
+  * すべてのサブシステムと[ソリューションの統合](/help/sites-administering/integration.md)をどのようにまとめ、1 つの一貫性のあるシステムとして稼動させるか
+  * サードパーティのシステムをどのように統合するか（オフラインかオンラインか、クライアント側かブラウザー側か、サードパーティのシステムがダウンした時のフェイルオーバー処理などの特別な考慮も必要）
 
 * **テストの概念**
 
@@ -223,11 +239,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   これには、特に以下のことを含める必要があります。
 
-   * 実行するすべてのテストの詳細
-   * これらのテストに必要なコンテンツの準備
-   * 使用するテストツールの情報
-   * テストに参加するユーザー（特に QA チーム以外のグループ）の概要
-   * テストの自動化の詳細（Selenium や AEM 開発者モードの使用など）
+  * 実行するすべてのテストの詳細
+  * これらのテストに必要なコンテンツの準備
+  * 使用するテストツールの情報
+  * テストに参加するユーザー（特に QA チーム以外のグループ）の概要
+  * テストの自動化の詳細（Selenium や AEM 開発者モードの使用など）
 
 * **エクスペリエンスデザイン**
 
@@ -253,11 +269,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   例：
 
-   * 役割の一覧（グループ）とそれぞれの `read`／`write` アクセス権限の定義
+  * 役割の一覧（グループ）とそれぞれの `read`／`write` アクセス権限の定義
 
-   * パブリッシュ環境に影響を及ぼす権限の使用の定義（`replicate` など）
-   * 最小限の権限を持つユーザーの場合、ワークフローを定義する必要があります。
-   * `editor` グループのユーザーは、`admin` の権利を持つことも、`administrators` グループに属することもできません。
+  * パブリッシュ環境に影響を及ぼす権限の使用の定義（`replicate` など）
+  * 最小限の権限を持つユーザーの場合、ワークフローを定義する必要があります。
+  * `editor` グループのユーザーは、`admin` の権利を持つことも、`administrators` グループに属することもできません。
 
   詳しくは、[ユーザー管理とセキュリティ](/help/sites-administering/security.md)を参照してください。
 
@@ -265,8 +281,8 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   モニタリングとメンテナンスは、運用を開始した後にソリューションをスムーズに運用するための重要な要素です。 そのためには、以下を定義する必要があります。
 
-   * 何をモニタリングする必要があるか
-   * メンテナンスタスク（定期的および特殊ケース用）
+  * 何をモニタリングする必要があるか
+  * メンテナンスタスク（定期的および特殊ケース用）
 
   詳しくは、[モニタリングとメンテナンス](/help/sites-deploying/monitoring-and-maintaining.md)も参照してください。
 
@@ -288,57 +304,57 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   以下を含めて、開発環境を計画し、文書化します。
 
-   * アーキテクチャ
-   * [開発ツール](/help/sites-developing/dev-tools.md)
+  * アーキテクチャ
+  * [開発ツール](/help/sites-developing/dev-tools.md)
 
-      * 典型的な環境の構成内容は次のとおりです。
+    * 典型的な環境の構成内容は次のとおりです。
 
-         * 問題追跡システム（Jira など）
-         * IDE（Eclipse など）
-         * ビルド管理ツール（Maven など）
-         * 継続的統合のためのツール（Jenkins など）
-         * バージョン管理ツール（GIT や SVN など）
-         * ビルドアーティファクトのリポジトリマネージャー（Archiva や Nexus など）
+      * 問題追跡システム（Jira など）
+      * IDE（Eclipse など）
+      * ビルド管理ツール（Maven など）
+      * 継続的統合のためのツール（Jenkins など）
+      * バージョン管理ツール（GIT や SVN など）
+      * ビルドアーティファクトのリポジトリマネージャー（Archiva や Nexus など）
 
-   * サードパーティソフトウェアの統合と依存関係
-   * [ソリューションの統合と依存関係](/help/sites-administering/integration.md)
-   * デプロイメントのサイクル
+  * サードパーティソフトウェアの統合と依存関係
+  * [ソリューションの統合と依存関係](/help/sites-administering/integration.md)
+  * デプロイメントのサイクル
 
 * **テストシステム**
 
   以下を含めて、テスト環境を計画し、文書化します。
 
-   * アーキテクチャ
-   * 夜間ビルドを含む開発ビルドへの依存性
-   * サードパーティソフトウェアの統合と依存関係のテストの可能性または制限
-   * テストツール
-   * 自動テスト戦略
+  * アーキテクチャ
+  * 夜間ビルドを含む開発ビルドへの依存性
+  * サードパーティソフトウェアの統合と依存関係のテストの可能性または制限
+  * テストツール
+  * 自動テスト戦略
 
 * **実稼動システム**
 
   以下を含めて、本番環境を計画し、文書化します。
 
-   * アーキテクチャ
-   * デプロイメントのサイクル
-   * サードパーティソフトウェアの統合と依存関係
-   * セキュリティ設定
-   * 実稼動セットアップで [Tough Day テスト](/help/sites-developing/tough-day.md)を実行して検証されたベースラインパフォーマンス
-   * パフォーマンステストの要件（[品質保証のベストプラクティス](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)を参照）
+  * アーキテクチャ
+  * デプロイメントのサイクル
+  * サードパーティソフトウェアの統合と依存関係
+  * セキュリティ設定
+  * 実稼動セットアップで [Tough Day テスト](/help/sites-developing/tough-day.md)を実行して検証されたベースラインパフォーマンス
+  * パフォーマンステストの要件（[品質保証のベストプラクティス](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)を参照）
 
 * **統合**
 
   以下を含めて、システムおよび[ソリューションの統合](/help/sites-administering/integration.md)のすべての局面を計画、文書化およびテストします。
 
-   * 自動テスト戦略
-   * [アプリケーションを開発からテスト、さらに実稼動へ移行](/help/managing/enterprise-devops.md#code-movement)するプロセスの自動化
-   * [コンテンツを実稼動からテストおよび開発へ移行](/help/managing/enterprise-devops.md#content-movement)するプロセスの自動化
+  * 自動テスト戦略
+  * [アプリケーションを開発からテスト、さらに実稼動へ移行](/help/managing/enterprise-devops.md#code-movement)するプロセスの自動化
+  * [コンテンツを実稼動からテストおよび開発へ移行](/help/managing/enterprise-devops.md#content-movement)するプロセスの自動化
 
 * **移行**
 
   以下を含めて、コンテンツ移行のすべての局面を計画、文書化およびテストします。
 
-   * コンテンツのアーキテクチャ
-   * 移行戦略
+  * コンテンツのアーキテクチャ
+  * 移行戦略
 
 * **コミュニケーション**
 
@@ -348,9 +364,9 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   以下を含めて、ソリューションを完全に文書化します。
 
-   * 運用マニュアル
-   * アップグレードに影響する可能性のあるカスタマイズ
-   * リリースノート
+  * 運用マニュアル
+  * アップグレードに影響する可能性のあるカスタマイズ
+  * リリースノート
 
 ### パフォーマンスおよびテスト {#performance-and-testing}
 
@@ -368,8 +384,8 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   [ユーザー受け入れテスト](/help/sites-developing/acceptance-signoff.md)（UAT）は、次のことを確実にするために非常に重要です。
 
-   * ソリューションがユーザーや顧客の要件を満たしていること
-   * 顧客やユーザーがソリューション（機能、デザインおよびパフォーマンス）を受け入れること
+  * ソリューションがユーザーや顧客の要件を満たしていること
+  * 顧客やユーザーがソリューション（機能、デザインおよびパフォーマンス）を受け入れること
 
   顧客への引き渡し用の形式化されたチェックリストが必要です。自動化され、スナップショットに対して夜間に実行されるのが理想的です。 その結果をプロジェクトマネージャーおよび開発チームに送信する必要があります。
 
@@ -379,10 +395,10 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   パフォーマンステストについて詳しくは、以下を参照してください。
 
-   * [パフォーマンステスト](/help/sites-deploying/configuring-performance.md)
-   * [テストを計画して実行する方法](/help/sites-developing/planning.md)
+  * [パフォーマンステスト](/help/sites-deploying/configuring-performance.md)
+  * [テストを計画して実行する方法](/help/sites-developing/planning.md)
 
-   * [基本的なパフォーマンスのガイドライン](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
+  * [基本的なパフォーマンスのガイドライン](/help/sites-deploying/configuring-performance.md#basic-performance-guidelines)
 
   >[!NOTE]
   >
@@ -408,17 +424,17 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
   ソリューション管理者に関して、以下のことを確認します。
 
-   * トレーニングを受けていること
-   * 適切なトレーニング資料を受け取っていること
-   * 適切なドキュメントを受け取っていること
+  * トレーニングを受けていること
+  * 適切なトレーニング資料を受け取っていること
+  * 適切なドキュメントを受け取っていること
 
 * **ユーザーのトレーニング**
 
   作成者に関して、以下のことを確認します。
 
-   * トレーニングを受けていること
-   * 適切なトレーニング資料を受け取っていること
-   * 適切なドキュメント（ユーザーガイドなど）を受け取っていること
+  * トレーニングを受けていること
+  * 適切なトレーニング資料を受け取っていること
+  * 適切なドキュメント（ユーザーガイドなど）を受け取っていること
 
 * **侵入テスト**
 
@@ -473,8 +489,8 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 * プロジェクトにビジネスケースを提供または提示します。
 * プロジェクトの適用範囲を形成し、定義する上での鍵となります。以下を含みます。
 
-   * 成功の定義と条件
-   * 主要な KPI
+  * 成功の定義と条件
+  * 主要な KPI
 
 * クライアントのロードマップに基づいて主要なマイルストーンを提供します。
 
@@ -500,14 +516,14 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * ハイレベルの要件を収集して分析し、次のような仕様に転換する作業を主に担当します。
 
-   * プロジェクトマネージャーが開発を計画する際に利用する仕様
-   * 開発チームがデザインおよび開発の際に基準とする仕様
+  * プロジェクトマネージャーが開発を計画する際に利用する仕様
+  * 開発チームがデザインおよび開発の際に基準とする仕様
 
 * クライアントと密接に協力して要件を分析します。 以下に照らして要件を一致させます。
 
-   * 成功の定義
-   * 成功の条件
-   * KPI（ビジネスベースとパフォーマンスベース）
+  * 成功の定義
+  * 成功の条件
+  * KPI（ビジネスベースとパフォーマンスベース）
 
 ### 開発リーダー {#development-lead}
 
@@ -517,8 +533,8 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 * クライアントの要件に準拠する開発方法を選択します。
 * 次のようにして開発戦略を作成します。
 
-   * ビジネス KPI とパフォーマンス KPI に合致していることを確認する
-   * 成功の条件および定義を考慮
+  * ビジネス KPI とパフォーマンス KPI に合致していることを確認する
+  * 成功の条件および定義を考慮
 
 * アーキテクトと密接に協力し（特に AEM の開発戦略を作成する際）、テンプレートとコンポーネントの関係、サードパーティアプリケーションの統合戦略、特殊な機能などの局面を定義します。
 
@@ -537,8 +553,8 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 * プロジェクトのインフラストラクチャを監督します。
 * 次の作業を担当します。
 
-   * 内部の開発環境とテスト環境の設定
-   * 設定したシステムとクライアントのシステムとのマッチング
+  * 内部の開発環境とテスト環境の設定
+  * 設定したシステムとクライアントのシステムとのマッチング
 
 * 推奨されるハードウェアを提案し、様々な実装を監視し、運用開始前後の運用サポートを提供します。
 
@@ -553,33 +569,33 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 
 * 利害関係者
 
-   * プロジェクトの成功に利害関係を持つ人物（多くの場合はビジネス関係者）。 多くの場合、予算に貢献します。
+  * プロジェクトの成功に利害関係を持つ人物（多くの場合はビジネス関係者）。 多くの場合、予算に貢献します。
 
 * リーガル
 
-   * 契約交渉時には、法的助言が必要です。
+  * 契約交渉時には、法的助言が必要です。
 
 * トレーナー
 
-   * プロジェクトの規模と性質によっては、専門的なトレーナーを活用して、関連グループのトレーニングセッションを開発し、提示できます。
+  * プロジェクトの規模と性質によっては、専門的なトレーナーを活用して、関連グループのトレーニングセッションを開発し、提示できます。
 
 * テクニカルライター
 
-   * プロジェクトの規模と性質によっては、専門のテクニカルライターを使用して、特定のグループ向けのガイドラインやマニュアルを作成できます。 例えば、システム管理者向けのメンテナンスマニュアルや、作成者向けのユーザーガイドなどです。
+  * プロジェクトの規模と性質によっては、専門のテクニカルライターを使用して、特定のグループ向けのガイドラインやマニュアルを作成できます。 例えば、システム管理者向けのメンテナンスマニュアルや、作成者向けのユーザーガイドなどです。
 
 * システム管理者
 
-   * システムの継続運用に関する責任を負います。
+  * システムの継続運用に関する責任を負います。
 
 * 作成者とエンドユーザー
 
-   * システムを使用して web サイトのコンテンツを作成し、メンテナンスする人物です。
+  * システムを使用して web サイトのコンテンツを作成し、メンテナンスする人物です。
 
 ## 必須ドキュメントと成果物 {#required-documents-and-deliverables}
 
 チェックリストは、各マイルストーンの&#x200B;**必須ドキュメント**&#x200B;および&#x200B;**成果物**&#x200B;をカバーしています。
 
-* これらの間には1:1の関係がありません。例えば、必要なドキュメントのグループを使用すると、1つの成果物が作成される場合があります。
+* これらのドキュメントは、1対1の関係がありません。たとえば、必要なドキュメントのグループを使用して、1つの成果物を作成することができます。
 * 同じマイルストーンの中で、あるペルソナからの成果物が、別のペルソナの必須ドキュメントになる場合もあります。
 
 ### 必須ドキュメント {#required-documents}
@@ -606,11 +622,11 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 デプロイ、管理、開発またはオーサリングのベストプラクティスについては、次を参照してください。
 
 * AEM プロジェクトの管理に関連するその他のベストプラクティスおよびガイドライン:
-   * [ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)
-   * [Enterprise DevOps](/help/managing/enterprise-devops.md)
-   * [SEO と URL 管理のベストプラクティス](/help/managing/seo-and-url-management.md)
-   * [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)
-   * [EU一般データ保護規則](/help/managing/data-protection-and-privacy.md)
+  * [ハードウェアのサイジングのガイドライン](/help/managing/hardware-sizing-guidelines.md)
+  * [Enterprise DevOps](/help/managing/enterprise-devops.md)
+  * [SEO と URL 管理のベストプラクティス](/help/managing/seo-and-url-management.md)
+  * [AEM と Web アクセシビリティのガイドライン](/help/managing/web-accessibility.md)
+  * [EU一般データ保護規則](/help/managing/data-protection-and-privacy.md)
 * [ベストプラクティスのデプロイと維持](/help/sites-deploying/best-practices.md)
 * [ベストプラクティスの管理](/help/sites-administering/administer-best-practices.md)
 * [開発のベストプラクティス](/help/sites-developing/best-practices.md)
@@ -621,16 +637,16 @@ Adobe Experience Manager（AEM）実装プロジェクトの管理では、プ�
 * AEM Documentation
 さらに、AEMのドキュメントの次の節は特に重要です（ただし、この一覧は網羅的ではありません）。
 
-   * [セキュリティ](/help/sites-developing/security.md)
-   * [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)
-   * [Enterprise DevOps](/help/managing/enterprise-devops.md)
-   * [ハードウェアのサイジング](/help/managing/hardware-sizing-guidelines.md)
-   * AEM の概念：
+  * [セキュリティ](/help/sites-developing/security.md)
+  * [推奨されるデプロイメント](/help/sites-deploying/recommended-deploys.md)
+  * [Enterprise DevOps](/help/managing/enterprise-devops.md)
+  * [ハードウェアのサイジング](/help/managing/hardware-sizing-guidelines.md)
+  * AEM の概念：
 
-      * [開発 - 基本](/help/sites-developing/the-basics.md)
-      * [MSM の概念](/help/sites-administering/msm.md)
-      * [HTML Template Language （HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
+    * [開発 - 基本](/help/sites-developing/the-basics.md)
+    * [MSM の概念](/help/sites-administering/msm.md)
+    * [HTML Template Language （HTL）](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=ja)
 
 * 関連ドキュメント
 
-   * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://experienceleague.adobe.com/ja/docs/core-services/interface/services/core-services)
+  * Adobe Experience Cloud - [Adobe Experience Cloud の計画](https://experienceleague.adobe.com/ja/docs/core-services/interface/services/core-services)

@@ -9,13 +9,20 @@ role: Admin
 exl-id: 799d5ae1-caac-4c92-8835-696ad25de553
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1220'
 ht-degree: 3%
-
 ---
-
 # MSRP - MongoDB ストレージリソースプロバイダー {#msrp-mongodb-storage-resource-provider}
 
 ## MSRPについて {#about-msrp}
@@ -28,22 +35,22 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 
 * [MongoDB](https://www.mongodb.org/):
 
-   * バージョン 2.6以降
-   * Mongosやshardingを設定する必要はありません
-   * [&#x200B; レプリカセット &#x200B;](#mongoreplicaset)の使用を強くお勧めします
-   * AEMと同じホストで実行するか、リモートで実行する可能性があります
+  * バージョン 2.6以降
+  * Mongosやshardingを設定する必要はありません
+  * [&#x200B; レプリカセット &#x200B;](#mongoreplicaset)の使用を強くお勧めします
+  * AEMと同じホストで実行するか、リモートで実行する可能性があります
 
 * [Apache Solr](https://lucene.apache.org/solr/):
 
-   * Solr バージョン 7.0
-   * SolrにはJava 1.7以降が必要です
-   * サービスは必要ありません
-   * 実行モードの選択：
-      * スタンドアロンモード
-      * [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) （実稼動環境に推奨）
-   * 多言語検索（MLS）の選択：
-      * [標準MLSのインストール](solr.md#installing-standard-mls)
-      * [高度なMLSのインストール](solr.md#installing-advanced-mls)
+  * Solr バージョン 7.0
+  * SolrにはJava 1.7以降が必要です
+  * サービスは必要ありません
+  * 実行モードの選択：
+    * スタンドアロンモード
+    * [SolrCloud モード &#x200B;](solr.md#solrcloud-mode) （実稼動環境に推奨）
+  * 多言語検索（MLS）の選択：
+    * [標準MLSのインストール](solr.md#installing-standard-mls)
+    * [高度なMLSのインストール](solr.md#installing-advanced-mls)
 
 ## MongoDB設定 {#mongodb-configuration}
 
@@ -60,41 +67,41 @@ AEM CommunitiesがMSRPを共通ストアとして使用するように設定さ�
 * **[!UICONTROL MongoDB ストレージリソースプロバイダー（MSRP）]**&#x200B;を選択
 * **[!UICONTROL mongoDB設定]**
 
-   * **[!UICONTROL mongoDB URI]**
+  * **[!UICONTROL mongoDB URI]**
 
-     *default*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
+    *default*: mongodb://localhost/?maxPoolSize=10&amp;waitQueueMultiple=5&amp;readPreference=secondaryPreferred
 
-   * **[!UICONTROL mongoDB データベース]**
+  * **[!UICONTROL mongoDB データベース]**
 
-     *default*: communities
+    *default*: communities
 
-   * **[!UICONTROL mongoDB UGC コレクション]**
+  * **[!UICONTROL mongoDB UGC コレクション]**
 
-     *default*: content
+    *default*: content
 
-   * **[!UICONTROL mongoDB Attachment Collection]**
+  * **[!UICONTROL mongoDB Attachment Collection]**
 
-     *default*：添付ファイル
+    *default*：添付ファイル
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) ホスト**
+  * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) ホスト**
 
-     外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、ZooKeeperの&#x200B;*my.server.com:2181*&#x200B;など、この値を`HOST:PORT`に設定します
+    外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:2181*&#x200B;など、ZooKeeperの`HOST:PORT`に設定します
 
-     ZooKeeper Ensembleの場合、*host1:2181,host2:2181*&#x200B;など、`HOST:PORT`個のコンマ区切りの値を入力します
+    ZooKeeper Ensembleの場合、*host1:2181,host2:2181*&#x200B;のように、`HOST:PORT`のコンマ区切りの値を入力します
 
-     内部ZooKeeperを使用してスタンドアロンモードでSolrを実行する場合は、空白のままにします。
-     *Default*: *&lt;blank>*
+    内部ZooKeeperを使用してスタンドアロンモードでSolrを実行する場合は、空白のままにします。
+    *Default*: *&lt;blank>*
 
-      * **[!UICONTROL Solr URL]**
+    * **[!UICONTROL Solr URL]**
 スタンドアロンモードでSolrと通信するために使用されるURL。
 SolrCloud モードで実行している場合は、空白のままにします。
-        *Default*: https://127.0.0.1:8983/solr/
+      *Default*: https://127.0.0.1:8983/solr/
 
-      * **[!UICONTROL Solr コレクション]**
+    * **[!UICONTROL Solr コレクション]**
 Solr コレクション名。
-        *Default*: collection1
+      *Default*: collection1
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
@@ -150,7 +157,7 @@ MSRPは、すべてのオーサーインスタンスとパブリッシュイン�
 * メインメニューから&#x200B;**[!UICONTROL ツール]**/**[!UICONTROL 操作]**/**[!UICONTROL レプリケーション]**&#x200B;に移動します。
 * 「**[!UICONTROL ツリーをアクティブ化]**」を選択
 * **[!UICONTROL パスの開始]**:
-   * `/etc/socialconfig/srpc/`を参照
+  * `/etc/socialconfig/srpc/`を参照
 * **[!UICONTROL アクティブ化]**&#x200B;を選択
 
 ## ユーザーデータの管理 {#managing-user-data}
@@ -226,8 +233,8 @@ curl -s -u admin:admin -d 'batchSize=10000&path=/content/usergenerated/asi/mongo
 
 * JCRで、[/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)の場合
 
-   * [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ノードが含まれていません。これは、ストレージプロバイダーがJSRPであることを意味します。
-   * srpc ノードが存在し、ノード [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれている場合、defaultconfigurationのプロパティでMSRPをデフォルトプロバイダーとして定義する必要があります。
+  * [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) ノードが含まれていません。これは、ストレージプロバイダーがJSRPであることを意味します。
+  * srpc ノードが存在し、ノード [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)が含まれている場合、defaultconfigurationのプロパティでMSRPをデフォルトプロバイダーとして定義する必要があります。
 
 ### アップグレード後にUGCが消える {#ugc-disappears-after-upgrade}
 

@@ -9,13 +9,22 @@ exl-id: 6dfaa14d-5dcf-4e89-993a-8d476a36d668
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4700'
+source-wordcount: '4702'
 ht-degree: 98%
-
 ---
-
 # クエリとインデックス作成に関するベストプラクティス{#best-practices-for-queries-and-indexing}
 
 AEM 6 での Oak への移行に伴い、クエリとインデックスの管理方法に関して大きな変更がいくつか導入されました。 Jackrabbit 2 では、デフォルトですべてのコンテンツのインデックスが作成され、自由にクエリを実行できました。 Oak では、`oak:index` ノードの下にインデックスを手動で作成する必要があります。 クエリはインデックスなしでも実行できますが、大規模なデータセットの場合は、実行が非常に遅くなるだけでなく、中止されることもあります。
@@ -128,13 +137,13 @@ JMX コンソールにログインしたら、検索を実行して **Lucene Ind
 
 * ログを監視して、大規模なノードトラバーサルやヒープメモリの大量使用を引き起こしているクエリがないかどうかを調べます。
 
-   * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
-   * クエリを最適化して、走査するノードの数を減らします。
+  * `*WARN* ... java.lang.UnsupportedOperationException: The query read or traversed more than 100000 nodes. To avoid affecting other tasks, processing was stopped.`
+  * クエリを最適化して、走査するノードの数を減らします。
 
 * 大量のヒープメモリ消費をトリガーするクエリがないか、ログを監視します。
 
-   * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
-   * クエリを最適化して、ヒープメモリの使用量を減らします。
+  * `*WARN* ... java.lang.UnsupportedOperationException: The query read more than 500000 nodes in memory. To avoid running out of memory, processing was stopped`
+  * クエリを最適化して、ヒープメモリの使用量を減らします。
 
 AEM 6.0 ～ 6.2 では、AEM 起動スクリプトの JVM パラメーターを使用してノードのトラバーサルのしきい値を調整し、大きなクエリによる環境への過負荷を防ぐことができます。
 
@@ -248,59 +257,59 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 * 適用対象：
 
-   * すべての Oak バージョン
-   * [プロパティインデックス](https://jackrabbit.apache.org/oak/docs/query/property-index.html)のみ
+  * すべての Oak バージョン
+  * [プロパティインデックス](https://jackrabbit.apache.org/oak/docs/query/property-index.html)のみ
 
 * 症状：
 
-   * プロパティインデックスの定義を更新する前に存在していたノードが結果に見つからない
+  * プロパティインデックスの定義を更新する前に存在していたノードが結果に見つからない
 
 * 検証方法：
 
-   * 更新したインデックス定義をデプロイする前に、見つからないノードが作成または変更されていたかどうかを確認します。
-   * 見つからないノードの`jcr:created`または`jcr:lastModified`プロパティをインデックスの変更時間と照合して検証します。
+  * 更新したインデックス定義をデプロイする前に、見つからないノードが作成または変更されていたかどうかを確認します。
+  * 見つからないノードの`jcr:created`または`jcr:lastModified`プロパティをインデックスの変更時間と照合して検証します。
 
 * 解決方法：
 
-   * Lucene インデックスを[インデックス再作成](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index)します。
-   * または、見つからないノードについて処理（安全な書き込み操作）を行います。
+  * Lucene インデックスを[インデックス再作成](/help/sites-deploying/best-practices-for-queries-and-indexing.md#how-to-re-index)します。
+  * または、見つからないノードについて処理（安全な書き込み操作）を行います。
 
-      * 手動処理またはカスタムコードが必要です。
-      * 見つからない一連のノードを把握する必要があります。
-      * ノードでプロパティを変更する必要があります。
+    * 手動処理またはカスタムコードが必要です。
+    * 見つからない一連のノードを把握する必要があります。
+    * ノードでプロパティを変更する必要があります。
 
 #### Lucene インデックスの定義の変更 {#lucene-index-definition-change}
 
 * 適用対象：
 
-   * すべての Oak バージョン
-   * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
+  * すべての Oak バージョン
+  * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
 
 * 症状：
 
-   * 予期した結果が Lucene インデックスに含まれない
-   * インデックス定義の予期される動作がクエリ結果に反映されない
-   * インデックス定義に基づいて予期される出力がクエリプランで報告されない
+  * 予期した結果が Lucene インデックスに含まれない
+  * インデックス定義の予期される動作がクエリ結果に反映されない
+  * インデックス定義に基づいて予期される出力がクエリプランで報告されない
 
 * 検証方法：
 
-   * Lucene インデックス統計 JMX Mbean（LuceneIndex）の `diffStoredIndexDefinition` メソッドを使用して、インデックス定義が変更されているかどうかを検証します。
+  * Lucene インデックス統計 JMX Mbean（LuceneIndex）の `diffStoredIndexDefinition` メソッドを使用して、インデックス定義が変更されているかどうかを検証します。
 
 * 解決方法：
 
-   * 1.6 より前の Oak バージョン：
+  * 1.6 より前の Oak バージョン：
 
-      * Lucene インデックスを[インデックス再作成](#how-to-re-index)します。
+    * Lucene インデックスを[インデックス再作成](#how-to-re-index)します。
 
-   * 1.6 以降の Oak バージョン
+  * 1.6 以降の Oak バージョン
 
-      * 既存の内容が変更の影響を受けない場合は、更新のみが必要です。
+    * 既存の内容が変更の影響を受けない場合は、更新のみが必要です。
 
-         * [oak:queryIndexDefinition]@refresh=trueを設定して、lucene インデックスを[&#128279;](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition)更新します
+      * [oak:queryIndexDefinition]@refresh=trueを設定して、lucene インデックスを[&#128279;](https://jackrabbit.apache.org/oak/docs/query/lucene.html#stored-index-definition)更新します
 
-      * それ以外の場合は、Lucene インデックスを[インデックス再作成](#how-to-re-index)します。
+    * それ以外の場合は、Lucene インデックスを[インデックス再作成](#how-to-re-index)します。
 
-         * メモ：新しいインデックスが再作成されるまで、前回の正常なインデックス再作成（または最初のインデックス作成）のインデックス状態が使用されます。
+      * メモ：新しいインデックスが再作成されるまで、前回の正常なインデックス再作成（または最初のインデックス作成）のインデックス状態が使用されます。
 
 ### エラーと例外の状況 {#erring-and-exceptional-situations}
 
@@ -317,62 +326,62 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 
 * 適用対象：
 
-   * すべての Oak バージョン
-   * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
+  * すべての Oak バージョン
+  * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
 
 * 症状：
 
-   * 予期した結果が Lucene インデックスに含まれない
+  * 予期した結果が Lucene インデックスに含まれない
 
 * 検証方法：
 
-   * Lucene インデックスのバイナリが見つからないという例外がエラーログファイルに記録されます。
+  * Lucene インデックスのバイナリが見つからないという例外がエラーログファイルに記録されます。
 
 * 解決方法：
 
-   * リポジトリ走査チェックを実行します。例：
+  * リポジトリ走査チェックを実行します。例：
 
-     [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
+    [http://localhost:4502/system/console/repositorycheck](http://localhost:4502/system/console/repositorycheck)
 
-     リポジトリの走査により（lucene ファイル以外の）他のバイナリが欠落していないか判断
+    リポジトリの走査により（lucene ファイル以外の）他のバイナリが欠落していないか判断
 
-   * Lucene インデックス以外のバイナリが見つからない場合は、バックアップから復元します。
-   * それ以外の場合は、*すべての* Lucene インデックスの[再インデックス](#how-to-re-index)を実行します。
-   * メモ：
+  * Lucene インデックス以外のバイナリが見つからない場合は、バックアップから復元します。
+  * それ以外の場合は、*すべての* Lucene インデックスの[再インデックス](#how-to-re-index)を実行します。
+  * メモ：
 
-     この状況はデータストアの設定が誤っていることを示しており、バイナリ（アセットのバイナリなど）が見つからなくなる原因となる可能性があります。
+    この状況はデータストアの設定が誤っていることを示しており、バイナリ（アセットのバイナリなど）が見つからなくなる原因となる可能性があります。
 
-     この場合は、正常であることがわかっている最新のリポジトリバージョンに復元し、見つからないすべてのバイナリを回復します。
+    この場合は、正常であることがわかっている最新のリポジトリバージョンに復元し、見つからないすべてのバイナリを回復します。
 
 #### Lucene インデックスのバイナリが破損している {#lucene-index-binary-is-corrupt}
 
 * 適用対象：
 
-   * すべての Oak バージョン
-   * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
+  * すべての Oak バージョン
+  * [Lucene インデックス](https://jackrabbit.apache.org/oak/docs/query/lucene.html)のみ
 
 * 症状：
 
-   * 予期した結果が Lucene インデックスに含まれない
+  * 予期した結果が Lucene インデックスに含まれない
 
 * 検証方法：
 
-   * `AsyncIndexUpdate`（5 秒ごと）が失敗し、次の例外がエラーログに記録されます。
+  * `AsyncIndexUpdate`（5 秒ごと）が失敗し、次の例外がエラーログに記録されます。
 
-     `...a Lucene index file is corrupt...`
+    `...a Lucene index file is corrupt...`
 
 * 解決方法：
 
-   * Lucene インデックスのローカルコピーを削除します。
+  * Lucene インデックスのローカルコピーを削除します。
 
-      1. AEM を停止します。
-      1. `crx-quickstart/repository/index`にある Lucene インデックスのローカルコピーを削除
-      1. AEM を再起動します。
+    1. AEM を停止します。
+    1. `crx-quickstart/repository/index`にある Lucene インデックスのローカルコピーを削除
+    1. AEM を再起動します。
 
-   * この手順を実行しても問題が解決せず、`AsyncIndexUpdate` 例外が引き続き発生する場合は、次の手順に従います。
+  * この手順を実行しても問題が解決せず、`AsyncIndexUpdate` 例外が引き続き発生する場合は、次の手順に従います。
 
-      1. エラーがあるインデックスを[インデックス再作成](#how-to-re-index)します。
-      1. さらに、[アドビサポート](https://helpx.adobe.com/jp/support.html)チケットを提出します。
+    1. エラーがあるインデックスを[インデックス再作成](#how-to-re-index)します。
+    1. さらに、[アドビサポート](https://helpx.adobe.com/jp/support.html)チケットを提出します。
 
 ### インデックス再作成の方法 {#how-to-re-index}
 
@@ -385,7 +394,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 * プロパティインデックスのインデックス再作成を行うには、[oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) を使用します。
 * プロパティインデックスで async-reindex プロパティを true に設定します。
 
-   * `[oak:queryIndexDefinition]@reindex-async=true`
+  * `[oak:queryIndexDefinition]@reindex-async=true`
 
 * Web コンソールを使用して、**PropertyIndexAsyncReindex** MBean からプロパティインデックスを非同期でインデックス再作成します。
 
@@ -398,7 +407,7 @@ MongoDB インスタンスのインデックスを削除する場合、削除の
 * Lucene プロパティインデックスの[インデックス再作成を行うには、oak-run.jar](/help/sites-deploying/oak-run-indexing-usecases.md#usecase3reindexing) を使用します。
 * Lucene プロパティインデックスで async-reindex プロパティを true に設定します。
 
-   * `[oak:queryIndexDefinition]@reindex-async=true`
+  * `[oak:queryIndexDefinition]@reindex-async=true`
 
 >[!NOTE]
 >
@@ -440,7 +449,7 @@ Web UI を介したアセットのアップロードやプログラムによる�
 * [oak-run.jar](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/) バージョン 1.7.4 以降
 * AEM のインデックス作成インスタンスからアクセス可能な、抽出されたテキストを格納するファイルシステムフォルダー／共有
 
-   * テキスト事前抽出の OSGi 設定には、AEM インスタンスから直接それらのファイルにアクセスできるように、抽出されたテキストファイルへのファイルシステムパスが必要です（ローカルドライブまたはファイル共有マウント）。
+  * テキスト事前抽出の OSGi 設定には、AEM インスタンスから直接それらのファイルにアクセスできるように、抽出されたテキストファイルへのファイルシステムパスが必要です（ローカルドライブまたはファイル共有マウント）。
 
 #### テキスト事前抽出を実行する方法 {#how-to-perform-text-pre-extraction}
 

@@ -8,16 +8,27 @@ feature: Forms Portal
 exl-id: a685889e-5d24-471c-926d-dbb096792bc8
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: fa155e29-cba2-5e77-9efd-4824be5ce4c8
+    internal-label: Forms Portal
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 100%
-
 ---
-
 # フォームポータルで送信済みフォームを操作するための API {#apis-to-work-with-submitted-forms-on-forms-portal}
 
-AEM Forms はフォームポータル経由で送信されたフォームデータに対してクエリーを実行する際に使用できる API を提供します。また、この文書で説明している API を使用して、送信済みフォームに対してコメントを投稿したりプロパティを更新したりできます。
+AEM Forms はフォームポータル経由で送信されたフォームデータに対してクエリーを実行する際に使用できる API を提供します。 また、この文書で説明している API を使用して、送信済みフォームに対してコメントを投稿したりプロパティを更新したりできます。
 
 >[!NOTE]
 >
@@ -33,7 +44,7 @@ AEM Forms はフォームポータル経由で送信されたフォームデー�
 
 ### 応答 {#response}
 
-この応答オブジェクトには、フォーム名とそのリポジトリパスを含む JSON 配列が含まれています。応答の構造は次のとおりです。
+この応答オブジェクトには、フォーム名とそのリポジトリパスを含む JSON 配列が含まれています。 応答の構造は次のとおりです。
 
 ```json
 [
@@ -59,7 +70,7 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
 
 ## GET /content/forms/portal/submission.review.json?func=getAllSubmissions {#get-content-forms-portal-submission-review-json-func-getallsubmissions}
 
-すべての送信済みフォームの詳細を返します。ただし、URL パラメーターを使用して結果を制限できます。
+すべての送信済みフォームの詳細を返します。 ただし、URL パラメーターを使用して結果を制限できます。
 
 ### URL パラメーター {#url-parameters-1}
 
@@ -73,38 +84,38 @@ https://[host]:[port]/content/forms/portal/submission.review.json?func=getFormsF
   </tr>
   <tr>
    <td><code>formPath</code></td>
-   <td>フォームが存在する CRX リポジトリパスを指定します。フォームパスを指定しない場合、空の応答を返します。<br /> </td>
+   <td>フォームが存在する CRX リポジトリパスを指定します。 フォームパスを指定しない場合、空の応答を返します。<br /> </td>
   </tr>
   <tr>
    <td><code>offset</code><br /> （オプション）</td>
-   <td>結果セットのインデックスでスタートポイントを指定します。デフォルト値は <strong>0</strong> です。</td>
+   <td>結果セットのインデックスでスタートポイントを指定します。 デフォルト値は <strong>0</strong> です。</td>
   </tr>
   <tr>
    <td><code>limit</code><br /> （オプション）</td>
-   <td>結果の数を制限します。デフォルト値は <strong>30</strong> です。</td>
+   <td>結果の数を制限します。 デフォルト値は <strong>30</strong> です。</td>
   </tr>
   <tr>
    <td><code>orderby</code> <br /> （オプション）</td>
-   <td>結果を並べ替えるプロパティを指定します。デフォルト値は <strong>jcr:lastModified</strong> で、最終変更時刻に基づいて結果を並べ替えます。</td>
+   <td>結果を並べ替えるプロパティを指定します。 デフォルト値は <strong>jcr:lastModified</strong> で、最終変更時刻に基づいて結果を並べ替えます。</td>
   </tr>
   <tr>
    <td><code>sort</code> <br /> （オプション）</td>
-   <td>結果を並べ替える順序を指定します。デフォルト値は <strong>desc</strong> で、結果を降順で並べ替えます。<code>asc</code> を指定すると、結果を昇順で並べ替えられます。</td>
+   <td>結果を並べ替える順序を指定します。 デフォルト値は <strong>desc</strong> で、結果を降順で並べ替えます。 <code>asc</code> を指定すると、結果を昇順で並べ替えられます。</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> （任意）</td>
-   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。デフォルトのプロパティは以下のとおりです。<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
+   <td>結果に含めるフォームプロパティのコンマ区切りリストを指定します。 デフォルトのプロパティは以下のとおりです。<br /> <code>formName</code>、<code>formPath</code>、<code>submitID</code>、<code>formType</code>、<code>jcr:lastModified</code>、 <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> （任意）</td>
-   <td>フォームプロパティで指定した値で検索し、一致する値を持つフォームを返します。デフォルト値は <strong>""</strong> です。</td>
+   <td>フォームプロパティで指定した値で検索し、一致する値を持つフォームを返します。 デフォルト値は <strong>""</strong> です。</td>
   </tr>
  </tbody>
 </table>
 
 ### 応答 {#response-1}
 
-応答オブジェクトには、指定したフォームの詳細を含む JSON 配列が含まれています。応答の構造は次のとおりです。
+応答オブジェクトには、指定したフォームの詳細を含む JSON 配列が含まれています。 応答の構造は次のとおりです。
 
 ```json
 {
@@ -158,7 +169,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 1403873422601300
 ```
 
-## GET /content/forms/portal/submission.review.json?func=getComments {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
+## GET /content/forms/portal/submission.review.json?func=getComments   {#get-content-forms-portal-submission-review-json-func-getcomments-nbsp}
 
 指定した送信インスタンスに投稿したすべてのコメントを返します。
 
@@ -172,7 +183,7 @@ https://[host:'port'/content/forms/portal/submission.review.json?func=addComment
 
 ### 応答 {#response-3}
 
-応答オブジェクトには、指定した送信 ID に関連付けられているすべてのコメントを含む JSON 配列が含まれています。応答の構造は次のとおりです。
+応答オブジェクトには、指定した送信 ID に関連付けられているすべてのコメントを含む JSON 配列が含まれています。 応答の構造は次のとおりです。
 
 ```json
 [{

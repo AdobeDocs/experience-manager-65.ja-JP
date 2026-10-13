@@ -9,16 +9,25 @@ exl-id: ba518290-dd82-44dc-ae7c-c8152df89179
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 100%
-
 ---
-
 # Adobe Experience Cloud との統合{#integrating-with-the-adobe-marketing-cloud}
 
-[Adobe Experience Cloud](https://business.adobe.com/jp/products/marketing-cloud/main.html?lang=ja) には、実用的なリアルタイムのデータやインサイトを提供してオンラインイニシアチブを成功に導く、強力な web 分析と web サイト最適化製品が含まれています。また、オンラインビジネスを最適化するための統合されたオープンプラットフォームを提供します。Adobe Experience Cloud は、顧客のインサイトを収集してその力を解き放ち、顧客獲得、コンバージョン、保持の取り組み、コンテンツの作成および配信を最適化する統合アプリケーションで構成されています。
+[Adobe Experience Cloud](https://business.adobe.com/jp/products/marketing-cloud/main.html?lang=ja) には、実用的なリアルタイムのデータやインサイトを提供してオンラインイニシアチブを成功に導く、強力な web 分析と web サイト最適化製品が含まれています。 また、オンラインビジネスを最適化するための統合されたオープンプラットフォームを提供します。 Adobe Experience Cloud は、顧客のインサイトを収集してその力を解き放ち、顧客獲得、コンバージョン、保持の取り組み、コンテンツの作成および配信を最適化する統合アプリケーションで構成されています。
 
 Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の次の製品とシームレスに統合できます。
 
@@ -33,7 +42,7 @@ Adobe Experience Manager（AEM）を使用すると、Adobe Experience Cloud の
 
 ## Adobe Analytics との統合 {#integrating-with-adobe-analytics}
 
-[Adobe Analytics](https://business.adobe.com/jp/products/analytics/adobe-analytics.html?lang=ja) は、様々なマーケティングチャネルにまたがるオンライン戦略全体からの統合データを 1 箇所で測定、分析、最適化できる場をディジタルマーケターに提供する、業界最先端のソリューションです。マーケターは、デジタル戦略やマーケティング施策に関して、すぐに利用可能なリアルタイムの web 分析情報を入手できます。Adobe Analytics を使用すると、マーケティング担当者は web サイト内で最も収益性の高いパスを迅速に特定し、トラフィックをセグメント化して高価値な web 訪問者を見つけ出し、訪問者がサイトから離れた場所を確認し、オンラインマーケティングキャンペーンの重要な成功指標を明らかにすることができます。
+[Adobe Analytics](https://business.adobe.com/jp/products/analytics/adobe-analytics.html?lang=ja) は、様々なマーケティングチャネルにまたがるオンライン戦略全体からの統合データを 1 箇所で測定、分析、最適化できる場をディジタルマーケターに提供する、業界最先端のソリューションです。 マーケターは、デジタル戦略やマーケティング施策に関して、すぐに利用可能なリアルタイムの web 分析情報を入手できます。 Adobe Analytics を使用すると、マーケティング担当者は web サイト内で最も収益性の高いパスを迅速に特定し、トラフィックをセグメント化して高価値な web 訪問者を見つけ出し、訪問者がサイトから離れた場所を確認し、オンラインマーケティングキャンペーンの重要な成功指標を明らかにすることができます。
 
 Adobe Analytics を使用すると、サイトのデータを分析できます。
 
@@ -52,9 +61,9 @@ AEMと Analytics の統合について詳しくは、[Adobe Analytics との統�
 
 ## Adobe Target との統合 {#integrating-with-adobe-target}
 
-[Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html?lang=ja) を使用すると、マーケターは、オンラインテストをデザインして実行し、行動に基づいたオーディエンスセグメントをその場で作成し、コンテンツとオンラインのエクスペリエンスを自動的にターゲット設定できるようになります。
+[Adobe Target](https://business.adobe.com/jp/products/target/adobe-target.html?lang=ja) を使用すると、マーケターは、オンラインテストをデザインして実行し、行動に基づいたオーディエンスセグメントをその場で作成し、コンテンツとオンラインのエクスペリエンスを自動的にターゲティングできるようになります。
 
-現在、オンライン消費者のニーズは常に変化しており、消費者は利用できる様々なサイトやコンテンツソースの中から、関連性が高く、パーソナライズされたコンテンツを選択したいと考えています。オンラインオーディエンスを引き付けるには、オンラインマーケターが、オーディエンスにとって関連性が高く魅力的なオファーやコンテンツをすばやく特定することが重要です。この知識に基づいて、マーケターはサイトを継続的に発展させ、様々なオーディエンスに適切なコンテンツをターゲット設定する必要があります。
+現在、オンライン消費者のニーズは常に変化しており、消費者は利用できる様々なサイトやコンテンツソースの中から、関連性が高く、パーソナライズされたコンテンツを選択したいと考えています。 オンラインオーディエンスを引き付けるには、オンラインマーケターが、オーディエンスにとって関連性が高く魅力的なオファーやコンテンツをすばやく特定することが重要です。 この知識に基づいて、マーケターはサイトを継続的に発展させ、様々なオーディエンスに適切なコンテンツをターゲット設定する必要があります。
 
 [Adobe Target との統合](/help/sites-administering/target.md)では、サイトと Adobe Target を統合する方法について説明します。
 
@@ -62,11 +71,11 @@ AEMと Analytics の統合について詳しくは、[Adobe Analytics との統�
 
 ## Analytics と Target のオプトイン {#opting-in-to-analytics-and-target}
 
-AEM には、Adobe Analytics や Adobe Target と統合するための簡単なオプトイン手順が用意されています。管理者としてログインし、プロジェクトコンソールにアクセスすると、オプトインウィザードが表示されます。
+AEM には、Adobe Analytics や Adobe Target と統合するための簡単なオプトイン手順が用意されています。 管理者としてログインし、プロジェクトコンソールにアクセスすると、オプトインウィザードが表示されます。
 
 ![chlimage_1-107](assets/chlimage_1-107a.png)
 
-Analytics や Target との統合をオプトインすると、ページトラッキング機能、分析機能、パーソナライズ機能を使用できるようになります。オプトインするときには、ユーザーアカウント情報を入力し、追跡するページを指定します。
+Analytics や Target との統合をオプトインすると、ページトラッキング機能、分析機能、パーソナライズ機能を使用できるようになります。 オプトインするときには、ユーザーアカウント情報を入力し、追跡するページを指定します。
 
 詳細情報は、[Adobe Analytics と Adobe Target のオプトイン](/help/sites-administering/opt-in.md)を参照してください。
 
@@ -82,7 +91,7 @@ Adobe Experience Manager と Dynamic Media Classic の統合方法について�
 
 ## Adobe Dynamic Tag Management との統合 {#integrating-with-adobe-dynamic-tag-management}
 
-[Adobe Dynamic Tag Management](https://business.adobe.com/jp/products/experience-platform/adobe-experience-platform.html?lang=ja) は直感的なツールであり、このツールを使用することでマーケターは、アドビやサードパーティのタグを数に制限なく、すばやく簡単に管理できます。IT リソースへの依存度を減らしながら、オンライン上のほぼすべてのアセットを最適化するためのコントロールと柔軟性を向上することができます。
+[Adobe Dynamic Tag Management](https://business.adobe.com/jp/products/experience-platform/adobe-experience-platform.html?lang=ja) は直感的なツールであり、このツールを使用することでマーケターは、アドビやサードパーティのタグを数に制限なく、すばやく簡単に管理できます。 IT リソースへの依存度を減らしながら、オンライン上のほぼすべてのアセットを最適化するためのコントロールと柔軟性を向上することができます。
 
 [Adobe Dynamic Tag Management](/help/sites-administering/dtm.md) と AEM を統合すると、Dynamic Tag Management の web プロパティを使用して AEM Sites を追跡できます。
 

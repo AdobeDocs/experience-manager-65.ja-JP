@@ -7,13 +7,27 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f6a6f91a-8819-530a-8e7b-c50884a25aef
+    internal-label: Workflow
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2152'
 ht-degree: 98%
-
 ---
-
 # メディアハンドラーとワークフローを使用したアセットの処理 {#processing-assets-using-media-handlers-and-workflows}
 
 [!DNL Adobe Experience Manager Assets] には、アセットの処理に使用するデフォルトのワークフローとメディアハンドラーのセットが付属しています。 ワークフローでは、アセットに対して実行する全般的なタスクを定義し、特定のタスクをメディアハンドラーに委任します。例えば、サムネールの生成やメタデータの抽出などです。
@@ -60,7 +74,7 @@ TBD: Java versions should not be set to 1.5. Must be updated.
 
 1. ブラウザーで、`https://localhost:4502/system/console/components` に移動します。
 1. 「`com.day.cq.dam.core.impl.store.AssetStoreImpl`」をクリックします。
-1. すべてのアクティブなメディアハンドラーリストが表示されます。 次に例を示します。
+1. すべてのアクティブなメディアハンドラーのリストが表示されます。 次に例を示します。
 
 ![chlimage_1-437](assets/chlimage_1-437.png)
 
@@ -76,7 +90,7 @@ TBD: Java versions should not be set to 1.5. Must be updated.
 
 ### メディアハンドラーを無効または有効にする {#disabling-enabling-a-media-handler}
 
-メディアハンドラーは、Apache Felix web 管理コンソールを通じて無効または有効にすることができます。 メディアハンドラーが無効になっている場合、そのタスクはアセットに対して実行されません。
+メディアハンドラーは、Apache Felix Web 管理コンソールを通じて無効または有効にすることができます。 メディアハンドラーが無効になっている場合、そのタスクはアセットに対して実行されません。
 
 メディアハンドラーを有効／無効にするには：
 
@@ -162,7 +176,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
    1. [!UICONTROL Java™ コンパイラー]を選択して、次のプロパティを 1.5 に設定します。
 
       * Compiler compliance level
-      * Generated .class files compatibility
+      * 生成される .class ファイルの互換性
       * Source compatibility
 
    1. 「**[!UICONTROL OK]**」をクリックします。 ダイアログウィンドウで、「**[!UICONTROL はい]**」をクリックします。
@@ -457,7 +471,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
 
 >[!NOTE]
 >
->Windows 以外のシステムでは、ファイル名に一重引用符（&#39;）を含むビデオアセットのレンディションの生成中に FFMpeg ツールがエラーを返します。 ビデオファイル名に一重引用符が含まれている場合は、[!DNL Experience Manager] にアップロードする前に削除してください。
+>Windows 以外のシステムでは、ファイル名に一重引用符（&#39;）を含むビデオアセットのレンディションの生成中に FFmpeg ツールがエラーを返します。 ビデオファイル名に一重引用符が含まれている場合は、[!DNL Experience Manager] にアップロードする前に削除してください。
 
 `CommandLineProcess` プロセスは、リストに表示されている順序で以下の操作を実行します。
 
@@ -508,7 +522,7 @@ Eclipse に [!DNL Maven] プラグインをインストールして設定する�
 | 引数のフォーマット | 説明 |
 |---|---|
 | mime:&lt;mime-type> | オプション引数。 アセットの MIME タイプが引数の MIME タイプと同じ場合にプロセスが適用されます。 <br>複数の MIME タイプを定義できます。 |
-| tn:&lt;width>:&lt;height> | オプション引数。 プロセスにより、引数で定義されたサイズのサムネールが作成されます。 <br>複数のサムネールを定義できます。 |
+| tn:&lt;width>:&lt;height> | オプション引数。 プロセスにより、引数で定義されたサイズのサムネイルが作成されます。 <br>複数のサムネールを定義できます。 |
 | cmd: &lt;command> | 実行するコマンドを定義します。 この構文はコマンドラインツールによって異なります。 1 つのコマンドのみを定義できます。 <br>次の変数を使用して、コマンドを作成できます。<br>`${filename}`：入力ファイルの名前（例：original.jpg）<br> `${file}`：入力ファイルの完全パス名（例：`/tmp/cqdam0816.tmp/original.jpg` <br>） `${directory}`：入力ファイルのディレクトリ（例：`/tmp/cqdam0816.tmp`）<br>`${basename}`：拡張子なしの入力ファイル名（例：original）<br>`${extension}`：入力ファイルの拡張子（例：JPG）。 |
 
 例えば、[!DNL Experience Manager] サーバーをホストするディスクに [!DNL ImageMagick] がインストールされており、[!UICONTROL CommandLineProcess] を実装として使用し、以下の値を[!UICONTROL プロセス引数]として使用してプロセスのステップを作成するとします。

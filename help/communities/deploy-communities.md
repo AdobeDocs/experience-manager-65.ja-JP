@@ -10,13 +10,20 @@ exl-id: 5b3d572d-e73d-4626-b664-c985949469c9
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1790'
 ht-degree: 5%
-
 ---
-
 # Communities のデプロイ {#deploying-communities}
 
 ## 前提条件 {#prerequisites}
@@ -27,9 +34,9 @@ ht-degree: 5%
 
 * オプションのライセンス：
 
-   * [Adobe Analytics for Communitiesの機能](/help/communities/analytics.md)
-   * [MongoDB for MSRP](/help/communities/msrp.md)
-   * [Adobe Cloud for ASRP](/help/communities/asrp.md)
+  * [Adobe Analytics for Communitiesの機能](/help/communities/analytics.md)
+  * [MongoDB for MSRP](/help/communities/msrp.md)
+  * [Adobe Cloud for ASRP](/help/communities/asrp.md)
 
 ## インストール チェックリスト {#installation-checklist}
 
@@ -52,32 +59,32 @@ ht-degree: 5%
 * [既定の電子メール サービス &#x200B;](/help/communities/email.md)を設定する
 * [共有UGC ストレージ &#x200B;](/help/communities/working-with-srp.md) （**SRP**）の選択肢を特定
 
-   * MongoDB SRP [&#x200B; （MSRP） &#x200B;](/help/communities/msrp.md)の場合
+  * MongoDB SRP [&#x200B; （MSRP） &#x200B;](/help/communities/msrp.md)の場合
 
-      * [MongoDBのインストールと設定](/help/communities/msrp.md#mongodb-configuration)
-      * [Solrの設定](/help/communities/solr.md)
-      * [MSRPを選択](/help/communities/srp-config.md)
+    * [MongoDBのインストールと設定](/help/communities/msrp.md#mongodb-configuration)
+    * [Solrの設定](/help/communities/solr.md)
+    * [MSRPを選択](/help/communities/srp-config.md)
 
-   * リレーショナル データベース SRP [&#x200B; （DSRP） &#x200B;](/help/communities/dsrp.md)の場合
+  * リレーショナル データベース SRP [&#x200B; （DSRP） &#x200B;](/help/communities/dsrp.md)の場合
 
-      * [MySQL用JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
-      * [DSRP用MySQLのインストールと設定](/help/communities/dsrp-mysql.md)
-      * [Solrの設定](/help/communities/solr.md)
-      * [DSRPの選択](/help/communities/srp-config.md)
+    * [MySQL用JDBC ドライバーのインストール](#jdbc-driver-for-mysql)
+    * [DSRP用MySQLのインストールと設定](/help/communities/dsrp-mysql.md)
+    * [Solrの設定](/help/communities/solr.md)
+    * [DSRPの選択](/help/communities/srp-config.md)
 
-   * Adobe SRP [&#x200B; （ASRP） &#x200B;](/help/communities/asrp.md)
+  * Adobe SRP [&#x200B; （ASRP） &#x200B;](/help/communities/asrp.md)
 
-      * プロビジョニングについては、アカウント担当者にお問い合わせください
-      * [ASRPの選択](/help/communities/srp-config.md)
+    * プロビジョニングについては、アカウント担当者にお問い合わせください
+    * [ASRPの選択](/help/communities/srp-config.md)
 
-   * JCR SRP [&#x200B; （JSRP） &#x200B;](/help/communities/jsrp.md)の場合
+  * JCR SRP [&#x200B; （JSRP） &#x200B;](/help/communities/jsrp.md)の場合
 
-      * 共有UGC （ユーザー生成コンテンツ）ストアではない：
+    * 共有UGC （ユーザー生成コンテンツ）ストアではない：
 
-         * UGCはレプリケートされない
-         * UGCは、そのUGCが入力されたAEMインスタンスまたはクラスターでのみ表示されます
+      * UGCはレプリケートされない
+      * UGCは、そのUGCが入力されたAEMインスタンスまたはクラスターでのみ表示されます
 
-         * デフォルトはJSRPです
+      * デフォルトはJSRPです
 
 ## 最新リリース {#latest-releases}
 
@@ -141,8 +148,8 @@ SRP コレクション（MSRPまたはDSRP）が高度な多言語検索（MLS�
 
   詳細MLS パッケージを取得するには、ドキュメントのデプロイセクションの[AEMの詳細MLS](deploy-communities.md#aem-advanced-mls)を参照してください。
 
-   * バージョン 1.2.40 （2016年4月6日）
-   * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロード
+  * バージョン 1.2.40 （2016年4月6日）
+  * AEM-SOLR-MLS-phasetwo-1.2.40.zipをダウンロード
 
 詳細とインストール情報については、[Solr Configuration](/help/communities/solr.md)を参照してください。
 
@@ -159,7 +166,7 @@ SRP コレクション（MSRPまたはDSRP）が高度な多言語検索（MLS�
 * 「**Assets**」タブを選択します
 * ディスクへの&#x200B;**ダウンロード**&#x200B;を選択
 
-ローカル AEM インスタンスで、Package Manager （例：[https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)）を使用して、ローカル AEMのパッケージリポジトリにアップロードします。
+ローカルのAEM インスタンスで、Package Manager （例：[https://localhost:4502/crx/packmgr/](https://localhost:4502/crx/packmgr/)）を使用して、ローカルのAEM パッケージリポジトリにアップロードします。
 
 または、ローカルのAEM インスタンスからPackage Shareを使用してパッケージにアクセスすると（例：[https://localhost:4502/crx/packageshare/](https://localhost:4502/crx/packageshare/)）、`Download` ボタンがローカルのAEM インスタンスのパッケージリポジトリにダウンロードされます。
 
@@ -200,7 +207,7 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[&#x2
 * 管理者権限を持ったログイン
 * [web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスする
 
-   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+  * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
 
 * `AEM Communities Publisher Configuration`を探します
 * 編集アイコンを選択します
@@ -219,19 +226,19 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[&#x2
 
 * 作成者のレプリケーションコンソールにアクセスする
 
-   * グローバルナビゲーションから、作成者&#x200B;**の**&#x200B;[!UICONTROL &#x200B; ツール &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; デプロイメント &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; レプリケーション &#x200B;]&#x200B;**>** エージェントに移動します
+  * グローバルナビゲーションから、作成者&#x200B;**の**&#x200B;[!UICONTROL &#x200B; ツール &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; デプロイメント &#x200B;]&#x200B;**>**&#x200B;[!UICONTROL &#x200B; レプリケーション &#x200B;]&#x200B;**>** エージェントに移動します
 
 * 両方のエージェントに対して同じ手順に従います。
 
-   * **既定のエージェント （公開）**
-   * **リバースレプリケーションエージェント （リバースパブリッシュ）**
+  * **既定のエージェント （公開）**
+  * **リバースレプリケーションエージェント （リバースパブリッシュ）**
 
-      1. エージェントを選択
-      1. **編集**&#x200B;を選択
-      1. 「**トランスポート**」タブを選択します
-      1. ポート `4503`でない場合は、**URI**&#x200B;を編集して、正しいポートを指定します
+    1. エージェントを選択
+    1. **編集**&#x200B;を選択
+    1. 「**トランスポート**」タブを選択します
+    1. ポート `4503`でない場合は、**URI**&#x200B;を編集して、正しいポートを指定します
 
-      1. ユーザー`admin`でない場合は、**ユーザー**&#x200B;と&#x200B;**パスワード**&#x200B;を編集して、`administrators` ユーザーグループのメンバーを指定します
+    1. ユーザー`admin`でない場合は、**ユーザー**&#x200B;と&#x200B;**パスワード**&#x200B;を編集して、`administrators` ユーザーグループのメンバーを指定します
 
 次の画像は、ポートを4503から6103に変更した結果を示しています。
 
@@ -252,12 +259,12 @@ AEM Communitiesでは、UGCの保存には共通ストアが使用され、[&#x2
 トンネルサービスを有効にするには：
 
 * オーサーインスタンスの管理者権限でログインします。
-* 発行者がlocalhost:4503でない場合、またはトランスポート ユーザーが`admin`でない場合，
+* 発行者がlocalhost:4503でない場合、またはトランスポートユーザーが`admin`でない場合，
 次に、[&#x200B; レプリケーションエージェントを設定](#replication-agents-on-author)
 
 * [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)へのアクセス
 
-   * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+  * 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
 * `AEM Communities Publish Tunnel Service`を探します
 * 編集アイコンを選択します
@@ -276,28 +283,28 @@ AEM 6.3以降では、キーマテリアルはファイルシステムに保存�
 
 * コピーするキー素材を含むAEM インスタンス（通常はオーサーインスタンス）にアクセスします
 
-   * ローカルファイルシステムで`com.adobe.granite.crypto.file` バンドルを探します。
-例：
+  * ローカルファイルシステムで`com.adobe.granite.crypto.file` バンドルを探します。
+    例：
 
-      * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
-      * `bundle.info` ファイルはバンドルを識別します
+    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21`
+    * `bundle.info` ファイルはバンドルを識別します
 
-   * データフォルダーに移動し，
-例：
+  * データフォルダーに移動し，
+    例：
 
-      * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-      * hmacおよびプライマリノードファイルのコピー
+    * hmacおよびプライマリノードファイルのコピー
 
 * AEMインスタンスごとに
 
-   * データフォルダーに移動し，
-例：
+  * データフォルダーに移動し，
+    例：
 
-      * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
+    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle21/data`
 
-   * 以前にコピーした2つのファイルをペーストします
-   * 対象のAEM インスタンスが実行中の場合、[Granite Crypto バンドルを更新する必要があります](#refresh-the-granite-crypto-bundle)
+  * 以前にコピーした2つのファイルをペーストします
+  * 対象のAEM インスタンスが実行中の場合、[Granite Crypto バンドルを更新する必要があります](#refresh-the-granite-crypto-bundle)
 
 >[!CAUTION]
 >
@@ -328,7 +335,7 @@ AEM 6.2以前の場合と同様に、キーマテリアルをリポジトリに�
 
 * 各公開インスタンスで、[Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします
 
-   * 例：[https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
+  * 例：[https://&lt;server>:&lt;port>/system/console/bundles](https://localhost:4503/system/console/bundles)
 
 * `Adobe Granite Crypto Support` バンドルを探します（com.adobe.granite.crypto）
 * **更新**&#x200B;を選択

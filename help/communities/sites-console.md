@@ -10,13 +10,20 @@ role: Admin
 exl-id: 426e3adf-3723-4d17-a988-6eb050939e68
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2963'
+source-wordcount: '3201'
 ht-degree: 1%
-
 ---
-
 # コミュニティサイトコンソール {#communities-sites-console}
 
 Communities Sites コンソールでは、次のアクセス権を使用できます。
@@ -103,12 +110,12 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
   URLに表示されるサイトのルートページの名前。
 
-   * サイトの作成後は簡単に変更できないため、名前を再確認します。
-   * ベース URL （`https://server:port/site root/site name)`）は、`Community Site Name`の下に表示されます。
+  * サイトの作成後は簡単に変更できないため、名前を再確認します。
+  * ベース URL （`https://server:port/site root/site name)`）は、`Community Site Name`の下に表示されます。
 
-   * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
+  * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
 
-     *例：*、`https://localhost:4502/content/sites/mysight/en.html`
+    *例：*、`https://localhost:4502/content/sites/mysight/en.html`
 
 * **コミュニティサイトテンプレート** メニュー
 
@@ -144,8 +151,8 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * 画像はブラウザーウィンドウの左端にピン留めされます。
 * 画像のサイズ変更はありません。画像の幅が…
 
-   * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
-   * ブラウザーの幅よりも大きい画像は切り抜かれているように見えます。
+  * ブラウザーの幅よりも小さい場合、画像は水平方向に繰り返されます。
+  * ブラウザーの幅よりも大きい画像は切り抜かれているように見えます。
 
 * 「**次へ**」を選択します。
 
@@ -179,32 +186,32 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * **ユーザー登録を許可**
 
   チェックを入れた場合、サイト訪問者は自己登録によってコミュニティメンバーになる可能性があります。
-オフにすると、コミュニティサイトは*制限*され、サイト訪問者はコミュニティサイトのメンバーグループに割り当てられるか、リクエストを行うか、招待メールを送信する必要があります。オフにした場合、匿名アクセスは許可されません。
-*private* コミュニティサイトのチェックを外します。デフォルトはオンです。
+  オフにすると、コミュニティサイトは*制限*され、サイト訪問者はコミュニティサイトのメンバーグループに割り当てられるか、リクエストを行うか、招待メールを送信する必要があります。 オフにした場合、匿名アクセスは許可されません。
+  *private* コミュニティサイトのチェックを外します。 デフォルトはオンです。
 
 * **匿名アクセスを許可**
 
   オンにすると、コミュニティサイトは&#x200B;*オープン*になり、サイト訪問者はサイトにアクセスできます。
-オフにすると、サインインしたメンバーのみがサイトにアクセスできます。
-*private* コミュニティサイトのチェックを外します。デフォルトはオンです。
+  オフにすると、サインインしたメンバーのみがサイトにアクセスできます。
+  *private* コミュニティサイトのチェックを外します。 デフォルトはオンです。
 
 * **メッセージを許可**
 
   オンにすると、メンバーはコミュニティサイト内のグループに対して、互いにメッセージを送信できます。
-チェックを外すと、メッセージがコミュニティに設定されません。
-デフォルトはオフです。
+  チェックを外すと、メッセージがコミュニティに設定されません。
+  デフォルトはオフです。
 
 * **ソーシャルログインを許可：Facebook**
 
-  オンにした場合、サイト訪問者がFacebook アカウントの資格情報でログインできるようにします。選択した[Facebook クラウド設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)は、コミュニティサイトの作成後にユーザーをコミュニティサイトのメンバーグループに追加するように設定する必要があります。
-オフにすると、Facebook ログインは表示されません。
-*private* コミュニティサイトの場合はオフのままにします。デフォルトはオフです。
+  オンにした場合、サイト訪問者がFacebook アカウントの資格情報でログインできるようにします。 選択した[Facebook クラウド設定](/help/communities/social-login.md#create-a-facebook-connect-cloud-service)は、コミュニティサイトの作成後にユーザーをコミュニティサイトのメンバーグループに追加するように設定する必要があります。
+  オフにすると、Facebook ログインは表示されません。
+  *private* コミュニティサイトの場合はオフのままにします。 デフォルトはオフです。
 
 * **ソーシャルログインを許可：Twitter**
 
-  オンにした場合、サイト訪問者がTwitter アカウントの資格情報でログインできるようにします。選択した[Twitter クラウド設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)は、コミュニティサイトの作成後にユーザーをコミュニティサイトのメンバーグループに追加するように設定する必要があります。
-チェックを外すと、Twitter ログインは表示されません。
-*private* コミュニティサイトの場合はオフのままにします。デフォルトはオフです。
+  オンにした場合、サイト訪問者がTwitter アカウントの資格情報でログインできるようにします。 選択した[Twitter クラウド設定](/help/communities/social-login.md#create-a-twitter-connect-cloud-service)は、コミュニティサイトの作成後にユーザーをコミュニティサイトのメンバーグループに追加するように設定する必要があります。
+  チェックを外すと、Twitter ログインは表示されません。
+  *private* コミュニティサイトの場合はオフのままにします。 デフォルトはオフです。
 
 >[!NOTE]
 >
@@ -267,7 +274,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * **Analyticsを有効にする**
 
   Adobe AnalyticsがCommunities機能に[設定](/help/communities/analytics.md)されている場合にのみ使用できます。
-デフォルトはオフです。オンにすると、追加の選択メニューが表示されます。
+  デフォルトはオフです。 オンにすると、追加の選択メニューが表示されます。
 
 ![site-analytics-enable](assets/site-analytics-enable.png)
 
@@ -304,39 +311,39 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 
 * **コミュニティサイトの翻訳オプションを選択**
 
-   * **ページ全体を翻訳**
+  * **ページ全体を翻訳**
 
-     選択すると、ページ上のすべてのUGCが、ページのベース言語に翻訳されます。
+    選択すると、ページ上のすべてのUGCが、ページのベース言語に翻訳されます。
 
-     デフォルトは&#x200B;*選択されていません*。
+    デフォルトは&#x200B;*選択されていません*。
 
-   * **選択範囲のみを翻訳**
+  * **選択範囲のみを翻訳**
 
-     選択すると、各投稿の横に「翻訳」オプションが表示され、個々の投稿をページのベース言語に翻訳できます。
-デフォルトは*選択*&#x200B;です。
+    選択すると、各投稿の横に「翻訳」オプションが表示され、個々の投稿をページのベース言語に翻訳できます。
+    デフォルトは*選択*&#x200B;です。
 
 * **永続性オプションを選択**
 
-   * **ユーザーのリクエストに対してコントリビューションを翻訳し、後で永続化します**
-選択した場合、コンテンツはリクエストが行われるまで翻訳されません。 翻訳が完了すると、翻訳はリポジトリに保存されます。
+  * **ユーザーのリクエストに対してコントリビューションを翻訳し、後で永続化します**
+    選択した場合、コンテンツはリクエストが行われるまで翻訳されません。 翻訳が完了すると、翻訳はリポジトリに保存されます。
 
-     デフォルトは&#x200B;*選択されていません*。
+    デフォルトは&#x200B;*選択されていません*。
 
-   * **翻訳を保持しない**
+  * **翻訳を保持しない**
 
-     選択した場合、翻訳はリポジトリに保存されません。
+    選択した場合、翻訳はリポジトリに保存されません。
 
-     選択しない場合、翻訳は保持されます。
+    選択しない場合、翻訳は保持されます。
 
-     デフォルトは&#x200B;*選択されていません*。
+    デフォルトは&#x200B;*選択されていません*。
 
 * **スマートレンダリング**
 
   次のいずれかを選択します。
 
-   * `Always show contributions in the original language`（デフォルト）
-   * `Always show contributions in user preferred language`
-   * `Show contributions in user preferred language for only logged-in users`
+  * `Always show contributions in the original language`（デフォルト）
+  * `Always show contributions in user preferred language`
+  * `Show contributions in user preferred language for only logged-in users`
 
 ### 手順4：コミュニティサイトの作成 {#step-create-communities-site}
 
@@ -409,17 +416,17 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * 追加の[&#x200B; コミュニティ関数](/help/communities/functions.md)をサイト構造にドラッグ&amp;ドロップします。
 * サイト構造内のコミュニティ関数のインスタンス：
 
-   * **`gear icon`**
+  * **`gear icon`**
 
-     表示タイトルとURL名、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
+    表示タイトルとURL名、および[特権メンバーグループ &#x200B;](/help/communities/users.md#privilegedmembersgroups)を含む設定を編集します。
 
-   * **`trashcan icon`**
+  * **`trashcan icon`**
 
-     サイト構造から関数を削除（削除）します。
+    サイト構造から関数を削除（削除）します。
 
-   * **`grid icon`**
+  * **`grid icon`**
 
-     サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
+    サイトの最上位ナビゲーションバーに表示される関数の順序を変更します。
 
 >[!NOTE]
 >
@@ -448,7 +455,7 @@ Communities Sites コンソールでは、次のアクセス権を使用でき�
 * [コミュニティサイトテーマ](#community-site-theme)
 * [コミュニティサイトブランディング](#community-site-branding)
 
-   * パネルの一番下までスクロールして、ブランド画像を変更できます。
+  * パネルの一番下までスクロールして、ブランド画像を変更できます。
 
 ### 設定を変更 {#modify-settings}
 
@@ -510,8 +517,8 @@ UGCはサイトパッケージに含まれていません。
 
 >[!NOTE]
 >
->[&#x200B; ソーシャル ログインを許可：Facebook](#user-management)が有効になっている場合、ユーザーグループ `community-<site-name>-<uid>-members`が有効になります
->が作成されました。適用された[Facebook クラウドサービス &#x200B;](/help/communities/social-login.md#createafacebookcloudservice)は、このグループにユーザーを追加するように設定する必要があります。
+>[&#x200B; ソーシャルログインを許可：Facebook](#user-management)が有効になっている場合、ユーザーグループが `community-<site-name>-<uid>-members`
+>が作成された場合、適用された[Facebook クラウドサービス &#x200B;](/help/communities/social-login.md#createafacebookcloudservice)は、このグループにユーザーを追加するように設定する必要があります。
 
 ## 認証エラー用に設定 {#configure-for-authentication-error}
 
@@ -523,7 +530,7 @@ UGCはサイトパッケージに含まれていません。
 * 管理者権限でログインします。
 * [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+  * 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
 * `Adobe Granite Login Selector Authentication Handler` を見つけます。
 * `pencil` アイコンを選択して、編集用の設定を開きます。
@@ -544,7 +551,7 @@ UGCはサイトパッケージに含まれていません。
 
 * コミュニティサイトのホームページを参照する
 
-   * 例：[https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
+  * 例：[https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
 
 * 「ログアウト」を選択します。
 * 「ログイン」を選択します。

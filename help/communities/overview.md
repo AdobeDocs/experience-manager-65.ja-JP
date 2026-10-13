@@ -10,13 +10,20 @@ exl-id: d6243dff-a067-455c-a326-5f451f225efd
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1332'
 ht-degree: 2%
-
 ---
-
 # AEM Communities の概要 {#aem-communities-overview}
 
 Adobe Experience Manager （AEM） Communitiesを使用すると、パフォーマンスの向上、サイト管理の改善、サイト訪問者の価値あるコミュニティ会員へのコンバージョンを促進するオンプレミスのコミュニティサイトをすばやく作成できます。
@@ -46,34 +53,34 @@ AEM Communitiesは、次のようなサイト訪問者との関係構築を可�
 
 * 選択した[&#x200B; コミュニティサイトテンプレート &#x200B;](/help/communities/sites.md)に基づいて、サイトの機能をアセンブリします。
 
-   * [&#x200B; コミュニティ関数](#community-functions)から作成
-   * オプションの[&#x200B; コミュニティグループ &#x200B;](#communitygroups)機能
+  * [&#x200B; コミュニティ関数](#community-functions)から作成
+  * オプションの[&#x200B; コミュニティグループ &#x200B;](#communitygroups)機能
 
 * 設定を使用して設定を行います。
 
-   * モデレーション
-   * ログイン
-   * 翻訳
+  * モデレーション
+  * ログイン
+  * 翻訳
 
 * 必須の機能を提供します。
 
-   * レスポンシブデザイン：[Twitter Bootstrap テーマ &#x200B;](https://getbootstrap.com)を使用
+  * レスポンシブデザイン：[Twitter Bootstrap テーマ &#x200B;](https://getbootstrap.com)を使用
 
-   * ログイン：自己登録、[&#x200B; ソーシャルログイン &#x200B;](/help/communities/social-login.md)、ユーザープロファイル
+  * ログイン：自己登録、[&#x200B; ソーシャルログイン &#x200B;](/help/communities/social-login.md)、ユーザープロファイル
 
-      * 通知：
-メンバーは、自分に関連するイベントと、自分が[@mentioned](/help/communities/overview.md#mentionssupport)であるユーザー生成コンテンツを表示します。
+    * 通知：
+      メンバーは、自分に関連するイベントと、自分が[@mentioned](/help/communities/overview.md#mentionssupport)であるユーザー生成コンテンツを表示します。
 
-      * メッセージ：メンバーは、コミュニティサイト内でメッセージを送受信できます。
-      * 検索：コミュニティサイト内で検索する機能。
-      * 言語の切り替え：[多言語サイト &#x200B;](/help/sites-administering/translation.md)の言語を選択できます。
+    * メッセージ：メンバーは、コミュニティサイト内でメッセージを送受信できます。
+    * 検索：コミュニティサイト内で検索する機能。
+    * 言語の切り替え：[多言語サイト &#x200B;](/help/sites-administering/translation.md)の言語を選択できます。
 
-      * 管理：許可されたメンバーがコミュニティサイト内のユーザーを管理および管理するためのアクセス。
+    * 管理：許可されたメンバーがコミュニティサイト内のユーザーを管理および管理するためのアクセス。
 
 * ページレベルのオーサリング作業が大幅に不要になります。
 
-   * ブランディング：コミュニティサイトのすべてのページに表示するためのバナー画像のオプションのアップロード
-   * ナビゲーションメニュー：コミュニティサイトテンプレートに含まれる機能には、ナビゲーションリンクが用意されています。
+  * ブランディング：コミュニティサイトのすべてのページに表示するためのバナー画像のオプションのアップロード
+  * ナビゲーションメニュー：コミュニティサイトテンプレートに含まれる機能には、ナビゲーションリンクが用意されています。
 
 コミュニティサイトをすばやく簡単に作成する方法については、[AEM Communitiesの概要](/help/communities/getting-started.md)を参照してください。
 
@@ -95,47 +102,47 @@ AEM Communitiesは、次のようなサイト訪問者との関係構築を可�
 
 * [サイト](/help/communities/sites-console.md)コンソール
 
-   * サイトの構築
-   * サイト編集
-   * サイト管理
-   * [&#x200B; コミュニティグループ &#x200B;](/help/communities/groups.md) コンソール
+  * サイトの構築
+  * サイト編集
+  * サイト管理
+  * [&#x200B; コミュニティグループ &#x200B;](/help/communities/groups.md) コンソール
 
 * [&#x200B; モデレーション &#x200B;](/help/communities/moderation.md) コンソール
 
-   * オーサー環境とパブリッシュ環境の一般的な一括モデレーション UI。
-   * 新しいフィルタリング条件。
+  * オーサー環境とパブリッシュ環境の一般的な一括モデレーション UI。
+  * 新しいフィルタリング条件。
 
 * [&#x200B; メンバーとグループ &#x200B;](/help/communities/members.md)管理コンソール
 
-   * オーサー環境からパブリッシュサイドユーザー（メンバー）を作成および管理できます。
-   * メンバーを禁止できます。
-   * オーサー環境からパブリッシュサイドのユーザーグループ（メンバーグループ）を作成および管理できます。
+  * オーサー環境からパブリッシュサイドユーザー（メンバー）を作成および管理できます。
+  * メンバーを禁止できます。
+  * オーサー環境からパブリッシュサイドのユーザーグループ（メンバーグループ）を作成および管理できます。
 
 * [Reports](/help/communities/reports.md) コンソール
 
-   * 割り当て、投稿、ビューに関するレポートを生成できます。
+  * 割り当て、投稿、ビューに関するレポートを生成できます。
 
 グローバルツールコンソールでは、次のコミュニティツールにアクセスできます。
 
 * [&#x200B; サイトテンプレート &#x200B;](/help/communities/tools.md#sitetemplatesconsole) コンソール
 
-   * コミュニティサイトテンプレートの作成と管理。
+  * コミュニティサイトテンプレートの作成と管理。
 
 * [&#x200B; テンプレートをグループ &#x200B;](/help/communities/tools.md#grouptemplatesconsole) コンソール
 
-   * コミュニティグループテンプレートの作成と管理。
+  * コミュニティグループテンプレートの作成と管理。
 
 * [&#x200B; コミュニティ関数](/help/communities/tools.md#communityfunctionsconsole) コンソール
 
-   * コミュニティ機能の作成と管理：
+  * コミュニティ機能の作成と管理：
 
 * [&#x200B; ストレージ設定](/help/communities/tools.md#storageconfiguratonconsole) コンソール
 
-   * サイトの[共通ストア &#x200B;](/help/communities/working-with-srp.md)を選択して設定します。
+  * サイトの[共通ストア &#x200B;](/help/communities/working-with-srp.md)を選択して設定します。
 
 * [コンポーネントガイド](/help/communities/components-guide.md)
 
-   * サンプルサイト「[&#x200B; コミュニティコンポーネント &#x200B;](https://localhost:4502/editor.html/content/community-components/en.html)」では、すべてのコミュニティコンポーネントのサンプルを、デフォルト設定とそれらをテストする機能とともに提供します。
+  * サンプルサイト「[&#x200B; コミュニティコンポーネント &#x200B;](https://localhost:4502/editor.html/content/community-components/en.html)」では、すべてのコミュニティコンポーネントのサンプルを、デフォルト設定とそれらをテストする機能とともに提供します。
 
 ## コミュニティサイトテンプレート {#community-site-templates}
 
@@ -214,7 +221,7 @@ AEM デモマシンには、有効なAEM ライセンスが必要です。
 
 >[!NOTE]
 >
->AEM デモマシン （13:26）に関する[&#x200B; ビデオの概要](https://www.youtube.com/watch?v=zEE_zkR9fVQ&feature=youtu.be)を表示します。
+>AEM デモマシンに関する[&#x200B; ビデオの概要](https://www.youtube.com/watch?v=zEE_zkR9fVQ&feature=youtu.be)を表示します（13:26）。
 
 ## AEM Communities Documentation {#aem-communities-documentation}
 

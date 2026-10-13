@@ -1,18 +1,32 @@
 ---
 title: '[!DNL Assets] プロキシ開発'
-description: プロキシは、プロキシワーカーを使用してジョブを処理する  [!DNL Experience Manager]  インスタンスです。  [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシコンポーネントを設定する方法、カスタムプロキシワーカーを開発する方法について説明します。
+description: プロキシは、プロキシワーカーを使用してジョブを処理する[!DNL Experience Manager] インスタンスです。 [!DNL Experience Manager] プロキシ、サポートされている操作、プロキシ コンポーネントの設定方法、およびカスタム プロキシ ワーカーの開発方法について説明します。
 contentOwner: AG
 role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+    internal-label: Integrations
+subfeature_v2:
+  - id: cf4d26de-6586-4a7a-8ccb-6e8a29ee21ea
+    internal-label: Proxy workers
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 100%
-
+source-wordcount: '858'
+ht-degree: 96%
 ---
-
 # [!DNL Assets] プロキシ開発 {#assets-proxy-development}
 
 [!DNL Adobe Experience Manager Assets] では、特定のタスクの処理を配信するためにプロキシが使用されます。
@@ -145,13 +159,13 @@ API の使用例を以下に示します。
 
 * （Sling イベントを使用して）以下を設定および実装します。
 
-   * カスタムジョブトピック
-   * カスタムジョブイベントハンドラー
+  * カスタムジョブトピック
+  * カスタムジョブイベントハンドラー
 
 * 次に、JobService API を使用して、以下を実行します。
 
-   * カスタムジョブをプロキシにディスパッチ
-   * ジョブを管理
+  * カスタムジョブをプロキシにディスパッチ
+  * ジョブを管理
 
 * ワークフローからプロキシを使用する場合は、WorkflowExternalProcess API および JobService API を使用して、カスタム外部手順を実装する必要があります。
 

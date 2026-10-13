@@ -8,16 +8,25 @@ feature: Upgrading
 exl-id: 4e736924-74ea-431a-be19-1c4ff022f464
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 100%
-
+source-wordcount: '413'
+ht-degree: 98%
 ---
-
 # Adobe Experience Manager 6.5 における Dynamic Media リポジトリの再構築 {#dynamic-media-repository-restructuring-in-aem}
 
-親ページの [Adobe Experience Manage 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、Experience Manager 6.5 にアップグレードするユーザーは、このページを使用して、Dynamic Media に影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。一部の変更は Experience Manager 6.5 アップグレードプロセス中に作業する必要がありますが、それ以外は将来のアップグレードまで延期できます。
+親ページの [Adobe Experience Manage 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、Experience Manager 6.5 にアップグレードするユーザーは、このページを使用して、Dynamic Media に影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は Experience Manager 6.5 アップグレードプロセス中に作業する必要がありますが、それ以外は将来のアップグレードまで延期できます。
 
 **今後のアップグレードの前に**
 
@@ -46,7 +55,7 @@ ht-degree: 100%
    <td><p>次の移行スクリプトを使用して、新しい場所に移行できます：</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.json</em></p> <p>または、Experience Manager UI で設定を編集すると、変更内容が新しい場所に保存されます。</p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -96,7 +105,7 @@ ht-degree: 100%
    <td><p>以下の移行スクリプトを実行して、最新モデルに合わせることができます。</p> <p><em>https://serveraddress:serverport/libs/settings/dam/dm/presets.migratedmcontent.jso</em></p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>
@@ -116,10 +125,10 @@ ht-degree: 100%
   </tr>
   <tr>
    <td><strong>再構築の手引き</strong></td>
-   <td><p>1. YouTube からすべての動画を非公開にする<br /> 2.古い場所からすべてのチャネルをコピーするなど、新規のタッチ UI を使用して（<code>/conf</code> から） YouTube 設定を作成します。<br /> 3.すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しい YouTube URL が生成されます。新規のタッチ UI YouTube 設定を作成する前に URL を非公開にしなければ、プロパティの下に複数の YouTube URL が表示されます。これは、再作成されたチャネルは機会があれば再度公開されるためです。つまり、プロパティの下に不要な URL が表示されていることになります。</p> </td>
+   <td><p>1. YouTube<br /> 2からすべてのビデオを非公開にします。 古い場所からすべてのチャネルをコピーするなど、新規のタッチ UI を使用して（<code>/conf</code> から） YouTube 設定を作成します。<br /> 3. すべての動画を YouTube に公開しなおします。</p> <p>このワークフローにより、新しい YouTube URL が生成されます。 新規のタッチ UI YouTube 設定を作成する前に URL を非公開にしなければ、プロパティの下に複数の YouTube URL が表示されます。これは、再作成されたチャネルは機会があれば再度公開されるためです。 つまり、プロパティの下に不要な URL が表示されていることになります。</p> </td>
   </tr>
   <tr>
-   <td><strong>備考</strong></td>
+   <td><strong>メモ</strong></td>
    <td>該当なし<br /> </td>
   </tr>
  </tbody>

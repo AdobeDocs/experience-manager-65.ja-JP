@@ -8,13 +8,26 @@ feature: Form Data Model
 exl-id: 7a1d9d57-66f4-4f20-91c2-ace5a71a52f2
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 4876a742-a341-5402-aba7-e749c45e777c
+    internal-label: Form Data Model
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 97%
-
+source-wordcount: '2186'
+ht-degree: 99%
 ---
-
 # データソースの設定{#configure-data-sources}
 
 | バージョン | 記事リンク |
@@ -125,16 +138,16 @@ RESTful サービスを設定するには、以下の手順を実行します。
 
    クラウドサービス設定用フォルダーの作成方法と構成方法については、「[クラウドサービス設定用フォルダーの構成](../../forms/using/configure-data-sources.md#cloud-folder)」を参照してください。
 
-1. 「**[!UICONTROL 作成]**」を選択して、**[!UICONTROL データソース設定を作成ウィザード]**&#x200B;を開きます。 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL RESTful サービス]**」を選択します。必要な場合は、設定のサムネール画像を選択して「**[!UICONTROL 次へ]**」を選択します。
+1. 「**[!UICONTROL 作成]**」を選択して、**[!UICONTROL データソース設定を作成]**&#x200B;ウィザードを開きます。 設定の名前と、必要に応じて設定のタイトルを指定し、「**[!UICONTROL サービスタイプ]**」ドロップダウンで「**[!UICONTROL RESTful サービス]**」を選択します。必要な場合は、設定のサムネール画像を選択して「**[!UICONTROL 次へ]**」を選択します。
 1. RESTful サービスの次の詳細を指定します。
 
    * 「Swagger ソース」ドロップダウンで「URL」または「ファイル」を選択します。「URL」を選択した場合は、Swagger 定義ファイルの Swagger URL を指定し、「ファイル」を選択した場合は、ローカルのファイルシステムから Swagger ファイルをアップロードします。
    * Swagger ソース入力にもとづいて、以下のフィールドに値が事前入力されます。
 
-      * スキーム：REST API で使用される転送プロトコル。 ドロップダウンリストに表示されるスキームの種類の数は、Swagger ソースで定義されているスキームによって異なります。
-      * ホスト：REST API を提供するホストのドメイン名または IP アドレス。 このフィールドは必須です。
-      * 基本パス：すべての API パスの URL 接頭辞。 これはオプションのフィールドです。\
-        必要に応じて、これらのフィールドの事前入力された値を編集します。
+     * スキーム：REST API で使用される転送プロトコル。 ドロップダウンリストに表示されるスキームの種類の数は、Swagger ソースで定義されているスキームによって異なります。
+     * ホスト：REST API を提供するホストのドメイン名または IP アドレス。 このフィールドは必須です。
+     * 基本パス：すべての API パスの URL 接頭辞。 これはオプションのフィールドです。\
+       必要に応じて、これらのフィールドの事前入力された値を編集します。
 
    * RESTful サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証、カスタム認証、相互認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
@@ -146,10 +159,10 @@ RESTful サービスを設定するには、以下の手順を実行します。
 
 ### パフォーマンスを最適化するためのフォームデータモデル HTTP クライアント設定 {#fdm-http-client-configuration}
 
-データソースにパフォーマンス最適化のためのHTTP クライアント設定が含まれているため、RESTful web サービスと統合する際の[!DNL Experience Manager Forms] フォームデータモデル。
-フォームデータモデル HTTP クライアントを設定するには、次の手順を実行します。
+データソースとして RESTful web サービスと統合する場合の [!DNL Experience Manager Forms] フォームデータモデルには、パフォーマンス最適化のための HTTP クライアント設定が含まれています。
+フォームデータモデルの HTTP クライアントを設定するには、以下の手順を実行します。
 
-1. [!DNL Experience Manager Forms] オーサーインスタンスに管理者としてログインし、[!DNL Experience Manager] web コンソールバンドルに移動します。 デフォルト URLは[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)です。
+1. [!DNL Experience Manager Forms] オーサーインスタンスに管理者としてログインし、[!DNL Experience Manager] web コンソールバンドルに移動します。 デフォルトのURLは[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)です。
 
 1. 「**[!UICONTROL REST データソースのフォームデータモデル HTTP クライアント設定]**」を選択します。
 
@@ -180,8 +193,8 @@ SOAP ベースの web サービスは、[Web Services Description Language（WSD
    * サービスエンドポイント。 WSDL で指定されているサービスエンドポイントを上書きするには、このフィールドの値を指定します。
    * SOAP サービスにアクセスするための認証タイプ（なし、OAuth2.0（[認証コード](https://oauth.net/2/grant-types/authorization-code/)、[クライアント資格情報](https://oauth.net/2/grant-types/client-credentials/)）、基本認証、API キー認証、カスタム認証、X509 トークン、相互認証）を選択し、その選択内容に応じて認証の詳細を指定します。
 
-     認証タイプとして&#x200B;**[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509証明書を設定します。詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
-X509証明書のKeyStore エイリアスを&#x200B;**[!UICONTROL Key Alias]** フィールドに指定します。認証要求が有効な状態を維持するまでの時間を&#x200B;**[!UICONTROL 有効期間]** フィールドに秒単位で指定します。オプションで、メッセージ本文またはタイムスタンプヘッダー、またはその両方に署名する場合に選択します。
+     認証の種類として **[!UICONTROL X509 トークン]**&#x200B;を選択した場合は、X509 証明書を設定します。 詳しくは、[証明書の設定](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service)を参照してください。
+     X509 証明書のキーストアエイリアスを&#x200B;**[!UICONTROL キーエイリアス]**&#x200B;フィールドに指定します。 **[!UICONTROL 有効期間]**&#x200B;フィールドに、認証リクエストが有効なままになるまでの時間（秒）を指定します。 オプションで、メッセージの本文、タイムスタンプヘッダーまたはその両方に署名することを選択します。
 
      認証タイプとして&#x200B;**[!UICONTROL 相互認証]**&#x200B;を選択した場合は、[RESTful web サービスおよび SOAP web サービスの証明書ベースの相互認証](#mutual-authentication)を参照してください。
 
@@ -193,8 +206,8 @@ OData サービスは、そのサービスのルート URL によって識別さ
 
 >[!NOTE]
 >
->フォームデータモデルは[OData バージョン 4](https://www.odata.org/documentation/)をサポートしています。
-> オンラインまたはオンプレミスでMicrosoft Dynamics 365を構成する手順ガイドについては、[Microsoft Dynamics OData Configuration](/help/forms/using/ms-dynamics-odata-configuration.md)を参照してください。
+>フォームデータモデルがサポートする [OData バージョン 4](https://www.odata.org/documentation/)。
+>オンライン環境またはオンプレミス環境で Microsoft Dynamics 365 を設定する詳しい手順については、[Microsoft Dynamics OData 設定](/help/forms/using/ms-dynamics-odata-configuration.md)を参照してください。
 
 1. **[!UICONTROL ツール／Cloud Services／データソース]**&#x200B;に移動します。 クラウド設定の作成対象となるフォルダーを選択します。
 

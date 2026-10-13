@@ -8,13 +8,31 @@ exl-id: f6c24894-c322-4c44-b001-8978954d6e53
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Foundation Components
 role: Admin, User, Developer
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
-
 ---
-
 # リファレンステーマ{#reference-themes}
 
 [テーマ](../../forms/using/themes.md)を使用すると、CSS に関する深い知識がなくてもフォームのスタイルを設定できます。 デフォルトのテーマに加え、[AEM Forms アドオンパッケージ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)をインストールすることで以下のテーマを取得できます。
@@ -50,7 +68,7 @@ Beryl テーマは、We.Gov アダプティブフォームで使用され、背�
 
 ## Exec {#exec}
 
-Exec テーマは、背景を淡色で塗りつぶさず、フォームコンポーネントを強調します。 コンポーネントを選択してクリックすると、フォントの色が変わります。 デフォルトのキャンバステーマと比較すると、選択したタブのテキストのフォント色が濃い青に変わります。 「ナビゲーション」ボタンと「送信」ボタンが Beryl テーマとは異なることに注目してください。
+Exec テーマは、背景を単色で塗りつぶさず、フォームコンポーネントを強調します。 コンポーネントを選択してクリックすると、フォントの色が変わります。 デフォルトのキャンバステーマと比較すると、選択したタブのテキストのフォント色が濃い青に変わります。 「ナビゲーション」ボタンと「送信」ボタンが Beryl テーマとは異なることに注目してください。
 
 ![Exec テーマ](assets/exec.png)
 
@@ -62,7 +80,7 @@ Exec テーマは、背景を淡色で塗りつぶさず、フォームコンポ
 
 ## Exec Light {#exec-light}
 
-Exec Light テーマは、空白を使用してシームレスなエクスペリエンスを作成します。 「次へ」ボタンと「送信」ボタンは、淡色で塗りつぶされ、3D の影が付きます。 左側で選択したタブには、ダブルチェックマークではなく矢印が付きます。
+Exec Light テーマは、空白を使用してシームレスなエクスペリエンスを作成します。 「次へ」ボタンと「送信」ボタンは、単色で塗りつぶされ、3D のシャドウが付きます。 左側で選択したタブには、ダブルチェックマークではなく矢印が付きます。
 
 ![Exec Light テーマ](assets/exec-light.png)
 
@@ -74,7 +92,7 @@ Exec Light テーマは、空白を使用してシームレスなエクスペリ
 
 ## Liberty {#liberty}
 
-Liberty テーマは、最小限のアプローチを使用して、重要な部分を強調します。 例えば、訪問済みのタブのフォントの色が緑に変わります。 テキストボックスの下のアウトラインだけが表示されます。これは、線が引かれている紙ベースのフォームの外観をエミュレートしています。 アクティブなテキストボックスの下のアウトラインは黒で、その他のテキストボックスの下のアウトラインは薄い灰色です。
+Liberty テーマは、ミニマリストなアプローチを採用して、重要な部分を強調します。 例えば、訪問済みのタブのフォントの色が緑に変わります。 テキストボックスの下のアウトラインだけが表示されます。これは、線が引かれている紙ベースのフォームの外観をエミュレートしています。 アクティブなテキストボックスの下のアウトラインは黒で、その他のテキストボックスの下のアウトラインは薄い灰色です。
 
 ![Liberty テーマ](assets/liberty.png)
 
@@ -86,7 +104,7 @@ Liberty テーマは、最小限のアプローチを使用して、重要な部
 
 ## Tranquil {#tranquil}
 
-Tranquil テーマは、Tranquil カラースキームの明るいシェーディングと暗いシェーディングを提供して、フォームの様々なコンポーネントを強調します。 例えば、ラジオボタン、パネル、タブが、様々なシェーディングの緑色になります。
+Tranquil テーマは、Tranquil カラースキームの明るい色調と暗い色調を提供して、フォームの様々なコンポーネントを強調します。 例えば、ラジオボタン、パネル、タブが、様々なシェーディングの緑色になります。
 
 ![Tranquil テーマ](assets/tranquil.png)
 
@@ -106,7 +124,7 @@ Ultramarine テーマは、濃い青色のシェーディングを使用して�
 
 ## Urbane {#urbane}
 
-Urbane テーマは、フォームの最小限の機能的外観を強調します。 Urbane テーマをフォームに適用すると、コンポーネントはフラットになります。 パネルには細いアウトラインが付けられ、モダンな外観を作成します。
+Urbane テーマは、フォームのミニマルで機能的な外観を強調します。 Urbane テーマをフォームに適用すると、コンポーネントはフラットになります。 パネルには細いアウトラインが付き、モダンな外観になります。
 
 ![Urbane テーマ](assets/urbane.png)
 

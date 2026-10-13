@@ -11,13 +11,20 @@ role: Admin
 exl-id: 4aa857f7-d111-4548-8f03-f6d6c27acf51
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2911'
+source-wordcount: '2919'
 ht-degree: 3%
-
 ---
-
 # コミュニティのスコアとバッジ {#communities-scoring-and-badges}
 
 ## 概要 {#overview}
@@ -164,8 +171,8 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * page2 コンポーネントのアクションは、rule1とrule2の両方を呼び出します。
 * 両方のルールに同じ`topic/verb`に適用できるサブルールが含まれている場合：
 
-   * ルール 2のサブルールのみがスコアに影響します。
-   * 両方のサブルールのスコアは追加されません。
+  * ルール 2のサブルールのみがスコアに影響します。
+  * 両方のサブルールのスコアは追加されません。
 
 複数のスコアリングルールがある場合、スコアは各ルールごとに個別に維持されます。
 
@@ -181,7 +188,8 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 >
 >*not*&#x200B;の例：
 >
->/libs/settings/community/scoring/rules/site1/forums-scoring>/libs/settings/community/scoring/rules/site2/forums-scoring
+>/libs/settings/community/scoring/rules/site1/forums-scoring
+>/libs/settings/community/scoring/rules/site2/forums-scoring
 
 ### スコアリングサブルール {#scoring-sub-rules}
 
@@ -296,7 +304,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * `sub-rules`は、様々なスコアリングルール間で共有できます。
 * `rules`は、全員に対する読み取り権限を持つリポジトリの場所にある必要があります。
 
-   * ルール名は、場所に関係なく一意である必要があります。
+  * ルール名は、場所に関係なく一意である必要があります。
 
 ### カスタムスコアリングルールの有効化 {#activating-custom-scoring-rules}
 
@@ -315,15 +323,15 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-   * 1 ポイントを獲得するとブロンズバッジが授与されます。
+  * 1 ポイントを獲得するとブロンズバッジが授与されます。
 
 * `60|/libs/settings/community/badging/images/silver-badge/jcr:content/silver.png`
 
-   * 60 ポイントが貯まると銀色のバッジが授与されます。
+  * 60 ポイントが貯まると銀色のバッジが授与されます。
 
 * `80|/libs/settings/community/badging/images/gold-badge/jcr:content/gold.png`
 
-   * ゴールドバッジは80 ポイントが貯まると授与されます。
+  * ゴールドバッジは80 ポイントが貯まると授与されます。
 
 バッジルールは、ポイントの累積方法を決定するスコアリングルールと組み合わされます。 「[&#x200B; コンテンツにルールを適用](#apply-rules-to-content)」の節を参照してください。
 
@@ -378,7 +386,7 @@ AEM Communitiesのスコアリングとバッジ機能では、コミュニテ�
 * `rules` ノードはcq:Page型です。
 * `rules`は、全員に対する読み取り権限を持つリポジトリの場所にある必要があります。
 
-   * ルール名は、場所に関係なく一意である必要があります。
+  * ルール名は、場所に関係なく一意である必要があります。
 
 ### カスタムバッジルールの有効化 {#activating-custom-badging-rules}
 
@@ -581,29 +589,29 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * 作成者のCRXDE Liteへのアクセス。
 * 基本ページを参照します。
 
-   * /content/sites/engage/en/jcr:content
+  * /content/sites/engage/en/jcr:content
 
 * badgingRules プロパティを追加します。
 
-   * **名前**：`badgingRules`
-   * **型**：`String`
-   * **Multi**&#x200B;を選択
-   * **追加**&#x200B;を選択
-   * `/libs/settings/community/badging/rules/forums-badging` と入力します。
-   * **+**&#x200B;を選択
-   * `/libs/settings/community/badging/rules/comments-badging` と入力します。
-   * 「**OK**」を選択します。
+  * **名前**：`badgingRules`
+  * **型**：`String`
+  * **Multi**&#x200B;を選択
+  * **追加**&#x200B;を選択
+  * `/libs/settings/community/badging/rules/forums-badging` と入力します。
+  * **+**&#x200B;を選択
+  * `/libs/settings/community/badging/rules/comments-badging` と入力します。
+  * 「**OK**」を選択します。
 
 * scoringRules プロパティを追加します。
 
-   * **名前**：`scoringRules`
-   * **型**：`String`
-   * **Multi**&#x200B;を選択
-   * **追加**&#x200B;を選択
-   * `/libs/settings/community/scoring/rules/forums-scoring` と入力します。
-   * **+**&#x200B;を選択
-   * `/libs/settings/community/scoring/rules/comments-scoring` と入力します。
-   * 「**OK**」を選択します。
+  * **名前**：`scoringRules`
+  * **型**：`String`
+  * **Multi**&#x200B;を選択
+  * **追加**&#x200B;を選択
+  * `/libs/settings/community/scoring/rules/forums-scoring` と入力します。
+  * **+**&#x200B;を選択
+  * `/libs/settings/community/scoring/rules/comments-scoring` と入力します。
+  * 「**OK**」を選択します。
 
 * 「**すべて保存**」を選択します。
 
@@ -614,13 +622,13 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * CRXDE Liteを使用しています。
 * フォーラムコンポーネントを参照する
 
-   * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
+  * `/content/sites/engage/en/forum/jcr:content/content/primary/forum`
 
 * 必要に応じてallowBadges ブール型プロパティを追加し、trueであることを確認します。
 
-   * **名前**：`allowBadges`
-   * **型**：`Boolean`
-   * **値**：`true`
+  * **名前**：`allowBadges`
+  * **型**：`Boolean`
+  * **値**：`true`
 
 ![test-forum-component](assets/test-forum-component.png)
 
@@ -633,7 +641,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 * 新しいフォーラムのトピックを投稿します。
 * バッジを表示するには、ページを更新する必要があります。
 
-   * ログアウトし、別のコミュニティメンバーとしてログインします（例：aaron.mcdonald@mailinator.com/password）。
+  * ログアウトし、別のコミュニティメンバーとしてログインします（例：aaron.mcdonald@mailinator.com/password）。
 
 * フォーラムを選択します。
 

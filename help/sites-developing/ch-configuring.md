@@ -9,13 +9,24 @@ exl-id: 61208bd5-475b-40be-ba00-31bbbc952adf
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 7ed4f3a4bd5b6a607f2bb29faade9ad248e0acb9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 99%
-
 ---
-
 # ContextHub の設定 {#configuring-contexthub}
 
 ContextHub は、コンテキストデータを保存、操作および表示するためのフレームワークです。 ContextHub について詳しくは、[開発者のドキュメント](/help/sites-developing/contexthub.md)を参照してください。 ContextHub は、タッチ UI の [ClientContext](/help/sites-administering/client-context.md) に代わる機能です。
@@ -282,7 +293,8 @@ ContextHub 構成は、次のノードの下の `contexthub` という名前の�
 
 アップグレード後、バックアップは、次の名前のノードの下にある `contexthub` という名前のフォルダーに保存されます。
 
-`/conf/global/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` か `/conf/<tenant>/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` のどちらかにする必要があります。
+`/conf/global/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx` または
+`/conf/<tenant>/settings/cloudsettings/default-pre-upgrade_yyyymmdd_xxxxxxx`
 
 ノード名の `yyyymmdd` の部分は、アップグレードが実行された日付になります。
 

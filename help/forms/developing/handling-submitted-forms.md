@@ -10,13 +10,29 @@ role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2915'
+source-wordcount: '2927'
 ht-degree: 99%
-
 ---
-
 # 送信済みフォームの処理 {#handling-submitted-forms}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -142,7 +158,7 @@ Forms Service Client API 操作をプログラムで実行する前に、Forms �
 * `RenderOptionsSpec` オブジェクトの `PDFToXDP` 値を `true` に設定します
 * `RenderOptionsSpec` オブジェクトの `ExportDataFormat` 値を `XMLData` に設定します
 
-`processFormSubmission` メソッドを呼び出すときに、送信されたフォームのコンテンツタイプを指定します。 次のリストで、適用可能なコンテンツタイプの値を指定します。
+`processFormSubmission` メソッドを呼び出すときに、送信されたフォームのコンテンツタイプを指定します。 次のリストは、適用可能なコンテンツタイプの値を示しています。
 
 * **text/xml**：PDF フォームがフォームデータを XML として送信するときに使用するコンテンツタイプを表します。
 * **application/x-www-form-urlencoded**：HTML フォームがデータを XML として送信するときに使用するコンテンツタイプを表します。
@@ -150,7 +166,7 @@ Forms Service Client API 操作をプログラムで実行する前に、Forms �
 
 >[!NOTE]
 >
->送信済みフォームの処理のセクションに対応する 3 つのクイックスタートが関連付けられていることがわかるでしょう。 Java API クイックスタートを使用して PDF として送信された PDF フォームの処理には、送信済み PDF データの処理方法を示しています。 このクイックスタートで指定されているコンテンツタイプは `application/pdf` です。 Java API クイックスタートを使用して XML として送信された PDF フォームの処理は、PDF フォームから送信された送信済み XML データを処理する方法を示しています。 このクイックスタートで指定されているコンテンツタイプは `text/xml` です。 同様に、Java API クイックスタートを使用して、XML 形式で送信されたHTML フォームの処理で、HTML フォームから送信された送信済み XML データを処理する方法を示します。 このクイックスタートで指定するコンテンツタイプは、 application/x-www-form-urlencoded です。
+>送信済みフォームの処理のセクションに対応する 3 つのクイックスタートが関連付けられていることがわかるでしょう。 Java API を使用して PDF として送信された PDF フォームを処理するクイックスタートでは、送信済み PDF データの処理方法を示しています。 このクイックスタートで指定されているコンテンツタイプは `application/pdf` です。 Java API クイックスタートを使用して XML として送信された PDF フォームの処理は、PDF フォームから送信された送信済み XML データを処理する方法を示しています。 このクイックスタートで指定されているコンテンツタイプは `text/xml` です。 同様に、Java API クイックスタートを使用して、XML 形式で送信されたHTML フォームの処理で、HTML フォームから送信された送信済み XML データを処理する方法を示します。 このクイックスタートで指定するコンテンツタイプは、 application/x-www-form-urlencoded です。
 
 Forms サービスに投稿されたフォームデータを取得し、その処理状態を判断します。 つまり、データが Forms サービスに送信された場合、必ずしも Forms サービスによるデータの処理が完了し、データの処理準備が整ったとは限りません。 例えば、計算を実行できるよう、Forms サービスにデータを送信できます。 計算が完了すると、フォームはレンダリングされてユーザーに返され、計算結果が表示されます。 送信されたデータを処理する前に、Forms サービスがデータの処理を完了したかどうかを確認することをお勧めします。
 
@@ -192,7 +208,7 @@ Forms サービスに送信された Forms には、添付ファイルが含ま�
 
 [Forms をレンダリングする web アプリケーションの作成](/help/forms/developing/creating-web-applications-renders-forms.md)
 
-## Java API を使用して送信フォームを処理する {#handle-submitted-forms-using-the-java-api}
+## Java API を使用した送信フォームの処理 {#handle-submitted-forms-using-the-java-api}
 
 Forms API（Java）を使用して、送信されたフォームを処理します。
 
@@ -216,10 +232,10 @@ Forms API（Java）を使用して、送信されたフォームを処理しま�
 
    * `FormsServiceClient` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
-      * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、パラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。 PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
-      * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. このパラメーター値はオプションです。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
+     * フォームデータを含む `com.adobe.idp.Document` オブジェクト。
+     * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、パラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。 PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
+     * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. このパラメーター値はオプションです。
+     * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
 
      `processFormSubmission` メソッドは、フォーム送信の結果を含む `FormsResult` オブジェクトを返します。
 
@@ -238,22 +254,22 @@ Forms API（Java）を使用して、送信されたフォームを処理しま�
 
    * データコンテンツタイプが `application/vnd.adobe.xdp+xml` または `text/xml` の場合、XML データ値を取得するアプリケーションロジックを作成します。
 
-      * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
-      * `java.io.InputStream` オブジェクトを作成するには、`java.io.DataInputStream` コントラクターを呼び出して、`com.adobe.idp.Document` オブジェクトを渡します。
-      * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
-      * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
-      * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
-      * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。 このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。 このメソッドの本文を示します。
+     * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
+     * `java.io.InputStream` オブジェクトを作成するには、`java.io.DataInputStream` コントラクターを呼び出して、`com.adobe.idp.Document` オブジェクトを渡します。
+     * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
+     * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
+     * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
+     * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。 このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。 このメソッドの本文を示します。
 
    * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信された PDF データを PDF ファイルとして保存します。
 
-      * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
-      * コンストラクターを使用して `java.io.File` オブジェクトを作成します。 ファイル名の拡張子には必ず PDF を指定してください。
-      * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDFファイルに入力します。
+     * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `com.adobe.idp.Document` オブジェクトを作成します。
+     * コンストラクターを使用して `java.io.File` オブジェクトを作成します。 ファイル名の拡張子には必ず PDF を指定してください。
+     * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDFファイルに入力します。
 
 **関連トピック**
 
-[クイックスタート（SOAP モード）：Java API を使用して、XML として送信された PDF Forms の処理](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[クイックスタート（SOAP モード）：Java API を使用して、XML として送信された PDF forms の処理](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
 [クイックスタート（SOAP モード）：Java API を使用して、XML として送信された HTML フォームの処理](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
@@ -287,17 +303,17 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
    * コンストラクターを使用して `RenderOptionsSpec` オブジェクトを作成します。 `RenderOptionsSpec` オブジェクトの `setLocale` メソッドを呼び出してロケール値を指定する文字列値を渡すことによって、ロケール値を設定します。
    * `FormsService` オブジェクトの `processFormSubmission` メソッドを呼び出して、次の値を渡します。
 
-      * フォームデータを含む `BLOB` オブジェクト。
-      * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、パラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。 PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
-      * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
-      * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
-      * このメソッドで入力される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
-      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `BLOBHolder` オブジェクト。
-      * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
-      * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
-      * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
+     * フォームデータを含む `BLOB` オブジェクト。
+     * 関連するすべての HTTP ヘッダーを含む環境変数を指定する文字列値。 処理するコンテンツタイプを指定します。 XML データを処理するには、パラメーター `CONTENT_TYPE=text/xml` に次の文字列値を指定します。 PDF データを処理するには、このパラメーターに文字列値 `CONTENT_TYPE=application/pdf` を指定します。
+     * `HTTP_USER_AGENT` ヘッダー値を指定する文字列値（例： `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`）。
+     * 実行時オプションを格納する `RenderOptionsSpec` オブジェクト。
+     * このメソッドで入力される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `javax.xml.rpc.holders.StringHolder` オブジェクト。
+     * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `BLOBHolder` オブジェクト。
+     * メソッドによって設定される空の `javax.xml.rpc.holders.ShortHolder` オブジェクト。
+     * メソッドによって設定される空の `MyArrayOf_xsd_anyTypeHolder` オブジェクト。 このパラメーターは、フォームと共に送信される添付ファイルを保存するために使用されます。
+     * 送信したフォームを使用して、このメソッドで入力される空の `FormsResultHolder` オブジェクト。
 
      `processFormSubmission` メソッドで、フォーム送信の結果を `FormsResultHolder` パラメーターに入力します。
 
@@ -311,21 +327,21 @@ Forms API（Web サービス）を使用して送信されたフォームを処�
 
    * データコンテンツタイプが `application/vnd.adobe.xdp+xml` または `text/xml` の場合、XML データ値を取得するアプリケーションロジックを作成します。
 
-      * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
-      * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。
-      * `java.io.ByteArrayInputStream` コンストラクターを呼び出してバイト配列を渡すことにより、`java.io.InputStream` オブジェクトを作成します。
-      * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
-      * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
-      * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
-      * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。 このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。 このメソッドの本文を示します。
+     * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
+     * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。
+     * `java.io.ByteArrayInputStream` コンストラクターを呼び出してバイト配列を渡すことにより、`java.io.InputStream` オブジェクトを作成します。
+     * 静的な `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newInstance` メソッドを呼び出して、`org.w3c.dom.DocumentBuilderFactory` オブジェクトを作成します。
+     * `org.w3c.dom.DocumentBuilderFactory` オブジェクトの `newDocumentBuilder` メソッドを呼び出すことによって `org.w3c.dom.DocumentBuilder` オブジェクトを作成します。
+     * `org.w3c.dom.DocumentBuilder` オブジェクトの `parse` メソッドを呼び出して `java.io.InputStream` オブジェクトを渡すことによって `org.w3c.dom.Document` オブジェクトを作成します。
+     * XML ドキュメント内の各ノードの値を取得します。 このタスクを実行する 1 つの方法は、`org.w3c.dom.Document` オブジェクトおよび値を取得するノードの名前の 2 つのパラメーターを受け入れるカスタムメソッドを作成することです。 このメソッドは、ノードの値を表す文字列値を返します。 このプロセスに続くコード例では、このカスタムメソッドは `getNodeText` と呼ばれています。 このメソッドの本文を示します。
 
    * データコンテンツタイプが `application/pdf` の場合、アプリケーションロジックを作成して、送信された PDF データを PDF ファイルとして保存します。
 
-      * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
-      * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。
-      * パブリックコンストラクターを使用して `java.io.File` オブジェクトを作成します。 ファイル名の拡張子には必ず PDF を指定してください。
-      * コンストラクターを使用して `java.io.FileOutputStream` オブジェクトを渡すことによって、`java.io.File` オブジェクトを作成します。
-      * `java.io.FileOutputStream` オブジェクトの `write` メソッドを呼び出してバイト配列を渡すことによって、PDF ファイルを生成します。
+     * `FormsResult` オブジェクトの `getOutputContent` メソッドを呼び出すことによって `BLOB` オブジェクトを作成します。
+     * `BLOB` オブジェクトの `getBinaryData` メソッドを呼び出してバイト配列を作成します。
+     * パブリックコンストラクターを使用して `java.io.File` オブジェクトを作成します。 ファイル名の拡張子には必ず PDF を指定してください。
+     * コンストラクターを使用して `java.io.FileOutputStream` オブジェクトを渡すことによって、`java.io.File` オブジェクトを作成します。
+     * `java.io.FileOutputStream` オブジェクトの `write` メソッドを呼び出してバイト配列を渡すことによって、PDF ファイルを生成します。
 
 **関連トピック**
 

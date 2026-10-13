@@ -8,13 +8,27 @@ feature: Interactive Communication
 exl-id: 0c0dc6a2-b889-4516-8e08-1e9d31be2cce
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: aa28c6c8-3ede-445b-a351-eeb0c9f9aec4
+    internal-label: Interactive Communication
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1403'
-ht-degree: 97%
-
+source-wordcount: '1508'
+ht-degree: 93%
 ---
-
 # インタラクティブなコミュニケーション内の条件{#conditions-in-interactive-communications}
 
 インタラクティブなコミュニケーションで使用する条件フラグメントの作成方法と編集方法について説明します。インタラクティブなコミュニケーションの作成では 4 種類のドキュメントフラグメントが使用されますが、条件フラグメントはそのうちの 1 つです。 他の 3 つは、テキストフラグメント、リストフラグメント、レイアウトフラグメントです。
@@ -75,10 +89,10 @@ ht-degree: 97%
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[A]変更を拒否します。**&#x200B;このアイコンを選択して、アセットと条件内のルールに加えた変更を拒否します。
-   **[B]変更を受け入れる。**&#x200B;このアイコンを選択して、アセットとルールで行った変更を条件で受け入れます。
-   **[C] アセットを複製します。**&#x200B;このアイコンを選択すると、条件に適用されたルールがある場合に、アセットのコピーを作成します。複製されたアセットのルールとアセットの編集に進むことができます。アセットの複製は、特定のコンテキストに基づいて代替アセットを表示する類似のルールを作成するのに便利です。
-   **[D] プレビューを表示します。**&#x200B;このアイコンを選択すると、「条件を作成」ページ内のアセットのプレビューが表示されます。
+   **[A]変更を拒否します。** このアイコンを選択すると、アセットと条件内のルールに加えた変更を却下できます。
+   **[B]変更を承諾します。** このアイコンを選択して、アセットで行った変更を受け入れ、条件でルールを適用します。
+   **[C]個のアセットが重複しています。** このアイコンを選択すると、適用されたルールがある場合は、そのルールと共にアセットのコピーが条件内に作成されます。 その後、複製されたアセットで、ルールとアセットを編集できます。 アセットの複製は、特定のコンテキストに基づいて代替アセットを表示する類似のルールを作成する場合に便利です。
+   **[D] プレビューを表示します。** このアイコンを選択すると、コンディションを作成/編集ページ内のアセットのプレビューが表示されます。
    **&#39;server&#39; Reorder.** このアイコンを選択したままにすると、条件内でアセットをドラッグ&amp;ドロップして並べ替えることができます。
 
    条件の実行時の動作を指定するには、次のオプションを選択します。

@@ -1,19 +1,28 @@
 ---
 title: ビデオアセットの管理
-description: ' [!DNL Adobe Experience Manager] でビデオアセットをアップロード、プレビュー、注釈、公開します。'
+description: '[!DNL Adobe Experience Manager]でビデオアセットをアップロード、プレビュー、注釈を付けて公開します。'
 contentOwner: AG
 role: User
 feature: Asset Management
 exl-id: 21d3e0bd-5955-470a-8ca2-4d995c17eb4c
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '5414'
-ht-degree: 93%
-
+source-wordcount: '5614'
+ht-degree: 95%
 ---
-
 # ビデオアセットの管理 {#manage-video-assets}
 
 | バージョン | 記事リンク |
@@ -129,7 +138,7 @@ Google Cloud を設定するには：
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
-1. 新しいプロジェクトダイアログボックスで、「プロジェクト名」フィールドに新しいプロジェクトの名前を入力します。
+1. 新しいプロジェクトダイアログで、「プロジェクト名」フィールドに新しいプロジェクトの名前を入力します。
 
    プロジェクト ID は、プロジェクト名に基づいて付けられます。 そのため、プロジェクト名は慎重に選んでください。プロジェクト名を後で変更することはできません。 また、このプロジェクト ID は、後で Experience Manager で YouTube をセットアップする際にも入力する必要があるため、記録しておくことをお勧めします。
 
@@ -242,7 +251,7 @@ YouTube への公開のレプリケーションエージェントを有効化し
 1. 「**[!UICONTROL 有効]**」チェックボックスをオンにして、レプリケーションエージェントを有効にします。
 1. 「**[!UICONTROL OK]**」をクリックします。
 
-   次に、Experience Manager で YouTube チャンネルをセットアップします。
+   次に、Experience Manager で YouTube をセットアップします。
 
 ### Experience Manager での YouTube のセットアップ {#setting-up-youtube-in-aem}
 
@@ -260,8 +269,8 @@ Experience Manager 6.4 以降では、Experience Manager で YouTube への公�
 1. グローバルページの右上隅にある「**[!UICONTROL 作成]**」を選択します。
 1. YouTube 設定を作成ページの「Google Cloud Platform 設定」で、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
-   プロジェクト IDは、Google Cloudの初期設定で指定した場合に指定します。
-YouTube設定を作成ページを開いたままにしておきます。しばらくすると、そのページに戻ります。
+   このプロジェクト ID は、先ほど Google Cloud 設定を行ったときに指定したものです。
+   「YouTube 設定を作成」ページを開いたままにしておきます。このページには後で戻ります。
 
    ![6_5_youtubepublish-createyoutubeconfiguration](assets/6_5_youtubepublish-createyoutubeconfiguration.png)
 
@@ -308,8 +317,8 @@ YouTube設定を作成ページを開いたままにしておきます。しば�
 1. 「**[!UICONTROL 作成]**」を選択します。
 1. YouTube アカウント設定ダイアログボックスで、「**[!UICONTROL アプリケーション名]**」フィールドに Google プロジェクト ID を入力します。
 
-   プロジェクト IDは、以前に[Google Cloud設定](/help/assets/video.md#configuring-google-cloud-settings)を最初に設定したときに指定しました。
-YouTube アカウント設定ダイアログボックスを開いたままにしておきます。すぐに戻ります。
+   このプロジェクト ID は、先ほど [Google Cloud 設定を行った](/help/assets/video.md#configuring-google-cloud-settings)ときに指定したものです。
+   YouTube アカウント設定ダイアログを開いたままにしておきます。このダイアログには後で戻ります。
 
 1. 任意のテキストエディターを使用して、「Google Cloud 設定」のタスクでダウンロードして保存しておいた JSON ファイルを開きます。
 1. この JSON テキスト全体を選択してコピーします。
@@ -360,19 +369,19 @@ YouTube アカウント設定ダイアログボックスを開いたままにし
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。
-コピーした値を開いているテキストエディターにペーストします。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
+     コピーした値を、開いているテキストエディターに貼り付けます。 この値は、後でメタデータ処理プロファイルを作成する際に必要になります。 テキストエディターは開いたままにしておきます。
 
-   * **[!UICONTROL Choices]**&#x200B;で、使用するデフォルト値（People &amp; BlogsやScience &amp; Technologyなど）を選択してコピーします。
-コピーした値を開いているテキストエディターにペーストします。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
+   * 「**[!UICONTROL 選択肢]**」の下で、使用するデフォルト値（「人とブログ」または「科学と技術」など）を選択してコピーします。
+     コピーした値を、開いているテキストエディターに貼り付けます。 この値は、後でメタデータ処理プロファイルを作成する際に必要になります。 テキストエディターは開いたままにしておきます。
 
 1. 「YouTube への公開」の下で、「**[!UICONTROL YouTube のプライバシー]**」を選択します。
 1. ページの右側の「**[!UICONTROL 設定]**」タブで次の手順を実行します。
 
    * 「**[!UICONTROL プロパティにマッピング]**」テキストフィールドで、値を選択してコピーします。
-コピーした値を開いているテキストエディターにペーストします。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
+     コピーした値を、開いているテキストエディターに貼り付けます。 この値は、後でメタデータ処理プロファイルを作成する際に必要になります。 テキストエディターは開いたままにしておきます。
 
-   * **[!UICONTROL Choices]**&#x200B;で、使用するデフォルト値を選択してコピーします。選択肢が2つのペアでグループ化されていることに注意してください。ペアの下のフィールドは、コピーするデフォルト値（パブリック、リストなし、プライベートなど）です。
-コピーした値を開いているテキストエディターにペーストします。この値は、後でメタデータ処理プロファイルを作成する際に必要になります。テキストエディターを開いたままにします。
+   * **[!UICONTROL 選択肢]**&#x200B;で、使用するデフォルト値を選択してコピーします。 選択肢は 2 つが 1 組になっています。 1 組の下のフィールドは、コピーするデフォルト値（公開、非公開またはプライベート）です。
+     コピーした値を、開いているテキストエディターに貼り付けます。 この値は、後でメタデータ処理プロファイルを作成する際に必要になります。 テキストエディターは開いたままにしておきます。
 
 1. メタデータスキーマエディターページの右上隅にある「**[!UICONTROL キャンセル]**」をクリックします。
 1. Experience Manager の左上隅にある Experience Manager ロゴを選択し、左のレールで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL メタデータプロファイル]**&#x200B;を選択します。
@@ -423,7 +432,7 @@ YouTube アカウント設定ダイアログボックスを開いたままにし
 >
 >詳しくは、[ビデオエンコーディングと YouTube への公開の進行状況の監視](#monitoring-video-encoding-and-youtube-publishing-progress)を参照してください。
 >
->詳細な進行状況については、レプリケーション下の YouTube ログを監視できます。 ただし、この監視には管理者アクセスが必要です。
+>詳細な進行状況については、レプリケーション下の YouTube ログを監視できます。 ただし、このモニタリングには管理者アクセスが必要です。
 
 **YouTube チャンネルにビデオを公開するには：**
 
@@ -500,7 +509,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
 ### 進行状況の監視 {#monitoring-progress}
 
-1. アセットフォルダーでビデオエンコーディングの進行状況を表示します。
+1. アセットフォルダーでビデオエンコーディングの進行状況を表示します：
 
    * カードビューでは、ビデオエンコーディングの進行状況がパーセント単位でアセットに表示されます。 エラーがある場合、エラー情報はアセットにも表示されます。
 
@@ -522,7 +531,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    >[!NOTE]
    >
-   >[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)から&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**、**[!UICONTROL タイムアウト]**&#x200B;に対する複数のワークフロー設定が原因で、エラー/エラーメッセージが最終的に記録されるまでに長い時間がかかる場合があります。例えば、次のようになります。
+   >例えば、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)からの&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**、**[!UICONTROL タイムアウト]**&#x200B;の複数のワークフロー設定により、エラー/エラーメッセージが最終的に記録されるまでに長い時間がかかる場合があります。
    >
    >* Apache Sling ジョブキューの設定
    >* Adobe Granite ワークフロー外部プロセスジョブハンドラー
@@ -554,7 +563,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    >[!NOTE]
    >
-   >例えば、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)から&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**、**[!UICONTROL タイムアウト]**&#x200B;に対する複数のワークフロー設定が原因で、エラーメッセージが最終的に記録されるまでに長い時間がかかる場合があります。
+   >例えば、[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)からの&#x200B;**[!UICONTROL 再試行]**、**[!UICONTROL 再試行遅延]**、**[!UICONTROL タイムアウト]**&#x200B;に対する複数のワークフロー設定が原因で、エラーメッセージが最終的に記録されるまでに長い時間がかかる場合があります。
    >
    >* Apache Sling ジョブキューの設定
    >* Adobe Granite ワークフロー外部プロセスジョブハンドラー
@@ -609,7 +618,7 @@ Experience Manager のビデオアセットを非公開にすると、そのビ�
 
    >[!NOTE]
    >
-   >これらのメールは YouTube に固有で、かつ一般的なワークフローメール通知です。 結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つのメール通知セットを受け取ることができます。
+   >これらのメールは YouTube に固有のもので、一般的なワークフローメール通知に加えて送信されます。 結果として、設定に応じて、**[!UICONTROL Day CQ Workflow Email Notification Service]** で使用できる一般的な通知と、YouTube に固有の通知の 2 つのメール通知セットを受け取ることができます。
 
 1. 作業が終了したら、ダイアログボックスの右上隅にある&#x200B;**[!UICONTROL 完了]**&#x200B;アイコン（チェックマーク）を選択します。
 1. YouTube に公開ワークフローページで、右上隅にある「**[!UICONTROL 同期]**」を選択します。

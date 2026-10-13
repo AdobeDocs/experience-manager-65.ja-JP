@@ -1,6 +1,6 @@
 ---
 title: AEM Mobile On-demand Servicesのベストプラクティス
-description: モバイルアプリのテンプレートやコンポーネントを作成するサイトの有能なAdobe Experience Manager（AEM）開発者に役立つ、ベストプラクティスとガイドラインについて説明します。
+description: モバイルアプリテンプレートとコンポーネントを構築するサイトを対象とした、Adobe Experience Manager（AEM）の有能な開発者を支援するベストプラクティスとガイドラインについて説明します。
 contentOwner: User
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE
@@ -9,81 +9,85 @@ exl-id: 63ceaba6-b796-4c13-a86d-f0609ec679c9
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '604'
 ht-degree: 0%
-
 ---
-
 # ベストプラクティス {#best-practices}
 
 {{ue-over-mobile}}
 
-AEM Mobile On-demand Services アプリの構築は、Cordova （または PhoneGap）シェルで直接実行されるアプリの構築とは異なります。 開発者は、次の点に精通している必要があります。
+AEM Mobile On-demand Services アプリの構築は、Cordova （またはPhoneGap）シェルで直接実行されるアプリの構築とは異なります。 開発者は、次のことについて把握している必要があります。
 
-* 標準でサポートされているプラグインと、Adobe Experience Manager（AEM）モバイル専用のプラグイン。
+* すぐに使えるプラグインと、Adobe Experience Manager（AEM）モバイル固有のプラグインを提供しています。
 
 >[!NOTE]
 >
 >プラグインについて詳しくは、次のリソースを参照してください。
 >
->* [AEM Mobileでの Cordova プラグインの使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/cordova-api.html)
->* [AEM Mobile固有の Cordova 対応プラグインの使用 &#x200B;](https://helpx.adobe.com/jp/digital-publishing-solution/help/app-runtime-api.html)
+>* [AEM MobileでのCordova プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
+>* [AEM Mobile固有のCordova対応プラグインの使用](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
 >
 
-* プラグイン機能を使用するテンプレートは、プラグインブリッジが存在することなく、ブラウザーで引き続きオーサリングできるように記述する必要があります。
+* プラグイン機能を使用するテンプレートは、プラグインブリッジが存在しない場合でもブラウザーでオーサリング可能な方法で記述する必要があります。
 
-   * 例えば、プラグインの API にアクセスする前に、必ず *deviceready* 関数を待ってください。
+  * 例えば、プラグインのAPIにアクセスする前に、*deviceready*&#x200B;関数を待つようにしてください。
 
 ## AEM開発者向けガイドライン {#guidelines-for-aem-developers}
 
-次のガイドラインは、モバイルアプリのテンプレートとコンポーネントを作成するサイトの有能なAEM開発者に役立ちます。
+次のガイドラインは、モバイルアプリテンプレートとコンポーネントを構築するサイトを対象とした、AEMの適切な開発者に役立ちます。
 
-**再利用と拡張性を促進するためのAEM Sites テンプレートの構造化**
+**再利用と拡張性を促進するためにAEM Sites テンプレートを構成する**
 
-* 単一のモノリシックなスクリプトファイルよりも複数のコンポーネントスクリプトファイルを優先します
+* 単一のモノリシック形式よりも複数のコンポーネントスクリプトファイルを優先する
 
-   * *customheaderlibs.html* や *customfooterlibs.html* など、いくつかの空の拡張ポイントが提供されており、開発者はできるだけ少ないコアコードを複製しながらページテンプレートを変更できます
-   * テンプレートは、Sling の *sling:resourceSuperType* メカニズムを使用して拡張およびカスタマイズできます
+  * *customheaderlibs.html*&#x200B;や&#x200B;*customfooterlibs.html*&#x200B;など、空の拡張ポイントがいくつか用意されています。これにより、開発者はコアコードをできるだけ複製せずにページテンプレートを変更できます
+  * テンプレートは、Slingの&#x200B;*sling:resourceSuperType* メカニズムを使用して拡張およびカスタマイズできます
 
-* テンプレート言語として JSP よりも Sightly/HTL を優先します
+* テンプレート言語として、JSPよりもSightly/HTLを優先する
 
-   * これを使用すると、コードをマークアップから分離し、組み込みの XSS 保護を提供し、より使い慣れた構文を使用できます
+  * これを使用すると、マークアップからのコードの分離が促進され、組み込みのXSS保護が提供され、より使い慣れた構文を使用できます
 
-**オンデバイスでのパフォーマンス用に最適化**
+**オンデバイスパフォーマンスの最適化**
 
-* dps-article contentsync テンプレートを使用して、記事固有のスクリプトとスタイルシートを記事のペイロードに含める必要があります
-* 複数の記事で共有されるスクリプトシートとスタイルシートは、dps-HTMLResources contentsync テンプレートを使用して共有リソースに含める必要があります
-* レンダリングをブロックする外部スクリプトを参照しないでください
-
->[!NOTE]
->
->レンダリングをブロックする外部スクリプトについて詳しくは、[&#x200B; こちら &#x200B;](https://developers.google.com/speed/docs/insights/BlockingJS) を参照してください。
-
-**web 固有のものよりアプリ固有のクライアントサイド JS および CSS ライブラリを優先します**
-
-* jQuery Mobile のようなライブラリでオーバーヘッドを回避して、幅広いデバイスとブラウザーを処理できるようにします
-* アプリの web ビューでテンプレートが実行されている場合、アプリがサポートするプラットフォームとバージョンを制御でき、JavaScriptがサポートする知識を利用できます。 例えば、jQuery Mobile より Ionic （CSS のみ）を優先し、Bootstrapより Onsen UI を優先します。
+* アーティクル固有のスクリプトとスタイルシートは、dps-article contentsync テンプレートを使用して、アーティクルペイロードに含める必要があります
+* 複数の記事で共有されているスクリプトとスタイルシートは、dps-HTMLResources contentsync テンプレートを使用して、共有リソースに含める必要があります
+* レンダリングブロッキングされている外部スクリプトは参照しないでください
 
 >[!NOTE]
 >
->jQuery モバイルについて詳しくは、[&#x200B; こちら &#x200B;](https://jquerymobile.com/browser-support/1.4/) をクリックしてください。
+>レンダーブロック外部スクリプト [について詳しくは、こちらを参照してください](https://developers.google.com/speed/docs/insights/BlockingJS)。
 
-**フルスタックよりマイクロライブラリを優先**
+**web固有のJSおよびCSS ライブラリよりも、アプリ固有のクライアントサイド JSおよびCSS ライブラリを優先**
 
-* コンテンツをデバイスに送信するのにかかる時間は、記事が依存するライブラリごとに短縮されます。 この速度低下は、新しい web ビューを使用してすべての記事をレンダリングする場合に悪化するため、各ライブラリを最初から再度初期化する必要があります
-* 記事がSPA（シングルページアプリ）としてビルドされていない場合は、Angularのようなフルスタックライブラリを含める必要はありません
-* [Fastclick](https://github.com/ftlabs/fastclick) や [Velocity.js など、ページで必要なインタラクティビティを追加するのに役立つ、より小さい単目的ライブラリをお勧め &#x200B;](https://velocityjs.org) ます。
+* jQuery Mobileのようなライブラリで膨大なデバイスやブラウザーを処理するオーバーヘッドを避ける
+* テンプレートがアプリのweb ビューで実行されている場合、アプリがサポートするプラットフォームとバージョン、およびJavaScript サポートが存在するという情報を制御できます。 たとえば、jQuery MobileよりもIonic （CSSのみ）を、BootstrapよりもOnsen UIを好みます。
 
-**記事ペイロードのサイズを最小限に抑える**
+>[!NOTE]
+>
+>jQuery mobileについて詳しくは、[こちら](https://jquerymobile.com/browser-support/1.4/)をクリックしてください。
 
-* 妥当な解像度で、サポートする最大のビューポートを効果的にカバーできる最小限のアセットを使用します
-* 画像に *ImageOptim* などのツールを使用して、余分なメタデータを削除します
+**フルスタックよりもマイクロライブラリを優先**
 
-## 前に進む {#getting-ahead}
+* コンテンツをデバイスのガラスに取り込むのに要する時間は、記事が依存するすべてのライブラリによって遅くなります。 この遅さは、新しいweb ビューを使用してすべての記事をレンダリングする場合に悪化するため、各ライブラリをゼロから再初期化する必要があります
+* 記事がSPA （シングルページアプリ）として構築されていない場合は、Angularのようなフルスタックライブラリを含める必要はないでしょう
+* ページに必要なインタラクティブ機能（[Fastclick](https://github.com/ftlabs/fastclick)や[Velocity.js](https://velocityjs.org)など）の追加に役立つ、小さな単一目的のライブラリを好みます
 
-他の 2 つの役割と責務について詳しくは、以下のリソースを参照してください。
+**記事ペイロードのサイズを最小化**
+
+* サポートする最大のビューポートを効果的にカバーできる最小のアセットを、合理的な解像度で使用します
+* 画像に&#x200B;*ImageOptim*&#x200B;のようなツールを使用して、余分なメタデータを削除できるようにします
+
+## 一歩先を行く {#getting-ahead}
+
+その他の2つの役割と責任について詳しくは、以下のリソースを参照してください。
 
 * [管理者](/help/mobile/aem-mobile.md)
 * [作成者](/help/mobile/aem-mobile-on-demand.md)

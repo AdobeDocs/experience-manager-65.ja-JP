@@ -10,13 +10,26 @@ exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 100%
-
 ---
-
 # アカウント環境の設定{#configuring-your-account-environment}
 
 AEM では、アカウントおよびオーサー環境の特定項目を設定できます。
@@ -31,15 +44,15 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
 * 次のユーザーとして操作
 
-   * 「[次のユーザーとして実行](/help/sites-administering/security.md#impersonating-another-user)」機能を使用すると、ユーザーは別のユーザーに成り代わって作業を行うことができます。
+  * 「[次のユーザーとして実行](/help/sites-administering/security.md#impersonating-another-user)」機能を使用すると、ユーザーは別のユーザーに成り代わって作業を行うことができます。
 
 * プロファイル
 
-   * [ユーザー設定](/help/sites-administering/security.md)への便利なリンクを提供します。
+  * [ユーザー設定](/help/sites-administering/security.md)への便利なリンクを提供します。
 
 * [環境設定](/help/sites-authoring/user-properties.md#my-preferences)
 
-   * ユーザー独自の様々な環境設定を指定します。
+  * ユーザー独自の様々な環境設定を指定します。
 
 ![screen_shot_2018-03-20at103808](assets/screen_shot_2018-03-20at103808.png)
 
@@ -61,13 +74,13 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
   ウィンドウの動作や開くウィンドウを定義します。 次のいずれかを選択します。
 
-   * **複数ウィンドウ**（デフォルト）
+  * **複数ウィンドウ**（デフォルト）
 
-      * 新しいウィンドウでページが開きます。
+    * 新しいウィンドウでページが開きます。
 
-   * **単一ウィンドウ**
+  * **単一ウィンドウ**
 
-      * 現在のウィンドウでページが開きます。
+    * 現在のウィンドウでページが開きます。
 
 * **アセットのデスクトップアクションを表示**
 
@@ -77,8 +90,8 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
   注釈を作成する際のデフォルトのカラーを定義します。
 
-   * カラーブロックをクリックすると、スウォッチセレクターが開き、色を選択できます。
-   * または、フィールドに目的のカラーの 16 進コードを入力します。
+  * カラーブロックをクリックすると、スウォッチセレクターが開き、色を選択できます。
+  * または、フィールドに目的のカラーの 16 進コードを入力します。
 
 * **相対的な日付の表示**
 
@@ -86,23 +99,23 @@ AEM では、アカウントおよびオーサー環境の特定項目を設定�
 
   このオプションは、システムの日付の表示方法を定義します。 以下のオプションが利用できます。
 
-   * **常に正確な日付を表示**：常に正確な日付が表示されます（相対日付は表示されません）。
-   * **1 日**：1 日以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
+  * **常に正確な日付を表示**：常に正確な日付が表示されます（相対日付は表示されません）。
+  * **1 日**：1 日以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
 
-   * **7 日（デフォルト）**：7 日以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
+  * **7 日（デフォルト）**：7 日以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
 
-   * **1 ヶ月**：1 ヶ月以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
+  * **1 ヶ月**：1 ヶ月以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
 
-   * **1 年**：1 年以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
+  * **1 年**：1 年以内の日付に相対日付が表示され、それ以外は正確な日付が表示されます。
 
-   * **常に相対日付を表示**：正確な日付は表示されず、相対日付のみが表示されます。
+  * **常に相対日付を表示**：正確な日付は表示されず、相対日付のみが表示されます。
 
 * **ショートカットを有効にする**
 
   AEM には、オーサリングをより効率的にするキーボードショートカットがいくつかあります。
 
-   * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
-   * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
+  * [ページ編集時のキーボードショートカット](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
+  * [コンソールのキーボードショートカット](/help/sites-authoring/keyboard-shortcuts.md)
 
   このオプションは、キーボードショートカットを有効にします。 デフォルトでは有効になっていますが、例えばユーザーに特定のアクセシビリティ要件がある場合は、無効にできます。
 

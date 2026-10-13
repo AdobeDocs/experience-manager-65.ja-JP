@@ -10,13 +10,20 @@ role: Admin
 exl-id: ecd30f5d-ad31-4482-96d3-c92f1cf91336
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2417'
+source-wordcount: '2489'
 ht-degree: 9%
-
 ---
-
 # コミュニティのユーザーの同期 {#communities-user-synchronization}
 
 ## はじめに {#introduction}
@@ -102,7 +109,7 @@ Adobe Experience Manager （AEM） Communitiesでは、パブリッシュ環境�
 
 AEM Communitiesでユーザーの同期を有効にするには、次の設定が必要です。 Sling コンテンツ配信が失敗しないように、これらの設定が正しいことを確認します。
 
-### Apache Sling Distribution Agent - Sync Agents Factory {#apache-sling-distribution-agent-sync-agents-factory}
+### Apache Sling 配分エージェント - 同期エージェントファクトリ {#apache-sling-distribution-agent-sync-agents-factory}
 
 この設定は、パブリッシャー間で同期されるコンテンツを取得します。 設定はオーサーインスタンス上にあります。 著者は、そこにあるすべてのパブリッシャーと、すべての情報をどこで同期するかを追跡する必要があります。
 
@@ -115,7 +122,7 @@ AEM Communitiesでユーザーの同期を有効にするには、次の設定�
 Apache Sling Sync Agents設定を設定するには：
 
 1. AEM オーサーインスタンスの管理者権限でログインします。
-1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 1. **Apache Sling Distribution Agent - Sync Agents Factory**&#x200B;を探します。
 
    * 既存の設定を選択して編集用に開きます（鉛筆アイコン）。
@@ -130,7 +137,7 @@ Apache Sling Sync Agents設定を設定するには：
 
    ![sync-agent-fact](assets/sync-agent-fact.png)
 
-### Adobe Granite Distribution - Encrypted Password Transport Secret Provider {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
+### Adobe Granite 配分 - 暗号化パスワードトランスポート秘密鍵プロバイダー {#adobe-granite-distribution-encrypted-password-transport-secret-provider}
 
 オーサーは、オーサーからパブリッシュにユーザーデータを同期する権限を持つため、許可されたユーザーを識別できます。
 
@@ -143,7 +150,7 @@ Apache Sling Sync Agents設定を設定するには：
 1. AEM オーサーインスタンスの管理者権限でログインします。
 1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
 1. **Adobe Granite Distribution - Encrypted Password Transport Secret Providerを探します。**
 1. 既存の設定を選択して編集用に開きます（鉛筆アイコン）。
 
@@ -164,7 +171,7 @@ Apache Sling Sync Agents設定を設定するには：
 1. パブリッシュインスタンスの管理者権限でログインします。
 1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
 1. **Apache Sling Distribution Agent - Queue Agents Factory**&#x200B;を探します。
 1. 既存の設定を選択して編集用に開きます（鉛筆アイコン）。
@@ -187,7 +194,7 @@ Apache Sling Sync Agents設定を設定するには：
 1. パブリッシュインスタンスの管理者権限でログインします。
 1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。
 
-   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 
 1. **Adobe Granite Distribution - Diff Observer Factory**&#x200B;を探します。
 1. 既存の設定を選択して編集用に開きます（鉛筆アイコン）。
@@ -208,7 +215,7 @@ Apache Sling Sync Agents設定を設定するには：
 ポーリング間隔を変更するには：
 
 1. AEM オーサーインスタンスの管理者権限でログインします。
-1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします（例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)）
 1. **Apache Sling Distribution トリガー - スケジュールされたトリガーファクトリ**&#x200B;を探します
 
    * 既存の設定を選択して編集用に開きます（鉛筆アイコン）。
@@ -233,7 +240,7 @@ Apache Sling Sync Agents設定を設定するには：
 各AEM パブリッシュインスタンスで、次の操作を行います。
 
 1. 管理者権限でログインします。
-1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 1. **AEM Communities User Sync Listener**&#x200B;を探します。
 1. 既存の設定を選択して編集用に開きます（鉛筆アイコン）
 
@@ -307,7 +314,7 @@ AEM オーサーインスタンスは、Sling IDを使用して、データの�
 ### Vault Package Builder Factory {#vault-package-builder-factory}
 
 アップデートを正しく同期するには、ユーザー同期のためにVault パッケージビルダーを変更する必要があります。
-`/home/users`で、`*/rep:cache` ノードが作成されます。これは、ノードのプリンシパル名にクエリを実行すると、このキャッシュを直接使用できるかどうかを確認するために使用されるキャッシュです。
+`/home/users`で、`*/rep:cache` ノードが作成されます。 これは、ノードのプリンシパル名にクエリを実行すると、このキャッシュを直接使用できるかどうかを確認するために使用されるキャッシュです。
 
 `rep :cache` ノードがパブリッシャー間で同期されている場合、ユーザーの同期を停止できます。
 
@@ -315,7 +322,7 @@ AEM オーサーインスタンスは、Sling IDを使用して、データの�
 
 1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)へのアクセス
 
-   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)
+   例：[https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr)。
 1. **Apache Sling Distribution Packaging - Vault Package Builder Factory**&#x200B;を探します
 
    ビルダー名：socialpubsync-vlt.
@@ -380,7 +387,7 @@ Slingの配布に失敗した場合は、次のデバッグ手順を試してく
 1. ユーザーの同期を無効にします。
 1. AEM オーサーインスタンスで、管理者権限でログインします。
 
-   1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+   1. [Web コンソール &#x200B;](/help/sites-deploying/configuring-osgi.md)にアクセスします。 例：[https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)。
    1. 設定&#x200B;**Apache Sling Distribution Agent - Sync Agents Factory**&#x200B;を探します。
    1. 「**有効**」チェックボックスの選択を解除します。
 

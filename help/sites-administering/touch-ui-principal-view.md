@@ -10,13 +10,25 @@ exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 8adc566113beedc408698dccc3a4c072349af5dc
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '777'
 ht-degree: 87%
-
 ---
-
 
 # 権限管理のプリンシパルビュー{#principal-view-for-permissions-management}
 
@@ -32,7 +44,7 @@ AEM 6.5 では、ユーザーとグループに対する権限管理が導入さ
 
 ![権限管理 UI](assets/screen_shot_2019-03-17at63333pm.png)
 
-新しいビューでは、権限が明示的に付与されているすべてのパスで、特定のプリンシパルに対する特権と制限のセット全体を簡単に確認できます。 高度な特権と制限を管理するのに
+新しいビューでは、権限が明示的に付与されているすべてのパスで、特定のプリンシパルに対する特権と制限のセット全体を簡単に確認できます。 これにより、次に移動する必要がなくなります
 
 CRXDE に移動する必要がなくなります。 同じビューに統合されました。 デフォルトでは、グループ「everyone」が表示されます。
 

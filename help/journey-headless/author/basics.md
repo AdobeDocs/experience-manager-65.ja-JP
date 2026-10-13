@@ -5,13 +5,33 @@ exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer, User, Leader
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: bfd4bc52-c397-5127-8f86-8953ba9fc0a3
+    internal-label: Headless
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: e9db7c79-8f65-4281-a439-c9049296d903
+    internal-label: Content Fragments
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+    internal-label: Leader
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 95%
-
+source-wordcount: '1701'
+ht-degree: 97%
 ---
-
 # AEM を使用したヘッドレスのオーサリングの基本 {#author-headless-basics}
 
 ## これまでの説明内容 {#story-so-far}
@@ -24,8 +44,8 @@ ht-degree: 95%
 
 * **オーディエンス**：初心者
 * **目的**：ヘッドレス CMS オーサリングの基本を紹介します。
-   * AEMaaCS を使用したオーサリングの概要
-   * コンテンツフラグメントの概要
+  * AEMaaCS を使用したオーサリングの概要
+  * コンテンツフラグメントの概要
 
 ## 基本操作 {#basic-handling}
 
@@ -193,8 +213,8 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
 * **コンテンツフラグメントモデル**
 
-  コンテンツフラグメントモデルの名前は、エディターの上部（フラグメント名の直下）に表示されます。これは、モデルエディターに移動するリンクでもあります。
-コンテンツフラグメントモデルは、使用する構造を定義するので、実際にはコンテンツフラグメントに不可欠です。ただし、これらを作成および編集することは（通常）別のペルソナであるコンテンツアーキテクトの責任です。
+  エディター上部のフラグメント名のすぐ下に、コンテンツフラグメントモデルの名前が表示されます。 これは、モデルエディターに移動するリンクでもあります。
+  コンテンツフラグメントモデルは、使用する構造を定義するものなので、実際にはコンテンツフラグメントにとってきわめて重要です。 ただし、コンテンツフラグメントモデルの作成と編集を担当するのは、（通常は）別のペルソナであるコンテンツアーキテクトです。
 
   >[!NOTE]
   >
@@ -234,38 +254,38 @@ AEM インストールは、通常、少なくとも次の 2 つの環境で構�
 
 * [基本操作](/help/sites-authoring/basic-handling.md) - このページは主に **Sites** コンソールに基づいていますが、多くの／ほとんどの機能は **Assets** コンソールでの&#x200B;**コンテンツフラグメント**&#x200B;のオーサリングにも関連しています。
 
-   * [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#navigation-panel)
+  * [ナビゲーションパネル](/help/sites-authoring/basic-handling.md#navigation-panel)
 
-   * [ヘッダー](/help/sites-authoring/basic-handling.md#the-header)
+  * [ヘッダー](/help/sites-authoring/basic-handling.md#the-header)
 
-   * [アクションツールバー](/help/sites-authoring/basic-handling.md#actions-toolbar)
+  * [アクションツールバー](/help/sites-authoring/basic-handling.md#actions-toolbar)
 
-   * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
+  * [クイックアクション](/help/sites-authoring/basic-handling.md#quick-actions)
 
-   * [リソースの表示と選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
+  * [リソースの表示と選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)
 
-   * [パネルセレクター](/help/sites-authoring/basic-handling.md#rail-selector)
+  * [パネルセレクター](/help/sites-authoring/basic-handling.md#rail-selector)
 
 * [コンテンツフラグメントの使用方法](/help/assets/content-fragments/content-fragments.md)
 
-   * [コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)
+  * [コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)
 
-      * [アセットフォルダーへの設定の適用](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+    * [アセットフォルダーへの設定の適用](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
-      * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+    * [コンテンツフラグメントの作成](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
 
-   * [バリエーション - コンテンツフラグメントのオーサリング](/help/assets/content-fragments/content-fragments-variations.md)
+  * [バリエーション - コンテンツフラグメントのオーサリング](/help/assets/content-fragments/content-fragments-variations.md)
 
-   * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
+  * [コンテンツフラグメントモデル](/help/assets/content-fragments/content-fragments-models.md)
 
-      * [コンテンツフラグメントモデル - データタイプ](/help/assets/content-fragments/content-fragments-models.md#data-types)
+    * [コンテンツフラグメントモデル - データタイプ](/help/assets/content-fragments/content-fragments-models.md#data-types)
 
-      * [コンテンツフラグメントモデル - プロパティ](/help/assets/content-fragments/content-fragments-models.md#properties)
+    * [コンテンツフラグメントモデル - プロパティ](/help/assets/content-fragments/content-fragments-models.md#properties)
 
-      * [コンテンツフラグメントモデル - アセットフォルダーでのコンテンツフラグメントモデルの許可](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+    * [コンテンツフラグメントモデル - アセットフォルダーでのコンテンツフラグメントモデルの許可](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
 
 * はじめる前に
-   * [アセットフォルダーのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+  * [アセットフォルダーのヘッドレス作成のクイックスタートガイド](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM ヘッドレスコンテンツアーキテクトジャーニー](/help/journey-headless/architect/overview.md)
 

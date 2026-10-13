@@ -10,13 +10,22 @@ exl-id: 2b9b4857-821c-4f2f-9ed9-78a1c9f5ac67
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 91%
-
+source-wordcount: '816'
+ht-degree: 93%
 ---
-
 # Web サイトコンソールのカスタマイズ（クラシック UI）{#customizing-the-websites-console-classic-ui}
 
 ## Web サイト（siteadmin）コンソールにカスタム列を追加 {#adding-a-custom-column-to-the-websites-siteadmin-console}
@@ -139,7 +148,7 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
    * **pageText** を削除
 
    * **pathRegex**&#x200B;をに設定 `/content/geometrixx(/.*)?`
-これにより、すべてのGeometrixx web サイトでグリッド設定がアクティブになります。
+     これにより、すべてのGeometrixx web サイトでグリッド設定がアクティブになります。
 
    * **storeProxySuffix** を `.pages.json` に設定
 
@@ -147,9 +156,9 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
    * MSM 機能をアクティベートするには、次の MSM パラメーターを複数文字列プロパティ **storeReaderFields** に追加します。
 
-      * **msm:isSource**
-      * **msm:isInBlueprint**
-      * **msm:isLiveCopy**
+     * **msm:isSource**
+     * **msm:isInBlueprint**
+     * **msm:isLiveCopy**
 
 1. `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns`の下に`starred` ノード （タイプ **nt:unstructured**）を次のプロパティで追加します。
 
@@ -161,8 +170,8 @@ Web サイト管理コンソールを開いてサイトを閲覧すると、ブ�
 
 1. （オプション）表示したくない列を `/apps/wcm/core/content/siteadmin/grid/geometrixx/columns` でドロップします。
 
-1. `/siteadmin`は、デフォルトで`/libs/wcm/core/content/siteadmin`を指すバニティパスです。
-これを`/apps/wcm/core/content/siteadmin`のサイト管理者のバージョンにリダイレクトするには、プロパティ `sling:vanityOrder`を`/libs/wcm/core/content/siteadmin`で定義されている値よりも高い値に定義します。デフォルト値は300なので、それ以上の値が適しています。
+1. `/siteadmin` は、デフォルトとして `/libs/wcm/core/content/siteadmin` を指すバニティーパスです。
+このパスを `/apps/wcm/core/content/siteadmin` のサイト管理のバージョンにリダイレクトするには、プロパティ `sling:vanityOrder` が `/libs/wcm/core/content/siteadmin` で定義されているより大きい値を持つように定義します。 デフォルト値は 300 なので、それより大きい値が適しています。
 
 1. Web サイト管理コンソールに移動し、次の Geometrixx サイトに移動します。
    [https://localhost:4502/siteadmin#/content/geometrixx](https://localhost:4502/siteadmin#/content/geometrixx)。

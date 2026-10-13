@@ -9,23 +9,37 @@ role: User, Admin
 feature: CDN Cache
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: e17747bc-9b7b-44e6-a443-f54229a02620
+    internal-label: Integrations
+subfeature_v2:
+  - id: fc27aefe-8efd-48a6-89bf-c46e0e334a63
+    internal-label: CDN cache
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1372'
-ht-degree: 100%
-
+source-wordcount: '1376'
+ht-degree: 78%
 ---
-
 
 # Dynamic Media を使用した CDN キャッシュの無効化 {#invalidating-cdn-cache-for-dm-assets}
 
-Dynamic Media アセットは、顧客との配信を高速化するために、CDN（コンテンツ配信ネットワーク）によってキャッシュされます。ただし、これらのアセットを更新する場合に、その変更を Web サイトに即座に反映させたいことがあります。CDN キャッシュの削除または無効化を行うと、Dynamic Media によって配信されるアセットをすばやく更新できます。TTL（有効期限）の値（デフォルトは 10 時間）を使用してキャッシュの有効期限が切れるのを待つ代わりに、キャッシュを数分で有効期限切れにするリクエストを Dynamic Media から送信することができます。
+Dynamic Media アセットは、顧客との配信を高速化するために、CDN（コンテンツ配信ネットワーク）によってキャッシュされます。 ただし、これらのアセットを更新する場合に、その変更を Web サイトに即座に反映させたいことがあります。 CDN キャッシュの削除または無効化を行うと、Dynamic Media によって配信されるアセットをすばやく更新できます。 TTL（有効期限）の値（デフォルトは 10 時間）を使用してキャッシュの有効期限が切れるのを待つ代わりに、キャッシュを数分で有効期限切れにするリクエストを Dynamic Media から送信することができます。
 
 
 
 >[!IMPORTANT]
 >
->次の手順は、Dynamic Media - Scene7 モード（Adobe Experience Manager 6.5、サービスパック 6（Experience Manager 6.5.6）以降）にのみ適用されます。この CDN 無効化の機能を使用するには、Adobe Experience Manager - Dynamic Media にバンドルされている標準搭載の CDN を使用する必要があります。その他のカスタム CDN では、この機能はサポートしていません。<br>Experience Manager 6.5、サービスパック 5（Experience Manager 6.5.5）以前で Dynamic Media を使用している場合は、[Dynamic Media Classic を使用した CDN キャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)の手順に従ってください。
+>次の手順は、Dynamic Media - Scene7 モード（Adobe Experience Manager 6.5、サービスパック 6（Experience Manager 6.5.6）以降）にのみ適用されます。 この CDN 無効化の機能を使用するには、Adobe Experience Manager - Dynamic Media にバンドルされている標準搭載の CDN を使用する必要があります。 その他のカスタム CDN では、この機能はサポートしていません。<br>Experience Manager 6.5、サービスパック 5（Experience Manager 6.5.5）以前で Dynamic Media を使用している場合は、[Dynamic Media Classic を使用した CDN キャッシュの無効化](/help/assets/invalidate-cdn-cache-dm-classic.md)の手順に従ってください。
 
 <!-- REMOVED MARCH 28, 2022 BECAUSE OF 404; NO REDIRECT WAS PUT IN PLACE BY SUPPORT See also [Caching overview in Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html). -->
 
@@ -41,8 +55,8 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
 
    | シナリオ | オプション |
    | --- | --- |
-   | Dynamic Media Classic を使用して、以前に CDN 無効化テンプレートを作成したことがある。 | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、テンプレートデータが事前に入力されています。この場合は、テンプレートを編集するか、次の手順に進みます。 |
-   | テンプレートを作成する必要がある。何を入力すればよいか？ | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、次の例のように、特定の画像 ID ではなく `<ID>` を参照する画像 URL（画像プリセットまたは修飾子を含む）を入力します。<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>テンプレートに `<ID>` だけが含まれる場合は、Dynamic Media が `https://<publishserver_name>/is/image/<company_name>/<ID>` を入力します。ここで、`<publishserver_name>` はDynamic Media Classic の一般設定で定義されているパブリッシュサーバーの名前です。`<company_name>` は、この Experience Manager インスタンスに関連付けられている会社ルートの名前で、`<ID>` は、アセットピッカーで選択した無効化するアセットです。<br>プリセット／修飾子の post `<ID>`は、そのまま URL 定義内にコピーされます。テンプレートに基づいて自動形成できるのは<br>画像（すなわち `/is/image`）のみです。<br>`/is/content/` の場合、アセットピッカーを使用してビデオや PDF などのアセットを追加しても、URL は自動生成されません。代わりに、CDN 無効化テンプレートでそのようなアセットを指定するか、*パート 2 / 2 CDN 無効化オプションの設定*&#x200B;で、URL を手動で追加する必要があります。<br>**例：**<br>&#x200B;最初の例では、無効化テンプレートに `<ID>` と、`/is/content` を持つアセット URL が含まれます。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>` のようになります。Dynamic Media は、このパスに基づいて URL を作成し、`<ID>` は、アセットピッカーを使用して選択された、無効にするアセットとなります。<br>2 つ目の例では、無効化テンプレートに、`/is/content` が用いられ、Web プロパティで使用されるアセットの完全な URL が含まれます（アセットピッカーに依存しません）。例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` の backpack はアセット ID です。<br>Dynamic Media でサポートされているアセット形式は、無効化の対象となります。CDN の無効化で&#x200B;*サポートされない*&#x200B;アセットファイルタイプには、PostScript®、Encapsulated PostScript®、Adobe Illustrator、Adobe InDesign、Microsoft PowerPoint、Microsoft Excel、Microsoft Word、リッチテキスト形式などがあります。<br><br>• テンプレートを作成する際は、構文と入力ミスに注意する必要があります。Dynamic Media では、テンプレートの検証は行われません。<br>• CDN 無効化テンプレートは、最大 2500 文字までのテキストを保存できます。<br>• 画像スマート切り抜きの URL は、この CDN 無効化テンプレート、またはパート 2：CDN 無効化オプションの設定の「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します&#x200B;*。*<br>• CDN 無効化テンプレートの各エントリは、それぞれ別の行にする必要があります。<br>• CDN 無効化テンプレートの次の例は説明用のものです。 |
+   | Dynamic Media Classic を使用して、以前に CDN 無効化テンプレートを作成したことがある。 | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、テンプレートデータが事前に入力されています。 この場合は、テンプレートを編集するか、次の手順に進みます。 |
+   | テンプレートを作成する必要がある。 何を入力すればよいか？ | 「**[!UICONTROL テンプレートを作成]**」テキストフィールドに、次の例のように、特定の画像 ID ではなく `<ID>` を参照する画像 URL（画像プリセットまたは修飾子を含む）を入力します。<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>テンプレートに `<ID>` だけが含まれる場合は、Dynamic Media が `https://<publishserver_name>/is/image/<company_name>/<ID>` を入力します。ここで、`<publishserver_name>` はDynamic Media Classic の一般設定で定義されているパブリッシュサーバーの名前です。 `<company_name>` は、この Experience Manager インスタンスに関連付けられている会社ルートの名前で、`<ID>` は、アセットピッカーで選択した無効化するアセットです。<br>プリセット／修飾子の post `<ID>`は、そのまま URL 定義内にコピーされます。テンプレートに基づいて自動形成できるのは<br>画像（すなわち `/is/image`）のみです。<br>`/is/content/` の場合、アセットピッカーを使用してビデオや PDF などのアセットを追加しても、URL は自動生成されません。 代わりに、CDN無効化テンプレートのいずれかでそのようなアセットを指定する必要があります。または、*パート 2/2: CDN無効化オプションの設定*.<br>**例：**<br>&#x200B;この最初の例では、無効化テンプレートに`<ID>`と`/is/content`のアセット URLが含まれています。 例えば、`http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>` のようになります。 Dynamic Media は、このパスに基づいて URL を作成し、`<ID>` は、アセットピッカーを使用して選択された、無効にするアセットとなります。<br>2 つ目の例では、無効化テンプレートに、`/is/content` が用いられ、Web プロパティで使用されるアセットの完全な URL が含まれます（アセットピッカーに依存しません）。 例えば、バックパックがアセット IDである`http://my.publishserver.com:8080/is/content/dms7snapshot/backpack`とします。<br>Dynamic Mediaでサポートされているアセット形式は、無効化の対象となります。 ® CDN無効化でサポートされている&#x200B;*not*&#x200B;のアセットファイルタイプには、PostScript®、Encapsulated PostScript®、Adobe Illustrator、Adobe InDesign、Microsoft、Powerpoint、Microsoft® Excel、Microsoft® Word、およびリッチテキスト形式があります。<br><br>・ テンプレートを作成する際は、構文とタイプミスに注意してください。<br>・ CDN無効化テンプレートは、最大2500文字のテキストを保存できます。<br>・ CDN無効化テンプレートまたは&#x200B;**[!UICONTROL URLで入力してください]** *パート 2: CDN無効化オプションの設定。*<br>・ CDN無効化テンプレートの各エントリは、それぞれ独自の行にする必要があります。<br>・次のCDN無効化テンプレートの例は、デモ目的でのみ使用できます。 |
 
    ![CDN 無効化テンプレート - 作成](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
@@ -50,8 +64,8 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
    >
    >CDN 無効化テンプレートは、最大 2500 文字までのテキストを保存できます。
 
-1. **[!UICONTROL CDN 無効化テンプレート]**&#x200B;ページの右上隅にある「**[!UICONTROL 保存]**」を選択し、「**[!UICONTROL OK]**」を選択します。<br>
-   *パート 2 / 2：CDN 無効化オプションの設定*
+1. **[!UICONTROL CDN無効化テンプレート]** ページの右上隅にある「**[!UICONTROL 保存]**」を選択し、「**[!UICONTROL OK]**」を選択します。<br>
+   *パート 2/2: CDN無効化オプションの設定*
    <br>
 
 1. Experience Manager as a Cloud Service で、**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL CDN 無効化]**&#x200B;を選択します。
@@ -64,20 +78,20 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
 
    >[!NOTE]
    >
-   >「**[!UICONTROL CDN でアセット関連の画像プリセットを無効にする]**」*および*「**[!UICONTROL テンプレートに基づいて無効にする]**」をオフにしたままにすると、選択したアセットのベース URL が無効に設定されます。このオプションは、画像に対してのみ使用します。
+   >「**[!UICONTROL CDN でアセット関連の画像プリセットを無効にする]**」*および*「**[!UICONTROL テンプレートに基づいて無効にする]**」をオフにしたままにすると、選択したアセットのベース URL が無効に設定されます。 このオプションは、画像に対してのみ使用します。
 
 
    | オプション | 説明 |
    | --- | --- |
-   | **[!UICONTROL CDN でアセット関連の画像プリセットを無効化する]** | （オプション）このオプションを選択すると、選択したアセットとそれに関連するすべての画像プリセット URL が、キャッシュの無効化のために自動作成されます。<br>アセットと、それに関連付けられた事前定義のプリセット URL は、無効化のために自動作成されます。このオプションは、画像アセットに対してのみ機能します。 |
+   | **[!UICONTROL CDN でアセット関連の画像プリセットを無効化する]** | （オプション）このオプションを選択すると、選択したアセットとそれに関連するすべての画像プリセット URL が、キャッシュの無効化のために自動作成されます。<br>アセットと、それに関連付けられた事前定義のプリセット URL は、無効化のために自動作成されます。 このオプションは、画像アセットに対してのみ機能します。 |
    | **[!UICONTROL テンプレートに基づいて無効化]** | （オプション）URL 作成に定義済みのテンプレートのみを使用する場合は、このオプションを選択します。 |
-   | **[!UICONTROL アセットを追加]** | アセットピッカーを使用して、無効にするアセットを選択します。公開済みまたは非公開のアセットを選択できます。<br>CDN でのキャッシュは、アセットベースではなく URL ベースです。したがって、Web サイト上での完全な URL を認識しておく必要があります。これらの URL を決定したら、テンプレートに追加できます。それから、アセットを選択して追加し、ワンステップで URL を無効にできます。<br>このオプションは、「**[!UICONTROL CDN でアセット関連の画像プリセットを無効化する]**」、または「**[!UICONTROL テンプレートに基づいて無効化]**」、あるいはその両方と組み合わせて使用します。 |
-   | **[!UICONTROL URL を追加]** | CDN キャッシュを無効にする Dynamic Media セットに、完全な URL パスを手動で追加または貼り付けます。***パート 1 / 2：CDN 無効化テンプレートの作成***&#x200B;で CDN 無効化テンプレートを作成しておらず、無効にするアセットが数個の場合にこのオプションを使用します。<br>**重要：**&#x200B;追加する各 URL は、それぞれ別の行に記述する必要があります。<br>一度に 1000 個までの URL を無効にできます。「**[!UICONTROL URL を追加]**」テキストフィールドの URL 数が 1000 を超える場合、「**[!UICONTROL 次へ]**」を選択できません。その場合、選択したアセットの右側の **[!UICONTROL X]** を選択するか、手動で追加した URL を選択して、アセットを無効化リストから削除する必要があります。<br>画像スマート切り抜きの URL は、CDN 無効化テンプレートまたはこの「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します。 |
+   | **[!UICONTROL アセットを追加]** | アセットピッカーを使用して、無効にするアセットを選択します。 公開済みまたは非公開のアセットを選択できます。<br>CDN でのキャッシュは、アセットベースではなく URL ベースです。 したがって、Web サイト上での完全な URL を認識しておく必要があります。 これらの URL を決定したら、テンプレートに追加できます。 それから、アセットを選択して追加し、ワンステップで URL を無効にできます。 <br>このオプションは、「**[!UICONTROL CDN でアセット関連の画像プリセットを無効化する]**」、または「**[!UICONTROL テンプレートに基づいて無効化]**」、あるいはその両方と組み合わせて使用します。 |
+   | **[!UICONTROL URL を追加]** | CDN キャッシュを無効にする Dynamic Media セットに、完全な URL パスを手動で追加または貼り付けます。 このオプションは、***パート 1の2:CDN無効化テンプレートの作成***&#x200B;でCDN無効化テンプレートを作成しておらず、無効化するアセットが少ない場合に使用します。<br>**重要：**&#x200B;追加する各URLは、独自の行にする必要があります。<br>一度に 1000 個までの URL を無効にできます。 「**[!UICONTROL URL を追加]**」テキストフィールドの URL 数が 1000 を超える場合、「**[!UICONTROL 次へ]**」を選択できません。 その場合、選択したアセットの右側の **[!UICONTROL X]** を選択するか、手動で追加した URL を選択して、アセットを無効化リストから削除する必要があります。<br>画像スマート切り抜きの URL は、CDN 無効化テンプレートまたはこの「**[!UICONTROL URL を追加]**」テキストフィールドのいずれかで指定します。 |
 
 1. ページの右上隅にある「**[!UICONTROL 次へ]**」を選択します。
 1. **[!UICONTROL CDN 無効化 - 確認]**&#x200B;ページの **[!UICONTROL URL]** リストボックスに、前の手順で作成した CDN 無効化テンプレートから生成された 1 つまたは複数の URL と、先ほど追加したアセットのリストが表示されます。
 
-   例えば、前の手順で示した CDN 無効化テンプレートの例を使用して、`spinset` という名前のアセットを 1 つ追加したとします。**[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL CDN 無効化]**&#x200B;に移動すると、**[!UICONTROL CDN 無効化 - 確認]**&#x200B;のユーザーインターフェイスで次の 5 つの URL が生成されます。
+   例えば、前の手順で示した CDN 無効化テンプレートの例を使用して、`spinset` という名前のアセットを 1 つ追加したとします。 **[!UICONTROL ツール]**／**[!UICONTROL Assets]**／**[!UICONTROL CDN 無効化]**&#x200B;に移動すると、**[!UICONTROL CDN 無効化 - 確認]**&#x200B;のユーザーインターフェイスで次の 5 つの URL が生成されます。
 
    ![CDN 無効化 - 確認](/help/assets/assets-dm/cdn-invalidation-confirm-2.png)
 
@@ -91,8 +105,8 @@ Dynamic Media アセットは、顧客との配信を高速化するために、
 
 | エラー | 説明 |
 | --- | --- |
-| *選択したアセットの URL を取得できませんでした。* | 次のいずれかのシナリオが当てはまる場合に発生します。<br> - Dynamic Media 設定が見つからない。<br> - Dynamic Media 設定の読み取りに使用するサービスユーザーの取得中に例外が発生した。<br> - URL の形成に使用するパブリッシュサーバーまたは会社ルートが Dynamic Media の設定にない。 |
-| *一部の URL が正しく定義されていません。修正して再送信します。* | IPS CDN キャッシュ無効化 API が、URL が別の会社を参照しているというエラーを返した場合に発生します。または、IPS `cdnCacheInvalidation` API で検証した結果 URL が無効な場合に発生します。 |
+| *選択したアセットの URL を取得できませんでした。* | 次のいずれかのシナリオが満たされた場合に発生します。<br>- Dynamic Media設定が見つかりません。<br>- Dynamic Media設定を読み取るサービスユーザーの取得中に例外が発生しました。<br>- URLの形成に使用される公開サーバーまたは会社ルートがDynamic Media設定に見つかりません。 |
+| *一部の URL が正しく定義されていません。 修正して再送信します。* | IPS CDN キャッシュ無効化 API が、URL が別の会社を参照しているというエラーを返した場合に発生します。 または、IPS `cdnCacheInvalidation` API で検証した結果 URL が無効な場合に発生します。 |
 | *CDN キャッシュを無効にできませんでした。* | CDN キャッシュの無効化リクエストがその他の理由で失敗した場合に発生します。 |
 | *無効にする URL が入力されていません。* | **[!UICONTROL CDN 無効化 - 確認]**&#x200B;ページに URL が存在せず、「**[!UICONTROL 送信]**」を選択した場合に発生します。 |
 

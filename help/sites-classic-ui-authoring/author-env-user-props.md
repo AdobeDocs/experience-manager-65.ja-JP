@@ -10,13 +10,22 @@ exl-id: 9abdaa6d-79ee-448e-a23f-d216433591f8
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 100%
-
+source-wordcount: '229'
+ht-degree: 80%
 ---
-
 # アカウント環境の設定{#configuring-your-account-environment}
 
 Adobe Experience Manager（AEM）では、アカウントとオーサー環境の特定項目を設定できます。
@@ -24,25 +33,25 @@ Adobe Experience Manager（AEM）では、アカウントとオーサー環境�
 [アカウント設定](#account-settings)と[ユーザーの環境設定](#user-preferences)を使用して、次のオプションと環境設定を定義できます。
 
 * **ツールバーの編集**
-グローバル編集ツールバーが必要かどうかを選択します。ブラウザーウィンドウの上部に表示されるこのツールバーには、そのページの段落コンポーネントに使用できる**コピー**、**切り取り**、**貼り付け**、**削除**&#x200B;の各ボタンがあります。
+グローバル編集ツールバーを使用するかどうかを選択します。 ブラウザーウィンドウの上部に表示されるこのツールバーには、そのページの段落コンポーネントに使用できる&#x200B;**コピー**、**切り取り**、**貼り付け**、**削除**&#x200B;の各ボタンがあります。
 
-   * 必要な場合に表示（デフォルト）
-   * 常に表示
-   * 非表示の状態を維持
+  * 必要な場合に表示（デフォルト）
+  * 常に表示
+  * 非表示の状態を維持
 
-* **次のユーザーとして実行**
-[次のユーザーとして実行](/help/sites-administering/security.md#impersonating-another-user)の機能を使用すると、ユーザーは別のユーザーに成り代わって作業を行うことができます。
+* **として偽装**
+[として実行](/help/sites-administering/security.md#impersonating-another-user)の機能を使用すると、ユーザーは別のユーザーの代理で作業できます。
 
 * **言語**
-オーサリング環境の UI に使用する言語です。使用可能なリストから必要な言語を選択します。
+オーサリング環境のUIに使用する言語。 使用できるリストから必要な言語を選択します。
 
 * **ウィンドウ管理**
 次のいずれかを選択します。
 
-   * 複数ウィンドウ（デフォルト）
-新しいウィンドウでページが開きます。
-   * 単一ウィンドウ
-現在のウィンドウでページが開きます。
+  * 複数ウィンドウ (デフォルト)
+    新しいウィンドウでページが開きます。
+  * 単一ウィンドウ
+    現在のウィンドウでページが開きます。
 
 ## アカウント設定 {#account-settings}
 
@@ -57,7 +66,7 @@ Adobe Experience Manager（AEM）では、アカウントとオーサー環境�
 
 ### ユーザーの環境設定 {#user-preferences}
 
-各ユーザーは、自分自身に特定のプロパティを設定できます。これは、コンソールの右上隅にある&#x200B;**環境設定**&#x200B;ダイアログボックスで行うことができます。
+各ユーザーは、自分自身に特定のプロパティを設定できます。 これは、コンソールの右上隅にある&#x200B;**環境設定**&#x200B;ダイアログボックスで行うことができます。
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 

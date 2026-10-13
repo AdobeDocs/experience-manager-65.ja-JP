@@ -1,6 +1,6 @@
 ---
 title: SPA ページコンポーネント
-description: SPA では、ページコンポーネントは子コンポーネントの HTML 要素を提供せず、代わりに SPA フレームワークに委任します。 このドキュメントでは、これにより SPA のページコンポーネントがどのように一意になるかを説明します。
+description: SPA では、ページコンポーネントは子コンポーネントの HTML 要素を提供せず、代わりに SPA フレームワークに委任します。 このドキュメントでは、これにより SPA のページコンポーネントがどのように独自のものになるかを説明します。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -11,13 +11,27 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 100%
-
 ---
-
 
 # SPA ページコンポーネント{#spa-page-component}
 
@@ -42,7 +56,7 @@ SPA のページコンポーネントは、JSP ファイルまたは HTL のフ�
 
 ## 通信データタイプ {#communication-data-type}
 
-通信データタイプは、`data-cq-datatype` 属性を使用して AEM ページコンポーネント内に HTML 要素を設定します。 通信データタイプが JSON に設定されると、GET リクエストにより、コンポーネントの Sling Model エンドポイントにヒットします。 ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表現がページモデルのライブラリに送信されます。 次に、ページモデルのライブラリから、SPA に更新が警告されます。
+通信データタイプは、`data-cq-datatype` 属性を使用して AEM ページコンポーネント内に HTML 要素を設定します。 通信データタイプが JSON に設定されると、GET リクエストはコンポーネントの Sling Model エンドポイントにヒットします。 ページエディターで更新が実行されると、更新されたコンポーネントの JSON 表現がページモデルのライブラリに送信されます。 次に、ページモデルのライブラリから、SPA に更新が警告されます。
 
 **SPA ページコンポーネント -`body.html`**
 
@@ -61,7 +75,7 @@ DOM の生成を遅延させないことは基本ですが、それに加えて�
 <sly data-sly-call="${clientLib.js @ categories='we-retail-journal-react'}"></sly>
 ```
 
-SPA コンテンツを記述するメタリソースプロパティです。
+SPA コンテンツを記述するメタリソースプロパティ：
 
 **SPA ページコンポーネント -`customheaderlibs.html`**
 
@@ -90,7 +104,7 @@ SPA コンテンツを記述するメタリソースプロパティです。
 
 >[!CAUTION]
 >
->このドキュメントでは、We.Retail ジャーナルアプリケーションをデモの目的でのみ使用します。 どのプロジェクト作業にも使用しないでください。
+>このドキュメントでは、We.Retail ジャーナルアプリケーションをデモの目的でのみ使用します。 プロジェクト作業には使用しないでください。
 >
 >AEM プロジェクトでは、[AEM プロジェクトアーキタイプ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=ja)を使用する必要があります。このアーキタイプは、React または Angular を使用する SPA プロジェクトをサポートし、SPA SDK を使用します。AEM 上のすべての SPA プロジェクトは Maven アーキタイプ SPA 向け スターターキットを基にしている必要があります。
 
@@ -98,7 +112,7 @@ SPA コンテンツを記述するメタリソースプロパティです。
 
 オーバーレイの同期は、`cq.authoring.page` カテゴリが提供するのと同じミューテーションオブザーバーが保証されます。
 
-## Sling Model JSON が書き出した構造設定 {#sling-model-json-exported-structure-configuration}
+## Sling Model JSON 書き出し構造の設定 {#sling-model-json-exported-structure-configuration}
 
 ルーティング機能を有効にすると、AEM ナビゲーションコンポーネントの JSON 書き出しによって、SPA の JSON 書き出しにアプリケーションの複数のルートが含まれるという前提になります。 AEM ナビゲーションコンポーネントの JSON 出力は、次の 2 つのプロパティを使用し、SPA のルートページのコンテンツポリシーで設定することができます。
 

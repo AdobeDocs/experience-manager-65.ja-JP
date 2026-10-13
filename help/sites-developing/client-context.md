@@ -10,13 +10,29 @@ feature: Context Hub,Developing,Personalization
 exl-id: 38b9a795-1c83-406c-ab13-b4456da938dd
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: a642c50e-80eb-4fc1-a5d2-f3762d1f841d
+    internal-label: Administration
+subfeature_v2:
+  - id: db974db1-cf49-4452-872e-5a56c5f1d391
+    internal-label: Context Hub
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2996'
-ht-degree: 97%
-
+source-wordcount: '3030'
+ht-degree: 96%
 ---
-
 # ClientContext の詳細{#client-context-in-detail}
 
 >[!NOTE]
@@ -190,15 +206,15 @@ AEM が提供する genericstore および genericstoreproperties コンテキ�
 
 * プロパティと値のペア：`GenericStoreProperties` コンポーネントを拡張します。 このコンポーネントは、プロパティと値のペアのストアを自動的にレンダリングします。 次のインタラクションポイントが提供されています。
 
-   * `prolog.jsp` と `epilog.jsp`：コンポーネントをレンダリングする前または後にサーバー側ロジックを追加できるコンポーネントインタラクション。
+  * `prolog.jsp` と `epilog.jsp`：コンポーネントをレンダリングする前または後にサーバー側ロジックを追加できるコンポーネントインタラクション。
 
 * 複合データ：`GenericStore` コンポーネントを拡張します。 セッションストアには、コンポーネントをレンダリングする必要があるたびに呼び出される「レンダラー」メソッドが必要になります。 レンダラー関数は、次の 2 つのパラメーターと一緒に呼び出されます。
 
-   * `@param {String} store`
-レンダリングするストア
+  * `@param {String} store`
+    レンダリングするストア
 
-   * `@param {String} divId`
-ストアをレンダリングする必要がある div の ID。
+  * `@param {String} divId`
+    ストアをレンダリングする必要がある div の ID。
 
 >[!NOTE]
 >
@@ -618,13 +634,13 @@ ClientContext でストアデータをレンダリングするには、ジオロ
 
 * サブフォルダー：
   `/content`
-カスタマイズされた ClientContext のコンテンツを含みます。
+  カスタマイズされた ClientContext のコンテンツを含みます。
 
 * フォルダー：
   `/contextstores`
-コンテキストストアの様々な設定を定義できます。
+  コンテキストストアの様々な設定を定義できます。
 
 カスタマイズしたクライアントコンテキストを使用するには、プロパティを編集します
 `path`
-ページテンプレートに含まれる、クライアントコンテキストコンポーネントのデザインスタイルで使用されます。例えば、次の場所を標準として使用します。
+ページテンプレートに含まれる、クライアントコンテキストコンポーネントのデザインスタイルで使用されます。 例えば、次の場所を標準として使用します。
 `/libs/cq/personalization/components/clientcontext/design_dialog/items/path`

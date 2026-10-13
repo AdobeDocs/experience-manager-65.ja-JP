@@ -1,6 +1,6 @@
 ---
 title: 作成者が AEM でコンテンツを作成する際の最初の手順
-description: AEM 6.5 でのコンテンツの作成とオーサリングに関する主要な概念について説明します。また、タグ、テンプレート、その他のページ機能の使用に関する情報も提供します。
+description: AEM 6.5 でのコンテンツの制作とオーサリングに関する主要な概念について説明します。 また、タグ、テンプレート、その他のページ機能の使用に関する情報も提供します。
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: page-authoring
@@ -10,15 +10,28 @@ exl-id: b2103774-1876-4bf8-a29a-2ba0d51e7914
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '415'
 ht-degree: 100%
-
 ---
 
-
-# 作成者がおこなう最初の手順 {#first-steps-for-authors}
+# 作成者がおこなう最初の手順{#first-steps-for-authors}
 
 ここでは、Adobe Experience Manager（AEM）で[コンテンツのオーサリングを開始する](/help/sites-authoring/author.md#concept-of-authoring-and-publishing)際に使用する主なタスクの概要について説明します。
 
@@ -36,7 +49,7 @@ ht-degree: 100%
 
 ### ページの場所への移動 {#navigating-to-the-page-location}
 
-Web サイトのコンテンツはツリー構造で管理されます。ページを作成または編集するには、[その場所に移動](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)することが必要です。
+Web サイトのコンテンツはツリー構造で管理されます。 ページを作成または編集するには、[その場所に移動](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)することが必要です。
 
 ### 新しいページの作成 {#creating-a-new-page}
 
@@ -59,7 +72,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 * [プレビューモードの使用](/help/sites-authoring/editing-content.md#preview-mode)（公開時にどのように表示されるかを確認するため）
 * [ページのロック](/help/sites-authoring/editing-content.md#locking-a-page)
 
-### ページの公開  {#publishing-a-page}
+### ページの公開 {#publishing-a-page}
 
 ページの編集が完了したら、web サイトへの訪問者がコンテンツを閲覧できるように、[ページを公開（またはアクティベート）](/help/sites-authoring/publishing-pages.md#main-pars-title-10)します。
 
@@ -85,7 +98,7 @@ Web サイトのコンテンツはツリー構造で管理されます。ペー�
 
 ### ページプロパティの設定 {#setting-the-page-properties}
 
-すべての[ページにプロパティがあり](/help/sites-authoring/editing-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。ページプロパティはいずれの UI でも更新できます。
+すべての[ページにプロパティがあり](/help/sites-authoring/editing-page-properties.md)、これらのプロパティを定義することで、ページ操作の様々な側面を指定できます。 ページプロパティはいずれの UI でも更新できます。
 
 ### ページのバージョンの作成 {#creating-a-version-of-a-page}
 

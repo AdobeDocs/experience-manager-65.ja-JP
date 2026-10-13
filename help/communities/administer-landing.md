@@ -9,13 +9,20 @@ role: Admin
 exl-id: e3ffc73e-2bc5-492d-b64b-750cc7d8ab9b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 8%
-
 ---
-
 # コミュニティサイト {#communities-sites}
 
 このセクションは、AEM Communitiesを管理し、AEM Communitiesの機能に精通しているユーザーを対象としています。
@@ -33,22 +40,22 @@ ht-degree: 8%
 
 * コミュニティ [&#x200B; コンソール &#x200B;](consoles.md)
 
-   * [Sites](sites-console.md)
+  * [Sites](sites-console.md)
 
-      * [グループ（サブコミュニティ）](groups.md)
+    * [グループ（サブコミュニティ）](groups.md)
 
-   * [モデレート](moderation.md)
-   * [メンバーとグループの管理](members.md)
-   * [レポート](reports.md)
+  * [モデレート](moderation.md)
+  * [メンバーとグループの管理](members.md)
+  * [レポート](reports.md)
 
 * コミュニティ [*ツール*](tools.md):
 
-   * [サイトテンプレート](sites.md)
-   * [グループテンプレート](tools-groups.md)
-   * [コミュニティ機能](functions.md)
-   * [ストレージ設定](srp-config.md)
-   * [コンポーネントガイド](components-guide.md)
-   * [バッジ](badges.md)
+  * [サイトテンプレート](sites.md)
+  * [グループテンプレート](tools-groups.md)
+  * [コミュニティ機能](functions.md)
+  * [ストレージ設定](srp-config.md)
+  * [コンポーネントガイド](components-guide.md)
+  * [バッジ](badges.md)
 
 
 ### ユーザー生成コンテンツ {#user-generated-content}

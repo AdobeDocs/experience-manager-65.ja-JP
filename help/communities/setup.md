@@ -9,13 +9,20 @@ exl-id: 6bda0f09-7ae5-4540-b035-9dd249ac3186
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '695'
 ht-degree: 2%
-
 ---
-
 # 初期セットアップ {#initial-setup}
 
 ## オーサーインスタンスとパブリッシュインスタンスの開始 {#start-author-and-publish-instances}
@@ -31,13 +38,13 @@ AEM Communitiesの場合，
 
 * オーサー環境は次の目的で使用されます。
 
-   * サイト、テンプレート、コンポーネントの開発。
-   * 管理タスクと設定タスク：
+  * サイト、テンプレート、コンポーネントの開発。
+  * 管理タスクと設定タスク：
 
 * パブリッシュ環境は次の目的で使用されます。
 
-   * コンテンツの投稿とモデレーションを行うコミュニティ体験。
-   * コミュニティグループ、メンバー、メンバーグループの作成。
+  * コンテンツの投稿とモデレーションを行うコミュニティ体験。
+  * コミュニティグループ、メンバー、メンバーグループの作成。
 
 >[!NOTE]
 >
@@ -83,23 +90,23 @@ Adobe Analyticsとの連携はオプションです。
 
 * オーサーインスタンスで
 
-   * 例：[http://localhost:4502/](http://localhost:4503/)
+  * 例：[http://localhost:4502/](http://localhost:4503/)
 
 * 管理者権限でログイン
 
-   * 例えば、ユーザー名&#39;admin&#39; / パスワード &#39;admin&#39;などです
+  * 例えば、ユーザー名&#39;admin&#39; / パスワード &#39;admin&#39;などです
 
 * メインコンソールから、**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL セキュリティ]** > **[!UICONTROL ユーザー]**&#x200B;に移動します。
 * **編集** メニューから、**[!UICONTROL ユーザーを追加]**&#x200B;を選択します
 
 * `Create New User` ダイアログで、次のように入力します。
 
-   * **[!UICONTROL ID]**: sirius
-   * **[!UICONTROL 電子メールアドレス]**: sirius.nilson@mailinator.com
-   * **[!UICONTROL パスワード]**：password
-   * **[!UICONTROL パスワードの確認（&amp;A）;]**: パスワード
-   * **[!UICONTROL 名]**: シリウス
-   * **[!UICONTROL 姓]**: Nilson
+  * **[!UICONTROL ID]**: sirius
+  * **[!UICONTROL 電子メールアドレス]**: sirius.nilson@mailinator.com
+  * **[!UICONTROL パスワード]**：password
+  * **[!UICONTROL パスワードの確認（&amp;A）;]**: パスワード
+  * **[!UICONTROL 名]**: シリウス
+  * **[!UICONTROL 姓]**: Nilson
 
 ### コミュニティ管理者グループへのSiriusの割り当て {#assign-sirius-to-community-administrators-group}
 
@@ -107,8 +114,8 @@ Adobe Analyticsとの連携はオプションです。
 
 * 検索するには「C」と入力してください
 
-   * `Community Administrators` を選択します。
-   * `Community Enablement Managers` を選択します。
+  * `Community Administrators` を選択します。
+  * `Community Enablement Managers` を選択します。
 
 * 「**[!UICONTROL 保存]**」を選択します。
 

@@ -9,13 +9,29 @@ role: User, Admin
 exl-id: f8a80b22-b1a6-475f-b3f1-b2f47822f21d
 feature: Collaboration,Asset Management
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: f7212149-7f65-4e43-89c2-1f075f45be16
+    internal-label: Collaboration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 100%
-
 ---
-
 # Dynamic Media の操作 {#working-with-dynamic-media}
 
 [Dynamic Media](https://business.adobe.com/jp/products/experience-manager/assets/dynamic-media.html) は、マーチャンダイジングおよびマーケティング用のリッチなビジュアルアセットをオンデマンドで配信するもので、これらのアセットは、Web、モバイルおよびソーシャルサイトでの利用に合わせて自動的に拡大縮小されます。 このソフトウェアは、一連のプライマリソースアセットを使用し、パフォーマンスが最適化されスケーラビリティに優れたグローバルネットワーク経由で、複数のリッチコンテンツのバリエーションをリアルタイムで生成および配信します。
@@ -69,9 +85,9 @@ Dynamic Media 限定の機能は次のとおりです。
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
-### 画像セット、スピンセット、混在メディアセット {#image-sets-spins-sets-mixed-media-sets}
+### 画像セット、スピンセット、ミックスメディアセット {#image-sets-spins-sets-mixed-media-sets}
 
-画像セット、スピンセットおよび混在メディアセットは、ソフトウェアが有効な場合に使用できます。
+画像セット、スピンセットおよびミックスメディアセットは、ソフトウェアが有効な場合に使用できます。
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
@@ -83,7 +99,7 @@ Dynamic Media 対応のアセットには `pyramid.tiffs` が含まれます。
 
 ### アセットのビューの変化 {#asset-views-change}
 
-ソフトウェアを有効にした場合、`+` および `-` ボタンをクリックして、ズームインおよびズームアウトできます。 クリックして、特定のエリアにズームインすることもできます。 「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像を全画面表示にすることができます。 ソフトウェアを有効にすると、画面は次のようになります。
+ソフトウェアを有効にした場合、`+` および `-` ボタンをクリックして、ズームインおよびズームアウトできます。 クリックして、特定のエリアにズームインすることもできます。 「元に戻す」を選択すると元のバージョンに戻り、斜めの矢印をクリックして画像をフルスクリーンにすることができます。 ソフトウェアを有効にすると、画面は次のようになります。
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 

@@ -1,19 +1,33 @@
 ---
 title: アセットのダウンロード
-description: ' [!DNL Adobe Experience Manager]  からアセットをダウンロードする方法とダウンロード機能を有効または無効にする方法について説明します。'
+description: '[!DNL Adobe Experience Manager]からアセットをダウンロードし、ダウンロード機能を有効または無効にする方法を説明します。'
 contentOwner: AG
 role: User
 feature: Asset Management,Asset Distribution
 exl-id: 6bda9e52-5a6e-446e-99c7-96793482c190
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: d2b070a9-76bf-4422-902f-be20e963fd42
+    internal-label: Asset distribution
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 98%
-
+source-wordcount: '968'
+ht-degree: 96%
 ---
-
 # [!DNL Adobe Experience Manager] からのアセットのダウンロード {#download-assets-from-aem}
 
 | バージョン | 記事リンク |
@@ -21,7 +35,7 @@ ht-degree: 98%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/download-assets-from-aem.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。 または、アセットへのリンクを含むメールを [!DNL Adobe Experience Manager Assets] から直接送信できます。 ダウンロードされたアセットは、ZIP ファイルにバンドルされています。 書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。 書き出しジョブあたり、最大で 500 個のアセットの合計を指定できます。
+静的レンディションおよび動的レンディションを含むアセットをダウンロードできます。 または、アセットへのリンクを含むメールを [!DNL Adobe Experience Manager Assets] から直接送信できます。 ダウンロードされたアセットは、ZIP ファイルにバンドルされています。 書き出しジョブ用に圧縮する ZIP ファイルの最大サイズは 1 GB です。 書き出しジョブあたり、合計で最大 500 件のアセットが許可されます。
 
 >[!NOTE]
 >
@@ -49,9 +63,9 @@ OLD content of the above NOTE, changed wrt CQDOC-18661.
    | エクスポートまたはダウンロードのオプション | 説明 |
    |---|---|
    | **[!UICONTROL アセットごとに別のフォルダーを作成]** | このオプションを選択すると、ダウンロードした各アセット（アセットの親フォルダーの下にネストされた子フォルダー内のアセットを含む）が、ローカルコンピューター上の 1 つのフォルダーに含まれます。 このオプションを選択しない場合、デフォルトでは、フォルダー階層は無視され、すべてのアセットがローカルコンピューターの 1 つのフォルダーにダウンロードされます。 |
-   | **[!UICONTROL メール]** | ユーザーにメール通知が送信されます。 次の場所にある標準のメールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> デプロイメント時にカスタマイズしたテンプレートは、次の場所で利用できます。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
+   | **[!UICONTROL メール]** | ユーザーにメール通知が送信されます。 次の場所にある標準のメールテンプレートを利用できます。<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`</li></ul> デプロイメント時にカスタマイズしたテンプレートは、次の場所で利用できます。 <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul>テナント固有のカスタムテンプレートは、次の場所に保存できます。<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`。</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`。</li></ul> |
    | **[!UICONTROL アセット]** | レンディションを含めずに、元の形式でアセットをダウンロードする場合に、このオプションを選択します。<br>元のアセットにサブアセットがある場合は、サブアセットオプションを使用できます。 |
-   | **[!UICONTROL レンディション]** | レンディションは、アセットのバイナリ表現です。 アセットには、アップロードされたファイルの一次表現が含まれます。 任意の数の表示域を持つことができます。<br> このオプションを使用すると、ダウンロードするレンディションを選択できます。 使用できるレンディションは、選択したアセットによって異なります。 アセットにレンディションがある場合は、レンディションオプションを使用できます。 |
+   | **[!UICONTROL レンディション]** | レンディションは、アセットのバイナリ表現です。 アセットには、アップロードされたファイルの一次表現が含まれます。 任意の数の表示域を持つことができます。<br> このオプションを使用すると、ダウンロードするレンディションを選択できます。 使用できるレンディションは、選択したアセットによって異なります。 アセットにレンディションがある場合は、このオプションを使用できます。 |
    | **[!UICONTROL スマート切り抜き]** | このオプションを選択すると、選択したアセットのすべてのスマート切り抜きレンディションが AEM 内からダウンロードされます。 スマート切り抜きレンディションを含む zip ファイルが作成され、ローカルコンピューターにダウンロードされます。 |
    | **[!UICONTROL 動的レンディション]** | 一連の代替レンディションをリアルタイムで生成するには、このオプションを選択します。 また、このオプションを選択すると、動的に作成するレンディションを[画像プリセット](image-presets.md)リストから選択します。 <br>さらに、サイズ、測定単位、形式、カラースペース、解像度および、画像の反転用などのオプションの画像修飾子を選択できます。 このオプションは、[!DNL Dynamic Media] を有効にしている場合にのみ使用できます。 |
 

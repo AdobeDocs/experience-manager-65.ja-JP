@@ -5,13 +5,22 @@ exl-id: 1be5849b-748c-48e8-afa8-35a9026c27b3
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 100%
-
 ---
-
 # 設定と設定ブラウザー {#configuration-browser}
 
 AEM 設定は、AEM の設定を管理し、ワークスペースとして機能します。
@@ -79,8 +88,8 @@ WKND-General を WKND サイトのすべてのコンテンツに関連付ける�
 
    * **タイトル**&#x200B;は内容がわかるように付けます。
    * **名前**&#x200B;はリポジトリ内のノード名になります。
-      * タイトルに基づいて自動的に生成され、[AEM の命名規則](/help/sites-developing/naming-conventions.md)に従って調整されます。
-      * 必要に応じて調整できます。
+     * タイトルに基づいて自動的に生成され、[AEM の命名規則](/help/sites-developing/naming-conventions.md)に従って調整されます。
+     * 必要に応じて調整できます。
 1. 許可する設定のタイプを確認します。
    * [クラウド設定](/help/sites-administering/configurations.md)
    * [ContextHub セグメント](/help/sites-administering/segmentation.md)

@@ -9,26 +9,38 @@ role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '6236'
 ht-degree: 99%
-
 ---
-
 # ユーザーの管理 {#managing-users}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
 
-**User Management について**
+**ユーザー管理について**
 
-User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。 User Management API は、次の AEM Forms API で構成されています。
+User Management API を使用して、役割、権限、プリンシパル（ユーザーまたはグループ）を管理し、ユーザーを認証できるクライアントアプリケーションを作成できます。 ユーザー管理 API は、次の AEM Forms API で構成されています。
 
 * Directory Manager Service API
 * Authentication Manager Service API
 * Authorization Manager Service API
 
-User Management では、役割および権限の割り当て、削除、決定が可能です。 また、ドメイン、ユーザー、グループの割り当て、削除、クエリも可能です。 最後に、User Management を使用してユーザーを認証できます。
+ユーザー管理では、役割および権限の割り当て、削除、決定が可能です。 また、ドメイン、ユーザー、グループの割り当て、削除、クエリも可能です。 最後に、User Management を使用してユーザーを認証できます。
 
 [ユーザーの追加](users.md#adding-users)では、プログラムによってユーザーを追加する方法を説明します。 この節では、Directory Manager Service API を使用します。
 
@@ -42,7 +54,7 @@ User Management では、役割および権限の割り当て、削除、決定�
 
 **認証プロセスについて**
 
-User Management には、ビルトインの認証機能が用意されており、独自の認証プロバイダーと接続する機能も備えています。 User Management は、認証リクエストを受け取ると（ユーザーがログインを試みるなど）、認証プロバイダーにユーザー情報を渡して認証を行います。 User Management は、ユーザーの認証後に認証プロバイダーから結果を受け取ります。
+ユーザー管理には、ビルトインの認証機能が用意されており、独自の認証プロバイダーと接続する機能も備えています。 User Management は、認証リクエストを受け取ると（ユーザーがログインを試みるなど）、認証プロバイダーにユーザー情報を渡して認証を行います。 User Management は、ユーザーの認証後に認証プロバイダーから結果を受け取ります。
 
 次の図は、ログインを試みるエンドユーザー、User Management、および認証プロバイダー間のやり取りを示しています。
 
@@ -68,11 +80,11 @@ User Management には、ビルトインの認証機能が用意されており�
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>認証プロバイダは、ユーザストアに接続し、ユーザを認証します。</p></td>
+   <td><p>認証プロバイダは、ユーザーストアに接続し、ユーザーを認証します。</p></td>
   </tr>
   <tr>
    <td><p>4</p></td>
-   <td><p>認証プロバイダーが結果を User Management に返します。</p></td>
+   <td><p>認証プロバイダーが結果をユーザー管理に返します。</p></td>
   </tr>
   <tr>
    <td><p>5</p></td>
@@ -83,21 +95,21 @@ User Management には、ビルトインの認証機能が用意されており�
 
 >[!NOTE]
 >
->サーバーのタイムゾーンがクライアントのタイムゾーンと異なる場合、WebSphere Application Server クラスター上の .NET クライアントを使用してネイティブの SOAP スタック上で AEM Forms Generate PDF サービスの WSDL を使用すると、次の User Management 認証エラーが発生する場合があります。
+>サーバーのタイムゾーンがクライアントのタイムゾーンと異なる場合、WebSphere Application Server クラスター上の .NET クライアントを使用してネイティブの SOAP スタック上で AEM Forms Generate PDF サービスの WSDL を使用すると、次のユーザー管理認証エラーが発生する場合があります。
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
 **ディレクトリ管理について**
 
-User Management は、LDAP ディレクトリへの接続をサポートするディレクトリサービスプロバイダ (DirectoryManagerService) と併せてパッケージ化されます。 組織で LDAP 以外のリポジトリを使用してユーザーレコードを保存する場合、リポジトリーで使用する独自のディレクトリサービスプロバイダーを作成できます。
+ユーザー管理は、LDAP ディレクトリへの接続をサポートするディレクトリサービスプロバイダー（DirectoryManagerService）と併せてパッケージ化されます。 組織で LDAP 以外のリポジトリを使用してユーザーレコードを保存する場合、リポジトリーで使用する独自のディレクトリサービスプロバイダーを作成できます。
 
 ディレクトリサービスプロバイダーは、User Management のリクエスト時に、ユーザーストアからレコードを取得します。 User Management は、パフォーマンスを向上させるために、ユーザーおよびグループのレコードをデータベースに定期的にキャッシュします。
 
 ディレクトリサービスプロバイダーを使用して、User Management データベースとユーザーストアを同期できます。 このステップでは、すべてのユーザーディレクトリ情報と、すべてのユーザーレコードとグループレコードが最新の状態に保たれます。
 
-また、DirectoryManagerService では、ドメインを作成および管理する機能を提供します。 ドメインは、異なるユーザーベースを定義します。 ドメインの境界は、通常、組織の構造やユーザーストアの設定方法に従って定義されます。 User Management ドメインは、認証プロバイダーおよびディレクトリサービスプロバイダーが使用する設定を提供します。
+また、DirectoryManagerService では、ドメインを作成および管理する機能を提供します。 ドメインは、異なるユーザーベースを定義します。 ドメインの境界は、通常、組織の構造やユーザーストアの設定方法に従って定義されます。 ユーザー管理ドメインは、認証プロバイダーおよびディレクトリサービスプロバイダーが使用する設定を提供します。
 
-User Management が書き出す設定 XML で、属性値が `Domains` のルートノードには、User Management 用に定義された各ドメインの XML 要素が含まれます。 これらの各要素には、特定のサービスプロバイダーに関連付けられたドメインの側面を定義する他の要素が含まれます。
+ユーザー管理が書き出す設定 XML で、属性値が `Domains` のルートノードには、ユーザー管理用に定義された各ドメインの XML 要素が含まれます。 これらの各要素には、特定のサービスプロバイダーに関連付けられたドメインの側面を定義する他の要素が含まれます。
 
 **objectSID の値について**
 
@@ -229,10 +241,10 @@ Directory Manager サービス API（web サービス）を使用してユーザ
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. ユーザー情報を定義します。
 
@@ -358,10 +370,10 @@ Directory Manager Service API（web サービス）を使用してユーザー�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `DirectoryManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `DirectoryManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 削除するユーザーを指定します。
 
@@ -622,7 +634,7 @@ AEM Forms では、*役割*&#x200B;とは、1 つまたは複数のシステム�
 
 **AuthorizationManagerService クライアントの作成**
 
-User Management AuthorizationManagerService 操作をプログラムで実行する前に、AuthorizationManagerService クライアントを作成する必要があります。 Java API では、これは `AuthorizationManagerServiceClient` オブジェクトを作成することによって実現できます。
+ユーザー管理 AuthorizationManagerService 操作をプログラムで実行する前に、AuthorizationManagerService クライアントを作成する必要があります。 Java API では、これは `AuthorizationManagerServiceClient` オブジェクトを作成することによって実現できます。
 
 **適切な役割または権限の操作を呼び出す**
 
@@ -694,10 +706,10 @@ Authorization Manager Service API（Web サービス）を使用して、役割�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `AuthorizationManagerServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `AuthorizationManagerServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 適切な役割または権限の操作を呼び出します。
 

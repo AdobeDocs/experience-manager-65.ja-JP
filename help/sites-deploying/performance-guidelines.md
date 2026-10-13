@@ -9,13 +9,22 @@ feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '3000'
 ht-degree: 99%
-
 ---
-
 # パフォーマンスガイドライン{#performance-guidelines}
 
 このページでは、AEMデプロイメントのパフォーマンスを最適化する方法に関する一般的なガイドラインを示します。 AEM を初めて使用する場合は、パフォーマンスガイドラインを読む前に、次のページを確認してください。
@@ -354,12 +363,12 @@ AEM は&#x200B;**パフォーマンスとスケーラビリティ**&#x200B;を�
 * 可能な限りクエリを使用しない
 * Java™ コードで OSGi サービスを取得する場合は、Sling Binding を使用せずに以下を使用してください。
 
-   * DS コンポーネントの @Reference
-   * Sling Model の @Inject
-   * Sightly Use クラスの sling.getService()
-   * JSP の sling.getService()
-   * ServiceTracker
-   * OSGi サービスレジストリへの直接アクセス
+  * DS コンポーネントの @Reference
+  * Sling Model の @Inject
+  * Sightly Use クラスの sling.getService()
+  * JSP の sling.getService()
+  * ServiceTracker
+  * OSGi サービスレジストリへの直接アクセス
 
 AEM での開発について詳しくは、[開発の基本](/help/sites-developing/the-basics.md)を参照してください。 その他のベストプラクティスについては、[開発のベストプラクティス](/help/sites-developing/best-practices.md)を参照してください。
 
@@ -834,24 +843,24 @@ TarMK と MongoMK の比較について詳しくは、[推奨されるデプロ�
 
 * **ファイルデータストアを使用する TarMK** - 大部分の顧客に対する推奨アーキテクチャ：
 
-   * 最小トポロジ：1 つのオーサーインスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
-   * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
+  * 最小トポロジ：1 つのオーサーインスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
+  * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
 
 * **ファイルデータストアを使用する MongoMK** - オーサー層の水平方向のスケーラビリティのための推奨アーキテクチャ：
 
-   * 最小トポロジ：3 つのオーサーインスタンス、3 つの MongoDB インスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
-   * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
+  * 最小トポロジ：3 つのオーサーインスタンス、3 つの MongoDB インスタンス、2 つのパブリッシュインスタンス、2 つの Dispatcher
+  * ファイルデータストアを共有する場合は、バイナリレスレプリケーションを有効にします
 
 * **ノードストア** - ネットワーク接続ストレージ（NAS）ではなくローカルディスクに格納
 * **Amazon S3** を使用する場合：
 
-   * Amazon S3 データストアは、オーサー層とパブリッシュ層の間で共有されます
-   * バイナリレスレプリケーションを有効にする必要があります
-   * データストアのガベージコレクションを使用するには、最初にすべてのオーサーノードとパブリッシュノードで実行してから、オーサーノードでもう一度実行する必要があります
+  * Amazon S3 データストアは、オーサー層とパブリッシュ層の間で共有されます
+  * バイナリレスレプリケーションを有効にする必要があります
+  * データストアのガベージコレクションを使用するには、最初にすべてのオーサーノードとパブリッシュノードで実行してから、オーサーノードでもう一度実行する必要があります
 
 * **標準提供のインデックスに加えて、カスタムインデックスを作成する必要があります** - 最も一般的な検索に基づく
 
-   * カスタムインデックスには Lucene インデックスを使用する必要があります
+  * カスタムインデックスには Lucene インデックスを使用する必要があります
 
 * **ワークフローをカスタマイズすると、パフォーマンスを大幅に改善できます** - 「アセットを更新」ワークフローのビデオ手順を削除したり、使用されていないリスナーを無効化したりします。
 

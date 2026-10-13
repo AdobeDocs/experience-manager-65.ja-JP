@@ -9,13 +9,22 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 523b1ccd-901e-5e3b-9fa7-f3dfd82463d5
+    internal-label: Configuring
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 97%
-
 ---
-
 
 # メール通知の設定{#configuring-email-notification}
 
@@ -24,7 +33,7 @@ AEM は、次のユーザーに対してメール通知を送信します。
 * 変更やレプリケーションなど、ページイベントを購読したことがある。 「[通知インボックス](/help/sites-classic-ui-authoring/author-env-inbox.md#subscribing-to-notifications)」セクションでは、このようなイベントを購読する方法について説明します。
 
 * フォーラムイベントを購読したことがある。
-* ワークフローで手順を実行する必要がある。 [参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
+* ワークフローの手順を実行する必要がある。 [参加者ステップ](/help/sites-developing/workflows-step-ref.md#participant-step)の節では、ワークフローでのメール通知のトリガー方法について説明します。
 
 前提条件：
 
@@ -404,11 +413,11 @@ AEM は、組織が安全なメール要件に準拠できるように、Oauth2 
    * 「認証 URL」、「トークン URL」、「更新トークン URL」を、[この手順の最後](#microsoft-outlook)に説明した方法で作成し、入力します。
    * クライアント ID とクライアント秘密鍵：これらのフィールドに、前述のように取得した値を設定します。
    * 次のスコープを設定に追加します。
-      * openid
-      * offline_access
-      * `https://outlook.office365.com/Mail.Send`
-      * `https://outlook.office365.com/Mail.Read`
-      * `https://outlook.office365.com/SMTP.Send`
+     * openid
+     * offline_access
+     * `https://outlook.office365.com/Mail.Send`
+     * `https://outlook.office365.com/Mail.Read`
+     * `https://outlook.office365.com/SMTP.Send`
    * AuthCode リダイレクト URL：`http://localhost:4503/services/mailer/oauth2/token`
    * 更新トークン URL：これは、上記のトークン URL と同じ値である必要があります
 1. 「**保存**」をクリックします。

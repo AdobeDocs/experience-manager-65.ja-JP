@@ -7,13 +7,25 @@ feature: Renditions
 exl-id: 1e4ddd73-a31c-4ddd-94eb-1dac6a4835b3
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: e42ab83e-8918-43a7-98a3-62bebbd5bb3a
+    internal-label: Renditions
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 99%
-
 ---
-
 # Adobe InDesign 用のプレースメント専用レンディションの生成 {#fpo-renditions}
 
 | バージョン | 記事リンク |
@@ -21,11 +33,11 @@ ht-degree: 99%
 | AEM as a Cloud Service | [ここをクリックしてください](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/configure-fpo-renditions.html?lang=ja) |
 | AEM 6.5 | この記事 |
 
-Adobe Experience Manager の大きいサイズのアセットを Adobe InDesign ドキュメントに配置する場合、クリエイティブプロフェッショナルは、[アセットを配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)してからかなりの時間待つ必要があります。 一方、ユーザーは InDesign の使用をブロックされます。 これにより、クリエイティブの流れが中断され、ユーザーエクスペリエンスに悪影響が出ます。 そこで、最初に小さいサイズのレンディションを InDesign ドキュメントに一時的に配置できるようになっています。 印刷ワークフローや公開ワークフローなど、最終的な出力が必要な場合は、バックグラウンドの一時レンディションが元のフル解像度のアセットに置き換わります。 このバックグラウンドでの非同期更新により、設計プロセスが迅速化されて生産性が向上する一方、クリエイティブプロセスが妨げられることはありません。
+Adobe Experience Manager の大きいサイズのアセットを Adobe InDesign ドキュメントに配置する場合、クリエイティブプロフェッショナルは、[アセットを配置](https://helpx.adobe.com/jp/indesign/using/placing-graphics.html)してからかなりの時間待つ必要があります。 一方、ユーザーは InDesign の使用をブロックされます。 これにより、クリエイティブの流れが中断され、ユーザーエクスペリエンスに悪影響が出ます。 そこで、最初に小さいサイズのレンディションを InDesign ドキュメントに一時的に配置できるようになっています。 印刷ワークフローやパブリッシングワークフローなど、最終的な出力が必要な場合は、元のフル解像度のアセットがバックグラウンドで一時レンディションに置き換わります。 このバックグラウンドでの非同期更新により、設計プロセスが迅速化されて生産性が向上する一方、クリエイティブプロセスが妨げられることはありません。
 
 Adobe Experience Manager（AEM）には、配置専用（FPO）のレンディションが用意されています。 これらの FPO レンディションは、ファイルサイズは小さいですが、縦横比は同じです。 FPO レンディションがアセットに使用できない場合、Adobe InDesign は元のアセットを代わりに使用します。 このフォールバックメカニズムにより、クリエイティブワークフローは中断することなく確実に続行されます。
 
-## FPO レンディションを生成するための取り組み {#approach-to-generate-fpo-renditions}
+## FPO レンディションを生成するための方法 {#approach-to-generate-fpo-renditions}
 
 Experience Manager には、FPO レンディションの生成に使用できる画像処理方法が数多く用意されています。 最も一般的な 2 つの方法は、組み込みの Experience Manager ワークフローを使用する方法と ImageMagick を使用する方法です。 これらの 2 つの方法を使用して、新しくアップロードしたアセットと Experience Manager に存在するアセットのレンディション生成を設定します。
 
@@ -86,7 +98,7 @@ Experience Manager では、新しいアセットがアップロードされる�
 
 1. 「**[!UICONTROL 引数]**」タブの「**[!UICONTROL コマンド]**」セクションで、FPO レンディションを生成するための関連する ImageMagick コマンドを追加します。
 
-   次のコマンドの例では、JPEG 形式の FPO レンディションを生成し、72 PPI（10％画質設定）でダウンサンプリングを行い、出力をフラット化して複数レイヤーの Adobe Photoshop ファイルを処理します。
+   次のコマンドの例では、JPEG 形式の FPO レンディションを生成し、72 PPI にダウンサンプリングし、画質設定を 10％ にして、出力をフラット化することで複数レイヤーの Adobe Photoshop ファイルを処理します。
 
    `convert -quality 10% -units PixelsPerInch ${filename} -resample 72 -flatten cq5dam.fpo.jpeg`
 
@@ -104,7 +116,7 @@ Experience Manager ワークフローを使用して既存アセットの FPO �
 
 1. 意味のある「**[!UICONTROL タイトル]**」および「**[!UICONTROL 名前]**」を追加します。
 
-1. モデルを選択し、「**[!UICONTROL 編集]**」をクリックします。 **[!UICONTROL ページ情報]**／**[!UICONTROL プロパティを開く]**&#x200B;をクリックして、**[!UICONTROL 一時的なワークフロー]**&#x200B;を選択します。 これにより、拡張性とパフォーマンスが向上します。
+1. モデルを選択し、「**[!UICONTROL 編集]**」をクリックします。 **[!UICONTROL ページ情報]**／**[!UICONTROL プロパティを開く]**&#x200B;をクリックして、**[!UICONTROL 一時的なワークフロー]**&#x200B;を選択します。 これにより、スケーラビリティとパフォーマンスが向上します。
 
 1. 「**[!UICONTROL 保存]**」および「**[!UICONTROL 閉じる]**」をクリックします。
 

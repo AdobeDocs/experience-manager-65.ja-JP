@@ -9,13 +9,20 @@ role: Admin
 exl-id: 7e257b34-a0f5-47db-b1a9-e26333c287d9
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 1%
-
 ---
-
 # MongoDBのデモ用の設定方法 {#how-to-setup-mongodb-for-demo}
 
 ## はじめに {#introduction}
@@ -38,25 +45,25 @@ ht-degree: 1%
 
 * [https://www.mongodb.com/](https://www.mongodb.com/)からMongoDBをダウンロード
 
-   * OSの選択：
+  * OSの選択：
 
-      * Linux®
-      * Mac 10.8
-      * Windows 7
+    * Linux®
+    * Mac 10.8
+    * Windows 7
 
-   * バージョンの選択：
+  * バージョンの選択：
 
-      * 少なくとも、バージョン 2.6を使用する
+    * 少なくとも、バージョン 2.6を使用する
 
 * 基本設定
 
-   * MongoDBのインストール手順に従います。
-   * mongod用に設定：
+  * MongoDBのインストール手順に従います。
+  * mongod用に設定：
 
-      * MongosやShardingを設定する必要はありません。
+    * MongosやShardingを設定する必要はありません。
 
-   * インストールされたMongoDB フォルダーは&lt;mongo-install>という名前です。
-   * 定義されたデータディレクトリパスは&lt;mongo-dbpath>と呼ばれます。
+  * インストールされたMongoDB フォルダーは&lt;mongo-install>という名前です。
+  * 定義されたデータディレクトリパスは&lt;mongo-dbpath>と呼ばれます。
 
 * MongoDBは、AEMと同じホストで実行することも、リモートで実行することもできます。
 
@@ -79,16 +86,16 @@ ht-degree: 1%
 * `bin/mongod --port 27017 --dbpath data --replSet rs0&`
 * `bin/mongo`
 
-   * `cfg = {"_id": "rs0","version": 1,"members": [{"_id": 0,"host": "127.0.0.1:27017"}]}`
-   * `rs.initiate(cfg)`
+  * `cfg = {"_id": "rs0","version": 1,"members": [{"_id": 0,"host": "127.0.0.1:27017"}]}`
+  * `rs.initiate(cfg)`
 
 * `bin/mongod --port 27018 --dbpath data1 --replSet rs0&`
 * `bin/mongod --port 27019 --dbpath data2 --replSet rs0&`
 * `bin/mongo`
 
-   * `rs.add("127.0.0.1:27018")`
-   * `rs.add("127.0.0.1:27019")`
-   * `rs.status()`
+  * `rs.add("127.0.0.1:27018")`
+  * `rs.add("127.0.0.1:27019")`
+  * `rs.status()`
 
 ## Solr {#solr}
 
@@ -96,15 +103,15 @@ ht-degree: 1%
 
 * [Apache Lucene](https://archive.apache.org/dist/lucene/solr/)からSolrをダウンロード：
 
-   * 任意のOSに適しています。
-   * Solr バージョン 7.0。
-   * SolrにはJava™ 1.7以降が必要です。
+  * 任意のOSに適しています。
+  * Solr バージョン 7.0。
+  * SolrにはJava™ 1.7以降が必要です。
 
 * 基本設定
 
-   * 「example」 Solr設定に従います。
-   * サービスは必要ありません。
-   * インストールされたSolr フォルダーは&lt;solr-install>という名前です。
+  * 「example」 Solr設定に従います。
+  * サービスは必要ありません。
+  * インストールされたSolr フォルダーは&lt;solr-install>という名前です。
 
 ### AEM Communities用にSolrを設定 {#configure-solr-for-aem-communities}
 
@@ -124,7 +131,7 @@ Solrを実行する方法は、インストールのバージョンと方法に�
 
 このプロセスは、デフォルトのポート 8983を使用してSolr HTTP サーバーを開始します。 Solr コンソールを参照して、テスト用のSolr コンソールを取得できます。
 
-* デフォルトのSolr コンソール：[http://localhost:8983/solr/](http://localhost:8983/solr/)
+* 既定のSolr コンソール：[http://localhost:8983/solr/](http://localhost:8983/solr/)
 
 >[!NOTE]
 >

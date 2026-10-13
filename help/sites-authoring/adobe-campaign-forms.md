@@ -9,16 +9,33 @@ exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Developer
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+  - id: eb3ad9f8-54a2-45f3-abb1-d3976415a718
+    internal-label: Personalization
+  - id: 243139ec-8e41-5296-a287-31343ab1bc0f
+    internal-label: Integration
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 100%
-
+source-wordcount: '1295'
+ht-degree: 98%
 ---
+# AEM での Adobe Campaign フォームの作成 {#creating-adobe-campaign-forms-in-aem}
 
-# AEM での Adobe Campaign フォームの作成  {#creating-adobe-campaign-forms-in-aem}
-
-AEM では、web サイトで Adobe Campaign とやり取りするフォームを作成して使用できます。特定のフィールドをフォームに挿入して、Adobe Campaign データベースにマッピングできます。
+AEM では、web サイトで Adobe Campaign とやり取りするフォームを作成して使用できます。 特定のフィールドをフォームに挿入して、Adobe Campaign データベースにマッピングできます。
 
 新しい連絡先の購入、登録解除、ユーザープロファイルデータを管理し、そのデータを Adobe Campaign データベースに統合することができます。
 
@@ -34,11 +51,11 @@ AEM で Adobe Campaign フォームを使用するには、このドキュメン
 * サービスを購入
 * サービスを登録解除
 
-これらのフォームは、Adobe Campaign プロファイルの暗号化されたプライマリキーを受け入れる URL パラメーターを定義します。フォームはこの URL パラメーターに基づいて、関連付けられている Adobe Campaign プロファイルのデータを更新します。
+これらのフォームは、Adobe Campaign プロファイルの暗号化されたプライマリキーを受け入れる URL パラメーターを定義します。 フォームはこの URL パラメーターに基づいて、関連付けられている Adobe Campaign プロファイルのデータを更新します。
 
 一般的なユースケースでは、これらのフォームを個別に作成しますが、ニュースレターコンテンツ内でフォームページへのパーソナライズされたリンクを生成し、受信者がリンクを開いて自分のプロファイルデータ（登録解除、購入、プロファイルの更新など）を調整できるようにします。
 
-フォームは、ユーザーに基づいて自動的に更新されます。詳細情報は、[フォームコンテンツの編集](#editing-form-content)を参照してください。
+フォームは、ユーザーに基づいて自動的に更新されます。 詳細情報は、[フォームコンテンツの編集](#editing-form-content)を参照してください。
 
 ## テンプレートを使用可能にする {#making-a-template-available}
 
@@ -48,7 +65,7 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
 
 ## フォームの作成 {#creating-a-form}
 
-まず、オーサーインスタンスおよびパブリッシュインスタンスと Adobe Campaign の間の接続が有効であることを確認します。[Adobe Campaign Standard との統合](/help/sites-administering/campaignstandard.md)または [Adobe Campaign Classic との統合](/help/sites-administering/campaignonpremise.md)を参照してください。
+まず、オーサーインスタンスおよびパブリッシュインスタンスと Adobe Campaign の間の接続が有効であることを確認します。 [Adobe Campaign Standard との統合](/help/sites-administering/campaignstandard.md)または [Adobe Campaign Classic との統合](/help/sites-administering/campaignonpremise.md)を参照してください。
 
 >[!NOTE]
 >
@@ -64,23 +81,23 @@ Adobe Campaign 固有のフォームを作成する前に、AEM アプリケー�
    >
    >目的のテンプレートを使用できない場合は、[テンプレートを使用可能にする](/help/sites-developing/templates.md#template-availability)を参照してください。
 
-1. 「**名前**」フィールドにページ名を追加します。ページ名は有効な JCR 名である必要があります。
+1. 「**名前**」フィールドにページ名を追加します。 ページ名は有効な JCR 名である必要があります。
 1. 「**タイトル**」フィールドにタイトルを入力し、「**作成**」をクリックします。
 1. ページを開いて「**プロパティを開く**」を選択し、Cloud Service で Adobe Campaign 設定を追加し、チェックマークを選択して変更内容を保存します。
 
    ![chlimage_1-44](assets/chlimage_1-44a.png)
 
-1. ページ上の&#x200B;**フォーム開始**&#x200B;コンポーネントで、フォームのタイプ（**購入、登録解除**、**プロファイルを保存**）を選択します。選択できるタイプはフォームごとに 1 つだけです。これで[フォームのコンテンツを編集](#editing-form-content)できるようになりました。
+1. ページ上の&#x200B;**フォーム開始**&#x200B;コンポーネントで、フォームのタイプ（**購入、登録解除**、**プロファイルを保存**）を選択します。 選択できるタイプはフォームごとに 1 つだけです。 これで[フォームのコンテンツを編集](#editing-form-content)できるようになりました。
 
 ## フォームコンテンツの編集 {#editing-form-content}
 
-Adobe Campaign 専用のフォームには、固有のコンポーネントがあります。これらのコンポーネントでは、フォームの各フィールドを Adobe Campaign データベースのフィールドにリンクすることができます。
+Adobe Campaign 専用のフォームには、固有のコンポーネントがあります。 これらのコンポーネントでは、フォームの各フィールドを Adobe Campaign データベースのフィールドにリンクすることができます。
 
 >[!NOTE]
 >
 >目的のテンプレートを使用できない場合は、[テンプレートを使用可能にする](/help/sites-authoring/campaign.md)を参照してください。
 
-このセクションでは、Adobe Campaign へのリンクのみを取り上げます。Adobe Experience Manager でのフォームの使用方法に関する一般的な概要について詳しくは、[編集モードのコンポーネント](/help/sites-authoring/default-components-foundation.md)を参照してください。
+このセクションでは、Adobe Campaign へのリンクのみを取り上げます。 Adobe Experience Manager でのフォームの使用方法に関する一般的な概要について詳しくは、[編集モードのコンポーネント](/help/sites-authoring/default-components-foundation.md)を参照してください。
 
 1. 「**プロパティを開く**」を選択し、 Cloud Services に Adobe Campaign 設定を追加し、チェックマークを選択して変更内容を保存します。
 
@@ -90,23 +107,23 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
    ![chlimage_1-46](assets/chlimage_1-46a.png)
 
-1. 「**詳細**」タブをクリックして、フォームのタイプ（**購読、購読解除**&#x200B;または&#x200B;**プロファイルを保存**）を選択し、「**OK」をクリックします。**&#x200B;選択できるタイプはフォームごとに 1 つだけです。
+1. 「**詳細**」タブをクリックし、フォームのタイプを選択します（**登録、登録解除、**&#x200B;または&#x200B;**プロファイルを保存**&#x200B;して、**OK**&#x200B;をクリックします）。 選択できるタイプはフォームごとに 1 つだけです。
 
-   * **Adobe Campaign：プロファイルを保存**：Adobe Campaign で受信者を作成または更新できます（デフォルト値）。
+   * **Adobe Campaign：プロファイルを保存**：Adobe Campaign（デフォルト値）で受信者を作成または更新できます。
    * **Adobe Campaign：サービスを購入**：Adobe Campaign で受信者の購入を管理できます。
    * **Adobe Campaign：サービスの登録解除**：Adobe Campaign で受信者の登録をキャンセルできます。
 
-1. 各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。このコンポーネントでは、Adobe Campaign プロファイルの暗号化されたプライマリキーを受け入れるために使用する URL パラメーターを定義します。「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
-1. 「**暗号化されたプライマリキー**」コンポーネントをフォーム（任意の場所）にドラッグし、「**設定**」アイコンをクリックします。「**Adobe Campaign**」タブで、URL パラメーターに任意の名前を指定します。チェックマークをクリックして、変更を保存します。
+1. 各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。 このコンポーネントでは、Adobe Campaign プロファイルの暗号化されたプライマリキーを受け入れるために使用する URL パラメーターを定義します。 「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
+1. 「**暗号化されたプライマリキー**」コンポーネントをフォーム（任意の場所）にドラッグし、「**設定**」アイコンをクリックします。 「**Adobe Campaign**」タブで、URL パラメーターに任意の名前を指定します。 チェックマークをクリックして、変更を保存します。
 
-   このフォームへのリンクを生成するには、この URL パラメーターを使用して、Adobe Campaign プロファイルの暗号化されたプライマリキーを割り当てる必要があります。暗号化されたプライマリキーは、URL（パーセント）で適切にエンコードする必要があります。
+   このフォームへのリンクを生成するには、この URL パラメーターを使用して、Adobe Campaign プロファイルの暗号化されたプライマリキーを割り当てる必要があります。 暗号化されたプライマリキーは、URL（パーセント）で適切にエンコードする必要があります。
 
    ![chlimage_1-47](assets/chlimage_1-47a.png)
 
-1. 必要に応じて、「テキスト」フィールド、「日付」フィールド、「チェックボックス」フィールド、「オプション」フィールドなどのコンポーネントをこのフォームに追加します。各コンポーネントについての詳細情報は、[Adobe Campaign フォームコンポーネント](/help/sites-authoring/adobe-campaign-components.md)を参照してください。
-1. 設定アイコンをクリックして、コンポーネントを開きます。例えば、「**テキストフィールド（Campaign）**」コンポーネントで、タイトルとテキストを変更します。
+1. 必要に応じて、「テキスト」フィールド、「日付」フィールド、「チェックボックス」フィールド、「オプション」フィールドなどのコンポーネントをこのフォームに追加します。 各コンポーネントについての詳細情報は、[Adobe Campaign フォームコンポーネント](/help/sites-authoring/adobe-campaign-components.md)を参照してください。
+1. 設定アイコンをクリックして、コンポーネントを開きます。 例えば、「**テキストフィールド（Campaign）**」コンポーネントで、タイトルとテキストを変更します。
 
-   「**Adobe Campaign**」をクリックして、フォームフィールドを Adobe Campaign のメタデータ変数にマップします。フォームを送信すると、マッピングされたフィールドが Adobe Campaign で更新されます。変数ピッカーには、タイプが一致するフィールドのみが表示されます（「テキスト」フィールドの文字列変数など）。
+   「**Adobe Campaign**」をクリックして、フォームフィールドを Adobe Campaign のメタデータ変数にマップします。 フォームを送信すると、マッピングされたフィールドが Adobe Campaign で更新されます。 変数ピッカーには、タイプが一致するフィールドのみが表示されます（「テキスト」フィールドの文字列変数など）。
 
    ![chlimage_1-48](assets/chlimage_1-48a.png)
 
@@ -114,11 +131,11 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
    >
    >次の手順に従って、受信者テーブルに表示されているフィールドを追加または削除できます。[https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/](https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/)
 
-1. 「**ページを公開**」をクリックします。ページがサイト上でアクティベートされます。AEM パブリケーションインスタンスに移動すると、ページを表示できます。[フォームをテストする](#testing-a-form)こともできます。
+1. 「**ページを公開**」をクリックします。 ページがサイト上でアクティベートされます。 AEM パブリケーションインスタンスに移動すると、ページを表示できます。 [フォームをテストする](#testing-a-form)こともできます。
 
    >[!CAUTION]
    >
-   >公開時にフォームを使用できる状態にするには、Cloud Service の匿名ユーザーに読み取り権限を付与する必要があります。ただし、匿名ユーザーに読み取り権限を付与するとセキュリティ問題が発生する可能性があるので、必ず Dispatcher の設定などの対策を講じてこのリスクを低減するようにしてください。
+   >公開時にフォームを使用できる状態にするには、Cloud Service の匿名ユーザーに読み取り権限を付与する必要があります。 ただし、匿名ユーザーに読み取り権限を付与するとセキュリティ問題が発生する可能性があるので、必ず Dispatcher の設定などの対策を講じてこのリスクを低減するようにしてください。
 
 ## フォームのテスト {#testing-a-form}
 
@@ -126,9 +143,9 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
 >[!NOTE]
 >
->各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
+>各フォームには 1 つの&#x200B;**暗号化されたプライマリキー**&#x200B;が必要です。 「コンポーネント」で「Adobe Campaign」を選択すると、Adobe Campaign コンポーネントだけが表示されます。
 >
->この手順では EPK 番号を手動で入力しますが、実際には、ユーザーはニュースレター内でこのページへのリンク（登録解除、購入、プロファイルの更新）を取得します。EPK は、ユーザーに基づいて自動的に更新されます。
+>この手順では EPK 番号を手動で入力しますが、実際には、ユーザーはニュースレター内でこのページへのリンク（登録解除、購入、プロファイルの更新）を取得します。 EPK は、ユーザーに基づいて自動的に更新されます。
 >
 >そのようなリンクを作成するには、Adobe Campaign の EPK にリンクする可変の&#x200B;**メインリソース識別子**（Adobe Campaign Standard）または&#x200B;**暗号化された識別子**（Adobe Campaign Classic）を使用します（**テキストおよびパーソナライゼーション（Campaign）**&#x200B;コンポーネントなどで使用）。
 
@@ -136,10 +153,10 @@ Adobe Campaign 専用のフォームには、固有のコンポーネントが�
 
 1. Adobe Campaign プロファイルの暗号化されたプライマリキー（EPK）を取得するには：
 
-   * Adobe Campaign Standard では、**プロファイルおよびオーディエンス**／**プロファイル**&#x200B;に移動すると、既存のプロファイルが表示されます。テーブルの列に「**メインリソース識別子**」フィールドが表示されていることを確認します（「**リストを設定**」をクリックまたはタップして設定できます）。目的のプロファイルのメインリソース識別子をコピーします。
-   * Adobe Campaign Classic では、**プロファイルとターゲット**／**受信者**&#x200B;に移動すると、既存のプロファイルが表示されます。テーブルの列に「**暗号化された識別子**」フィールドが表示されていることを確認します（エントリを右クリックし、「**リストを設定...**」を選択して設定できます）。目的のプロファイルの暗号化された識別子をコピーします。
+   * Adobe Campaign Standard では、**プロファイルおよびオーディエンス**／**プロファイル**&#x200B;に移動すると、既存のプロファイルが表示されます。 テーブルの列に「**メインリソース識別子**」フィールドが表示されていることを確認します（「**リストを設定**」をクリックまたはタップして設定できます）。 目的のプロファイルのメインリソース識別子をコピーします。
+   * Adobe Campaign Classic では、**プロファイルとターゲット**／**受信者**&#x200B;に移動すると、既存のプロファイルが表示されます。 テーブルの列に「**暗号化された識別子**」フィールドが表示されていることを確認します（エントリを右クリックし、「**リストを設定...**」を選択して設定できます）。 目的のプロファイルの暗号化された識別子をコピーします。
 
 1. AEM で、パブリッシュインスタンス上のフォームページを開き、ステップ 1 で取得した EPK を URL パラメーターとして付加します。フォームのオーサリング時に EPK コンポーネントで事前に定義したものと同じ名前を使用してください（例：`?epk=...`）。
-1. これで、フォームを使用して、リンクされている Adobe Campaign プロファイルに関連付けられたデータと購読を変更できるようになりました。フィールドの一部を変更してフォームを送信すると、Adobe Campaign で適切なデータが更新されたことを確認できます。
+1. これで、フォームを使用して、リンクされている Adobe Campaign プロファイルに関連付けられたデータと購読を変更できるようになりました。 フィールドの一部を変更してフォームを送信すると、Adobe Campaign で適切なデータが更新されたことを確認できます。
 
 フォームの検証が完了すると、Adobe Campaign データベース内のデータが更新されます。

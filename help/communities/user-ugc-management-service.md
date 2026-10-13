@@ -10,13 +10,20 @@ role: Admin
 exl-id: 526ef0fa-3f20-4de4-8bc5-f435c60df0d0
 solution: Experience Manager
 feature: Communities
-source-git-commit: f4fc3b788d4128135ff77ebb87f1369059b1d2ec
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 5%
-
+source-wordcount: '628'
+ht-degree: 6%
 ---
-
 # AEM Communities のユーザーおよび UGC 管理サービス {#user-and-ugc-management-service-in-aem-communities}
 
 >[!IMPORTANT]

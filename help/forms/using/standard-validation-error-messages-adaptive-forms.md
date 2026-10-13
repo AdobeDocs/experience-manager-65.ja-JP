@@ -10,13 +10,29 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 54a76d5c-d19b-4026-b71c-7b9e862874bc
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 97%
-
+source-wordcount: '2537'
+ht-degree: 99%
 ---
-
 # アダプティブフォームのエラーハンドラー {#error-handlers-in-adaptive-form}
 
 <span class="preview"> [アダプティブフォームの新規作成](/help/forms/using/create-an-adaptive-form-core-components.md)または [AEM Sites ページへのアダプティブフォームの追加](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md)には、最新の拡張可能なデータキャプチャ[コアコンポーネント](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=ja)を使用することをお勧めします。 これらのコンポーネントは、アダプティブフォームの作成における大幅な進歩を表し、ユーザーエクスペリエンスの向上を実現します。 この記事では、基盤コンポーネントを使用してアダプティブフォームを作成する古い方法について説明します。</span>
@@ -52,7 +68,7 @@ AEM Forms には、すぐに使用できる、フォーム送信用のサクセ�
 ## 失敗／エラー応答形式 {#failure-response-format}
 
 サーバー検証エラーメッセージが次の標準形式の場合、アダプティブフォームはフィールドレベルでエラーを表示します。
-次のコードは、既存のエラー応答構造を示しています。
+次のコードは、既存の失敗応答構造を示しています。
 
 ```javascript
    {
@@ -105,19 +121,19 @@ AEM Forms バージョンの機能の改善とその後の更新に伴い、既�
 
 ここで、
 * `type (required)` は失敗のタイプを指定します。 次のいずれかの値になります。
-   * `SERVER_SIDE_VALIDATION` は、サーバーサイドの検証が原因でエラーが発生したことを示します。
-   * `FORM_SUBMISSION` は、フォームの送信中にエラーが発生したことを示します。
-   * `SERVICE_INVOCATION` は、サードパーティのサービスの呼び出し中にエラーが発生したことを示します。
-   * `FAILURE` は、一般的なエラーが発生したことを示します。
-   * `VALIDATION_ERROR` は、検証エラーが原因でエラーが発生したことを示します。
+  * `SERVER_SIDE_VALIDATION` は、サーバーサイドの検証が原因でエラーが発生したことを示します。
+  * `FORM_SUBMISSION` は、フォームの送信中にエラーが発生したことを示します。
+  * `SERVICE_INVOCATION` は、サードパーティのサービスの呼び出し中にエラーが発生したことを示します。
+  * `FAILURE` は、一般的なエラーが発生したことを示します。
+  * `VALIDATION_ERROR` は、検証エラーが原因でエラーが発生したことを示します。
 
 * `title (optional)` は、エラーのタイトルまたは簡単な説明を示します。
 * `detail (optional)` は、必要に応じて、エラーに関する追加の詳細を示します。
 * `instance (optional)` は、エラーに関連付けられたインスタンスまたは識別子を表し、特定のエラーの発生を追跡したり識別したりするのに役立ちます。
 * `validationErrors (required)` には、検証エラーに関する情報が含まれています。 次のフィールドが含まれています。
-   * `fieldname` は、検証条件を満たさなかったフィールドの SOM 式に言及します。
-   * `dataRef` は、検証に失敗したフィールドの JSON パスまたは XPath を表します。
-   * `details` には、検証エラーメッセージとエラーのあるフィールドが含まれています。
+  * `fieldname` は、検証条件を満たさなかったフィールドの SOM 式に言及します。
+  * `dataRef` は、検証に失敗したフィールドの JSON パスまたは XPath を表します。
+  * `details` には、検証エラーメッセージとエラーのあるフィールドが含まれています。
 * `originCode (optional)` は AEM によって追加されたフィールドで、外部サービスから返された http ステータスコードが含まれています。
 * `originMessage (optional)` は AEM によって追加されたフィールドで、外部サービスから返された生のエラーデータが含まれています。
 
@@ -202,8 +218,8 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 
 ### デフォルトのエラーハンドラー関数を追加 {#add-default-errror-handler}
 
-デフォルトのエラーハンドラーは、エラー応答が標準スキーマまたはサーバーサイド検証エラーの場合に、フィールドにエラーメッセージを表示するためにサポートされています。
-[&#x200B; ルールエディターのInvoke Service](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke) アクションを使用してデフォルトのエラーハンドラーを使用する方法を理解するには、**ペット ID**&#x200B;と&#x200B;**ペット名**&#x200B;の2つのフィールドを持つシンプルなアダプティブフォームの例を参照し、**ペット ID** フィールドでデフォルトのエラーハンドラーを使用して、外部サービスを呼び出すように設定されたREST エンドポイントが返す様々エラーを確認例：`200 - OK`、`404 - Not Found`、`400 - Bad Request`です。ルールエディターの「サービスを呼び出し」アクションを使用してデフォルトのエラーハンドラーを追加するには、次の手順を実行します。
+デフォルトのエラーハンドラーは、エラー応答が標準スキーマの場合、またはサーバーサイドの検証エラーの場合に、フィールドにエラーメッセージを表示する機能をサポートしています。
+[ルールエディターのサービスの呼び出し](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=ja#invoke)アクションを使用してデフォルトのエラーハンドラーを使用する方法を理解するために、「**ペット ID**」と「**ペット名**」という 2 つのフィールドがある簡単なアダプティブフォームの例を見てみましょう。「**ペット ID**」フィールドでデフォルトのエラーハンドラーを使用して、外部サービス（`200 - OK`、`404 - Not Found`、`400 - Bad Request` など）を呼び出すように設定された REST エンドポイントが返す様々なエラーを確認します。 ルールエディターのサービスの呼び出しアクションを使用してデフォルトのエラーハンドラーを追加するには、次の手順を実行します。
 
 1. アダプティブフォームをオーサリングモードで開き、フォームコンポーネントを選択してから、**[!UICONTROL ルールエディター]**&#x200B;を選択してルールエディターを開きます。
 1. 「**[!UICONTROL 作成]**」を選択します。
@@ -261,11 +277,11 @@ dataRef の値は、フォームコンポーネントの&#x200B;**[!UICONTROL �
 1. `js` フォルダーの下に `functions.js` という JavaScript ファイルを作成します。
 1. `clientlibs` フォルダーの下に `js.txt` というファイルを作成します。
 1. 変更を保存します。
-作成されたフォルダー構造は次のようになります。
+作成したフォルダー構造は次のようになります。
 
    ![作成されたクライアントライブラリフォルダー構造](/help/forms/using/assets/customclientlibrary_folderstructure.png)
-1. `functions.js` ファイルをダブルクリックして、エディターを開きます。ファイルには、カスタムエラーハンドラーのコードが含まれています。
-次のコードをJavaScript ファイルに追加して、REST サービスエンドポイントから受け取ったレスポンスとヘッダーをブラウザーコンソールに表示します。
+1. `functions.js` ファイルをダブルクリックして、エディターを開きます。 ファイルには、カスタムエラーハンドラーのコードが含まれています。
+次のコードを JavaScript ファイルに追加して、REST サービスエンドポイントから受け取った応答とヘッダーをブラウザーコンソールに表示します。
 
    ```javascript
        /**

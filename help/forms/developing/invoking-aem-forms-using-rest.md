@@ -9,13 +9,29 @@ role: Developer
 exl-id: 991fbc56-f144-4ae6-b010-8d02f780d347
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2399'
-ht-degree: 95%
-
+source-wordcount: '2508'
+ht-degree: 97%
 ---
-
 # REST リクエストを使用した AEM Forms の呼び出し {#invoking-aem-forms-using-rest-requests}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -51,7 +67,7 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
 
   HTTP POST メソッドを使用して Froms サービスが呼び出された場合、引数は HTTP リクエスト本文内に渡されます。 AEM Forms サービスの署名に文字列入力パラメーターがある場合、リクエスト本文には入力パラメーターのテキスト値を含めることができます。 サービスの署名で複数の文字列パラメーターが定義されている場合、リクエストは、フォームのフィールド名として使用されるパラメーターの名前を使用して、HTTP の `application/x-www-form-urlencoded` 表記に従うことができます。
 
-  Forms サービスが文字列パラメーターを返す場合、その結果は出力パラメーターのテキスト表現になります。サービスが複数の文字列パラメーターを返す場合、出力パラメーターを次の形式でエンコードしたXML ドキュメントが結果になります。
+  Forms サービスが文字列パラメーターを返す場合、結果は出力パラメーターのテキスト表現になります。 サービスが複数の文字列パラメーターを返す場合、結果は出力パラメーターを次の形式でエンコードする XML ドキュメントになります。
   ` <result> <output-paramater1>output-parameter-value-as-string</output-paramater1> . . . <output-paramaterN>output-parameter-value-as-string</output-paramaterN> </result>`
 
   >[!NOTE]
@@ -84,7 +100,7 @@ REST リクエストを使用してAEM Forms サービスを呼び出す場合�
 * ドキュメントのコンテンツを指す URL（リストが `com.adobe.idp.Document` オブジェクトで構成されている場合）
 
   次の例は、整数のリストである&#x200B;*リスト*という名前の単一の出力パラメーターを持つサービスから返される XML メッセージです。
-  ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`出力マップパラメーターは、マップ内の各レコードに1つの要素を持つ一連のXML要素として、結果のXML メッセージで表されます。すべての要素には、マップレコードのキーと同じ名前が付けられます。各要素の値は、マップレコードの値のテキスト表現（マップが文字列値を持つレコードで構成されている場合）またはドキュメントのコンテンツを指すURL （マップが`com.adobe.idp.Document`値を持つレコードで構成されている場合）です。 次に、`map`という名前の単一の出力パラメーターを持つサービスによって返されるXML メッセージの例を示します。このパラメーター値は、文字を`com.adobe.idp.Document` オブジェクトに関連付けるレコードで構成されるマップです。
+  ` <result>   <list>12345</list>   . . .   <list>67890</list>  </result>`出力マップパラメータは、結果の XML メッセージ内で、マップ内の各レコードに対して 1 つの要素を持つ一連の XML 要素として表されます。 すべての要素には、マップレコードのキーと同じ名前が付けられます。 各要素の値は、マップレコードの値のテキスト表現か（マップが文字列値を持つレコードで構成される場合）、ドキュメントのコンテンツを指す URL です（マップが `com.adobe.idp.Document` の値を持つレコードで構成される場合）。 次は、`map`という名前の単一の出力パラメーターを持つサービスが返す XML メッセージの例を示します。 このパラメーター値は、`com.adobe.idp.Document` オブジェクトを持つレターを関連付けるレコードから成るマップです。
   ` <result>   http://localhost:8080/DocumentManager/docm123/4567   . . .   <Z>http://localhost:8080/DocumentManager/docm987/6543</Z>  </result>  `
 
 ## 非同期呼び出し {#asynchronous-invocations}
@@ -296,7 +312,7 @@ REST を使用すると、*MyApplication/EncryptDocument* という名前の短�
 1. プロセスに渡された保護されていない PDF ドキュメントを取得します。 このアクションは `SetValue` 操作に基づいています。 このプロセスの入力パラメーターは、`inDoc` という名前の `document` プロセス変数です。
 1. PDF ドキュメントをパスワードで暗号化します。 このアクションは `PasswordEncryptPDF` 操作に基づいています。 パスワードで暗号化された PDF ドキュメントは、`outDoc` という名前のプロセス変数として返されます。
 
-   このプロセスが REST リクエストを使用して呼び出されると、暗号化された PDF ドキュメントが web ブラウザーに表示されます。 PDF ドキュメントを表示する前に、パスワードを指定します（セキュリティが無効になっていない場合）。 次の HTML コードは、 `MyApplication/EncryptDocument` プロセスへの REST 呼び出しリクエストを表しています。
+   このプロセスが REST リクエストを使用して呼び出されると、暗号化された PDF ドキュメントが web ブラウザーに表示されます。 PDF ドキュメントを表示する前に、パスワードを指定します（セキュリティが無効になっている場合を除きます）。 次の HTML コードは、 `MyApplication/EncryptDocument` プロセスへの REST 呼び出しリクエストを表しています。
 
    ```html
     <html>
@@ -319,7 +335,7 @@ REST リクエストを使用して、Acrobat から Forms プロセスを呼び
 
 次の図に示すように、ボタンの&#x200B;*送信先 URL* フィールド内でプロセスを呼び出す URL を指定します。
 
-プロセスを呼び出す完全なURLは、https://hiro-xp:8080/rest/services/MyApplication/EncryptDocumentです。
+プロセスを呼び出す完全なURLはhttps://hiro-xp:8080/rest/services/MyApplication/EncryptDocumentです。
 
 プロセスで PDF ドキュメントを入力値として必要とする場合は、前の図に示すように、必ず PDF としてフォームを送信してください。 また、プロセスを正常に呼び出すには、プロセスが PDF ドキュメントを返す必要があります。 そうしないと、Acrobat は戻り値を処理できず、エラーが発生します。 入力プロセス変数の名前を指定する必要はありません。 例えば、*MyApplication/EncryptDocument* プロセスには、`inDoc` という入力変数があります。 フォームが PDF として送信されている限り、inDoc を指定する必要はありません。
 

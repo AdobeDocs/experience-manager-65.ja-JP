@@ -4,13 +4,19 @@ description: ユニバーサルエディターの柔軟性と、AEM 6.5 を使�
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 28e44586c6a8596037a44fa10d21b3fdcdea1606
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 96%
-
 ---
-
 
 # ユニバーサルエディター {#universal-editor}
 
@@ -40,15 +46,15 @@ ht-degree: 96%
 ユニバーサルエディターは、以下でサポートされています。
 
 * AEM 6.5
-   * オンプレミスとAMS*の両方のホスティングがサポートされています。
+  * オンプレミスとAMS*の両方のホスティングがサポートされています。
 * [AEM 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction)
-   * オンプレミスとAMS*の両方のホスティングがサポートされています。
+  * オンプレミスとAMS*の両方のホスティングがサポートされています。
 * [AEM as a Cloud Service](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction)
 
 このドキュメントでは、ユニバーサルエディターの AEM 6.5 のサポートに焦点を当てています。 AEM 6.5 でユニバーサルエディターを使用するには、次が必要です。
 
 * AEM 6.5 サービスパック 23 以降
-   * サービスパック 21 および 22 は、[機能パック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)でもサポートされます。
+  * サービスパック 21 および 22 は、[機能パック](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)でもサポートされます。
 * Dispatcher が適切に設定されている
 
 >[!NOTE]
@@ -129,11 +135,11 @@ ht-degree: 96%
 マッピングの例：
 
 * AEM オーサーの `/content/foo` の下にあるすべてのページを開きます。
-   * `/content/foo:${author}${path}.html?login-token=${token}`
-   * これにより、`https://localhost:4502/content/foo/x.html?login-token=<token>` が開きます。
+  * `/content/foo:${author}${path}.html?login-token=${token}`
+  * これにより、`https://localhost:4502/content/foo/x.html?login-token=<token>` が開きます。
 * リモート NextJS サーバー上の `/content/bar` の下にあるすべてのページを開き、すべての変数を情報として指定します
-   * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
-   * これにより、`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>` が開きます。
+  * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
+  * これにより、`https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>` が開きます。
 
 ### ユニバーサルエディターサービスの設定 {#set-up-ue}
 

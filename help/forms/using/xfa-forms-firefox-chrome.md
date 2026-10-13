@@ -9,18 +9,30 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: 31b52a82-5062-403e-bba7-e6a7e32ee961
-source-git-commit: 913e249ba52f1ee262ed78167ce3b2a857e86213
-workflow-type: ht
-source-wordcount: '287'
-ht-degree: 100%
-
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 95%
 ---
-
 # Firefox と Chrome で XFA ベースの PDF フォームを開く方法
 
 ## 問題
 
-Mozilla Firefox および Google Chrome に導入された組み込みの PDF ビューアは、XFA ベースの PDF フォームをサポートしていません。したがって、XFA ベースの PDF フォームは、Firefox および Chrome の以降のバージョンでは開きません。
+Mozilla Firefox および Google Chrome に導入された組み込みの PDF ビューアは、XFA ベースの PDF フォームをサポートしていません。 したがって、XFA ベースの PDF フォームは、Firefox および Chrome の以降のバージョンでは開きません。
 
 ## 解決策
 
@@ -49,12 +61,12 @@ Firefox および Chrome で XFA ベースの PDF フォームを使用するに
 1. Chrome で、chrome://plugins/ に移動します。
 
 1. Chrome PDF ビューアで「無効にする」をクリックしてから、Adobe PDF プラグインで「有効にする」をクリックします。
-   ![Chrome PDF ビューア](/help/forms/using/assets/chrome-image.png)
-詳しくは、Google の [Adobe PDF プラグイン](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)のドキュメントを参照してください。
+   ![chrome-pdf-viewer](/help/forms/using/assets/chrome-image.png)
+   詳しくは、Googleによる[Adobe PDF プラグイン &#x200B;](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538)のドキュメントを参照してください。
 
 >[!NOTE]
 > 
-> LiveCycle ES4 は、iPad のようなモバイルデバイスで動作するブラウザーなど、HTML5 をサポートしているブラウザーでフォームを開くことができるように、XFA ベースのフォームを HTML5 にレンダリングするサポートを提供しています。フォームの HTML5 レンディションは、フォームデザインのレイアウトを保持し、XFA フォームテンプレートに埋め込まれたほとんどのフォームロジック（JavaScript、フォーム計算、フォーム検証など）をサポートします。この方法により、XFA フォームに対するテクノロジー投資は、Adobe Reader プラグインの実行が不可能なデバイスに簡単に引き継がれます。
-> >詳しくは、[LiveCycle 製品ドキュメント](https://business.adobe.com/jp/products/experience-manager/forms/aem-forms.html)を参照してください。
+> LiveCycle ES4 は、iPad のようなモバイルデバイスで動作するブラウザーなど、HTML5 をサポートしているブラウザーでフォームを開くことができるように、XFA ベースのフォームを HTML5 にレンダリングするサポートを提供しています。 フォームの HTML5 レンディションは、フォームデザインのレイアウトを保持し、XFA フォームテンプレートに埋め込まれたほとんどのフォームロジック（JavaScript、フォーム計算、フォーム検証など）をサポートします。 この方法により、XFA フォームに対するテクノロジー投資は、Adobe Reader プラグインの実行が不可能なデバイスに簡単に引き継がれます。
+>詳しくは、[LiveCycle 製品ドキュメント](https://business.adobe.com/jp/products/experience-manager/forms/aem-forms.html)を参照してください。
 
 [法律上の注意](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [オンラインプライバシーポリシー](https://www.adobe.com/jp/privacy.html)

@@ -9,16 +9,25 @@ exl-id: 5b934e3a-f554-46ec-a913-8d570abb1503
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 100%
-
+source-wordcount: '834'
+ht-degree: 97%
 ---
-
 # ダッシュボード{#dashboards}
 
-AEM の使用時、ページやアセットなど様々なタイプの多数のコンテンツを管理できます。AEM ダッシュボードの簡単でカスタマイズ可能な方法を使用して、統合されたデータを表示するページを定義できます。
+AEM の使用時、ページやアセットなど様々なタイプの多数のコンテンツを管理できます。 AEM ダッシュボードの簡単でカスタマイズ可能な方法を使用して、統合されたデータを表示するページを定義できます。
 
 >[!NOTE]
 >
@@ -40,7 +49,7 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 
 ### ダッシュボードのクローン作成 {#cloning-a-dashboard}
 
-複数のダッシュボードを作成して、コンテンツについての情報を様々な表示からすばやく確認することができます。新しいダッシュボードを作成しやすくするために、AEM ではクローン機能が提供されています。この機能を使用して既存のダッシュボードを複製できます。ダッシュボードのクローンを作成するには、次の手順を実行します。
+複数のダッシュボードを作成して、コンテンツについての情報を様々な表示からすばやく確認することができます。 新しいダッシュボードを作成しやすくするために、AEM ではクローン機能が提供されています。この機能を使用して既存のダッシュボードを複製できます。 ダッシュボードのクローンを作成するには、次の手順を実行します。
 
 1. 「**ツール**」セクションで、「**設定コンソール**」をクリックします。
 
@@ -66,11 +75,11 @@ AEM の使用時、ページやアセットなど様々なタイプの多数の�
 
 ### 概要 {#overview}
 
-ダッシュボードコンポーネントは、通常の [AEM コンポーネント](/help/sites-developing/developing-components-samples.md)にすぎません。ここでは、AEM に付属しているレポート用コンポーネントについて説明します。
+ダッシュボードコンポーネントは、通常の[AEM コンポーネント &#x200B;](/help/sites-developing/developing-components-samples.md)に過ぎません。 この節では、AEMに付属のレポートコンポーネントについて説明します。
 
 ### Web 分析レポート用コンポーネント {#web-analytics-reporting-components}
 
-AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) データの複数の指標をレンダリングする一連のコンポーネントが付属しています。これらのコンポーネントは、サイドキックの「**ダッシュボード**」セクションに一覧表示されます。
+AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) データの複数の指標をレンダリングする一連のコンポーネントが付属しています。 これらのコンポーネントは、サイドキックの「**ダッシュボード**」セクションに一覧表示されます。
 
 レポート用コンポーネントにはそれぞれ少なくとも次の 3 つのタブがあります。
 
@@ -89,13 +98,13 @@ AEM には、[SiteCatalyst](/help/sites-administering/adobeanalytics.md) デー�
 
 **リクエストタイプ**：データをリクエストする方法。
 
-**SiteCatalyst 設定（オプション）**：SiteCatalyst との接続に使用する設定。指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
+**SiteCatalyst 設定（オプション）**：SiteCatalyst との接続に使用する設定。 指定がない場合、ダッシュボードページで（ページプロパティによって）設定されると見なされます。
 
 **レポートスイート ID （オプション）**：グラフの生成に使用する SiteCatalyst レポートスイート。
 
 #### レポート設定 {#report-configuration}
 
-Web 統計を表示するために、取得するデータの日付範囲を定義する必要があります。「**レポート**」タブにある 2 つのフィールドを使用して、日付範囲を定義できます。
+Web 統計を表示するために、取得するデータの日付範囲を定義する必要があります。 「**レポート**」タブにある 2 つのフィールドを使用して、日付範囲を定義できます。
 
 >[!NOTE]
 >
@@ -117,7 +126,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **要素**：グラフ内のメトリクスデータを細分化する要素のリスト。
 
-#### ランクリストレポート {#ranked-list-report}
+#### ランキングリストレポート {#ranked-list-report}
 
 ![chlimage_1-27](assets/chlimage_1-27a.png)
 
@@ -127,7 +136,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 **不可. 上位項目の数**：レポートで表示する項目の数。
 
-#### ランクレポート {#ranked-report}
+#### ランキングレポート {#ranked-report}
 
 ![chlimage_1-28](assets/chlimage_1-28a.png)
 
@@ -163,9 +172,9 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ### ダッシュボードテンプレートの作成 {#creating-a-dashboard-template}
 
-テンプレートは、新しいダッシュボードのデフォルトのコンテンツを定義するものです。様々なタイプのダッシュボードを作成するために、複数のテンプレートを使用できます。
+テンプレートは、新しいダッシュボードのデフォルトのコンテンツを定義するものです。 様々なタイプのダッシュボードを作成するために、複数のテンプレートを使用できます。
 
-ダッシュボードテンプレートはその他のページテンプレートと同様に作成されますが、`/libs/cq/dashboards/templates/` に保存される点が異なります。[contentpage テンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)の節を参照してください。
+ダッシュボードテンプレートはその他のページテンプレートと同様に作成されますが、`/libs/cq/dashboards/templates/` に保存される点が異なります。 [contentpage テンプレートの作成](/help/sites-developing/website.md#creating-the-contentpage-template)の節を参照してください。
 
 >[!NOTE]
 >
@@ -173,7 +182,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 ### ダッシュボードコンポーネントの開発 {#developing-a-dashboard-component}
 
-ダッシュボードコンポーネントの開発は、通常の AEM コンポーネントの作成から成り立っています。ここでは、作成者の上位 10 人を表示するコンポーネントを例に説明します。
+ダッシュボードコンポーネントの開発は、通常の AEM コンポーネントの作成から成り立っています。 ここでは、作成者の上位 10 人を表示するコンポーネントを例に説明します。
 
 ![chlimage_1-31](assets/chlimage_1-31a.png)
 
@@ -187,7 +196,7 @@ Web 統計を表示するために、取得するデータの日付範囲を定�
 
 次の JavaScript ファイルは、`geout.reporting.topauthors` の[クライアントライブラリ](/help/sites-developing/clientlibs.md)でコンポーネントの子として定義されます。
 
-[QueryBuilder](/help/sites-developing/querybuilder-api.md) を使用してリポジトリに対してクエリを実行し、`cq:AuditEvent` ノードを読み取ります。クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
+[QueryBuilder](/help/sites-developing/querybuilder-api.md) を使用してリポジトリに対してクエリを実行し、`cq:AuditEvent` ノードを読み取ります。 クエリの結果として JSON オブジェクトが返され、このオブジェクトから作成者の貢献度が抽出されます。
 
 #### top_authors.js {#top-authors-js}
 

@@ -9,13 +9,29 @@ role: Developer
 exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 95%
-
 ---
-
 # User Manager Java API クイックスタート（SOAP） {#user-manager-java-api-quick-start-soap}
 
 User Manager API で Java API クイックスタート（SOAP）を使用できます。
@@ -523,7 +539,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用したプログラムによるユーザーの同期 {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-次の Java コードの例では、User Management API を使用してユーザーを同期します （[プログラムによるユーザーの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)を参照）。
+次の Java コードの例では、User Management API を使用してユーザーを同期します。 （[プログラムによるユーザーの同期](/help/forms/developing/users.md#programmatically-synchronizing-users)を参照）。
 
 ```java
  /*

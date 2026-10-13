@@ -1,21 +1,34 @@
 ---
 title: Forms をレンダリングする web アプリケーションの作成
-
 description: Java サーブレットを使用して Forms サービスを呼び出し、フォームをレンダリングする web ベースのアプリケーションを作成します。 Java サーブレットは、フォームを返す Forms サービスとクライアント Web ブラウザーの間のリンクとして機能します。
-
-
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/rendering_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: operations
-
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
 solution: Experience Manager, Experience Manager Forms
-
 feature: Adaptive Forms,Workbench,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 36ac8e9c-5c7a-56d8-af5e-39399fd7b101
+    internal-label: Workbench
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1870'
 ht-degree: 98%
@@ -34,7 +47,7 @@ Java サーブレットを使用して Forms サービスを呼び出し、フ�
 
 Java サーブレットを使用すると、顧客がフォームにデータを表示して入力できるように、フォームをクライアント Web ブラウザーに書き込むことができます。 フォームにデータを入力した後、Web ユーザーはフォーム上の送信ボタンをクリックして、情報を Java サーブレットに送り返し、データを取得して処理できます。 例えば、別のプロセスにデータを送信できます。
 
-ここでは、次の図に示すように、米国ベースのフォームデータとカナダベースのフォームデータのいずれかを選択できる Web ベースのアプリケーションを作成する方法について説明します。
+ここでは、次の図に示すように、米国ベースのフォームデータとカナダベースのフォームデータのいずれかを選択できる web ベースのアプリケーションを作成する方法について説明します。
 
 ![cw_cw_fragmentwebclient](assets/cw_cw_fragmentwebclient.png)
 

@@ -1,6 +1,6 @@
 ---
 title: PDF/A ドキュメントの操作
-description: DocConverter サービスを使用して、PDF ドキュメントが PDF/A ドキュメントかどうかを判断し、PDF ドキュメントであればこれを PDF/A ドキュメントに変換します。
+description: DocConverter サービスを使用して、PDF ドキュメントが PDF/A ドキュメントかどうかを判断し、PDF ドキュメントを PDF/A ドキュメントに変換します。
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,33 +9,49 @@ role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: 4df88fc37b86b6ff3b3a9b788c91b61e2aa7b07f
-workflow-type: ht
-source-wordcount: '2347'
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 516393bc-fa69-5e74-a04e-f7ec9ffe2c5e
+    internal-label: APIs & Integrations
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '2398'
 ht-degree: 100%
-
 ---
-
 # PDF/A ドキュメントの操作 {#working-with-pdf-a-documents}
 
 **DocConverter サービスについて**
 
-DocConverter サービスは、PDF ドキュメントを PDA/A ドキュメントに変換できます。このサービスを使用して、次のタスクを実行できます。
+DocConverter サービスは、PDF ドキュメントを PDA/A ドキュメントに変換できます。 このサービスを使用して、次のタスクを実行できます。
 
-* PDF ドキュメントを PDF/A ドキュメントに変換する（[ドキュメントを PDF/A ドキュメントに変換する](pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照。）
-* PDF ドキュメントが PDF/A ドキュメントかどうかを判断する（[プログラムによる PDF/A の適合性の判断](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照。）
+* PDF ドキュメントを PDF/A ドキュメントに変換する （[ドキュメントを PDF/A ドキュメントに変換する](pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照。）
+* PDF ドキュメントが PDF/A ドキュメントかどうかを判断する （[プログラムによる PDF/A の適合性の判断](pdf-a-documents.md#programmatically-determining-pdf-a-compliancy)を参照。）
 
 >[!NOTE]
 >
 >DocConverter サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
-## ドキュメントを PDF/A ドキュメントに変換する {#converting-documents-to-pdf-a-documents}
+## ドキュメントの PDF/A ドキュメントへの変換 {#converting-documents-to-pdf-a-documents}
 
-DocConverter サービスを使用して、PDF ドキュメントを PDF/A ドキュメントに変換できます。PDF/A はドキュメントの内容を長期保存するためのアーカイブ形式なので、すべてのフォントが埋め込まれ、ファイルが非圧縮になります。変換の結果、PDF/A ドキュメントのサイズは通常、標準の PDF ドキュメントより大きくなります。なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。PDF ドキュメントを PDF/A ドキュメントに変換する前に、PDF ドキュメントが PDF/A ドキュメントでないことを確認してください。
+DocConverter サービスを使用して、PDF ドキュメントを PDF/A ドキュメントに変換できます。 PDF/A はドキュメントの内容を長期保存するためのアーカイブ形式なので、すべてのフォントが埋め込まれ、ファイルが非圧縮になります。 その結果、通常、PDF/A ドキュメントは標準の PDF ドキュメントよりも大きくなります。 なお、PDF/A ドキュメントには、オーディオおよびビデオのコンテンツは含まれません。 PDF ドキュメントを PDF/A ドキュメントに変換する前に、PDF ドキュメントが PDF/A ドキュメントでないことを確認してください。
 
-PDF/A-1 仕様は、A と B という 2 つの適合レベルで構成されます。2 つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベル B には必要ありません。いずれの適合レベルであれ、PDF/A-1 では、生成された PDF/A ドキュメントにすべてのフォントが埋め込まれます。現時点では、検証（および変換）では PDF/A-1b のみがサポートされています。
+PDF/A-1 仕様は、A と B という 2 つの適合レベルで構成されます。2 つの主な違いは、論理構造（アクセシビリティ）のサポートに関するもので、適合レベル B には必要ありません。いずれの適合レベルであれ、PDF/A-1 では、生成された PDF/A ドキュメントにすべてのフォントが埋め込まれます。 現時点では、検証（および変換）では PDF/A-1b のみがサポートされています。
 
-PDF/A は PDFドキュメントをアーカイブするときの標準ですが、標準の PDF ドキュメントが会社の要件に適合している場合は、アーカイブに PDF/A を使用する必要はありません。PDF/A 規格の目的は、長期的なアーカイブやドキュメントの保存のニーズに対応できる PDF ファイルを構築することです。
+PDF/A は PDFドキュメントをアーカイブするときの標準ですが、標準の PDF ドキュメントが会社の要件に適合している場合は、アーカイブに PDF/A を使用する必要はありません。 PDF/A 規格の目的は、長期的なアーカイブやドキュメントの保存のニーズに対応できる PDF ファイルを構築することです。
 
 サポートされる PDF/A 準拠標準には、PDF/A-1a、1b、2a、2b、3a、3b が含まれます。
 
@@ -49,14 +65,14 @@ PDF ドキュメントを PDF/A ドキュメントに変換するには、次の
 
 1. プロジェクトファイルを含めます。
 1. DocConvert クライアントの作成
-1. PDF ドキュメントを参照して、PDF/A ドキュメントに変換します。
+1. PDF/A ドキュメントに変換する PDF ドキュメントを参照します。
 1. トラッキング情報を設定します。
 1. ドキュメントを変換します。
 1. PDF/A ドキュメントを保存します。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -70,19 +86,19 @@ PDF ドキュメントを PDF/A ドキュメントに変換するには、次の
 
 **DocConvert クライアントの作成**
 
-DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。Java API を使用する場合は、`DocConverterServiceClient` オブジェクトを作成します。DocConverter web サービス API を使用している場合は、 `DocConverterServiceService` オブジェクトを作成してください。
+DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。 Java API を使用する場合は、`DocConverterServiceClient` オブジェクトを作成します。 DocConverter web サービス API を使用している場合は、 `DocConverterServiceService` オブジェクトを作成してください。
 
 **PDF ドキュメントを参照して PDF/A ドキュメントに変換**
 
-PDF ドキュメントを取得して PDF/A ドキュメントに変換します。Acrobat フォームなどの PDF ドキュメントを PDF/A ドキュメントに変換しようとすると、例外が発生します。
+PDF ドキュメントを取得して PDF/A ドキュメントに変換します。 Acrobat フォームなどの PDF ドキュメントを PDF/A ドキュメントに変換しようとすると、例外が発生します。
 
 **トラッキング情報を設定**
 
-変換処理中に追跡する情報の量を指定する実行時オプションを設定できます。つまり、PDF ドキュメントを PDF/A ドキュメントに変換する際に DocConverter サービスが追跡する情報の量を 9 つの異なるレベルで設定できます。
+変換処理中に追跡する情報の量を指定する実行時オプションを設定できます。 つまり、PDF ドキュメントを PDF/A ドキュメントに変換する際に DocConverter サービスが追跡する情報の量を 9 つの異なるレベルで設定できます。
 
 **ドキュメントを変換**
 
-DocConverter サービスクライアントを作成して、変換する PDF ドキュメントを参照しながら、追跡すべき情報の量を指定する実行時オプションを設定した後、PDF ドキュメントをPDF/A ドキュメントに変換できます。
+DocConverter サービスクライアントを作成し、変換する PDF ドキュメントを参照して、追跡される情報量を指定する実行時オプションを設定した後、PDF ドキュメントを PDF/A ドキュメントに変換できます。
 
 **PDF/A ドキュメントを保存**
 
@@ -110,18 +126,18 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 
 1. DocConvert クライアントの作成
 
-   * 接続プロパティを含む`ServiceClientFactory`オブジェクトを作成します。
-   * コンストラクターを使用し、`DocConverterServiceClient` オブジェクトを渡すことによって、`ServiceClientFactory` オブジェクトを作成します。
+   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
+   * コンストラクタを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`DocConverterServiceClient` オブジェクトを作成します。
 
 1. PDF ドキュメントを参照して PDF/A ドキュメントに変換
 
-   * コンストラクターを使用して、変換ファイルの場所を指定する文字列値を渡すことによって、変換する PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用して、PDF ファイルの場所を指定する文字列値を渡すことにより、変換するインタラクティブ PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクターを使用し、`java.io.FileInputStream` オブジェクトを渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. トラッキング情報を設定
 
    * コンストラクターを使用して `PDFAConversionOptionSpec` オブジェクトを作成します。
-   * `PDFAConversionOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡すことにより、情報のトラッキングレベルを設定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
+   * `PDFAConversionOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡すことにより、情報のトラッキングレベルを設定します。 例えば、値 `FINE` を渡します。 様々な値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
 
 1. ドキュメントを変換
 
@@ -134,9 +150,9 @@ Java API を使用して、PDF ドキュメントを PDF/A ドキュメントに
 
 1. PDF/A ドキュメントを保存
 
-   * `PDFAConversionResult` オブジェクトの `getPDFA` メソッドを呼び出して PDF/A ドキュメントを取得します。このメソッドは、PDF/A ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
-   * PDF/A ファイルを表す `java.io.File` オブジェクトを作成します。ファイル名の拡張子が .pdf であることを確認します。
-   *  `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDF/A データをファイルに入力します。
+   * `PDFAConversionResult` オブジェクトの `getPDFA` メソッドを呼び出して PDF/A ドキュメントを取得します。 このメソッドは、PDF/A ドキュメントを表す `com.adobe.idp.Document` オブジェクトを返します。
+   * PDF/A ファイルを表す `java.io.File` オブジェクトを作成します。 ファイル名の拡張子が .pdf であることを確認します。
+   * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して `java.io.File` オブジェクトを渡すことによって、PDF/A データをファイルに入力します。
 
 **関連トピック**
 
@@ -164,16 +180,16 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
 
 1. PDF ドキュメントを参照して PDF/A ドキュメントに変換
 
-   * コンストラクターを使用して `BLOB` オブジェクトを作成します。`BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
+   * コンストラクターを使用して `BLOB` オブジェクトを作成します。 `BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、暗号化する PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
-   * `binaryData` プロパティにバイト配列のコンテンツを割り当てることによって `BLOB` オブジェクトを設定します。
+   * `binaryData` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを入力します。
 
 1. トラッキング情報を設定
 
    * コンストラクターを使用して `PDFAConversionOptionSpec` オブジェクトを作成します。
-   * トラッキングレベルを指定する値を `PDFAConversionOptionSpec` オブジェクトの `logLevel` データメンバーに割り当てることによって、情報トラッキングレベルを設定します。例えば、`FINE` の値をこのデータメンバーに割り当てます。
+   * トラッキングレベルを指定する値を `PDFAConversionOptionSpec` オブジェクトの `logLevel` データメンバーに割り当てることによって、情報トラッキングレベルを設定します。 例えば、`FINE` の値をこのデータメンバーに割り当てます。
 
 1. ドキュメントを変換
 
@@ -187,10 +203,10 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
 1. PDF/A ドキュメントを保存
 
    * PDF/A ドキュメントを格納する `BLOB` オブジェクトを作成するには、`PDFAConversionResult` オブジェクトの `PDFADocument` データメンバーの値を取得します。
-   * `PDFAConversionResult` オブジェクトを使用して、返された `BLOB` オブジェクトの内容を格納するバイト配列を作成します。`BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列に入力します。
+   * `PDFAConversionResult` オブジェクトを使用して、返された `BLOB` オブジェクトの内容を格納するバイト配列を作成します。 `BLOB` オブジェクトの `binaryData` データメンバーの値を取得して、バイト配列に入力します。
    * `System.IO.FileStream` オブジェクトを作成するには、そのコンストラクターを呼び出し、PDF/A ドキュメントのファイルの場所を表す文字列の値を渡します。
-   * コンストラクターを使用して `System.IO.FileStream` オブジェクトを渡すことにより、`System.IO.BinaryWriter` オブジェクトを作成します。
-   * `System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡すことによって、バイト配列の内容を PDF ファイルに書き込みます。
+   * コンストラクターを呼び出し、`System.IO.FileStream` オブジェクトを渡すことによって、`System.IO.BinaryWriter` オブジェクトを作成します。
+   * バイト配列のコンテンツを PDF ファイルに書き込むには、`System.IO.BinaryWriter` オブジェクトの `Write` メソッドを呼び出して、バイト配列を渡してください。
 
 **関連トピック**
 
@@ -202,7 +218,7 @@ DocConverter API（web サービス）を使用して、PDF ドキュメント�
 
 ## プログラムによる PDF/A 準拠の判別 {#programmatically-determining-pdf-a-compliancy}
 
-DocConverter サービスを使用すると、PDF ドキュメントが PDF/A に準拠しているかどうかを検証できます。PDF/A ドキュメントの詳細と、PDF ドキュメントを PDF/A ドキュメントに変換する方法について詳しくは、[ドキュメントを PDF/A ドキュメントに変換](pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照してください。
+DocConverter サービスを使用すると、PDF ドキュメントが PDF/A に準拠しているかどうかを検証できます。 PDF/A ドキュメントの詳細と、PDF ドキュメントを PDF/A ドキュメントに変換する方法について詳しくは、[ドキュメントを PDF/A ドキュメントに変換](pdf-a-documents.md#converting-documents-to-pdf-a-documents)を参照してください。
 
 >[!NOTE]
 >
@@ -220,7 +236,7 @@ PDF/A 準拠を判断するには、次の手順に従います。
 
 **プロジェクトファイルを含める**
 
-必要なファイルを開発プロジェクトに含めます。Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
+必要なファイルを開発プロジェクトに含めます。 Java を使用してクライアントアプリケーションを作成する場合は、必要な JAR ファイルを含めます。 Web サービスを使用している場合は、必ずプロキシファイルを含めてください。
 
 次の JAR ファイルをプロジェクトのクラスパスに追加する必要があります。
 
@@ -234,7 +250,7 @@ PDF/A 準拠を判断するには、次の手順に従います。
 
 **DocConvert クライアントの作成**
 
-DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。Java API を使用する場合は、`DocConverterServiceClient` オブジェクトを作成します。DocConverter web サービス API を使用する場合は、`DocConverterServiceService` オブジェクトを作成してください。
+DocConverter の操作をプログラム的に実行する前に、DocConverter クライアントを作成する必要があります。 Java API を使用する場合は、`DocConverterServiceClient` オブジェクトを作成します。 DocConverter web サービス API を使用している場合は、 `DocConverterServiceService` オブジェクトを作成してください。
 
 **PDF/A 準拠の判断に使用する PDFドキュメントを参照**
 
@@ -242,7 +258,7 @@ PDF ドキュメントが PDF/ A に準拠しているかどうかを判断す�
 
 **実行時オプションの設定**
 
-変換処理中に追跡する情報の量を指定する実行時オプションを設定できます。つまり、PDF ドキュメントを PDF/A ドキュメントに変換する際に DocConverter サービスが追跡する情報の量を 9 つの異なるレベルで設定できます。
+変換処理中に追跡する情報の量を指定する実行時オプションを設定できます。 つまり、PDF ドキュメントを PDF/A ドキュメントに変換する際に DocConverter サービスが追跡する情報の量を 9 つの異なるレベルで設定できます。
 
 **PDF ドキュメントに関する情報を取得**
 
@@ -250,7 +266,7 @@ DocConverter サービスクライアントを作成し、PDFドキュメント�
 
 **関連トピック**
 
-[Java API を使用して PDF/A の準拠を判断](pdf-a-documents.md#determine-pdf-a-compliancy-using-the-java-api)
+[Java API を使用した PDF/A 準拠の判別](pdf-a-documents.md#determine-pdf-a-compliancy-using-the-java-api)
 
 [Web サービス API を使用した PDF/A の準拠の判断](pdf-a-documents.md#determine-pdf-a-compliancy-using-the-web-service-api)
 
@@ -268,19 +284,19 @@ Java API を使用して PDF/A の準拠を判断します。
 
 1. DocConvert クライアントの作成
 
-   * 接続プロパティが格納された `ServiceClientFactory` オブジェクトを作成します。
-   * コンストラクターを使用して `ServiceClientFactory` オブジェクトを渡し、`DocConverterServiceClient` オブジェクトを作成します。
+   * 接続プロパティを含む `ServiceClientFactory` オブジェクトを作成します。
+   * コンストラクタを使用して `ServiceClientFactory` オブジェクトを渡すことによって、`DocConverterServiceClient` オブジェクトを作成します。
 
 1. PDF/A 準拠の判断に使用する PDF ドキュメントを参照
 
-   * コンストラクターを使用して、PDF ファイルの場所を指定する文字列値を渡すことにより、変換するインタラクティブ PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
+   * コンストラクターを使用して、変換ファイルの場所を指定する文字列値を渡すことによって、変換する PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。
    * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. 実行時オプションを設定
 
    * コンストラクターを使用して `PDFAValidationOptionSpec` オブジェクトを作成します。
    * `PDFAValidationOptionSpec` オブジェクトの `setCompliance` メソッドを呼び出し、`PDFAValidationOptionSpec.Compliance.PDFA_1B` を渡して、準拠レベルを設定します。
-   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡して、情報トラッキングレベルを指定します。例えば、値 `FINE` を渡します。様々な値について詳しくは、 [AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
+   * `PDFAValidationOptionSpec` オブジェクトの `setLogLevel` メソッドを呼び出し、トラッキングレベルを指定する文字列値を渡すことにより、情報のトラッキングレベルを設定します。 例えば、値 `FINE` を渡します。 様々な値について詳しくは、[AEM Forms API リファレンス](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=ja)の `setLogLevel` メソッドを参照してください。
 
 1. PDF ドキュメントに関する情報を取得
 
@@ -313,15 +329,15 @@ Web サービス API を使用して、PDF/A の準拠を判断します。
 1. DocConvert クライアントの作成
 
    * Microsoft .NET クライアントアセンブリを使用して、デフォルトのコンストラクターを呼び出すことによって `DocConverterServiceService` オブジェクトを作成します。
-   * `DocConverterServiceService` オブジェクトの `Credentials` データメンバーを、`System.Net.NetworkCredential` ユーザー名とパスワードの値を指定する値を使用して設定します。
+   * `DocConverterServiceService` オブジェクトの `Credentials` データメンバーを、ユーザー名とパスワードの値を指定する `System.Net.NetworkCredential` 値で設定します。
 
 1. PDF/A 準拠の判断に使用する PDF ドキュメントを参照
 
-   * `BLOB` オブジェクトのコンストラクタを使用して、このオブジェクトを作成します。`BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
+   * `BLOB` オブジェクトのコンストラクタを使用して、このオブジェクトを作成します。 `BLOB` オブジェクトは、PDF/A ドキュメントに変換される PDF ドキュメントを格納するために使用されます。
    * コンストラクターを呼び出し、暗号化する PDF ドキュメントのファイルの場所とファイルを開くモードを表す文字列値を渡して、`System.IO.FileStream` オブジェクトを作成します。
-   * `System.IO.FileStream` オブジェクトの内容を格納するバイト配列を作成します。`System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
+   * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得することで、バイト配列のサイズを決定できます。
    * バイト配列にストリームデータを入力するには、`System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、読み取るストリーム長を渡します。
-   * `BLOB` オブジェクトに入力するには、オブジェクトの `binaryData` プロパティに、バイト配列の内容を入力します。
+   * `binaryData` プロパティにバイト配列のコンテンツを割り当てて、`BLOB` オブジェクトを入力します。
 
 1. 実行時オプションを設定
 
@@ -333,7 +349,7 @@ Web サービス API を使用して、PDF/A の準拠を判断します。
 
    `DocConverterServiceService` オブジェクトの `isPDFA` メソッドを呼び出し、次の値を渡して、PDF/A 準拠を判断します。
 
-   * PDF ドキュメントを含む `BLOB` オブジェクト。
+   * PDF ドキュメントが含まれる `BLOB` オブジェクト。
    * 実行時オプションを含む `PDFAValidationOptionSpec` オブジェクト。
 
    この `isPDFA` メソッドは、この操作の結果を格納する `PDFAValidationResult` オブジェクトを返します。

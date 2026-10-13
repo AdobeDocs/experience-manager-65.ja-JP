@@ -10,13 +10,20 @@ exl-id: d4c1895f-421c-4146-b94a-8d11065ef9e3
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1631'
 ht-degree: 2%
-
 ---
-
 # コミュニティサイトの作成{#author-a-new-community-site}
 
 ## コミュニティサイトの作成 {#create-a-community-site}
@@ -48,10 +55,10 @@ Communities Sites コンソールには、コミュニティサイトの作成�
 
 * **コミュニティサイト名**: エンゲージ
 
-   * サイトの作成後に簡単に変更できないので、名前を再確認します
-   * 最初のURLは、コミュニティサイト名の下に表示されます
-   * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
-   * *例：*, https://localhost:4502/content/sites/ `engage/en.html`
+  * サイトの作成後に簡単に変更できないので、名前を再確認します
+  * 最初のURLは、コミュニティサイト名の下に表示されます
+  * 有効なURLの場合は、ベース言語コード + 「.html」を追加します
+  * *例：*、https://localhost:4502/content/sites/ `engage/en.html`
 
 * **テンプレート**：プルダウンで`Reference Site`を選択
 
@@ -184,7 +191,7 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
 * **サイトを公開**
 
-  世界アイコンを選択すると、コミュニティサイトが公開されます（例えば、パブリッシュサーバーがローカルマシンで実行されている場合は、デフォルトでlocalhost:4503に公開されます）。
+  世界アイコンを選択すると、コミュニティサイトが公開されます（例えば、パブリッシュサーバーがローカルマシンで実行されている場合は、デフォルトでlocalhost:4503になります）。
 
 * **サイトを書き出し**
 
@@ -207,7 +214,7 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 >1. **[!UICONTROL Default Agent （publish）]**&#x200B;を選択します。
 >1. **[!UICONTROL 設定]**&#x200B;の横にある&#x200B;**[!UICONTROL 編集]**&#x200B;を選択します。
 >1. エージェント設定のポップアップダイアログで、「**[!UICONTROL トランスポート]**」タブを選択します。
->1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート 6103を使用する場合は、https://localhost:6103/bin/receive?sling:authRequestLogin=1
+>1. URIで、ポート番号4503を目的のポート番号に変更します。 例えば、ポート 6103を使用するには、https://localhost:6103/bin/receive?sling:authRequestLogin=1を指定します
 >1. 「**[!UICONTROL OK]**」を選択します。
 >1. （オプション）「**[!UICONTROL クリア]**」または「**[!UICONTROL 再試行を強制]**」を選択して、レプリケーションキューをリセットします。
 
@@ -269,25 +276,25 @@ Adobe Analyticsがライセンスされ、Analytics Cloud サービスとフレ�
 
    * 「**ノードを作成：**」を選択
 
-      * **名前** localhost.4503
-（*not*&#x200B;は&#39;:&#39;を使用しません）
+     * **名前** localhost.4503
+       （*not*&#x200B;は&#39;:&#39;を使用しません）
 
-      * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
+     * **Type** [sling:Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
 
 1. 新しく作成された`localhost.4503` ノードを選択しました：
 
    * プロパティを追加：
 
    * **名前** sling:match
-      * **Type**&#x200B;文字列
-      * **値** localhost.4503/$
-（&#39;$&#39;文字で終わる必要があります）
+     * **Type**&#x200B;文字列
+     * **値** localhost.4503/$
+       （&#39;$&#39;文字で終わる必要があります）
 
    * プロパティを追加：
 
-      * **名前** sling:internalRedirect
-      * **Type**&#x200B;文字列
-      * **値** /content/sites/engage/en.html
+     * **名前** sling:internalRedirect
+     * **Type**&#x200B;文字列
+     * **値** /content/sites/engage/en.html
 
 1. **すべて保存**&#x200B;を選択します
 1. （オプション）閲覧履歴を削除します。

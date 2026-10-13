@@ -1,19 +1,35 @@
 ---
 title: アセットの使用と共有に関するレポート
-description: デジタルアセットの使用状況、アクティビティ、共有を理解するのに役立つ、 [!DNL Adobe Experience Manager Assets]  でのアセットに関するレポートです。
+description: デジタルアセットの使用状況、アクティビティ、共有を把握するのに役立つ、[!DNL Adobe Experience Manager Assets]のアセットに関するレポートです。
 contentOwner: AG
 role: User, Admin
 feature: Asset Reports,Asset Management
 exl-id: b4963a03-3496-4c6c-9d30-8812304d0e9f
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 555cb326a4a554d98904cf1a2b27b609ba67c806
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: ac365bec-0634-4744-9473-c42f47320593
+    internal-label: Asset management and governance
+subfeature_v2:
+  - id: c29e3a96-cd2b-4e21-b382-a8279aa04553
+    internal-label: Asset reports
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 92%
-
+source-wordcount: '1174'
+ht-degree: 91%
 ---
-
 # アセットレポート {#asset-reports}
 
 | バージョン | 記事リンク |
@@ -139,7 +155,7 @@ ht-degree: 92%
 1. [!UICONTROL アセットレポート]ページで、ツールバーの「**[!UICONTROL 作成]**」をクリックします。
 
 1. **[!UICONTROL レポートを作成]**&#x200B;ページで、作成するレポートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
-1. タイトル、説明、サムネール、フォルダーパス、期間など、該当するレポートの詳細を設定します。
+1. タイトル、説明、サムネイル、フォルダーパス、日付範囲など、該当するレポートの詳細を設定します。
 
 1. カスタム列を表示するには、「**[!UICONTROL カスタム列]**」で列の名前を指定します。
 
@@ -155,7 +171,7 @@ ht-degree: 92%
 
 ## パージサービスの設定 {#configure-purging-service}
 
-不要になったレポートを削除するには、数量や経過日数に基づいて既存のレポートをパージするように、Web コンソールで DAM レポートパージサービスを設定します。
+不要になったレポートを削除するには、数量や経過日数に基づいて既存のレポートをパージするように、web コンソールで DAM レポートパージサービスを設定します。
 
 1. `https://[aem_server]:[port]/system/console/configMgr` で Web コンソール（設定マネージャー）にアクセスします。
 1. 「**[!UICONTROL DAM Report Purge Service]**」設定を開きます。

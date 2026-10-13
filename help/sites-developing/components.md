@@ -9,13 +9,22 @@ exl-id: 9e30c969-2692-4380-943a-b022ee900ce8
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 100%
-
 ---
-
 # コンポーネントの概要{#components-overview}
 
 このページでは、[ページオーサリングで使用される](/help/sites-authoring/default-components-foundation.md)コンポーネントなど、Adobe Experience Manager（AEM）のコンポーネントの概要を示します。
@@ -109,7 +118,7 @@ AEM インスタンスで利用可能なすべてのコンポーネントの概�
 * [非表示条件の使用](/help/sites-developing/hide-conditions.md)
 * クラシック UI
 
-   * [AEM コンポーネント（クラシック UI）](/help/sites-developing/developing-components-classic.md)
-   * [ウィジェットの使用および拡張（クラシック UI）](/help/sites-developing/widgets.md)
-   * [xtype の使用（クラシック UI）](/help/sites-developing/xtypes.md)
-   * [フォームの作成（クラシック UI）](/help/sites-developing/developing-forms.md)
+  * [AEM コンポーネント（クラシック UI）](/help/sites-developing/developing-components-classic.md)
+  * [ウィジェットの使用および拡張（クラシック UI）](/help/sites-developing/widgets.md)
+  * [xtype の使用（クラシック UI）](/help/sites-developing/xtypes.md)
+  * [フォームの作成（クラシック UI）](/help/sites-developing/developing-forms.md)

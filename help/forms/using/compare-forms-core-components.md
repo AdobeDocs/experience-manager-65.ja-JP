@@ -4,7 +4,19 @@ description: フィールド、コンテンツ、フォームコンポーネン�
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: bcd6e9cf-b33b-4468-8b99-0da196f65eaa
-source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e14eb250-3c22-4a07-9061-a78112b2b826
+    internal-label: Experience Manager 6.5
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 100%

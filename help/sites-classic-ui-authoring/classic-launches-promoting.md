@@ -1,6 +1,6 @@
 ---
 title: ローンチの昇格
-description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページを昇格させると、ソースページの対応するページが、昇格したページのコンテンツに置き換わります。
+description: コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 ローンチページを昇格させると、ソースページの対応するページが、昇格したページのコンテンツに置き換わります。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,16 +10,25 @@ exl-id: 3013adc3-bec6-4ecc-aefd-f8df2b86dfef
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 100%
-
 ---
-
 # ローンチの昇格{#promoting-launches}
 
-コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。ローンチページを昇格させると、ソースページの対応するページが、昇格したページのコンテンツに置き換わります。ローンチページを昇格させるときには、次のオプションを使用できます。
+コンテンツを公開する前にソース（実稼動）に戻すには、ローンチページを昇格させる必要があります。 ローンチページを昇格させると、ソースページの対応するページが、昇格したページのコンテンツに置き換わります。 ローンチページを昇格させるときには、次のオプションを使用できます。
 
 * 現在のページのみを昇格させるか、ローンチ全体を昇格させるか。
 * 現在のページの子ページを昇格させるかどうか。
@@ -49,6 +58,6 @@ ht-degree: 100%
 
 ページが昇格した場合に自動的にワークフローを開始するには、パッケージノードに[ワークフローランチャーを設定](/help/sites-administering/workflows-starting.md#workflows-launchers)します。
 
-例えば、作成者がローンチページを昇格させたときに、ページのアクティベーションリクエストを自動的に生成できます。パッケージノードの変更時に「アクティベーションをリクエスト」ワークフローを開始するように、ワークフローランチャーを設定します。
+例えば、作成者がローンチページを昇格させたときに、ページのアクティベーションリクエストを自動的に生成できます。 パッケージノードの変更時に「アクティベーションをリクエスト」ワークフローを開始するように、ワークフローランチャーを設定します。
 
 ![chlimage_1-136](assets/chlimage_1-136.png)

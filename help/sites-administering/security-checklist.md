@@ -10,13 +10,27 @@ exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin,Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '3025'
-ht-degree: 97%
-
+source-wordcount: '3049'
+ht-degree: 98%
 ---
-
 # セキュリティチェックリスト {#security-checklist}
 
 このセクションでは、デプロイ時に AEM のインストールが安全になるようにするために必要な様々な手順について説明します。 このチェックリストは、上から順に適用するように設計されています。
@@ -86,8 +100,8 @@ Web コンソールのパスワードの変更について詳しくは、「[OSG
 
 Web コンソールへのアクセスに使用するパスワードを変更します。 [OSGi 設定](/help/sites-deploying/configuring-osgi.md)を使用して、**Apache Felix OSGi 管理コンソール**&#x200B;の以下のプロパティを更新します。
 
-* **ユーザー名**&#x200B;および&#x200B;**パスワード**。Apache Felix Web管理コンソール自体にアクセスするための資格情報です。
-インスタンスのセキュリティを確保するために、最初のインストール後*にパスワードを変更する必要があります。*
+* **ユーザー名**&#x200B;と&#x200B;**パスワード**：Apache Felix web 管理コンソールにアクセスするための資格情報です。
+インスタンスのセキュリティを確保するには、最初のインストールの*後に*&#x200B;パスワードを変更する必要があります。
 
 >[!NOTE]
 >
@@ -95,8 +109,8 @@ Web コンソールへのアクセスに使用するパスワードを変更し�
 
 **OSGi web コンソールの admin パスワードの変更**：
 
-1. **ツール**、**操作** メニューを使用して、**Web コンソール**&#x200B;を開き、**設定** セクションに移動します。
-例えば、`<server>:<port>/system/console/configMgr`です。
+1. **ツール**／**操作**&#x200B;メニューから、**Web コンソール**&#x200B;を開き、「**設定**」セクションに移動力します。
+例：`<server>:<port>/system/console/configMgr`
 1. **Apache Felix OSGi 管理コンソール**&#x200B;に移動してエントリを開きます。
 1. **ユーザー名**&#x200B;および **パスワード**&#x200B;を変更します。
 
@@ -225,27 +239,27 @@ CRX WebDAV および Apache Sling のクロスサイトリクエストフォー�
 
 * [Adobe Granite HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#day-cq-html-library-manager):
 
-   * 「**縮小**」を有効にして CRLF 文字と空白文字を削除する
-   * 「**Gzip**」を有効にして、1 回のリクエストでファイルを gzip で圧縮してアクセスできるようにする。
-   * 「**デバッグ**」を無効にする
-   * 「**タイミング**」を無効にする
+  * 「**縮小**」を有効にして CRLF 文字と空白文字を削除する
+  * 「**Gzip**」を有効にして、1 回のリクエストでファイルを gzip で圧縮してアクセスできるようにする。
+  * 「**デバッグ**」を無効にする
+  * 「**タイミング**」を無効にする
 
 * [Day CQ WCM デバッグフィルター](/help/sites-deploying/osgi-configuration-settings.md#day-cq-wcm-debug-filter)：
 
-   * 「**有効**」の選択を解除
+  * 「**有効**」の選択を解除
 
 * [Day CQ WCM フィルター](/help/sites-deploying/osgi-configuration-settings.md)：
 
-   * （パブリッシュインスタンスのみ）「**WCM モード**」を「無効」に設定
+  * （パブリッシュインスタンスのみ）「**WCM モード**」を「無効」に設定
 
 * [Apache Sling JavaScript ハンドラー](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-javascript-handler)：
 
-   * 「**デバッグ情報の生成**」を無効化
+  * 「**デバッグ情報の生成**」を無効化
 
 * [Apache Sling JSP スクリプトハンドラー](/help/sites-deploying/osgi-configuration-settings.md#apache-sling-jsp-script-handler)：
 
-   * 「**デバッグ情報の生成**」を無効化
-   * 「**マッピングされたコンテンツ**」を無効化
+  * 「**デバッグ情報の生成**」を無効化
+  * 「**マッピングされたコンテンツ**」を無効化
 
 [OSGi 設定](/help/sites-deploying/osgi-configuration-settings.md)を参照してください。
 
@@ -266,9 +280,9 @@ AEM を操作しているときは、このようなサービスの設定を管�
 
   例えば、`.../en.html` は次のようにリクエストされる可能性があります。
 
-   * `.../en.ExtensionDosAttack`
-   * `.../en.SelectorDosAttack.html`
-   * `.../en.html/SuffixDosAttack`
+  * `.../en.ExtensionDosAttack`
+  * `.../en.SelectorDosAttack.html`
+  * `.../en.html/SuffixDosAttack`
 
   有効なすべてのバリエーションが Dispatcher によってキャッシュされ（例えば、`200` 応答を返し、キャッシュするように設定されている場合）、最終的にはファイルシステムがいっぱいになり、以降のリクエストに対してサービスを提供できなくなります。
 

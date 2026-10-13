@@ -8,13 +8,29 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: fb26d0c08644f8b84e406adeb7fb14496e8e9fd0
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 76%
-
 ---
-
 # 外部 web ページへのアダプティブフォームの埋め込み{#embed-adaptive-form-in-external-web-page}
 
 | バージョン | 記事リンク |
@@ -209,7 +225,7 @@ AEM サーバーとweb ページが異なるドメイン上にある場合は、
 
 1. AEM パブリッシュインスタンスで、AEM web コンソール設定マネージャー（`https://'[server]:[port]'/system/console/configMgr`）に移動します。
 1. **Adobe Granite Cross-Origin Resource Sharing Policy**&#x200B;設定（`com.adobe.granite.cors.impl.CORSPolicyImpl`）を探して開きます。
-1. 埋め込みweb ページのオリジンを許可されたオリジンに追加します。 （例：`https://www.example.com`）。
+1. 埋め込みweb ページのオリジンを許可されたオリジンに追加します。 例えば、`https://www.example.com` のようになります。
 1. 許可されているパスに、埋め込みアダプティブフォームで使用されるAEM Forms エンドポイント（送信、事前入力、レコードのドキュメント URL `/content/forms/af/`など）が含まれていることを確認します。
 
 >[!TAB Apache Sling Referrer Filter]

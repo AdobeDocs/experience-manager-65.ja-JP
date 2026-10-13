@@ -6,13 +6,21 @@ exl-id: 1138a548-d112-4446-b0e1-b7a9ea7c7604
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1885'
 ht-degree: 95%
-
 ---
-
 # 開発（汎用）{#developing-generic}
 
 >[!NOTE]
@@ -45,7 +53,7 @@ e コマースフレームワークは任意の e コマースソリューショ
   * `adaptTo` 実装は、リソースの階層内で `cq:commerceProvider` プロパティを探します。
 
     * 見つかった場合は、その値を使用してコマースサービスの検索をフィルタリングします。
-    * 見つからなかった場合は、最上位のコマースサービスが使用されます。
+    * 見つからなかった場合は、最上位ランキングのコマースサービスが使用されます。
 
   * 厳密に型指定されたリソースに `cq:commerceProvider` を追加できるように、`cq:Commerce` Mixin が使用されます。
 

@@ -9,13 +9,27 @@ exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 100%
-
 ---
-
 # アプリケーションサーバーのパフォーマンスの強化{#enhancing-application-server-performance}
 
 ここでは、AEM Forms アプリケーションサーバーのパフォーマンスを向上させるために設定できるオプション設定について説明します。
@@ -28,11 +42,11 @@ AEM Forms は、AEM Forms リポジトリをデータソースとして使用し
 
 接続を使い切らないように接続プールのパラメーターを適切に設定することが重要です。接続が足りなくなった場合、アプリケーションのパフォーマンスが低下する可能性があります。
 
-接続プールを適切に設定するには、アプリケーションサーバー管理者がピーク時間帯に接続プールを監視することが重要になります。 監視によって、アプリケーションやユーザーがいつでも十分な数の接続を使用できるようになります。 ほとんどのアプリケーションサーバーには監視用のツールが組み込まれています。
+接続プールを適切に設定するには、アプリケーションサーバー管理者がピーク時間帯に接続プールを監視することが重要になります。 モニタリングによって、アプリケーションやユーザーがいつでも十分な数の接続を使用できるようになります。 ほとんどのアプリケーションサーバーにはモニタリング用のツールが組み込まれています。
 
 WebLogic Server 管理コンソールでは、ドメイン内の JDBC データソースインスタンスごとに様々な統計値を監視できます。 詳しくは、WebLogic のドキュメントを参照してください。
 
-アプリケーションサーバー管理者は、適切な接続プールの設定を決める際に、この情報をデータベース管理者に伝えてください。 データベース管理者がこの情報を必要とするのは、データベース接続の数はデータソース用の接続プール内の接続数に等しくなるためです。 そして、以下に示すように、アプリケーションサーバーおよびデータソースの種類に応じて、接続プールを設定する手順を実行してください。
+アプリケーションサーバー管理者は、適切な接続プールの設定を決める際に、この情報をデータベース管理者に伝えてください。 データベース管理者がこの情報を必要とするのは、データベース接続の数はデータソース用の接続プール内の接続数に等しくなるためです。 そして、以下に示すように、アプリケーションサーバーおよびデータソースの種類に応じて、接続プール設定を構成する手順を実行してください。
 
 ### Oracle および MySQL に対する WebLogic の接続プールの設定 {#configure-connection-pool-settings-for-weblogic-for-oracle-and-mysql}
 
@@ -65,14 +79,14 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 
 1. ナビゲーションツリーで、Resources／JDBC／JDBC Providers をクリックします。 右側のパネルで、作成したデータソース（DB2 Universal JDBC Driver Provider または LiveCycle - db2 - IDP_DS）をクリックします。
 1. 「Additional Properties」で「Data Sources」をクリックし、「IDP_DS」を選択します。
-1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum connections」ボックスと「Minimum Connections」ボックスに値を入力します。
+1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum Connections」ボックスと「Minimum Connections」ボックスに値を入力します。
 1. 「OK」または「Apply」をクリックし、「Save Directly To Master Configuration」をクリックします。
 
 ### Oracle に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-oracle}
 
 1. ナビゲーションツリーで、Resources／JDBC／JDBC Providers をクリックします。 右側のパネルで、作成した Oracle JDBC Driver データソースをクリックします。
 1. 「Additional Properties」で「Data Sources」をクリックし、「IDP_DS」を選択します。
-1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum connections」ボックスと「Minimum Connections」ボックスに値を入力します。
+1. 次の画面の「Additional Properties」で「Connection Pool Properties」をクリックし、「Maximum Connections」ボックスと「Minimum Connections」ボックスに値を入力します。
 1. 「OK」または「Apply」をクリックし、「Save Directly To Master Configuration」をクリックします。
 
 ### SQLServer に対する WebSphere の接続プールの設定 {#configure-connection-pool-settings-for-websphere-for-sqlserver}
@@ -93,9 +107,9 @@ WebLogic Server 管理コンソールでは、ドメイン内の JDBC データ�
 
 ### ドキュメントサイズと最大インラインサイズ {#document-size-and-maximum-inline-size}
 
-AEM Forms に送信して処理するドキュメントのサイズがデフォルトのドキュメント最大インラインサイズ以下の場合、ドキュメントはサーバーにインラインで保存され、Adobe Document オブジェクトとしてシリアライズされます。 ドキュメントをインラインで格納することで、パフォーマンスを大幅に向上できます。 ただし、Forms Workflow を使用している場合は、管理の目的でコンテンツもデータベースに保存されることがあります。 このため、最大インラインサイズを増やすと、データベースサイズに影響する場合があります。
+AEM Forms に送信して処理するドキュメントのサイズがデフォルトのドキュメント最大インラインサイズ以下の場合、ドキュメントはサーバーにインラインで保存され、Adobe Document オブジェクトとしてシリアライズされます。 ドキュメントをインラインで格納することで、パフォーマンスを大幅に向上できます。 ただし、Forms Workflow を使用している場合は、トラッキングの目的でコンテンツもデータベースに保存されることがあります。 このため、最大インラインサイズを増やすと、データベースサイズに影響する場合があります。
 
-最大インラインサイズよりも大きいサイズのドキュメントはローカルファイルシステムに格納されます。 サーバーとの間で転送される Adobe Document オブジェクトがそのファイルへの唯一のポインターとなります。
+最大インラインサイズよりも大きいサイズのドキュメントはローカルファイルシステムに格納されます。 サーバーとの間で転送される Adobe Document オブジェクトは、そのファイルへのポインターにすぎません。
 
 ドキュメントコンテンツがインライン化される（つまり、最大インラインサイズ未満である）場合、コンテンツはドキュメントのシリアライズペイロードの一部としてデータベースに保存されます。 このため、最大インラインサイズを増やすと、データベースサイズに影響する場合があります。
 
@@ -105,12 +119,12 @@ AEM Forms に送信して処理するドキュメントのサイズがデフォ�
 > 
 > ユーザーが管理者コンソールにアクセスする管理者権限を持っていることを確認します。
 
-1. 管理コンソールで、設定／コアシステム設定／設定をクリックします。
+1. 管理コンソールで、設定／コアシステム設定／構成をクリックします。
 1. 「デフォルトのドキュメント最大インラインサイズ」ボックスに値を入力し、「OK」をクリックします。
 
    >[!NOTE]
    >
-   >ドキュメント最大インラインサイズプロパティの値は、JEE 環境上の AEM Forms と、JEE 環境上の OSGi バンドルを含む AEM Forms 上の AEM Forms と同一である必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、OSGi バンドル上の AEM Forms に含まれる JEE 環境上の AEM Forms の値は更新しません。
+   >ドキュメント最大インラインサイズプロパティの値は、JEE 環境上の AEM Forms と、JEE 環境上の OSGi バンドルを含む AEM Forms 上の AEM Forms と同一である必要があります。 この手順では、JEE 環境上の AEM Forms の値のみを更新し、JEE 環境上の AEM Forms に含まれる OSGi バンドル上の AEM Forms の値は更新しません。
 
 1. 次のシステムプロパティでアプリケーションサーバーを再起動します。
 
@@ -142,11 +156,11 @@ JVM 最大ヒープサイズの必要な増加量は、次の式で算出しま�
 
 （512 KB）x（100）=51200 KB（50 MB）
 
-JVM 最大ヒープサイズは、50 MB 単位で増やす必要があり、合計 562 MB まで増やすことができます。
+JVM 最大ヒープサイズは 50 MB 増やして、合計 562 MB にする必要があります。
 
 **ヒープフラグメンテーションについて**
 
-ヒープフラグメンテーションの傾向があるシステムで、インラインドキュメントのサイズに大きな値を設定すると、OutOfMemoryError が発生する可能性が高くなります。 ドキュメントをインラインで格納するには、JVM ヒープメモリに十分な連続スペースを確保する必要があります。 一部のオペレーティングシステム、JVM およびガベージコレクションアルゴリズムでは、ヒープフラグメントが発生しがちです。 フラグメンテーションにより、連続するヒープ領域の量が減少し、合計空き容量が十分にある場合でも OutOfMemoryError が発生することがあります。
+ヒープフラグメンテーションの傾向があるシステムで、インラインドキュメントのサイズに大きな値を設定すると、OutOfMemoryError が発生する可能性が高くなります。 ドキュメントをインラインで格納するには、JVM ヒープメモリに十分な連続領域が必要です。 一部のオペレーティングシステム、JVM およびガベージコレクションアルゴリズムでは、ヒープフラグメントが発生しがちです。 フラグメンテーションにより、連続するヒープ領域の量が減少し、合計空き容量が十分にある場合でも OutOfMemoryError が発生することがあります。
 
 例えば、アプリケーションサーバーでの以前の処理により JVM ヒープがフラグメントされた状態になっている場合、ガベージコレクターはヒープを十分に圧縮できず、空き領域の大きなブロックを確保できません。 最大インラインサイズの増加に伴って JVM 最大ヒープサイズを調整した場合でも、OutOfMemoryError が発生することがあります。
 
@@ -173,7 +187,7 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 
 ここでは、Microsoft Windows Server 2003 オペレーティングシステム環境に固有の設定について説明します。
 
-検索のための接続で接続プールを使用すると、必要なポート数を 50 ％減らすことができます。 これは、接続で常に特定のドメインの同じ証明書が使用され、コンテキストと関連オブジェクトが明示的に閉じられるためです。
+検索のための接続で接続プールを使用すると、必要なポート数を 50 ％減らすことができます。 これは、その接続では特定のドメインに対して常に同じ資格情報が使用され、コンテキストと関連オブジェクトが明示的に閉じられるためです。
 
 ### 接続プールを使用するための Windows Server の設定 {#configure-your-windows-server-for-connection-pooling}
 
@@ -194,4 +208,4 @@ Configuration Manager を実行しているとき、またはコマンドライ�
 
 >[!NOTE]
 >
->レジストリエディターまたは別の方法を使用してレジストリを誤って変更すると、重大な問題が発生する場合があります。 これらの問題を解決するために、オペレーティングシステムを再インストールが必要が出ることがあります。 レジストリの変更はユーザーの責任で行ってください。
+>レジストリエディターまたは別の方法を使用してレジストリを誤って変更すると、重大な問題が発生する場合があります。 これらの問題により、オペレーティングシステムの再インストールが必要になることがあります。 レジストリの変更はユーザーの責任で行ってください。

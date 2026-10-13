@@ -1,18 +1,29 @@
 ---
 title: アセットテンプレート
-description: ' [!DNL Adobe Experience Manager Assets] のアセットテンプレートについて、およびアセットテンプレートを使用してマーケティング用の販促物を作成する方法について説明します。'
+description: '[!DNL Adobe Experience Manager Assets]のアセットテンプレートと、アセットテンプレートを使用してマーケティング資料を作成する方法について説明します。'
 contentOwner: AG
 role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1571'
-ht-degree: 100%
-
+source-wordcount: '1572'
+ht-degree: 99%
 ---
-
 # アセットテンプレート {#asset-templates}
 
 アセットテンプレートは、デジタルメディアとプリントメディアの視覚的にリッチなコンテンツをすばやく再利用する、アセットの特別なクラスです。 アセットテンプレートには、固定メッセージセクションと編集可能セクションの 2 つの部分があります。 固定メッセージセクションには、編集できないブランドロゴや著作権情報など、独自のコンテンツを含めることができます。 編集可能セクションには、編集可能なフィールドに視覚的コンテンツやテキストコンテンツを含めて、メッセージをカスタマイズできます。

@@ -10,13 +10,20 @@ exl-id: ebc4e1e7-34f0-4f4e-9f00-178dfda23ce4
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1212'
 ht-degree: 1%
-
 ---
-
 # 公開したサイトを使ってみる {#experience-the-published-site}
 
 ## 公開時に新しいサイトを参照 {#browse-to-new-site-on-publish}
@@ -87,8 +94,8 @@ jcr コンテンツとjsonを通じて匿名ユーザーによるアクセスか
 * **プロファイル** オプションを使用すると、プロファイルを表示および編集できます。
 * [&#x200B; メッセージ &#x200B;](/help/communities/configure-messaging.md) オプションを使用すると、ダイレクトメッセージングセクションに移動します。このセクションでは、次の操作を実行できます。
 
-   1. 受信（受信トレイ）、送信（送信済みアイテム）、削除（ゴミ箱）したダイレクトメッセージを表示します。
-   1. 新しいダイレクトメッセージを作成して、個人やグループに送信できます。
+  1. 受信（受信トレイ）、送信（送信済みアイテム）、削除（ゴミ箱）したダイレクトメッセージを表示します。
+  1. 新しいダイレクトメッセージを作成して、個人やグループに送信できます。
 
 * [通知](/help/communities/notifications.md) オプションを選択すると、通知セクションに移動します。このセクションでは、関心のあるイベントを表示したり、通知設定を編集したりできます。
 * 管理権限がある場合、[管理](/help/communities/published-site.md#moderationlink)からAEM Communities モデレーションページに移動します。
@@ -154,13 +161,13 @@ Aaronはグループ管理者なので、「グループ」リンクを選択す
 
 * `Baseball`という名前の1つ
 
-   * `Open Group` （必須メンバーシップ）に設定したままにします。
-   * 「テンプレート」タブで、「`Conversational Group`」を選択します。
+  * `Open Group` （必須メンバーシップ）に設定したままにします。
+  * 「テンプレート」タブで、「`Conversational Group`」を選択します。
 
 * `Gymnastics`という名前の1つ
 
-   * 設定を`Member Only Group` （制限付きメンバーシップ）に変更します。
-   * 「テンプレート」タブで、「`Conversational Group`」を選択します。
+  * 設定を`Member Only Group` （制限付きメンバーシップ）に変更します。
+  * 「テンプレート」タブで、「`Conversational Group`」を選択します。
 
 **通知**:
 

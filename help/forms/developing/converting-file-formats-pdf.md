@@ -9,13 +9,27 @@ role: Developer
 exl-id: 10535740-e3c2-4347-a88f-86706ad699b4
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '7942'
 ht-degree: 98%
-
 ---
-
 # ファイル形式と PDF の変換 {#converting-between-file-formatsand-pdf}
 
 **このドキュメントのサンプルと例は、JEE 環境の AEM Forms のみを対象としています。**
@@ -96,7 +110,7 @@ Generate PDF サービスを使用して、次のタスクを実行できます�
 
 >[!NOTE]
 >
->Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>AEM Forms サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary-of-steps}
 
@@ -181,7 +195,7 @@ Generate PDF API（Java）を使用して、Microsoft Word ドキュメントを
 
    `createPDF2` メソッドを使用してログドキュメントを取得した場合（HTML 変換には適用されません）、次のアクションを実行します。
 
-   * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * `CreatePDFResult` オブジェクトの `getLogDocument` メソッドを呼び出します。 これにより、`com.adobe.idp.Document` オブジェクトが返されます。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、ログドキュメントを抽出します。
 
 **関連情報**
@@ -214,10 +228,10 @@ Generate PDF API（web サービス）を使用して、Microsoft Word ドキュ
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. PDF ドキュメントに変換するファイルを取得します。
 
@@ -329,14 +343,14 @@ Generate PDF API（Java）を使用して HTML ドキュメントを PDF ドキ�
    * 変換する HTML ファイルの URL を含む `java.lang.String` オブジェクト。
    * 変換で使用されるファイルタイプ設定を含む `java.lang.String` オブジェクト。 ファイルタイプの設定には、スパイダリングレベルを含めることができます。
    * 使用するセキュリティ設定の名前を含む `java.lang.String` オブジェクト。
-   * PDF ドキュメントの生成中に適用される設定を含むオプションの `com.adobe.idp.Document` オブジェクト。 この情報が指定されていない場合、設定は前の 3 つのパラメータに基づいて自動的に選択されます。
+   * PDF ドキュメントの生成時に適用される設定を含むオプションの `com.adobe.idp.Document` オブジェクト。 この情報が指定されていない場合、設定は前の 3 つのパラメータに基づいて自動的に選択されます。
    * PDF ドキュメントに適用されるメタデータ情報を含むオプションの `com.adobe.idp.Document` オブジェクト。
 
 1. 結果を取得します。
 
    `htmlToPDF2` メソッドは、生成された新しい PDF ドキュメントを含む `HtmlToPdfResult` オブジェクトを返します。 新しく作成した PDF ドキュメントを取得するには、次のアクションを実行します。
 
-   * `HtmlToPdfResult` オブジェクトの `getCreatedDocument` メソッドを呼び出します。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * `HtmlToPdfResult` オブジェクトの `getCreatedDocument` メソッドを呼び出します。 これにより、`com.adobe.idp.Document` オブジェクトが返されます。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、前の手順で作成したオブジェクトから PDF ドキュメントを抽出します。
 
 **関連トピック**
@@ -371,10 +385,10 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. HTML コンテンツを取得して PDF ドキュメントに変換します。
 
@@ -387,7 +401,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
    * 変換する HTML の内容を含む文字列。
    * 変換処理で使用されるファイルタイプ設定を含む `java.lang.String` オブジェクト。
    * 使用するセキュリティ設定を含む文字列オブジェクト。
-   * PDF ドキュメントの生成時に適用される設定を含むオプションの `BLOB` オブジェクト。
+   * PDF ドキュメントの生成中に適用される設定を含むオプションの `BLOB` オブジェクト。
    * PDF ドキュメントに適用されるメタデータ情報を含むオプションの `BLOB` オブジェクト。
    * `CreatePDF2` メソッドによって入力されるタイプ `BLOB` の出力パラメーター。 `CreatePDF2` メソッドは、変換されたドキュメントをこのオブジェクトに入力します。 （このパラメーター値は、web サービスの呼び出しにのみ必要です）。
 
@@ -412,7 +426,7 @@ Generate PDF API（web サービス）を使用して、HTML のコンテンツ�
 
 >[!NOTE]
 >
->PDF 生成サービスについて詳しくは、[AEM Forms サービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
+>Generate PDF サービスについて詳しくは、[AEM Forms のサービスリファレンス](https://www.adobe.com/go/learn_aemforms_services_63)を参照してください。
 
 ### 手順の概要 {#summary_of_steps-2}
 
@@ -471,7 +485,7 @@ Generate PDF API（Java）を使用して、PDF ドキュメントを RTF ファ
 1. 変換する PDF ドキュメントを取得します。
 
    * コンストラクターを使用して、変換する PDF ドキュメントを表す `java.io.FileInputStream` オブジェクトを作成します。 PDF ドキュメントの場所を指定する文字列値を渡します。
-   * コンストラクタを使用して `java.io.FileInputStream` オブジェクトを渡すことによって、`com.adobe.idp.Document` オブジェクトを作成します。
+   * コンストラクターを使用して `java.io.FileInputStream` オブジェクトを渡すことにより、`com.adobe.idp.Document` オブジェクトを作成します。
 
 1. PDF ドキュメントを変換します。
 
@@ -489,7 +503,7 @@ Generate PDF API（Java）を使用して、PDF ドキュメントを RTF ファ
 
    新しく作成されたファイルを取得するには、次のアクションを実行します。
 
-   * `ExportPDFResult` オブジェクトの `getConvertedDocument` メソッドを呼び出します。 これは `com.adobe.idp.Document` オブジェクトを返します。
+   * `ExportPDFResult` オブジェクトの `getConvertedDocument` メソッドを呼び出します。 これにより、`com.adobe.idp.Document` オブジェクトが返されます。
    * `com.adobe.idp.Document` オブジェクトの `copyToFile` メソッドを呼び出して、新規ドキュメントを抽出します。
 
 **関連情報**
@@ -522,15 +536,15 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
    * `System.ServiceModel.BasicHttpBinding` オブジェクトの `MessageEncoding` フィールドを `WSMessageEncoding.Mtom` に設定します。 この値により、MTOM が確実に使用されます。
    * 次のタスクを実行して、HTTP 基本認証を有効にします。
 
-      * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
-      * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
-      * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
-      * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
+     * `GeneratePDFServiceClient.ClientCredentials.UserName.UserName` フィールドに AEM Forms ユーザー名を割り当てます。
+     * 対応するパスワード値を `GeneratePDFServiceClient.ClientCredentials.UserName.Password` フィールドに割り当てます。
+     * 定数値 `HttpClientCredentialType.Basic` を`BasicHttpBindingSecurity.Transport.ClientCredentialType` フィールドに割り当てます。
+     * 定数値 `BasicHttpSecurityMode.TransportCredentialOnly` をフィールド `BasicHttpBindingSecurity.Security.Mode` に割り当てます。
 
 1. 変換する PDF ドキュメントを取得します。
 
    * コンストラクタを使用して `BLOB` オブジェクトを作成します。 `BLOB` オブジェクトは、変換された PDF ドキュメントの保存に使用されます。
-   * `System.IO.FileStream` オブジェクトを作成するには、コンストラクターを呼び出して、PDF ドキュメントのファイルの場所を表す文字列値とファイルを開くモードを渡します。
+   * `System.IO.FileStream` オブジェクトを作成するには、コンストラクタを呼び出して、PDF ドキュメントのファイル場所を示す文字列値およびファイルを開くモードを渡します。
    * `System.IO.FileStream` オブジェクトのコンテンツを保存するバイト配列を作成します。 `System.IO.FileStream` オブジェクトの `Length` プロパティを取得して、バイト配列のサイズを決定することができます。
    * `System.IO.FileStream` オブジェクトの `Read` メソッドを呼び出し、バイト配列、開始位置、および読み取るストリーム長を渡して、バイト配列にストリームデータを入力します。
    * `MTOM` プロパティにバイト配列の内容を割り当て、`BLOB` オブジェクトにデータを入力します。
@@ -568,7 +582,7 @@ Generate PDF API（web サービス）を使用して、PDF ドキュメント�
 この節では、次の点についても説明します。
 
 * この製品がネイティブファイル形式を PDF に変換する際に使用しているネイティブアプリケーションに対して、Generate PDF サービスが提供する応答を変更する方法
-* Generate PDF サービス、Generate PDF サービスの Application Monitor（AppMon）コンポーネント、Microsoft Word などのネイティブアプリケーション間のインタラクション
+* Generate PDF サービス、Generate PDF サービスのアプリケーションモニター（AppMon）コンポーネント、Microsoft Word などのネイティブアプリケーション間のインタラクション
 * これらのインタラクションにおいて XML 文法が果たす役割
 
 ### コンポーネントのインタラクション {#component-interactions}

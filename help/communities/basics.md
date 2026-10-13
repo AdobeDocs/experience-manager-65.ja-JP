@@ -1,6 +1,6 @@
 ---
 title: コミュニティコンポーネントの基本
-description: 編集モードでのAEM Sites への Communities 機能の追加とコンポーネントの設定
+description: 編集モードでAEM サイトにコミュニティ機能を追加し、コンポーネントを設定する
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
@@ -9,82 +9,89 @@ exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '364'
 ht-degree: 4%
-
 ---
-
 # コミュニティコンポーネントの基本 {#communities-components-basics}
 
 ## 概要 {#overview}
 
-ドキュメントのオーサリングの節では、オーサーエディットモードでAEM サイトに Communities 機能を追加する方法と、コンポーネント設定について説明します。
+ドキュメントの「オーサリング」セクションでは、オーサー編集モードでAEM サイトにCommunities機能を追加する方法と、コンポーネント設定について説明します。
 
-コンポーネントは、AEM インスタンスおよびインタラクティブな [&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md) を使用して確認できます。
+コンポーネントは、AEM インスタンスとインタラクティブな[&#x200B; コミュニティコンポーネントガイド &#x200B;](components-guide.md)を使用して検討できます。
 
 ## Communities コンポーネントへのアクセス {#accessing-communities-components}
 
-ページコンテンツのオーサリング時に、基になるテンプレートでページのデザインの変更が許可されている場合は、サイトデザインの一部としてコンポーネントブラウザーでまだ使用できないコンポーネントを有効にすることができます。
+ページコンテンツをオーサリングする際に、基礎となるテンプレートでページのデザインの変更が許可されている場合は、サイトデザインの一部として、コンポーネントブラウザーで既に使用できないコンポーネントを有効にすることができます。
 
-[&#x200B; 使用可能なコミュニティコンポーネント &#x200B;](author-communities.md#available-communities-components) のリストを参照してください。
+[利用可能なコミュニティコンポーネント &#x200B;](author-communities.md#available-communities-components)のリストを参照してください。
 
 >[!NOTE]
 >
->一般的なオーサリング情報については、[&#x200B; ページのオーサリングのクイックガイド &#x200B;](../../help/sites-authoring/qg-page-authoring.md) を参照してください。
+>一般的なオーサリング情報については、[&#x200B; ページのオーサリングに関するクイックガイド &#x200B;](../../help/sites-authoring/qg-page-authoring.md)を参照してください。
 >
->AEMに詳しくない場合は、[&#x200B; 基本操作 &#x200B;](../../help/sites-authoring/basic-handling.md) に関するドキュメントを参照してください。
+>AEMに詳しくない場合は、[基本処理](../../help/sites-authoring/basic-handling.md)に関するドキュメントをご覧ください。
 
-### デザインモードの開始 {#entering-design-mode}
+### デザインモードに入る {#entering-design-mode}
 
-**コミュニティ** コンポーネントがコンポーネントブラウザー（サイドキック）に見つからない場合は、他のコミュニティコンポーネントを追加するために `Design Mode` を入力する必要があります。 [&#x200B; 必要なクライアントサイドライブラリ &#x200B;](#required-clientlibs) （clientlibs）を追加する必要がある場合もあります。
+**Communities** コンポーネントがコンポーネントブラウザー（サイドキック）に見つからない場合は、`Design Mode`と入力して他のCommunities コンポーネントを追加する必要があります。 [必要なクライアントサイドライブラリ &#x200B;](#required-clientlibs) （clientlibs）も追加する必要があります。
 
-詳しくは、[&#x200B; デザインモードでのコンポーネントの設定 &#x200B;](../../help/sites-authoring/default-components-designmode.md) を参照してください。
+詳しくは、[&#x200B; デザインモードでのコンポーネントの設定](../../help/sites-authoring/default-components-designmode.md)を参照してください。
 
-以下は、いくつかの Communities コンポーネントを選択して、コンポーネントブラウザーで表示している画像です。
+以下に、いくつかのコミュニティコンポーネントを選択してコンポーネントブラウザーで表示する画像を示します。
 
-![&#x200B; コンポーネントデザイン &#x200B;](assets/component-design.png)
+![component-design](assets/component-design.png)
 
 選択したコンポーネントがコンポーネントブラウザーで使用できるようになりました。
 
 ![component-design1](assets/component-design1.png)
 
-## 必須 Clientlibs {#required-clientlibs}
+## 必須Clientlibs {#required-clientlibs}
 
-[&#x200B; クライアントサイドライブラリ &#x200B;](../../help/sites-developing/clientlibs.md) （clientlib）は、コンポーネントが適切に機能（JavaScript）し、スタイル設定（CSS）するために必要です。
+コンポーネントの適切な機能（JavaScript）とスタイル設定（CSS）には、[&#x200B; クライアントサイドのライブラリ &#x200B;](../../help/sites-developing/clientlibs.md) （clientlibs）が必要です。
 
-Communities コンポーネントをページに追加するときに、結果がエラーや予期しない外観の場合、最初に試みるのは、Communities コンポーネントに必要な clientlib を追加することです。 詳しくは、[&#x200B; コミュニティコンポーネントの Clientlibs](clientlibs.md) を参照してください。
+Communities コンポーネントをページに追加する際に、結果がエラーまたは予期しない外観である場合は、最初にCommunities コンポーネントに必要なクライアントライブラリを追加します。 詳しくは、[&#x200B; コミュニティコンポーネントのClientlibs](clientlibs.md)を参照してください。
 
-### 例：最初に配置されたレビューにクライアントライブラリが含まれない {#example-initially-placed-reviews-without-client-libraries}
+### 例：最初にクライアントライブラリなしでレビューを配置した場合… {#example-initially-placed-reviews-without-client-libraries}
 
 ![clientlibs1](assets/clientlibs1.png)
 
-### ...とクライアントライブラリ {#and-with-client-libraries}
+### ...クライアントライブラリを使用して {#and-with-client-libraries}
 
 ![clientlibs2](assets/clientlibs2.png)
 
 ## タグ付け {#tagging}
 
-多くの Communities 機能は、メンバーがパブリッシュ環境で入力（投稿）したコンテンツにタグ付けできるように設定できます。
+多くのコミュニティ機能は、メンバーがパブリッシュ環境で入力（投稿）されたコンテンツにタグを付けられるように設定できます。
 
-タグ付けが許可されている場合、コミュニティサイトの設定は、パブリッシュ環境でメンバーに表示される名前空間を制限するように設定できます。 [&#x200B; コミュニティサイトコンソール &#x200B;](sites-console.md#tagging) を参照してください。
+タグ付けが許可されている場合、パブリッシュ環境のメンバーに表示される名前空間を制限するように、コミュニティサイトの設定を設定できます。 [&#x200B; コミュニティサイトコンソール &#x200B;](sites-console.md#tagging)を参照してください。
 
-タグ付けを許可する機能：[blog](blog-feature.md)、[calendar](calendar.md)、[file library](file-library.md)、[forum](forum.md)
+タグ付けを許可する機能：[&#x200B; ブログ &#x200B;](blog-feature.md)、[&#x200B; カレンダー](calendar.md)、[&#x200B; ファイルライブラリ &#x200B;](file-library.md)、[&#x200B; フォーラム &#x200B;](forum.md)
 
-タグを使用する機能：[&#x200B; 検索 &#x200B;](search.md)、[&#x200B; ソーシャルタグクラウド &#x200B;](tagcloud.md)
+タグを使用する機能：[search](search.md)、[social tag cloud](tagcloud.md)
 
-オーサリング情報について：
+オーサリング情報の場合：
 
 * [タグの使用](../../help/sites-authoring/tags.md)
 
-管理情報の場合：
+管理者情報：
 
-* タグ名前空間の作成（分類）:[&#x200B; タグの管理 &#x200B;](../../help/sites-administering/tags.md)
-* コミュニティサイト設定：[&#x200B; タグ付け &#x200B;](sites-console.md#tagging) を参照してください
+* タグ名前空間を作成しています（分類）: [&#x200B; タグの管理](../../help/sites-administering/tags.md)
+* コミュニティサイト設定：[&#x200B; タグ付け](sites-console.md#tagging)を参照してください
 * [ユーザー生成コンテンツのタグ付け](../../help/sites-authoring/tags.md)
 
 開発者情報：
 
 * [AEM タグ付けフレームワーク](../../help/sites-developing/framework.md)
-* [タグ付けの基本事項](tag.md)
+* [Essentialsのタグ付け](tag.md)

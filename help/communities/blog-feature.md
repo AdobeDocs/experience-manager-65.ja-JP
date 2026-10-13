@@ -10,13 +10,20 @@ exl-id: 4650ac36-5506-4efc-be35-fac9e5a58f3d
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1719'
 ht-degree: 1%
-
 ---
-
 # ブログ機能 {#blog-feature}
 
 ## はじめに {#introduction}
@@ -250,11 +257,11 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
   ブログエントリのアーカイブの表示に使用される形式。 形式は、Java™規則に従ってプレースホルダーを使用します。
 
-   * yyyy :「2015年」など通年
-   * yy :「15」のように短い年
-   * MMMMM :6月と同様の月ごと
-   * MMM :Junのように短い月
-   * MM：月番号（06など）
+  * yyyy :「2015年」など通年
+  * yy :「15」のように短い年
+  * MMMMM :6月と同様の月ごと
+  * MMM :Junのように短い月
+  * MM：月番号（06など）
 
   デフォルトは「yyyy MMMMM」で、例えば「2015 June」と表示されます
 
@@ -262,15 +269,15 @@ AEM Communitiesのブログ機能は、オーサリングアクティビティ�
 
   サイドバーに表示するブログエントリのタイトルとタイプ。 選択肢は次の中から
 
-   * 作成者
-   * カテゴリ
-   * アーカイブ
+  * 作成者
+  * カテゴリ
+  * アーカイブ
 
 * **ブログコンポーネントパス**
 
   *（オプション）* ブログ記事を一覧表示するブログリソースの場所。 空白のままにすると、同じページに表示されるresourceType `social/journal/components/hbs/journal` コンポーネントが使用されます。
 
-   * 例えば、`/content/sites/engage/en/blog/jcr:content/content/primary/blog` のように指定します。
+  * 例えば、`/content/sites/engage/en/blog/jcr:content/content/primary/blog` のように指定します。
 
 * **推奨回数**
 

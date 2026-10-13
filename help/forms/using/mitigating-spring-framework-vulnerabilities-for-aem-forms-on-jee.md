@@ -9,13 +9,25 @@ role: Admin
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 exl-id: f704b58a-7bd8-401e-8d7e-2cc3b580c570
-source-git-commit: d2ae4817720cae92b038789804124e0c2465f9c8
-workflow-type: ht
-source-wordcount: '563'
-ht-degree: 100%
-
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 90%
 ---
-
 # AEM Forms on JEE に関する Spring Framework の脆弱性の軽減
 
 このドキュメントでは、AEM Forms on JEE に影響を与える 2 つの重要な Spring Framework の脆弱性に対処する際のガイダンスを提供します。
@@ -34,9 +46,9 @@ ht-degree: 100%
 
 | AEM Forms バージョン | 必須のアクション |
 |-------------------|-----------------|
-| 6.5.22.0 | &#x200B;1. [環境のホットフィックスをダウンロードします](/help/release-notes/aem-forms-hotfix.md)。</br>2.この修正をインストールするには、[AEM Form on JEE にサービスパックをインストール](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)する手順に従います。 |
+| 6.5.22.0 | &#x200B;1. [お使いの環境のホットフィックスをダウンロードします](/help/release-notes/aem-forms-hotfix.md)。</br> 2. この修正をインストールするには、[AEM Form on JEE にサービスパックをインストール](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)する手順に従います。 |
 | 6.5.17.0 - 6.5.21.0 | [手動の軽減手順を適用します](#manual-mitigation-steps)。 |
-| 6.5～6.5.16.0 | &#x200B;1. [最新のサービスパックをインストールします](/help/release-notes/release-notes.md)<br>2.更新されたバージョンに基づいて[適切なソリューションを実装します](#version-specific-solutions)。 |
+| 6.5～6.5.16.0 | &#x200B;1. [最新のサービスパックをインストールします](/help/release-notes/release-notes.md)<br>2。 更新されたバージョンに基づいて[適切なソリューションを実装します](#version-specific-solutions)。 |
 
 > **メモ**：AEM Forms が公式にサポートしているサービスパックは、最新の 6 つのみです。 古いバージョンのユーザーは、まず最新のサービスパックにアップグレードしてから、必要なホットフィックスをインストールする必要があります。
 
@@ -66,18 +78,18 @@ ht-degree: 100%
 1. ロケーターサーバーを停止します。
 1. コア EAR から Spring JAR を削除します。
    1. `[Adobe_Experience_Manager_Forms installation directory]/deploy` に移動します。
-   1. アーカイブマネージャーツールを使用して `adobe-core-<appserver>.ear` ファイルを開きます。`<appserver>` は、環境に応じて JBoss、WebLogic または WebSphere のいずれかに指定できます。
-   - **JBoss の場合：**`ear/lib` フォルダーに移動し、次の JAR ファイルを削除します。
-- `spring-core-<version>.jar`
-- `spring-web-<version>.jar`
+   1. アーカイブマネージャーツールを使用して `adobe-core-<appserver>.ear` ファイルを開きます。 `<appserver>` は、環境に応じて JBoss、WebLogic または WebSphere のいずれかに指定できます。
+   - **JBossの場合：** `ear/lib` フォルダーに移動し、次のJAR ファイルを削除します。
+     - `spring-core-<version>.jar`
+     - `spring-web-<version>.jar`
 
-   - **WebLogic または WebSphere の場合：**EAR のルートから次の JAR ファイルを削除します。
-- `spring-core-<version>.jar`
-- `spring-web-<version>.jar`
+   - **WebLogicまたはWebSphereの場合：** EARのルートから次のJAR ファイルを削除します。
+     - `spring-core-<version>.jar`
+     - `spring-web-<version>.jar`
 
-   - **すべてのアプリケーションサーバーの場合：**`adobe-core-<appserver>.ear` のルートレベルで `adobe-dscf.jar` ファイルを開き、`META-INF/MANIFEST.MF` ファイルを編集して、次の JAR ファイルへの参照を削除します。
-- `spring-core-<version>.jar`
-- `spring-web-<version>.jar`
+   - **すべてのアプリケーションサーバーの場合：** `adobe-core-<appserver>.ear`のルートレベルで、`adobe-dscf.jar` ファイルを開き、`META-INF/MANIFEST.MF` ファイルを編集して、次のJAR ファイルへの参照を削除します。
+     - `spring-core-<version>.jar`
+     - `spring-web-<version>.jar`
 
 1. Geode 配布からの JAR ファイルを置き換えます。
    1. `<Adobe_Experience_Manager_Forms>/lib/caching/lib` に移動します。
@@ -99,11 +111,11 @@ ht-degree: 100%
    - `META-INF/MANIFEST.MF` ファイルを見つけて抽出します
    - MANIFEST.MF ファイルをテキストエディターで編集します
    - 「Class-Path」セクションを見つけて、すべての Spring フレームワーク参照を更新します。
-      - `spring-core-<version>.jar`コピー先：`spring-core-6.1.14.jar`
-      - `spring-web-<version>.jar`コピー先：`spring-web-6.1.14.jar`
-      - `spring-context-<version>.jar`コピー先：`spring-context-6.1.14.jar`
-      - `spring-beans-<version>.jar`コピー先：`spring-beans-6.1.14.jar`
-      - `spring-jcl-<version>.jar`コピー先：`spring-jcl-6.1.14.jar`
+     - `spring-core-<version>.jar`コピー先：`spring-core-6.1.14.jar`
+     - `spring-web-<version>.jar`コピー先：`spring-web-6.1.14.jar`
+     - `spring-context-<version>.jar`コピー先：`spring-context-6.1.14.jar`
+     - `spring-beans-<version>.jar`コピー先：`spring-beans-6.1.14.jar`
+     - `spring-jcl-<version>.jar`コピー先：`spring-jcl-6.1.14.jar`
    - 変更した MANIFEST.MF ファイルを保存します
    - JAR 内の元の MANIFEST.MF を更新されたバージョンに置き換えます
    - JAR ファイルを保存します

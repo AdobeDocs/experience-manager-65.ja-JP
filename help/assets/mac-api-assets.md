@@ -1,19 +1,33 @@
 ---
 title: '[!DNL Assets] HTTP API。'
-description: ' [!DNL Adobe Experience Manager Assets] の HTTP API を使用した、デジタルアセットの作成、読み取り、更新、削除、管理について説明します。'
+description: '[!DNL Adobe Experience Manager Assets]のHTTP APIを使用して、デジタルアセットを作成、読み取り、更新、削除、管理します。'
 contentOwner: AG
 role: Developer
 feature: Assets HTTP API,Developer Tools
 exl-id: 6bc10f4e-a951-49ba-9c71-f568a7f2e40d
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: bca6156727dca11b2e09be549f3def6130827193
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: f2d27a5f-0d67-4d85-8a24-86a8d8a3574b
+    internal-label: Developer tools
+  - id: c7140a77-10cf-4213-a7e9-f0d69c9fb56c
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: e5184d7e-fd36-480c-b5e5-d8161f2210ca
+    internal-label: Assets HTTP API
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1798'
-ht-degree: 100%
-
+ht-degree: 99%
 ---
-
 # [!DNL Assets] HTTP API {#assets-http-api}
 
 | バージョン | 記事リンク |
@@ -52,7 +66,7 @@ API の応答は、一部の MIME タイプに対する JSON ファイル、お�
 
 ### フォルダー {#folders}
 
-フォルダーは、従来のファイルシステムにおけるディレクトリに似ています。 これらは、他のフォルダーやアサートのコンテナです。 フォルダーには、以下のコンポーネントがあります。
+フォルダーは、従来のファイルシステムにおけるディレクトリに似ています。 これらは、他のフォルダーやアセットのコンテナです。 フォルダーには、以下のコンポーネントがあります。
 
 **エンティティ**：フォルダーのエンティティはフォルダーの子要素で、フォルダーまたはアセットです。
 
@@ -103,7 +117,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 
 >[!NOTE]
 >
->読みやすいように、以下の例では、すべての cURL 表記法を省略しています。 実際には、この表記法は [Resty](https://github.com/micha/resty)（`cURL` 用のスクリプトラッパー）と関連があります。
+>読みやすいように、以下の例では、完全な cURL 表記法を省略しています。 実際には、この表記法は [Resty](https://github.com/micha/resty)（`cURL` 用のスクリプトラッパー）と関連があります。
 
 **前提条件**
 
@@ -121,7 +135,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 
 * 200 - OK（成功）
 * 404 - NOT FOUND（フォルダーが存在しないかアクセスできない）
-* 500 - INTERNAL SERVER ERROR（他に問題がある場合）
+* 500 - INTERNAL SERVER ERROR（他の問題が発生した場合）
 
 **応答**：返されるエンティティのクラスはアセットまたはフォルダーです。 含まれるエンティティのプロパティは、各エンティティの完全なプロパティセットのサブセットです。 エンティティのすべての表現を取得するために、クライアントはリンクで参照される URL のコンテンツを `self` の `rel` で取得する必要があります。
 
@@ -143,7 +157,7 @@ Experience Manager では、アセットに次の要素が含まれています�
 * 201 - CREATED（作成が成功した場合）
 * 409 - CONFLICT（フォルダーが既に存在する場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
-* 500 - INTERNAL SERVER ERROR（他に問題がある場合）
+* 500 - INTERNAL SERVER ERROR（他の問題が発生した場合）
 
 ## アセットの作成 {#create-an-asset}
 
@@ -158,14 +172,14 @@ Experience Manager では、アセットに次の要素が含まれています�
 
 **応答コード**：応答コードは次のとおりです。
 
-* 201 - CREATED（コメントが正常に作成された場合）
+* 201 - CREATED（アセットが正常に作成された場合）
 * 409 - CONFLICT（アセットが既に存在する場合）
 * 412 - PRECONDITION FAILED（ルートコレクションが見つからないかアクセスできない場合）
 * 500 - INTERNAL SERVER ERROR（他に問題がある場合）
 
 ## アセットバイナリの更新 {#update-asset-binary}
 
-アセットバイナリ（オリジナル名のレンディション）を更新します。 「更新」トリガーは、デフォルトのアセット処理ワークフローが設定されている場合に実行します。
+アセットバイナリ（オリジナル名のレンディション）を更新します。 更新すると、設定されている場合はデフォルトのアセット処理ワークフローが実行されます。
 
 **リクエスト**：`PUT /api/assets/myfolder/myAsset.png -H"Content-Type: image/png" --data-binary @myPicture.png`
 
@@ -258,7 +272,7 @@ if (jcrcontentNode.hasProperty("jcr:title"))
 
 ## フォルダーまたはアセットのコピー {#copy-a-folder-or-asset}
 
-指定されたパスに存在するフォルダーまたはアセットを新しい宛先にコピーします。
+指定されたパスにあるフォルダーまたはアセットを新しい場所にコピーします。
 
 **リクエストヘッダー**：パラメーターは次のとおりです。
 

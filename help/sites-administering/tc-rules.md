@@ -6,13 +6,25 @@ feature: Language Copy
 exl-id: 8ca7bbcc-413a-49a8-a836-7083a9cadda1
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: ffa4c2522bfe98d99693e3c17666b728377337f9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: d9d38edd-df1b-480c-8f5e-72b62576f390
+    internal-label: Site and page features
+subfeature_v2:
+  - id: e15a4109-ae5d-497d-b301-31149e35aed4
+    internal-label: Language Copy Wizard
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 86%
-
 ---
-
 # 翻訳するコンテンツの特定{#identifying-content-to-translate}
 
 翻訳ルールは、翻訳プロジェクトに含まれる（または翻訳プロジェクトから除外される）ページ、コンポーネントおよびアセットについて、翻訳対象のコンテンツを特定します。 ページまたはアセットの翻訳中に、AEM は翻訳対象のコンテンツを抽出し、翻訳サービスに送信できるようにします。
@@ -64,13 +76,13 @@ AEM のコンテンツ翻訳機能の概要については、[多言語サイト
 * `path` 属性には、ルールが適用されるブランチのルートノードのパスが格納されます。
 * `property` 子要素は、すべてのリソースタイプについて、翻訳するノードプロパティを特定します。
 
-   * `name` 属性には、プロパティ名が格納されます。
-   * プロパティが翻訳されていない場合、オプションの `translate` 属性は `false` になります。 デフォルトでは、値は`true`です。 この属性は、以前のルールを上書きする場合に役立ちます。
+  * `name` 属性には、プロパティ名が格納されます。
+  * プロパティが翻訳されていない場合、オプションの `translate` 属性は `false` になります。 デフォルトでは、値は`true`です。 この属性は、以前のルールを上書きする場合に役立ちます。
 
 * `node` 子要素は、特定のリソースタイプについて、翻訳するノードプロパティを特定します。
 
-   * `resourceType` 属性には、リソースタイプを実装するコンポーネントに解決されるパスが格納されます。
-   * `property` 子要素は、翻訳するノードプロパティを特定します。 このノードは、ノードルールの `property` 子要素と同じ方法で使用します。
+  * `resourceType` 属性には、リソースタイプを実装するコンポーネントに解決されるパスが格納されます。
+  * `property` 子要素は、翻訳するノードプロパティを特定します。 このノードは、ノードルールの `property` 子要素と同じ方法で使用します。
 
 以下のルール例を適用すると、`/content` ノード下のすべてのページについて、すべての `text` プロパティのコンテンツが翻訳されます。 このルールは、基盤テキストコンポーネントや基盤画像コンポーネントなど、`text` プロパティでコンテンツを格納しているすべてのコンポーネントに対して有効です。
 

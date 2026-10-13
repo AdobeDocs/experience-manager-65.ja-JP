@@ -1,6 +1,6 @@
 ---
 title: ローンチの作成
-description: ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチの作成時には、タイトルとソースページを指定します。
+description: ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。 ローンチの作成時には、タイトルとソースページを指定します。
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,35 +10,44 @@ exl-id: 8ab21067-c19a-4faa-8bf0-cd9f21f6df70
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: e2c1b6d3-bb7e-4fe8-8c72-f7b403298e91
+    internal-label: Authoring
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 100%
-
+source-wordcount: '374'
+ht-degree: 97%
 ---
+# ローンチの作成{#creating-launches}
 
-# ローンチの作成 {#creating-launches}
-
-ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。ローンチを作成する際は、タイトルとソースページを指定します。
+ローンチを作成し、既存の web ページの新しいバージョンを更新して後でアクティブ化できるようにします。 ローンチを作成する際は、タイトルとソースページを指定します。
 
 * タイトルは、**サイドキック**&#x200B;に表示されます。作成者はサイドキックからローンチにアクセスして作業できます。
-* デフォルトでは、ソースページの子ページがローンチに含まれています。必要に応じて、ソースページのみを使用することもできます。
-* デフォルトでは、ソースページが変更されると、[ライブコピー](/help/sites-administering/msm.md)によってローンチページが自動的に更新されます。静的なコピーを作成して自動更新をおこなわないように指定できます。
+* デフォルトでは、ソースページの子ページがローンチに含まれています。 必要に応じて、ソースページのみを使用することもできます。
+* デフォルトでは、ソースページが変更されると、[ライブコピー](/help/sites-administering/msm.md)によってローンチページが自動的に更新されます。 静的なコピーを作成して自動更新をおこなわないように指定できます。
 
-オプションとして、**ローンチ日**（と時間）を指定して、ローンチページを昇格およびアクティベートするタイミングを定義できます。ただし、**ローンチ日**&#x200B;は&#x200B;**実稼動準備完了**&#x200B;フラグと組み合わせた場合のみ機能します（[ローンチ設定の編集](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration)を参照）。アクションが実際に自動的におこなわれるようにするには、両方を設定する必要があります。
+オプションとして、**ローンチ日**（と時間）を指定して、ローンチページを昇格およびアクティベートするタイミングを定義できます。 ただし、**ローンチ日**&#x200B;は&#x200B;**実稼動準備完了**&#x200B;フラグと組み合わせた場合のみ機能します（[ローンチ設定の編集](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration)を参照）。アクションが実際に自動的におこなわれるようにするには、両方を設定する必要があります。
 
 ## ローンチの作成 {#creating-a-launch}
 
 次の手順で、ローンチを作成します。
 
-1. Web サイトの管理ページ（[http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)）を開きます。
+1. Web サイト管理ページ （[http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)）を開きます。
 1. 「**新規...**」をクリックし、「**新しいローンチ...**」をクリックします。
 1. **ローンチを作成**&#x200B;ダイアログで、次のプロパティの値を指定します。
 
-   * **ローンチタイトル**：ローンチの名前。作成者がわかりやすい名前にします。
-   * **ソースページ**：ローンチを作成するページのパス。デフォルトでは、すべての子ページが含まれています。
-   * **サブページを除外**：ソースページのみのローンチを作成し、子ページのローンチを作成しない場合は、このオプションを選択します。デフォルトでは、このオプションは選択されていません。
-   * **同期を維持**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。これを実現するには、ローンチを[ライブコピー](/help/sites-administering/msm.md)にします。
+   * **ローンチタイトル**：ローンチの名前。 作成者がわかりやすい名前にします。
+   * **ソースページ**：ローンチを作成するページのパス。 デフォルトでは、すべての子ページが含まれています。
+   * **サブページを除外**：ソースページのみのローンチを作成し、子ページのローンチを作成しない場合は、このオプションを選択します。 デフォルトでは、このオプションは選択されていません。
+   * **同期を維持**：ソースページに変更があったときにローンチページのコンテンツを自動的に更新する場合は、このオプションを選択します。 これを実現するには、ローンチを[ライブコピー](/help/sites-administering/msm.md)にします。
    * **ローンチ日**：ローンチコピーがアクティブ化される日付と時間（「**実稼動準備完了**」フラグによって変わります。[ローンチ - イベントの順序](/help/sites-authoring/launches.md#launches-the-order-of-events)を参照してください）。
 
    ![chlimage_1-99](assets/chlimage_1-99a.png)

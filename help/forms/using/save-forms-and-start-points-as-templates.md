@@ -9,13 +9,27 @@ exl-id: b97175fd-cc3d-457a-af11-1f8c83192eb7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 95%
-
 ---
-
 # フォームをテンプレートとして保存 {#save-forms-as-templates}
 
 >[!NOTE]
@@ -26,13 +40,13 @@ ht-degree: 95%
 
 次の手順を実行して、テンプレートを作成します。
 
-1. フォームを開き、使用するたびに値がほぼ同一になるフィールドを選択するか入力します。 フォームを入力する際に通常追加するテンプレートを使用して、添付ファイルを追加できます。
-1. 「**テンプレートとして保存**」![save_as_template](assets/save_as_template.png) アイコンを選択します。 テンプレートの名前を入力するためのダイアログボックスが表示されます。
+1. フォームを開き、使用するたびに値がほぼ同一になるフィールドを選択するか入力します。 フォームの入力時に通常追加する添付ファイルを、テンプレートに含めることができます。
+1. 「**テンプレートとして保存**」![save_as_template](assets/save_as_template.png) アイコンを選択します。 テンプレートの名前を入力するためのダイアログが表示されます。
 1. テンプレートの名前を指定し、「**保存**」を選択します。 テンプレートフォルダーにテンプレートが表示されます。
 
    同じ名前のテンプレートが既に存在する場合は、テンプレートの上書きを確認するダイアログボックスが表示されます。 既存のテンプレートを新しいテンプレートで置き換えるには、「**続行**」を選択します。別の名前でテンプレートを保存するには、「**キャンセル**」を選択します。
 
-これで、保存したテンプレートを開くことができます。 テンプレートを開くたびに新しいフォームまたはタスクが作成され、フォームには保存されたデータとオプションが表示されます。 テンプレートを使用して、事前入力データの編集、添付ファイルの追加、ドラフトとしての保存、タスクの送信またはこのテンプレートを使用した別のテンプレートの作成を行うことができます。 テンプレートはモバイルデバイスのみに保存され、Adobe Experience Manager Forms サーバーとは同期されません。
+これで、保存したテンプレートを開くことができます。 テンプレートを開くたびに新しいフォームまたはタスクが作成され、フォームには保存されたデータとオプションが表示されます。 テンプレートを使用して、事前入力データの編集、添付ファイルの追加、ドラフトとしての保存、タスクの送信またはこのテンプレートを使用した別のテンプレートの作成を行うことができます。 テンプレートはモバイルデバイス固有であり、Adobe Experience Manager Forms サーバーとは同期されません。
 
 不要になったテンプレートを削除することもできます。 テンプレートを削除するには、テンプレートフォルダーに移動し、省略記号を選択して「**テンプレートを削除**」を選択します。
 

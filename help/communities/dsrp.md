@@ -9,13 +9,20 @@ role: Admin
 exl-id: 15b3a594-efde-4702-9233-232ba1c7e5b0
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '633'
 ht-degree: 3%
-
 ---
-
 # DSRP - リレーショナルデータベースストレージリソースプロバイダー {#dsrp-relational-database-storage-resource-provider}
 
 ## DSRPについて {#about-dsrp}
@@ -60,54 +67,54 @@ Oak コレクションとSRP コレクションの両方を集中的に使用す
 * 管理者権限でログイン
 * **メインメニュー**&#x200B;から
 
-   * **[!UICONTROL ツール]**&#x200B;を選択します（左側のペインから）
-   * **[!UICONTROL コミュニティ]**&#x200B;を選択
-   * **[!UICONTROL ストレージ設定]**&#x200B;を選択
+  * **[!UICONTROL ツール]**&#x200B;を選択します（左側のペインから）
+  * **[!UICONTROL コミュニティ]**&#x200B;を選択
+  * **[!UICONTROL ストレージ設定]**&#x200B;を選択
 
-      * 例えば、結果の場所は[http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)です。
+    * 例えば、結果の場所は[http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)です。
 
-     >[!NOTE]
-     >
-     >既定のストレージ設定は、`etc` パス （`/etc/socialconfig/srpc/defaultconfiguration`）ではなくconf パス （`/conf/global/settings/community/srpc/defaultconfiguration`）に保存されるようになりました。 [移行手順](#zerodt-migration-steps)に従って、defaultsrpを期待どおりに動作させることをお勧めします。
+    >[!NOTE]
+    >
+    >既定のストレージ設定は、`etc` パス （`/etc/socialconfig/srpc/defaultconfiguration`）ではなくconf パス （`/conf/global/settings/community/srpc/defaultconfiguration`）に保存されるようになりました。 [移行手順](#zerodt-migration-steps)に従って、defaultsrpを期待どおりに動作させることをお勧めします。
 
   ![dsrp-config](assets/dsrp-config.png)
 
 * **[!UICONTROL データベースストレージリソースプロバイダー（DSRP）]**&#x200B;を選択
 * **データベース設定**
 
-   * **[!UICONTROL JDBC データソース名]**
+  * **[!UICONTROL JDBC データソース名]**
 
-     MySQL接続に指定する名前は、[JDBC OSGi設定](dsrp-mysql.md#configurejdbcconnections)で入力した名前と同じである必要があります
+    MySQL接続に指定する名前は、[JDBC OSGi設定](dsrp-mysql.md#configurejdbcconnections)で入力した名前と同じである必要があります
 
-     *default*: communities
+    *default*: communities
 
-   * **[!UICONTROL データベース名]**
+  * **[!UICONTROL データベース名]**
 
-     [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) スクリプトのスキーマに指定された名前
+    [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) スクリプトのスキーマに指定された名前
 
-     *default*: communities
+    *default*: communities
 
 * **SolrConfiguration**
 
-   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
+  * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) ホスト**
 
-     内部ZooKeeperを使用してSolrを実行する場合は、この値を空白のままにします。 または、外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:80*&#x200B;など、ZooKeeperのURIに設定します
+    内部ZooKeeperを使用してSolrを実行する場合は、この値を空白のままにします。 または、外部ZooKeeperを使用して[SolrCloud モード &#x200B;](solr.md#solrcloud-mode)で実行する場合は、この値を&#x200B;*my.server.com:80*&#x200B;など、ZooKeeperのURIに設定します
 
-     *default*: *&lt;blank>*
+    *default*: *&lt;blank>*
 
-   * **[!UICONTROL Solr URL]**
+  * **[!UICONTROL Solr URL]**
 
-     *default*: https://127.0.0.1:8983/solr/
+    *default*: https://127.0.0.1:8983/solr/
 
-   * **[!UICONTROL Solr コレクション]**
+  * **[!UICONTROL Solr コレクション]**
 
-     *default*: collection1
+    *default*: collection1
 
 * 「**[!UICONTROL 送信]**」を選択します。
 
 ### defaultsrpのダウンタイム移行手順はゼロ {#zerodt-migration-steps}
 
-defaultsrp ページ [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)が期待どおりに動作することを確認するには、次の手順に従います。
+既定のsrp ページ [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)が期待どおりに機能することを確認するには、次の手順に従います。
 
 1. システム設定がjsrp （デフォルト）にフォールバックするように、`/etc/socialconfig`のパスの名前を`/etc/socialconfig_old`に変更します。
 1. jsrpが設定されているdefaultsrp ページ [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp)に移動します。 **[!UICONTROL 送信]** ボタンをクリックして、新しいデフォルト設定ノードを`/conf/global/settings/community/srpc`に作成します。
@@ -123,14 +130,14 @@ DSRPは、すべてのオーサーインスタンスとパブリッシュイン�
 
 * 作成者：
 
-   * メインメニューから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]**&#x200B;に移動します
-   * **[!UICONTROL ツリーをアクティブ化]**&#x200B;をダブルクリックします
-   * **パスの開始**:
+  * メインメニューから&#x200B;**[!UICONTROL ツール]** > **[!UICONTROL 操作]** > **[!UICONTROL レプリケーション]**&#x200B;に移動します
+  * **[!UICONTROL ツリーをアクティブ化]**&#x200B;をダブルクリックします
+  * **パスの開始**:
 
-      * `/etc/socialconfig/srpc/`を参照
+    * `/etc/socialconfig/srpc/`を参照
 
-   * `Only Modified`が選択されていないことを確認します。
-   * 「**[!UICONTROL アクティブ化]**」を選択します。
+  * `Only Modified`が選択されていないことを確認します。
+  * 「**[!UICONTROL アクティブ化]**」を選択します。
 
 ## ユーザーデータの管理 {#managing-user-data}
 

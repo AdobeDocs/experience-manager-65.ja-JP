@@ -1,6 +1,7 @@
 ---
 title: JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。
 description: JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードする追加の手順。
+SEO Description: Additional cluster upgrade steps for JBoss EAP 7.4.10 to 7.4.23 on AEM Forms on JEE.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: installing
@@ -9,13 +10,29 @@ exl-id: 2c9e7f41-a8d6-4b03-8e5c-1a4f6d9e0b72
 solution: Experience Manager, Experience Manager Forms
 feature: AEM Forms Upgrade,AEM Forms on JEE
 role: User, Developer
-source-git-commit: 652162941dd716ae797ce50709e91757dad99054
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: 94663796-0ee7-58b9-84f4-b425ebb69e83
+    internal-label: AEM Forms on JEE
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+subfeature_v2:
+  - id: b9cdd520-e7a7-4af9-a95f-296f28882b69
+    internal-label: AEM Forms upgrade
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 1%
-
 ---
-
 # JEE上のAEM FormsのJBoss EAP クラスターを7.4.10から7.4.23にアップグレードします。 {#upgrade-jboss-eap-cluster-from-7-4-10-to-7-4-23}
 
 ## 概要 {#overview}

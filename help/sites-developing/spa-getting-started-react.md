@@ -1,6 +1,6 @@
 ---
 title: React を使用した AEM での SPA の概要
-description: この記事では、サンプルの SPA アプリケーションを紹介し、その設定方法を説明するほか、React フレームワークを使用して独自の SPA の運用を速やかに開始する方法についても説明します。
+description: この記事では、サンプルの SPA アプリケーションを紹介し、その構成を説明するほか、React フレームワークを使用して独自の SPA をすばやく立ち上げる方法についても説明します。
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -11,19 +11,33 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
 index: false
-source-git-commit: 147b0efb32609c05949c9fe374fa4fca6a9dbfb1
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: c124fa01-25c5-42ec-adf6-21d1c114058b
+    internal-label: Developer tools
+subfeature_v2:
+  - id: a9f7d31e-bbe1-4475-966a-5f213546fcd9
+    internal-label: SPA Editor
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 100%
-
 ---
-
 
 # React を使用した AEM での SPA の概要{#getting-started-with-spas-in-aem-react}
 
 単一ページアプリケーション（SPA）により、Web サイトのユーザーに魅力的なエクスペリエンスを提供することができます。 開発者にとっては、SPA フレームワークを使用してサイトを構築できると都合がよく、作成者にとっては、SPA フレームワークを使用して構築されたサイトのコンテンツを AEM 内でシームレスに編集できると便利です。
 
-SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。 この記事では、React フレームワーク上のシンプルな SPA アプリケーションを紹介し、その設定方法を説明するほか、独自の SPA の運用をすぐに開始する方法についても説明します。
+SPA オーサリング機能には、AEM 内で SPA をサポートするための包括的なソリューションが用意されています。 この記事では、React フレームワーク上のシンプルな SPA アプリケーションを紹介し、その構成を説明するほか、独自の SPA の運用をすぐに開始する方法についても説明します。
 
 >[!NOTE]
 >
@@ -43,7 +57,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 >[!NOTE]
 >
->SPA 内のコンテンツを作成するには、コンテンツを AEM に格納し、コンテンツモデルによって公開する必要があります。
+>SPA 内でコンテンツをオーサリングできるようにするには、そのコンテンツを AEM に格納し、コンテンツモデルによって公開する必要があります。
 >
 >AEM 以外で開発された SPA については、コンテンツモデルのコントラクトに準拠していない場合、オーサリングを行うことはできません。
 
@@ -55,7 +69,7 @@ AEM での SPA の動作について詳しくは、次のドキュメントを�
 
 ### 依存関係 {#dependencies}
 
-`package.json` ファイルは、SPA パッケージ全体の要件を定義します。 SPA の動作に対する AEM の最小依存関係を以下に示します。
+`package.json` ファイルは、SPA パッケージ全体の要件を定義します。 動作する SPA に必要な AEM の最小依存関係を以下に示します。
 
 ```
   "dependencies": {
@@ -152,7 +166,7 @@ ReactDOM.render(
 
 `index.js` の主要機能は、`ReactDOM.render` 関数を活用して、DOM 内でアプリケーションをインジェクトする場所を決めることです。
 
-これはこの関数の標準的な使用方法です。このアプリ例に独自の使用方法ではありません。
+これはこの関数の標準的な使用方法であり、このアプリ例に固有のものではありません。
 
 #### 静的インスタンス化 {#static-instantiation}
 
@@ -258,7 +272,7 @@ class PageClass extends Component {...};
 export default MapTo('my-react-app/react/components/structure/page')(PageClass, EditConfig);
 ```
 
-`MapTo` 関数は、指定された `Component` を、オーサリング可能にするクラス名と属性で拡張した構成結果の `PageClass` を返します。 このコンポーネントは後でエクスポートし、アプリケーションのマークアップでインスタンス化できます。
+`MapTo` 関数は、指定された `Component` を、オーサリング可能にするクラス名と属性で拡張した構成結果の `PageClass` を返します。 このコンポーネントは書き出して、後でアプリケーションのマークアップでインスタンス化できます。
 
 `MapTo` または `withModel` 関数を使用してエクスポートされた `Page` コンポーネントは、`ModelProvider` コンポーネントによってラップされます。このコンポーネントは、標準コンポーネントに、ページモデルの最新バージョンに対するアクセス権またはそのページモデル内の詳細な位置を提供します。
 

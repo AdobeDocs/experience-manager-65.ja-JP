@@ -8,13 +8,22 @@ feature: Upgrading
 exl-id: b4531792-06dd-4545-9dbb-57224be20dc7
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 835ee49e-9248-5578-a60a-15c097807178
+    internal-label: Upgrading
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '1494'
-ht-degree: 94%
-
+source-wordcount: '1511'
+ht-degree: 93%
 ---
-
 # AEM 6.5 における Sites リポジトリの再構築 {#sites-repository-restructuring-in-aem}
 
 親の [AEM 6.5 のリポジトリ再構築](/help/sites-deploying/repository-restructuring.md)に記載されているように、AEM 6.5 にアップグレードするユーザーは、このページを使用して、AEM Sites ソリューションに影響を与えるリポジトリの変更に関連する作業量を評価する必要があります。 一部の変更は AEM 6.5 アップグレードプロセス中に作業が必要ですが、それ以外は今後のアップグレードまで延期できます。
@@ -104,7 +113,7 @@ ht-degree: 94%
     </ol> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>注</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、カテゴリプロパティを調べます.</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
@@ -136,7 +145,7 @@ ht-degree: 94%
      <li>デザインを以前の場所から新しい場所（<code>/apps</code>）にコピーします。</li>
      <li><code>allowProxy = true</code> を使用して、デザイン内の CSS、JavaScript、静的リソースを<a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">クライアントライブラリ</a>に変換します。</li>
      <li>cq:designPath プロパティの以前の場所への参照を更新します。</li>
-     <li>以前の場所を参照しているページを更新して、新規のクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li>
+     <li>以前の場所を参照しているページを更新して、新しいクライアントライブラリカテゴリを使用します（これにはページ実装コードの更新が必要です）。</li>
      <li><code>/etc.clientlibs/</code> プロキシサーブレットを介したクライアントライブラリの提供を許可するように AEM Dispatcher のルールを更新します。</li>
     </ol> <p>SCM で管理されておらず、実行時にデザインダイアログで変更されたデザインの場合：</p>
     <ul>
@@ -188,7 +197,7 @@ ht-degree: 94%
   </tr>
   <tr>
    <td><strong>メモ</strong></td>
-   <td><p>モバイルデバイスエミュレータ設定の解決は、次の順序で行われます。</p>
+   <td><p>モバイルデバイスエミュレーター設定の解決は、次の順序で行われます。</p>
     <ol>
      <li><code>/conf/&lt;tenant&gt;/settings/mobile</code></li>
      <li><code>/conf/global/settings/mobile</code></li>
@@ -331,7 +340,7 @@ ht-degree: 94%
    <td><strong>再構築の手引き</strong></td>
    <td><p>カスタム LESS ファイル内の以前の場所への参照はすべて、新しい場所から読み込むように更新する必要があります。</p>
     <ul>
-     <li>以前の場所で grid_base.less を参照している参照カスタム LESS ファイルを、新しい場所を参照するように更新します。</li>
+     <li>以前の場所にある grid_base.less を参照しているカスタム LESS ファイルを、新しい場所を参照するように更新します。</li>
     </ul> </td>
   </tr>
   <tr>
@@ -426,7 +435,7 @@ Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promo
    <td><p>これらのクライアントライブラリをカスタムで使用する場合は、パスではなくカテゴリでクライアントライブラリを参照する必要があります。</p>
     <ol>
      <li>以前の場所のパスによるクライアントライブラリへの参照はすべて <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM のクライアントライブラリ参照フレームワーク</a>を使用するように更新する必要があります。</li>
-     <li>AEM のクライアントライブラリ参照フレームワークを使用できない場合、クライアントライブラリの絶対パスは AEM のクライアントライブラリプロキシサーブレットを介して参照できます。</li>
+     <li>AEM のクライアントライブラリ参照フレームワークを使用できない場合、クライアントライブラリの絶対パスは AEM のクライアントライブラリプロキシサーブレットを介して参照できます：</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li>
@@ -480,7 +489,7 @@ Search&Promote is end of life as of September 1, 2022 ### Adobe Search and Promo
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>メモ</strong></td>
+   <td><strong>注</strong></td>
    <td><p>これらのクライアントライブラリの編集はサポートされていませんでした。</p> <p>クライアントライブラリのカテゴリを入手するには、CRXDELite で各 <code>cq:ClientLIbraryFolder</code> ノードを検索し、categories プロパティを調べます。</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>

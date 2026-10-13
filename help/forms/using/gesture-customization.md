@@ -9,13 +9,27 @@ exl-id: 6debb1a7-7889-4fdd-87c7-ecb87cc0b1f5
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 4d0fdb4b3128272d50252b52e5eda1b78cd7cae9
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 95%
-
 ---
-
 # ジェスチャーのカスタマイズ {#gesture-customization}
 
 >[!NOTE]
@@ -24,9 +38,9 @@ ht-degree: 95%
 
 AEM Forms アプリケーションのジェスチャーをカスタマイズして、アプリケーションを操作するための独自の方法を提供できます。 例えば、タスクまたはスタートポイントを開いたり閉じたりするジェスチャーを新たに追加できます。
 
-## AEM Forms アプリケーションのジェスチャーをカスタマイズするには {#to-customize-gestures-in-aem-forms-app}
+## AEM Forms アプリケーションのジェスチャーのカスタマイズ {#to-customize-gestures-in-aem-forms-app}
 
-AEM Forms アプリケーションでは、左スワイプで新しいタスクまたはスタートポイントを開くことができますが、右スワイプでは何も操作できません。 次の例では、AEM Forms アプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはスタートポイントを開くための手順を示しています。
+AEM Forms アプリケーションでは、左スワイプで新しいタスクまたはスタートポイントを開くことができますが、右スワイプでは何も起こりません。 次の例では、AEM Forms アプリケーションで右スワイプジェスチャーを実行したときに新しいタスクまたはスタートポイントを開くための手順を示しています。
 
 1. プロジェクトを開きます。
 
@@ -54,25 +68,25 @@ AEM Forms アプリケーションでは、左スワイプで新しいタスク�
 
 1. 検索
 
-   * &quot;select .taskContentArea&quot; : &quot;onTaskClick&quot;、
+   * &quot;select .taskContentArea&quot; : &quot;onTaskClick&quot;,
 
-     &quot;select .taskOpenArea&quot; : &quot;onTaskClick&quot;、
+     &quot;select .taskOpenArea&quot; : &quot;onTaskClick&quot;,
 
-     &quot;select .task-content&quot; : &quot;onTaskClick&quot;、
+     &quot;select .task-content&quot; : &quot;onTaskClick&quot;,
 
-     &quot;select .last_empty_div&quot; : &quot;onTaskClick&quot;、
+     &quot;select .last_empty_div&quot; : &quot;onTaskClick&quot;,
 
    これを
 
-   * &quot;swipe .taskContentArea&quot; : &quot;onTaskClick&quot;、
+   * &quot;swipe .taskContentArea&quot; : &quot;onTaskClick&quot;,
 
-     &quot;swipe .taskOpenArea&quot; : &quot;onTaskClick&quot;、
+     &quot;swipe .taskOpenArea&quot; : &quot;onTaskClick&quot;,
 
-     &quot;swipe .task-content&quot; : &quot;onTaskClick&quot;、
+     &quot;swipe .task-content&quot; : &quot;onTaskClick&quot;,
 
-     &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;、
+     &quot;swipe .last_empty_div&quot; : &quot;onTaskClick&quot;,
 
 1. `task.js` ファイルを保存して閉じます。
-1. AEM Forms アプリケーションをビルドして実行します。 これで、左スワイプと右スワイプを使用して開くことができます。
+1. AEM Forms アプリケーションをビルドして実行します。 これで、左スワイプと右スワイプを使用して、新しいタスクまたは Startpoint を開くことができます。
 
 同様に、さまざまな組み合わせのジェスチャー、HTML 要素、および関数に対して、他のビューで変更を行うことができます。

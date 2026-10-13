@@ -9,13 +9,17 @@ exl-id: c65a24e6-3041-4774-aeed-8e188ea19b78
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '666'
 ht-degree: 5%
-
 ---
-
 # バナーの管理{#managing-banners}
 
 {{ue-over-mobile}}

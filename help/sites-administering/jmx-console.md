@@ -1,5 +1,5 @@
 ---
-title: JMX コンソールを使用したサーバーリソースの監視
+title: JMX コンソールを使用したサーバーリソースのモニタリング
 description: JMX コンソールを使用してサーバーリソースを監視する方法について説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,14 +10,25 @@ exl-id: eabd8335-6140-4c15-8cff-21608719aa5f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Operations
 role: Admin
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: c5d917df-d8bd-5e97-a117-6dde1e9f7103
+    internal-label: Developing
+  - id: 8a70d214-ab7b-58c1-b001-2ed2e5d6303d
+    internal-label: Operations
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '4969'
+source-wordcount: '4975'
 ht-degree: 90%
-
 ---
-
-# JMX コンソールを使用したサーバーリソースの監視{#monitoring-server-resources-using-the-jmx-console}
+# JMX コンソールを使用したサーバーリソースのモニタリング{#monitoring-server-resources-using-the-jmx-console}
 
 JMX コンソールを使用すると、CRX サーバー上のサービスを監視および管理できます。 以下の節では、JMX フレームワークを通じて公開される属性と操作について説明します。
 
@@ -53,37 +64,37 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 * 引数：なし
 * 戻り値：以下の列を含む表形式のデータ：
 
-   * ジョブ
-   * キュー名
-   * アクティブなジョブ
-   * 平均処理時間
-   * 平均待機時間
-   * キャンセルされたジョブ
-   * 失敗したジョブ
-   * 完了したジョブ
-   * 処理済みのジョブ
-   * 待機中のジョブ
+  * ジョブ
+  * キュー名
+  * アクティブなジョブ
+  * 平均処理時間
+  * 平均待機時間
+  * キャンセルされたジョブ
+  * 失敗したジョブ
+  * 完了したジョブ
+  * 処理済みのジョブ
+  * 待機中のジョブ
 
 **returnWorkflowJobTopicInfo** ワークフロージョブの処理情報を、トピックごとにまとめてリストします。
 
 * 引数：なし
 * 戻り値：以下の列を含む表形式のデータ：
 
-   * トピック名
-   * 平均処理時間
-   * 平均待機時間
-   * キャンセルされたジョブ
-   * 失敗したジョブ
-   * 完了したジョブ
-   * 処理済みのジョブ
+  * トピック名
+  * 平均処理時間
+  * 平均待機時間
+  * キャンセルされたジョブ
+  * 失敗したジョブ
+  * 完了したジョブ
+  * 処理済みのジョブ
 
 **returnFailedWorkflowCount** 失敗したワークフローインスタンスの数を表示します。 クエリ対象のワークフローモデルを指定したり、すべてのワークフローモデルの情報を取得したりできます。
 
 * 引数：
 
-   * model：クエリするモデルのID。 すべてのワークフローモデルで失敗したワークフローインスタンスの数を表示するには、値を指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * model：クエリするモデルのID。 すべてのワークフローモデルで失敗したワークフローインスタンスの数を表示するには、値を指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：失敗したワークフローインスタンスの数。
 
@@ -96,65 +107,65 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * インスタンスを再起動：（オプション）`true` 値を指定して、インスタンスを終了後に再起動します。 デフォルト値 `false` では、終了したワークフローインスタンスは再起動されません。
-   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの失敗したインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * インスタンスを再起動：（オプション）`true` 値を指定して、インスタンスを終了後に再起動します。 デフォルト値 `false` では、終了したワークフローインスタンスは再起動されません。
+  * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの失敗したインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：終了されたインスタンスに関する表形式のデータ。次の列が含まれます。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
-   * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+  * イニシエーター
+  * インスタンス ID
+  * モデル ID
+  * ペイロード
+  * 開始コメント
+  * ワークフロータイトル
 
 **retryFailedWorkItems** 失敗した作業項目のステップの実行を試みます。 失敗した作業項目をすべて再試行するか、特定のワークフローモデルの失敗した作業項目のみを再試行するかを指定できます。 オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの失敗した作業項目に操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの失敗した作業項目に操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：再試行される、失敗した作業項目に関する表形式のデータ。次の列が含まれます。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
-   * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+  * イニシエーター
+  * インスタンス ID
+  * モデル ID
+  * ペイロード
+  * 開始コメント
+  * ワークフロータイトル
 
 **PurgeActive** 特定の時間が経過したアクティブなワークフローインスタンスを削除します。 すべてのモデルのアクティブなインスタンスをパージするか、特定のモデルのインスタンスのみをパージするかを指定できます。 オプションで、操作をテストして、実際に操作を行わずに結果を確認することもできます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
-   * ドライラン：（オプション） `true` の値を指定して、 実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * ワークフローが開始してからの日数：パージするワークフローインスタンスの有効期間（日数）。
+  * ドライラン：（オプション） `true` の値を指定して、 実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：パージされたアクティブなワークフローインスタンスに関する表形式のデータ。次の列が含まれます。
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
-   * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+  * イニシエーター
+  * インスタンス ID
+  * モデル ID
+  * ペイロード
+  * 開始コメント
+  * ワークフロータイトル
 
 **countStaleWorkflows** 古くなったワークフローインスタンスの数を返します。 古くなったインスタンスの数は、すべてのワークフローモデルに関して、または特定のモデルに関して取得できます。
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：古くなったワークフローインスタンスの数。
 
@@ -162,10 +173,10 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルの古くなったインスタンスに操作を適用するには、モデルを指定しないでください。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：再起動されたワークフローインスタンスのリスト。
 
@@ -178,9 +189,9 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル：（オプション）実行中のインスタンスの数が返されるモデルのID。 すべてのワークフローモデルの実行中のインスタンスの数を返すモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）実行中のインスタンスの数が返されるモデルのID。 すべてのワークフローモデルの実行中のインスタンスの数を返すモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：実行中のワークフローインスタンスの数。
 
@@ -188,9 +199,9 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル：（オプション）完了したインスタンスの数が返されるモデルのID。 すべてのワークフローモデルの完了したインスタンス数を返すモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）完了したインスタンスの数が返されるモデルのID。 すべてのワークフローモデルの完了したインスタンス数を返すモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
 
 * 戻り値：完了したワークフローインスタンスの数。
 
@@ -198,20 +209,20 @@ JMX コンソールを使用して、MBean を作成し、サービスを管理�
 
 * 引数：
 
-   * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
+  * モデル：（オプション）操作が適用されるモデルの ID。 すべてのワークフローモデルのワークフローインスタンスに操作を適用するモデルを指定しません。 ID は model ノードのパスで、例は次のようになります。
 
-     `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
-   * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
-   * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
+    `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model`
+  * ワークフローが完了してからの日数：ワークフローインスタンスが完了状態になっている日数。
+  * ドライラン：（オプション） `true` の値を指定して、実際に操作を行わずに操作の結果を確認します。 デフォルト値 `false` では、操作が実行されます。
 
 * 戻り値：以下の列を含む、パージされた完了済みのワークフローインスタンスに関する表形式のデータ：
 
-   * イニシエーター
-   * インスタンス ID
-   * モデル ID
-   * ペイロード
-   * 開始コメント
-   * ワークフロータイトル
+  * イニシエーター
+  * インスタンス ID
+  * モデル ID
+  * ペイロード
+  * 開始コメント
+  * ワークフロータイトル
 
 ## リポジトリ {#repository}
 
@@ -252,7 +263,7 @@ CRX リポジトリに関する情報
   </tr>
   <tr>
    <td>identifier.stability</td>
-   <td>参照できないノード IDの安定性を示します。次の値を使用できます。
+   <td>参照不可能なノード識別子の安定性を示します。 次の値を指定できます。
     <ul>
      <li>identifier.stability.indefinite.duration：識別子は変わりません。</li>
      <li>identifier.stability.method.duration：メソッド呼び出しの合間に識別子が変わる可能性があります。</li>
@@ -532,7 +543,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * 名前：新しいワークスペースの名前を表す String 値。
+  * 名前：新しいワークスペースの名前を表す String 値。
 
 * 戻り値：なし
 
@@ -540,7 +551,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * delete：未使用のリポジトリアイテムを削除するかどうかを示すブール値。 値がtrueの場合、未使用のノードとプロパティが削除されます。 falseの値を指定すると、すべてのノードがスキャンされますが、どれも削除されません。
+  * delete：未使用のリポジトリアイテムを削除するかどうかを示すブール値。 値がtrueの場合、未使用のノードとプロパティが削除されます。 falseの値を指定すると、すべてのノードがスキャンされますが、どれも削除されません。
 
 * 戻り値：なし
 
@@ -553,13 +564,13 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * `target`：（任意）リポジトリデータをアーカイブする ZIP ファイルまたはディレクトリの名前を表す `String` 値。 ZIP ファイルを使用するには、ZIP ファイル名の拡張子を含めます。 ディレクトリを使用する場合は、ファイル名の拡張子を含めません。
+  * `target`：（任意）リポジトリデータをアーカイブする ZIP ファイルまたはディレクトリの名前を表す `String` 値。 ZIP ファイルを使用するには、ZIP ファイル名の拡張子を含めます。 ディレクトリを使用する場合は、ファイル名の拡張子を含めません。
 
-     増分バックアップを実行するには、以前にバックアップに使用したディレクトリを指定します。
+    増分バックアップを実行するには、以前にバックアップに使用したディレクトリを指定します。
 
-     絶対パスまたは相対パスを指定できます。 相対パスは、crx-quickstart ディレクトリの親を基準とした相対パスです。
+    絶対パスまたは相対パスを指定できます。 相対パスは、crx-quickstart ディレクトリの親を基準とした相対パスです。
 
-     値を指定しない場合、デフォルト値は `backup-currentdate.zip` が使用され、`currentdate` の形式は `yyyyMMdd-HHmm` となります。
+    値を指定しない場合、デフォルト値は `backup-currentdate.zip` が使用され、`currentdate` の形式は `yyyyMMdd-HHmm` となります。
 
 * 戻り値：なし
 
@@ -592,7 +603,7 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * `background`：実行中に web コンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示す Boolean 値です。 値が true の場合、操作をバックグラウンドで実行します。
+  * `background`：実行中に web コンソールを使用できるように、操作をバックグラウンドで実行するかどうかを示す Boolean 値です。 値が true の場合、操作をバックグラウンドで実行します。
 
 * 戻り値：なし
 
@@ -605,9 +616,9 @@ CRX リポジトリに関する情報
 
 * 引数：
 
-   * `master`：プライマリリポジトリノードを実行するコンピューターの IP アドレスまたはコンピューター名を表す文字列値。
-   * `username`：クラスターでの認証に使用する名前。
-   * `password`：認証に使用するパスワード。
+  * `master`：プライマリリポジトリノードを実行するコンピューターの IP アドレスまたはコンピューター名を表す文字列値。
+  * `username`：クラスターでの認証に使用する名前。
+  * `password`：認証に使用するパスワード。
 
 * 戻り値：なし
 
@@ -623,28 +634,28 @@ CRX リポジトリに関する情報
 * 型：`TimeSeries`
 * 名前：`org.apache.jackrabbit.api.stats.RepositoryStatistics.Type` Enum クラスの、以下のいずれかの値。
 
-   * BUNDLE_CACHE_ACCESS_COUNTER
-   * BUNDLE_CACHE_MISS_AVERAGE
-   * BUNDLE_CACHE_MISS_COUNTER
-   * BUNDLE_CACHE_MISS_DURATION
-   * BUNDLE_CACHE_SIZE_COUNTER
-   * BUNDLE_COUNTER
-   * BUNDLE_READ_COUNTER
-   * BUNDLE_WRITE_AVERAGE
-   * BUNDLE_WRITE_COUNTER
-   * BUNDLE_WRITE_DURATION
-   * BUNDLE_WS_SIZE_COUNTER
-   * QUERY_AVERAGE
-   * QUERY_COUNT
-   * QUERY_DURATION
-   * SESSION_COUNT
-   * SESSION_LOGIN_COUNTER
-   * SESSION_READ_AVERAGE
-   * SESSION_READ_COUNTER
-   * SESSION_READ_DURATION
-   * SESSION_WRITE_AVERAGE
-   * SESSION_WRITE_COUNTER
-   * SESSION_WRITE_DURATION
+  * BUNDLE_CACHE_ACCESS_COUNTER
+  * BUNDLE_CACHE_MISS_AVERAGE
+  * BUNDLE_CACHE_MISS_COUNTER
+  * BUNDLE_CACHE_MISS_DURATION
+  * BUNDLE_CACHE_SIZE_COUNTER
+  * BUNDLE_COUNTER
+  * BUNDLE_READ_COUNTER
+  * BUNDLE_WRITE_AVERAGE
+  * BUNDLE_WRITE_COUNTER
+  * BUNDLE_WRITE_DURATION
+  * BUNDLE_WS_SIZE_COUNTER
+  * QUERY_AVERAGE
+  * QUERY_COUNT
+  * QUERY_DURATION
+  * SESSION_COUNT
+  * SESSION_LOGIN_COUNTER
+  * SESSION_READ_AVERAGE
+  * SESSION_READ_COUNTER
+  * SESSION_READ_DURATION
+  * SESSION_WRITE_AVERAGE
+  * SESSION_WRITE_COUNTER
+  * SESSION_WRITE_DURATION
 
 ### 属性 {#attributes-1}
 
@@ -816,7 +827,7 @@ HTTP リクエストに関する統計を提供し、SlingRequestProcessor サ�
 サーバー起動プロセスの完了値を設定します。 クイックスタートウィンドウの進行状況バーが、完了値を表します。
 
 * 引数：
-   * p1：起動プロセスがどの程度完了したかを割合で表す浮動小数値。 値の範囲はゼロから 1 です。 例えば、0.3 は 30％完了を示します。
+  * p1：起動プロセスがどの程度完了したかを割合で表す浮動小数値。 値の範囲はゼロから 1 です。 例えば、0.3 は 30％完了を示します。
 * 戻り値：なし.
 
 ## サードパーティのサービス {#third-party-services}
@@ -891,9 +902,9 @@ JMX コンソールのメインページには、サービスのテーブルが�
 3. 属性値を変更するには、値をクリックし、表示されるダイアログボックスで値を指定して、「保存」をクリックします。
 4. サービスの操作を呼び出すには、操作名をクリックし、表示されるダイアログボックスで引数値を指定して、「呼び出し」をクリックします。
 
-## 監視のための外部 JMX アプリケーションの使用 {#using-external-jmx-applications-for-monitoring}
+## モニタリングのための外部 JMX アプリケーションの使用 {#using-external-jmx-applications-for-monitoring}
 
-CRX を使用すると、外部アプリケーションと Managed Bean（MBean）が [Java Management Extensions（JMX）](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)経由でやり取りできます。 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) のような汎用コンソールやドメイン専用の監視アプリケーションを使用すると、CRX の設定やプロパティを取得および設定したり、パフォーマンスやリソース使用状況を監視したりできます。
+CRX を使用すると、外部アプリケーションと Managed Bean（MBean）が [Java Management Extensions（JMX）](https://docs.oracle.com/javase/6/docs/technotes/guides/management/overview.html)経由でやり取りできます。 [JConsole](https://java.sun.com/developer/technicalArticles/J2SE/jconsole.html) のような汎用コンソールやドメイン専用のモニタリングアプリケーションを使用すると、CRX の設定やプロパティを取得および設定したり、パフォーマンスやリソース使用状況をモニタリングしたりできます。
 
 ### JConsole を使用した CRX への接続 {#using-jconsole-to-connect-to-crx}
 
@@ -922,7 +933,7 @@ JConsole には、ローカルの Java 仮想マシンプロセスのリスト�
 
 上記のプロパティで、`portNum` は、JMX RMI 接続を有効にするポート番号です。 未使用のポート番号を必ず指定してください。 ローカルアクセス用の RMI コネクターを公開する以外に、このプロパティを設定すると、既知の名前「jmxrmi」を使用して、指定したポートのプライベート読み取り専用レジストリに追加の RMI コネクターが公開されます。
 
-デフォルトでは、リモート監視用に JMX エージェントを有効にすると、パスワードファイルに基づいたパスワード認証が使用されます。パスワードファイルは、Java VM 起動時に以下のシステムプロパティを使用して指定する必要があります。
+デフォルトでは、リモートモニタリング用に JMX エージェントを有効にすると、パスワードファイルに基づいたパスワード認証が使用されます。パスワードファイルは、Java VM 起動時に以下のシステムプロパティを使用して指定する必要があります。
 
 `com.sun.management.jmxremote.password.file=pwFilePath`
 
@@ -939,11 +950,11 @@ $ java
 
 ### CRX で提供される MBean の使用 {#using-the-mbeans-provided-by-crx}
 
-クイックスタートプロセスに接続後、JConsole では、CRX が実行されている JVM に対して、様々な一般的監視ツールが提供されます。
+クイックスタートプロセスに接続後、JConsole では、CRX が実行されている JVM に対して、様々な一般的モニタリングツールが提供されます。
 
 ![screen_shot_2012-03-26at115056am](assets/screen_shot_2012-03-26at115056am.png)
 
-CRX の内部監視および設定オプションにアクセスするには、「MBean」タブに移動して、左側にある階層型のコンテンツツリーから、属性または操作の関心のあるセクションを選択します。 例えば、com.adobe.granite/Repository/Operations セクションなどです。
+CRX の内部モニタリングおよび設定オプションにアクセスするには、「MBean」タブに移動して、左側にある階層型のコンテンツツリーから、属性または操作の関心のあるセクションを選択します。 例えば、com.adobe.granite/Repository/Operations セクションなどです。
 
 そのセクション内で、必要な属性または操作を左パネルから選択します。
 

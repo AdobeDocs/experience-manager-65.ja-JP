@@ -9,13 +9,22 @@ exl-id: f82391d7-e30d-48d2-8f66-88fcae3dfb5f
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: d4b1cd8bc04ea21378c8084f4fac8cd66d6c1d3c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: 5ef752af-d616-5b23-8312-06964e46b208
+    internal-label: Administering
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 88%
-
+source-wordcount: '2083'
+ht-degree: 89%
 ---
-
 
 # 検索フォームの設定{#configuring-search-forms}
 
@@ -27,9 +36,9 @@ ht-degree: 88%
 
 * **ツール**
 
-   * **一般**
+  * **一般**
 
-      * **検索フォーム**
+    * **検索フォーム**
 
 このコンソールに初めてアクセスすると、すべての設定に南京錠シンボルが表示されます。 これは、該当する設定はデフォルト（標準）の設定であり、削除できないことを示します。 設定をカスタマイズすると、鍵アイコンは非表示になります。ただし、[カスタマイズした設定を削除](#deleting-a-configuration-to-reinstate-the-default)した場合は、 デフォルトの設定（および鍵アイコン）が復帰します。
 
@@ -332,10 +341,10 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->* 一般的な検索述語は、次の場所で定義されます。
+>* 一般的な検索用の述語は、次の場所で定義されています。
 >  `/libs/cq/gui/components/common/admin/customsearch/searchpredicates`
 >
->* サイト管理者（クラシック UI）のみに関連する検索述語は、次の場所にあります。
+>* siteadmin（クラシック UI）にのみ関連する検索用の述語は、次の場所にあります。
 >  `/libs/cq/gui/components/siteadmin/admin/searchpanel/searchpredicates`
 >   * これらは非推奨であり、後方互換性のためにのみ使用できます。
 >

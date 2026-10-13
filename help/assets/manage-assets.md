@@ -8,13 +8,24 @@ mini-toc-levels: 4
 exl-id: 158607e6-b4e9-4a3f-b023-4023d60c97d2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 20d6c716b4ba799a7d4ae2858459f7c38cf3da02
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: d09181b5-a36a-43de-ba01-36641440bc43
+    internal-label: Experience Manager Assets
+feature_v2:
+  - id: 7d2b2ec8-499c-5434-9ffd-9218cd71f683
+    internal-label: Asset Management
+  - id: 74ec00bc-0862-520e-86dc-e377aeccc141
+    internal-label: Search
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '10112'
+source-wordcount: '10238'
 ht-degree: 96%
-
 ---
-
 # デジタルアセットの管理 {#manage-digital-assets}
 
 | バージョン | 記事リンク |
@@ -197,8 +208,8 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 1. 「アップロードジョブオプション」ダイアログボックスの右下隅にある「**[!UICONTROL 保存]**」をクリックします。
 1. アップロードページの右下隅で「**[!UICONTROL アップロードを送信]**」をクリックします。
 
-   アップロードの進行状況を表示するには、グローバルナビゲーションバーで「**[!UICONTROL ジョブ]**」をクリックします。ジョブページには、アップロードの進行状況が表示されます。[!DNL Experience Manager]で作業を続け、いつでもDynamic Media Classicのジョブページに戻って、進行中のジョブを確認できます。
-進行中のアップロードジョブをキャンセルするには、デュレーション時間の横にある&#x200B;**[!UICONTROL キャンセル]**&#x200B;をクリックします。
+   アップロードの進行状況を確認するには、グローバルナビゲーションバーの「**[!UICONTROL ジョブ]**」をクリックします。 ジョブページには、アップロードの進行状況が表示されます。 ユーザーは、[!DNL Experience Manager] で作業を続け、いつでも Dynamic Media Classic のジョブページに戻って進行中のジョブを確認できます。
+   進行中のアップロードジョブをキャンセルするには、デュレーション時間の横の「**[!UICONTROL キャンセル]**」をクリックします。
 
 #### アップロードジョブのオプション {#upload-job-options}
 
@@ -470,8 +481,8 @@ ZIP アーカイブは、サポートされているその他のアセットと�
 
 ## アセットの移動または名前変更 {#moving-or-renaming-assets}
 
-アセット（またはフォルダー）を別の場所に移動すると、アセット（またはフォルダー）は、アセットのコピー時とは異なり複製されません。アセット（またはフォルダー）がターゲットの場所に配置され、ソースの場所から削除されます。アセットを新しい場所に移動する際に、アセットの名前を変更することもできます。
-公開済みアセットを別の場所に移動する場合は、オプションでアセットを再公開できます。デフォルトでは、公開済みアセットの移動操作は自動的に非公開になります。アセットの移動時に作成者が[!UICONTROL 再公開] オプションを選択すると、移動したアセットが再公開されます。
+アセット（またはフォルダー）を別の場所に移動した場合、アセットのコピー中に、そのアセット（またはフォルダー）は複製されません。 アセット（またはフォルダー）はターゲットの場所に配置され、ソースの場所から削除されます。 また、アセットを新しい場所に移動する際に、名前を変更することもできます。
+公開済みのアセットを別の場所に移動する場合は、オプションでアセットを再公開できます。 公開済みのアセットに対するデフォルトの移動操作により、自動的に非公開になります。 移動したアセットは、作成者が「[!UICONTROL 再公開]」オプションをオンにした場合、アセットを移動した際に再公開されます。
 
 ![既に公開済みのアセットを移動する際に、そのアセットを再公開できます](assets/republish-on-move.png)
 

@@ -10,13 +10,25 @@ exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: c45915cf-e157-4af7-a80d-97b905bcb3a5
+    internal-label: Experience Manager Sites
+feature_v2:
+  - id: b1210526-416b-4ef6-bcc0-1692e99f30e9
+    internal-label: Administration and security
+subfeature_v2:
+  - id: c35bc059-fd80-4a01-91a6-e48da3c76758
+    internal-label: Security practices
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '780'
 ht-degree: 92%
-
 ---
-
 # 閉じられたユーザーグループの作成{#creating-a-closed-user-group}
 
 閉じられたユーザーグループ（CUG）は、公開済みのインターネットサイト内にある特定のページへのアクセスを制限するために使用します。 このようなページでは、割り当て済みのメンバーがログインしてセキュリティ資格情報を指定する必要があります。
@@ -81,7 +93,7 @@ CUG を単一ページまたは複数ページに適用するには：
    1. 「**有効にする**」チェックボックスをアクティブ化します。
 
    1. **ログインページ**&#x200B;へのパスを追加します。
-これはオプションです。空白のままにすると、標準ログインページが使用されます。
+      このページは省略可能です。空白のままにすると、標準のログインページが使用されます。
 
    ![CUG が追加されました](assets/cug-authentication-requirement.png)
 
@@ -134,7 +146,8 @@ CUGのDispatcher.any ファイル [&#128279;](https://experienceleague.adobe.com
 
 >[!NOTE]
 >
->Dispatcher ファームでsession-managementが有効になっている場合、ファームが処理するすべてのページはキャッシュされません。CUG外のページをキャッシュするには、非CUG ページを処理する2番目のファームをDispatcher.any>に作成します。
+>Dispatcher ファームでsession-managementが有効になっている場合、ファームが処理するすべてのページはキャッシュされません。 CUG外のページをキャッシュするには、dispatcher.anyに2番目のファームを作成します。
+>作成します。
 
 1. `/directory` を定義して [/sessionmanagement](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=ja#enabling-secure-sessions-sessionmanagement) を設定します。次に例を示します。
 

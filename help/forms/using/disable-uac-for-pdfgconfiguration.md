@@ -5,13 +5,29 @@ exl-id: 785b7bb4-7158-45ea-a1e5-eebf3dc3ebc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
+  - id: f19cff18-c8cc-4a4b-adad-85dd2fa3dbe2
+    internal-label: Document Services
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 100%
-
+source-wordcount: '272'
+ht-degree: 93%
 ---
-
 # Windows Server 上で Word または Excel ファイルを PDF に変換できない {#unable-to-convert-word-excel-files-PDF}
 
 ## 問題 {#issue}
@@ -19,7 +35,7 @@ ht-degree: 100%
 ユーザーが Word ファイルまたは Excel ファイルを Microsoft® Windows Server 上で PDF に変換しようとすると、次のエラーが発生します。
 
 *プライマリコンバータからのエラーメッセージ：*
-*ALC-PDG-015-003-システムは入力ファイルを開くことができません。ファイルを再度送信するか、システム管理者に問い合わせてください。*
+*ALC-PDG-015-003 – 入力ファイルを開くことができません。 ファイルを再度送信するか、システム管理者に問い合わせてください。*
 
 
 ## 解決策 {#solution}
@@ -27,14 +43,14 @@ ht-degree: 100%
 次の手順を実行します。
 
 1. システム構成ユーティリティにアクセスするには、**[!UICONTROL スタート／ファイル名を指定して実行]**&#x200B;を選択し、**[!UICONTROL MSCONFIG]** と入力します。
-1. 「**[!UICONTROL ツール]**」タブをクリックし、スクロールして「**[!UICONTROL UAC 設定を変更]**」を選択します。「**[!UICONTROL 起動]**」をクリックして新しいウィンドウでコマンドを実行します。
-1. スライダーを「通知しない」レベルに設定します。完了したら、コマンドウィンドウを閉じ、システム構成ウィンドウを閉じます。
-1. レジストリ設定で UAC が 0（ゼロ）に設定されていることを検証します。検証するには、以下の手順を実行します。
+1. 「**[!UICONTROL ツール]**」タブをクリックし、スクロールして「**[!UICONTROL UAC 設定を変更]**」を選択します。 「**[!UICONTROL 起動]**」をクリックして新しいウィンドウでコマンドを実行します。
+1. スライダーを「通知しない」レベルに設定します。 完了したら、コマンドウィンドウを閉じ、システム構成ウィンドウを閉じます。
+1. レジストリ設定で UAC が 0（ゼロ）に設定されていることを検証します。 検証するには、以下の手順を実行します。
 
-   1. Microsoft® は、レジストリを変更する前にバックアップをとっておくことを推奨しています。詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
-   1. Microsoft® Windows のレジストリエディターを開きます。レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
-   1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\` に移動します。「EnableLUA」の値が 0 に設定されていることを確認します。
-   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。値が 0 でない場合は、0 に変更します。レジストリエディターを終了します。
+   1. Microsoft® は、レジストリを変更する前にバックアップをとっておくことを推奨しています。 詳しい手順については、「[Windows でのレジストリのバックアップと復元方法](https://support.microsoft.com/ja-jp/help/322756)」を参照してください。
+   1. Microsoft® Windows のレジストリエディターを開きます。 レジストリエディターを開くには、「スタート／ファイル名を指定して実行」に移動し、「regedit」と入力して「OK」をクリックします。
+   1. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\` に移動します。 「EnableLUA」の値が 0 に設定されていることを確認します。
+   1. **EnableLUA** の値が 0（ゼロ）に設定されていることを確認します。 値が 0 でない場合は、0 に変更します。 レジストリエディターを終了します。
 
 1. コンピューターを再起動します。
 

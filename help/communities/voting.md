@@ -1,6 +1,6 @@
 ---
 title: 投票の使用
-description: ログインコミュニティメンバーが回答などの特定のコンテンツを評価できるページに投票コンポーネントを追加する方法を説明します。
+description: 投票コンポーネントをページに追加して、サインインしたコミュニティメンバーが回答などの特定のコンテンツを評価できるようにする方法を説明します。
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
@@ -9,59 +9,66 @@ exl-id: aa90bf1b-6053-4949-b061-232d72b80682
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 3%
-
 ---
-
 # 投票の使用 {#using-voting}
 
-`Voting` コンポーネントは、コミュニティメンバーが QnA コンポーネント内の回答など、特定のコンテンツを評価できるようにする便利なツールです。 `Voting` コンポーネントでは、メンバーは上矢印または下矢印を選択して自分の意見を示します。
+`Voting` コンポーネントは、コミュニティ メンバーがQnA コンポーネント内の回答など、特定のコンテンツを評価できる便利なツールです。 `Voting` コンポーネントでは、メンバーは上向き矢印または下向き矢印を選択して、自分の意見を示します。
 
 ## ページへの投票の追加 {#adding-voting-to-a-page}
 
-オーサーモードで `Voting` コンポーネントをページに追加するには、コンポーネントブラウザーを使用します。 `Communities / Voting` を見つけて、ユーザーが投票できる機能に対する相対的な位置など、ページ上の場所にドラッグします。
+作成者モードでページに`Voting` コンポーネントを追加するには、コンポーネントブラウザーを使用します。 `Communities / Voting`を見つけ、ユーザーが投票する機能に対する相対的な位置など、ページ上の場所にドラッグします。
 
-必要な情報については、[Communities コンポーネントの基本 &#x200B;](basics.md) を参照してください。
+必要な情報については、[&#x200B; コミュニティコンポーネントの基本](basics.md)を参照してください。
 
-[&#x200B; 必須のクライアントサイドライブラリ &#x200B;](essentials-voting.md#essentials-for-client-side) が含まれると、`Voting` コンポーネントはこのように表示されます。
+[必要なクライアントサイドライブラリ &#x200B;](essentials-voting.md#essentials-for-client-side)が含まれている場合、`Voting` コンポーネントはこのように表示されます。
 
 ![voting-component](assets/voting-component.png)
 
 ## 投票の設定 {#configuring-voting}
 
-配置された `Voting` コンポーネントを選択して、編集ダイアログを開く `Configure` アイコンにアクセスして選択できるようにします。
+配置された`Voting` コンポーネントを選択して、編集ダイアログを開く`Configure` アイコンにアクセスして選択できるようにします。
 
-![&#x200B; 設定 &#x200B;](assets/configure-new.png)
+![configure](assets/configure-new.png)
 
 「**[!UICONTROL テキストとラベル]**」タブで、投票の記録に使用するプロパティを指定します。
 
-![&#x200B; 投票ラベル &#x200B;](assets/voting-label.png)
+![voting-label](assets/voting-label.png)
 
 * **[!UICONTROL 肯定的な応答ラベル]**
 
-  （*必須*）正応答の内部プロパティ名。
+  （*必須*）肯定的な応答の内部プロパティ名。
 
-* **[!UICONTROL 否定応答ラベル]**
+* **[!UICONTROL 否定的な応答ラベル]**
 
-  （*必須*）否定応答の内部プロパティ名。
+  （*必須*）否定的な応答の内部プロパティ名。
 
-* **[!UICONTROL 集計名]**
+* **[!UICONTROL 合計名]**
 
-  （*必須*）投票コンポーネントのこのインスタンスの、識別可能な内部プロパティ名。
+  （*必須*）投票コンポーネントのこのインスタンスの内部で識別可能なプロパティ名。
 
 ## サイト訪問者エクスペリエンス {#site-visitor-experience}
 
 ### メンバー {#members}
 
-会員は一度のみ投票できますが、いつでも投票を変更することができます。
+メンバーは一度だけ投票できますが、いつでも投票を変更できます。
 
 ### 匿名 {#anonymous}
 
-匿名投票はサポートされていません。 サイト訪問者が一度投票に参加するには、登録（メンバーになる）とログインが必要です。
+匿名投票はサポートされていません。 サイト訪問者は、一度投票に参加するために登録（会員になる）し、サインインする必要があります。
 
 ## 追加情報 {#additional-information}
 
-詳しくは、開発者向けの [&#x200B; 投票の基本事項 &#x200B;](essentials-voting.md) ページを参照してください。
+詳しくは、開発者向けの[Voting Essentials](essentials-voting.md) ページを参照してください。

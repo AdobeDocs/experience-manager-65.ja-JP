@@ -9,13 +9,20 @@ role: Admin
 exl-id: a9fc9c06-b9e6-4a5e-ab5e-0930ecd4b51b
 solution: Experience Manager
 feature: Communities
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: b013f126-a97e-52d1-9f79-cb5bbb12114e
+    internal-label: Communities
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
 workflow-type: tm+mt
 source-wordcount: '1534'
 ht-degree: 3%
-
 ---
-
 # SRP 用の Solr 設定 {#solr-configuration-for-srp}
 
 ## AEM Platform用Solr {#solr-for-aem-platform}
@@ -36,13 +43,13 @@ Apache Solrをダウンロードしてインストールします。
 * サービスは必要ありません
 * 実行モードの選択：
 
-   * スタンドアロンモード
-   * [SolrCloud モード &#x200B;](#solrcloud-mode) （実稼動環境に推奨）
+  * スタンドアロンモード
+  * [SolrCloud モード &#x200B;](#solrcloud-mode) （実稼動環境に推奨）
 
 * 多言語検索（MLS）の選択
 
-   * [標準MLSのインストール](#installing-standard-mls)
-   * [高度なMLSのインストール](#installing-advanced-mls)
+  * [標準MLSのインストール](#installing-standard-mls)
+  * [高度なMLSのインストール](#installing-advanced-mls)
 
 ## SolrCloud モード {#solrcloud-mode}
 
@@ -288,35 +295,35 @@ SolrCloudまたはスタンドアロンモードのインストールを開始�
 * スタンドアロンモードでSolrをインストールします。
 * Solr5を実行している場合は、collection1 （Solr4と同様）を作成します。
 
-   * `./bin/solr start`
-   * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
+  * `./bin/solr start`
+  * `./bin/solr create_core -c collection1 -d sample_techproducts_configs`
 
 * インストールスクリプトを実行します：Install [-v 4|5] [-d solrhome] [-c collectionpath]
 どこで：
 
-   * -d solrhome
+  * -d solrhome
 
-     Solr インストールディレクトリ
+    Solr インストールディレクトリ
 
-   * -c collectionpath
+  * -c collectionpath
 
-     Solrのコレクションパス
+    Solrのコレクションパス
 
-   * --help
+  * --help
 
-     コマンドラインオプションの印刷
+    コマンドラインオプションの印刷
 
-   * -v [4|5]
+  * -v [4|5]
 
-     Solrのバージョンを設定
+    Solrのバージョンを設定
 
 * Solr 4.10.4の例：
 
-   * Install.bat -v 4 -d c:/solr-4.10.4 -c c:/solr-4.10.4/example/solr/collection1
+  * Install.bat -v 4 -d c:/solr-4.10.4 -c c:/solr-4.10.4/example/solr/collection1
 
 * Solr 5.4.0の例：
 
-   * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
+  * Install.sh -v 5 -d /tmp/solr-5.4.0 -c /tmp/solr-5.4.0/server/solr/collection1
 
 **メモ**：
 
