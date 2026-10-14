@@ -909,9 +909,9 @@ AEM Forms がセキュアなドキュメントのみをアップロードする�
 
 ## Remoting を使用したカスタムコンポーネントサービスの呼び出し {#invoking-custom-component-services-using-remoting}
 
-Remoting を使用して、カスタムコンポーネント内のサービスを呼び出すことができます。 例えば、Customer サービスを含む Bank コンポーネントについて考えてみましょう。 Flex で記述されたクライアントアプリケーションを使用して、Customer サービスに属する操作を呼び出すことができます。 この節に関連するクイックスタートを実行する前に、Bank カスタムコンポーネントを作成する必要があります。
+Remoting を使用して、カスタムコンポーネント内のサービスを呼び出すことができます。 例えば、カスタマーサービスを含む Bank コンポーネントについて考えてみましょう。 Flex で記述されたクライアントアプリケーションを使用して、カスタマーサービスに属する操作を呼び出すことができます。 この節に関連するクイックスタートを実行する前に、Bank カスタムコンポーネントを作成する必要があります。
 
-Customer サービスは、`createCustomer` を言う名前の操作を公開します。 このディスカッションでは、Customer サービスを呼び出して顧客を作成する Flex クライアントアプリケーションの作成方法を説明します。 この操作には、新規顧客を表す `com.adobe.livecycle.sample.customer.Customer` タイプの複合オブジェクトが必要です。 次の図に、Customer サービスを呼び出して新しい顧客を作成するクライアントアプリケーションを示します。 `createCustomer` 操作は顧客識別子の値を返します。 識別子の値は「顧客識別子」テキストボックスに表示されます。
+カスタマーサービスは、`createCustomer` を言う名前の操作を公開します。 このディスカッションでは、カスタマーサービスを呼び出して顧客を作成する Flex クライアントアプリケーションの作成方法を説明します。 この操作には、新規顧客を表す `com.adobe.livecycle.sample.customer.Customer` タイプの複合オブジェクトが必要です。 次の図に、カスタマーサービスを呼び出して新しい顧客を作成するクライアントアプリケーションを示します。 `createCustomer` 操作は顧客識別子の値を返します。 識別子の値は「顧客識別子」テキストボックスに表示されます。
 
 ![iu_iu_flexnewcust](assets/iu_iu_flexnewcust.png)
 
@@ -962,7 +962,7 @@ Customer サービスは、`createCustomer` を言う名前の操作を公開し
 
 ### AEM Forms の複合データタイプのマッピング {#mapping-aem-forms-complex-data-types}
 
-一部の AEM Forms 操作では、入力値として複合データタイプが必要です。 これらの複合データタイプは、操作で使用される実行時の値を定義します。 例えば、Customer サービスの `createCustomer` 操作にはサービスに必要な実行時の値を含む `Customer` インスタンスが必要です。 データタイプがない場合、Customer サービスは例外をスローし、操作を実行しません。
+一部の AEM Forms 操作では、入力値として複合データタイプが必要です。 これらの複合データタイプは、操作で使用される実行時の値を定義します。 例えば、Customer サービスの `createCustomer` 操作にはサービスに必要な実行時の値を含む `Customer` インスタンスが必要です。 データタイプがない場合、カスタマーサービスは例外をスローし、操作を実行しません。
 
 AEM Forms サービスを呼び出す際に、必要な AEM Forms データタイプにマッピングする ActionScript オブジェクトを作成します。 操作に必要な複合データタイプごとに、個別の ActionScript オブジェクトを作成します。
 
@@ -993,7 +993,7 @@ ActionScript クラスのフィールドは、AEM Forms データタイプに属
 
 >[!NOTE]
 >
->Forms データタイプに属するフィールド名を判別する良い方法は、web ブラウザーでサービスの WSDL を表示することです。 WSDL は、サービスのデータタイプと対応するデータメンバーを指定します。 Customer サービスでは、WSDL `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.` が使用されます。
+>Forms データタイプに属するフィールド名を判別する良い方法は、web ブラウザーでサービスの WSDL を表示することです。 WSDL は、サービスのデータタイプと対応するデータメンバーを指定します。 カスタマーサービスでは、WSDL `https://[yourServer]:[yourPort]/soap/services/CustomerService?wsdl.` が使用されます。
 
 Customer ActionScript クラスは、customer という名前のパッケージに属しています。 AEM Forms データタイプにマッピングするすべての ActionScript クラスは、独自のパッケージに配置することをお勧めします。 次の図に示すように、Flex プロジェクトの src フォルダーにフォルダーを作成し、ActionScript ファイルをそのフォルダーに配置します。
 
@@ -1001,7 +1001,7 @@ Customer ActionScript クラスは、customer という名前のパッケージ�
 
 ### クイックスタート：Remoting を使用した Customer カスタムサービスの呼び出し {#quick-start-invoking-the-customer-custom-service-using-remoting}
 
-次のコード例は、Customer サービスを呼び出して顧客を作成します。 このコード例を実行する場合は、必ずすべてのテキストボックスに入力してください。 また、`com.adobe.livecycle.sample.customer.Customer` にマッピングする Customer.as ファイルを必ず作成してください。
+次のコード例は、カスタマーサービスを呼び出して顧客を作成します。 このコード例を実行する場合は、必ずすべてのテキストボックスに入力してください。 また、`com.adobe.livecycle.sample.customer.Customer` にマッピングする Customer.as ファイルを必ず作成してください。
 
 >[!NOTE]
 >
