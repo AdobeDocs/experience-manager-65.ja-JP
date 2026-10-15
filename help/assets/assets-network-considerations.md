@@ -34,7 +34,7 @@ ht-degree: 99%
 * 企業ネットワークのトポロジ。
 * 企業ネットワークと [!DNL Experience Manager] 環境からのインターネットへのアップリンク。
 * [!DNL Experience Manager] 環境のトポロジ。
-* [!DNL Experience Manager] ネットワークインターフェイスの同時ユーザー数を定義します。
+* [!DNL Experience Manager] ネットワークインターフェイスの同時コンシューマー数を定義します。
 * [!DNL Experience Manager] デプロイメントの定義済みワークフロー。
 
 ## クライアントデバイスから企業ネットワークへの接続性 {#connectivity-from-the-client-device-to-the-corporate-network}
