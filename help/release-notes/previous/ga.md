@@ -346,7 +346,7 @@ AEM 6.5 には、AEM ユーザー、DAM ロール、および関連するクリ�
 
 [!DNL Adobe Asset Link] を使用すると、コンテンツ作成プロセスでのクリエイティブ担当者とマーケターのコラボレーションを強化できます。 クリエイティブ担当者は、使い慣れたアプリを離れることなく、[!DNL Experience Manager Assets] に保存されているコンテンツにアクセスできます。 [!DNL Adobe Photoshop]、[!DNL Adobe Illustrator]、[!DNL Adobe InDesign] などのアプリ内のパネルを使用して、アセットをシームレスに参照、検索、チェックアウトおよびチェックインすることもできます。
 
-[!DNL Adobe Asset Link] は、[Creative Cloud エンタープライズ版](https://www.adobe.com/creativecloud/business/enterprise.html)に含まれています。 [!DNL Experience Manager] デプロイメントの必要な設定など、詳しくは、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html?lang=ja) を参照してください。
+[!DNL Adobe Asset Link] は、[Creative Cloud エンタープライズ版](https://www.adobe.com/jp/creativecloud/business/enterprise.html)に含まれています。 [!DNL Experience Manager] デプロイメントの必要な設定など、詳しくは、[Adobe Asset Link](https://helpx.adobe.com/jp/enterprise/using/adobe-asset-link.html?lang=ja) を参照してください。
 
 ![Adobe Photoshop でのアセットの検索](/help/release-notes/assets/asset_search_photoshop.png)
 

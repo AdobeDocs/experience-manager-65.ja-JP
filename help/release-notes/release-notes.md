@@ -657,7 +657,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 >
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
->* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/subscription/priority-product-update.html)
+>* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/jp/subscription/priority-product-update.html)
 
 
 

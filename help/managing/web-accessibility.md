@@ -78,4 +78,4 @@ Adobe Experience Manager（AEM）には、能力が異なるユーザー向け�
 
 ## Adobe におけるアクセシビリティ {#accessibility-at-adobe}
 
-詳しくは、[アドビのアクセシビリティリソースセンター](https://www.adobe.com/accessibility/)にアクセスしてください。
+詳しくは、[アドビのアクセシビリティリソースセンター](https://www.adobe.com/jp/accessibility/)にアクセスしてください。

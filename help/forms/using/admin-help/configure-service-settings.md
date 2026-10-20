@@ -178,7 +178,7 @@ Distiller サービスでは、以下の設定を使用できます。
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。 このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。 Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。 [アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html)を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。 このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。 Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。 [アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/jp/support/products/enterprise/eol/eol_matrix.html)を参照してください。
 
 Document Management サービス（`DocumentManagementService`）を使用すると、プロセスで Content Services（非推奨）のコンテンツ管理機能を使用できます。 ドキュメント管理の操作では、コンテンツ管理システム内のスペースとコンテンツを管理するために必要な基本的なタスクが提供されます。 このようなタスクの例としては、コンテンツのコピー、削除、移動、取得、保存、スペースと関連付けの作成、コンテンツ属性の取得と設定などがあります。
 

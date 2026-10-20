@@ -648,7 +648,7 @@ AEM Forms の以下のサブシステムは、[リハビリテーション法 50
 >
 >Adobe Acrobat 2020 （クラシックトラック）は、AEM Formsではサポートされていません。 代わりに、Adobe Acrobat Pro DC （Continuous Track、最新バージョン）を使用してください。
 >
->Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。 2 つのトラックについての詳細や比較については、[https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
+>Acrobat DC 製品ファミリーでは、異なる製品である Acrobat と Reader のそれぞれに、「Classic」と「Continuous」の 2 種類のトラックが用意されています。 2 つのトラックについての詳細や比較については、[https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/whatsnewdc.html) を参照してください。
 
 ## JEE 上の AEM Forms でサポートされているクライアント {#supported-clients-for-aem-forms-on-jee}
 
