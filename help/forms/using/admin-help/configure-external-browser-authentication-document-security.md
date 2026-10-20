@@ -47,7 +47,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-> 外部ブラウザー認証には、クライアントでサポートされているバージョンのAdobe AcrobatまたはAdobe Acrobat Readerが必要です。 バージョンの詳細とアップデートについては、[Acrobat リリースノート（2026年3月の継続的なトラック） &#x200B;](https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)を参照してください。
+> 外部ブラウザー認証には、クライアントでサポートされているバージョンのAdobe AcrobatまたはAdobe Acrobat Readerが必要です。 バージョンの詳細とアップデートについては、[Acrobat リリースノート（2026年3月の継続的なトラック） &#x200B;](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/ReleaseNotesDC/continuous/dccontinuousmarch2026.html#dccontinuousmarchtwentytwentysix)を参照してください。
 
 ### AEM Forms JEE ホットフィックス 2 6.5.24.0のソフトウェア配布リンク {#software-distribution-links}
 

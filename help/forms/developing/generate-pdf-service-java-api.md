@@ -164,7 +164,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
 
 ## クイックスタート（SOAP モード）：Java API を使用して HTML コンテンツを PDF ドキュメントに変換 {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-次の Java コードの例では、https://www.adobe.com にある HTML コンテンツを、*AdobeHTML.pdf* という名前の PDF ドキュメントに変換します （[HTML ドキュメントを PDF ドキュメントに変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照してください）。
+次の Java コードの例では、https://www.adobe.com/jp にある HTML コンテンツを、*AdobeHTML.pdf* という名前の PDF ドキュメントに変換します （[HTML ドキュメントを PDF ドキュメントに変換](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents)を参照してください）。
 
 ```java
  /*
@@ -242,7 +242,7 @@ AEM Forms の操作は、AEM Forms で厳密に型指定された API を使用�
          GeneratePdfServiceClient pdfGenClient = new GeneratePdfServiceClient(myFactory);
  
          //Get an HTML document to convert to a PDF document a
-         String inputFileName = "https://www.adobe.com";
+         String inputFileName = "https://www.adobe.com/jp";
  
           String securitySettings = "No Security";
          String fileTypeSettings = "Standard";

@@ -51,7 +51,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。 このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。 Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。 [アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html?lang=ja)を参照してください。
+>Adobe® LiveCycle® Content Services ES（非推奨）は LiveCycle と共にインストールされるコンテンツ管理システムです。 このサービスでは、人間中心のプロセスをデザイン、管理、監視および最適化することができます。 Content Services（非推奨）のサポートは 2014年12月31日（PT）をもって終了しています。 [アドビ製品のライフサイクルに関するドキュメント](https://www.adobe.com/jp/support/products/enterprise/eol/eol_matrix.html?lang=ja)を参照してください。
 
 ## 差分ディレクトリ同期を有効化する {#enable-delta-directory-synchronization}
 

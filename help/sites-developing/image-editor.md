@@ -51,8 +51,8 @@ ht-degree: 100%
 
 例：
 
-`[rect(0,0,10,10)"https://www.adobe.com"|"_self"|"alt"|(0,0,0.8,0.8)]`
-`[circle(10,10,10)"https://www.adobe.com"|"_self"|"alt"|(0.8,0.8,0.8)]`
+`[rect(0,0,10,10)"https://www.adobe.com/jp"|"_self"|"alt"|(0,0,0.8,0.8)]`
+`[circle(10,10,10)"https://www.adobe.com/jp"|"_self"|"alt"|(0.8,0.8,0.8)]`
 
 ## SVG 画像のサポート {#support-for-svg-images}
 

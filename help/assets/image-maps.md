@@ -44,7 +44,7 @@ ht-degree: 100%
 
    ![chlimage_1-422](assets/chlimage_1-422.png)
 
-1. ホットスポットをクリックし、URL と代替テキストを入力します。 「**[!UICONTROL ターゲット]**」リストから、画像マップを表示する場所（例：同じタブ、新しいタブ、iFrame など）を指定します。 例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
+1. ホットスポットをクリックし、URL と代替テキストを入力します。 「**[!UICONTROL ターゲット]**」リストから、画像マップを表示する場所（例：同じタブ、新しいタブ、iFrame など）を指定します。 例えば、画像マップを新しいタブで開くには、URLとして「`https://www.adobe.com/jp`」と入力し、代替テキストとして「`Adobe website`」と入力し、「**[!UICONTROL ターゲット]**」リストで「**[!UICONTROL 新しいタブ]**」を指定します。
 
    ![chlimage_1-423](assets/chlimage_1-423.png)
 
