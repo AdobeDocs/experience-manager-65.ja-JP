@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 1af0281a94789888e87ba959f82ff491f4d7ee60
+source-git-commit: 9240de61985dc32f17593f416e5d054cadb8a392
 workflow-type: tm+mt
-source-wordcount: '8302'
+source-wordcount: '8310'
 ht-degree: 95%
 ---
 
@@ -566,6 +566,7 @@ ht-degree: 95%
       + [AEM Forms JEEでのシリアル化の問題の軽減](/help/forms/using/mitigating-serialization-issues-forms-jee.md)
     + AEM Forms の設定 {#configure-aem-forms}
       + [AEM Forms サーバーのパフォーマンスチューニング](/help/forms/using/performance-tuning-aem-forms.md)
+      + [アダプティブフォーム参照用のカスタムインデックスの作成](/help/forms/using/create-custom-index-for-adaptive-forms-references.md)
       + [アダプティブフォームのキャッシュの設定](/help/forms/using/configure-adaptive-forms-cache.md)
       + [AEM DS の設定](/help/forms/using/configuring-the-processing-server-url.md)
       + [同期スケジューラの設定](/help/forms/using/configure-synchronization-scheduler.md)
