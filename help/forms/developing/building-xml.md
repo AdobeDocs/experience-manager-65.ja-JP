@@ -1,61 +1,59 @@
 ---
-title: JEE Workbench 上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法を教えてください。
-description: JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成
+title: JEE ワークベンチ上の AEM Forms で Execute Script サービスを使用して XML データを作成する方法
+description: JEE ワークベンチ上の AEM Forms の Execute Script サービスを使用した XML データの作成
 exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 source-git-commit: 361f0a5f2d1484cf594edfda73250c5690ed7cab
-workflow-type: ht
-source-wordcount: '1043'
+workflow-type: tm+mt
+source-wordcount: '1060'
 ht-degree: 100%
-
 ---
+# JEE ワークベンチ上の AEM Forms の Execute Script サービスを使用した XML データの作成 {#using-execute-script-service-forms-jee-workbench}
 
-# JEE Workbench 上の AEM Forms の Execute Script サービスを使用した XML データの作成 {#using-execute-script-service-forms-jee-workbench}
+JEE プロセス管理ワークフロー上の AEM Forms に関連している XML は数多くあります。例えば、XML 情報をプロセス内で構築したり、JEE ワークスペース上の AEM Forms の Flex アプリケーションに送信したり、システム設定に使用したりできますし、フォームとの間で情報を渡す場合に使用することができます。 JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
 
-JEE プロセス管理ワークフロー上の AEM Forms に関連している XML は数多くあります。例えば、XML 情報をプロセス内で構築したり、JEE ワークスペース上の AEM Forms の Flex アプリケーションに送信したり、システム設定に使用したりできますし、フォームとの間で情報を渡す場合に使用することができます。JEE 上の AEM Forms 開発者による XML の管理が必要となるインスタンスは多くありますが、そのうちの多くで、XML を JEE プロセス上の AEM Forms で管理する必要があります。
+単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。 プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。 単純な条件ロジックである「もし～なら～である」という形式のシナリオの場合、このサービスが適している可能性があります。
 
-単純な XML 設定を扱う場合、`Set Value` サービスを使用することができます。これは JEE サービス上のデフォルトの AEM Forms です。プロセスデータモデルの 1 つ以上のデータ項目の値を設定します。単純な条件ロジックである「もし～なら～である」という形式のシナリオの場合、このサービスが適している可能性があります。
-
-しかし、より複雑な状況では、Set Value サービスはそれほど効果的ではありません。このような場合、Java のようなプログラミング言語で提供されるコマンドなど、より堅牢な一連のプログラミングコマンドが必要となります。Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java を使用して複雑な XML を作成する方がより簡単でより明確でしょう。さらに、条件付きプログラミングは Set Value サービスよりも Java で追加する方が簡単です。
+しかし、より複雑な状況では、Set Value サービスはそれほど効果的ではありません。 このような場合、Java のようなプログラミング言語で提供されるコマンドなど、より堅牢な一連のプログラミングコマンドが必要となります。 Set Value サービス内の単純なテキストから XML ドキュメントを作成するよりも、Java™ を使用して複雑な XML を作成する方がより簡単でより明確でしょう。 さらに、条件付きプログラミングは Set Value サービスよりも Java™ で追加する方が簡単です。
 
 ## プロセスでの Execute Script サービスの使用 {#using-execute-script-service-in-process}
 
-JEE Workbench の AEM Forms で使用可能な JEE サービス上の標準の AEM Forms のセットの中に `Execute Script` サービスがあります。このサービスではプロセスでスクリプトの実行が可能で、そのための `executeScript` 操作を使用できます。
+JEE ワークベンチの AEM Forms で使用可能な JEE サービス上の標準の AEM Forms のセットの中に `Execute Script` サービスがあります。 このサービスではプロセスでスクリプトの実行が可能で、そのための `executeScript` 操作を使用できます。
 
 ### 「スクリプトを実行」サービスをアクティビティとして定義したアプリケーションとプロセスの作成 {#create-an-application}
 
-アプリケーションやプロセス全体の作成は、このチュートリアルの対象外ですが、この手順のために、「DemoApplication02」という名前のアプリケーションを作成しました。アプリケーションが既に作成されている場合は、このアプリケーションでプロセスを作成して executeScript サービスを呼び出す必要があります。`Execute Script` サービスが含まれるアプリケーションにプロセスを追加するには、以下の手順に従います。
+アプリケーションやプロセス全体の作成は、このチュートリアルの対象外ですが、この手順のために、「DemoApplication02」という名前のアプリケーションを作成しました。 アプリケーションが既に作成されている場合は、このアプリケーションでプロセスを作成して executeScript サービスを呼び出す必要があります。 `Execute Script` サービスが含まれるアプリケーションにプロセスを追加するには、以下の手順に従います。
 
-1. アプリケーションを右クリックし、「**[!UICONTROL 新規]**」を選択します。**[!UICONTROL 新規]**&#x200B;スライドアウトメニューで「**[!UICONTROL プロセス]**」を選択します。プロセスに名前を付け、必要に応じて説明を追加し、このプロセスを表すアイコンを選択してください。このチュートリアル用に、プロセスを作成し、`executeScriptDemoProcess`という名前を付けました。
-1. スタートポイントを定義するか、後でスタートポイントを追加するよう指定してください。
-1. これでプロセスが作成され、 [!UICONTROL プロセスデザイン]ウィンドウで自動的に開きます。プロセスデザインウィンドウの上部にあるアクティビティピッカーアイコンをクリックし、新しいアクティビティをスイムレーンにドラッグします。この時点で、[!UICONTROL アクティビティを定義ウィンドウ]が表示されます（下図を参照）。
+1. アプリケーションを右クリックし、「**[!UICONTROL 新規]**」を選択します。 **[!UICONTROL 新規]**&#x200B;スライドアウトメニューで「**[!UICONTROL プロセス]**」を選択します。 プロセスに名前を付け、必要に応じて説明を追加し、このプロセスを表すアイコンを選択してください。 このチュートリアル用に、プロセスを作成し、`executeScriptDemoProcess`という名前を付けました。
+1. スタートポイントを定義するか、後でスタートポイントを追加するようにします。
+1. これでプロセスが作成され、 [!UICONTROL プロセスデザイン]ウィンドウで自動的に開きます。 プロセスデザインウィンドウの上部にあるアクティビティピッカーアイコンをクリックし、新しいアクティビティをスイムレーンにドラッグします。 この時点で、[!UICONTROL アクティビティを定義ウィンドウ]が表示されます（下図を参照）。
    ![アクティビティを定義](assets/define-activity.jpg)
-1. executeScript サービスは、 サービスの `Foundation` セットにあります。サービス名にこのオブジェクトが `Execute Script – 1.0` として表示され、操作名には `executeScript` と表示されます。この項目をクリックして選択します。
+1. executeScript サービスは、 サービスの `Foundation` セットにあります。 サービス名にこのオブジェクトが `Execute Script – 1.0` として表示され、操作名には `executeScript` と表示されます。 この項目をクリックして選択します。
 1. このプロセスが作成され、デフォルトでは[!UICONTROL プロセスのプロパティ]ウィンドウが左側のパネルに表示されます。
 
 #### 「Execute Script」サービスを使用したプロセスへのスクリプトの追加 {#add-script-to-process-with-execute-script}
 
-「Execute Script」サービスアクティビティを定義してプロセスを作成すると、このプロセスにスクリプトを追加できるようになります。このプロセスにスクリプトを追加するには、以下の手順に従います。
+「Execute Script」サービスアクティビティを定義してプロセスを作成すると、このプロセスにスクリプトを追加できるようになります。 このプロセスにスクリプトを追加するには、以下の手順に従います。
 
-1. [!UICONTROL プロセスプロパティ]パレットに移動します。このパレット内で、「[!UICONTROL 入力]」セクションを展開し、「...」アイコンをクリックします。
+1. [!UICONTROL プロセスプロパティ]パレットに移動します。 このパレット内で、「[!UICONTROL 入力]」セクションを展開し、「...」アイコンをクリックします。
 
-1. 表示されるテキストボックスに、スクリプトを記述します。スクリプトの記述が完了したら、「OK」を押します（下図を参照）。
+1. 表示されるテキストボックスに、スクリプトを記述します。 スクリプトの記述が完了したら、「OK」を押します（下図を参照）。
    ![Execute Script](assets/execute-script.jpg)
 
 ## Execute Script サービスを使用した XML の作成 {#create-xml-execute-script-service}
 
-Execute Script サービスを含むプロセスが作成されたら、このスクリプトを使用して XML を作成できます。上記の「`Execute Script` サービスを使用したプロセスへのスクリプトの追加」の節で説明したテキストボックスに、以下で説明するスクリプトを記述します。
+Execute Script サービスを含むプロセスが作成されたら、このスクリプトを使用して XML を作成できます。 上記の「`Execute Script` サービスを使用したプロセスへのスクリプトの追加」の節で説明したテキストボックスに、以下で説明するスクリプトを記述します。
 
 >[!NOTE]
 >
-> JAVA スクリプトコードが 10 行を超える場合は、プロセス内に直接記述するのではなく、カスタム DSC（ドキュメントサービスコンポーネント）にコードを追加することをお勧めします。カスタム DSC は、ワークフローを軽量に保持することで、保守性、再利用性、パフォーマンスを向上させます。ワークフローでこれらのコンポーネントを参照することで、実行効率が向上し、ワークフロー内で大きなコードブロックを処理することによって発生する潜在的な速度低下を防ぐことができます。
+> JAVA スクリプトコードが 10 行を超える場合は、プロセス内に直接記述するのではなく、カスタム DSC（ドキュメントサービスコンポーネント）にコードを追加することをお勧めします。 カスタム DSC は、ワークフローを軽量に保持することで、保守性、再利用性、パフォーマンスを向上させます。 ワークフローでこれらのコンポーネントを参照することで、実行効率が向上し、ワークフロー内で大きなコードブロックを処理することによって発生する潜在的な速度低下を防ぐことができます。
 
 
 **Execute Script サービスのテクノロジーについて**
 
-Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。Xerces は、W3C の[ドキュメントオブジェクトモデル仕様](https://dom.spec.whatwg.org/)の Java™ 実装です。DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
+Execute Script サービスの機能と制限事項を理解するには、サービスの技術的基盤を理解する必要があります。 JEE 上の AEM Forms は、Apache Xerces ドキュメントオブジェクトモデル（DOM）パーサーを使用して、プロセス内で XML 変数を作成し、保存します。 Xerces は、W3C の[ドキュメントオブジェクトモデル仕様](https://dom.spec.whatwg.org/)の Java™ 実装です。 DOM 仕様は XML を操作する標準的な方法で、1998 年から存在します。 Xerces の Java 実装である Xerces-J は、DOM Level 2 version 1.0 をサポートしています。
 
 XML 変数の格納に使用される Java クラスは次のとおりです。
 
@@ -63,13 +61,13 @@ XML 変数の格納に使用される Java クラスは次のとおりです。
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。詳しくは、[NodeImpl](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html) のドキュメントを参照してください。
+DocumentImpl は NodeImpl のサブクラスなので、XML プロセス変数は NodeImpl の派生であると想定できます。 詳しくは、[NodeImpl](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html) のドキュメントを参照してください。
 
 **Execute Script サービスを使用したサンプル XML の作成**
 
-次に、Execute Script サービス内での XML の作成例を以下に示します。プロセスには、XML 型の変数ノードが含まれています。このアクティビティの最終結果は、XML ドキュメントになります。このドキュメントの内容、またはプロセス全体への適用方法は、このチュートリアルの対象外です。ここでは、XML がアプリケーション全体で実行する必要がある処理を説明します。概要で説明したように、XML は JEE 上の AEM Forms のプロセスで多くの目的に使用できます。ここでは、単純な XML ドキュメントを出力するスクリプトを実行アクティビティのコーディング方法について説明します。
+次に、Execute Script サービス内での XML の作成例を以下に示します。 プロセスには、XML 型の変数ノードが含まれています。 このアクティビティの結果は、XML ドキュメントになります。 このドキュメントの内容、またはプロセス全体への適用方法は、このチュートリアルの対象外です。ここでは、XML がアプリケーション全体で実行する必要がある処理を説明します。 概要で説明したように、XML は JEE 上の AEM Forms のプロセスで多くの目的に使用できます。ここでは、単純な XML ドキュメントを出力するスクリプトを実行アクティビティのコーディング方法について説明します。
 
-XML を出力する単純な Java スクリプトは次のようになります。
+XML を出力する単純な JavaScript は次のようになります。
 
 ```xml
 import org.apache.xerces.dom.DocumentImpl;
@@ -113,7 +111,7 @@ patExecContext.setProcessDataValue("/process_data/node", document);
 
 **反復ループを使用した XML へのノードの追加**
 
-ノードは、プロセス内の既存の XML 変数にも追加できます。変数ノードには、作成した XML オブジェクトが含まれます。
+ノードは、プロセス内の既存の XML 変数にも追加できます。 変数ノードには、作成した XML オブジェクトが含まれます。
 
 ```xml
 Document document = patExecContext.getProcessDataValue("/process_data/node");
