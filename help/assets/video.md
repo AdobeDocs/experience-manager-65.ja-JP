@@ -78,16 +78,16 @@ ht-degree: 97%
 
    * ビデオアセットの整理、参照、検索
 
-     * [ デジタルアセットの整理](/help/assets/organize-assets.md)
-       [処理プロファイルを使用するためのデジタルアセットの整理に関するベストプラクティス ](organize-assets.md)について詳しく見る
+     * [&#x200B; デジタルアセットの整理](/help/assets/organize-assets.md)
+       [処理プロファイルを使用するためのデジタルアセットの整理に関するベストプラクティス &#x200B;](organize-assets.md)について詳しく見る
 
      * [ビデオアセットを検索](search-assets.md#custompredicates)するか[アセットを検索](/help/assets/search-assets.md)します。
 
    * ビデオアセットをプレビューして公開します。
 
      * ソースビデオとビデオのエンコードされたレンディションを、関連するサムネールと共に表示します。
-       [ ビデオのプレビュー](managing-video-assets.md#upload-and-preview-video-assets)または[ アセットのプレビュー](previewing-assets.md)
-       [ ビデオのレンディションを表示](video-renditions.md)
+       [&#x200B; ビデオのプレビュー](managing-video-assets.md#upload-and-preview-video-assets)または[&#x200B; アセットのプレビュー](previewing-assets.md)
+       [&#x200B; ビデオのレンディションを表示](video-renditions.md)
        [ビデオレンディションを管理します](manage-assets.md#managing-renditions)。
 
      * [ビューアプリセットの管理](managing-viewer-presets.md)
@@ -473,10 +473,10 @@ Dynamic Media では、MP4 H.264 ビデオエンコーディングプリセッ�
 1. Experience Manager の左上隅にある Experience Manager ロゴを選択し、左側のパネルで&#x200B;**[!UICONTROL ツール]**（ハンマーのアイコン）／**[!UICONTROL アセット]**／**[!UICONTROL ビデオレポート]**&#x200B;をクリックします。
 1. ビデオレポートページで、次のいずれかの操作を行います。
 
-   * 右上隅付近にある&#x200B;**ビデオレポートを更新**アイコンを選択します。
+   * 右上隅付近にある&#x200B;**ビデオレポートを更新**&#x200B;アイコンを選択します。
      「更新」を使用するのは、レポートの終了日が今日の日付である場合のみです。 これにより、前回のレポート実行以降に発生したビデオトラッキングを確認できます。
 
-   * 右上隅付近にある&#x200B;**日付選択**アイコンを選択します。
+   * 右上隅付近にある&#x200B;**日付選択**&#x200B;アイコンを選択します。
      ビデオデータを表示する開始日と終了日の範囲を指定し、「**[!UICONTROL レポートを実行]**」を選択します。
 
    「トップの指標」グループボックスに、サイト全体にわたるすべての公開済みビデオに関する様々な集計値が表示されます&#x200B;*。*
@@ -745,7 +745,7 @@ Dynamic Media では、URL 修飾子を使用して、ビデオにキャプシ�
 
    ![ビデオビューアーのオーディオとキャプションのポップアップリスト。](assets-dm/msma-selectaudiosubtitle.png)*ビデオ再生用のオーディオとキャプションを選択するユーザーのシミュレーション。*
 
-1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**ボタンを選択します。
+1. 再生を開始するには、ビデオの&#x200B;**[!UICONTROL 再生]**&#x200B;ボタンを選択します。
 左下隅には「**[!UICONTROL URL]**」ボタンと「**[!UICONTROL 埋め込み]**」ボタンがあります。 これらのボタンはそれぞれ、[web アプリケーションにビデオの URL をリンクする](/help/assets/linking-urls-to-yourwebapplication.md)ため、[web ページにビデオを埋め込む](/help/assets/embed-code.md)ために使用します。
 1. プレビューページの右上隅付近にある「**[!UICONTROL 閉じる]**」を選択します。
 
