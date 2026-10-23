@@ -26,7 +26,7 @@ AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.
 * オーサーインスタンスの`/oak:index`の下にインデックスを作成するためのアクセス権。
 * コンテンツパッケージを使用してインデックスをデプロイするか、開発の代替手段としてCRXDE Liteにアクセスする場合は、`ui.apps` モジュールを持つAEM プロジェクト。
 
-実稼動環境にデプロイする前に、開発環境またはステージング環境でインデックスをテストします。 [ インデックスの作成には、大きなリポジトリで時間がかかる場合があります](/help/sites-deploying/queries-and-indexing.md#configuring-the-indexes)。
+実稼動環境にデプロイする前に、開発環境またはステージング環境でインデックスをテストします。 [&#x200B; インデックスの作成には、大きなリポジトリで時間がかかる場合があります](/help/sites-deploying/queries-and-indexing.md#configuring-the-indexes)。
 
 ## カスタムインデックスの定義 {#define-the-custom-index}
 
@@ -105,7 +105,7 @@ AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.
    <filter root="/oak:index/customAFReferenceLuceneIndex-1"/>
    ```
 
-1. 既存のビルド設定を使用してプロジェクトをビルドし、結果のコンテンツパッケージをオーサーインスタンスにインストールします。 パッケージのアップロードとインストール手順については、[ パッケージマネージャー](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)を参照してください。
+1. 既存のビルド設定を使用してプロジェクトをビルドし、結果のコンテンツパッケージをオーサーインスタンスにインストールします。 パッケージのアップロードとインストール手順については、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md#uploading-packages-from-your-file-system)を参照してください。
 1. `/oak:index/customAFReferenceLuceneIndex-1`が存在することを確認します。 クエリ計画を確認する前に、非同期インデックス作成を完了できるようにします。
 
 別のインデックス名を選択した場合は、その名前をディレクトリ、フィルター、リポジトリパスで一貫して使用します。
@@ -131,7 +131,7 @@ AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.
 `String[]`は、1つの値のみを含む場合でも、複数値の文字列プロパティを意味します。
 
 1. `http://localhost:4502/crx/de/index.jsp` を開きます。 ホストとポートをオーサーインスタンスのホストとポートに置き換えます。
-1. `/oak:index` に移動します。 ノードを右クリックし、[!UICONTROL 作成] / [!UICONTROL  ノードを作成]を選択します。
+1. `/oak:index` に移動します。 ノードを右クリックし、[!UICONTROL 作成] / [!UICONTROL &#x200B; ノードを作成]を選択します。
 1. タイプ `oak:QueryIndexDefinition`の`customAFReferenceLuceneIndex-1`を作成します。
 1. 上記の表のプロパティをインデックスノードに追加します。
 1. インデックスノードの下に、次の子ノード階層を作成します。 すべての子ノードのタイプを`nt:unstructured`に設定します。
@@ -151,7 +151,7 @@ AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.
 クエリプランを確認して、参照クエリでカスタムインデックスが選択されていることを確認します。
 
 1. 非同期インデックス作成が完了したことを確認します。 [索引マネージャー](/help/sites-administering/operations-dashboard.md#the-index-manager)を使用して、索引の状態を調べます。
-1. [!UICONTROL  ツール ] > [!UICONTROL 操作] > [!UICONTROL 診断] > [!UICONTROL  クエリパフォーマンス ]を開き、[!UICONTROL  クエリの説明]を選択します。 XPath クエリ言語を選択し、次のように入力します。
+1. [!UICONTROL &#x200B; ツール &#x200B;] > [!UICONTROL 操作] > [!UICONTROL 診断] > [!UICONTROL &#x200B; クエリパフォーマンス &#x200B;]を開き、[!UICONTROL &#x200B; クエリの説明]を選択します。 XPath クエリ言語を選択し、次のように入力します。
 
    ```text
    /jcr:root/content//element(*, nt:unstructured)[
@@ -161,10 +161,10 @@ AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.
    option (index tag aemformsAFReferences)
    ```
 
-1. 「[!UICONTROL 説明]」を選択します。 クエリのブランチに対して、トラバーサル プランではなく`lucene:customAFReferenceLuceneIndex-1`と`/oak:index/customAFReferenceLuceneIndex-1`、または選択したインデックス名が使用されていることを確認します。 詳しくは、[ クエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)を参照してください。
+1. 「[!UICONTROL 説明]」を選択します。 クエリのブランチに対して、トラバーサル プランではなく`lucene:customAFReferenceLuceneIndex-1`と`/oak:index/customAFReferenceLuceneIndex-1`、または選択したインデックス名が使用されていることを確認します。 詳しくは、[&#x200B; クエリの説明](/help/sites-administering/operations-dashboard.md#explain-query)を参照してください。
 1. 警告を生成したエクスペリエンスフラグメント公開操作を繰り返します。 `com.adobe.aem.formsndocuments.publish.AssetReferenceProvider.resolvePathsToFindReferences`からの新しいトラバーサル警告について、`error.log`を確認してください。
 
-プランでカスタムインデックスが選択されない場合は、上記の例に照らして、タグ、`indexRules`階層、`sling:resourceType` プロパティ定義を確認してください。 詳しい診断については、[Oak インデックスのトラブルシューティング ](/help/sites-deploying/troubleshooting-oak-indexes.md)を参照してください。
+プランでカスタムインデックスが選択されない場合は、上記の例に照らして、タグ、`indexRules`階層、`sling:resourceType` プロパティ定義を確認してください。 詳しい診断については、[Oak インデックスのトラブルシューティング &#x200B;](/help/sites-deploying/troubleshooting-oak-indexes.md)を参照してください。
 
 ## 関連タスク {#related-tasks}
 
