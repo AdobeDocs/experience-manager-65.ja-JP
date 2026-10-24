@@ -16,7 +16,7 @@ Adobe Experience Manager（AEM）Formsがアダプティブフォーム参照を
 
 AEM Forms 6.5.24.0以降では、参照クエリで`aemformsAFReferences` インデックスタグが使用されます。 これらのリリースにはクエリの変更が含まれていますが、そのタグを使用してカスタムインデックスを作成する必要があります。 この記事では、インデックスを定義してデプロイする方法について説明します。
 
-AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/install-aem-forms/configure-aem-forms/create-custom-index-for-adaptive-forms-references)でアダプティブフォーム参照のカスタムインデックスを作成するを参照してください。
+AEM Forms 6.5 LTSについては、[AEM Forms 6.5 LTS](https://experienceleague.adobe.com/ja/docs/experience-manager-65-lts/content/forms/install-aem-forms/configure-aem-forms/create-custom-index-for-adaptive-forms-references)でアダプティブフォーム参照のカスタムインデックスを作成するを参照してください。
 
 ## 前提条件 {#prerequisites}
 
