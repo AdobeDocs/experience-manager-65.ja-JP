@@ -22,9 +22,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 9eee0eef3e19a4787b7104f470d35b4c98fd53db
 workflow-type: tm+mt
-source-wordcount: '7612'
+source-wordcount: '7677'
 ht-degree: 18%
 ---
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
@@ -601,9 +601,9 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 * [!DNL Experience Manager] 6.5.x.xのインストール中に、次のエラーと警告メッセージが表示されます。
   * 「Target Standard API（IMS 認証）を使用して [!DNL Experience Manager] に Adobe Target 統合を設定する場合、エクスペリエンスフラグメントを Target に書き出すと、間違ったオファータイプが作成されます。 Target では、「エクスペリエンスフラグメント」／ソース「Adobe Experience Manager」タイプではなく、「HTML」／ソース「Adobe Target Classic」タイプのオファーをいくつか作成します。
   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
-  * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバー側検証が失敗します （CQ-4274424）。
+  * SUM、MAX、MIN などの集計関数が使用される場合、アダプティブフォームのサーバーサイド検証が失敗します（CQ-4274424）。
   * `com.adobe.granite.maintenance.impl.TaskScheduler`：`granite/operations/maintenance` にメンテナンスウィンドウがありません。
-  * ショッパブルバナービューアでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
+  * ショッパブルバナービューアーでアセットをプレビューしている間、Dynamic Media インタラクティブ画像のホットスポットは表示されません。
   * `com.adobe.cq.social.cq-social-jcr-provider bundle com.adobe.cq.social.cq-social-jcr-provider:1.3.5 (395)[com.adobe.cq.social.provider.jcr.impl.SpiSocialJcrResourceProviderImpl(2302)]`：登録状況を未登録に変更する処理が完了するのを待機中にタイムアウトになりました。
 
 * AEM 6.5.15 以降、`org.apache.servicemix.bundles.rhino` バンドルで提供される Rhino JavaScript Engine には、新しい巻上げ動作が追加されました。 strict モード（`use strict;`）を使用するスクリプトでは、正しい変数を宣言する必要があります。 そうしないと、実行されず、ランタイムエラーがスローされます。
@@ -617,6 +617,8 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 ### AEM Forms の既知の問題 {#known-issues-aem-forms-6525}
 
 * **FORMS-23722** `bindref`を使用する&#x200B;**添付ファイル** フィールドを含むフォームが、**タスクの割り当て**&#x200B;手順でAEM ワークフローに送信された場合、添付ファイルは表示されません。 その結果、タスクがインボックスから開かれたときに表示されません。 ファイルはリポジトリに正しく保存されますが、タスクを割り当て手順UIで添付ファイルが表示されません。
+
+* **FORMS-28517** デジタル署名されたPDFがAEM Forms JEE Workspaceのタスクに添付されている場合、アップロードはアップロード状態のままになるか、「無効なファイル」エラーで失敗します。 その結果、署名済みの大きなPDFの添付ファイルをタスクに追加できません。 この問題は、新しいバージョンで修正されています。 現在のバージョンまたは既存のバージョンのホットフィックスについては、Adobe サポートにお問い合わせください。
 
 #### 利用可能なホットフィックスに関する既知の問題 {#aem-forms-issues-with-hotfixes}
 
