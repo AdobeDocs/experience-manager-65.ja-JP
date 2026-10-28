@@ -18,10 +18,10 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 95%
+ht-degree: 91%
 ---
 # AEM の IMS 統合の設定 {#setting-up-ims-integrations-for-aem}
 
@@ -46,7 +46,7 @@ Adobe Experience Manager（AEM）は、他の多くのアドビソリューシ�
 
 >[!CAUTION]
 >
->以前は、[JWT 資格情報を使用して設定が行われていましたが、現在 Adobe Developer Console では廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
+>以前は、Adobe Developer Consoleで非推奨（廃止予定）のJWT資格情報を使用して設定を行っていました。
 >
 >このような設定は作成または更新できなくなりますが、OAuth 設定に移行することはできます。
 
