@@ -21,10 +21,10 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
 source-wordcount: '1487'
-ht-degree: 100%
+ht-degree: 97%
 ---
 # Adobe Target へのエクスペリエンスフラグメントの書き出し{#exporting-experience-fragments-to-adobe-target}
 
@@ -42,7 +42,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
 >
 >[IMS 統合が S2S OAuth で設定されるようになりました](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
 >
->以前は [JWT 資格情報を使用して設定が行われていましたが、この設定は現在 Adobe Developer Console で廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
+>以前の設定は、Adobe Developer Consoleで非推奨（廃止予定）になっているJWT資格情報を使用して行われていました。
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ AEM エクスペリエンスフラグメントは、Adobe Target のデフォル
    >
    >[IMS 統合が S2S OAuth で設定されるようになりました](/help/sites-administering/setting-up-ims-integrations-for-aem.md)。
    >
-   >以前は [JWT 資格情報を使用して設定が行われていましたが、この設定は現在 Adobe Developer Console で廃止予定](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)です。
+   >以前の設定は、Adobe Developer Consoleで非推奨（廃止予定）になっているJWT資格情報を使用して行われていました。
 
 1. エクスペリエンスフラグメントは AEM オーサーインスタンスから書き出されます。このため、オーサーインスタンスで [AEM Link Externalizer を設定](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer)し、エクスペリエンスフラグメント内の参照が web 配信用に外部化されるようにします。
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Adobe Experience Manager 6.5 の仕組みと機能については、このソフトウェアのドキュメントを参照してください。
 breadcrumb-title: ユーザーガイド
 user-guide-title: AEM 6.5
-source-git-commit: 9240de61985dc32f17593f416e5d054cadb8a392
+source-git-commit: 1919f4aff8dd2cb07b1e298511001e2f51ed520b
 workflow-type: tm+mt
-source-wordcount: '8310'
+source-wordcount: '8303'
 ht-degree: 95%
 ---
 
@@ -76,7 +76,6 @@ ht-degree: 95%
   + [Content Disposition フィルター](/help/sites-administering/content-disposition-filter.md)
   + [AEM 6.5 のカスタムユーザーグループマッピング](/help/sites-administering/cug-mapping.md)
   + [同じサイト cookie サポート](/help/sites-administering/same-site-cookie-support.md)
-  + [Adobe Developer Console での JWT 資格情報の廃止](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md)
   + [AEM の IMS 統合の設定](/help/sites-administering/setting-up-ims-integrations-for-aem.md)
 + Experience Hub {#experience-hub}
   + [Experience Hub について](/help/experience-hub.md)
