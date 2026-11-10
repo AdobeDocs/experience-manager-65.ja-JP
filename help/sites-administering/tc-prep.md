@@ -20,10 +20,10 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
+source-git-commit: 6fb39326f3a012bb7e774f65200feae143d2d30d
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 91%
+source-wordcount: '780'
+ht-degree: 79%
 ---
 # 翻訳するコンテンツの準備{#preparing-content-for-translation}
 
@@ -64,6 +64,14 @@ ht-degree: 91%
 * `<language-code>`サポートされている言語コードは、ISO-639-1 で定義されている 2 文字のコード（例：`en`）です。
 
 * `<language-code>_<country-code>` または `<language-code>-<country-code>`サポートされている国コードは、ISO 3166 で定義されている小文字または大文字 2 文字のコード（例：`en_US`、`en_us`、`en_GB`、`en-gb`）です。
+
+>[!NOTE]
+>
+>Java 17またはJava 21で実行されているAEM インストールの場合、デフォルトのJava ロケールマッピングでは、従来のコード `iw`、`ji`および`in`の代わりに、ヘブライ語では`he`、Yiddishでは`yi`、インドネシア語では`id`が使用されます。 従来のコードを使用する既存のi18n辞書が見つからない場合があります。
+>
+>言語ルートおよびi18n辞書に現在のコードを使用します。`iw`を`he`に、`ji`を`yi`に、`in`を`id`に置き換えます。
+>
+>互換性のある回避策として従来のコードを保持する必要がある場合は、AEMを起動するときにJVM引数`-Djava.locale.useOldISOCodes=true`を使用して、Java システムプロパティ `java.locale.useOldISOCodes`を`true`に設定します。 プロパティはJava ランタイムの起動時に読み取り専用です。AEMの実行中にプロパティを変更しても影響はありません。
 
 グローバルサイト用に選択した構造に従って、どちらかの形式を使用できます。  例えば、Geometrixx サイトのフランス語の言語コピーのルートページの「名前」プロパティは `fr` になります。 「名前」プロパティは、リポジトリ内のページノードの名前として使用されます。そのため、このプロパティによってページのパスが指定されます （http://localhost:4502/content/geometrixx/fr.html）
 
