@@ -23,10 +23,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d777049ff8873ab60b286ec268fd544dc61fb038
+source-git-commit: 56b13809475a59f188750b86503e316e69171fe1
 workflow-type: tm+mt
-source-wordcount: '7172'
-ht-degree: 16%
+source-wordcount: '7273'
+ht-degree: 15%
 ---
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
 
@@ -365,7 +365,7 @@ Service Pack 26の主なハイライトは次のとおりです。
 
 #### プラットフォーム{#foundation-platform-6526}
 
-* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
+* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
 * 機能強化：AEMがメールを送信する際に、SMTPの代わりにMicrosoft Graph APIを使用するように求められたお客様のリクエスト。 別のチケットが既にGraph API フローを実装しているため、チケットは重複として解決されました。 OAuth 2.0を使用したSMTPは、SMTP基本認証から脱却する必要があるお客様向けに引き続き利用できます。 （GRANITE-57478）
 
 * 有効な権限ダイアログの文字列が、**ツール** > **一般** > **構成** ブラウザーで正しく整列するようになりました。 以前は、フォルダーを選択し、「プロパティ」をクリックし、「有効な権限」をクリックすると、1つの文字列が行外に表示されていました。 更新されたレイアウトルールは、整列を復元します。 （CQ-4359166）
@@ -402,7 +402,7 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.26.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -418,9 +418,9 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
+1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[ パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
 1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;を選択します。
 
@@ -428,7 +428,7 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログボックスが終了することがあります。 Adobeでは、デプロイメントにアクセスする前に、エラーログが変化するのを待つことをお勧めします。 アップデータバンドルのアンインストールに関連する特定のログを待ってから、インストールが成功したことを確認します。 この問題は[!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも発生する場合があります。
+>パッケージマネージャーUIのダイアログボックスは、サービスパックのインストール中に閉じることがあります。 Adobeでは、デプロイメントにアクセスする前に、エラーログが変化するのを待つことをお勧めします。 アップデータバンドルのアンインストールに関連する特定のログを待ってから、インストールが成功したことを確認します。 この問題は[!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも発生する場合があります。
 
 **自動インストール**
 
@@ -515,7 +515,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;**&#x200B;**
+* Oakに関連する&#x200B;****
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
@@ -594,13 +594,9 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 ### AEM Sites の既知の問題 {#known-issues-aem-sites-6526}
 
-<!--
-* Known issue with a hotfix available for AEM Foundation {#known-issue-foundation-hotfix-6526}
+* **AEM Foundationで利用できるホットフィックスに関する既知の問題**
 
-  After you upgrade from an earlier service pack to Experience Manager 6.5.26.0, the OSGi version ordering for CRXDE Lite can prevent Experience Manager from selecting the intended bundle. An earlier service pack contains a higher CRXDE Lite version than the artifact that Service Pack 26 includes (`com.adobe.granite.crxde-lite-1.1.44-CQ651-B00024`).
-  
-  To resolve this issue, download and install the hotfix [cq-6.5.26-hotfix-GRANITE-76725.zip](https://artifactory.corp.adobe.com/ui/native/maven-aem-release-local/com/adobe/cq/hotfix/cq-6.5.26-hotfix-GRANITE-76725/1.0/cq-6.5.26-hotfix-GRANITE-76725.zip). The hotfix updates CRXDE Lite to `com.adobe.granite.crxde-lite-1.1.44-CQ651-B0026`, and it contains a version change only, with no code or functional changes. (GRANITE-76725)
--->
+  以前のサービスパックからExperience Manager 6.5.26.0にアップグレードした後、CRXDE Lite バンドルバージョンの順序によって、Experience Managerが目的のバンドルを選択できなくなる場合があります。 バージョンの順序を修正するには、Service Pack 26をインストールし、ソフトウェア配布からホットフィックス [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)をダウンロードしてインストールします。 このホットフィックスはバージョンのみのアップデートです。 コードや機能の変更は含まれていません。 （GRANITE-76725）
 
 * コンテンツフラグメント - 大きなフラグメントツリーに対する DoS 保護が原因でプレビューに失敗します。 詳しくは、[GraphQL Query Executor のデフォルト設定オプションに関するナレッジベース記事](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23945)（SITES-17934）を参照してください。
 
@@ -637,13 +633,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
->* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/jp/subscription/priority-product-update.html)
+>* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/subscription/priority-product-update.html)
 
 
 
