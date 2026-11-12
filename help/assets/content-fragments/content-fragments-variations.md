@@ -19,9 +19,9 @@ subfeature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: efd3c8e390cdbb5b5cc526906f7a2d756a978c21
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2078'
 ht-degree: 100%
 ---
 # バリエーション - フラグメントコンテンツのオーサリング{#variations-authoring-fragment-content}
@@ -42,8 +42,6 @@ ht-degree: 100%
 * [コンテンツのアップロード](#uploading-content)
 
 * [重要な統計の表示](#viewing-key-statistics)（複数行テキストについて）
-
-* [テキストの要約](#summarizing-text)
 
 * [バリエーションとプライマリコンテンツの同期](#synchronizing-with-master)
 
@@ -112,8 +110,6 @@ ht-degree: 100%
 * [テキスト統計の表示](#viewing-key-statistics)
 
 * [プライマリとの同期](#synchronizing-with-master)（バリエーションの編集時）
-
-* [テキストの要約](#summarizing-text)
 
 ### 形式 {#formats}
 
@@ -228,60 +224,6 @@ Selecting the original tab again (for example, **Little Pony Inc.**), will close
 ### コンテンツのアップロード {#uploading-content}
 
 コンテンツフラグメントのオーサリングのプロセスを簡易化するため、外部エディターで用意したテキストをアップロードしてフラグメントに直接追加できます。
-
-### テキストの要約 {#summarizing-text}
-
-テキストの要約を使用すると、重要ポイントと全体の意味を保ちながら、テキストの長さを規定の単語数に短縮できます。
-
->[!NOTE]
->
->より技術的に説明すると、特定のアルゴリズムに従って&#x200B;*情報の密度と独自性が最適な比率*&#x200B;であると評価した文章をシステムが保持します。
-
->[!CAUTION]
->
->コンテンツフラグメントには、親フォルダー（ISO コード）として有効な言語フォルダーが必要です。使用する言語モデルを決定するためにこれが使用されます。
->
->例えば、次のパスの `en/` です。
->
->  `/content/dam/my-brand/en/path-down/my-content-fragment`
-
->[!CAUTION]
->
->英語版は標準で提供されています。
->
->他の言語は、パッケージ共有から言語モデルパッケージとして提供されています。
->
->* [フランス語（fr）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-fr)
->* [ドイツ語（de）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
->* [イタリア語（it）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
->* [スペイン語（es）](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?lang=ja?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
->
-
-1. 「**プライマリ**」または必要なバリエーションを選択します。
-1. 全画面表示エディターを開きます。
-
-1. ツールバーの「**テキストを要約**」を選択します。
-
-   ![要約](assets/cfm-variations-05.png)
-
-1. ターゲットの単語数を指定し、「**開始**」を選択します。
-1. 元のテキストが、提案された要約と並べて表示されます。
-
-   * 削除される文には取り消し線が付き、赤色で表示されます。
-   * 要約されたコンテンツに保持する場合は、強調表示された文をクリックします。
-   * 削除する場合は、強調表示されていない文をクリックします。
-
-1. 変更を確定するには、「**要約**」を選択します。
-
-1. 元のテキストが、提案された要約と並べて表示されます。
-
-   * 削除される文には取り消し線が付き、赤色で表示されます。
-   * 要約されたコンテンツに保持する場合は、強調表示された文をクリックします。
-   * 削除する場合は、強調表示されていない文をクリックします。
-   * 要約統計（**実際**&#x200B;と&#x200B;**ターゲット**）が表示されます。
-   * 変更を&#x200B;**プレビュー**&#x200B;できます。
-
-   ![要約とオリジナルの比較](assets/cfm-variations-06.png)
 
 ### コンテンツフラグメントへの注釈の追加 {#annotating-a-content-fragment}
 
