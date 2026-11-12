@@ -23,10 +23,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: d777049ff8873ab60b286ec268fd544dc61fb038
+source-git-commit: 56b13809475a59f188750b86503e316e69171fe1
 workflow-type: tm+mt
-source-wordcount: '7172'
-ht-degree: 16%
+source-wordcount: '7273'
+ht-degree: 15%
 ---
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
 
@@ -428,7 +428,7 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 >[!NOTE]
 >
->サービスパックのインストール中に、パッケージマネージャー UI のダイアログボックスが終了することがあります。 Adobeでは、デプロイメントにアクセスする前に、エラーログが変化するのを待つことをお勧めします。 アップデータバンドルのアンインストールに関連する特定のログを待ってから、インストールが成功したことを確認します。 この問題は[!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも発生する場合があります。
+>パッケージマネージャーUIのダイアログボックスは、サービスパックのインストール中に閉じることがあります。 Adobeでは、デプロイメントにアクセスする前に、エラーログが変化するのを待つことをお勧めします。 アップデータバンドルのアンインストールに関連する特定のログを待ってから、インストールが成功したことを確認します。 この問題は[!DNL Safari] ブラウザーで発生しますが、どのブラウザーでも発生する場合があります。
 
 **自動インストール**
 
@@ -594,13 +594,9 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 ### AEM Sites の既知の問題 {#known-issues-aem-sites-6526}
 
-<!--
-* Known issue with a hotfix available for AEM Foundation {#known-issue-foundation-hotfix-6526}
+* **AEM Foundationで利用できるホットフィックスに関する既知の問題**
 
-  After you upgrade from an earlier service pack to Experience Manager 6.5.26.0, the OSGi version ordering for CRXDE Lite can prevent Experience Manager from selecting the intended bundle. An earlier service pack contains a higher CRXDE Lite version than the artifact that Service Pack 26 includes (`com.adobe.granite.crxde-lite-1.1.44-CQ651-B00024`).
-  
-  To resolve this issue, download and install the hotfix [cq-6.5.26-hotfix-GRANITE-76725.zip](https://artifactory.corp.adobe.com/ui/native/maven-aem-release-local/com/adobe/cq/hotfix/cq-6.5.26-hotfix-GRANITE-76725/1.0/cq-6.5.26-hotfix-GRANITE-76725.zip). The hotfix updates CRXDE Lite to `com.adobe.granite.crxde-lite-1.1.44-CQ651-B0026`, and it contains a version change only, with no code or functional changes. (GRANITE-76725)
--->
+  以前のサービスパックからExperience Manager 6.5.26.0にアップグレードした後、CRXDE Lite バンドルバージョンの順序によって、Experience Managerが目的のバンドルを選択できなくなる場合があります。 バージョンの順序を修正するには、Service Pack 26をインストールし、ソフトウェア配布からホットフィックス [`CRXDE Lite hotfix GRANITE-76725`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq660%2Fhotfixes%2Fgranite-76725%2Fcq-6.5.26-hotfix-GRANITE-76725-1.0.zip)をダウンロードしてインストールします。 このホットフィックスはバージョンのみのアップデートです。 コードや機能の変更は含まれていません。 （GRANITE-76725）
 
 * コンテンツフラグメント - 大きなフラグメントツリーに対する DoS 保護が原因でプレビューに失敗します。 詳しくは、[GraphQL Query Executor のデフォルト設定オプションに関するナレッジベース記事](https://experienceleague.adobe.com/ja/docs/experience-cloud-kcs/kbarticles/ka-23945)（SITES-17934）を参照してください。
 
