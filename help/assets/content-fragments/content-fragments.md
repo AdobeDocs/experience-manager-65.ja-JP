@@ -19,9 +19,9 @@ subfeature_v2:
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
     internal-label: User
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: efd3c8e390cdbb5b5cc526906f7a2d756a978c21
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2361'
 ht-degree: 84%
 ---
 # コンテンツフラグメントの操作 {#working-with-content-fragments}
@@ -269,7 +269,7 @@ AEM コアコンポーネントの JSON 書き出し機能と共にこの構造�
   * フラグメントのオーサリング中に定義できます。
   * コンテンツコピーの分散を避けるために、フラグメントに格納されます。
   * マスター側のコンテンツが更新されている場合は、バリエーションをマスターと[同期](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master)できます。
-  * [要約](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text)することで、あらかじめ定義した長さにテキストをすばやく切り詰めることができます。
+
   * フラグメントエディターの「[バリエーション](/help/assets/content-fragments/content-fragments-variations.md)」タブにあります。
 
 ### コンテンツフラグメントを使用したページのオーサリング時の中間コンテンツ {#in-between-content-when-page-authoring-with-content-fragments}
