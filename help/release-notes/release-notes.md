@@ -365,7 +365,7 @@ Service Pack 26の主なハイライトは次のとおりです。
 
 #### プラットフォーム{#foundation-platform-6526}
 
-* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
+* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
 * 機能強化：AEMがメールを送信する際に、SMTPの代わりにMicrosoft Graph APIを使用するように求められたお客様のリクエスト。 別のチケットが既にGraph API フローを実装しているため、チケットは重複として解決されました。 OAuth 2.0を使用したSMTPは、SMTP基本認証から脱却する必要があるお客様向けに引き続き利用できます。 （GRANITE-57478）
 
 * 有効な権限ダイアログの文字列が、**ツール** > **一般** > **構成** ブラウザーで正しく整列するようになりました。 以前は、フォルダーを選択し、「プロパティ」をクリックし、「有効な権限」をクリックすると、1つの文字列が行外に表示されていました。 更新されたレイアウトルールは、整列を復元します。 （CQ-4359166）
@@ -402,7 +402,7 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からダウンロードできます。
 * MongoDB と複数のインスタンスを含むデプロイメントでは、パッケージマネージャーを使用して、オーサーインスタンスの 1 つに [!DNL Experience Manager] 6.5.26.0 をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -418,9 +418,9 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[ パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
+1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
 1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;を選択します。
 
@@ -515,7 +515,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;****
+* Oakに関連する&#x200B;**&#x200B;**
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
