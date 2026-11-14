@@ -371,7 +371,7 @@ Service Pack 26の主なハイライトは次のとおりです。
 
 #### プラットフォーム{#foundation-platform-6526}
 
-* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
+* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
 * 機能強化：AEMがメールを送信する際に、SMTPの代わりにMicrosoft Graph APIを使用するように求められたお客様のリクエスト。 別のチケットが既にGraph API フローを実装しているため、チケットは重複として解決されました。 OAuth 2.0を使用したSMTPは、SMTP基本認証から脱却する必要があるお客様向けに引き続き利用できます。 （GRANITE-57478）
 
 * 有効な権限ダイアログの文字列が、**ツール** > **一般** > **構成** ブラウザーで正しく整列するようになりました。 以前は、フォルダーを選択し、「プロパティ」をクリックし、「有効な権限」をクリックすると、1つの文字列が行外に表示されていました。 更新されたレイアウトルールは、整列を復元します。 （CQ-4359166）
@@ -639,13 +639,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
->* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/subscription/priority-product-update.html)
+>* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/jp/subscription/priority-product-update.html)
 
 
 
