@@ -23,10 +23,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: b910e5ac8537f465d7cab85670de8557c2529a32
+source-git-commit: 383a6624329826101fc85861ee31d34ae7e59d71
 workflow-type: tm+mt
-source-wordcount: '7369'
-ht-degree: 15%
+source-wordcount: '7975'
+ht-degree: 14%
 ---
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
 
@@ -312,13 +312,24 @@ Service Pack 26の主なハイライトは次のとおりです。
 ### [!DNL Forms]{#forms-6526}
 
 * 新機能：リッチテキストのリストでのアクセシビリティタグのサポート。 以前は、テンプレートが特定の構造に従った場合にのみ、リストタグがアクセシビリティタグツリーに表示されていました。 リクエストは、機能を提供する関連チケットの複製としてクローズされました。 （LC-3923202）
+* 機能強化：AEM Formsには、各リクエストに対して従来またはデフォルトのExtensible Markup Language （XML）データエクスポートモードを選択するランタイム APIが追加されました。 以前は、`-Dcom.adobe.fd.forms.export.legacy` Java Virtual Machine （JVM） パラメーターのみがモードを制御し、サーバー上のすべての書き出しに適用された設定を制御していました。 リクエストがAPIを使用しない場合、JVM パラメーターは引き続き動作を制御します。 （FORMS23114、FORMS22983）
+* 見えない証明書署名で認定されたPortable Document Format （PDF）ファイルが、Adobe Acrobatで開かれなくなりました。 以前は目に見える証明書署名にのみ適用されていた修正が、目に見えない証明書署名にも適用されるようになりました。 （FORMS-25171）
+* 基盤コンポーネント ベースのアダプティブ Formsで、ファイル添付コンポーネントが、アップロード時に許可されたファイルタイプ リストに対してファイルをチェックするようになりました。 以前は、`.xsd`などのファイルは、リストが`application/pdf`、`image/jpeg`、および`image/png`のみを許可している場合でも、アップロードステップに合格していました。 フォームは、一般的なサポートされていないファイルアラートを使用して送信時にのみ拒否しました。 （FORMS-24295）
 
-
-<!--
 #### Forms JEE {#forms-jee-6526}
 
+* 機能強化：AEM Forms Document Securityでは、Adobe Acrobat（PPKLite）のパスキー（Web認証またはWebAuthn）サポートが追加されました。 （FORMS-21762）
+* 機能強化：IBM Content Manager コネクタは、IBM Content Manager 8.7をサポートするようになりました。これは、IBMがバージョン 8.5および8.6のサポートを終了したためです。 （FORMS-6827）
+* Windowsでは、特定のPortable Document Format （PDF）ファイルをTIFFなどの画像に変換する際に、ConvertPDF サービスがハングしなくなりました。 （FORMS-25796）
+* Security Assertion Markup Language （SAML）認証では、アップロードされたID プロバイダー（IdP）メタデータの証明書を使用してアサーション署名が検証されるようになりました。 IdP証明書が変更され、メタデータが更新されないと、認証が失敗します。 （FORMS-24679）
+* AEM Forms サービスパック 6.5.24.0、`server.log`、`error.log`にアップグレードすると、「セキュアパーサーファクトリの作成に失敗しました。作成されたXML パーサーは、XML ベースのエクスプロイトに対して脆弱になる可能性があります」などの`[XMLSecurity]`個のWARN メッセージが表示されなくなります。 メッセージは、アイドル状態のサーバーでも1秒あたり数回表示され、ディスク領域が迅速に消費されました。 （FORMS-23717）
+* JEE側のコンポーネントは、Apache POI 5.4.0をパッケージ化するようになりました。 以前は、一部のバンドルにApache POI 3.17と3.9が含まれていましたが、AEM Forms Service Pack 6.5.24.0にアップグレードした後にセキュリティスキャンがフラグ付けされていました。 （FORMS-23678）
+
 #### Forms Designer {#forms-designer-6526}
--->
+
+* 機能強化：Forms DesignerとOutput Serviceは、静的なインタラクティブおよびフラットなPDF ファイルで、見出しレベル 1から見出しレベル 6のアクセシビリティの役割まで、ネストされたPortable Document Format （PDF）ブックマークを生成します。 見出しレベル 1は、作成者が以前にAdobe Acrobatで手動で削除した空または重複したエントリを含まないトップレベルのブックマークになります。 以前のブックマーク動作を復元するには、カスタム XCI ファイルに`<behaviorOverride>patch-LC-3922369:1</behaviorOverride>`を追加します。 （LC-3923490、LC-3922369）
+* 機能強化：静的なインタラクティブまたはフラットなPortable Document Format （PDF）ファイルでブックマークを選択すると、一致する見出しがページの上部にスクロールされるようになりました。 （LC-3923489、LC-3923289）
+* 機能強化：Forms Designerでは、見出しレベル 1から見出しレベル 6のアクセシビリティロールを使用するテキストオブジェクトに、ブックマーク `extras`要素を追加できます。 以前は、ブックマークを生成するために、作成者は各見出しにXML Sourceで`<extras name="bookmark">`を手動で追加する必要がありました。 （FORMS-24361）
 
 
 ### 基盤 {#foundation-6526}
@@ -371,7 +382,7 @@ Service Pack 26の主なハイライトは次のとおりです。
 
 #### プラットフォーム{#foundation-platform-6526}
 
-* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
+* AEM ログインページのフッターのヘルプリンクで、作業ページが開くようになりました。 以前は、このリンクは存在しないmarketing.adobe.com URLを指していました。 フッター設定では、[Adobe Experience Manager ドキュメント ](https://experienceleague.adobe.com/en/docs/experience-manager) URLが使用されるようになりました。 （NPR-44388）
 * 機能強化：AEMがメールを送信する際に、SMTPの代わりにMicrosoft Graph APIを使用するように求められたお客様のリクエスト。 別のチケットが既にGraph API フローを実装しているため、チケットは重複として解決されました。 OAuth 2.0を使用したSMTPは、SMTP基本認証から脱却する必要があるお客様向けに引き続き利用できます。 （GRANITE-57478）
 
 * 有効な権限ダイアログの文字列が、**ツール** > **一般** > **構成** ブラウザーで正しく整列するようになりました。 以前は、フォルダーを選択し、「プロパティ」をクリックし、「有効な権限」をクリックすると、1つの文字列が行外に表示されていました。 更新されたレイアウトルールは、整列を復元します。 （CQ-4359166）
@@ -408,7 +419,7 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[&#x200B; アップグレードドキュメント &#x200B;](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.26.0には[!DNL Experience Manager] 6.5が必要です。 詳しい手順については、[ アップグレードドキュメント ](/help/sites-deploying/upgrade.md)を参照してください。<!-- UPDATE FOR EACH NEW RELEASE -->
 * サービスパックは、アドビの[ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/jp/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からダウンロードできます。
 * MongoDBと複数のインスタンスを使用するデプロイメントで、パッケージマネージャーを使用して、いずれかのオーサリングインスタンスに[!DNL Experience Manager] 6.5.26.0をインストールします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -424,9 +435,9 @@ i18n辞書を選択ダイアログの「ルートディレクトリを選択」�
 
 1. インストールする前に、[!DNL Experience Manager] インスタンスのスナップショットまたは新しいバックアップを作成します。
 
-1. [&#x200B; ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
+1. [ ソフトウェア配布](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.26.0.zip)からサービスパックをダウンロードします。<!-- UPDATE FOR EACH NEW RELEASE -->
 
-1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[&#x200B; パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
+1. パッケージマネージャーを開き、**[!UICONTROL パッケージをアップロード]**&#x200B;を選択して、パッケージをアップロードします。 詳しくは、[ パッケージマネージャー](/help/sites-administering/package-manager.md)を参照してください。
 
 1. パッケージを選択して、**[!UICONTROL インストール]**&#x200B;を選択します。
 
@@ -521,7 +532,7 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* Oakに関連する&#x200B;**&#x200B;**
+* Oakに関連する&#x200B;****
 サービスパック 13以降では、永続キャッシュに影響する次のエラーログが表示され始めています。
 
   ```shell
@@ -612,6 +623,20 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 
 * デジタル署名されたPDFがAEM Forms JEE Workspaceのタスクに添付されている場合、アップロードはアップロード状態のままになるか、「無効なファイル」エラーで失敗します。 その結果、署名済みの大きなPDFの添付ファイルをタスクに追加できません。 この問題は、新しいバージョンで修正されています。 このバージョンのホットフィックスについては、Adobe サポートにお問い合わせください。 （FORMS-28517）
 
+* IBM WebSphereでは、パッチ 135で報告されているように、AEM Forms Workbenchの「Web サービスの呼び出し」アクティビティを使用してWeb サービスのDescription Language （WSDL）ファイルを読み込むと、AEM Forms JEE 6.5.26.0 （サービスパック 26）で失敗する可能性があります。 同じ操作がJBossでも機能します。 （FORMS-29972）
+
+  **回避策：** AEM Forms JEEをホストするWebSphere アプリケーションサーバーにJava Virtual Machine （JVM）引数を追加します。 これは、Workbench クライアント設定ではなく、サーバーサイド設定です。
+
+  1. AEM Forms JEEをホストするWebSphere アプリケーションサーバーのJVM設定を開きます。
+  1. サーバーのJVM引数に次の引数を追加します。 既存の引数を保持します。
+
+     ```shell
+     -Dcom.adobe.idp.dsc.webservice.loadSOAPClasses=true
+     ```
+
+  1. 設定を保存し、WebSphere アプリケーションサーバーを再起動して、引数が有効になるようにします。
+  1. AEM Forms Workbenchから再接続し、Web サービスの呼び出しアクティビティでWSDLを再度読み込みます。
+
 #### 利用可能なホットフィックスに関する既知の問題 {#aem-forms-issues-with-hotfixes}
 
 次の問題には、ダウンロードしてインストールできるホットフィックスが用意されています。 これらの問題を解決するには、[ホットフィックスをダウンロードしてインストール](/help/release-notes/aem-forms-hotfix.md)してください。
@@ -639,13 +664,13 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 これらの Web サイトは、お客様のみが利用できます。 アクセス権を必要とするお客様は、アドビのアカウントマネージャーにお問い合わせください。
 
 * [licensing.adobe.com での製品のダウンロード。](https://licensing.adobe.com/)
-* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/ja/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
+* [アドビカスタマーサポートに連絡](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-customer-support-experience#)。
 
 >[!MORELIKETHIS]
 >
 >* [[!DNL Experience Manager] 製品ページ](https://business.adobe.com/jp/products/experience-manager/adobe-experience-manager.html)
 >* [[!DNL Experience Manager] 6.5 ドキュメント](https://experienceleague.adobe.com/ja/docs/experience-manager-65)
->* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/jp/subscription/priority-product-update.html)
+>* [アドビ製品アップデートの優先通知を購読](https://www.adobe.com/subscription/priority-product-update.html)
 
 
 
