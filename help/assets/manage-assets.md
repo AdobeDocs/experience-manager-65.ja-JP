@@ -182,7 +182,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 >[!NOTE]
 >
->FTP を使用して Dynamic Media - Scene7 モードでアセットをアップロードするには、[!DNL Experience Manager] オーサーインスタンスに機能パック 18912 をインストールしてください。 [アドビカスタマーサポート](https://experienceleague.adobe.com/?support-solution=General&lang=ja#support)に問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了してください。 詳しくは、 [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
+>FTP を使用して Dynamic Media - Scene7 モードでアセットをアップロードするには、[!DNL Experience Manager] オーサーインスタンスに機能パック 18912 をインストールしてください。 [アドビカスタマーサポート](https://experienceleague.adobe.com/ja?support-solution=General&lang=ja#support)に問い合わせて FP-18912 にアクセスし、FTP アカウントの設定を完了してください。 詳しくは、 [一括アセット移行用の機能パック 18912 をインストールする](/help/assets/bulk-ingest-migrate.md)を参照してください。
 >
 >アセットのアップロードに FTP を使用する場合、[!DNL Experience Manager] で指定したアップロード設定は無視されます。 代わりに、Dynamic Media Classic で定義したファイル処理ルールが使用されます。
 
@@ -190,7 +190,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 1. 任意の FTP クライアントを使用して、プロビジョニングメールで受け取った FTP ユーザー名とパスワードを使用して FTP サーバーにログインします。 FTP クライアントで、ファイルまたはフォルダーを FTP サーバーにアップロードします。
 
-1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app#system-requirements-dmc-app)を開き、アカウントにログインします。
+1. [Dynamic Media Classic デスクトップアプリケーション](https://experienceleague.adobe.com/ja/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app#system-requirements-dmc-app)を開き、アカウントにログインします。
 
    Adobeは、プロビジョニング時に資格情報とログインを提供しました。 この情報をお持ちでない場合は、アドビカスタマーサポートにお問い合わせください。
 
@@ -976,4 +976,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-詳しくは、「[&#x200B; デスクトップアプリを使用してDAM Assetsを参照する方法](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started#browse-search-preview-assets)」を参照してください。
+詳しくは、「[&#x200B; デスクトップアプリを使用してDAM Assetsを参照する方法](https://experienceleague.adobe.com/ja/docs/experience-manager-desktop-app/using/get-started#browse-search-preview-assets)」を参照してください。
