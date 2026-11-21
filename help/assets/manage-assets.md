@@ -35,7 +35,7 @@ ht-degree: 83%
 
 [!DNL Adobe Experience Manager Assets] では、アセットの保存や管理以外の操作を実行できます。 [!DNL Experience Manager] は、エンタープライズクラスのアセット管理機能を提供します。 アセットの編集と共有、詳細検索の実行、サポートされている多数のファイル形式の複数のレンディションの作成が可能です。 また、バージョンやデジタル著作権の管理、アセットの処理の自動化、メタデータの管理と統制、注釈を使用した共同作業などを行うことができます。
 
-この記事では、メタデータの作成、アップロード、更新、コピー、移動、削除、公開、非公開、検索の基本的なアセット管理タスクについて説明します。 ユーザーインターフェイスについては、[アセットユーザーインターフェイスの概要](/help/sites-authoring/basic-handling.md)を参照してください。 コンテンツフラグメントを管理するには、[ コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)を参照してください。
+この記事では、メタデータの作成、アップロード、更新、コピー、移動、削除、公開、非公開、検索の基本的なアセット管理タスクについて説明します。 ユーザーインターフェイスについては、[アセットユーザーインターフェイスの概要](/help/sites-authoring/basic-handling.md)を参照してください。 コンテンツフラグメントを管理するには、[&#x200B; コンテンツフラグメントの管理](/help/assets/content-fragments/content-fragments-managing.md)を参照してください。
 
 ## フォルダーの作成 {#creating-folders}
 
@@ -224,17 +224,17 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 | | サブフォルダーを含める | アップロードするフォルダー内のすべてのサブフォルダーをアップロードします。 アップロードするフォルダーとそのサブフォルダーの名前は [!DNL Experience Manager Assets] に自動的に登録されます。 |
 | | 切り抜きツールオプション | 画像の端から手動で切り抜くには、切り抜きメニューを選択し、「手動」を選択します。 次に、画像の任意の辺または各辺から切り抜くピクセル数を入力します。 画像から切り抜かれる範囲は、画像ファイルの ppi（画素密度）設定に応じて異なります。 例えば、画像に150 ppiが表示され、上、右、下、左のテキストボックスに75と入力すると、各辺から半インチが切り抜かれます。<br> 画像から空白のピクセルを自動的に切り抜くには、切り抜きメニューを開き、「手動」を選択し、「上」、「右」、「下」、「左」の各フィールドにピクセル測定を入力して、横から切り抜きます。 また、切り抜きメニューで「トリミング」を選択し、以下のオプションを選択することもできます。<br> **トリミング対象カラー** <ul><li>**カラー** - 「カラー」オプションを選択します。 次に、隅メニューを選択し、切り抜きたいホワイトスペースの色に最も近い色の画像の角を選択します。</li><li>**透明度** - 「透明度」オプションを選択します。<br> **許容値** - スライダーをドラッグして、0 ～ 1 の許容値を指定します。カラーに基づくトリミングの場合は、0 を指定すると、画像の隅で選択した色と完全に一致するピクセルのみが切り抜かれます。 1 に近いほど、色の違いに対する許容度が高くなります。<br> 透明度に基づくトリミングでは、切り抜くピクセルが透明な場合のみ、0 を指定してください。 1 に近いほど、透明度が高くなります。</li></ul><br>これらの切り抜きオプションは非破壊的です。 |
 | | カラープロファイルオプション | 配信に使用される最適なファイルを作成する際のカラー変換を選択します。<ul><li>デフォルトの色保存：画像にカラースペース情報が含まれる場合はソース画像の色を保持します。カラー変換は適用されません。 現在のほとんどの画像には、適切なカラープロファイルが既に埋め込まれています。 ただし、CMYK ソース画像に埋め込まれたカラープロファイルが含まれていない場合、カラーは sRGB（標準の赤緑青）カラースペースに変換されます。 sRGB は、web ページに画像を表示する場合に推奨されるカラースペースです。</li><li>元のカラースペースを保持：元のカラーを維持し、その時点でカラー変換を行いません。 カラープロファイルが埋め込まれていない画像の場合、カラー変換は、公開設定で指定されたデフォルトのカラープロファイルを使用して実行されます。 カラープロファイルは、このオプションで作成されたファイルのカラーと一致しない場合があります。 したがって、「デフォルトの色保存」オプションを使用することをお勧めします。</li><li>カスタム開始日／終了日<br>「変換元」と「変換先」のカラースペースを選択できるメニューが開きます。 この詳細設定オプションは、ソースファイルに埋め込まれているカラー情報を上書きします。 送信するすべての画像のカラープロファイルデータが正しくないか不足している場合に、このオプションを選択します。</li></ul> |
-| | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br> [ アップロード時の画像編集のオプションの設定](#setting-image-editing-options-at-upload)を参照してください。 |
+| | 画像編集オプション | 画像のクリッピングマスクを保持し、カラープロファイルを選択できます。<br> [&#x200B; アップロード時の画像編集のオプションの設定](#setting-image-editing-options-at-upload)を参照してください。 |
 | | PostScript オプション | PostScript® ファイルのラスタライズ、ファイルの切り抜き、透明な背景の維持、解像度の選択、カラースペースの選択を行うことができます。<br> [PostScriptとIllustratorのアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
 | | Photoshop オプション | Adobe® Photoshop® ファイルからテンプレートを作成し、レイヤーを管理し、レイヤーの名前を指定し、テキストを抽出し、画像をテンプレートにアンカーする方法を指定できます。<br> テンプレートは[!DNL Experience Manager].<br>ではサポートされていません [Photoshop アップロードオプションの設定](#setting-photoshop-upload-options)を参照してください。 |
 | | PDF オプション | ファイルのラスタライズ、検索語やリンクの抽出、eCatalogの自動生成、解像度の設定、カラースペースの選択を行うことができます。<br>eCatalogsは[!DNL Experience Manager]ではサポートされていません。<br> [PDF アップロードオプションの設定](#setting-pdf-upload-options)を参照してください。<br>**注意**：抽出に考慮されるPDFの最大ページ数は、新規アップロードの場合5000です。 この制限は、2022年12月31日（PT）に（すべての PDF に対して）100 ページに変更されます。 [Dynamic Media の制限](/help/assets/limitations.md)も参照してください。 |
 | | Illustrator オプション | Adobe Illustrator® ファイルのラスタライズ、透明な背景の維持、解像度の選択、カラースペースの選択を行うことができます。<br> [PostScriptとIllustratorのアップロードオプションの設定](#setting-postscript-and-illustrator-upload-options)を参照してください。 |
 | | eVideo オプション | ビデオプリセットを選択すると、ビデオファイルをトランスコードできます。<br> [eVideo アップロードオプションの設定](#setting-evideo-upload-options)を参照してください。 |
-| | バッチセットプリセット | アップロード済みのファイルから画像セットやスピンセットを作成するには、使用するプリセットのアクティブ列をクリックします。 複数のプリセットを選択できます。 Dynamic Media Classicのアプリケーション設定/バッチセットプリセット ページでプリセットを作成します。<br> バッチセットプリセットの作成について詳しくは、[画像セットとスピンセットを自動生成するためのバッチセットプリセットの設定](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を参照してください。<br> [ バッチセットプリセットのアップロード時の設定](#setting-batch-set-presets-at-upload)を参照してください。 |
+| | バッチセットプリセット | アップロード済みのファイルから画像セットやスピンセットを作成するには、使用するプリセットのアクティブ列をクリックします。 複数のプリセットを選択できます。 Dynamic Media Classicのアプリケーション設定/バッチセットプリセット ページでプリセットを作成します。<br> バッチセットプリセットの作成について詳しくは、[画像セットとスピンセットを自動生成するためのバッチセットプリセットの設定](config-dms7.md#creating-batch-set-presets-to-auto-generate-image-sets-and-spin-sets)を参照してください。<br> [&#x200B; バッチセットプリセットのアップロード時の設定](#setting-batch-set-presets-at-upload)を参照してください。 |
 
 #### アップロード時の画像編集のオプション設定 {#setting-image-editing-options-at-upload}
 
-画像ファイル（AI、EPS、PSD）をアップロードする場合、[!UICONTROL  アップロードジョブオプション ] ダイアログボックスで次の操作を実行できます。
+画像ファイル（AI、EPS、PSD）をアップロードする場合、[!UICONTROL &#x200B; アップロードジョブオプション &#x200B;] ダイアログボックスで次の操作を実行できます。
 
 * 画像の端からホワイトスペースを切り抜きます（上の表の説明を参照してください）。
 * 画像の端から手動で切り抜きます（上の表の説明を参照）。
@@ -260,7 +260,7 @@ Dynamic Media では、FTP サーバー経由でアセットをバッチアッ�
 
 #### PostScriptとAdobe Illustratorのアップロードオプションの設定 {#setting-postscript-and-illustrator-upload-options}
 
-PostScript（EPS）またはAdobe Illustrator（AI）画像ファイルをアップロードする場合は、様々な方法でフォーマットできます。 ファイルのラスタライズ、透明背景の維持、解像度の選択、カラースペースの選択ができます。 PostScriptおよびAdobe Illustrator ファイルの書式設定オプションは、[!UICONTROL Illustrator オプション ]および[!UICONTROL PostScript オプション ]の[!UICONTROL Upload Job Options] ダイアログボックスで利用できます。
+PostScript（EPS）またはAdobe Illustrator（AI）画像ファイルをアップロードする場合は、様々な方法でフォーマットできます。 ファイルのラスタライズ、透明背景の維持、解像度の選択、カラースペースの選択ができます。 PostScriptおよびAdobe Illustrator ファイルの書式設定オプションは、[!UICONTROL Illustrator オプション &#x200B;]および[!UICONTROL PostScript オプション &#x200B;]の[!UICONTROL Upload Job Options] ダイアログボックスで利用できます。
 
 | オプション | サブオプション | 説明 |
 |---|---|---|
@@ -279,7 +279,7 @@ Adobe Photoshop Document （PSD）ファイルは、画像テンプレートの�
 
 レイヤーの含まれる PSD ファイルをテンプレートの作成に使用すると、Dynamic Media はこのファイルから複数の画像を作成します。1 レイヤーにつき 1 画像が作成されます。
 
-上記の[!UICONTROL 切り抜きオプション ]と[!UICONTROL  カラープロファイルオプション ]を、Adobe Photoshopのアップロードオプションと共に使用します。
+上記の[!UICONTROL 切り抜きオプション &#x200B;]と[!UICONTROL &#x200B; カラープロファイルオプション &#x200B;]を、Adobe Photoshopのアップロードオプションと共に使用します。
 
 >[!NOTE]
 >
@@ -463,7 +463,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 **アセットをコピーするには：**
 
-1. [!DNL Assets] インターフェイスで、1 つ以上のアセットを選択し、ツールバーから「**[!UICONTROL コピー]**」をクリックします。 または、アセットカードからの Assets インターフェイス](assets/do-not-localize/copy_icon.png)クイックアクションのツールバーの「**[!UICONTROL コピー]** ![コピー」オプションを選択します。
+1. [!DNL Assets] インターフェイスで、1 つ以上のアセットを選択し、ツールバーから「**[!UICONTROL コピー]**」をクリックします。 または、アセットカードからの Assets インターフェイス![&#128279;](assets/do-not-localize/copy_icon.png)クイックアクションのツールバーの「**[!UICONTROL コピー]** コピー」オプションを選択します。
 
    >[!NOTE]
    >
@@ -475,7 +475,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
    >
    >同じ場所でアセットをコピーすると、[!DNL Experience Manager] は自動的に名前のバリエーションを生成します。 例えば、「`Square`」というタイトルのアセットをコピーすると、[!DNL Experience Manager] は自動的にそのコピーのタイトルを「`Square1`」として生成します。
 
-1. ツールバーから「Assets ツールバー](assets/do-not-localize/paste.png)アセット」オプションで「**[!UICONTROL 貼り付け]** ![貼り付け」オプションをクリックします。 アセットがこの場所にコピーされます。
+1. ツールバーから「Assets ツールバー![&#128279;](assets/do-not-localize/paste.png)アセット」オプションで「**[!UICONTROL 貼り付け]** 貼り付け」オプションをクリックします。 アセットがこの場所にコピーされます。
 
    >[!NOTE]
    >
@@ -529,7 +529,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
 アセット（またはフォルダー）を兄弟フォルダーに移動させるには、ユーザーインターフェイスの「[!UICONTROL 移動]」オプションを使用する代わりに、アセットやフォルダーを対象の場所にドラッグできます。 ただし、この操作はリスト表示でのみ可能です。
 
-アセットをドラッグして移動しても[!UICONTROL  アセットの移動] ウィザードが開かないため、移動中にアセットの名前を変更するオプションを取得できません。 さらに、既に公開されているアセットは、ユーザーの再公開の承認を求めずに、ドラッグして移動することで再公開されます。
+アセットをドラッグして移動しても[!UICONTROL &#x200B; アセットの移動] ウィザードが開かないため、移動中にアセットの名前を変更するオプションを取得できません。 さらに、既に公開されているアセットは、ユーザーの再公開の承認を求めずに、ドラッグして移動することで再公開されます。
 
 ![アセットをドラッグして兄弟フォルダーにアセットを移動](assets/move-by-drag.gif)
 
@@ -563,7 +563,7 @@ PDF ファイルのアップロード時に、様々な方法でファイルを�
 
    画像またはビデオアセットの詳細ページに表示するレンディションのサイズを設定できます。 指定される寸法に基づいて、[!DNL Assets] はレンディションを正確なサイズまたは最も近いサイズで表示します。
 
-   アセットの詳細レベルで画像のレンディションのサイズを設定するには、`renditionpicker` ノード（`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`）をオーバーレイして、幅のプロパティの値を設定します。 画像サイズに基づいてアセットの詳細ページのレンディションをカスタマイズするには、幅の代わりにKB ]**プロパティで**[!UICONTROL  サイズ（Long）を設定します。 サイズベースのカスタマイズの場合、`preferOriginal` プロパティを使用すると、一致するレンディションのサイズがオリジナルより大きい場合でも、オリジナルが優先されます。
+   アセットの詳細レベルで画像のレンディションのサイズを設定するには、`renditionpicker` ノード（`libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/renditionpicker`）をオーバーレイして、幅のプロパティの値を設定します。 画像サイズに基づいてアセットの詳細ページのレンディションをカスタマイズするには、幅の代わりにKB **プロパティで** サイズ（Long）を設定します。 サイズベースのカスタマイズの場合、`preferOriginal` プロパティを使用すると、一致するレンディションのサイズがオリジナルより大きい場合でも、オリジナルが優先されます。
 
    同様に、`libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker` をオーバーレイして注釈ページの画像をカスタマイズできます。
 
@@ -687,7 +687,7 @@ CUG は、アセットへのアクセスを制限する追加の方法です。 
 
 [!DNL Assets] ユーザーインターフェイスでフォルダーまたはコレクションを参照する場合、右上隅の「[!UICONTROL すべて選択]」オプションを使用して、表示または読み込まれたすべてのアセットを選択できます。 最初は、100 個のアセットのみがカード表示に読み込まれ、200 個のアセットがリスト表示に読み込まれます。 検索結果をスクロールすると、アセットがさらに読み込まれます。 「[!UICONTROL すべてを選択]」オプションは読み込まれたアセットのみを選択します。
 
-詳しくは、[ リソースの表示と選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)を参照してください。
+詳しくは、[&#x200B; リソースの表示と選択](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)を参照してください。
 
 ## 画像の編集 {#editing-images}
 
@@ -976,4 +976,4 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-詳しくは、「[ デスクトップアプリを使用してDAM Assetsを参照する方法](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started#browse-search-preview-assets)」を参照してください。
+詳しくは、「[&#x200B; デスクトップアプリを使用してDAM Assetsを参照する方法](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started#browse-search-preview-assets)」を参照してください。
