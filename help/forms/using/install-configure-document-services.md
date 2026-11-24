@@ -230,7 +230,7 @@ PDF Generator サービスを使用して、Microsoft® Word、Microsoft® Excel
 >* Adobe Acrobat、Microsoft® Word、Excel および PowerPoint は、Microsoft® Windows でのみ使用できます。 UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルやサポートされている Microsoft® Office ファイルを PDF ドキュメントに変換します。
 >* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティ製品のインストール後に表示されるすべてのダイアログボックスを閉じます。
 >* インストールされているすべてのソフトウェアを少なくとも 1 回起動してください。 PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを閉じます。
->* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
+>* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
 
 ### Adobe Acrobat Pro DC のインストール {#install-adobe-acrobat-pro-dc}
 
@@ -943,7 +943,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 >
 >AEM Forms PDF Generator などのサーバーサイドの自動処理シナリオでは、保護モードを無効にする必要があります。 この設定は、エンドユーザーのデスクトップではなく、専用サーバー環境でのみ変更する必要があります。
 
-詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
+詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/jp/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
 
 
 
@@ -1549,9 +1549,9 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 <!--
 (Legacy Acrobat guidance — retained for reference only) License of Adobe Acrobat installed on AEM Forms Server expires
 
-* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
-   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
+   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
 
       ```
 
@@ -1566,7 +1566,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          
       ```
 
-* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
+* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
 
 (Legacy Acrobat guidance — retained for reference only) AEM Forms Server is in an offline or secure environment and internet is not available to activate Acrobat.
 
