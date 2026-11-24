@@ -21,10 +21,10 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: ed215ea94e2db8589da7734dd4533fb0e55043d4
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 92%
+source-wordcount: '2293'
+ht-degree: 86%
 ---
 # AEM 6.5 Forms サービスパックのインストール手順 {#aem-form-patch-installation-instructions}
 
@@ -153,6 +153,16 @@ From AEM Service Pack 6.5.19.0 and onwards, XMLFM (XML output) will be available
 >* JEE 上に AEM Forms サービスパックをインストールした後、appserver を再起動する前に、`crx-repository\install` フォルダーから Forms アドオンパッケージを削除する必要があります。 [ソフトウェア配布ポータル](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=ja)から、最新の Forms アドオンパッケージをダウンロードします。
 >* SDK を再起動するには、「Ctrl + C」コマンドを使用することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 >* [JEE 上の AEM Forms の Spring Framework の脆弱性を軽減するためのホットフィックス](/help/release-notes/aem-forms-hotfix.md)の場合、クラスター環境にデプロイする際に、ロケーターが JDK 17 を使用して起動されていることを確認する必要があります。
+
+### WebLogic トポロジ検証エラーの回避策 {#weblogic-topology-validation}
+
+JEE Service Pack 26 パッチ 136上のAEM Formsを使用したWebLogicで、Configuration Manager （LCM） `validateApplicationServerTopology` ステップがGUI モードとCLI モードの両方で失敗します。 この問題が発生した場合は、次の手動による回避策を適用してください。 （FORMS-30037）
+
+1. ソフトウェア配布から[`forms-security-commons-1.0.6.jar`](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/forms-security-commons-1.0.6.jar)をダウンロードします。
+1. JARをAEM Forms インストールディレクトリの下の`configurationManager/lib` ディレクトリに配置します。 例えば、Windowsでは、パスは`C:\Adobe\Adobe_Experience_Manager_Forms\configurationManager\lib`です。異なる場合は、実際のインストールディレクトリを使用してください。
+1. Configuration Manager `bin` ディレクトリで、`ConfigurationManager.bat` （Windows）または`ConfigurationManager.sh` （Unix/Linux）を編集します。 既存のクラスパスに`forms-security-commons-1.0.6.jar`のフルパスを追加し、既存のすべてのクラスパスエントリを保持します。
+1. 変更したランチャーを使用して、GUIまたはCLI モードでConfiguration Managerを再起動します。
+1. `validateApplicationServerTopology`を再実行し、トポロジの検証が正常に完了したことを確認します。
 
 +++
 
