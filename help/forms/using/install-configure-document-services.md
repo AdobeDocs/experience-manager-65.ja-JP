@@ -1,6 +1,6 @@
 ---
 title: ドキュメントサービスのインストールと設定
-description: AEM Forms ドキュメントサービスをインストールして、PDF ドキュメントを作成、アセンブル、配布、アーカイブし、デジタル署名を追加してドキュメントへのアクセスを制限し、Barcoded Forms をデコードしましょう。
+description: AEM Forms ドキュメントサービスをインストールすると、PDF ドキュメントの作成、アセンブル、配布、アーカイブ、ドキュメントへのアクセスを制限するためのデジタル署名の追加、Barcoded Forms のデコードを行うことができます。
 topic-tags: installing
 role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
@@ -22,26 +22,26 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 1880cdd6fa659c17e8efb3854b9b9441ff22c2b2
+source-git-commit: 1695a13865ac21e7827e36bccb67a2f877c42c1a
 workflow-type: tm+mt
-source-wordcount: '10825'
-ht-degree: 95%
+source-wordcount: '11350'
+ht-degree: 91%
 ---
 # ドキュメントサービスのインストールと設定 {#installing-and-configuring-document-services}
 
-AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、アーカイブや、ドキュメントへのアクセスを制限するためのデジタル署名の追加、Barcoded Forms のデコードなど、様々なドキュメントレベルの操作を実現する一連の OSGi サービスを提供します。 これらのサービスは、AEM Forms のアドオンパッケージに含まれており、 ドキュメントサービスと総称されます。 利用可能なドキュメントサービスのリストとその主な機能は次のとおりです。
+AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、アーカイブや、ドキュメントへのアクセスを制限するためのデジタル署名の追加、Barcoded Forms のデコードなど、様々なドキュメントレベルの操作を実現する一連の OSGi サービスを提供します。 これらのサービスは、AEM Forms のアドオンパッケージに含まれています。 これらのサービスは総称してドキュメントサービスと呼ばれます。 利用可能なドキュメントサービスのリストとその主な機能は次のとおりです。
 
-* **アセンブラーサービス：** PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得を実行できます。 PDF ドキュメントを PDF/A 規格に変換して検証することもできます。また、PDF フォーム、XML フォームを PDF/A-1b、PDF/A-2b および PDFA/A-3b に変換することもできます。 詳しくは、[アセンブラーサービス](/help/forms/using/assembler-service.md)を参照してください。
+* **アセンブラーサービス：** PDF ドキュメントや XDP ドキュメントの結合、並べ替えおよび拡張と、PDF ドキュメントに関する情報の取得を実行できます。 PDF ドキュメントを PDF/A 標準に変換して検証することもできます。また、PDF forms、XML フォーム、および PDF forms を PDF/A-1b、PDF/A-2b および PDFA/A-3b に変換することもできます。 詳しくは、[アセンブラーサービス](/help/forms/using/assembler-service.md)を参照してください。
 
 * **ConvertPDF サービス：** PDF ドキュメントを PostScript ファイルまたは画像ファイル（JPEG、JPEG 2000、PNG および TIFF）に変換します。 詳しくは、[ConvertPDF サービス](/help/forms/using/using-convertpdf-service.md)を参照してください。
 
 * **Barcoded Forms サービス：**&#x200B;バーコードの電子画像からデータを抽出します。 このサービスは、入力として 1 つまたは複数のバーコードを含んだ TIFF ファイルや PDF ファイルを受け取り、バーコードデータを抽出します。 詳しくは、[Barcoded Forms サービス](/help/forms/using/using-barcoded-forms-service.md)を参照してください。
 
-* **DocAssurance サービス：**&#x200B;ドキュメントの暗号化と復号、使用権限の追加による Adobe Reader の機能拡張、ドキュメントへのデジタル署名の追加を実行できます。 DocAssurance サービスには、3 つのサービス（署名、暗号化、Reader 拡張機能）があります。 詳しくは、[DocAssurance サービス](/help/forms/using/overview-aem-document-services.md)を参照してください。
+* **DocAssurance サービス：**&#x200B;ドキュメントの暗号化と復号、使用権限の追加による Adobe Reader の機能拡張、ドキュメントへのデジタル署名の追加を実行できます。 Doc Assurance サービスには、署名、暗号化、Reader Extension の 3 つのサービスが含まれます。 詳しくは、[DocAssurance サービス](/help/forms/using/overview-aem-document-services.md)を参照してください。
 
 * **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。 ドキュメントを暗号化すると、その内容は判読できなくなります。 許可されたユーザーはドキュメントを復号化して、内容にアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
 
-* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとして処理します。 詳しくは、[&#x200B; Forms サービス](/help/forms/using/forms-service.md)を参照してください。
+* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとしてレンダリングします。 詳しくは、[ Forms サービス](/help/forms/using/forms-service.md)を参照してください。
 
 * **Output サービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成します。 レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。 詳しくは、[Output サービス](/help/forms/using/output-service.md)を参照してください。
 
@@ -67,11 +67,11 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 >[!NOTE]
 >
->AEM Forms では、すべての機能を 1 台のサーバーで設定して実行できますが、本番環境ではキャパシティプラニングと負荷分散を行い、特定の機能に専用のサーバーをセットアップする必要があります。 例えば、PDF Generator サービスを使用して、1 日に数千のページと複数のアダプティブフォームをデータ取得用に変換する環境の場合、PDF Generator サービスとアダプティブフォームの機能を実行するための AEM Forms サーバーを個別にセットアップする必要があります。 これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
+>AEM Forms では、すべての機能を 1 台のサーバーで設定して実行できますが、本番環境ではキャパシティプラニングと負荷分散を行い、特定の機能に専用のサーバーをセットアップする必要があります。 例えば、PDF Generator サービスを使用して 1 日に数千ページを変換し、複数のアダプティブフォームでデータを取得する環境の場合、PDF Generator サービス用とアダプティブフォーム機能用の AEM Forms サーバーをそれぞれ個別にセットアップする必要があります。 これにより、パフォーマンスが最適化され、各サーバーを個別にスケーリングできるようになります。
 
 ## システム要件 {#system-requirements}
 
-AEM Forms ドキュメントサービスのインストールおよび設定に進む前に、次のことを確認する必要があります。
+AEM Forms ドキュメントサービスをインストールおよび設定する前に、次の点を確認してください。
 
 * ハードウェアとソフトウェアのインフラが正しく設定されていること。 サポート対象のハードウェアとソフトウェアの一覧について詳しくは、「[技術要件](/help/sites-deploying/technical-requirements.md)」を参照してください。
 
@@ -81,7 +81,7 @@ AEM Forms ドキュメントサービスのインストールおよび設定に�
   * **オーサー**：コンテンツの作成、アップロードおよび編集や web サイトの管理に使用される AEM インスタンス。 公開の準備が整ったコンテンツは、パブリッシュインスタンスにレプリケートされます。
   * **パブリッシュ**：公開されたコンテンツをインターネットまたは社内ネットワークを通じて提供する AEM インスタンス。
 
-* メモリ要件が満たされていること。 AEM Forms アドオンパッケージでは、次が必要です。
+* メモリ要件が満たされていること。 AEM Forms アドオンパッケージには、次のものが必要です。
 
   * Microsoft® Windows ベースのインストールの場合、15 GB の一時的な空きスペースが必要です。
   * Unix ベースのインストールの場合、6 GB の一時的な空きスペースが必要です。
@@ -214,13 +214,13 @@ Unix ベースのオペレーティングシステムを使用する場合は、
 
 >[!NOTE]
 >
-> WebToPDF は、インタラクティブなコミュニケーションのグラフ機能でも使用されます。 したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
+> WebToPDF は、インタラクティブコミュニケーションのグラフ機能でも使用されます。 したがって、上記の WebToPDF に関して説明されたすべての設定手順は、グラフ機能が正しく機能することを確認する場合に適用できます。
 
 ## プリインストール設定 {#preinstallationconfigurations}
 
-プリインストール設定の節に記載されている設定は、PDF Generator サービスにのみ適用されます。 PDF Generator サービスを設定していない場合は、プリインストール設定の節をスキップできます。
+プリインストール設定のセクションに記載されている設定は、PDF Generator サービスにのみ適用されます。 PDF Generator サービスを設定していない場合は、プリインストール設定のセクションをスキップできます。
 
-### Adobe Acrobat とサードパーティ製アプリケーションのインストール {#install-adobe-acrobat-and-third-party-applications}
+### Adobe Acrobat とサードパーティ製品のインストール {#install-adobe-acrobat-and-third-party-applications}
 
 PDF Generator サービスを使用して、Microsoft® Word、Microsoft® Excel、Microsoft® PowerPoint、OpenOffice、Adobe Acrobat などのネイティブファイル形式を PDF ドキュメントに変換する場合は、これらのアプリケーションを AEM Forms サーバーにインストールしてください。
 
@@ -228,9 +228,9 @@ PDF Generator サービスを使用して、Microsoft® Word、Microsoft® Excel
 >
 ><!-- * If your AEM Forms Server is in an offline or secure environment and internet is not available to activate Adobe Acrobat, see [Offline Activation](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) for instructions to activate such instances of Adobe Acrobat. -->
 >* Adobe Acrobat、Microsoft® Word、Excel および PowerPoint は、Microsoft® Windows でのみ使用できます。 UNIX ベースのオペレーティングシステムを使用している場合は、OpenOffice をインストールして、リッチテキストファイルやサポートされている Microsoft® Office ファイルを PDF ドキュメントに変換します。
->* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティソフトウェアのインストール後に表示されるすべてのダイアログボックスを閉じます。
->* インストールされているすべてのソフトウェアを少なくとも 1 回起動します。 PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを解除します。
->* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
+>* PDF Generator サービスを使用できるすべてのユーザーに対して、Adobe Acrobat およびサードパーティ製品のインストール後に表示されるすべてのダイアログボックスを閉じます。
+>* インストールされているすべてのソフトウェアを少なくとも 1 回起動してください。 PDF Generator サービスを使用するように設定されているすべてのユーザーに対して、すべてのダイアログボックスを閉じます。
+>* [Adobe Acrobat シリアル番号の有効期限を確認](https://helpx.adobe.com/jp/enterprise/kb/volume-license-expiration-check.html)してライセンスを更新する日付を設定するか、有効期限に基づいて[シリアル番号を移行](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number)します。
 
 ### Adobe Acrobat Pro DC のインストール {#install-adobe-acrobat-pro-dc}
 
@@ -296,7 +296,11 @@ Adobe Acrobat Pro DC Microsoft Office 版のインストールプロセスは、
 
 以下の手順は、Adobe Admin Console への&#x200B;*システム管理者*&#x200B;アクセス権を使用して実行します。
 
-###### 手順 1: Adobe Admin Console にログイン
+>[!NOTE]
+>
+>FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。 ライセンスの更新期限が来たら、新しいFRL パッケージを作成し、期限切れのライセンスをAEM Forms Serverから削除してから、新しいパッケージをデプロイしてアクティベートします。 詳細な手順については、[AEM Forms ServerでAdobe Acrobat ライセンスの有効期限が切れているか、非アクティブ化されています](#troubleshooting)を参照してください。
+
+###### 手順 1：Adobe Admin Console にログインします
 
 1. Web ブラウザーを開き、[Adobe Admin Console](https://adminconsole.adobe.com/) に移動します
 1. *システム管理者*&#x200B;権限を持つアカウントを使用してログインします。
@@ -311,12 +315,12 @@ Adobe Acrobat Pro DC Microsoft Office 版のインストールプロセスは、
    | 設定 | 推奨値 | メモ |
    |---------|-------------------|-------|
    | アクティベーション方法 | オフライン | 推奨オプション |
-   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator の機能に必須です |
+   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator 機能に必要です |
    | プラットフォームを設定 | Windows 64 ビット版 | Apple macOS は現在サポートされていません |
    | ローカルを有効にする | 「OS 言語を使用」 | デフォルト設定 |
    | 言語 | 優先言語 | Acrobat インターフェイスの場合 |
-   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションに維持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
-   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションのライセンスファイルのみを維持します | FRL デプロイメントのデフォルト設定 |
+   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションとして保持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
+   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションではライセンスファイルのみを保持します | FRL デプロイメントのデフォルト設定 |
    | プラグイン | この画面では変更しないでください | |
    | オプション | この画面では変更しないでください | |
    | 完了 | パッケージ名：「Acrobat FRL AEM Forms」 | わかりやすい名前を使用します |
@@ -354,14 +358,14 @@ FRL パッケージを管理するための専用のサービスアカウント�
 4. 「**アンインストール**」を選択し、プロンプトに従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
 5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [Adobe Acrobat クリーナーツール](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)を使用します。
 
-###### 手順 6：Adobe Acrobat Pro をダウンロードおよびインストール
+###### 手順 6：Adobe Acrobat Pro をダウンロードしてインストール
 
 以前のバージョンをアンインストールした後、互換性のあるバージョンの Adobe Acrobat Pro をダウンロードおよびインストールする必要があります。
 
 1. [Adobe Acrobat DC ダウンロードページ](https://helpx.adobe.com/jp/acrobat/kb/acrobat-dc-downloads.html)に移動します。
 2. 「**Acrobat Pro インストーラー**」セクションに移動します。
 3. AEM Forms PDF Generator で使用する場合は、AEM Forms PDF Generator でサポートされているバージョンである「Windows（32 ビット版）用」インストーラーをダウンロードします。
-4. ページの次のインストール手順に従います。
+4. ページに記載されているインストール手順に従います。
    * ダウンロードした zip ファイルをコンピュータ上のフォルダーに抽出します
    * Setup.exe ファイルに移動します（zip ファイル内から Setup.exe ファイルを実行しないでください）
    * Setup.exe をダブルクリックして、インストールを開始します
@@ -369,7 +373,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 5. インストール後、Adobe Acrobat Pro を開き、ようこそダイアログを閉じて初期設定を完了します。
 6. 簡単な PDF を作成して、インストールを検証します。
 
-###### 手順 7：FRL パッケージをダウンロード
+###### 手順 7：FRL パッケージをダウンロードする
 
 1. 手順 3 でダウンロード権限を付与した&#x200B;*ユーザーアカウント*&#x200B;を使用して、[Adobe Admin Console](https://adminconsole.adobe.com/) にログインします。
 1. 「**パッケージ**」タブに移動します。
@@ -400,7 +404,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
    > **重要：**
    > * `<JSON_FILE_NAME>.json` を、抽出したパッケージ内の JSON ファイルの&#x200B;*正確な*&#x200B;ファイル名に置き換えます。
-   > * JSON ファイル名では、大文字と小文字が区別されます。
+   > * JSON ファイル名では、大文字と小文字を区別します。
    > * ファイル名に入力ミスがないか再確認します。
 
    **期待される出力：**
@@ -420,7 +424,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
    | `-i` | ツールにライセンスをインストールしてアクティブ化するように指示します |
    | `-f` | JSON ライセンスファイルへのパスを指定します |
 
-###### 手順 9：PDF Generator サービスをテスト
+###### 手順 9：PDF Generator サービスをテストする
 
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
@@ -446,7 +450,11 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
 以下の手順は、Adobe Admin Console への&#x200B;*システム管理者*&#x200B;アクセス権を使用して実行します。
 
-###### 手順 1: Adobe Admin Console にログイン
+>[!NOTE]
+>
+>FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。 ライセンスの更新期限が来たら、新しいFRL パッケージを作成し、期限切れのライセンスをAEM Forms Serverから削除してから、新しいパッケージをデプロイしてアクティベートします。 詳細な手順については、[AEM Forms ServerでAdobe Acrobat ライセンスの有効期限が切れているか、非アクティブ化されています](#troubleshooting)を参照してください。
+
+###### 手順 1：Adobe Admin Console にログインします
 
 1. Web ブラウザーを開き、[Adobe Admin Console](https://adminconsole.adobe.com/) に移動します
 1. *システム管理者*&#x200B;権限を持つアカウントを使用してログインします。
@@ -461,12 +469,12 @@ FRL パッケージを管理するための専用のサービスアカウント�
    | 設定 | 推奨値 | メモ |
    |---------|-------------------|-------|
    | アクティベーション方法 | オフライン | 推奨オプション |
-   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator の機能に必須です |
+   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator 機能に必要です |
    | プラットフォームを設定 | Windows 64 ビット版 | Apple macOS は現在サポートされていません |
    | ローカルを有効にする | 「OS 言語を使用」 | デフォルト設定 |
    | 言語 | 優先言語 | Acrobat インターフェイスの場合 |
-   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションに維持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
-   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションのライセンスファイルのみを維持します | FRL デプロイメントのデフォルト設定 |
+   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションとして保持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
+   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションではライセンスファイルのみを保持します | FRL デプロイメントのデフォルト設定 |
    | プラグイン | この画面では変更しないでください | |
    | オプション | この画面では変更しないでください | |
    | 完了 | パッケージ名：「Acrobat FRL AEM Forms」 | わかりやすい名前を使用します |
@@ -504,14 +512,14 @@ FRL パッケージを管理するための専用のサービスアカウント�
 4. 「**アンインストール**」を選択し、プロンプトに従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
 5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [Adobe Acrobat クリーナーツール](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)を使用します。
 
-###### 手順 6：Adobe Acrobat Pro をダウンロードおよびインストール
+###### 手順 6：Adobe Acrobat Pro をダウンロードしてインストール
 
 以前のバージョンをアンインストールした後、互換性のあるバージョンの Adobe Acrobat Pro をダウンロードおよびインストールする必要があります。
 
 1. [Adobe Acrobat DC ダウンロードページ](https://helpx.adobe.com/jp/acrobat/kb/acrobat-dc-downloads.html)に移動します。
 2. 「**Acrobat Pro インストーラー**」セクションに移動します。
 3. AEM Forms PDF Generator で使用する場合は、AEM Forms PDF Generator でサポートされているバージョンである「Windows（32 ビット版）用」インストーラーをダウンロードします。
-4. ページの次のインストール手順に従います。
+4. ページに記載されているインストール手順に従います。
    * ダウンロードした zip ファイルをコンピュータ上のフォルダーに抽出します
    * Setup.exe ファイルに移動します（zip ファイル内から Setup.exe ファイルを実行しないでください）
    * Setup.exe をダブルクリックして、インストールを開始します
@@ -519,7 +527,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 5. インストール後、Adobe Acrobat Pro を開き、ようこそダイアログを閉じて初期設定を完了します。
 6. 簡単な PDF を作成して、インストールを検証します。
 
-###### 手順 7：FRL パッケージをダウンロード
+###### 手順 7：FRL パッケージをダウンロードする
 
 1. 手順 3 でダウンロード権限を付与した&#x200B;*ユーザーアカウント*&#x200B;を使用して、[Adobe Admin Console](https://adminconsole.adobe.com/) にログインします。
 1. 「**パッケージ**」タブに移動します。
@@ -550,7 +558,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
    > **重要：**
    > * `<JSON_FILE_NAME>.json` を、抽出したパッケージ内の JSON ファイルの&#x200B;*正確な*&#x200B;ファイル名に置き換えます。
-   > * JSON ファイル名では、大文字と小文字が区別されます。
+   > * JSON ファイル名では、大文字と小文字を区別します。
    > * ファイル名に入力ミスがないか再確認します。
 
    **期待される出力：**
@@ -574,11 +582,11 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
-1. インタラクティブなユーザーセッション内のコマンドラインコンソールから AEM Forms サーバーを起動します （サーバーにログインし、コマンドラインから AEM Forms を手動で起動します）。
+1. インタラクティブなユーザーセッション内のコマンドラインコンソールから AEM Forms サーバーを起動します。 （サーバーにログインし、コマンドラインから AEM Forms を手動で起動します）
 2. サーバーの起動後、ユーザーセッションをアクティブに維持します。 サーバープロセスが終了するので、マシンからログアウトしないでください。 ログオフせずにリモートデスクトップ（RDP）ウィンドウを安全に閉じることができます。セッションがアクティブである限り、サーバーは引き続き実行されます。
 3. 信頼性を向上させるには、ユーザーがログインしたときに AEM Forms サーバーを自動的に起動するように起動タスクまたはスケジュール済みのタスクを設定します。
 
-###### 手順 10：PDF Generator サービスをテスト
+###### 手順 10：PDF Generator サービスのテスト
 
 1. AEM Forms 管理インターフェイスを開きます
 2. PDF Generator サービスに移動します
@@ -590,7 +598,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 1. サーバー上で Adobe Acrobat Pro DC を開きます
 2. ヘルプ／Adobe Acrobat Pro DC についてに移動します
 3. バージョン番号が期待されるバージョンと一致することを確認します
-4. ライセンスのステータスがアクティブ化されていることを確認します
+4. ライセンスのステータスがアクティベート済みであることを確認します。
 
 >[!TAB ボリュームライセンス - 1 人のユーザー]
 
@@ -602,7 +610,11 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
 以下の手順は、Adobe Admin Console への&#x200B;*システム管理者*&#x200B;アクセス権を使用して実行します。
 
-###### 手順 1: Adobe Admin Console にログイン
+>[!NOTE]
+>
+>FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。 ライセンスの更新期限が来たら、新しいFRL パッケージを作成し、期限切れのライセンスをAEM Forms Serverから削除してから、新しいパッケージをデプロイしてアクティベートします。 詳細な手順については、[AEM Forms ServerでAdobe Acrobat ライセンスの有効期限が切れているか、非アクティブ化されています](#troubleshooting)を参照してください。
+
+###### 手順 1：Adobe Admin Console にログインします
 
 1. Web ブラウザーを開き、[Adobe Admin Console](https://adminconsole.adobe.com/) に移動します
 1. *システム管理者*&#x200B;権限を持つアカウントを使用してログインします。
@@ -617,12 +629,12 @@ FRL パッケージを管理するための専用のサービスアカウント�
    | 設定 | 推奨値 | メモ |
    |---------|-------------------|-------|
    | アクティベーション方法 | オフライン | 推奨オプション |
-   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator の機能に必須です |
+   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator 機能に必要です |
    | プラットフォームを設定 | Windows 64 ビット版 | Apple macOS は現在サポートされていません |
    | ローカルを有効にする | 「OS 言語を使用」 | デフォルト設定 |
    | 言語 | 優先言語 | Acrobat インターフェイスの場合 |
-   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションに維持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
-   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションのライセンスファイルのみを維持します | FRL デプロイメントのデフォルト設定 |
+   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションとして保持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
+   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションではライセンスファイルのみを保持します | FRL デプロイメントのデフォルト設定 |
    | プラグイン | この画面では変更しないでください | |
    | オプション | この画面では変更しないでください | |
    | 完了 | パッケージ名：「Acrobat FRL AEM Forms」 | わかりやすい名前を使用します |
@@ -660,14 +672,14 @@ FRL パッケージを管理するための専用のサービスアカウント�
 4. 「**アンインストール**」を選択し、プロンプトに従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
 5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [Adobe Acrobat クリーナーツール](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)を使用します。
 
-###### 手順 6：Adobe Acrobat Pro をダウンロードおよびインストール
+###### 手順 6：Adobe Acrobat Pro をダウンロードしてインストール
 
 以前のバージョンをアンインストールした後、互換性のあるバージョンの Adobe Acrobat Pro をダウンロードおよびインストールする必要があります。
 
 1. [Adobe Acrobat DC ダウンロードページ](https://helpx.adobe.com/jp/acrobat/kb/acrobat-dc-downloads.html)に移動します。
 2. 「**Acrobat Pro インストーラー**」セクションに移動します。
 3. AEM Forms PDF Generator で使用する場合は、AEM Forms PDF Generator でサポートされているバージョンである「Windows（32 ビット版）用」インストーラーをダウンロードします。
-4. ページの次のインストール手順に従います。
+4. ページに記載されているインストール手順に従います。
    * ダウンロードした zip ファイルをコンピュータ上のフォルダーに抽出します
    * Setup.exe ファイルに移動します（zip ファイル内から Setup.exe ファイルを実行しないでください）
    * Setup.exe をダブルクリックして、インストールを開始します
@@ -675,7 +687,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 5. インストール後、Adobe Acrobat Pro を開き、ようこそダイアログを閉じて初期設定を完了します。
 6. 簡単な PDF を作成して、インストールを検証します。
 
-###### 手順 7：FRL パッケージをダウンロード
+###### 手順 7：FRL パッケージをダウンロードする
 
 1. 手順 3 でダウンロード権限を付与した&#x200B;*ユーザーアカウント*&#x200B;を使用して、[Adobe Admin Console](https://adminconsole.adobe.com/) にログインします。
 1. 「**パッケージ**」タブに移動します。
@@ -706,7 +718,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
    > **重要：**
    > * `<JSON_FILE_NAME>.json` を、抽出したパッケージ内の JSON ファイルの&#x200B;*正確な*&#x200B;ファイル名に置き換えます。
-   > * JSON ファイル名では、大文字と小文字が区別されます。
+   > * JSON ファイル名では、大文字と小文字を区別します。
    > * ファイル名に入力ミスがないか再確認します。
 
    **期待される出力：**
@@ -731,7 +743,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
 1. リモートデスクトップ（RDP）を使用してサーバーにログインし、サービスを使用して AEM Forms サーバーを起動します。
-2. サーバーが実行中になったら、RDP ウィンドウをそのまま閉じないでください。 代わりに、ユーザーをログオフして正常にログアウトします。これにより、サービスがバックグラウンドで引き続き実行されている間にセッションが正常に終了することが確保されます。
+2. サーバーが実行中になったら、RDP ウィンドウをそのまま閉じないでください。 代わりに、ユーザーをログオフして正常にログアウトします。これにより、サービスがバックグラウンドで引き続き実行されている間に、セッションが正常に終了することが確保されます。
 
 ###### 手順 10：PDF Generator サービスをテスト
 
@@ -747,7 +759,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 1. サーバー上で Adobe Acrobat Pro DC を開きます
 2. ヘルプ／Adobe Acrobat Pro DC についてに移動します
 3. バージョン番号が期待されるバージョンと一致することを確認します
-4. ライセンスのステータスがアクティブ化されていることを確認します
+4. ライセンスのステータスがアクティベート済みであることを確認します。
 
 >[!TAB ボリュームライセンス - 複数のユーザー]
 
@@ -759,7 +771,11 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
 以下の手順は、Adobe Admin Console への&#x200B;*システム管理者*&#x200B;アクセス権を使用して実行します。
 
-###### 手順 1: Adobe Admin Console にログイン
+>[!NOTE]
+>
+>FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。 ライセンスの更新期限が来たら、新しいFRL パッケージを作成し、期限切れのライセンスをAEM Forms Serverから削除してから、新しいパッケージをデプロイしてアクティベートします。 詳細な手順については、[AEM Forms ServerでAdobe Acrobat ライセンスの有効期限が切れているか、非アクティブ化されています](#troubleshooting)を参照してください。
+
+###### 手順 1：Adobe Admin Console にログインします
 
 1. Web ブラウザーを開き、[Adobe Admin Console](https://adminconsole.adobe.com/) に移動します
 1. *システム管理者*&#x200B;権限を持つアカウントを使用してログインします。
@@ -774,12 +790,12 @@ FRL パッケージを管理するための専用のサービスアカウント�
    | 設定 | 推奨値 | メモ |
    |---------|-------------------|-------|
    | アクティベーション方法 | オフライン | 推奨オプション |
-   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator の機能に必須です |
+   | 使用権限 | PDF の生成（PDFG） | AEM Forms PDF Generator 機能に必要です |
    | プラットフォームを設定 | Windows 64 ビット版 | Apple macOS は現在サポートされていません |
    | ローカルを有効にする | 「OS 言語を使用」 | デフォルト設定 |
    | 言語 | 優先言語 | Acrobat インターフェイスの場合 |
-   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションに維持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
-   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションのライセンスファイルのみを維持します | FRL デプロイメントのデフォルト設定 |
+   | アプリを選択 - 使用可能なアプリケーション | Adobe Acrobat を使用可能なアプリケーションとして保持します。 選択したアプリケーションに移動しないでください | 手順 6 の Adobe Experience League ページから [Adobe Acrobat をダウンロード](#step-6-download-and-install-adobe-acrobat-pro)します。 |
+   | アプリを選択 - 選択したアプリケーション | 選択したアプリケーションではライセンスファイルのみを保持します | FRL デプロイメントのデフォルト設定 |
    | プラグイン | この画面では変更しないでください | |
    | オプション | この画面では変更しないでください | |
    | 完了 | パッケージ名：「Acrobat FRL AEM Forms」 | わかりやすい名前を使用します |
@@ -817,14 +833,14 @@ FRL パッケージを管理するための専用のサービスアカウント�
 4. 「**アンインストール**」を選択し、プロンプトに従ってアプリケーションを削除します。 プロンプトが表示されたら、サーバーを再起動します
 5. プログラムのすべてのクラシックバージョンがアンインストールされていることを確認します。 完全に削除するには、必要に応じて [Adobe Acrobat クリーナーツール](https://helpx.adobe.com/acrobat/kb/remove-reader-dc-acrobat-dc.html)を使用します。
 
-###### 手順 6：Adobe Acrobat Pro をダウンロードおよびインストール
+###### 手順 6：Adobe Acrobat Pro をダウンロードしてインストール
 
 以前のバージョンをアンインストールした後、互換性のあるバージョンの Adobe Acrobat Pro をダウンロードおよびインストールする必要があります。
 
 1. [Adobe Acrobat DC ダウンロードページ](https://helpx.adobe.com/jp/acrobat/kb/acrobat-dc-downloads.html)に移動します。
 2. 「**Acrobat Pro インストーラー**」セクションに移動します。
 3. AEM Forms PDF Generator で使用する場合は、AEM Forms PDF Generator でサポートされているバージョンである「Windows（32 ビット版）用」インストーラーをダウンロードします。
-4. ページの次のインストール手順に従います。
+4. ページに記載されているインストール手順に従います。
    * ダウンロードした zip ファイルをコンピュータ上のフォルダーに抽出します
    * Setup.exe ファイルに移動します（zip ファイル内から Setup.exe ファイルを実行しないでください）
    * Setup.exe をダブルクリックして、インストールを開始します
@@ -832,7 +848,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 5. インストール後、Adobe Acrobat Pro を開き、ようこそダイアログを閉じて初期設定を完了します。
 6. 簡単な PDF を作成して、インストールを検証します。
 
-###### 手順 7：FRL パッケージをダウンロード
+###### 手順 7：FRL パッケージをダウンロードする
 
 1. 手順 3 でダウンロード権限を付与した&#x200B;*ユーザーアカウント*&#x200B;を使用して、[Adobe Admin Console](https://adminconsole.adobe.com/) にログインします。
 1. 「**パッケージ**」タブに移動します。
@@ -863,7 +879,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
    > **重要：**
    > * `<JSON_FILE_NAME>.json` を、抽出したパッケージ内の JSON ファイルの&#x200B;*正確な*&#x200B;ファイル名に置き換えます。
-   > * JSON ファイル名では、大文字と小文字が区別されます。
+   > * JSON ファイル名では、大文字と小文字を区別します。
    > * ファイル名に入力ミスがないか再確認します。
 
    **期待される出力：**
@@ -887,11 +903,11 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
-1. インタラクティブなユーザーセッション内のコマンドラインコンソールから AEM Forms サーバーを起動します （サーバーにログインし、コマンドラインから AEM Forms を手動で起動します）。
+1. インタラクティブなユーザーセッション内のコマンドラインコンソールから AEM Forms サーバーを起動します。 （サーバーにログインし、コマンドラインから AEM Forms を手動で起動します）
 2. サーバーの起動後、ユーザーセッションをアクティブに維持します。 サーバープロセスが終了するので、マシンからログアウトしないでください。 ログオフせずにリモートデスクトップ（RDP）ウィンドウを安全に閉じることができます。セッションがアクティブである限り、サーバーは引き続き実行されます。
 3. 信頼性を向上させるには、ユーザーがログインしたときに AEM Forms サーバーを自動的に起動するように起動タスクまたはスケジュール済みのタスクを設定します。
 
-###### 手順 10：PDF Generator サービスをテスト
+###### 手順 10：PDF Generator サービスをテストする
 
 すべてのプロセスを完了したら、クイックアクションテストを実行して、インストールが有効であることを確認します。
 
@@ -927,7 +943,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 >
 >AEM Forms PDF Generator などのサーバーサイドの自動処理シナリオでは、保護モードを無効にする必要があります。 この設定は、エンドユーザーのデスクトップではなく、専用サーバー環境でのみ変更する必要があります。
 
-詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/jp/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
+詳しくは、[保護モードに関する Adobe ドキュメント](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html)を参照してください。
 
 
 
@@ -960,18 +976,18 @@ FRL パッケージを管理するための専用のサービスアカウント�
   <tr>
    <td><p><strong>OpenOffice</strong></p> </td>
    <td><p>OpenOffice_PATH</p> </td>
-   <td><p>C:¥Program Files (x86)¥OpenOffice.org4</p> </td>
+   <td><p>C:\Program Files (x86)\OpenOffice 4</p> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
->* すべての環境変数とそれぞれのパスでは、大文字と小文字が区別されます。
+>* すべての環境変数とそれぞれのパスでは、大文字と小文字を区別します。
 >* JAVA_HOME および Acrobat_PATH（Windows のみ）は、必須の環境変数です。
 >* 環境変数 OpenOffice_PATH は、実行ファイルではなく、インストールフォルダーのパスに設定します。
 >* Word、PowerPoint、Excel、Project などの Microsoft® Office アプリケーション、または AutoCAD については、環境変数を設定する必要はありません。 これらのアプリケーションがサーバーにインストールされている場合は、Generate PDF サービスが自動的にこれらのアプリケーションを起動します。
->* UNIX ベースのプラットフォームでは、OpenOffice を /root としてインストールします。 OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。 OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
+>* UNIX ベースのプラットフォームでは、root ユーザーとして OpenOffice をインストールします。 OpenOffice が root としてインストールされていないと、PDF Generator サービスは OpenOffice ドキュメントを PDF ドキュメントに変換できません。 OpenOffice を非 root ユーザーとしてインストールして実行する必要がある場合は、非 root ユーザーに sudo 権限を与えます。
 >* UNIX ベースのプラットフォームで OpenOffice を使用している場合は、以下のコマンドを実行して PATH 変数を設定します。\
 > `export OpenOffice_PATH=/opt/openoffice.org4`
 >* SUSE® Linux®（SLES 15 SP6 以降）ベースのプラットフォームでは、次の手順に従って OpenOffice を設定します。
@@ -1012,7 +1028,7 @@ FRL パッケージを管理するための専用のサービスアカウント�
 
    `-Djava.security.properties= [path of newly created Java.security file].`
 
-### （Windows のみ）Microsoft Office® のファイル制限機能の設定 {#configure-the-file-block-settings-for-microsoft-office}
+### （Windows のみ）Microsoft Office® のファイルブロック設定を構成する {#configure-the-file-block-settings-for-microsoft-office}
 
 Microsoft® Office のセキュリティセンターの設定を変更して、PDF Generator サービスが古いバージョンの Microsoft® Office で作成されたファイルを変換できるようにします。
 
@@ -1024,7 +1040,7 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 
 ### （Windows のみ）プロセスレベルのトークンを置き換える権限の付与 {#grant-the-replace-a-process-level-token-privilege}
 
-アプリケーションサーバーの起動に使用されるユーザーアカウントには、**プロセスレベルトークンの置き換え**&#x200B;権限が必要です。 ローカルシステムアカウントには、デフォルトで&#x200B;**プロセスレベルトークンの置き換え**&#x200B;権限があります。 ローカル管理グループのユーザーが運用しているサーバーの場合は、権限を明示的に付与する必要があります。 権限を付与するには、次の手順を実行します。
+アプリケーションサーバーの起動に使用されるユーザーアカウントには、**プロセスレベルトークンの置き換え**&#x200B;権限が必要です。 ローカルシステムアカウントには、デフォルトで&#x200B;**プロセスレベルトークンの置き換え**&#x200B;権限があります。 ローカル管理者グループのユーザーが運用しているサーバーの場合は、権限を明示的に付与する必要があります。 権限を付与するには、次の手順を実行します。
 
 1. Microsoft® Windows のグループポリシーエディターを開きます。 グループポリシーエディターを開くには、「**[!UICONTROL スタート]**」をクリックしてスタートの検索ボックスに **gpedit.msc** と入力し、「**[!UICONTROL グループポリシーエディター]**」をクリックします。
 1. **[!UICONTROL ローカルコンピューターポリシー]**／**[!UICONTROL コンピューターの設定]**／**[!UICONTROL Windows の設定]**／**[!UICONTROL セキュリティの設定]**／**[!UICONTROL ローカルポリシー]**／**[!UICONTROL ユーザー権限の割り当て]**&#x200B;の順に移動し、**[!UICONTROL プロセスレベルトークンの置き換え]**&#x200B;ポリシーを編集し、管理者グループを含めます。
@@ -1046,7 +1062,7 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 >
 > 「Ctrl + C」コマンドを使用して SDK を再起動することをお勧めします。 Java プロセスの停止など、別の方法を使用して AEM SDK を再起動すると、AEM 開発環境で不整合が生じる場合があります。
 
-### （Windows のみ）ユーザーアカウント制御（UAC）の無効化 {#disable-user-account-control-uac}
+### （Windows のみ）ユーザーアカウント制御（UAC）を無効にする {#disable-user-account-control-uac}
 
 1. システム構成ユーティリティにアクセスするには、**[!UICONTROL スタート／ファイル名を指定して実行]**&#x200B;を選択し、**[!UICONTROL MSCONFIG]** と入力します。
 1. 「**[!UICONTROL ツール]**」タブをクリックし、スクロールして「**[!UICONTROL UAC 設定を変更]**」を選択します。 「**[!UICONTROL 起動]**」をクリックして新しいウィンドウでコマンドを実行します。
@@ -1060,11 +1076,11 @@ Microsoft® Office のセキュリティセンターの設定を変更して、P
 
 1. コンピューターを再起動します。
 
-### （Windows のみ）エラーレポートサービスの無効化 {#disable-error-reporting-service}
+### （Windows のみ）エラーレポートサービスを無効にする {#disable-error-reporting-service}
 
-Windows Server で PDF Generator サービスを使用してドキュメントを PDF に変換しているとき、実行ファイルに問題が見つかったためファイルを閉じる必要があると Windows Server で報告される場合があります。 ただし、バックグラウンドで継続されるので、PDF の変換には影響しません。
+Windows Server で PDF Generator サービスを使用してドキュメントを PDF に変換しているとき、プログラムに問題が発生したため終了する必要があると Windows Server によって報告される場合があります。 ただし、バックグラウンドで継続されるので、PDF の変換には影響しません。
 
-エラーを受け取らないようにするには、Windows エラー報告を無効にします。 エラーレポート機能を無効にする手順について詳しくは、[https://technet.microsoft.com/ja-jp/library/cc754364.aspx](https://technet.microsoft.com/ja-jp/library/cc754364.aspx) を参照してください。
+エラーを受け取らないようにするには、Windows エラー報告サービスを無効にします。 エラーレポート機能を無効にする手順について詳しくは、[https://technet.microsoft.com/ja-jp/library/cc754364.aspx](https://technet.microsoft.com/ja-jp/library/cc754364.aspx) を参照してください。
 
 ### （Windows のみ）HTML から PDF への変換の設定 {#configure-html-to-pdf-conversion}
 
@@ -1078,7 +1094,7 @@ PDF Generator サービスは、HTML ファイルを PDF ドキュメントに�
 
 UNIX ベースのプラットフォーム上で PDF Generator サービスは、HTML ファイルを PDF ドキュメントに変換するため、WebKit および WebToPDF の各ルートをサポートしています。 HTML から PDF への変換を有効にするには、目的の変換ルートに合わせて、以下の設定を行います。
 
-### （UNIX ベースのプラットフォームのみ）Unicode フォントのサポートの有効化（WebKit のみ） {#enable-support-for-unicode-fonts-webkit-only}
+### （UNIX ベースのプラットフォームのみ）Unicode フォントのサポートを有効にする（WebKit のみ） {#enable-support-for-unicode-fonts-webkit-only}
 
 Unicode フォントを、使用しているシステムに応じて、次のいずれかのディレクトリにコピーします。
 
@@ -1092,7 +1108,7 @@ Unicode フォントを、使用しているシステムに応じて、次のい
 
 >[!NOTE]
 >
->* Red Hat® Enterprise Linux® 6.x 以降で courier フォントは使用できません。 courier フォントをインストールするには、font-ibm-type1-1.0.3.zip アーカイブをダウンロードします。 /usr/share/fonts にあるアーカイブを抽出します。 /usr/share/X11/fonts から /usr/share/fonts へのシンボリックリンクを作成します。
+>* Red Hat® Enterprise Linux® 6.x 以降で courier フォントは使用できません。 courier フォントをインストールするには、font-ibm-type1-1.0.3.zip アーカイブをダウンロードしてください。 /usr/share/fonts にあるアーカイブを抽出します。 /usr/share/X11/fonts から /usr/share/fonts へのシンボリックリンクを作成します。
 >* Html2PdfSvc/bin と /usr/share/fonts のディレクトリから、.lst フォントのキャッシュファイルをすべて削除します。
 >* /usr/lib/X11/fonts ディレクトリ、および /usr/share/fonts ディレクトリが存在することを確認します。 このディレクトリが存在しない場合は、ln コマンドを使用して /usr/share/X11/fonts から /usr/lib/X11/fonts へのシンボリックリンク、さらに /usr/share/fonts から /usr/share/X11/fonts への別のシンボリックリンクを作成します。 また、courier フォントが使用可能であることを /usr/lib/X11/fonts で確認します。
 >* すべてのフォント（Unicode および非 Unicode）が /usr/share/fonts または /usr/share/X11/fonts ディレクトリで使用できることを確認してください。
@@ -1152,11 +1168,11 @@ AEM Forms アドオンパッケージは AEM にデプロイされるアプリ�
 
 ### PDF Generator サービスを実行するためのローカルユーザーアカウントの設定  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-PDF Generator サービスを実行するには、ローカルユーザーのアカウントが必要です。 ローカルユーザーを作成する手順については、「[Windows のユーザー アカウントを作成する](https://support.microsoft.com/ja-jp/help/13951/windows-create-user-account)」または「UNIX ベースのプラットフォームでユーザーアカウントを作成する」を参照してください。
+PDF Generator サービスを実行するには、ローカルユーザーアカウントが必要です。 ローカルユーザーを作成する手順については、「[Windows のユーザー アカウントを作成する](https://support.microsoft.com/ja-jp/help/13951/windows-create-user-account)」または「UNIX ベースのプラットフォームでユーザーアカウントを作成する」を参照してください。
 
 1. [AEM Forms PDF Generator の設定](http://localhost:4502/libs/fd/pdfg/config/ui.html)ページを開きます。
 
-1. 「**[!UICONTROL ユーザーアカウント]**」タブでローカルユーザーのアカウントの資格情報を入力し、「**[!UICONTROL 送信]**」をクリックします。 Microsoft® Windows のプロンプトが表示されたら、ユーザーにアクセスを許可します。 正常に追加されると、設定されたユーザーが「**[!UICONTROL ユーザーアカウント]**」タブの「**[!UICONTROL ユーザーアカウント]**」セクションに表示されます。
+1. 「**[!UICONTROL ユーザーアカウント]**」タブでローカルユーザーのアカウントの資格情報を入力し、「**[!UICONTROL 送信]**」をクリックします。 Microsoft® Windows からのプロンプトが表示されたら、ユーザーに対してアクセスを許可します。 正常に追加されると、設定されたユーザーが「**[!UICONTROL ユーザーアカウント]**」タブの「**[!UICONTROL ユーザーアカウント]**」セクションに表示されます。
 
 ### （Windowsのみ） マルチスレッド PDF Generator コンバージョンを有効にする
 
@@ -1168,7 +1184,7 @@ AEM FormsがWindows サービスとして実行されている間に、マルチ
 
 WordとExcelのマルチスレッド変換を有効にするには：
 
-1. PDF Generatorの[&#x200B; ローカルユーザーアカウント &#x200B;](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
+1. PDF Generatorの[ ローカルユーザーアカウント ](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL PDF Generator を設定]**&#x200B;に移動します。 デフォルトの URL は <http://localhost:4502/libs/fd/pdfg/config/ui.html> です。
 1. 「**[!UICONTROL 一般設定]**」タブで、次のオプションを設定します（WordではPDFMaker、ExcelではNative2PDFを設定）。
 
@@ -1204,7 +1220,7 @@ WordとExcelのマルチスレッド変換を有効にするには：
    <td>270 秒<br /> </td>
   </tr>
   <tr>
-   <td>PDFG Cleanup Scan Seconds</td>
+   <td>PDFG クリーンアップスキャンの秒数</td>
    <td>変換後の操作の実行に必要な秒数。<br /> </td>
    <td>3600 秒</td>
   </tr>
@@ -1218,10 +1234,10 @@ WordとExcelのマルチスレッド変換を有効にするには：
 
 ### （Windows のみ）PDF Generator サービス用 Acrobat の設定 {#configure-acrobat-for-the-pdf-generator-service}
 
-Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使用して、サポートしているファイル形式を PDF ドキュメントに変換します。 以下の手順を実行して、Adobe Acrobat を PDF Generator サービスに設定します。
+Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使用して、サポートしているファイル形式を PDF ドキュメントに変換します。 以下の手順を実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
 1. Acrobat を開き、「**[!UICONTROL 編集]**」／「**[!UICONTROL 環境設定]**」／「**[!UICONTROL Updater]**」を選択します。 「アップデートの有無をチェック」で「**[!UICONTROL アップデートを自動的にインストール]**」のチェックを解除し、「**[!UICONTROL OK]**」をクリックします。 Acrobat を終了します。
-1. システム上の PDF ドキュメントをダブルクリックします。 Acrobat の初回起動時に、ログインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。 PDF Generator を使用するように設定されているすべてのユーザーに対して、このダイアログボックスを解除します。
+1. システム上の PDF ドキュメントをダブルクリックします。 Acrobat の初回起動時に、サインインのダイアログボックス、スタートアップスクリーンおよび EULA が表示されます。 PDF Generator を使用するように設定されているすべてのユーザーに対して、このダイアログを解除します。
 1. PDF Generator ユーティリティのバッチファイルを実行して、Adobe Acrobat を PDF Generator サービス用に設定します。
 
    1. [AEM パッケージマネージャー](http://localhost:4502/crx/packmgr/index.jsp)を開き、`adobe-aemfd-pdfg-common-pkg-[version].zip` ファイルをパッケージマネージャーからダウンロードします。
@@ -1232,7 +1248,7 @@ Microsoft® Windows では、PDF Generator サービスは Adobe Acrobat を使�
 
       `Acrobat_for_PDFG_Configuration.bat`
 
-      Acrobat が PDF Generator サービスを実行するように設定されます。
+      Acrobat は PDF Generator サービスと連携して実行されるように設定されています。
 
 1. [System Readiness Tool（SRT）](#SRT)を実行して、Acrobat のインストールを検証します。
 
@@ -1263,7 +1279,7 @@ DocAssurance サービスは PDF ドキュメントに使用権限を適用で�
 
 * 証明書ファイル（.pfx）。
 
-* 証明書ファイルとともに提供する秘密鍵パスワード。
+* 証明書とともに提供される秘密鍵パスワード。
 
 * 秘密鍵のエイリアス。 Java keytool コマンドを実行し、秘密鍵エイリアスを表示します。
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
@@ -1323,7 +1339,7 @@ PDF ファイルに AES 256 暗号化を使用するには、Java Cryptography E
 
 AEM Forms アドオンと Microsoft® Project をマシンにインストールしたら、64 ビットの場所に Microsoft® Project のエントリを登録します。 これにより、プロジェクトから PDFG への変換テストの実行が簡単になります。 レジストリエントリのプロセスの概要を示す手順は次のとおりです。
 
-1. Microsoft® Windows レジストリエディター（regedit）を開きます。レジストリエディターを開くには、スタート／ファイル名を指定して実行に移動し、「regedit」と入力して、「OK」をクリックします。
+1. Microsoft® Windows レジストリエディター（regedit）を開きます。レジストリエディターを開くには、スタートメニューで「ファイル名を指定して実行」を選択し、「regedit」と入力して「OK」をクリックします。
 1. `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp` に移動し、新しい&#x200B;**バイナリ値**&#x200B;レジストリを作成して、名前を&#x200B;**プロジェクト**&#x200B;に変更します。
 1. 作成したバイナリレジストリのデータ値を 01 に変更し、「OK」をクリックします。
 1. レジストリエントリを閉じます。
@@ -1357,7 +1373,7 @@ AEM Forms アドオンと Microsoft® Project をマシンにインストール�
 
    `java -jar forms-srt-[version].jar [Path_of_reports_folder] en`
 
-   このコマンドは、レポートを生成し、 srt_config.yaml ファイルも作成します。 SRT ツールのオプションを設定する場合に使用できます。 SRT ツールのオプションを設定するオプションです。
+   このコマンドは、レポートを生成し、 srt_config.yaml ファイルも作成します。 SRT ツールのオプションを設定する場合に使用できます。 SRT ツールのオプション設定は任意です。
 
    >[!NOTE]
    >
@@ -1450,7 +1466,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 **Linux および Solaris（WebToPDF 変換ルート）**
 
-* Webkit ベースの HTMLToPDF 変換に 32 ビットライブラリ（libicudata.so.42）が使用可能であり、64 ビット（libicudata.so.42）が WebToPDF ベースの HTMLToPDF 変換に使用可能であることを確認します。
+* Webkit ベースの HTMLToPDF 変換用に 32 ビットライブラリ（libicudata.so.42）が使用可能であり、WebToPDF ベースの HTMLToPDF 変換用に 64 ビットライブラリ（libicudata.so.42 のライブラリ群）が使用可能であることを確認します。
 
 * 次のコマンドを実行して、WebToPDF に不足しているライブラリを一覧表示します。
 
@@ -1533,9 +1549,9 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 <!--
 (Legacy Acrobat guidance — retained for reference only) License of Adobe Acrobat installed on AEM Forms Server expires
 
-* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+* If you have an existing license of Adobe Acrobat and it has expired, [Download the latest version of Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html), and migrating your serial number. Before [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
-   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
+   * Use the following commands to generate prov.xml and reserialize the existing install using the prov.xml file instead of commands provided in [migrating your serial number](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) number article.
 
       ```
 
@@ -1550,7 +1566,7 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
          
       ```
 
-* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/jp/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
+* For large-scale installations, use the [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) to remove previous versions of Reader and Acrobat. Customize the installer and deploy it to all the machines of your organization.
 
 (Legacy Acrobat guidance — retained for reference only) AEM Forms Server is in an offline or secure environment and internet is not available to activate Acrobat.
 
@@ -1558,6 +1574,52 @@ SRT ツールが報告する問題をすべて修正した後でも問題が発�
 
 +++
 -->
+
++++ AEM Forms ServerでのAdobe Acrobat ライセンスの有効期限が切れているか非アクティブ化されています
+
+AEM Forms Server上のAdobe Acrobatの機能制限ライセンス（FRL）が期限切れになったりディアクティベートされたりすると、PDF GeneratorはAcrobat PDFMakerを使用してMicrosoft® Office ドキュメントを変換できません。 変換はOpenOfficeにフォールバックし、OpenOfficeが設定されていない場合、次のエラーで失敗します。
+
+*プライマリコンバータからのエラーメッセージ：
+ALC-PDG-010-012-PDFMakerは、ドキュメントの印刷中にエラーを報告しました。*
+
+*フォールバックコンバータからのエラーメッセージ：
+ALC-PDG-011-030-Submitted OpenOffice DocumentをPDFに変換できませんでした。 このシステムにOpenOfficeがインストールされていないか、環境変数OpenOffice_PATHが正しいパスに設定されていません。*
+
+問題を解決するには、ライセンスのステータスを確認し、ライセンスを再アクティブ化します。
+
+1. AEM Forms Serverに管理者としてログインし、管理者としてコマンドプロンプトを開きます。
+1. FRL パッケージを抽出したディレクトリに移動します。 例えば、`C:\AcrobatFRL` のようになります。
+1. 次のコマンドを実行して、ライセンスのステータスを確認します。
+
+   ```cmd
+   adobe-licensing-toolkit.exe -l
+   ```
+
+1. ライセンスの有効期限が切れている場合は、FRL パッケージを置き換えます。 FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。
+   1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、新しいFRL パッケージを作成してダウンロードします。 詳しくは、[Adobe Acrobat Pro DCのインストール ](#install-adobe-acrobat-pro-dc)のステップ 2 ～ ステップ 7を参照してください。
+   1. 次のコマンドを実行して、使用期限が切れたライセンスを削除します。
+
+      ```cmd
+      adobe-licensing-toolkit.exe --precondition --uninstall --all
+      ```
+
+      >[!NOTE]
+      >
+      >代わりに、サーバーからすべてのライセンスデータを消去するには、`adobe-licensing-toolkit.exe --deactivate --all`を実行します。
+
+   1. 新しいFRL パッケージをサーバー上のディレクトリに抽出し、そのディレクトリに移動します。
+
+1. 次のコマンドを実行して、ライセンスをアクティベートします。 `ngl-preconditioning-data.json`を、FRL パッケージ内のJSON ファイルの大文字と小文字を区別した正確な名前に置き換えます。
+
+   ```cmd
+   adobe-licensing-toolkit.exe -p -i -f ngl-preconditioning-data.json
+   ```
+
+1. Adobe Acrobatを開き、利用可能なアップデートをすべてインストールします。
+1. AEM Forms Serverを再起動して、実行中のAcrobat PDFMaker プロセスをすべて停止します。
+1. Microsoft® Office ドキュメントをPDFに変換して、PDF GeneratorがAcrobatを使用して変換されていることを確認します。
+
++++
 
 +++ Windows Server 上で Word または Excel ファイルを PDF に変換できない
 
@@ -1572,7 +1634,7 @@ ALC-PDG-015-003 – システムは入力ファイルを開けません。 フ�
 
 +++ Windows Server 2019 上で Excel ファイルを PDF に変換できない
 
-Microsoft® Excel 2019 を Microsoft® Windows Server 2019 上で PDFに変換する場合は、次の点を確認する必要があります。
+Microsoft Excel 2019 を Microsoft Windows Server 2019 上で PDF に変換する場合は、次の点を確認する必要があります。
 
 * PDF Generator サービスを使用する際は、Windows コンピューターで AEM サーバーとのリモート接続（Windows RDP セッション）をアクティブにしないようにします。
 * デフォルトのプリンターは Adobe PDF に設定する必要があります。
