@@ -41,7 +41,7 @@ AEM Forms は、PDF ドキュメントの作成、アセンブル、配布、ア
 
 * **Encryption サービス：**&#x200B;ドキュメントの暗号化と復号を実行できます。 ドキュメントを暗号化すると、その内容は判読できなくなります。 許可されたユーザーはドキュメントを復号化して、内容にアクセスできます。 詳しくは、[Encryption サービス](/help/forms/using/overview-aem-document-services.md#encryption-service)を参照してください。
 
-* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとしてレンダリングします。 詳しくは、[ Forms サービス](/help/forms/using/forms-service.md)を参照してください。
+* **Forms サービス：**&#x200B;通常 Forms Designer で作成されたフォームを検証、処理、変換および配信する、インタラクティブなデータキャプチャを行うクライアントアプリケーションを作成できます。 Forms サービスは、作成したあらゆるフォームデザインを PDF ドキュメントとしてレンダリングします。 詳しくは、[&#x200B; Forms サービス](/help/forms/using/forms-service.md)を参照してください。
 
 * **Output サービス：** PDF、レーザープリンター形式、ラベルプリンター形式など、様々な形式のドキュメントを作成します。 レーザープリンター形式には、PostScript と Printer Control Language（PCL）があります。 詳しくは、[Output サービス](/help/forms/using/output-service.md)を参照してください。
 
@@ -1184,7 +1184,7 @@ AEM FormsがWindows サービスとして実行されている間に、マルチ
 
 WordとExcelのマルチスレッド変換を有効にするには：
 
-1. PDF Generatorの[ ローカルユーザーアカウント ](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
+1. PDF Generatorの[&#x200B; ローカルユーザーアカウント &#x200B;](#configure-a-local-user-account-to-run-the-pdf-generator-service)を設定します。
 1. AEM オーサーインスタンスにログインし、**[!UICONTROL Adobe Experience Manager]**／**[!UICONTROL ツール]**／**[!UICONTROL Forms]**／**[!UICONTROL PDF Generator を設定]**&#x200B;に移動します。 デフォルトの URL は <http://localhost:4502/libs/fd/pdfg/config/ui.html> です。
 1. 「**[!UICONTROL 一般設定]**」タブで、次のオプションを設定します（WordではPDFMaker、ExcelではNative2PDFを設定）。
 
@@ -1596,7 +1596,7 @@ ALC-PDG-011-030-Submitted OpenOffice DocumentをPDFに変換できませんで�
    ```
 
 1. ライセンスの有効期限が切れている場合は、FRL パッケージを置き換えます。 FRL パッケージは、通常、年間（1年）サブスクリプション更新サイクルで実行されます。
-   1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、新しいFRL パッケージを作成してダウンロードします。 詳しくは、[Adobe Acrobat Pro DCのインストール ](#install-adobe-acrobat-pro-dc)のステップ 2 ～ ステップ 7を参照してください。
+   1. [Adobe Admin Console](https://adminconsole.adobe.com/)で、新しいFRL パッケージを作成してダウンロードします。 詳しくは、[Adobe Acrobat Pro DCのインストール &#x200B;](#install-adobe-acrobat-pro-dc)のステップ 2 ～ ステップ 7を参照してください。
    1. 次のコマンドを実行して、使用期限が切れたライセンスを削除します。
 
       ```cmd
