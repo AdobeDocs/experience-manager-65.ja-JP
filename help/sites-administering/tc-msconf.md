@@ -61,7 +61,7 @@ Microsoft Translator 設定を作成するには、次の手順に従います�
 
 ## Microsoft Translator API フィールドマッピング {#microsoft-translator-api-field-mapping}
 
-Microsoft Translator API v3は、`https://api.cognitive.microsofttranslator.com/translate?api-version=3.0`に翻訳リクエストを受け付けます。 ターゲット言語を含む必要なパラメーターについては、[Microsoft Translate API リファレンス ](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate)を参照してください。
+Microsoft Translator API v3は、`https://api.cognitive.microsofttranslator.com/translate?api-version=3.0`に翻訳リクエストを受け付けます。 ターゲット言語を含む必要なパラメーターについては、[Microsoft Translate API リファレンス &#x200B;](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate)を参照してください。
 
 次の表は、AEM設定フィールドとMicrosoft APIを関連付けています。
 
