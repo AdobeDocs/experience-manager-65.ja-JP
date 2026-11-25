@@ -19,10 +19,10 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
     internal-label: Admin
-source-git-commit: 751e1826ed53df7522418e50a206f0fe622256a4
+source-git-commit: f63514691265918da2fa40cc493889c6cd0d23d1
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 100%
+source-wordcount: '478'
+ht-degree: 58%
 ---
 # Microsoft Translator への接続 {#connecting-to-microsoft-translator}
 
@@ -58,3 +58,18 @@ Microsoft Translator 設定を作成するには、次の手順に従います�
 ## Translator サービス設定の公開 {#publishing-the-translator-service-configurations}
 
 最後の手順として、公開された翻訳済みコンテンツをサポートするために、[ツリーの公開](/help/sites-authoring/publishing-pages.md#publishing-and-unpublishing-a-tree)アクションを使用して Microsoft Translator 設定を公開してください。
+
+## Microsoft Translator API フィールドマッピング {#microsoft-translator-api-field-mapping}
+
+Microsoft Translator API v3は、`https://api.cognitive.microsofttranslator.com/translate?api-version=3.0`に翻訳リクエストを受け付けます。 ターゲット言語を含む必要なパラメーターについては、[Microsoft Translate API リファレンス ](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/v3/translate)を参照してください。
+
+次の表は、AEM設定フィールドとMicrosoft APIを関連付けています。
+
+| AEMフィールド | AEMの目的 | Microsoft APIとの関係 |
+|---|---|---|
+| ワークスペース ID | 使用するカスタマイズされたMicrosoft Translator エンジンを指定します。 | カスタム翻訳システムは、`category` リクエストパラメーターを使用して選択されます。 MicrosoftのAPIでは、ワークスペース IDのみではなく、カスタムトランスレーターカテゴリ IDが必要です。 コネクタとカスタムモデル設定で必要な値を確認します。 |
+| 翻訳ラベル | 翻訳サービスの表示名を指定します。 | 対応する翻訳要求パラメーターがありません。 |
+| 翻訳の帰属 | 翻訳されたユーザー生成コンテンツの横にオプションのアトリビューションを定義します。 | 対応する翻訳要求パラメーターがありません。 |
+| サブスクリプションキー | Microsoft Translator サブスクリプションへのアクセスを認証します。 | アクセストークンの要求時に`Ocp-Apim-Subscription-Key` ヘッダーに送信されました。 その後、トークンは翻訳要求のために`Authorization: Bearer <access-token>` ヘッダーで送信されます。 |
+
+グローバル Microsoft Translator リソースの場合、トークン エンドポイントは`https://api.cognitive.microsoft.com/sts/v1.0/issueToken`です。 地域およびマルチサービスリソースでは、地域固有のトークンエンドポイントを使用します。 リソースタイプのエンドポイントとヘッダーの要件については、[Microsoft Translator authentication](https://learn.microsoft.com/en-us/azure/ai-services/translator/text-translation/reference/authentication)を参照してください。
