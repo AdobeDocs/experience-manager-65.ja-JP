@@ -23,9 +23,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: 8e3fd4184adcd62256cb7faea6592b06796e7ddf
+source-git-commit: 0619d81cc1270ec91062fc1f4e4ca0a59a388cfc
 workflow-type: tm+mt
-source-wordcount: '8356'
+source-wordcount: '8294'
 ht-degree: 13%
 ---
 # [!DNL Adobe Experience Manager] 6.5 の最新のサービスパックのリリースノート {#aem-service-pack-release-notes}
@@ -625,8 +625,6 @@ AEM でヘッドレスコンテンツの管理に推奨されるエディター�
 * JEE Service Pack 26 パッチ 136上のAEM Formsを使用したWebLogicで、Configuration Manager `validateApplicationServerTopology` ステップがGUI モードとCLI モードの両方で失敗します。 手動による回避策を適用するには、**4を展開します。 [JEE サービスパックのインストール手順](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md#download-and-install-for-jee-service-pack)でJEE サービスパック**&#x200B;にAEM Formsをインストールし、WebLogic トポロジ検証の回避策に従います。 （FORMS-30037）
 
 * `bindref`を使用する&#x200B;**添付ファイル** フィールドを含むフォームが、**タスクの割り当て** ステップを含むAEM ワークフローに送信された場合、添付ファイルは表示されません。 その結果、タスクがインボックスから開かれたときに表示されません。 ファイルはリポジトリに正しく保存されますが、タスクを割り当て手順UIで添付ファイルが表示されません。 （FORMS-23722）
-
-* デジタル署名されたPDFがAEM Forms JEE Workspaceのタスクに添付されている場合、アップロードはアップロード状態のままになるか、「無効なファイル」エラーで失敗します。 その結果、署名済みの大きなPDFの添付ファイルをタスクに追加できません。 この問題は、新しいバージョンで修正されています。 このバージョンのホットフィックスについては、Adobe サポートにお問い合わせください。 （FORMS-28517）
 
 * 管理コンソールまたはJava コード（EJB/SOA）を使用してLiveCycle Archive （LCA）を読み込むと、その後のPDF Generator（PDFG）およびConvertPDF操作が失敗する可能性があります。 この問題は、AEM オーサーインスタンスが組み込まれたWindowsおよびLinux上のJDKおよびOracle WebLogic 14c スタックに影響します。 （FORMS-30031）
 
